@@ -40,7 +40,7 @@ const Home = () => {
       subtitle: 'Enterprise AI Adoption',
       description: 'Transform your business with AI. Strategic consulting, custom solutions, and team training to accelerate your AI journey.',
       IconComponent: AITransformationIcon,
-      features: ['AI Strategy Consulting', 'Custom AI Solutions', 'Team Training & Support'],
+      features: ['AI Strategy Services', 'Custom AI Solutions', 'Team Training & Support'],
     },
   ]
 

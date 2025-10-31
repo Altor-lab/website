@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert SVG to PNG - OG Image</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .preview {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        button {
+            background: linear-gradient(135deg, #0ea5e9 0%, #9b51e0 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 10px 5px 10px 0;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .info {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .success {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 OG Image Converter</h1>
+        
+        <div class="info">
+            <strong>Instructions:</strong>
+            <ol>
+                <li>Click "Convert SVG to PNG" button below</li>
+                <li>The PNG will automatically download</li>
+                <li>Save it as <code>og-image.png</code> in the <code>react-app/public/</code> folder</li>
+                <li>Update <code>index.html</code> to use the PNG instead of SVG</li>
+            </ol>
+        </div>
+
+        <div class="preview">
+            <img id="preview" src="og-image.svg" alt="OG Image Preview">
+        </div>
+
+        <button onclick="convertToPNG()">📥 Convert SVG to PNG (1200x630)</button>
+        <button onclick="location.reload()">🔄 Reload Preview</button>
+
+        <div class="success" id="success">
+            ✅ PNG downloaded successfully! Save it as <code>og-image.png</code> in <code>react-app/public/</code>
+        </div>
+    </div>
+
+    <canvas id="canvas" style="display: none;"></canvas>
+
+    <script>
+        function convertToPNG() {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+            
+            img.onload = function() {
+                // Set canvas size to OG image dimensions
+                canvas.width = 1200;
+                canvas.height = 630;
+                
+                // Draw the SVG image onto the canvas
+                ctx.drawImage(img, 0, 0, 1200, 630);
+                
+                // Convert canvas to PNG blob
+                canvas.toBlob(function(blob) {
+                    // Create download link
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'og-image.png';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                    
+                    // Show success message
+                    document.getElementById('success').style.display = 'block';
+                }, 'image/png', 1.0);
+            };
+            
+            // Load the SVG
+            img.src = 'og-image.svg';
+        }
+    </script>
+</body>
+</html>
+

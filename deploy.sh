@@ -9,6 +9,21 @@ echo "  AltorLab Website Deployment"
 echo "========================================"
 echo ""
 
+# Check if running in WSL and node_modules exists
+if grep -qi microsoft /proc/version 2>/dev/null; then
+    echo "[0/5] Detected WSL environment..."
+    if [ -d "react-app/node_modules/@esbuild/win32-x64" ]; then
+        echo "⚠️  Windows node_modules detected in WSL!"
+        echo "Reinstalling dependencies for Linux..."
+        cd react-app
+        rm -rf node_modules package-lock.json
+        npm install
+        cd ..
+        echo "✓ Dependencies reinstalled for Linux"
+        echo ""
+    fi
+fi
+
 # Step 1: Build the React app
 echo "[1/5] Building React app..."
 cd react-app
@@ -28,7 +43,7 @@ echo ""
 # Step 2: Copy build files to root
 echo "[2/5] Copying build files to repository root..."
 cp -r react-app/dist/* .
-echo "✓ Files copied"
+echo "✓ Build files copied"
 echo ""
 
 # Step 3: Ensure CNAME exists

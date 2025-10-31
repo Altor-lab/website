@@ -8,7 +8,7 @@ const AIServices = () => {
   const features = [
     {
       icon: '🎯',
-      title: 'AI Strategy Consulting',
+      title: 'AI Strategy Services',
       description: 'Develop a comprehensive AI adoption strategy tailored to your business goals and industry.',
     },
     {
@@ -20,11 +20,6 @@ const AIServices = () => {
       icon: '🛠️',
       title: 'Custom AI Solutions',
       description: 'Build custom AI tools and integrations specific to your business needs.',
-    },
-    {
-      icon: '📚',
-      title: 'Team Training',
-      description: 'Upskill your team with hands-on AI training and best practices.',
     },
     {
       icon: '🔌',

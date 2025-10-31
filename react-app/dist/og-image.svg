@@ -1,0 +1,97 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#030303"/>
+  
+  <!-- Gradient Background Effect -->
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9b51e0" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#0ea5e9" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#030303" stop-opacity="0"/>
+    </radialGradient>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#9b51e0"/>
+    </linearGradient>
+    
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#9b51e0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Gradient Circle -->
+  <circle cx="600" cy="315" r="400" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="200" cy="150" r="3" fill="#0ea5e9" opacity="0.6"/>
+  <circle cx="1000" cy="480" r="3" fill="#9b51e0" opacity="0.6"/>
+  <circle cx="950" cy="120" r="2" fill="#0ea5e9" opacity="0.4"/>
+  <circle cx="250" cy="500" r="2" fill="#9b51e0" opacity="0.4"/>
+  
+  <!-- Logo Icon (Abstract A) -->
+  <g transform="translate(500, 180)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="45" stroke="url(#logoGradient)" stroke-width="3" fill="none" opacity="0.8"/>
+    
+    <!-- Inner A shape -->
+    <path d="M -15 15 L 0 -15 L 15 15 M -10 5 L 10 5" 
+          stroke="url(#logoGradient)" 
+          stroke-width="4" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none"/>
+    
+    <!-- Accent dots -->
+    <circle cx="-25" cy="-25" r="2" fill="#0ea5e9" opacity="0.8"/>
+    <circle cx="25" cy="-25" r="2" fill="#9b51e0" opacity="0.8"/>
+  </g>
+  
+  <!-- Main Title -->
+  <text x="600" y="310" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="72" 
+        font-weight="700" 
+        fill="url(#textGradient)" 
+        text-anchor="middle">
+    AltorLab
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="370" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="32" 
+        font-weight="400" 
+        fill="#9ca3af" 
+        text-anchor="middle">
+    Building for AI-Native Teams
+  </text>
+  
+  <!-- Description -->
+  <text x="600" y="430" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="24" 
+        font-weight="300" 
+        fill="#6b7280" 
+        text-anchor="middle">
+    Next generation business tools and AI adoption consulting
+  </text>
+  
+  <!-- Bottom accent line -->
+  <line x1="400" y1="500" x2="800" y2="500" 
+        stroke="url(#logoGradient)" 
+        stroke-width="2" 
+        opacity="0.5"/>
+  
+  <!-- Website URL -->
+  <text x="600" y="540" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="20" 
+        font-weight="400" 
+        fill="#4b5563" 
+        text-anchor="middle">
+    altorlab.com
+  </text>
+</svg>
+
