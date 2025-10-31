@@ -42,7 +42,7 @@ Detailed descriptions of all 5 products:
    - Automation capabilities
    
 5. **AI Transformation**
-   - Enterprise consulting services
+   - Enterprise services
    - Implementation support
 
 ### AI Insights Dashboard

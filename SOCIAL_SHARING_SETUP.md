@@ -5,7 +5,7 @@
 Added comprehensive Open Graph (OG) and Twitter Card meta tags so that when you share https://altorlab.com on WhatsApp, Slack, Twitter, LinkedIn, Facebook, etc., it shows a beautiful preview with:
 
 - ✅ **Title:** AltorLab - Building for AI-Native Teams
-- ✅ **Description:** Next generation business tools and AI adoption consulting
+- ✅ **Description:** Next generation business tools and AI adoption products
 - ✅ **Image:** Professional branded OG image (1200x630px)
 - ✅ **URL:** https://altorlab.com
 
@@ -199,7 +199,7 @@ Some platforms work better with PNG images. To convert:
 <!-- Primary Meta Tags -->
 <title>AltorLab - Building for AI-Native Teams</title>
 <meta name="title" content="AltorLab - Building for AI-Native Teams" />
-<meta name="description" content="Next generation business tools and AI adoption consulting..." />
+<meta name="description" content="Next generation business tools and AI adoption products..." />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
