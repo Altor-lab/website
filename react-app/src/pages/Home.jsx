@@ -46,6 +46,7 @@ const Home = () => {
       description: 'Dominate AI search results. See how your website compares to competitors and optimize for ChatGPT, Perplexity, Claude, and more.',
       IconComponent: GeoIcon,
       features: ['AI Content Optimization', 'Competitor Analysis', 'Real-time Tracking'],
+      accentColor: 'blue',
     },
     {
       title: 'SEO',
@@ -53,6 +54,7 @@ const Home = () => {
       description: 'Rank #1 on Google. Complete SEO solution with keyword research, technical audits, and competitor tracking.',
       IconComponent: SeoIcon,
       features: ['Keyword Strategy', 'Technical Audits', 'Rank Monitoring'],
+      accentColor: 'green',
     },
     {
       title: 'Paid Marketing',
@@ -60,6 +62,7 @@ const Home = () => {
       description: 'Maximize your ad ROI. Expert management of Google Ads, Meta, LinkedIn, and TikTok campaigns.',
       IconComponent: PaidMarketingIcon,
       features: ['Multi-Platform Ads', 'A/B Testing', 'Performance Analytics'],
+      accentColor: 'purple',
     },
     {
       title: 'Reviews Management',
@@ -67,6 +70,7 @@ const Home = () => {
       description: 'Build trust and beat competitors. Monitor and manage reviews across all platforms with AI-powered responses.',
       IconComponent: ReviewsIcon,
       features: ['Multi-Platform Monitoring', 'AI Responses', 'Sentiment Analysis'],
+      accentColor: 'orange',
     },
     {
       title: 'AI Transformation',
@@ -74,8 +78,48 @@ const Home = () => {
       description: 'Transform your business with AI. Strategic consulting, custom solutions, and team training to accelerate your AI journey.',
       IconComponent: AITransformationIcon,
       features: ['AI Strategy Services', 'Custom AI Solutions', 'Team Training & Support'],
+      accentColor: 'pink',
     },
   ]
+
+  // Color configurations for each product
+  const colorConfig = {
+    blue: {
+      glow: 'from-blue-600/0 via-blue-500/0 to-blue-600/0 group-hover:from-blue-600/8 group-hover:via-blue-500/8 group-hover:to-blue-600/8',
+      iconBg: 'from-blue-900/20 to-blue-800/20',
+      iconBorder: 'border-blue-700/20 group-hover:border-blue-600/40',
+      titleHover: 'group-hover:text-blue-400',
+      subtitle: 'text-blue-400/80',
+    },
+    green: {
+      glow: 'from-green-600/0 via-emerald-500/0 to-green-600/0 group-hover:from-green-600/8 group-hover:via-emerald-500/8 group-hover:to-green-600/8',
+      iconBg: 'from-green-900/20 to-emerald-800/20',
+      iconBorder: 'border-green-700/20 group-hover:border-green-600/40',
+      titleHover: 'group-hover:text-green-400',
+      subtitle: 'text-green-400/80',
+    },
+    purple: {
+      glow: 'from-purple-600/0 via-violet-500/0 to-purple-600/0 group-hover:from-purple-600/8 group-hover:via-violet-500/8 group-hover:to-purple-600/8',
+      iconBg: 'from-purple-900/20 to-violet-800/20',
+      iconBorder: 'border-purple-700/20 group-hover:border-purple-600/40',
+      titleHover: 'group-hover:text-purple-400',
+      subtitle: 'text-purple-400/80',
+    },
+    orange: {
+      glow: 'from-orange-600/0 via-amber-500/0 to-orange-600/0 group-hover:from-orange-600/8 group-hover:via-amber-500/8 group-hover:to-orange-600/8',
+      iconBg: 'from-orange-900/20 to-amber-800/20',
+      iconBorder: 'border-orange-700/20 group-hover:border-orange-600/40',
+      titleHover: 'group-hover:text-orange-400',
+      subtitle: 'text-orange-400/80',
+    },
+    pink: {
+      glow: 'from-pink-600/0 via-rose-500/0 to-pink-600/0 group-hover:from-pink-600/8 group-hover:via-rose-500/8 group-hover:to-pink-600/8',
+      iconBg: 'from-pink-900/20 to-rose-800/20',
+      iconBorder: 'border-pink-700/20 group-hover:border-pink-600/40',
+      titleHover: 'group-hover:text-pink-400',
+      subtitle: 'text-pink-400/80',
+    },
+  }
 
   const faqItems = [
     {
@@ -126,7 +170,7 @@ const Home = () => {
               Unlock infinite marketing potential and increase your revenue
             </p>
 
-            {/* Email Capture Form */}
+            {/* Email Capture Form - Enhanced Visibility */}
             <motion.form
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -134,22 +178,30 @@ const Home = () => {
               onSubmit={handleEmailSubmit}
               className="max-w-2xl mx-auto mb-8"
             >
-              <div className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your company email"
-                  required
-                  className="flex-1 px-6 py-4 bg-dark-400 border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 transition-colors text-white placeholder-gray-500"
-                />
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="px-8 py-4 bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-500 hover:to-purple-500 text-white font-semibold rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-                >
-                  {isSubmitting ? 'Submitting...' : 'Get Report'}
-                </button>
+              {/* Prominent container with subtle glow */}
+              <div className="relative">
+                {/* Subtle glow effect behind form */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 via-purple-500/10 to-primary-500/10 blur-2xl rounded-2xl" />
+
+                <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-2">
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter your company email"
+                      required
+                      className="flex-1 px-6 py-4 bg-white text-gray-900 placeholder-gray-500 border-2 border-transparent rounded-xl focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 font-medium shadow-sm"
+                    />
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="px-8 py-4 bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-500 hover:to-purple-500 text-white font-semibold rounded-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 hover:scale-[1.02]"
+                    >
+                      {isSubmitting ? 'Submitting...' : 'Get Report'}
+                    </button>
+                  </div>
+                </div>
               </div>
 
               {/* Success/Error Message */}
@@ -157,10 +209,10 @@ const Home = () => {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className={`mt-4 p-3 rounded-lg text-sm ${
+                  className={`mt-4 p-4 rounded-xl text-sm font-medium ${
                     submitStatus === 'success'
-                      ? 'bg-green-900/30 border border-green-700 text-green-400'
-                      : 'bg-red-900/30 border border-red-700 text-red-400'
+                      ? 'bg-green-500/10 border border-green-500/30 text-green-400'
+                      : 'bg-red-500/10 border border-red-500/30 text-red-400'
                   }`}
                 >
                   {submitMessage}
@@ -202,94 +254,100 @@ const Home = () => {
           <div className="space-y-6">
             {/* First Row - 2 Products Side by Side */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {products.slice(0, 2).map((product, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group"
-                >
-                  <div className="relative h-full">
-                    {/* Subtle glow effect on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-600/0 via-purple-600/0 to-primary-600/0 group-hover:from-primary-600/5 group-hover:via-purple-600/5 group-hover:to-primary-600/5 rounded-2xl blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
+              {products.slice(0, 2).map((product, index) => {
+                const colors = colorConfig[product.accentColor]
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="group"
+                  >
+                    <div className="relative h-full">
+                      {/* Subtle colored glow effect on hover */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${colors.glow} rounded-2xl blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100`} />
 
-                    <div className="relative h-full bg-dark-400/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 transition-all duration-300 group-hover:border-gray-700/50 group-hover:bg-dark-400/70 group-hover:scale-[1.02]">
-                      {/* Icon with gradient background */}
-                      <div className="mb-6 inline-flex p-3 bg-gradient-to-br from-primary-900/30 to-purple-900/30 border border-primary-700/30 rounded-xl group-hover:border-primary-600/50 transition-colors duration-300">
-                        <product.IconComponent className="w-12 h-12" />
-                      </div>
+                      <div className="relative h-full bg-dark-400/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 transition-all duration-300 group-hover:border-gray-700/50 group-hover:bg-dark-400/70 group-hover:scale-[1.02]">
+                        {/* Icon with colored gradient background */}
+                        <div className={`mb-6 inline-flex p-3 bg-gradient-to-br ${colors.iconBg} border ${colors.iconBorder} rounded-xl transition-colors duration-300`}>
+                          <product.IconComponent className="w-12 h-12" />
+                        </div>
 
-                      <h3 className="text-2xl font-bold mb-2 group-hover:text-primary-400 transition-colors duration-300">
-                        {product.title}
-                      </h3>
-                      <p className="text-sm font-medium text-primary-400/80 mb-4">{product.subtitle}</p>
-                      <p className="text-gray-400 leading-relaxed mb-6 text-[15px]">
-                        {product.description}
-                      </p>
+                        <h3 className={`text-2xl font-bold mb-2 ${colors.titleHover} transition-colors duration-300`}>
+                          {product.title}
+                        </h3>
+                        <p className={`text-sm font-medium ${colors.subtitle} mb-4`}>{product.subtitle}</p>
+                        <p className="text-gray-400 leading-relaxed mb-6 text-[15px]">
+                          {product.description}
+                        </p>
 
-                      {/* Refined feature tags */}
-                      <div className="flex flex-wrap gap-2">
-                        {product.features.map((feature, idx) => (
-                          <span
-                            key={idx}
-                            className="px-3 py-1.5 bg-dark-300/50 border border-gray-700/50 rounded-lg text-xs font-medium text-gray-300 group-hover:border-gray-600/50 group-hover:bg-dark-300/70 transition-all duration-300"
-                          >
-                            {feature}
-                          </span>
-                        ))}
+                        {/* Refined feature tags */}
+                        <div className="flex flex-wrap gap-2">
+                          {product.features.map((feature, idx) => (
+                            <span
+                              key={idx}
+                              className="px-3 py-1.5 bg-dark-300/50 border border-gray-700/50 rounded-lg text-xs font-medium text-gray-300 group-hover:border-gray-600/50 group-hover:bg-dark-300/70 transition-all duration-300"
+                            >
+                              {feature}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                )
+              })}
             </div>
 
             {/* Second Row - 2 Products Side by Side */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {products.slice(2, 4).map((product, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group"
-                >
-                  <div className="relative h-full">
-                    {/* Subtle glow effect on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-600/0 via-purple-600/0 to-primary-600/0 group-hover:from-primary-600/5 group-hover:via-purple-600/5 group-hover:to-primary-600/5 rounded-2xl blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
+              {products.slice(2, 4).map((product, index) => {
+                const colors = colorConfig[product.accentColor]
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="group"
+                  >
+                    <div className="relative h-full">
+                      {/* Subtle colored glow effect on hover */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${colors.glow} rounded-2xl blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100`} />
 
-                    <div className="relative h-full bg-dark-400/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 transition-all duration-300 group-hover:border-gray-700/50 group-hover:bg-dark-400/70 group-hover:scale-[1.02]">
-                      {/* Icon with gradient background */}
-                      <div className="mb-6 inline-flex p-3 bg-gradient-to-br from-primary-900/30 to-purple-900/30 border border-primary-700/30 rounded-xl group-hover:border-primary-600/50 transition-colors duration-300">
-                        <product.IconComponent className="w-12 h-12" />
-                      </div>
+                      <div className="relative h-full bg-dark-400/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 transition-all duration-300 group-hover:border-gray-700/50 group-hover:bg-dark-400/70 group-hover:scale-[1.02]">
+                        {/* Icon with colored gradient background */}
+                        <div className={`mb-6 inline-flex p-3 bg-gradient-to-br ${colors.iconBg} border ${colors.iconBorder} rounded-xl transition-colors duration-300`}>
+                          <product.IconComponent className="w-12 h-12" />
+                        </div>
 
-                      <h3 className="text-2xl font-bold mb-2 group-hover:text-primary-400 transition-colors duration-300">
-                        {product.title}
-                      </h3>
-                      <p className="text-sm font-medium text-primary-400/80 mb-4">{product.subtitle}</p>
-                      <p className="text-gray-400 leading-relaxed mb-6 text-[15px]">
-                        {product.description}
-                      </p>
+                        <h3 className={`text-2xl font-bold mb-2 ${colors.titleHover} transition-colors duration-300`}>
+                          {product.title}
+                        </h3>
+                        <p className={`text-sm font-medium ${colors.subtitle} mb-4`}>{product.subtitle}</p>
+                        <p className="text-gray-400 leading-relaxed mb-6 text-[15px]">
+                          {product.description}
+                        </p>
 
-                      {/* Refined feature tags */}
-                      <div className="flex flex-wrap gap-2">
-                        {product.features.map((feature, idx) => (
-                          <span
-                            key={idx}
-                            className="px-3 py-1.5 bg-dark-300/50 border border-gray-700/50 rounded-lg text-xs font-medium text-gray-300 group-hover:border-gray-600/50 group-hover:bg-dark-300/70 transition-all duration-300"
-                          >
-                            {feature}
-                          </span>
-                        ))}
+                        {/* Refined feature tags */}
+                        <div className="flex flex-wrap gap-2">
+                          {product.features.map((feature, idx) => (
+                            <span
+                              key={idx}
+                              className="px-3 py-1.5 bg-dark-300/50 border border-gray-700/50 rounded-lg text-xs font-medium text-gray-300 group-hover:border-gray-600/50 group-hover:bg-dark-300/70 transition-all duration-300"
+                            >
+                              {feature}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                )
+              })}
             </div>
 
             {/* Third Row - 1 Product Centered */}
@@ -300,44 +358,47 @@ const Home = () => {
               transition={{ duration: 0.6 }}
               className="max-w-3xl mx-auto group"
             >
-              <div className="relative">
-                {/* Subtle glow effect on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/0 via-purple-600/0 to-primary-600/0 group-hover:from-primary-600/5 group-hover:via-purple-600/5 group-hover:to-primary-600/5 rounded-2xl blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
+              {(() => {
+                const product = products[4]
+                const colors = colorConfig[product.accentColor]
+                return (
+                  <div className="relative">
+                    {/* Subtle colored glow effect on hover */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${colors.glow} rounded-2xl blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100`} />
 
-                <div className="relative bg-dark-400/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 transition-all duration-300 group-hover:border-gray-700/50 group-hover:bg-dark-400/70 group-hover:scale-[1.01]">
-                  <div className="flex flex-col md:flex-row items-start gap-8">
-                    {/* Icon with gradient background */}
-                    <div className="inline-flex p-4 bg-gradient-to-br from-primary-900/30 to-purple-900/30 border border-primary-700/30 rounded-xl group-hover:border-primary-600/50 transition-colors duration-300">
-                      {(() => {
-                        const IconComponent = products[4].IconComponent
-                        return <IconComponent className="w-16 h-16" />
-                      })()}
-                    </div>
+                    <div className="relative bg-dark-400/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 transition-all duration-300 group-hover:border-gray-700/50 group-hover:bg-dark-400/70 group-hover:scale-[1.01]">
+                      <div className="flex flex-col md:flex-row items-start gap-8">
+                        {/* Icon with colored gradient background */}
+                        <div className={`inline-flex p-4 bg-gradient-to-br ${colors.iconBg} border ${colors.iconBorder} rounded-xl transition-colors duration-300`}>
+                          <product.IconComponent className="w-16 h-16" />
+                        </div>
 
-                    <div className="flex-1">
-                      <h3 className="text-3xl font-bold mb-2 group-hover:text-primary-400 transition-colors duration-300">
-                        {products[4].title}
-                      </h3>
-                      <p className="text-sm font-medium text-primary-400/80 mb-4">{products[4].subtitle}</p>
-                      <p className="text-gray-400 leading-relaxed mb-6 text-[15px]">
-                        {products[4].description}
-                      </p>
+                        <div className="flex-1">
+                          <h3 className={`text-3xl font-bold mb-2 ${colors.titleHover} transition-colors duration-300`}>
+                            {product.title}
+                          </h3>
+                          <p className={`text-sm font-medium ${colors.subtitle} mb-4`}>{product.subtitle}</p>
+                          <p className="text-gray-400 leading-relaxed mb-6 text-[15px]">
+                            {product.description}
+                          </p>
 
-                      {/* Refined feature tags */}
-                      <div className="flex flex-wrap gap-2">
-                        {products[4].features.map((feature, idx) => (
-                          <span
-                            key={idx}
-                            className="px-3 py-1.5 bg-dark-300/50 border border-gray-700/50 rounded-lg text-xs font-medium text-gray-300 group-hover:border-gray-600/50 group-hover:bg-dark-300/70 transition-all duration-300"
-                          >
-                            {feature}
-                          </span>
-                        ))}
+                          {/* Refined feature tags */}
+                          <div className="flex flex-wrap gap-2">
+                            {product.features.map((feature, idx) => (
+                              <span
+                                key={idx}
+                                className="px-3 py-1.5 bg-dark-300/50 border border-gray-700/50 rounded-lg text-xs font-medium text-gray-300 group-hover:border-gray-600/50 group-hover:bg-dark-300/70 transition-all duration-300"
+                              >
+                                {feature}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                )
+              })()}
             </motion.div>
           </div>
         </div>
