@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
-import Card from '../components/Card'
 import FAQ from '../components/FAQ'
 import { GeoIcon, SeoIcon, PaidMarketingIcon, ReviewsIcon, AITransformationIcon } from '../components/icons/ProductIcons'
 
@@ -200,9 +199,9 @@ const Home = () => {
           </motion.div>
 
           {/* Grid: 2-2-1 layout for 5 products */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {/* First Row - 2 Products Side by Side */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {products.slice(0, 2).map((product, index) => (
                 <motion.div
                   key={index}
@@ -210,32 +209,45 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="group"
                 >
-                  <Card hover className="h-full group">
-                    <div className="mb-6">
-                      <product.IconComponent className="w-16 h-16" />
+                  <div className="relative h-full">
+                    {/* Subtle glow effect on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-600/0 via-purple-600/0 to-primary-600/0 group-hover:from-primary-600/5 group-hover:via-purple-600/5 group-hover:to-primary-600/5 rounded-2xl blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
+
+                    <div className="relative h-full bg-dark-400/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 transition-all duration-300 group-hover:border-gray-700/50 group-hover:bg-dark-400/70 group-hover:scale-[1.02]">
+                      {/* Icon with gradient background */}
+                      <div className="mb-6 inline-flex p-3 bg-gradient-to-br from-primary-900/30 to-purple-900/30 border border-primary-700/30 rounded-xl group-hover:border-primary-600/50 transition-colors duration-300">
+                        <product.IconComponent className="w-12 h-12" />
+                      </div>
+
+                      <h3 className="text-2xl font-bold mb-2 group-hover:text-primary-400 transition-colors duration-300">
+                        {product.title}
+                      </h3>
+                      <p className="text-sm font-medium text-primary-400/80 mb-4">{product.subtitle}</p>
+                      <p className="text-gray-400 leading-relaxed mb-6 text-[15px]">
+                        {product.description}
+                      </p>
+
+                      {/* Refined feature tags */}
+                      <div className="flex flex-wrap gap-2">
+                        {product.features.map((feature, idx) => (
+                          <span
+                            key={idx}
+                            className="px-3 py-1.5 bg-dark-300/50 border border-gray-700/50 rounded-lg text-xs font-medium text-gray-300 group-hover:border-gray-600/50 group-hover:bg-dark-300/70 transition-all duration-300"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-primary-400 transition-colors">
-                      {product.title}
-                    </h3>
-                    <p className="text-sm text-primary-400 mb-3">{product.subtitle}</p>
-                    <p className="text-gray-400 leading-relaxed mb-4">
-                      {product.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {product.features.map((feature, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-dark-400 border border-gray-800 rounded-full text-sm text-gray-300">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </Card>
+                  </div>
                 </motion.div>
               ))}
             </div>
 
             {/* Second Row - 2 Products Side by Side */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {products.slice(2, 4).map((product, index) => (
                 <motion.div
                   key={index}
@@ -243,26 +255,39 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="group"
                 >
-                  <Card hover className="h-full group">
-                    <div className="mb-6">
-                      <product.IconComponent className="w-16 h-16" />
+                  <div className="relative h-full">
+                    {/* Subtle glow effect on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-600/0 via-purple-600/0 to-primary-600/0 group-hover:from-primary-600/5 group-hover:via-purple-600/5 group-hover:to-primary-600/5 rounded-2xl blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
+
+                    <div className="relative h-full bg-dark-400/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 transition-all duration-300 group-hover:border-gray-700/50 group-hover:bg-dark-400/70 group-hover:scale-[1.02]">
+                      {/* Icon with gradient background */}
+                      <div className="mb-6 inline-flex p-3 bg-gradient-to-br from-primary-900/30 to-purple-900/30 border border-primary-700/30 rounded-xl group-hover:border-primary-600/50 transition-colors duration-300">
+                        <product.IconComponent className="w-12 h-12" />
+                      </div>
+
+                      <h3 className="text-2xl font-bold mb-2 group-hover:text-primary-400 transition-colors duration-300">
+                        {product.title}
+                      </h3>
+                      <p className="text-sm font-medium text-primary-400/80 mb-4">{product.subtitle}</p>
+                      <p className="text-gray-400 leading-relaxed mb-6 text-[15px]">
+                        {product.description}
+                      </p>
+
+                      {/* Refined feature tags */}
+                      <div className="flex flex-wrap gap-2">
+                        {product.features.map((feature, idx) => (
+                          <span
+                            key={idx}
+                            className="px-3 py-1.5 bg-dark-300/50 border border-gray-700/50 rounded-lg text-xs font-medium text-gray-300 group-hover:border-gray-600/50 group-hover:bg-dark-300/70 transition-all duration-300"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-primary-400 transition-colors">
-                      {product.title}
-                    </h3>
-                    <p className="text-sm text-primary-400 mb-3">{product.subtitle}</p>
-                    <p className="text-gray-400 leading-relaxed mb-4">
-                      {product.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {product.features.map((feature, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-dark-400 border border-gray-800 rounded-full text-sm text-gray-300">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </Card>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -273,34 +298,46 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="max-w-2xl mx-auto"
+              className="max-w-3xl mx-auto group"
             >
-              <Card hover className="group">
-                <div className="flex flex-col md:flex-row items-start gap-6">
-                  <div className="mb-4 md:mb-0">
-                    {(() => {
-                      const IconComponent = products[4].IconComponent
-                      return <IconComponent className="w-20 h-20" />
-                    })()}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-3xl font-bold mb-2 group-hover:text-primary-400 transition-colors">
-                      {products[4].title}
-                    </h3>
-                    <p className="text-sm text-primary-400 mb-3">{products[4].subtitle}</p>
-                    <p className="text-gray-400 leading-relaxed mb-4">
-                      {products[4].description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {products[4].features.map((feature, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-dark-400 border border-gray-800 rounded-full text-sm text-gray-300">
-                          {feature}
-                        </span>
-                      ))}
+              <div className="relative">
+                {/* Subtle glow effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/0 via-purple-600/0 to-primary-600/0 group-hover:from-primary-600/5 group-hover:via-purple-600/5 group-hover:to-primary-600/5 rounded-2xl blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
+
+                <div className="relative bg-dark-400/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 transition-all duration-300 group-hover:border-gray-700/50 group-hover:bg-dark-400/70 group-hover:scale-[1.01]">
+                  <div className="flex flex-col md:flex-row items-start gap-8">
+                    {/* Icon with gradient background */}
+                    <div className="inline-flex p-4 bg-gradient-to-br from-primary-900/30 to-purple-900/30 border border-primary-700/30 rounded-xl group-hover:border-primary-600/50 transition-colors duration-300">
+                      {(() => {
+                        const IconComponent = products[4].IconComponent
+                        return <IconComponent className="w-16 h-16" />
+                      })()}
+                    </div>
+
+                    <div className="flex-1">
+                      <h3 className="text-3xl font-bold mb-2 group-hover:text-primary-400 transition-colors duration-300">
+                        {products[4].title}
+                      </h3>
+                      <p className="text-sm font-medium text-primary-400/80 mb-4">{products[4].subtitle}</p>
+                      <p className="text-gray-400 leading-relaxed mb-6 text-[15px]">
+                        {products[4].description}
+                      </p>
+
+                      {/* Refined feature tags */}
+                      <div className="flex flex-wrap gap-2">
+                        {products[4].features.map((feature, idx) => (
+                          <span
+                            key={idx}
+                            className="px-3 py-1.5 bg-dark-300/50 border border-gray-700/50 rounded-lg text-xs font-medium text-gray-300 group-hover:border-gray-600/50 group-hover:bg-dark-300/70 transition-all duration-300"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </Card>
+              </div>
             </motion.div>
           </div>
         </div>
