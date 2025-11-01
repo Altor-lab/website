@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
@@ -6,6 +7,44 @@ import FAQ from '../components/FAQ'
 import { GeoIcon, SeoIcon, PaidMarketingIcon, ReviewsIcon, AITransformationIcon } from '../components/icons/ProductIcons'
 
 const Home = () => {
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState('')
+  const [submitStatus, setSubmitStatus] = useState('') // 'success' or 'error'
+
+  const handleEmailSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitMessage('')
+    setSubmitStatus('')
+
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbwwlOM3AQKOTrsYM4b68RsbU7H-9uWlgT9cAh5Xg5l_8D4q9iT8ocia7oMLCfIe8vhv/exec', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setSubmitMessage(result.message || 'Thank you! Your report will be sent shortly.')
+        setEmail('')
+      } else {
+        setSubmitStatus('error')
+        setSubmitMessage(result.message || 'Something went wrong. Please try again.')
+      }
+    } catch (error) {
+      setSubmitStatus('error')
+      setSubmitMessage('Failed to submit. Please check your connection and try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   const products = [
     {
       title: 'GEO',
@@ -82,18 +121,59 @@ const Home = () => {
             >
               Building for AI-Native Teams
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              The New Internet
+              Autonomous Marketing Agents
               <br />
-              <span className="gradient-text">Powered by AI</span>
+              <span className="gradient-text">Powered by Marketing Intelligence API</span>
             </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-400 mb-12 leading-relaxed">
-              AltorLab helps businesses adapt to the AI-first world with tools for 
-              optimization, insights, and seamless AI integration.
+
+            <p className="text-xl md:text-2xl text-gray-400 mb-8 leading-relaxed">
+              Unlock infinite marketing potential and increase your revenue
             </p>
-            
+
+            {/* Email Capture Form */}
+            <motion.form
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              onSubmit={handleEmailSubmit}
+              className="max-w-2xl mx-auto mb-8"
+            >
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your company email"
+                  required
+                  className="flex-1 px-6 py-4 bg-dark-400 border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 transition-colors text-white placeholder-gray-500"
+                />
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="px-8 py-4 bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-500 hover:to-purple-500 text-white font-semibold rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+                >
+                  {isSubmitting ? 'Submitting...' : 'Get Report'}
+                </button>
+              </div>
+
+              {/* Success/Error Message */}
+              {submitMessage && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`mt-4 p-3 rounded-lg text-sm ${
+                    submitStatus === 'success'
+                      ? 'bg-green-900/30 border border-green-700 text-green-400'
+                      : 'bg-red-900/30 border border-red-700 text-red-400'
+                  }`}
+                >
+                  {submitMessage}
+                </motion.div>
+              )}
+            </motion.form>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" href="https://calendar.app.google/Xh3jbxtMPotCz2pXA">
                 Get Started
@@ -117,7 +197,7 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Our Products
+              Autonomous AI agents approved by our experts
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               See how your website compares to competitors in your category
