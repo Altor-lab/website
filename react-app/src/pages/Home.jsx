@@ -19,24 +19,19 @@ const Home = () => {
     setSubmitStatus('')
 
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbwwlOM3AQKOTrsYM4b68RsbU7H-9uWlgT9cAh5Xg5l_8D4q9iT8ocia7oMLCfIe8vhv/exec', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
+      // Use GET request with query parameters to avoid CORS preflight
+      const url = `https://script.google.com/macros/s/AKfycbwwlOM3AQKOTrsYM4b68RsbU7H-9uWlgT9cAh5Xg5l_8D4q9iT8ocia7oMLCfIe8vhv/exec?email=${encodeURIComponent(email)}`
+
+      await fetch(url, {
+        method: 'GET',
+        mode: 'no-cors', // This bypasses CORS but we won't get response data
       })
 
-      const result = await response.json()
-
-      if (response.ok) {
-        setSubmitStatus('success')
-        setSubmitMessage(result.message || 'Thank you! Your report will be sent shortly.')
-        setEmail('')
-      } else {
-        setSubmitStatus('error')
-        setSubmitMessage(result.message || 'Something went wrong. Please try again.')
-      }
+      // Since we're using no-cors, we can't read the response
+      // Assume success if no error is thrown
+      setSubmitStatus('success')
+      setSubmitMessage('Thank you! Your report will be sent shortly.')
+      setEmail('')
     } catch (error) {
       setSubmitStatus('error')
       setSubmitMessage('Failed to submit. Please check your connection and try again.')
