@@ -194,9 +194,9 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Autonomous AI agents approved by our experts
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            {/* <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               See how your website compares to competitors in your category
-            </p>
+            </p> */}
           </motion.div>
 
           {/* Grid: 2-2-1 layout for 5 products */}
