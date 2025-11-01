@@ -1,271 +1,205 @@
-# Google Apps Script CORS Setup
+# Google Apps Script Setup for Email Form
 
-## Issue
+## Current Implementation
 
-The email form is getting CORS errors when trying to POST to the Google Apps Script endpoint:
-```
-CORS Missing Allow Origin
-Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource
-```
-
-## Current Workaround
-
-I've updated the form to use a **GET request with `no-cors` mode** as a temporary workaround:
+The email form now uses **FormData** instead of JSON to avoid CORS preflight issues:
 
 ```javascript
-const url = `https://script.google.com/macros/s/.../exec?email=${encodeURIComponent(email)}`
+const formData = new FormData()
+formData.append('email', email)
 
-await fetch(url, {
-  method: 'GET',
-  mode: 'no-cors',
+await fetch('https://script.google.com/.../exec', {
+  method: 'POST',
+  body: formData,
 })
 ```
 
-**Limitations:**
-- We can't read the response from the server
-- We assume success if no error is thrown
-- The form will show success message even if the server-side fails
+**Why FormData works:**
+- ✅ Sends as `multipart/form-data` (not `application/json`)
+- ✅ Doesn't trigger CORS preflight request
+- ✅ Works with Google Apps Script out of the box
+- ✅ No CORS configuration needed
 
 ---
 
-## Proper Solution: Fix Google Apps Script
+## Google Apps Script Code
 
-You need to update your Google Apps Script to properly handle CORS. Here's the correct code:
+You need to update your Google Apps Script to handle FormData POST requests:
 
 ### Google Apps Script Code (Apps Script Editor)
 
 ```javascript
-function doGet(e) {
-  // Get email from query parameter
-  const email = e.parameter.email;
-  
-  if (!email) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: false, message: 'Email is required' }))
-      .setMimeType(ContentService.MimeType.JSON);
-  }
-  
+function doPost(e) {
   try {
-    // Your logic here - e.g., save to Google Sheets
-    const sheet = SpreadsheetApp.openById('YOUR_SPREADSHEET_ID').getActiveSheet();
-    sheet.appendRow([new Date(), email]);
-    
+    // Get email from FormData
+    const email = e.parameter.email;
+
+    if (!email) {
+      return ContentService
+        .createTextOutput(JSON.stringify({ success: false, message: 'Email is required' }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+
+    // Validate email format (optional)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return ContentService
+        .createTextOutput(JSON.stringify({ success: false, message: 'Invalid email format' }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+
+    // Save to Google Sheets (replace with your Sheet ID)
+    const SHEET_ID = 'YOUR_GOOGLE_SHEET_ID_HERE'; // Get this from your Sheet URL
+    const sheet = SpreadsheetApp.openById(SHEET_ID).getActiveSheet();
+
+    // Append row with timestamp and email
+    sheet.appendRow([
+      new Date(),           // Column A: Timestamp
+      email,                // Column B: Email
+      'Website Form'        // Column C: Source
+    ]);
+
+    // Optional: Send confirmation email
+    // MailApp.sendEmail({
+    //   to: email,
+    //   subject: 'Thank you for your interest in AltorLab',
+    //   body: 'We will send your report shortly!'
+    // });
+
     // Return success response
     return ContentService
-      .createTextOutput(JSON.stringify({ success: true, message: 'Email submitted successfully!' }))
+      .createTextOutput(JSON.stringify({
+        success: true,
+        message: 'Email submitted successfully!'
+      }))
       .setMimeType(ContentService.MimeType.JSON);
-  } catch (error) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: false, message: 'Failed to save email' }))
-      .setMimeType(ContentService.MimeType.JSON);
-  }
-}
 
-function doPost(e) {
-  // Parse JSON body
-  const data = JSON.parse(e.postData.contents);
-  const email = data.email;
-  
-  if (!email) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: false, message: 'Email is required' }))
-      .setMimeType(ContentService.MimeType.JSON);
-  }
-  
-  try {
-    // Your logic here - e.g., save to Google Sheets
-    const sheet = SpreadsheetApp.openById('YOUR_SPREADSHEET_ID').getActiveSheet();
-    sheet.appendRow([new Date(), email]);
-    
-    // Return success response with CORS headers
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: true, message: 'Email submitted successfully!' }))
-      .setMimeType(ContentService.MimeType.JSON);
   } catch (error) {
+    // Log error for debugging
+    Logger.log('Error: ' + error.toString());
+
     return ContentService
-      .createTextOutput(JSON.stringify({ success: false, message: 'Failed to save email' }))
+      .createTextOutput(JSON.stringify({
+        success: false,
+        message: 'Failed to save email. Please try again.'
+      }))
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
 ```
+
+### How to Get Your Google Sheet ID
+
+1. **Create a new Google Sheet** or open an existing one
+2. **Look at the URL** in your browser:
+   ```
+   https://docs.google.com/spreadsheets/d/1a2b3c4d5e6f7g8h9i0j/edit
+                                          ^^^^^^^^^^^^^^^^^^^^
+                                          This is your Sheet ID
+   ```
+3. **Copy the Sheet ID** and replace `YOUR_GOOGLE_SHEET_ID_HERE` in the code above
 
 ### Deployment Settings
 
-1. **Open your Google Apps Script project**
-2. **Click "Deploy" → "New deployment"**
-3. **Settings:**
-   - Type: Web app
-   - Execute as: **Me** (your account)
-   - Who has access: **Anyone** (important for CORS)
-4. **Click "Deploy"**
-5. **Copy the new Web App URL**
+1. **Open your Google Apps Script project** (script.google.com)
+2. **Paste the code above** into the editor
+3. **Replace `YOUR_GOOGLE_SHEET_ID_HERE`** with your actual Sheet ID
+4. **Click "Deploy" → "New deployment"**
+5. **Click the gear icon** ⚙️ next to "Select type"
+6. **Choose "Web app"**
+7. **Configure settings:**
+   - **Description:** "Email capture form" (optional)
+   - **Execute as:** **Me** (your account)
+   - **Who has access:** **Anyone** ⚠️ (This is important!)
+8. **Click "Deploy"**
+9. **Authorize the script** (click "Authorize access" and follow prompts)
+10. **Copy the Web App URL** - it should look like:
+    ```
+    https://script.google.com/macros/s/AKfycbw.../exec
+    ```
+
+### Important Notes
+
+- ✅ **"Who has access: Anyone"** is required for the form to work from your website
+- ✅ The script runs as **you**, so it has permission to write to your Sheet
+- ✅ FormData automatically works without CORS issues
+- ✅ You can view execution logs in Apps Script under "Executions"
 
 ---
 
-## Better Solution: Use JSONP or Form Submission
+## Testing the Form
 
-### Option 1: Use a Hidden Form (No CORS Issues)
+### 1. Test Locally First
 
-This is the most reliable method for Google Apps Script:
-
-```jsx
-const handleEmailSubmit = (e) => {
-  e.preventDefault()
-  setIsSubmitting(true)
-  
-  // Create a hidden iframe
-  const iframe = document.createElement('iframe')
-  iframe.style.display = 'none'
-  iframe.name = 'hidden_iframe'
-  document.body.appendChild(iframe)
-  
-  // Create a form
-  const form = document.createElement('form')
-  form.method = 'POST'
-  form.action = 'https://script.google.com/macros/s/.../exec'
-  form.target = 'hidden_iframe'
-  
-  const input = document.createElement('input')
-  input.type = 'hidden'
-  input.name = 'email'
-  input.value = email
-  
-  form.appendChild(input)
-  document.body.appendChild(form)
-  form.submit()
-  
-  // Clean up
-  setTimeout(() => {
-    document.body.removeChild(form)
-    document.body.removeChild(iframe)
-    setSubmitStatus('success')
-    setSubmitMessage('Thank you! Your report will be sent shortly.')
-    setEmail('')
-    setIsSubmitting(false)
-  }, 1000)
-}
+```bash
+cd react-app
+npm run dev
 ```
 
-### Option 2: Use Google Forms
+Visit http://localhost:5173 and:
+1. Enter a test email
+2. Click "Get Report"
+3. Check the browser console for any errors
+4. Check your Google Sheet for the new row
 
-The easiest solution is to use Google Forms:
+### 2. Check Google Apps Script Logs
 
-1. **Create a Google Form** with an email field
-2. **Get the form's pre-filled link:**
-   - Click the three dots → "Get pre-filled link"
-   - Fill in a test email
-   - Copy the URL
-3. **Extract the form ID and entry ID** from the URL
-4. **Submit directly to Google Forms** (no CORS issues)
+1. Open your Apps Script project
+2. Click **"Executions"** in the left sidebar
+3. You should see your script executions
+4. Click on any execution to see details/errors
 
-Example:
-```javascript
-const FORM_URL = 'https://docs.google.com/forms/d/e/FORM_ID/formResponse'
-const EMAIL_ENTRY_ID = 'entry.123456789' // From pre-filled link
+### 3. Verify Google Sheet
 
-const formData = new FormData()
-formData.append(EMAIL_ENTRY_ID, email)
-
-fetch(FORM_URL, {
-  method: 'POST',
-  body: formData,
-  mode: 'no-cors',
-})
-```
+Your Google Sheet should have a new row with:
+- **Column A:** Timestamp
+- **Column B:** Email address
+- **Column C:** "Website Form"
 
 ---
 
-## Recommended Approach
+## Troubleshooting
 
-**For Production:** Use **Option 1 (Hidden Form)** or **Option 2 (Google Forms)**
+### Issue: "Failed to submit" error
 
-Both methods:
-- ✅ No CORS issues
-- ✅ Work reliably with Google Apps Script
-- ✅ Don't require server-side changes
-- ✅ Simple to implement
+**Solution:**
+- Make sure you deployed the script as **"Anyone"** can access
+- Check that the Web App URL is correct
+- Check Apps Script "Executions" tab for error details
 
-**Current Implementation:** Uses GET with `no-cors` mode (works but can't read response)
+### Issue: Email not appearing in Sheet
 
----
+**Solution:**
+- Verify the Sheet ID is correct
+- Make sure the script has permission to access the Sheet
+- Check Apps Script execution logs for errors
 
-## Update the React Component (Better Version)
+### Issue: Still getting CORS errors
 
-If you want to use the hidden form approach, here's the updated code:
-
-```jsx
-const handleEmailSubmit = (e) => {
-  e.preventDefault()
-  setIsSubmitting(true)
-  setSubmitMessage('')
-  setSubmitStatus('')
-
-  try {
-    // Create hidden iframe
-    const iframe = document.createElement('iframe')
-    iframe.style.display = 'none'
-    iframe.name = 'hidden_iframe'
-    document.body.appendChild(iframe)
-
-    // Create form
-    const form = document.createElement('form')
-    form.method = 'POST'
-    form.action = 'https://script.google.com/macros/s/AKfycbwwlOM3AQKOTrsYM4b68RsbU7H-9uWlgT9cAh5Xg5l_8D4q9iT8ocia7oMLCfIe8vhv/exec'
-    form.target = 'hidden_iframe'
-
-    const input = document.createElement('input')
-    input.type = 'hidden'
-    input.name = 'email'
-    input.value = email
-
-    form.appendChild(input)
-    document.body.appendChild(form)
-    form.submit()
-
-    // Clean up and show success
-    setTimeout(() => {
-      document.body.removeChild(form)
-      document.body.removeChild(iframe)
-      setSubmitStatus('success')
-      setSubmitMessage('Thank you! Your report will be sent shortly.')
-      setEmail('')
-      setIsSubmitting(false)
-    }, 1000)
-  } catch (error) {
-    setSubmitStatus('error')
-    setSubmitMessage('Failed to submit. Please try again.')
-    setIsSubmitting(false)
-  }
-}
-```
-
----
-
-## Testing
-
-1. **Current implementation (GET with no-cors):**
-   - Should work without errors
-   - Shows success message
-   - Check Google Apps Script logs to verify email was received
-
-2. **To verify it's working:**
-   - Open Google Apps Script
-   - Go to "Executions" tab
-   - Check if your script is being triggered
-   - Check your Google Sheet (if you're saving to Sheets)
+**Solution:**
+- Make sure you're using **FormData**, not JSON
+- Don't include `Content-Type` header (let browser set it automatically)
+- Verify the deployment is set to "Anyone" can access
 
 ---
 
 ## Summary
 
-**Current Status:** ✅ Form works with GET request + no-cors mode
+**Current Implementation:** ✅ FormData POST request (CORS-safe)
 
-**Limitations:** Can't read server response
+**What you need to do:**
+1. ✅ Create a Google Sheet
+2. ✅ Copy the Sheet ID from the URL
+3. ✅ Paste the Google Apps Script code
+4. ✅ Replace `YOUR_GOOGLE_SHEET_ID_HERE` with your Sheet ID
+5. ✅ Deploy as Web App with "Anyone" access
+6. ✅ The form is already updated to use FormData
 
-**Recommended Next Steps:**
-1. Update Google Apps Script to handle GET requests (see code above)
-2. OR switch to hidden form submission method
-3. OR use Google Forms directly
+**Benefits:**
+- ✅ No CORS issues
+- ✅ Simple and reliable
+- ✅ Can read server responses
+- ✅ Easy to debug
 
-**For now:** The current implementation will work - emails will be submitted, but we can't show custom success/error messages from the server.
+**The React form is ready!** Just update your Google Apps Script and deploy it. 🎉
 

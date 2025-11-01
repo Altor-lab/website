@@ -19,16 +19,16 @@ const Home = () => {
     setSubmitStatus('')
 
     try {
-      // Use GET request with query parameters to avoid CORS preflight
-      const url = `https://script.google.com/macros/s/AKfycbwwlOM3AQKOTrsYM4b68RsbU7H-9uWlgT9cAh5Xg5l_8D4q9iT8ocia7oMLCfIe8vhv/exec?email=${encodeURIComponent(email)}`
+      // Use FormData instead of JSON to avoid CORS preflight
+      const formData = new FormData()
+      formData.append('email', email)
 
-      await fetch(url, {
-        method: 'GET',
-        mode: 'no-cors', // This bypasses CORS but we won't get response data
+      await fetch('https://script.google.com/macros/s/AKfycbwwlOM3AQKOTrsYM4b68RsbU7H-9uWlgT9cAh5Xg5l_8D4q9iT8ocia7oMLCfIe8vhv/exec', {
+        method: 'POST',
+        body: formData,
       })
 
-      // Since we're using no-cors, we can't read the response
-      // Assume success if no error is thrown
+      // Show success message
       setSubmitStatus('success')
       setSubmitMessage('Thank you! Your report will be sent shortly.')
       setEmail('')
