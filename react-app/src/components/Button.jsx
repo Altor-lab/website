@@ -1,59 +1,41 @@
-import { motion } from 'framer-motion'
-
-const Button = ({ 
-  children, 
-  variant = 'primary', 
-  size = 'md', 
-  className = '', 
+const Button = ({
+  children,
+  variant = 'primary',
+  size = 'md',
+  className = '',
   onClick,
   href,
-  ...props 
+  ...props
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-lg'
-  
+  const baseClasses = 'inline-flex items-center justify-center font-semibold transition-all duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black'
+
   const variants = {
-    primary: 'bg-white text-black hover:bg-gray-100',
-    secondary: 'bg-transparent border border-white text-white hover:bg-white hover:text-black',
-    outline: 'bg-transparent border border-gray-600 text-white hover:border-white',
+    primary: 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-400 hover:to-cyan-400 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5',
+    secondary: 'bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:border-white/20',
+    ghost: 'text-gray-400 hover:text-white',
   }
-  
+
   const sizes = {
     sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
+    md: 'px-6 py-3 text-sm',
+    lg: 'px-8 py-4 text-base',
   }
-  
+
   const classes = `${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`
-  
-  const MotionButton = motion.button
-  const MotionLink = motion.a
-  
+
   if (href) {
     return (
-      <MotionLink
-        href={href}
-        className={classes}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        {...props}
-      >
+      <a href={href} className={classes} {...props}>
         {children}
-      </MotionLink>
+      </a>
     )
   }
-  
+
   return (
-    <MotionButton
-      className={classes}
-      onClick={onClick}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      {...props}
-    >
+    <button className={classes} onClick={onClick} {...props}>
       {children}
-    </MotionButton>
+    </button>
   )
 }
 
 export default Button
-
