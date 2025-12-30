@@ -175,13 +175,13 @@ export const content = {
     description: 'Let\'s discuss how forward-deployed engineering can accelerate your enterprise deployments and expansion.',
     buttonText: 'Book a call',
     buttonUrl: 'https://calendar.app.google/Xh3jbxtMPotCz2pXA',
-    email: 'anshul@altorlab.com'
+    email: 'founders@altorlab.com'
   },
 
   // Footer
   footer: {
     copyright: `© ${new Date().getFullYear()} AltorLab`,
-    email: 'anshul@altorlab.com',
+    email: 'founders@altorlab.com',
     linkedIn: 'https://www.linkedin.com/in/ansh27/',
     privacy: 'Privacy Policy'
   }
