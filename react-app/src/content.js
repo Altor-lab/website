@@ -3,143 +3,151 @@
 
 export const content = {
   // Company Info
-  companyName: 'AltorLab',
-  tagline: 'Your forward-deployed engineering team',
+  companyName: 'Altor',
+  tagline: 'Ship customer requests while your FDEs sleep',
 
   // Hero Section
   hero: {
-    headline: 'Your forward-deployed engineers',
-    subhead: 'Your team is stretched thin. Enterprise deals stall. Expansion opportunities slip away. We embed as your FDEs to close deals, ship deployments, and drive expansion-so you can scale without the hiring bottleneck.',
+    headline: 'Ship customer requests while your FDEs sleep',
+    subhead: 'Every enterprise AI deployment has a bottleneck: the FDE. After meetings, they manually create tickets, write code, open PRs, address reviews, merge. It takes days. Deals die waiting.',
+    highlight: 'Meeting recording → tickets → PRs → review responses → merge. Median time: 9 hours.',
     primaryCTA: {
-      text: 'Book a call',
+      text: 'Book a demo',
       url: 'https://calendar.app.google/Xh3jbxtMPotCz2pXA'
     },
     secondaryCTA: {
       text: 'See how it works',
-      anchor: '#problem'
+      anchor: '#how-it-works'
     }
   },
 
-  // Problem Section
-  problem: {
-    label: 'The problem',
-    title: 'You\'re growing fast, but your engineering bandwidth isn\'t',
-    subtitle: 'AI-native companies face a common challenge:',
-    items: [
-      {
-        title: 'Enterprise deals stall',
-        description: 'Your product works, but customers need custom integrations, security reviews, and hands-on deployment support your team can\'t prioritize.'
-      },
-      {
-        title: 'You become reactive',
-        description: 'With multiple clients demanding attention, you\'re firefighting instead of proactively expanding accounts and shipping new features.'
-      },
-      {
-        title: 'Expansion revenue slips away',
-        description: 'Your enterprise clients have more use cases, but you don\'t have the bandwidth to scope, build, and deploy them. NRR suffers.'
-      },
-      {
-        title: 'Hiring takes too long',
-        description: 'Building an FDE team requires elite, high-agency engineers who can code, read the room, and close. They\'re rare and expensive to hire.'
-      }
-    ]
-  },
-
-  // Solution Section
-  solution: {
-    label: 'Our solution',
-    title: 'We become your forward-deployed engineering team',
-    subtitle: 'AltorLab engineers embed directly with your enterprise customers. We represent you-proactively driving expansion and deployment work you can\'t get to.',
-    items: [
-      {
-        title: 'Embed & integrate',
-        description: 'We deploy into customer environments as an extension of your team. Wire data sources, configure auth, build custom integrations-on-site and production-ready.'
-      },
-      {
-        title: 'Deploy & stabilize',
-        description: 'Execute measured rollouts with monitoring and observability. Transfer ownership with comprehensive documentation and runbooks.'
-      },
-      {
-        title: 'Expand & capture',
-        description: 'Proactively scope expansion opportunities with your customers. Build the specific use cases that unlock upsells and boost NRR.'
-      }
-    ]
-  },
-
-  // FDE Benefits Section
-  fdeBenefits: {
-    label: 'Why forward-deployed engineering',
-    title: 'Put engineers as close as possible to the problems they\'re solving',
-    items: [
-      {
-        title: 'Real engineers, not consultants',
-        description: 'We send software engineers who open an IDE daily and ship production code-not PMs, not sales in a trench coat, not PowerPoint consultants.'
-      },
-      {
-        title: 'Sustained commitment',
-        description: 'Deep immersion over weeks and months, not fly-in visits. We stay until the deployment succeeds and knowledge transfers completely.'
-      },
-      {
-        title: 'Full tactical autonomy',
-        description: 'You set the objective. We own the execution-data migration, user training, expansion scoping, technical blockers. We escalate only when critical.'
-      },
-      {
-        title: 'Field insights → Product improvements',
-        description: 'Customer pain points become product improvements. We capture patterns from the field and feed them directly into your roadmap.'
-      },
-      {
-        title: 'Do things that don\'t scale, at scale',
-        description: 'We abstract rare customer insights into repeatable patterns. Custom work becomes reusable product features that accelerate future deployments.'
-      },
-      {
-        title: 'Proactive, not reactive',
-        description: 'While your team handles the product roadmap, we\'re in the field identifying expansion opportunities and driving them to close.'
-      }
-    ]
-  },
-
-  // How We Work Section
-  howWeWork: {
-    label: 'Our process',
-    title: 'How we work',
+  // How It Works Section
+  howItWorks: {
+    label: 'How it works',
+    title: 'From customer meeting to merged PR',
+    subtitle: 'Our agent doesn\'t just draft—it iterates through CI failures and reviewer comments until the PR is ready.',
     steps: [
       {
-        phase: 'Discover',
-        description: 'Map customer constraints, success criteria, workflows, and deployment requirements. Build trust with users.'
+        number: '01',
+        title: 'Meeting Recording',
+        description: 'Capture customer requirements from calls. We consume screen recordings when screen sharing happens—not just meeting notes.'
       },
       {
-        phase: 'Build',
-        description: 'Ship working code via PRs to your repos. Build custom integrations in the customer\'s actual environment.'
+        number: '02',
+        title: 'Automatic Tickets',
+        description: 'Transform vague requirements into structured Jira tickets and Linear issues. "Make it faster" becomes specific, actionable code changes.'
       },
       {
-        phase: 'Launch',
-        description: 'Coordinate rollout with customer stakeholders. Monitor stability, iterate on feedback, stabilize the system.'
+        number: '03',
+        title: 'PR Generation',
+        description: 'Generate pull requests across the right repos. Our agent knows which of your 50+ repos to touch for "add SSO" vs "fix webhook retry."'
       },
       {
-        phase: 'Transfer',
-        description: 'Complete handover with documentation, runbooks, and knowledge transfer. Your customer owns it fully.'
+        number: '04',
+        title: 'Review & Iterate',
+        description: 'Address reviewer comments, fix CI failures, iterate until green. The agent doesn\'t just draft—it ships.'
+      },
+      {
+        number: '05',
+        title: 'Merge',
+        description: 'Ready to merge when your team wakes up. Median time from meeting to merged PR: 9 hours.'
       }
-    ],
-    summary: 'Sustained deployments. Full autonomy. Clear handover. We work as an extension of your team.'
-  },
-
-  // ICP Section
-  icp: {
-    label: 'Who we work with',
-    title: 'Built for fast-growing AI-native companies',
-    items: [
-      'Scaling AI products with enterprise customers',
-      'Closing $100K–$1M+ deals that need hands-on deployment',
-      'Engineering team stretched across product and customer work',
-      'Expansion opportunities sitting untouched due to bandwidth'
     ]
   },
 
-  // Security Section
-  security: {
-    label: 'Security',
-    title: 'Enterprise-grade',
-    description: 'Least-privilege access. Complete audit trails. Customer-controlled infrastructure. We operate within your security policies and compliance requirements.'
+  // What Makes This Hard Section
+  challenges: {
+    label: 'What makes this hard',
+    title: 'The complexity we handle so you don\'t have to',
+    items: [
+      {
+        title: 'Enterprise-scale codebase navigation',
+        description: 'Enterprise customers have 50+ repos. We maintain a directory map so the agent knows exactly which repo to touch for each request.'
+      },
+      {
+        title: 'Requirement translation',
+        description: '"Add SSO" means different things for different customers. We learn their stack and translate vague requirements into specific code changes.'
+      },
+      {
+        title: 'Visual context understanding',
+        description: 'Meeting notes aren\'t enough. We consume screen recordings when screen sharing happens to capture the full context.'
+      },
+      {
+        title: 'Historical pattern matching',
+        description: 'Before writing code, we pull similar past Jira issues and Slack threads to give the agent direction on what worked before.'
+      },
+      {
+        title: 'Decision trace management',
+        description: 'Context overload kills agents. We maintain decision traces—compressed logs of what the agent tried and why—so it doesn\'t get lost in 50 files.'
+      }
+    ]
+  },
+
+  // Capabilities Section
+  capabilities: {
+    label: 'Capabilities',
+    title: 'Built for enterprise AI deployments',
+    items: [
+      {
+        title: 'Multi-repo orchestration',
+        description: 'Navigate complex enterprise codebases with 50+ repositories. Automatic routing to the right repo for each change.'
+      },
+      {
+        title: 'Implementation memory',
+        description: 'Never solve the same problem twice. Surface code, configs, and solutions from past customer deployments.'
+      },
+      {
+        title: 'Context-aware code generation',
+        description: 'Understand customer stack, constraints, and preferences. Generate code that fits their environment, not generic templates.'
+      },
+      {
+        title: 'CI/CD integration',
+        description: 'Iterate through test failures and CI issues automatically. Ship PRs that pass your pipeline.'
+      },
+      {
+        title: 'Review automation',
+        description: 'Respond to reviewer comments, make requested changes, and iterate until approval.'
+      },
+      {
+        title: 'Async execution',
+        description: 'Ship while your team sleeps. Customer requests processed overnight, ready to review in the morning.'
+      }
+    ]
+  },
+
+  // Stats Section
+  stats: {
+    items: [
+      { value: '9 hrs', label: 'Meeting to merged PR' },
+      { value: '50+', label: 'Repos navigated per customer' },
+      { value: '10x', label: 'Faster implementation cycles' }
+    ]
+  },
+
+  // Who It's For Section
+  whoItsFor: {
+    label: 'Who it\'s for',
+    title: 'Built for AI companies shipping enterprise deployments',
+    items: [
+      {
+        title: 'AI-native companies',
+        points: [
+          'Shipping custom enterprise deployments',
+          'FDE team stretched across too many accounts',
+          'Customer requests piling up in the backlog',
+          'Deals dying while waiting for implementation'
+        ]
+      },
+      {
+        title: 'Enterprise software vendors',
+        points: [
+          'Scaling professional services without headcount',
+          'Reducing time-to-value for customers',
+          'Consistent delivery across engagements',
+          'Capturing and reusing implementation patterns'
+        ]
+      }
+    ]
   },
 
   // FAQ Section
@@ -147,41 +155,41 @@ export const content = {
     label: 'FAQ',
     items: [
       {
-        question: 'What makes FDE different from consulting or staff augmentation?',
-        answer: 'FDEs are elite full-stack engineers who embed with sustained presence and full autonomy. We ship production code, own outcomes, and transfer knowledge-not deliver recommendations or temporary headcount.'
+        question: 'How does Altor handle different customer environments?',
+        answer: 'We learn each customer\'s stack, repo structure, and preferences. "Add SSO" means different things for different customers—we translate vague requirements into specific code changes that fit their environment.'
       },
       {
-        question: 'How long do typical engagements last?',
-        answer: 'Meaningful deployments run 8-12 weeks initially. We stay until the system is stable and your customer\'s team owns it completely. Complex enterprise deals may require longer sustained presence.'
+        question: 'What if the generated PR needs changes?',
+        answer: 'Our agent doesn\'t just draft—it iterates. It responds to reviewer comments, fixes CI failures, and continues iterating until the PR is ready to merge.'
       },
       {
-        question: 'How do you help with expansion revenue?',
-        answer: 'We proactively identify high-signal expansion opportunities while embedded with your customers. We scope the use cases, build the solutions, and package them into patterns that boost NRR and feed your product roadmap.'
+        question: 'How do you handle context across 50+ repos?',
+        answer: 'We maintain a directory map for each customer so the agent knows exactly which repo to touch. Before writing code, we also pull similar past Jira issues and Slack threads for context on what worked before.'
       },
       {
-        question: 'What kind of engineers do you deploy?',
-        answer: 'Elite, high-agency engineers who can code, read the room, and close. They have product intuition, customer-facing savvy, and can wear many hats-the rare breed that makes FDE actually work.'
+        question: 'What inputs does the agent need?',
+        answer: 'Meeting recordings are the primary input. We also consume screen recordings when screen sharing happens—not just meeting notes. The agent extracts requirements and translates them into actionable tickets.'
       },
       {
-        question: 'How does this help our product roadmap?',
-        answer: 'The feedback loop from FDEs experiencing customer pain at the edge turns directly into product insights. We capture patterns, frameworks, and requirements that define what your product should become.'
+        question: 'How do you prevent the agent from getting confused?',
+        answer: 'Context overload kills agents. We maintain decision traces—compressed logs of what the agent tried and why—so it doesn\'t get lost in 50 files or repeat failed approaches.'
       }
     ]
   },
 
   // Final CTA Section
   finalCTA: {
-    title: 'Ready to scale without the hiring bottleneck?',
-    description: 'Let\'s discuss how forward-deployed engineering can accelerate your enterprise deployments and expansion.',
-    buttonText: 'Book a call',
+    title: 'Ready to ship while you sleep?',
+    description: 'See how Altor can accelerate your enterprise deployments.',
+    buttonText: 'Book a demo',
     buttonUrl: 'https://calendar.app.google/Xh3jbxtMPotCz2pXA',
-    email: 'founders@altorlab.com'
+    email: 'anshul@altorlab.com'
   },
 
   // Footer
   footer: {
-    copyright: `© ${new Date().getFullYear()} AltorLab`,
-    email: 'founders@altorlab.com',
+    copyright: `© ${new Date().getFullYear()} Altor`,
+    email: 'anshul@altorlab.com',
     linkedIn: 'https://www.linkedin.com/in/ansh27/',
     privacy: 'Privacy Policy'
   }

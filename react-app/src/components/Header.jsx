@@ -30,24 +30,17 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center">
-            <span className="text-xl font-bold text-white tracking-tight">{content.companyName}</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent tracking-tight">{content.companyName}</span>
           </a>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
             <a
-              href="#how-we-work"
-              onClick={scrollTo('how-we-work')}
+              href="#how-it-works"
+              onClick={scrollTo('how-it-works')}
               className="text-sm text-gray-400 hover:text-white transition-colors"
             >
-              How we work
-            </a>
-            <a
-              href="#security"
-              onClick={scrollTo('security')}
-              className="text-sm text-gray-400 hover:text-white transition-colors"
-            >
-              Security
+              How it works
             </a>
             <a
               href="#faq"
@@ -55,13 +48,6 @@ const Header = () => {
               className="text-sm text-gray-400 hover:text-white transition-colors"
             >
               FAQ
-            </a>
-            <a
-              href="#contact"
-              onClick={scrollTo('contact')}
-              className="text-sm text-gray-400 hover:text-white transition-colors"
-            >
-              Contact
             </a>
           </div>
 
