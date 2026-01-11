@@ -4,13 +4,13 @@
 export const content = {
   // Company Info
   companyName: 'Altor',
-  tagline: 'Ship customer requests while your FDEs sleep',
+  tagline: 'Enterprise deployment automation for AI companies',
 
   // Hero Section
   hero: {
     headline: 'Ship customer requests while your FDEs sleep',
     subhead: 'Every enterprise AI deployment has a bottleneck: the FDE. After meetings, they manually create tickets, write code, open PRs, address reviews, merge. It takes days. Deals die waiting.',
-    highlight: 'Meeting recording → tickets → PRs → review responses → merge. Median time: 9 hours.',
+    highlight: 'Meeting recording → tickets → PRs → review responses → merge.',
     primaryCTA: {
       text: 'Book a demo',
       url: 'https://calendar.app.google/Xh3jbxtMPotCz2pXA'
@@ -25,12 +25,12 @@ export const content = {
   howItWorks: {
     label: 'How it works',
     title: 'From customer meeting to merged PR',
-    subtitle: 'Our agent doesn\'t just draft—it iterates through CI failures and reviewer comments until the PR is ready.',
+    subtitle: 'Our agent doesn\'t just draft-it iterates through CI failures and reviewer comments until the PR is ready.',
     steps: [
       {
         number: '01',
         title: 'Meeting Recording',
-        description: 'Capture customer requirements from calls. We consume screen recordings when screen sharing happens—not just meeting notes.'
+        description: 'Capture customer requirements from calls. We consume screen recordings when screen sharing happens-not just meeting notes.'
       },
       {
         number: '02',
@@ -45,7 +45,7 @@ export const content = {
       {
         number: '04',
         title: 'Review & Iterate',
-        description: 'Address reviewer comments, fix CI failures, iterate until green. The agent doesn\'t just draft—it ships.'
+        description: 'Address reviewer comments, fix CI failures, iterate until green. The agent doesn\'t just draft-it ships.'
       },
       {
         number: '05',
@@ -78,7 +78,7 @@ export const content = {
       },
       {
         title: 'Decision trace management',
-        description: 'Context overload kills agents. We maintain decision traces—compressed logs of what the agent tried and why—so it doesn\'t get lost in 50 files.'
+        description: 'Context overload kills agents. We maintain decision traces-compressed logs of what the agent tried and why-so it doesn\'t get lost in 50 files.'
       }
     ]
   },
@@ -156,11 +156,11 @@ export const content = {
     items: [
       {
         question: 'How does Altor handle different customer environments?',
-        answer: 'We learn each customer\'s stack, repo structure, and preferences. "Add SSO" means different things for different customers—we translate vague requirements into specific code changes that fit their environment.'
+        answer: 'We learn each customer\'s stack, repo structure, and preferences. "Add SSO" means different things for different customers-we translate vague requirements into specific code changes that fit their environment.'
       },
       {
         question: 'What if the generated PR needs changes?',
-        answer: 'Our agent doesn\'t just draft—it iterates. It responds to reviewer comments, fixes CI failures, and continues iterating until the PR is ready to merge.'
+        answer: 'Our agent doesn\'t just draft-it iterates. It responds to reviewer comments, fixes CI failures, and continues iterating until the PR is ready to merge.'
       },
       {
         question: 'How do you handle context across 50+ repos?',
@@ -168,11 +168,11 @@ export const content = {
       },
       {
         question: 'What inputs does the agent need?',
-        answer: 'Meeting recordings are the primary input. We also consume screen recordings when screen sharing happens—not just meeting notes. The agent extracts requirements and translates them into actionable tickets.'
+        answer: 'Meeting recordings are the primary input. We also consume screen recordings when screen sharing happens-not just meeting notes. The agent extracts requirements and translates them into actionable tickets.'
       },
       {
         question: 'How do you prevent the agent from getting confused?',
-        answer: 'Context overload kills agents. We maintain decision traces—compressed logs of what the agent tried and why—so it doesn\'t get lost in 50 files or repeat failed approaches.'
+        answer: 'Context overload kills agents. We maintain decision traces-compressed logs of what the agent tried and why-so it doesn\'t get lost in 50 files or repeat failed approaches.'
       }
     ]
   },
