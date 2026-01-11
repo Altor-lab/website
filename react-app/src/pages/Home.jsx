@@ -29,16 +29,27 @@ const Home = () => {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-purple-500/10 rounded-full blur-[150px]" />
 
         <div className="container-custom relative z-10 text-center pt-20">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight max-w-5xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight max-w-5xl mx-auto">
             {content.hero.headline}
           </h1>
-          <p className="text-lg sm:text-xl text-gray-400 mb-8 leading-relaxed max-w-3xl mx-auto">
-            {content.hero.subhead}
-          </p>
+
+          <div className="flex flex-col gap-3 mb-10 max-w-3xl mx-auto">
+            {Array.isArray(content.hero.subhead) ? (
+              content.hero.subhead.map((line, i) => (
+                <p key={i} className={`text-lg sm:text-xl ${i === 2 ? 'text-white font-medium' : 'text-gray-400'} leading-relaxed`}>
+                  {line}
+                </p>
+              ))
+            ) : (
+              <p className="text-lg sm:text-xl text-gray-400 leading-relaxed">
+                {content.hero.subhead}
+              </p>
+            )}
+          </div>
 
           {/* Pipeline highlight */}
           <div className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 mb-10">
-            <span className="text-sm sm:text-base text-gray-300 font-mono">
+            <span className="text-sm sm:text-base text-gray-300 font-mono tracking-wide">
               {content.hero.highlight}
             </span>
           </div>
@@ -135,7 +146,7 @@ const Home = () => {
       </section>
 
       {/* Capabilities Section */}
-      <section className="section-padding border-t border-white/5">
+      <section id="capabilities" className="section-padding border-t border-white/5">
         <div className="container-custom">
           <div className="text-center mb-16">
             <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">{content.capabilities.label}</span>
@@ -159,7 +170,7 @@ const Home = () => {
       </section>
 
       {/* Who It's For Section */}
-      <section className="section-padding border-t border-white/5">
+      <section id="who-its-for" className="section-padding border-t border-white/5">
         <div className="container-custom">
           <div className="text-center mb-16">
             <span className="text-sm font-semibold text-green-400 uppercase tracking-wider">{content.whoItsFor.label}</span>

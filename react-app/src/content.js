@@ -8,16 +8,34 @@ export const content = {
 
   // Hero Section
   hero: {
-    headline: 'Ship customer requests while your FDEs sleep',
-    subhead: 'Every enterprise AI deployment has a bottleneck: the FDE. After meetings, they manually create tickets, write code, open PRs, address reviews, merge. It takes days. Deals die waiting.',
-    highlight: 'Meeting recording → tickets → PRs → review responses → merge.',
+    headline: 'Enterprise deployment automation for AI companies',
+    subhead: [
+      'Every enterprise AI deployment has a bottleneck: the FDE.',
+      'Manual tickets, code, PRs, and reviews take days.',
+      'Deals die waiting. We automate the entire pipeline.'
+    ],
+    highlight: 'Meeting recording → Tickets → PRs → Reviews → Merge',
     primaryCTA: {
       text: 'Book a demo',
       url: 'https://calendar.app.google/Xh3jbxtMPotCz2pXA'
     },
+    tryProduct: {
+      text: 'Try Altor',
+      url: 'https://app.altorlab.com',
+      badge: 'Product'
+    },
     secondaryCTA: {
       text: 'See how it works',
       anchor: '#how-it-works'
+    },
+    trustedBy: {
+      label: 'TRUSTED BY INNOVATIVE AI TEAMS',
+      logos: [
+        { name: 'TechCo', opacity: 0.5 },
+        { name: 'AI Systems', opacity: 0.5 },
+        { name: 'DataFlow', opacity: 0.5 },
+        { name: 'NeuralNet', opacity: 0.5 }
+      ]
     }
   },
 
@@ -79,6 +97,10 @@ export const content = {
       {
         title: 'Decision trace management',
         description: 'Context overload kills agents. We maintain decision traces-compressed logs of what the agent tried and why-so it doesn\'t get lost in 50 files.'
+      },
+      {
+        title: 'Human-in-the-loop controls',
+        description: 'You\'re never locked out. Review, approve, or reject any change before it ships. We integrate directly with your existing approval workflows.'
       }
     ]
   },
@@ -111,6 +133,14 @@ export const content = {
       {
         title: 'Async execution',
         description: 'Ship while your team sleeps. Customer requests processed overnight, ready to review in the morning.'
+      },
+      {
+        title: 'Repeatable enterprise delivery',
+        description: 'Standardize and scale your deployment process. Turn one-off custom implementations into repeatable patterns that work across all enterprise customers.'
+      },
+      {
+        title: 'Security & Compliance',
+        description: 'Enterprise-grade security by default. SOC2 Type II ready, on-prem deployment options, and full audit logs for every agent action.'
       }
     ]
   },
@@ -141,6 +171,7 @@ export const content = {
       {
         title: 'Enterprise software vendors',
         points: [
+          'Repeatable enterprise delivery for AI vendors',
           'Scaling professional services without headcount',
           'Reducing time-to-value for customers',
           'Consistent delivery across engagements',
@@ -188,7 +219,7 @@ export const content = {
 
   // Footer
   footer: {
-    copyright: `© ${new Date().getFullYear()} Altor`,
+    copyright: `© ${new Date().getFullYear()} AltorLab`,
     email: 'anshul@altorlab.com',
     linkedIn: 'https://www.linkedin.com/in/ansh27/',
     privacy: 'Privacy Policy'
