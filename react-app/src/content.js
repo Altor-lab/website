@@ -11,7 +11,7 @@ export const content = {
     headline: 'Altor turns customer meetings into merged PRs',
     subhead: [
       'Turn enterprise deployment requests into merged PRs in hours, not days.',
-      'Altor automates the manual work-from meeting notes to tickets to code to deployment.',
+      'Automate the manual work - from meeting notes to tickets to deployment.',
       'Your FDEs focus on architecture, not repetitive implementation.'
     ],
     highlight: 'Meeting recording → Tickets → PRs → Reviews → Merge',
