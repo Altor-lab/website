@@ -4,7 +4,7 @@ import FeatureGrid from '../components/FeatureGrid'
 import CTASection from '../components/CTASection'
 
 const Reviews = () => {
-  const calendarLink = 'https://calendar.app.google/Xh3jbxtMPotCz2pXA'
+  const calendarLink = 'https://calendly.com/founders-altorlab/30min'
 
   const features = [
     {
@@ -117,9 +117,9 @@ const Reviews = () => {
                     <span className="text-gray-500">{competitor.rating}</span>
                   </div>
                   <div className="h-3 bg-dark-800 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-gray-700 rounded-full" 
-                      style={{ width: `${competitor.width}%` }} 
+                    <div
+                      className="h-full bg-gray-700 rounded-full"
+                      style={{ width: `${competitor.width}%` }}
                     />
                   </div>
                 </div>

@@ -4,7 +4,7 @@ import FeatureGrid from '../components/FeatureGrid'
 import CTASection from '../components/CTASection'
 
 const GEO = () => {
-  const calendarLink = 'https://calendar.app.google/Xh3jbxtMPotCz2pXA'
+  const calendarLink = 'https://calendly.com/founders-altorlab/30min'
 
   // Stats data
   const stats = [
@@ -144,21 +144,21 @@ const GEO = () => {
                 {index < steps.length - 1 && (
                   <div className="hidden md:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-primary-blue to-transparent -translate-x-1/2" />
                 )}
-                
+
                 <div className="bg-dark-900 border border-gray-800 rounded-xl p-8 relative z-10">
                   {/* Step number */}
                   <div className="text-6xl font-bold text-gray-800 mb-4">
                     {step.number}
                   </div>
-                  
+
                   {/* Icon */}
                   <div className="text-4xl mb-4">{step.icon}</div>
-                  
+
                   {/* Title */}
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {step.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-gray-400">
                     {step.description}
@@ -279,9 +279,9 @@ const GEO = () => {
                     <span className="text-gray-500">{competitor.score}/100</span>
                   </div>
                   <div className="h-3 bg-dark-900 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-gray-700 rounded-full" 
-                      style={{ width: `${competitor.score}%` }} 
+                    <div
+                      className="h-full bg-gray-700 rounded-full"
+                      style={{ width: `${competitor.score}%` }}
                     />
                   </div>
                 </div>

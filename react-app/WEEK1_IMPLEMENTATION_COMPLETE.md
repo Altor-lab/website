@@ -158,7 +158,7 @@ All 5 product pages in `/src/pages/`:
 
 ### 🎯 CTA Integration
 
-**All CTAs link to:** `https://calendar.app.google/Xh3jbxtMPotCz2pXA`
+**All CTAs link to:** `https://calendly.com/founders-altorlab/30min`
 
 **CTA Text Variations:**
 - GEO: "Book a Demo", "See How It Works"

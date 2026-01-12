@@ -112,7 +112,7 @@ const AIInsights = () => {
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Schedule a consultation to discover how we can help you outrank your competitors in AI-powered search engines.
               </p>
-              <Button href="https://calendar.app.google/Xh3jbxtMPotCz2pXA" className="text-lg px-8 py-4">
+              <Button href="https://calendly.com/founders-altorlab/30min" className="text-lg px-8 py-4">
                 Get Started Today
               </Button>
             </motion.div>

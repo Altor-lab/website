@@ -196,5 +196,5 @@ This is a private project for AltorLab. For questions or suggestions, contact th
 
 - Website: https://altorlab.com
 - Email: contact@altorlab.com
-- Schedule: https://calendar.app.google/Xh3jbxtMPotCz2pXA
+- Schedule: https://calendly.com/founders-altorlab/30min
 

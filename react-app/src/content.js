@@ -8,16 +8,16 @@ export const content = {
 
   // Hero Section
   hero: {
-    headline: 'Enterprise deployment automation for AI companies',
+    headline: 'Altor turns customer meetings into merged PRs',
     subhead: [
       'Turn enterprise deployment requests into merged PRs in hours, not days.',
-      'Altor automates the manual work—from meeting notes to tickets to code to CI fixes.',
+      'Altor automates the manual work-from meeting notes to tickets to code to deployment.',
       'Your FDEs focus on architecture, not repetitive implementation.'
     ],
     highlight: 'Meeting recording → Tickets → PRs → Reviews → Merge',
     primaryCTA: {
       text: 'Book a demo',
-      url: 'https://calendar.app.google/Xh3jbxtMPotCz2pXA'
+      url: 'https://calendly.com/founders-altorlab/30min'
     },
     tryProduct: {
       text: 'Try Altor',
@@ -213,7 +213,7 @@ export const content = {
     title: 'Ready to ship while you sleep?',
     description: 'See how Altor can accelerate your enterprise deployments.',
     buttonText: 'Book a demo',
-    buttonUrl: 'https://calendar.app.google/Xh3jbxtMPotCz2pXA',
+    buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     email: 'anshul@altorlab.com'
   },
 

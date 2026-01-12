@@ -3,7 +3,7 @@ import FeatureGrid from '../components/FeatureGrid'
 import CTASection from '../components/CTASection'
 
 const PaidMarketing = () => {
-  const calendarLink = 'https://calendar.app.google/Xh3jbxtMPotCz2pXA'
+  const calendarLink = 'https://calendly.com/founders-altorlab/30min'
 
   const features = [
     {
