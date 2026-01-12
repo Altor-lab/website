@@ -10,9 +10,9 @@ export const content = {
   hero: {
     headline: 'Enterprise deployment automation for AI companies',
     subhead: [
-      'Every enterprise AI deployment has a bottleneck: the FDE.',
-      'Manual tickets, code, PRs, and reviews take days.',
-      'Deals die waiting. We automate the entire pipeline.'
+      'Turn enterprise deployment requests into merged PRs in hours, not days.',
+      'Altor automates the manual work—from meeting notes to tickets to code to CI fixes.',
+      'Your FDEs focus on architecture, not repetitive implementation.'
     ],
     highlight: 'Meeting recording → Tickets → PRs → Reviews → Merge',
     primaryCTA: {
