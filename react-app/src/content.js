@@ -8,9 +8,9 @@ export const content = {
 
   // Hero Section
   hero: {
-    headline: 'Altor turns customer meetings into shipped codes',
+    headline: 'Altor turns customer meetings into shipped code',
     subhead: [
-      'Turn enterprise deployment requests into shipped codes in hours, not days.',
+      'Turn enterprise deployment requests into shipped code in hours, not days.',
       'Automate the manual work - from meeting notes to tickets to deployment.',
       'Your FDEs focus on architecture, not repetitive implementation.'
     ],
