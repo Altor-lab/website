@@ -32,7 +32,7 @@ export const content = {
       { value: '85%', label: 'feature overlap across customers' },
       { value: '2-4 weeks', label: 'typical deployment without Altor' }
     ],
-    socialProof: 'Currently deployed at Portkey and DoorDash. 5 PRs opened, 3 merged in last 30 days.'
+    socialProof: 'Currently deployed at Portkey. 5 PRs opened, 3 merged in last 30 days.'
   },
 
   // The Problem Section - Broken Workflow
