@@ -9,7 +9,7 @@ export const content = {
   // Hero Section
   hero: {
     headline: 'Customer meeting → merged PR in hours',
-    subhead: 'We turn customer meeting recordings into production code. SSO, RBAC, audit logs—shipped in hours, not weeks.',
+    subhead: 'We turn customer meeting recordings into production code. SSO, RBAC, audit logs-shipped in hours, not weeks.',
     alternateSubhead: 'Enterprise readiness work is 85% identical across customers. We automated it.',
     primaryCTA: {
       text: 'Book a demo',
@@ -59,7 +59,7 @@ export const content = {
   howItWorks: {
     label: 'How it works',
     title: 'From customer meeting to merged PR',
-    subtitle: 'Our agent doesn\'t just draft—it iterates through CI failures and reviewer comments until the PR is ready.',
+    subtitle: 'Our agent doesn\'t just draft-it iterates through CI failures and reviewer comments until the PR is ready.',
     steps: [
       {
         number: '1',
@@ -83,7 +83,7 @@ export const content = {
         number: '4',
         title: 'Run CI, fix failures',
         shortTitle: 'CI/Fix',
-        description: 'Iterate until green. The agent doesn\'t stop at draft—it ships.'
+        description: 'Iterate until green. The agent doesn\'t stop at draft-it ships.'
       },
       {
         number: '5',
@@ -148,11 +148,11 @@ export const content = {
     items: [
       {
         question: 'How does Altor handle different customer environments?',
-        answer: 'We learn each customer\'s stack, repo structure, and preferences. "Add SSO" means different things for different customers—we translate vague requirements into specific code changes that fit their environment.'
+        answer: 'We learn each customer\'s stack, repo structure, and preferences. "Add SSO" means different things for different customers-we translate vague requirements into specific code changes that fit their environment.'
       },
       {
         question: 'What if the generated PR needs changes?',
-        answer: 'Our agent doesn\'t just draft—it iterates. It responds to reviewer comments, fixes CI failures, and continues iterating until the PR is ready to merge.'
+        answer: 'Our agent doesn\'t just draft-it iterates. It responds to reviewer comments, fixes CI failures, and continues iterating until the PR is ready to merge.'
       },
       {
         question: 'How do you handle context across 50+ repos?',
@@ -160,11 +160,11 @@ export const content = {
       },
       {
         question: 'What inputs does the agent need?',
-        answer: 'Meeting recordings are the primary input. We also consume screen recordings when screen sharing happens—not just meeting notes. The agent extracts requirements and translates them into actionable tickets.'
+        answer: 'Meeting recordings are the primary input. We also consume screen recordings when screen sharing happens-not just meeting notes. The agent extracts requirements and translates them into actionable tickets.'
       },
       {
         question: 'What\'s the typical turnaround time?',
-        answer: 'Median time from meeting to merged PR is 9 hours. Ship while your team sleeps—customer requests processed overnight, ready to review in the morning.'
+        answer: 'Median time from meeting to merged PR is 9 hours. Ship while your team sleeps-customer requests processed overnight, ready to review in the morning.'
       }
     ]
   },
