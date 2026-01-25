@@ -1,4 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+/* Geist Font - Developer aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* Geist font loaded via local/CDN - fallback to system fonts */
+@font-face {
+  font-family: 'Geist';
+  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -6,8 +40,7 @@
 
 @layer base {
   body {
-    @apply bg-black text-white font-sans antialiased;
-    font-feature-settings: 'cv11', 'ss01';
+    @apply bg-[#0d1117] text-gray-100 font-sans antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -37,31 +70,36 @@
   }
 
   .section-padding {
-    @apply py-24 md:py-32 lg:py-40;
+    @apply py-20 md:py-28 lg:py-32;
   }
 
-  /* Gradient text effect */
-  .gradient-text {
-    @apply bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent;
+  /* Accent text for emphasis */
+  .accent-text {
+    @apply text-emerald-400;
   }
 
-  /* Glow effect for cards */
-  .card-glow {
-    @apply relative;
+  /* Code/mono styling */
+  .mono-text {
+    @apply font-mono text-sm tracking-tight;
   }
 
-  .card-glow::before {
-    content: '';
-    @apply absolute -inset-px bg-gradient-to-r from-blue-500/20 via-cyan-500/20 to-blue-500/20 rounded-2xl blur-xl opacity-0 transition-opacity duration-500;
+  /* Card styling - developer aesthetic */
+  .card-dark {
+    @apply bg-[#161b22] border border-[#30363d] rounded-lg transition-all duration-200;
   }
 
-  .card-glow:hover::before {
-    @apply opacity-100;
+  .card-dark:hover {
+    @apply border-[#484f58] bg-[#1c2129];
+  }
+
+  /* Subtle glow for accent elements */
+  .glow-accent {
+    box-shadow: 0 0 40px rgba(52, 211, 153, 0.1);
   }
 }
 
 @layer utilities {
   .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black;
+    @apply focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-[#0d1117];
   }
 }

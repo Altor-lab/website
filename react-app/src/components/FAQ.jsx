@@ -4,16 +4,16 @@ const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="border-b border-white/10">
+    <div className="border-b border-[#21262d]">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-6 flex justify-between items-start text-left group"
+        className="w-full py-5 flex justify-between items-start text-left group"
         aria-expanded={isOpen}
       >
-        <span className="text-lg font-medium text-white group-hover:text-blue-400 transition-colors pr-8">{question}</span>
-        <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-blue-500/20 border-blue-500/30 rotate-180' : 'group-hover:bg-white/10'}`}>
+        <span className="text-base font-medium text-[#e6edf3] group-hover:text-white transition-colors pr-8">{question}</span>
+        <div className={`flex-shrink-0 w-6 h-6 rounded-md bg-[#21262d] border border-[#30363d] flex items-center justify-center transition-all duration-200 ${isOpen ? 'bg-emerald-500/10 border-emerald-500/30' : 'group-hover:bg-[#30363d]'}`}>
           <svg
-            className={`w-4 h-4 text-gray-400 ${isOpen ? 'text-blue-400' : ''}`}
+            className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? 'text-emerald-400 rotate-180' : 'text-[#8b949e]'}`}
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -22,8 +22,8 @@ const FAQItem = ({ question, answer }) => {
           </svg>
         </div>
       </button>
-      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-6' : 'max-h-0'}`}>
-        <p className="text-gray-400 leading-relaxed">{answer}</p>
+      <div className={`overflow-hidden transition-all duration-200 ${isOpen ? 'max-h-96 pb-5' : 'max-h-0'}`}>
+        <p className="text-[#8b949e] leading-relaxed text-sm">{answer}</p>
       </div>
     </div>
   )

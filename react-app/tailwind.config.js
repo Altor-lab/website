@@ -7,59 +7,43 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-          blue: '#0ea5e9',
-          purple: '#9b51e0',
+        // GitHub-inspired dark theme colors
+        bg: {
+          primary: '#0d1117',
+          secondary: '#161b22',
+          tertiary: '#1c2129',
         },
-        dark: {
-          50: '#18181b',
-          100: '#0f0f12',
-          200: '#09090b',
-          300: '#050507',
-          400: '#030303',
-          900: '#030303',
-          800: '#050507',
-          700: '#09090b',
-          600: '#0f0f12',
-          500: '#18181b',
+        border: {
+          default: '#30363d',
+          muted: '#21262d',
+          emphasis: '#484f58',
+        },
+        text: {
+          primary: '#e6edf3',
+          secondary: '#8b949e',
+          muted: '#6e7681',
         },
         accent: {
-          green: '#00d084',
-          yellow: '#fcb900',
-          red: '#cf2e2e',
+          green: '#34d399',
+          blue: '#58a6ff',
+          orange: '#f59e0b',
+          red: '#f87171',
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['Geist Mono', 'monospace'],
-        display: ['Inter Display', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['Geist', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        mono: ['JetBrains Mono', 'SF Mono', 'Monaco', 'Consolas', 'monospace'],
       },
       fontSize: {
-        'h1-product': ['3.5rem', { lineHeight: '1.1', fontWeight: '700' }],
-        'h2-product': ['2.5rem', { lineHeight: '1.2', fontWeight: '700' }],
-        'h3-product': ['1.75rem', { lineHeight: '1.3', fontWeight: '600' }],
-        'stat-large': ['4rem', { lineHeight: '1', fontWeight: '700' }],
-      },
-      backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #0ea5e9 0%, #9b51e0 100%)',
-        'gradient-dark': 'linear-gradient(180deg, #030303 0%, #09090b 100%)',
-        'gradient-radial': 'radial-gradient(circle at center, #0f0f12 0%, #030303 100%)',
+        'display': ['3.5rem', { lineHeight: '1.1', fontWeight: '700', letterSpacing: '-0.02em' }],
+        'display-sm': ['2.5rem', { lineHeight: '1.15', fontWeight: '700', letterSpacing: '-0.02em' }],
+        'heading': ['2rem', { lineHeight: '1.25', fontWeight: '600', letterSpacing: '-0.01em' }],
+        'subheading': ['1.25rem', { lineHeight: '1.5', fontWeight: '500' }],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
         'slide-up': 'slideUp 0.5s ease-out',
-        'slide-down': 'slideDown 0.5s ease-out',
-        'scale-in': 'scaleIn 0.3s ease-out',
+        'pulse-slow': 'pulse 3s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -69,14 +53,6 @@ export default {
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        slideDown: {
-          '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        scaleIn: {
-          '0%': { transform: 'scale(0.95)', opacity: '0' },
-          '100%': { transform: 'scale(1)', opacity: '1' },
         },
       },
     },

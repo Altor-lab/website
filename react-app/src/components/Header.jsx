@@ -21,8 +21,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-black/80 backdrop-blur-xl border-b border-white/10'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${isScrolled
+        ? 'bg-[#0d1117]/95 backdrop-blur-md border-b border-[#21262d]'
         : 'bg-transparent'
         }`}
     >
@@ -30,52 +30,52 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center">
-            <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent tracking-tight">{content.companyName}</span>
+            <span className="text-xl font-bold text-white tracking-tight">{content.companyName}</span>
           </a>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
             <a
-              href="#capabilities"
-              onClick={scrollTo('capabilities')}
-              className="text-sm text-gray-400 hover:text-white transition-colors"
-            >
-              Capabilities
-            </a>
-            <a
-              href="#who-its-for"
-              onClick={scrollTo('who-its-for')}
-              className="text-sm text-gray-400 hover:text-white transition-colors"
-            >
-              Who it's for
-            </a>
-            <a
               href="#how-it-works"
               onClick={scrollTo('how-it-works')}
-              className="text-sm text-gray-400 hover:text-white transition-colors"
+              className="text-sm text-[#8b949e] hover:text-white transition-colors"
             >
               How it works
             </a>
             <a
+              href="#context-graph"
+              onClick={scrollTo('context-graph')}
+              className="text-sm text-[#8b949e] hover:text-white transition-colors"
+            >
+              Context Graph
+            </a>
+            <a
+              href="#who-its-for"
+              onClick={scrollTo('who-its-for')}
+              className="text-sm text-[#8b949e] hover:text-white transition-colors"
+            >
+              Who it's for
+            </a>
+            <a
               href="#faq"
               onClick={scrollTo('faq')}
-              className="text-sm text-gray-400 hover:text-white transition-colors"
+              className="text-sm text-[#8b949e] hover:text-white transition-colors"
             >
               FAQ
             </a>
           </div>
 
           {/* CTA Group */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <a
               href={content.hero.tryProduct.url}
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-purple-500/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 group"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium text-[#e6edf3] bg-[#21262d] border border-[#30363d] hover:bg-[#30363d] hover:border-[#484f58] transition-all duration-200"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span>{content.hero.tryProduct.text}</span>
-              <svg className="w-4 h-4 text-purple-400 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              <svg className="w-3.5 h-3.5 text-[#8b949e]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
 
