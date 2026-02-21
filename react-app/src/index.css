@@ -62,7 +62,7 @@
 }
 .link-underline:hover { background-size: 100% 1px; }
 
-/* ── terminal block (stays dark — contrast island on cream) ──── */
+/* ── terminal block (stays dark - contrast island on cream) ──── */
 .terminal {
   background: #111118;
   border: 1px solid rgba(0,0,0,0.12);
@@ -94,6 +94,7 @@
 .terminal-body .t-dim { color: #4a4b60; }
 .terminal-body .t-white { color: #e8e9ed; }
 .terminal-body .t-yellow { color: #fbbf24; }
+.terminal-body .t-purple { color: #8b8cff; }
 
 /* ── card (white on cream) ────────────────────────────────────── */
 .card {

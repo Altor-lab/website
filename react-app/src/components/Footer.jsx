@@ -1,10 +1,11 @@
 import { content } from '../content'
 
 const Footer = () => {
-  const links = [
+  const productLinks = [
     ['How it works', 'how-it-works'],
     ['Integrations', 'the-stack'],
-    ['Trust', 'trust'],
+    ['Trust & safety', 'trust'],
+    ['Getting started', 'onboarding'],
     ['FAQ', 'faq'],
   ]
 
@@ -24,13 +25,16 @@ const Footer = () => {
             <p className="text-fg-muted text-[0.8125rem] mt-2 max-w-[28ch] leading-relaxed">
               The investigation layer for B2B technical support.
             </p>
+            <p className="text-fg-faint text-[0.75rem] mt-3 leading-relaxed">
+              Usage-based pricing. No seat minimums.
+            </p>
           </div>
 
           <div className="flex gap-16">
             <div>
               <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Product</h4>
               <div className="flex flex-col gap-2.5">
-                {links.map(([label, id]) => (
+                {productLinks.map(([label, id]) => (
                   <a
                     key={id}
                     href={`#${id}`}
@@ -57,11 +61,21 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+
+            <div>
+              <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Resources</h4>
+              <div className="flex flex-col gap-2.5">
+                <a href="/llms.txt" className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">
+                  llms.txt
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="mt-12 pt-6 border-t border-edge-subtle flex flex-col sm:flex-row justify-between items-center gap-3">
           <span className="text-[0.75rem] text-fg-faint">{content.footer.copyright}</span>
+          <span className="text-[0.75rem] text-fg-faint">San Francisco, CA</span>
         </div>
       </div>
     </footer>

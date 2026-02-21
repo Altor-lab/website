@@ -34,6 +34,7 @@ const Header = () => {
     ['How it works', 'how-it-works'],
     ['Integrations', 'the-stack'],
     ['Trust', 'trust'],
+    ['Getting started', 'onboarding'],
     ['FAQ', 'faq'],
   ]
 
@@ -63,8 +64,6 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <a
               href={content.hero.tryProduct.url}
-              target="_blank"
-              rel="noopener noreferrer"
               className="hidden sm:inline text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors"
             >
               {content.hero.tryProduct.text}
@@ -134,8 +133,6 @@ const Header = () => {
                 </Button>
                 <a
                   href={content.hero.tryProduct.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-[0.9375rem] text-fg-secondary hover:text-fg transition-colors text-center py-2"
                 >
                   {content.hero.tryProduct.text}
