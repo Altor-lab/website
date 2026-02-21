@@ -1,37 +1,34 @@
-/* Geist Font - Developer aesthetic */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
-
-/* Geist font loaded via local/CDN - fallback to system fonts */
-@font-face {
-  font-family: 'Geist';
-  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 
 @font-face {
-  font-family: 'Geist';
-  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist';
-  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist';
-  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Bold.woff2') format('woff2');
+  font-family: 'Satoshi';
+  src: url('https://cdn.fontshare.com/wf/AKDKUQ3OWZPFQKXQRHAHXGRWHYCM/FQLH7IVHXTIHQD3JC5ABLLCMKABVDXCV/SPHBNXN7HTNHVK6VCKZF7GQ6GQLCCBMP.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://cdn.fontshare.com/wf/AKDKUQ3OWZPFQKXQRHAHXGRWHYCM/4BMQSQPYMXUHEVZRPEXGPWTQKXFN6AGD/LLHNCVZXW5CNZWUXDNFQVGCM2U4QW5C3.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');
+  font-weight: 600; font-style: normal; font-display: swap;
 }
 
 @tailwind base;
@@ -39,67 +36,113 @@
 @tailwind utilities;
 
 @layer base {
+  html { scroll-behavior: smooth; }
   body {
-    @apply bg-[#0d1117] text-gray-100 font-sans antialiased;
+    @apply bg-surface-0 text-fg font-sans antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
+  ::selection { background: rgba(69,88,217,0.12); color: #1a1a1a; }
   @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
       animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
   }
 }
 
-@layer components {
-  .container-custom {
-    @apply max-w-6xl mx-auto px-6 sm:px-8 lg:px-12;
-  }
+/* ── link underline ────────────────────────────────────────────── */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+}
+.link-underline:hover { background-size: 100% 1px; }
 
-  .section-padding {
-    @apply py-20 md:py-28 lg:py-32;
-  }
+/* ── terminal block (stays dark — contrast island on cream) ──── */
+.terminal {
+  background: #111118;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06);
+}
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+.terminal-body {
+  padding: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8125rem;
+  line-height: 1.8;
+  color: #9a9bb0;
+}
+.terminal-body .t-green { color: #34d399; }
+.terminal-body .t-dim { color: #4a4b60; }
+.terminal-body .t-white { color: #e8e9ed; }
+.terminal-body .t-yellow { color: #fbbf24; }
 
-  /* Accent text for emphasis */
-  .accent-text {
-    @apply text-emerald-400;
-  }
-
-  /* Code/mono styling */
-  .mono-text {
-    @apply font-mono text-sm tracking-tight;
-  }
-
-  /* Card styling - developer aesthetic */
-  .card-dark {
-    @apply bg-[#161b22] border border-[#30363d] rounded-lg transition-all duration-200;
-  }
-
-  .card-dark:hover {
-    @apply border-[#484f58] bg-[#1c2129];
-  }
-
-  /* Subtle glow for accent elements */
-  .glow-accent {
-    box-shadow: 0 0 40px rgba(52, 211, 153, 0.1);
-  }
+/* ── card (white on cream) ────────────────────────────────────── */
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  border-color: rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 
-@layer utilities {
-  .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-[#0d1117];
-  }
+/* ── card accent ───────────────────────────────────────────────── */
+.card-accent {
+  background: #ffffff;
+  border: 1px solid rgba(69,88,217,0.2);
+  border-radius: 12px;
+  box-shadow: 0 0 24px rgba(69,88,217,0.04);
+}
+
+/* ── hero glow (subtle blue behind dark terminal on cream) ───── */
+.hero-glow {
+  position: absolute;
+  inset: -40% -20%;
+  background: radial-gradient(ellipse at center, rgba(69,88,217,0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── terminal row ─────────────────────────────────────────────── */
+.terminal-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+/* ── terminal cursor ─────────────────────────────────────────── */
+.terminal-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background: #34d399;
+  animation: cursor-blink 1s step-end infinite;
+  margin-left: 4px;
+  vertical-align: middle;
+  opacity: 0.8;
+}
+@keyframes cursor-blink {
+  50% { opacity: 0; }
 }

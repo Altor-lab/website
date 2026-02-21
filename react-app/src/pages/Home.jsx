@@ -1,395 +1,407 @@
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { content } from '../content'
+import { NumberTicker } from '../components/magicui/number-ticker'
 import Button from '../components/Button'
 import FAQ from '../components/FAQ'
-import { NumberTicker } from '../components/magicui/number-ticker'
-import { DotPattern } from '../components/magicui/dot-pattern'
-import { Spotlight } from '../components/magicui/spotlight'
-import { BorderBeam } from '../components/magicui/border-beam'
-import { cn } from '../lib/utils'
 
-const Home = () => {
-  const scrollTo = (id) => (e) => {
-    e.preventDefault()
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
+const ease = [0.25, 0.4, 0.25, 1]
+const up = {
+  hidden: { opacity: 0, y: 24 },
+  show: (d = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.5, delay: d * 0.08, ease } }),
+}
 
+function Reveal({ children, className, id }) {
+  const ref = useRef(null)
+  const vis = useInView(ref, { once: true, margin: '-60px' })
   return (
-    <div className="bg-[#0d1117]">
-      {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20">
-        {/* Spotlight effect */}
-        <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="#34d399" />
-        
-        {/* Dot pattern background */}
-        <DotPattern
-          width={20}
-          height={20}
-          cx={1}
-          cy={1}
-          cr={1}
-          className="[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] opacity-40"
-        />
-
-        <div className="container-custom relative z-10 py-16">
-          <div className="max-w-4xl">
-            {/* Main headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
-              <span className="inline-block">Customer meeting</span>{' '}
-              <span className="text-emerald-400">→</span>{' '}
-              <span className="inline-block">merged PR in hours</span>
-            </h1>
-            
-            {/* Subheadline */}
-            <p className="text-lg sm:text-xl text-[#8b949e] mb-4 max-w-2xl leading-relaxed">
-              {content.hero.subhead}
-            </p>
-            <p className="text-base text-[#6e7681] mb-10 font-mono">
-              {content.hero.alternateSubhead}
-            </p>
-
-            {/* CTA buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 items-start mb-12">
-              <div className="relative">
-                <Button href={content.hero.primaryCTA.url} size="lg">
-                  {content.hero.primaryCTA.text}
-                </Button>
-              </div>
-              <button
-                onClick={scrollTo('how-it-works')}
-                className="text-[#8b949e] hover:text-white transition-colors font-medium flex items-center gap-2 py-3"
-              >
-                {content.hero.secondaryCTA.text} 
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-            </div>
-
-            {/* Social proof */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#161b22] border border-[#30363d]">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <p className="text-sm text-[#8b949e] font-mono">
-                {content.metrics.socialProof}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Metrics Bar */}
-      <section className="py-16 border-y border-[#21262d] bg-[#161b22] relative overflow-hidden">
-        <DotPattern
-          width={32}
-          height={32}
-          className="opacity-20"
-        />
-        <div className="container-custom relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4">
-            {/* 9 hours metric */}
-            <div className="text-center">
-              <div className="text-4xl sm:text-5xl font-bold text-emerald-400 mb-2 font-mono">
-                <NumberTicker value={9} /> hours
-              </div>
-              <div className="text-sm text-[#8b949e] uppercase tracking-wider">
-                median meeting → PR
-              </div>
-            </div>
-            
-            {/* 85% metric */}
-            <div className="text-center">
-              <div className="text-4xl sm:text-5xl font-bold text-emerald-400 mb-2 font-mono">
-                <NumberTicker value={85} />%
-              </div>
-              <div className="text-sm text-[#8b949e] uppercase tracking-wider">
-                feature overlap across customers
-              </div>
-            </div>
-            
-            {/* 2-4 weeks metric */}
-            <div className="text-center">
-              <div className="text-4xl sm:text-5xl font-bold text-orange-400 mb-2 font-mono">
-                2-4 weeks
-              </div>
-              <div className="text-sm text-[#8b949e] uppercase tracking-wider">
-                typical deployment without Altor
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Problem Section */}
-      <section id="the-problem" className="section-padding border-b border-[#21262d]">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            {/* Section header */}
-            <div className="mb-12">
-              <span className="text-xs font-semibold text-orange-400 uppercase tracking-wider font-mono">{content.theProblem.label}</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
-                {content.theProblem.title}
-              </h2>
-              <p className="text-lg text-[#8b949e]">{content.theProblem.subtitle}</p>
-            </div>
-
-            {/* Broken workflow visualization */}
-            <div className="relative bg-[#161b22] border border-[#30363d] rounded-lg p-8 mb-8 overflow-hidden">
-              <BorderBeam size={250} duration={12} colorFrom="#f59e0b" colorTo="#ef4444" />
-              
-              <div className="space-y-4 font-mono text-base">
-                {content.theProblem.steps.map((step, index) => (
-                  <div key={index} className="flex items-center gap-4 group">
-                    <span className="text-orange-400 w-6 group-hover:translate-x-1 transition-transform">{step.arrow}</span>
-                    <span className="text-[#e6edf3]">{step.text}</span>
-                  </div>
-                ))}
-              </div>
-              
-              {/* Conclusion */}
-              <div className="mt-8 pt-6 border-t border-[#30363d]">
-                <p className="text-lg text-orange-400 font-semibold">
-                  {content.theProblem.conclusion}
-                </p>
-              </div>
-            </div>
-
-            {/* Impact list */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {content.theProblem.impact.map((item, index) => (
-                <div key={index} className="bg-[#161b22] border border-[#30363d] rounded-lg p-4 text-center hover:border-orange-500/30 transition-colors">
-                  <span className="text-sm text-[#8b949e]">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section - Pipeline Visualization */}
-      <section id="how-it-works" className="section-padding border-b border-[#21262d] relative overflow-hidden">
-        <DotPattern
-          width={24}
-          height={24}
-          className="opacity-10"
-        />
-        <div className="container-custom relative z-10">
-          <div className="text-center mb-16">
-            <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider font-mono">{content.howItWorks.label}</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
-              {content.howItWorks.title}
-            </h2>
-            <p className="text-lg text-[#8b949e] max-w-2xl mx-auto">{content.howItWorks.subtitle}</p>
-          </div>
-
-          {/* 5-Step Pipeline - Horizontal on desktop */}
-          <div className="hidden lg:block mb-12">
-            <div className="flex items-start justify-between relative">
-              {/* Connection line with animated beam effect */}
-              <div className="absolute top-8 left-[8%] right-[8%] h-[2px] overflow-hidden">
-                <div className="absolute inset-0 bg-[#30363d]" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-1/4 animate-beam-horizontal" />
-              </div>
-              
-              {content.howItWorks.steps.map((step, index) => (
-                <div key={index} className="relative flex-1 px-3 group">
-                  {/* Step number */}
-                  <div className="w-16 h-16 rounded-lg bg-[#161b22] border-2 border-[#30363d] group-hover:border-emerald-500/50 flex items-center justify-center text-emerald-400 font-mono text-xl font-bold mb-4 relative z-10 mx-auto transition-colors">
-                    {step.number}
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-base font-semibold text-white mb-2">{step.shortTitle}</h3>
-                    <p className="text-xs text-[#8b949e] leading-relaxed">{step.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile/Tablet - Vertical layout */}
-          <div className="lg:hidden space-y-6">
-            {content.howItWorks.steps.map((step, index) => (
-              <div key={index} className="flex gap-4 items-start">
-                <div className="flex-shrink-0 relative">
-                  <div className="w-12 h-12 rounded-lg bg-[#161b22] border-2 border-[#30363d] flex items-center justify-center text-emerald-400 font-mono font-bold">
-                    {step.number}
-                  </div>
-                  {index < content.howItWorks.steps.length - 1 && (
-                    <div className="absolute left-1/2 top-12 w-[2px] h-10 -translate-x-1/2 overflow-hidden">
-                      <div className="absolute inset-0 bg-[#30363d]" />
-                      <div className="absolute inset-0 bg-gradient-to-b from-emerald-500 to-transparent h-1/2 animate-beam-vertical" />
-                    </div>
-                  )}
-                </div>
-                <div className="flex-1 pb-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-sm text-[#8b949e] leading-relaxed">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Context Graph Section */}
-      <section id="context-graph" className="section-padding border-b border-[#21262d] bg-[#161b22]">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="text-xs font-semibold text-blue-400 uppercase tracking-wider font-mono">{content.contextGraph.label}</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
-                {content.contextGraph.title}
-              </h2>
-              <p className="text-lg text-[#8b949e]">{content.contextGraph.subtitle}</p>
-            </div>
-
-            {/* Context Graph Features - Bento-style grid */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {content.contextGraph.features.map((feature, index) => (
-                <div 
-                  key={index} 
-                  className={cn(
-                    "flex items-start gap-4 p-5 rounded-lg bg-[#0d1117] border border-[#30363d] hover:border-blue-500/40 transition-all group",
-                    index === 0 && "sm:col-span-2 lg:col-span-1"
-                  )}
-                >
-                  <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/20 transition-colors">
-                    <ContextIcon type={feature.icon} />
-                  </div>
-                  <p className="text-sm text-[#e6edf3] leading-relaxed">{feature.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Moat Section */}
-      <section className="section-padding border-b border-[#21262d] relative overflow-hidden">
-        <div className="container-custom relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider font-mono">{content.theMoat.label}</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-6">
-              {content.theMoat.title}
-            </h2>
-            <p className="text-lg text-[#8b949e] mb-8">
-              {content.theMoat.description}
-            </p>
-            <div className="relative p-6 rounded-lg bg-[#161b22] border border-[#30363d] overflow-hidden">
-              <BorderBeam size={200} duration={10} delay={2} />
-              <p className="text-base text-[#e6edf3] font-mono leading-relaxed relative z-10">
-                "{content.theMoat.oneLiner}"
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who It's For Section */}
-      <section id="who-its-for" className="section-padding border-b border-[#21262d]">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider font-mono">{content.whoItsFor.label}</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3">
-              {content.whoItsFor.title}
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {content.whoItsFor.items.map((item, index) => (
-              <div
-                key={index}
-                className="p-8 rounded-lg bg-[#161b22] border border-[#30363d] hover:border-emerald-500/30 transition-colors"
-              >
-                <h3 className="text-xl font-bold text-white mb-6">{item.title}</h3>
-                <ul className="space-y-3">
-                  {item.points.map((point, pointIndex) => (
-                    <li key={pointIndex} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <svg className="w-3 h-3 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-[#8b949e]">{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section id="faq" className="section-padding border-b border-[#21262d]">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <span className="text-xs font-semibold text-[#8b949e] uppercase tracking-wider font-mono">{content.faq.label}</span>
-          </div>
-          <FAQ items={content.faq.items} />
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="section-padding relative overflow-hidden">
-        <Spotlight className="-top-40 -right-40" fill="#34d399" />
-        <div className="container-custom relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              {content.finalCTA.title}
-            </h2>
-            <p className="text-lg text-[#8b949e] mb-8">
-              {content.finalCTA.description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="relative">
-                <Button href={content.finalCTA.buttonUrl} size="lg">
-                  {content.finalCTA.buttonText}
-                </Button>
-              </div>
-              <a
-                href={`mailto:${content.finalCTA.email}`}
-                className="text-[#8b949e] hover:text-white transition-colors font-mono text-sm"
-              >
-                {content.finalCTA.email}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <section ref={ref} id={id} className={className}>
+      <motion.div initial="hidden" animate={vis ? 'show' : 'hidden'}>{children}</motion.div>
+    </section>
   )
 }
 
-// Context Graph Icon Component
-const ContextIcon = ({ type }) => {
-  const icons = {
-    chat: (
-      <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-      </svg>
-    ),
-    ticket: (
-      <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-      </svg>
-    ),
-    pattern: (
-      <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
-      </svg>
-    ),
-    git: (
-      <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-      </svg>
-    ),
-    code: (
-      <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    )
-  }
-  return icons[type] || icons.code
+const W = ({ children, className = '' }) => (
+  <div className={`max-w-[1080px] mx-auto px-6 ${className}`}>{children}</div>
+)
+
+function TermLine({ children, delay }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay, duration: 0.4, ease }}
+    >
+      {children}
+    </motion.div>
+  )
 }
 
-export default Home
+export default function Home() {
+  const go = (id) => (e) => {
+    e.preventDefault()
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  return (
+    <>
+      {/* ━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <section className="relative pt-32 pb-24 md:pt-44 md:pb-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/[0.03] to-transparent pointer-events-none" />
+
+        <W>
+          <motion.div initial="hidden" animate="show">
+            <motion.div variants={up} custom={0} className="flex items-center gap-2.5 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+              <span className="text-[0.8125rem] text-fg-secondary">{content.hero.proof}</span>
+            </motion.div>
+
+            <motion.h1
+              variants={up} custom={1}
+              className="font-display font-black text-fg leading-[1.04] tracking-[-0.04em] mb-6"
+              style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4rem)', textWrap: 'balance' }}
+            >
+              {content.hero.headline[0]}{' '}
+              <br className="hidden md:block" />
+              <span className="text-accent">{content.hero.headline[1]}</span>
+            </motion.h1>
+
+            <motion.p
+              variants={up} custom={2}
+              className="text-[1.0625rem] text-fg-secondary leading-[1.7] max-w-[52ch] mb-10"
+              style={{ textWrap: 'pretty' }}
+            >
+              {content.hero.subhead}
+            </motion.p>
+
+            <motion.div variants={up} custom={3} className="flex items-center gap-5 mb-20">
+              <Button href={content.hero.primaryCTA.url} size="lg">{content.hero.primaryCTA.text}</Button>
+              <button onClick={go('how-it-works')} className="text-fg-secondary hover:text-fg text-[0.9375rem] transition-colors link-underline">
+                {content.hero.secondaryCTA.text}
+              </button>
+            </motion.div>
+
+            {/* ── animated terminal ── */}
+            <motion.div variants={up} custom={4} className="relative max-w-[720px]">
+              <div className="hero-glow" />
+              <div className="terminal relative z-10">
+                <div className="terminal-bar">
+                  <div className="terminal-dot" /><div className="terminal-dot" /><div className="terminal-dot" />
+                  <span className="text-[0.6875rem] text-[#6b6c82] ml-2 font-mono">altor investigate</span>
+                </div>
+                <div className="terminal-body">
+                  <TermLine delay={1.0}>
+                    <div className="flex gap-3">
+                      <span className="t-dim shrink-0">$</span>
+                      <div>
+                        <span className="t-white">ticket SUP-2847</span>
+                        <span className="t-dim"> · </span>
+                        <span className="t-dim">acme-corp</span>
+                        <span className="t-dim"> · </span>
+                        <span className="text-[#9a9bb0]">"my API calls are failing"</span>
+                      </div>
+                    </div>
+                  </TermLine>
+
+                  <div className="mt-4 space-y-1">
+                    <TermLine delay={1.6}>
+                      <div className="terminal-row"><span className="t-dim">→</span> <span className="t-green">clickhouse</span> <span className="t-dim ml-1">429s spiked 12% → 43% (2h ago)</span></div>
+                    </TermLine>
+                    <TermLine delay={2.0}>
+                      <div className="terminal-row"><span className="t-dim">→</span> <span className="t-green">linear</span> <span className="t-dim ml-1">LIN-482 "rate limit bug" —</span> <span className="t-yellow">open</span></div>
+                    </TermLine>
+                    <TermLine delay={2.3}>
+                      <div className="terminal-row"><span className="t-dim">→</span> <span className="t-green">stripe</span> <span className="t-dim ml-1">plan active, no billing issues</span></div>
+                    </TermLine>
+                    <TermLine delay={2.6}>
+                      <div className="terminal-row"><span className="t-dim">→</span> <span className="t-green">github</span> <span className="t-dim ml-1">fix/rate-limit PR #891 — in review</span></div>
+                    </TermLine>
+                    <TermLine delay={2.9}>
+                      <div className="terminal-row"><span className="t-dim">→</span> <span className="t-green">docs</span> <span className="t-dim ml-1">/guides/rate-limits — workaround found</span></div>
+                    </TermLine>
+                  </div>
+
+                  <TermLine delay={3.5}>
+                    <div className="mt-4 pt-4 border-t border-[rgba(255,255,255,0.06)]">
+                      <div><span className="t-green">✓ diagnosis</span></div>
+                      <div className="mt-1"><span className="t-white">Known bug LIN-482 causing 429 spike.</span></div>
+                      <div><span className="text-[#9a9bb0]">Workaround in docs. Patch in PR #891, ETA 3 days.</span></div>
+                      <div className="mt-2"><span className="t-dim">→ reply drafted, ready for review</span><span className="terminal-cursor" /></div>
+                    </div>
+                  </TermLine>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </W>
+      </section>
+
+      {/* ━━━ METRICS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <div className="border-y border-edge-subtle bg-surface-1 py-10">
+        <W>
+          <div className="flex flex-col sm:flex-row gap-10 sm:gap-0 sm:justify-between">
+            {content.metrics.map((m, i) => (
+              <div key={i} className="flex items-baseline gap-3 sm:flex-col sm:gap-1.5">
+                <span className="font-display font-black text-[2rem] sm:text-[2.5rem] text-fg tracking-[-0.03em] tabular-nums leading-none">
+                  <NumberTicker value={m.value} />{m.suffix}
+                </span>
+                <span className="text-[0.8125rem] text-fg-muted">{m.label}</span>
+              </div>
+            ))}
+          </div>
+        </W>
+      </div>
+
+      {/* ━━━ THE GAP ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <Reveal className="py-24 md:py-36" id="the-gap">
+        <W>
+          <motion.p variants={up} custom={0} className="text-fg-muted font-mono text-[0.75rem] tracking-[0.05em] uppercase mb-4">
+            The problem
+          </motion.p>
+
+          <motion.h2
+            variants={up} custom={1}
+            className="font-display font-bold text-fg leading-[1.08] tracking-[-0.03em] mb-6 max-w-[600px]"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', textWrap: 'balance' }}
+          >
+            {content.gap.title}
+          </motion.h2>
+
+          <motion.p variants={up} custom={2} className="text-fg-secondary text-[1rem] leading-[1.7] max-w-[54ch] mb-12">
+            {content.gap.body}
+          </motion.p>
+
+          {/* 80/20 bar */}
+          <motion.div variants={up} custom={3} className="max-w-[480px] mb-12">
+            <div className="flex h-1.5 rounded-full overflow-hidden">
+              <div className="w-[80%] bg-accent/25 rounded-l-full" />
+              <div className="w-[20%] bg-surface-3 rounded-r-full" />
+            </div>
+            <div className="flex justify-between mt-2.5">
+              <span className="text-[0.75rem] text-accent font-medium">80% need live investigation</span>
+              <span className="text-[0.75rem] text-fg-muted">20% answered by docs</span>
+            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-4 max-w-[700px] mb-12">
+            {content.gap.comparison.map((c, i) => (
+              <motion.div
+                key={i}
+                variants={up}
+                custom={i + 4}
+                className={c.status === 'solved' ? 'card p-6 opacity-50' : 'card-accent p-6'}
+              >
+                <div className="flex items-center gap-2.5 mb-3">
+                  <span className={`w-2 h-2 rounded-full ${c.status === 'solved' ? 'bg-fg-muted' : 'bg-accent'}`} />
+                  <h3 className="font-semibold text-[0.9375rem] text-fg tracking-[-0.01em]">{c.label}</h3>
+                </div>
+                <p className="text-fg-secondary text-[0.8125rem] leading-relaxed">{c.detail}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.p variants={up} custom={6} className="text-accent font-semibold text-[1.125rem] tracking-[-0.01em]">
+            {content.gap.punchline}
+          </motion.p>
+        </W>
+      </Reveal>
+
+      {/* ━━━ HOW IT WORKS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <Reveal className="py-24 md:py-36 bg-surface-1" id="how-it-works">
+        <W>
+          <motion.p variants={up} custom={0} className="text-fg-muted font-mono text-[0.75rem] tracking-[0.05em] uppercase mb-4">
+            Investigation flow
+          </motion.p>
+          <motion.h2
+            variants={up} custom={1}
+            className="font-display font-bold text-fg leading-[1.08] tracking-[-0.03em] mb-5"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', textWrap: 'balance' }}
+          >
+            {content.investigation.title}
+          </motion.h2>
+          <motion.p variants={up} custom={2} className="text-fg-secondary text-[1rem] leading-[1.65] max-w-[52ch] mb-16">
+            {content.investigation.subtitle}
+          </motion.p>
+
+          <div>
+            {content.investigation.steps.map((s, i) => (
+              <motion.div
+                key={i}
+                variants={up}
+                custom={i + 3}
+                className="group grid grid-cols-[3rem_1fr] items-baseline border-t border-edge py-7 last:border-b last:border-edge"
+              >
+                <span className="font-mono text-[0.75rem] text-accent select-none">{s.num}</span>
+                <div>
+                  <h3 className="text-fg font-semibold text-[1rem] tracking-[-0.01em] mb-1.5 group-hover:text-accent transition-colors duration-200">
+                    {s.title}
+                  </h3>
+                  <p className="text-fg-secondary text-[0.875rem] leading-[1.65] max-w-[48ch]">{s.body}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </W>
+      </Reveal>
+
+      {/* ━━━ THE STACK ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <Reveal className="py-24 md:py-36" id="the-stack">
+        <W>
+          <div className="grid lg:grid-cols-[360px_1fr] gap-14 lg:gap-24">
+            <div>
+              <motion.p variants={up} custom={0} className="text-fg-muted font-mono text-[0.75rem] tracking-[0.05em] uppercase mb-4">
+                Integrations
+              </motion.p>
+              <motion.h2
+                variants={up} custom={1}
+                className="font-display font-bold text-fg leading-[1.08] tracking-[-0.03em] mb-5"
+                style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', textWrap: 'balance' }}
+              >
+                {content.stack.title}
+              </motion.h2>
+              <motion.p variants={up} custom={2} className="text-fg-secondary leading-[1.65] mb-6">
+                {content.stack.subtitle}
+              </motion.p>
+              <motion.p variants={up} custom={3} className="text-[0.8125rem] text-fg-muted leading-relaxed">
+                {content.stack.footnote}
+              </motion.p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-3">
+              {content.stack.integrations.map((int, i) => (
+                <motion.div key={i} variants={up} custom={i + 3} className="card p-5 group">
+                  <div className="flex items-center gap-2.5 mb-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent/50 group-hover:bg-accent transition-colors duration-200" />
+                    <h3 className="font-mono text-accent text-[0.875rem] font-medium">{int.name}</h3>
+                  </div>
+                  <p className="text-fg-secondary text-[0.8125rem] leading-relaxed pl-4">{int.role}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </W>
+      </Reveal>
+
+      {/* ━━━ TRUST MODEL ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <Reveal className="py-24 md:py-36 bg-surface-1" id="trust">
+        <W>
+          <div className="grid lg:grid-cols-[1fr_1fr] gap-14 lg:gap-24 items-start">
+            <div>
+              <motion.p variants={up} custom={0} className="text-fg-muted font-mono text-[0.75rem] tracking-[0.05em] uppercase mb-4">
+                Trust &amp; safety
+              </motion.p>
+              <motion.h2
+                variants={up} custom={1}
+                className="font-display font-bold text-fg leading-[1.08] tracking-[-0.03em] mb-6"
+                style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', textWrap: 'balance' }}
+              >
+                {content.trust.title}
+              </motion.h2>
+              <motion.p variants={up} custom={2} className="text-fg-secondary text-[1rem] leading-[1.7]">
+                {content.trust.body}
+              </motion.p>
+            </div>
+
+            <motion.div variants={up} custom={3} className="space-y-3">
+              {content.trust.levels.map((l, i) => (
+                <div
+                  key={i}
+                  className={`rounded-xl p-5 border transition-colors duration-200 ${
+                    l.accent
+                      ? 'border-accent/25 bg-accent/[0.04]'
+                      : 'border-edge bg-surface-2 hover:border-edge-hover'
+                  }`}
+                >
+                  <div className="flex items-center gap-2.5 mb-1.5">
+                    <span className={`text-[0.8125rem] ${l.accent ? 'text-accent' : 'text-fg-faint'}`}>
+                      {l.label === 'Read' ? '◉' : l.label === 'Write' ? '◎' : '○'}
+                    </span>
+                    <span className={`text-[0.9375rem] font-mono font-medium ${l.accent ? 'text-accent' : 'text-fg-secondary'}`}>
+                      {l.label}
+                    </span>
+                  </div>
+                  <p className="text-fg-secondary text-[0.8125rem] leading-relaxed pl-[1.625rem]">{l.detail}</p>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </W>
+      </Reveal>
+
+      {/* ━━━ AUDIENCE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <Reveal className="py-24 md:py-36" id="who-its-for">
+        <W>
+          <motion.p variants={up} custom={0} className="text-fg-muted font-mono text-[0.75rem] tracking-[0.05em] uppercase mb-4">
+            Built for
+          </motion.p>
+          <motion.h2
+            variants={up} custom={1}
+            className="font-display font-bold text-fg leading-[1.08] tracking-[-0.03em] mb-14"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', textWrap: 'balance' }}
+          >
+            {content.audience.title}
+          </motion.h2>
+
+          <div className="grid md:grid-cols-3 gap-px bg-edge rounded-xl overflow-hidden">
+            {content.audience.groups.map((g, i) => (
+              <motion.div key={i} variants={up} custom={i + 2} className="bg-surface-1 p-8">
+                <span className="font-mono text-accent text-[0.75rem] mb-3 block">0{i + 1}</span>
+                <h3 className="text-fg font-semibold text-[1rem] tracking-[-0.01em] mb-3">{g.name}</h3>
+                <p className="text-fg-secondary text-[0.875rem] leading-[1.7]">{g.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </W>
+      </Reveal>
+
+      {/* ━━━ FAQ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <Reveal className="py-24 md:py-36 bg-surface-1" id="faq">
+        <W>
+          <div className="grid lg:grid-cols-[280px_1fr] gap-12 lg:gap-20">
+            <div>
+              <motion.p variants={up} custom={0} className="text-fg-muted font-mono text-[0.75rem] tracking-[0.05em] uppercase mb-4">
+                FAQ
+              </motion.p>
+              <motion.h2
+                variants={up} custom={1}
+                className="font-display font-bold text-fg text-[1.375rem] tracking-[-0.02em]"
+              >
+                Frequently asked questions
+              </motion.h2>
+            </div>
+            <motion.div variants={up} custom={2}>
+              <FAQ items={content.faq} />
+            </motion.div>
+          </div>
+        </W>
+      </Reveal>
+
+      {/* ━━━ CTA ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <Reveal className="py-24 md:py-36">
+        <W>
+          <div className="relative rounded-2xl border border-edge bg-surface-1 p-10 md:p-16 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/[0.03] to-transparent pointer-events-none" />
+            <div className="relative">
+              <motion.h2
+                variants={up} custom={0}
+                className="font-display font-bold text-fg leading-[1.08] tracking-[-0.03em] mb-5"
+                style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', textWrap: 'balance' }}
+              >
+                {content.cta.title}
+              </motion.h2>
+              <motion.p variants={up} custom={1} className="text-fg-secondary text-[1rem] leading-[1.65] max-w-[50ch] mb-10">
+                {content.cta.body}
+              </motion.p>
+              <motion.div variants={up} custom={2} className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                <Button href={content.cta.buttonUrl} size="lg">{content.cta.buttonText}</Button>
+                <a href={`mailto:${content.cta.email}`} className="text-fg-muted hover:text-fg text-[0.875rem] transition-colors link-underline">
+                  {content.cta.email}
+                </a>
+              </motion.div>
+            </div>
+          </div>
+        </W>
+      </Reveal>
+    </>
+  )
+}

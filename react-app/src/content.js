@@ -1,187 +1,95 @@
-// Single source of truth for all website copy
-// Edit this file to update content without touching JSX
-
 export const content = {
-  // Company Info
   companyName: 'Altor',
-  tagline: 'Customer meeting → merged PR in hours',
 
-  // Hero Section
   hero: {
-    headline: 'Customer meeting → merged PR in hours',
-    subhead: 'We turn customer meeting recordings into production code. SSO, RBAC, audit logs-shipped in hours, not weeks.',
-    alternateSubhead: 'Enterprise readiness work is 85% identical across customers. We automated it.',
-    primaryCTA: {
-      text: 'Book a demo',
-      url: 'https://calendly.com/founders-altorlab/30min'
-    },
-    tryProduct: {
-      text: 'Try Altor',
-      url: 'https://app.altorlab.com',
-    },
-    secondaryCTA: {
-      text: 'See how it works',
-      anchor: '#how-it-works'
-    }
+    headline: ['"My API calls are failing."', 'Diagnosed in 2 minutes.', ''],
+    subhead: 'Altor connects to your ClickHouse, Linear, Stripe, and GitHub to investigate support tickets — pulling the same data your engineers check manually, in seconds.',
+    proof: 'Live at Portkey — tickets diagnosed across 6 systems.',
+    primaryCTA: { text: 'Book a demo', url: 'https://calendly.com/founders-altorlab/30min' },
+    secondaryCTA: { text: 'See how it works', anchor: '#how-it-works' },
+    tryProduct: { text: 'Try Altor', url: 'https://app.altorlab.com' },
   },
 
-  // Key Metrics - displayed prominently
-  metrics: {
-    items: [
-      { value: '9 hours', label: 'median meeting → PR' },
-      { value: '85%', label: 'feature overlap across customers' },
-      { value: '2-4 weeks', label: 'typical deployment without Altor' }
+  metrics: [
+    { value: 2, suffix: 'min', label: 'median time to diagnosis' },
+    { value: 6, suffix: '+', label: 'systems per investigation' },
+    { value: 80, suffix: '%', label: 'of investigation logic reusable' },
+  ],
+
+  gap: {
+    title: 'Your support AI answers questions. Your tickets need investigations.',
+    body: 'Doc chatbots handle the 20% where the answer is in your knowledge base. The other 80% — "my API calls are failing," "latency spiked," "webhook isn\'t firing" — need live data from your actual systems.',
+    comparison: [
+      { label: 'What you have today', detail: 'AI that reads documentation and guesses. Handles refunds, password resets, and FAQ. Breaks down the moment a ticket requires live customer data.', status: 'solved' },
+      { label: 'What your tickets actually need', detail: 'AI that reads your logs, your bug tracker, your billing system — and investigates like your best engineer would.', status: 'open' },
     ],
-    socialProof: 'Currently deployed at Portkey. 5 PRs opened, 3 merged in last 30 days.'
+    punchline: 'The investigation layer for B2B technical support doesn\'t exist yet.',
   },
 
-  // The Problem Section - Broken Workflow
-  theProblem: {
-    label: 'The Problem',
-    title: 'The Broken Workflow',
-    subtitle: 'Every time a customer says something in a meeting:',
+  investigation: {
+    title: '"My API calls are failing"',
+    subtitle: 'A real ticket triggers a real investigation. Not a doc lookup — a multi-system diagnosis pulling live data from the systems your engineers check manually.',
     steps: [
-      { arrow: '→', text: 'An FDE/SE interprets it' },
-      { arrow: '→', text: 'A ticket gets written (if they remember)' },
-      { arrow: '→', text: 'A PM prioritizes it' },
-      { arrow: '→', text: 'An engineer implements it' }
+      { num: '01', title: 'Ticket ingested', body: 'From Pylon, Plain, Zendesk, or Slack. Intent classified, customer identified, technical signal extracted.' },
+      { num: '02', title: 'Logs pulled', body: 'ClickHouse queried for this customer\'s recent API calls. 429 errors spiked 2 hours ago — error rate jumped from 12% to 43%.' },
+      { num: '03', title: 'Known issues checked', body: 'Linear searched for matching bugs. LIN-482: "rate limit regression" — open, priority urgent. Filed 3 days ago.' },
+      { num: '04', title: 'Billing and config verified', body: 'Stripe confirms active plan, no payment issues. Usage within limits. Not a billing problem — narrows the diagnosis.' },
+      { num: '05', title: 'Diagnosis delivered', body: 'Known bug LIN-482 causing elevated 429s. Workaround in docs. Patch in PR #891, ETA 3 days. Reply drafted and ready for review.' },
     ],
-    conclusion: 'By the time code ships: 60-80% of customer intent is diluted.',
-    impact: [
-      'Features miss the mark',
-      '"Fixed" bugs don\'t address root cause',
-      '2-4 weeks per deployment',
-      'Deals slow or die'
-    ]
   },
 
-  // How It Works Section - 5 Step Pipeline
-  howItWorks: {
-    label: 'How it works',
-    title: 'From customer meeting to merged PR',
-    subtitle: 'Our agent doesn\'t just draft-it iterates through CI failures and reviewer comments until the PR is ready.',
-    steps: [
-      {
-        number: '1',
-        title: 'Ingest meeting',
-        shortTitle: 'Ingest',
-        description: 'Recording + screen share captured. We consume visual context, not just meeting notes.'
-      },
-      {
-        number: '2',
-        title: 'Extract requirements',
-        shortTitle: 'Extract',
-        description: 'Match customer requests to our pattern library. "Add SSO" becomes specific, actionable code changes.'
-      },
-      {
-        number: '3',
-        title: 'Generate code',
-        shortTitle: 'Generate',
-        description: 'Adapted to your stack. We know which of your 50+ repos to touch for each change.'
-      },
-      {
-        number: '4',
-        title: 'Run CI, fix failures',
-        shortTitle: 'CI/Fix',
-        description: 'Iterate until green. The agent doesn\'t stop at draft-it ships.'
-      },
-      {
-        number: '5',
-        title: 'Merged PR',
-        shortTitle: 'Merge',
-        description: 'Responds to review comments. Ready to merge when your team wakes up.'
-      }
-    ]
+  stack: {
+    title: 'Your systems. Connected.',
+    subtitle: 'Altor reads from the tools your team already uses. No new dashboards, no data migration. We plug into your stack and start investigating.',
+    integrations: [
+      { name: 'ClickHouse', role: 'API logs, error patterns, customer activity' },
+      { name: 'Linear', role: 'Known bugs, backlog, issue status' },
+      { name: 'Stripe', role: 'Billing, subscriptions, payment issues' },
+      { name: 'GitHub', role: 'Recent changes, PRs, deployments' },
+      { name: 'Docs / Mintlify', role: 'Documentation, guides, known solutions' },
+      { name: 'StatusPage', role: 'Upstream incidents, provider outages' },
+    ],
+    footnote: 'Works with Pylon, Plain, Zendesk, Intercom. Plugs in, doesn\'t replace.',
   },
 
-  // Context Graph Feature
-  contextGraph: {
-    label: 'Key Differentiator',
-    title: 'The Context Graph',
-    subtitle: 'We maintain a living knowledge graph of your customer relationships and codebase.',
-    features: [
-      { icon: 'chat', text: 'Past meeting summaries' },
-      { icon: 'ticket', text: 'Extracted Linear/GitHub work items (completed + pending)' },
-      { icon: 'pattern', text: 'Communication patterns ("Sarah mentioned API timeouts in 3 of last 5 meetings")' },
-      { icon: 'git', text: 'Repo commit history ("who owns what")' },
-      { icon: 'code', text: 'Technical stack and repo structure for pattern detection' }
-    ]
+  trust: {
+    title: 'You wouldn\'t give a new hire production access on day one.',
+    body: 'Altor starts read-only — pulling logs, checking bugs, verifying billing. As trust builds, you choose which actions graduate to auto-approval. Destructive actions stay manual. Always.',
+    levels: [
+      { label: 'Read', detail: 'Auto-approved. Pull logs, check bugs, verify billing. This is where every deployment starts.', accent: true },
+      { label: 'Write', detail: 'Human approval required. Toggle feature flags, update customer configs, escalate issues.', accent: false },
+      { label: 'Delete', detail: 'Never automated. Destructive actions stay with your team. No exceptions.', accent: false },
+    ],
   },
 
-  // The Moat Section
-  theMoat: {
-    label: 'The Moat',
-    title: 'Every deployment makes us better',
-    description: 'After 100+ deployments, the pattern library becomes the moat: faster shipping and higher-quality implementations across customers.',
-    oneLiner: 'Altor turns customer meetings into merged PRs. We automate enterprise readiness so your FDEs stay in flow and customers see PRs within hours.'
+  audience: {
+    title: 'If your support team debugs more than it answers',
+    groups: [
+      { name: 'AI infrastructure', description: 'Your customers file tickets about API routing, model fallbacks, and gateway configs. Every ticket is an investigation, not a FAQ lookup.' },
+      { name: 'API-first dev tools', description: 'Your customers are developers. They report latency spikes, webhook failures, and SDK errors. They expect root causes, not canned responses.' },
+      { name: 'B2B SaaS at scale', description: 'You\'re paying $80–200K per support engineer to manually copy data between ClickHouse and Linear. That\'s the investigation tax.' },
+    ],
   },
 
-  // Who It's For Section
-  whoItsFor: {
-    label: 'Who it\'s for',
-    title: 'Built for AI companies selling to enterprise',
-    items: [
-      {
-        title: 'AI-native companies',
-        points: [
-          'Shipping custom enterprise deployments',
-          'FDE team stretched across too many accounts',
-          'Customer requests piling up in the backlog',
-          'Deals dying while waiting for implementation'
-        ]
-      },
-      {
-        title: 'Enterprise software vendors',
-        points: [
-          'Scaling professional services without headcount',
-          'Reducing time-to-value for customers',
-          'Consistent delivery across engagements',
-          'Capturing and reusing implementation patterns'
-        ]
-      }
-    ]
-  },
+  faq: [
+    { q: 'How is this different from a docs chatbot?', a: 'Docs chatbots answer "how does this work?" from your knowledge base. Altor answers "why is this broken for this customer right now?" by querying their actual API logs, checking your bug tracker, and verifying their billing status.' },
+    { q: 'How is this different from our support platform?', a: 'Pylon, Plain, Zendesk — they route and manage tickets. Altor investigates them. We plug into your existing support tool as the investigation layer. You keep your workflows, we add the diagnosis.' },
+    { q: 'Will it take actions without asking?', a: 'Not by default. Altor starts as a read-only investigator — it surfaces a diagnosis for your team to review. You control which action types graduate to auto-approval. Destructive actions are never automated.' },
+    { q: 'How long until we see value?', a: 'We start with a forward-deployed engagement: audit your support stack, connect your systems, build investigation playbooks for your most common ticket types. Typically 2–4 weeks to first automated investigations.' },
+    { q: 'What if our stack isn\'t listed?', a: 'If an API or MCP server exists for your system, we can integrate it. The architecture composes tools, it doesn\'t hardcode connectors. We\'ve yet to encounter a B2B stack we can\'t connect to.' },
+  ],
 
-  // FAQ Section
-  faq: {
-    label: 'FAQ',
-    items: [
-      {
-        question: 'How does Altor handle different customer environments?',
-        answer: 'We learn each customer\'s stack, repo structure, and preferences. "Add SSO" means different things for different customers-we translate vague requirements into specific code changes that fit their environment.'
-      },
-      {
-        question: 'What if the generated PR needs changes?',
-        answer: 'Our agent doesn\'t just draft-it iterates. It responds to reviewer comments, fixes CI failures, and continues iterating until the PR is ready to merge.'
-      },
-      {
-        question: 'How do you handle context across 50+ repos?',
-        answer: 'We maintain a directory map for each customer so the agent knows exactly which repo to touch. Before writing code, we also pull similar past issues and threads for context on what worked before.'
-      },
-      {
-        question: 'What inputs does the agent need?',
-        answer: 'Meeting recordings are the primary input. We also consume screen recordings when screen sharing happens-not just meeting notes. The agent extracts requirements and translates them into actionable tickets.'
-      },
-      {
-        question: 'What\'s the typical turnaround time?',
-        answer: 'Median time from meeting to merged PR is 9 hours. Ship while your team sleeps-customer requests processed overnight, ready to review in the morning.'
-      }
-    ]
-  },
-
-  // Final CTA Section
-  finalCTA: {
-    title: 'Stop losing deals to enterprise readiness work',
-    description: 'See how Altor turns customer meetings into merged PRs in hours.',
+  cta: {
+    title: 'See Altor investigate a real ticket',
+    body: 'We\'ll connect to your systems and run a live investigation on a ticket from your queue. No pitch deck — your data, your ticket, diagnosed in real time.',
     buttonText: 'Book a demo',
     buttonUrl: 'https://calendly.com/founders-altorlab/30min',
-    email: 'anshul@altorlab.com'
+    email: 'anshul@altorlab.com',
   },
 
-  // Footer
   footer: {
     copyright: `© ${new Date().getFullYear()} Altor`,
     email: 'anshul@altorlab.com',
     linkedIn: 'https://www.linkedin.com/in/ansh27/',
-  }
+  },
 }

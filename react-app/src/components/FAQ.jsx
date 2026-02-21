@@ -1,39 +1,38 @@
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
-const FAQItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  return (
-    <div className="border-b border-[#21262d]">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-5 flex justify-between items-start text-left group"
-        aria-expanded={isOpen}
-      >
-        <span className="text-base font-medium text-[#e6edf3] group-hover:text-white transition-colors pr-8">{question}</span>
-        <div className={`flex-shrink-0 w-6 h-6 rounded-md bg-[#21262d] border border-[#30363d] flex items-center justify-center transition-all duration-200 ${isOpen ? 'bg-emerald-500/10 border-emerald-500/30' : 'group-hover:bg-[#30363d]'}`}>
-          <svg
-            className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? 'text-emerald-400 rotate-180' : 'text-[#8b949e]'}`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-      </button>
-      <div className={`overflow-hidden transition-all duration-200 ${isOpen ? 'max-h-96 pb-5' : 'max-h-0'}`}>
-        <p className="text-[#8b949e] leading-relaxed text-sm">{answer}</p>
-      </div>
-    </div>
-  )
-}
+const Item = ({ q, a, open, toggle }) => (
+  <div className="border-b border-edge">
+    <button onClick={toggle} className="w-full py-5 flex justify-between items-start text-left group" aria-expanded={open}>
+      <span className="text-[0.9375rem] text-fg font-medium pr-8 leading-snug group-hover:text-accent transition-colors duration-200">{q}</span>
+      <span className={`mt-1 text-fg-muted transition-transform duration-200 ${open ? 'rotate-45' : ''}`}>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+          <path d="M7 1v12M1 7h12" />
+        </svg>
+      </span>
+    </button>
+    <AnimatePresence initial={false}>
+      {open && (
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: 'auto', opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.25, ease: [0.25, 0.4, 0.25, 1] }}
+          className="overflow-hidden"
+        >
+          <p className="text-fg-secondary text-[0.875rem] leading-relaxed pb-5 max-w-[52ch]">{a}</p>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  </div>
+)
 
 const FAQ = ({ items }) => {
+  const [openIdx, setOpenIdx] = useState(null)
   return (
-    <div className="max-w-3xl mx-auto">
-      {items.map((item, index) => (
-        <FAQItem key={index} question={item.question} answer={item.answer} />
+    <div className="max-w-2xl">
+      {items.map((item, i) => (
+        <Item key={i} q={item.q} a={item.a} open={openIdx === i} toggle={() => setOpenIdx(openIdx === i ? null : i)} />
       ))}
     </div>
   )
