@@ -16,7 +16,8 @@ const Button = ({ children, variant = 'primary', size = 'md', className, onClick
 
   const classes = cn(base, variants[variant], sizes[size], className)
 
-  if (href) return <a href={href} className={classes} {...props}>{children}</a>
+  const isExternal = href && (href.startsWith('http') || href.startsWith('//'))
+  if (href) return <a href={href} className={classes} {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})} {...props}>{children}</a>
   return <button className={classes} onClick={onClick} {...props}>{children}</button>
 }
 

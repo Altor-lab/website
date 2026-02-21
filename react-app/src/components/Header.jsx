@@ -64,6 +64,8 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <a
               href={content.hero.tryProduct.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden sm:inline text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors"
             >
               {content.hero.tryProduct.text}
@@ -75,7 +77,7 @@ const Header = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden flex flex-col gap-[5px] p-2 -mr-2"
+              className="md:hidden flex flex-col items-center justify-center gap-[5px] min-w-[44px] min-h-[44px] -mr-2"
               aria-label="Toggle menu"
             >
               <motion.span

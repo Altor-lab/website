@@ -18,7 +18,7 @@ export function NumberTicker({
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasAnimated) {
             setHasAnimated(true)
-            
+
             setTimeout(() => {
               const duration = 2000
               const start = direction === "down" ? value : 0
@@ -28,10 +28,10 @@ export function NumberTicker({
               const animate = (currentTime) => {
                 const elapsed = currentTime - startTime
                 const progress = Math.min(elapsed / duration, 1)
-                
+
                 // Easing function (ease-out)
                 const easeOut = 1 - Math.pow(1 - progress, 3)
-                
+
                 const currentValue = start + (end - start) * easeOut
                 setDisplayValue(currentValue)
 

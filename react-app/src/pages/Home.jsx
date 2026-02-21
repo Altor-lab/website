@@ -4,6 +4,7 @@ import { content } from '../content'
 import { NumberTicker } from '../components/magicui/number-ticker'
 import Button from '../components/Button'
 import FAQ from '../components/FAQ'
+import { cn } from '../lib/utils'
 
 const ease = [0.25, 0.4, 0.25, 1]
 const up = {
@@ -16,13 +17,13 @@ function Reveal({ children, className, id }) {
   const vis = useInView(ref, { once: true, margin: '-60px' })
   return (
     <section ref={ref} id={id} className={className}>
-      <motion.div initial="hidden" animate={vis ? 'show' : 'hidden'}>{children}</motion.div>
+      <motion.div variants={up} initial="hidden" animate={vis ? 'show' : 'hidden'}>{children}</motion.div>
     </section>
   )
 }
 
-const W = ({ children, className = '' }) => (
-  <div className={`max-w-[1080px] mx-auto px-6 ${className}`}>{children}</div>
+const W = ({ children, className }) => (
+  <div className={cn('max-w-[1080px] mx-auto px-6', className)}>{children}</div>
 )
 
 const statusColor = {
@@ -130,7 +131,7 @@ export default function Home() {
 
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3.8, duration: 0.4, ease }}>
                     <div className="mt-3 pt-3 border-t border-[rgba(255,255,255,0.06)]">
-                      <div><span className="text-[#8b8cff]">✉ draft reply</span></div>
+                      <div><span className="text-[#5cb8a5]">✉ draft reply</span></div>
                       <div className="mt-1 text-[#9a9bb0] leading-relaxed">
                         <span>Hi — this is a known issue (LIN-482) causing intermittent</span><br />
                         <span>429 errors. Fix shipping in ~3 days. Workaround: add retry</span><br />
@@ -196,7 +197,7 @@ export default function Home() {
             {content.gap.title}
           </motion.h2>
 
-          <motion.p variants={up} custom={2} className="text-fg-secondary text-[1rem] leading-[1.7] max-w-[54ch] mb-12">
+          <motion.p variants={up} custom={2} className="text-fg-secondary text-[1rem] leading-[1.7] max-w-[52ch] mb-12" style={{ textWrap: 'pretty' }}>
             {content.gap.body}
           </motion.p>
 
@@ -248,7 +249,7 @@ export default function Home() {
           >
             {content.investigation.title}
           </motion.h2>
-          <motion.p variants={up} custom={2} className="text-fg-secondary text-[1rem] leading-[1.65] max-w-[52ch] mb-10">
+          <motion.p variants={up} custom={2} className="text-fg-secondary text-[1rem] leading-[1.65] max-w-[52ch] mb-10" style={{ textWrap: 'pretty' }}>
             {content.investigation.subtitle}
           </motion.p>
 
@@ -258,13 +259,16 @@ export default function Home() {
               <button
                 key={i}
                 onClick={() => setActiveTab(i)}
-                className={`px-4 py-2 rounded-full text-[0.8125rem] font-medium transition-all duration-200 ${
-                  activeTab === i
-                    ? 'bg-fg text-white shadow-sm'
-                    : 'text-fg-secondary hover:text-fg hover:bg-surface-2'
-                }`}
+                className="relative px-4 py-2 rounded-full text-[0.8125rem] font-medium transition-colors duration-200 text-fg-secondary hover:text-fg"
               >
-                {t.label}
+                {activeTab === i && (
+                  <motion.span
+                    layoutId="tab-pill"
+                    className="absolute inset-0 bg-fg rounded-full shadow-sm"
+                    transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                  />
+                )}
+                <span className={`relative z-10 ${activeTab === i ? 'text-white' : ''}`}>{t.label}</span>
               </button>
             ))}
           </motion.div>
@@ -313,7 +317,7 @@ export default function Home() {
 
                 {/* Draft reply */}
                 <div className="mt-3 pt-3 border-t border-[rgba(255,255,255,0.06)]">
-                  <div><span className="text-[#8b8cff]">✉ draft reply</span></div>
+                  <div><span className="text-[#5cb8a5]">✉ draft reply</span></div>
                   <div className="mt-1 text-[#9a9bb0] leading-relaxed whitespace-pre-wrap">{tab.draft}</div>
                 </div>
               </div>
@@ -337,7 +341,7 @@ export default function Home() {
               >
                 {content.stack.title}
               </motion.h2>
-              <motion.p variants={up} custom={2} className="text-fg-secondary leading-[1.65] mb-6">
+              <motion.p variants={up} custom={2} className="text-fg-secondary leading-[1.65] max-w-[52ch] mb-6" style={{ textWrap: 'pretty' }}>
                 {content.stack.subtitle}
               </motion.p>
               <motion.p variants={up} custom={3} className="text-[0.8125rem] text-fg-muted leading-relaxed">
@@ -361,7 +365,7 @@ export default function Home() {
       </Reveal>
 
       {/* ━━━ TRUST MODEL ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <Reveal className="py-24 md:py-36" id="trust">
+      <Reveal className="py-24 md:py-36 bg-surface-1" id="trust">
         <W>
           <div className="grid lg:grid-cols-[1fr_1fr] gap-14 lg:gap-24 items-start">
             <div>
@@ -375,7 +379,7 @@ export default function Home() {
               >
                 {content.trust.title}
               </motion.h2>
-              <motion.p variants={up} custom={2} className="text-fg-secondary text-[1rem] leading-[1.7] mb-5">
+              <motion.p variants={up} custom={2} className="text-fg-secondary text-[1rem] leading-[1.7] max-w-[52ch] mb-5" style={{ textWrap: 'pretty' }}>
                 {content.trust.body}
               </motion.p>
               <motion.p variants={up} custom={3} className="text-[0.8125rem] text-fg-muted leading-relaxed border-l-2 border-edge pl-4">
@@ -422,7 +426,7 @@ export default function Home() {
           >
             {content.onboarding.title}
           </motion.h2>
-          <motion.p variants={up} custom={2} className="text-fg-secondary text-[1rem] leading-[1.65] max-w-[52ch] mb-14">
+          <motion.p variants={up} custom={2} className="text-fg-secondary text-[1rem] leading-[1.65] max-w-[52ch] mb-14" style={{ textWrap: 'pretty' }}>
             {content.onboarding.body}
           </motion.p>
 
@@ -441,11 +445,8 @@ export default function Home() {
       {/* ━━━ AUDIENCE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <Reveal className="py-24 md:py-36" id="who-its-for">
         <W>
-          <motion.p variants={up} custom={0} className="text-fg-muted font-mono text-[0.75rem] tracking-[0.05em] uppercase mb-4">
-            Built for
-          </motion.p>
           <motion.h2
-            variants={up} custom={1}
+            variants={up} custom={0}
             className="font-display font-bold text-fg leading-[1.08] tracking-[-0.03em] mb-14"
             style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', textWrap: 'balance' }}
           >
@@ -454,7 +455,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-edge rounded-xl overflow-hidden">
             {content.audience.groups.map((g, i) => (
-              <motion.div key={i} variants={up} custom={i + 2} className="bg-surface-1 p-7">
+              <motion.div key={i} variants={up} custom={i + 1} className="bg-surface-1 p-7">
                 <span className="font-mono text-accent text-[0.75rem] mb-3 block">0{i + 1}</span>
                 <h3 className="text-fg font-semibold text-[0.9375rem] tracking-[-0.01em] mb-3">{g.name}</h3>
                 <p className="text-fg-secondary text-[0.8125rem] leading-[1.7]">{g.description}</p>
@@ -469,17 +470,15 @@ export default function Home() {
         <W>
           <div className="grid lg:grid-cols-[280px_1fr] gap-12 lg:gap-20">
             <div>
-              <motion.p variants={up} custom={0} className="text-fg-muted font-mono text-[0.75rem] tracking-[0.05em] uppercase mb-4">
-                FAQ
-              </motion.p>
               <motion.h2
-                variants={up} custom={1}
-                className="font-display font-bold text-fg text-[1.375rem] tracking-[-0.02em]"
+                variants={up} custom={0}
+                className="font-display font-bold text-fg leading-[1.08] tracking-[-0.03em]"
+                style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', textWrap: 'balance' }}
               >
                 Common questions
               </motion.h2>
             </div>
-            <motion.div variants={up} custom={2}>
+            <motion.div variants={up} custom={1}>
               <FAQ items={content.faq} />
             </motion.div>
           </div>
@@ -499,12 +498,12 @@ export default function Home() {
               >
                 {content.cta.title}
               </motion.h2>
-              <motion.p variants={up} custom={1} className="text-fg-secondary text-[1rem] leading-[1.65] max-w-[50ch] mb-10">
+              <motion.p variants={up} custom={1} className="text-fg-secondary text-[1rem] leading-[1.65] max-w-[52ch] mb-10" style={{ textWrap: 'pretty' }}>
                 {content.cta.body}
               </motion.p>
               <motion.div variants={up} custom={2} className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
                 <Button href={content.cta.buttonUrl} size="lg">{content.cta.buttonText}</Button>
-                <a href={content.cta.secondaryUrl} className="text-fg-secondary hover:text-fg text-[0.9375rem] transition-colors link-underline">
+                <a href={content.cta.secondaryUrl} target="_blank" rel="noopener noreferrer" className="text-fg-secondary hover:text-fg text-[0.9375rem] transition-colors link-underline">
                   {content.cta.secondaryText}
                 </a>
               </motion.div>

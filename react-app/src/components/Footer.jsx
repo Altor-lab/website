@@ -56,15 +56,9 @@ const Footer = () => {
                 <a href={content.footer.linkedIn} target="_blank" rel="noopener noreferrer" className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">
                   LinkedIn
                 </a>
-                <a href={content.hero.primaryCTA.url} className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">
+                <a href={content.hero.primaryCTA.url} target="_blank" rel="noopener noreferrer" className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">
                   Book a demo
                 </a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Resources</h4>
-              <div className="flex flex-col gap-2.5">
                 <a href="/llms.txt" className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">
                   llms.txt
                 </a>

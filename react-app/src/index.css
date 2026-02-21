@@ -42,7 +42,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  ::selection { background: rgba(69,88,217,0.12); color: #1a1a1a; }
+  ::selection { background: rgba(26,107,90,0.14); color: #1a1a1a; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after {
@@ -89,12 +89,13 @@
   font-size: 0.8125rem;
   line-height: 1.8;
   color: #9a9bb0;
+  overflow-x: auto;
 }
 .terminal-body .t-green { color: #34d399; }
 .terminal-body .t-dim { color: #4a4b60; }
 .terminal-body .t-white { color: #e8e9ed; }
 .terminal-body .t-yellow { color: #fbbf24; }
-.terminal-body .t-purple { color: #8b8cff; }
+.terminal-body .t-teal { color: #5cb8a5; }
 
 /* ── card (white on cream) ────────────────────────────────────── */
 .card {
@@ -105,23 +106,23 @@
 }
 .card:hover {
   border-color: rgba(0,0,0,0.15);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 
 /* ── card accent ───────────────────────────────────────────────── */
 .card-accent {
   background: #ffffff;
-  border: 1px solid rgba(69,88,217,0.2);
+  border: 1px solid rgba(26,107,90,0.22);
   border-radius: 12px;
-  box-shadow: 0 0 24px rgba(69,88,217,0.04);
+  box-shadow: 0 0 24px rgba(26,107,90,0.05);
 }
 
 /* ── hero glow (subtle blue behind dark terminal on cream) ───── */
 .hero-glow {
   position: absolute;
   inset: -40% -20%;
-  background: radial-gradient(ellipse at center, rgba(69,88,217,0.05) 0%, transparent 60%);
+  background: radial-gradient(ellipse at center, rgba(26,107,90,0.06) 0%, transparent 60%);
   pointer-events: none;
   z-index: 0;
 }

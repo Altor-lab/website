@@ -26,8 +26,8 @@ export default {
           faint: '#bcbcbc',
         },
         accent: {
-          DEFAULT: '#4558d9',
-          dim: 'rgba(69,88,217,0.08)',
+          DEFAULT: '#1a6b5a',
+          dim: 'rgba(26,107,90,0.08)',
         },
       },
       fontFamily: {

@@ -7,7 +7,7 @@ export const content = {
     proof: 'Live at Portkey — 200+ tickets diagnosed across 6 integrated systems.',
     primaryCTA: { text: 'Book a demo', url: 'https://calendly.com/founders-altorlab/30min' },
     secondaryCTA: { text: 'See how it works', anchor: '#how-it-works' },
-    tryProduct: { text: 'Watch a walkthrough', url: 'https://calendly.com/founders-altorlab/30min' },
+    tryProduct: { text: 'Request a walkthrough', url: 'https://calendly.com/founders-altorlab/30min' },
   },
 
   metrics: [
@@ -137,7 +137,7 @@ export const content = {
     body: 'We\'ll connect to your systems and run a live investigation on a ticket from your queue. Your data, your ticket, diagnosed in real time.',
     buttonText: 'Book a demo',
     buttonUrl: 'https://calendly.com/founders-altorlab/30min',
-    secondaryText: 'Watch a 3-min walkthrough',
+    secondaryText: 'Request a walkthrough',
     secondaryUrl: 'https://calendly.com/founders-altorlab/30min',
     email: 'anshul@altorlab.com',
   },
