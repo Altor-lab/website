@@ -59,9 +59,6 @@ const Footer = () => {
                 <a href={content.hero.primaryCTA.url} target="_blank" rel="noopener noreferrer" className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">
                   Book a demo
                 </a>
-                <a href="/llms.txt" className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">
-                  llms.txt
-                </a>
               </div>
             </div>
           </div>
