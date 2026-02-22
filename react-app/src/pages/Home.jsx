@@ -62,7 +62,7 @@ export default function Home() {
             <motion.h1
               variants={up} custom={1}
               className="font-display font-black text-fg leading-[1.04] tracking-[-0.04em] mb-6"
-              style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4rem)', textWrap: 'balance' }}
+              style={{ fontSize: 'clamp(2rem, 5.5vw, 4rem)', textWrap: 'balance' }}
             >
               {content.hero.headline[0]}{' '}
               <br className="hidden md:block" />
@@ -71,13 +71,13 @@ export default function Home() {
 
             <motion.p
               variants={up} custom={2}
-              className="text-[1.0625rem] text-fg-secondary leading-[1.7] max-w-[52ch] mb-10"
+              className="text-[0.9375rem] sm:text-[1.0625rem] text-fg-secondary leading-[1.7] max-w-[52ch] mb-10"
               style={{ textWrap: 'pretty' }}
             >
               {content.hero.subhead}
             </motion.p>
 
-            <motion.div variants={up} custom={3} className="flex items-center gap-5 mb-20">
+            <motion.div variants={up} custom={3} className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 mb-14 sm:mb-20">
               <Button href={content.hero.primaryCTA.url} size="lg">{content.hero.primaryCTA.text}</Button>
               <button onClick={go('how-it-works')} className="text-fg-secondary hover:text-fg text-[0.9375rem] transition-colors link-underline">
                 {content.hero.secondaryCTA.text}
@@ -150,7 +150,7 @@ export default function Home() {
       {/* ━━━ METRICS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <div className="border-y border-edge-subtle bg-surface-1 py-10">
         <W>
-          <div className="flex flex-col sm:flex-row gap-10 sm:gap-0 sm:justify-between">
+          <div className="flex flex-col sm:flex-row gap-8 sm:gap-0 sm:justify-between">
             {content.metrics.map((m, i) => (
               <div key={i} className="flex items-baseline gap-3 sm:flex-col sm:gap-1.5">
                 <span className="font-display font-black text-[2rem] sm:text-[2.5rem] text-fg tracking-[-0.03em] tabular-nums leading-none">
@@ -213,13 +213,13 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-4 max-w-[700px] mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 max-w-[700px] mb-12">
             {content.gap.comparison.map((c, i) => (
               <motion.div
                 key={i}
                 variants={up}
                 custom={i + 4}
-                className={c.variant === 'dim' ? 'card p-6 opacity-50' : 'card-accent p-6'}
+                className={c.variant === 'dim' ? 'card p-5 md:p-6 opacity-50' : 'card-accent p-5 md:p-6'}
               >
                 <div className="flex items-center gap-2.5 mb-3">
                   <span className={`w-2 h-2 rounded-full ${c.variant === 'dim' ? 'bg-fg-muted' : 'bg-accent'}`} />
@@ -254,12 +254,12 @@ export default function Home() {
           </motion.p>
 
           {/* Tabs */}
-          <motion.div variants={up} custom={3} className="flex gap-2 mb-8">
+          <motion.div variants={up} custom={3} className="flex gap-2 mb-8 overflow-x-auto pb-2 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0 no-scrollbar">
             {content.investigation.tabs.map((t, i) => (
               <button
                 key={i}
                 onClick={() => setActiveTab(i)}
-                className="relative px-4 py-2 rounded-full text-[0.8125rem] font-medium transition-colors duration-200 text-fg-secondary hover:text-fg"
+                className="relative px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[0.75rem] sm:text-[0.8125rem] font-medium transition-colors duration-200 text-fg-secondary hover:text-fg whitespace-nowrap"
               >
                 {activeTab === i && (
                   <motion.span
@@ -273,63 +273,93 @@ export default function Home() {
             ))}
           </motion.div>
 
-          {/* Investigation card */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.3, ease }}
-              className="terminal"
-            >
-              <div className="terminal-bar">
-                <div className="terminal-dot" /><div className="terminal-dot" /><div className="terminal-dot" />
-                <span className="text-[0.6875rem] text-[#6b6c82] ml-2 font-mono">altor investigate</span>
-              </div>
-              <div className="terminal-body">
-                {/* Ticket */}
-                <div className="flex gap-3 mb-4">
-                  <span className="t-dim shrink-0">$</span>
-                  <div>
-                    <span className="t-white">{tab.ticket}</span>
-                    <span className="t-dim"> · </span>
-                    <span className="t-dim">{tab.customer}</span>
-                  </div>
-                </div>
-
-                {/* Investigation steps */}
-                <div className="space-y-1.5">
-                  {tab.steps.map((s, i) => (
-                    <div key={i} className="terminal-row">
-                      <span className={`shrink-0 font-mono text-[0.75rem] ${statusColor[s.status]}`}>{statusIcon[s.status]}</span>
-                      <span className="t-green shrink-0">{s.system}</span>
-                      <span className="t-dim">{s.finding}</span>
+          {/* Investigation card — shell stays static, content animates */}
+          <div className="terminal">
+            <div className="terminal-bar">
+              <div className="terminal-dot" /><div className="terminal-dot" /><div className="terminal-dot" />
+              <span className="text-[0.6875rem] text-[#6b6c82] ml-2 font-mono">altor investigate</span>
+            </div>
+            <div className="terminal-body">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTab}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
+                  variants={{
+                    hidden: {},
+                    show: { transition: { staggerChildren: 0.07, delayChildren: 0.08 } },
+                    exit: { opacity: 0, transition: { duration: 0.15, ease } },
+                  }}
+                >
+                  {/* Ticket */}
+                  <motion.div
+                    variants={{
+                      hidden: { opacity: 0, x: -6 },
+                      show: { opacity: 1, x: 0, transition: { duration: 0.35, ease } },
+                    }}
+                    className="flex gap-3 mb-4"
+                  >
+                    <span className="t-dim shrink-0">$</span>
+                    <div>
+                      <span className="t-white">{tab.ticket}</span>
+                      <span className="t-dim"> · </span>
+                      <span className="t-dim">{tab.customer}</span>
                     </div>
-                  ))}
-                </div>
+                  </motion.div>
 
-                {/* Diagnosis */}
-                <div className="mt-4 pt-4 border-t border-[rgba(255,255,255,0.06)]">
-                  <div><span className="t-green">✓ diagnosis</span></div>
-                  <div className="mt-1"><span className="t-white">{tab.diagnosis}</span></div>
-                </div>
+                  {/* Investigation steps */}
+                  <div className="space-y-1.5">
+                    {tab.steps.map((s, i) => (
+                      <motion.div
+                        key={i}
+                        variants={{
+                          hidden: { opacity: 0, x: -6 },
+                          show: { opacity: 1, x: 0, transition: { duration: 0.35, ease } },
+                        }}
+                        className="terminal-row"
+                      >
+                        <span className={`shrink-0 font-mono text-[0.75rem] ${statusColor[s.status]}`}>{statusIcon[s.status]}</span>
+                        <span className="t-green shrink-0">{s.system}</span>
+                        <span className="t-dim">{s.finding}</span>
+                      </motion.div>
+                    ))}
+                  </div>
 
-                {/* Draft reply */}
-                <div className="mt-3 pt-3 border-t border-[rgba(255,255,255,0.06)]">
-                  <div><span className="text-[#5cb8a5]">✉ draft reply</span></div>
-                  <div className="mt-1 text-[#9a9bb0] leading-relaxed whitespace-pre-wrap">{tab.draft}</div>
-                </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+                  {/* Diagnosis */}
+                  <motion.div
+                    variants={{
+                      hidden: { opacity: 0, x: -6 },
+                      show: { opacity: 1, x: 0, transition: { duration: 0.35, ease } },
+                    }}
+                    className="mt-4 pt-4 border-t border-[rgba(255,255,255,0.06)]"
+                  >
+                    <div><span className="t-green">✓ diagnosis</span></div>
+                    <div className="mt-1"><span className="t-white">{tab.diagnosis}</span></div>
+                  </motion.div>
+
+                  {/* Draft reply */}
+                  <motion.div
+                    variants={{
+                      hidden: { opacity: 0, x: -6 },
+                      show: { opacity: 1, x: 0, transition: { duration: 0.35, ease } },
+                    }}
+                    className="mt-3 pt-3 border-t border-[rgba(255,255,255,0.06)]"
+                  >
+                    <div><span className="text-[#5cb8a5]">✉ draft reply</span></div>
+                    <div className="mt-1 text-[#9a9bb0] leading-relaxed whitespace-pre-wrap">{tab.draft}</div>
+                  </motion.div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
         </W>
       </Reveal>
 
       {/* ━━━ THE STACK ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <Reveal className="py-24 md:py-36 bg-surface-1" id="the-stack">
         <W>
-          <div className="grid lg:grid-cols-[360px_1fr] gap-14 lg:gap-24">
+          <div className="grid lg:grid-cols-[360px_1fr] gap-12 lg:gap-24">
             <div>
               <motion.p variants={up} custom={0} className="text-fg-muted font-mono text-[0.75rem] tracking-[0.05em] uppercase mb-4">
                 Integrations
@@ -382,7 +412,7 @@ export default function Home() {
               <motion.p variants={up} custom={2} className="text-fg-secondary text-[1rem] leading-[1.7] max-w-[52ch] mb-5" style={{ textWrap: 'pretty' }}>
                 {content.trust.body}
               </motion.p>
-              <motion.p variants={up} custom={3} className="text-[0.8125rem] text-fg-muted leading-relaxed border-l-2 border-edge pl-4">
+              <motion.p variants={up} custom={3} className="text-[0.8125rem] text-fg-muted leading-relaxed border-l-2 border-edge pl-4 max-lg:border-l-0 max-lg:border-t max-lg:border-edge max-lg:pt-4 max-lg:pl-0">
                 {content.trust.security}
               </motion.p>
             </div>
@@ -391,7 +421,7 @@ export default function Home() {
               {content.trust.levels.map((l, i) => (
                 <div
                   key={i}
-                  className={`rounded-xl p-5 border transition-colors duration-200 ${
+                  className={`rounded-xl p-4 sm:p-5 border transition-colors duration-200 ${
                     l.accent
                       ? 'border-accent/25 bg-accent/[0.04]'
                       : 'border-edge bg-surface-2 hover:border-edge-hover'
@@ -432,7 +462,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-px bg-edge rounded-xl overflow-hidden">
             {content.onboarding.steps.map((s, i) => (
-              <motion.div key={i} variants={up} custom={i + 3} className="bg-surface-0 p-8">
+              <motion.div key={i} variants={up} custom={i + 3} className="bg-surface-0 p-5 sm:p-8">
                 <span className="font-mono text-accent text-[0.75rem] mb-2 block">{s.week}</span>
                 <h3 className="text-fg font-semibold text-[1rem] tracking-[-0.01em] mb-3">{s.label}</h3>
                 <p className="text-fg-secondary text-[0.875rem] leading-[1.7]">{s.detail}</p>
@@ -455,7 +485,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-edge rounded-xl overflow-hidden">
             {content.audience.groups.map((g, i) => (
-              <motion.div key={i} variants={up} custom={i + 1} className="bg-surface-1 p-7">
+              <motion.div key={i} variants={up} custom={i + 1} className="bg-surface-1 p-5 sm:p-7">
                 <span className="font-mono text-accent text-[0.75rem] mb-3 block">0{i + 1}</span>
                 <h3 className="text-fg font-semibold text-[0.9375rem] tracking-[-0.01em] mb-3">{g.name}</h3>
                 <p className="text-fg-secondary text-[0.8125rem] leading-[1.7]">{g.description}</p>
@@ -488,7 +518,7 @@ export default function Home() {
       {/* ━━━ CTA ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <Reveal className="py-24 md:py-36">
         <W>
-          <div className="relative rounded-2xl border border-edge bg-surface-1 p-10 md:p-16 overflow-hidden">
+          <div className="relative rounded-2xl border border-edge bg-surface-1 p-6 sm:p-10 md:p-16 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-accent/[0.03] to-transparent pointer-events-none" />
             <div className="relative">
               <motion.h2

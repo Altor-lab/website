@@ -30,7 +30,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex gap-16">
+          <div className="flex gap-10 sm:gap-16">
             <div>
               <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Product</h4>
               <div className="flex flex-col gap-2.5">

@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const Item = ({ q, a, open, toggle }) => (
   <div className="border-b border-edge">
-    <button onClick={toggle} className="w-full py-5 flex justify-between items-start text-left group" aria-expanded={open}>
-      <span className="text-[0.9375rem] text-fg font-medium pr-8 leading-snug group-hover:text-accent transition-colors duration-200">{q}</span>
+    <button onClick={toggle} className="w-full py-4 sm:py-5 flex justify-between items-start text-left group min-h-[48px]" aria-expanded={open}>
+      <span className="text-[0.875rem] sm:text-[0.9375rem] text-fg font-medium pr-6 sm:pr-8 leading-snug group-hover:text-accent transition-colors duration-200">{q}</span>
       <span className={`mt-1 text-fg-muted transition-transform duration-200 ${open ? 'rotate-45' : ''}`}>
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
           <path d="M7 1v12M1 7h12" />

@@ -90,6 +90,7 @@
   line-height: 1.8;
   color: #9a9bb0;
   overflow-x: auto;
+  word-break: break-word;
 }
 .terminal-body .t-green { color: #34d399; }
 .terminal-body .t-dim { color: #4a4b60; }
@@ -133,6 +134,22 @@
   gap: 0.5rem;
   align-items: baseline;
 }
+
+/* ── terminal responsive ─────────────────────────────────────── */
+@media (max-width: 640px) {
+  .terminal-body {
+    font-size: 0.6875rem;
+    padding: 14px;
+    line-height: 1.7;
+  }
+  .terminal-bar {
+    padding: 10px 14px;
+  }
+}
+
+/* ── hide scrollbar utility ─────────────────────────────────── */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* ── terminal cursor ─────────────────────────────────────────── */
 .terminal-cursor {
