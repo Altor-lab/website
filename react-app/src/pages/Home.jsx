@@ -534,8 +534,8 @@ export default function Home() {
               </motion.p>
               <motion.div variants={up} custom={2} className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
                 <Button href={content.cta.buttonUrl} size="lg">{content.cta.buttonText}</Button>
-                <a href={content.cta.secondaryUrl} target="_blank" rel="noopener noreferrer" className="text-fg-secondary hover:text-fg text-[0.9375rem] transition-colors link-underline">
-                  {content.cta.secondaryText}
+                <a href={`mailto:${content.cta.email}`} className="text-fg-secondary hover:text-fg text-[0.9375rem] transition-colors link-underline">
+                  or email us
                 </a>
               </motion.div>
               <motion.div variants={up} custom={3} className="mt-8">

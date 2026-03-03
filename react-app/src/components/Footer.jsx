@@ -13,14 +13,15 @@ const Footer = () => {
     ['FAQ', 'faq'],
   ]
 
-  const resourceLinks = [
-    ['Portkey case study', '/customers/portkey'],
+  const compareLinks = [
     ['vs. doc chatbots', '/compare/altor-vs-doc-chatbots'],
-    ['vs. support platform AI', '/compare/altor-vs-support-platform-ai'],
+    ['vs. platform AI', '/compare/altor-vs-support-platform-ai'],
     ['vs. AI copilots', '/compare/altor-vs-copilot-for-support'],
+  ]
+
+  const moreLinks = [
+    ['Portkey case study', '/customers/portkey'],
     ['API error investigation', '/use-case/api-error-investigation'],
-    ['Webhook failures', '/use-case/webhook-failure-investigation'],
-    ['Billing debugging', '/use-case/billing-escalation-debugging'],
     ['For AI infrastructure', '/for/ai-infrastructure-companies'],
     ['For API dev tools', '/for/api-first-developer-tools'],
   ]
@@ -31,6 +32,8 @@ const Footer = () => {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     }
   }
+
+  const linkClass = 'text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200'
 
   return (
     <footer className="border-t border-edge-subtle">
@@ -48,29 +51,25 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex gap-10 sm:gap-16 flex-wrap">
+          <div className="grid grid-cols-2 sm:flex gap-10 sm:gap-12">
             <div>
               <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Product</h4>
               <div className="flex flex-col gap-2.5">
                 {productLinks.map(([label, id]) => (
                   isHome ? (
-                    <a
-                      key={id}
-                      href={`#${id}`}
-                      onClick={go(id)}
-                      className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200"
-                    >
-                      {label}
-                    </a>
+                    <a key={id} href={`#${id}`} onClick={go(id)} className={linkClass}>{label}</a>
                   ) : (
-                    <Link
-                      key={id}
-                      to={`/#${id}`}
-                      className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200"
-                    >
-                      {label}
-                    </Link>
+                    <Link key={id} to={`/#${id}`} className={linkClass}>{label}</Link>
                   )
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Compare</h4>
+              <div className="flex flex-col gap-2.5">
+                {compareLinks.map(([label, path]) => (
+                  <Link key={path} to={path} className={linkClass}>{label}</Link>
                 ))}
               </div>
             </div>
@@ -78,14 +77,8 @@ const Footer = () => {
             <div>
               <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Resources</h4>
               <div className="flex flex-col gap-2.5">
-                {resourceLinks.map(([label, path]) => (
-                  <Link
-                    key={path}
-                    to={path}
-                    className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200"
-                  >
-                    {label}
-                  </Link>
+                {moreLinks.map(([label, path]) => (
+                  <Link key={path} to={path} className={linkClass}>{label}</Link>
                 ))}
               </div>
             </div>
@@ -93,15 +86,9 @@ const Footer = () => {
             <div>
               <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Connect</h4>
               <div className="flex flex-col gap-2.5">
-                <a href={`mailto:${content.footer.email}`} className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">
-                  Email
-                </a>
-                <a href={content.footer.linkedIn} target="_blank" rel="noopener noreferrer" className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">
-                  LinkedIn
-                </a>
-                <a href={content.hero.primaryCTA.url} target="_blank" rel="noopener noreferrer" className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">
-                  Book a demo
-                </a>
+                <a href={`mailto:${content.footer.email}`} className={linkClass}>Email</a>
+                <a href={content.footer.linkedIn} target="_blank" rel="noopener noreferrer" className={linkClass}>LinkedIn</a>
+                <a href={content.hero.primaryCTA.url} target="_blank" rel="noopener noreferrer" className={linkClass}>Book a demo</a>
               </div>
             </div>
           </div>

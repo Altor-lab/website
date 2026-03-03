@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { content } from '../content'
 import Button from './Button'
@@ -8,6 +9,9 @@ const ease = [0.25, 0.4, 0.25, 1]
 const Header = () => {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
+  const isHome = location.pathname === '/'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -27,7 +31,11 @@ const Header = () => {
   const go = (id) => (e) => {
     e.preventDefault()
     setMenuOpen(false)
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    if (isHome) {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      navigate(`/#${id}`)
+    }
   }
 
   const links = [
@@ -44,15 +52,15 @@ const Header = () => {
         scrolled ? 'bg-surface-0/80 backdrop-blur-2xl border-b border-edge-subtle' : ''
       }`}>
         <nav className="max-w-[1120px] mx-auto px-6 h-14 flex items-center justify-between">
-          <a href="/" className="font-display font-bold text-fg tracking-[-0.02em] text-[1.0625rem]">
+          <Link to="/" className="font-display font-bold text-fg tracking-[-0.02em] text-[1.0625rem]">
             {content.companyName}
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
             {links.map(([label, id]) => (
               <a
                 key={id}
-                href={`#${id}`}
+                href={`/#${id}`}
                 onClick={go(id)}
                 className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200"
               >
@@ -62,14 +70,6 @@ const Header = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a
-              href={content.hero.tryProduct.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:inline text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors"
-            >
-              {content.hero.tryProduct.text}
-            </a>
             <Button href={content.hero.primaryCTA.url} size="sm" className="hidden sm:inline-flex">
               {content.hero.primaryCTA.text}
             </Button>
@@ -114,7 +114,7 @@ const Header = () => {
               {links.map(([label, id], i) => (
                 <motion.a
                   key={id}
-                  href={`#${id}`}
+                  href={`/#${id}`}
                   onClick={go(id)}
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -128,17 +128,11 @@ const Header = () => {
                 initial={{ opacity: 0, x: -12 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: links.length * 0.06, duration: 0.3, ease }}
-                className="pt-6 flex flex-col gap-3 w-full"
+                className="pt-6 w-full"
               >
                 <Button href={content.hero.primaryCTA.url} size="lg" className="w-full">
                   {content.hero.primaryCTA.text}
                 </Button>
-                <a
-                  href={content.hero.tryProduct.url}
-                  className="text-[0.9375rem] text-fg-secondary hover:text-fg transition-colors text-center py-2"
-                >
-                  {content.hero.tryProduct.text}
-                </a>
               </motion.div>
             </nav>
           </motion.div>

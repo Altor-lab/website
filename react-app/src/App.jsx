@@ -10,6 +10,7 @@ import UseCaseBillingEscalation from './pages/UseCaseBillingEscalation'
 import ForAIInfra from './pages/ForAIInfra'
 import ForAPIDevTools from './pages/ForAPIDevTools'
 import CustomerPortkey from './pages/CustomerPortkey'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/for/ai-infrastructure-companies" element={<ForAIInfra />} />
         <Route path="/for/api-first-developer-tools" element={<ForAPIDevTools />} />
         <Route path="/customers/portkey" element={<CustomerPortkey />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
   )

@@ -7,6 +7,13 @@ import EmailCapture from './EmailCapture'
 
 const ease = [0.25, 0.4, 0.25, 1]
 
+const CATEGORY_LABELS = {
+  compare: 'Compare',
+  'use-case': 'Use Cases',
+  for: 'Industries',
+  customers: 'Customers',
+}
+
 const Reveal = ({ children, className, delay = 0 }) => {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-60px' })
@@ -23,7 +30,7 @@ const Reveal = ({ children, className, delay = 0 }) => {
   )
 }
 
-const ComparisonTable = ({ title, subtitle, rows }) => (
+const ComparisonTable = ({ title, subtitle, comparisonLabel, rows }) => (
   <section className="py-20 md:py-28">
     <div className="max-w-[1120px] mx-auto px-6">
       <Reveal>
@@ -43,7 +50,7 @@ const ComparisonTable = ({ title, subtitle, rows }) => (
             <thead>
               <tr className="border-b border-edge">
                 <th className="py-3 pr-6 text-[0.75rem] font-mono uppercase tracking-[0.05em] text-fg-muted w-[160px]"></th>
-                <th className="py-3 px-6 text-[0.75rem] font-mono uppercase tracking-[0.05em] text-fg-muted">Doc chatbot / Platform AI</th>
+                <th className="py-3 px-6 text-[0.75rem] font-mono uppercase tracking-[0.05em] text-fg-muted">{comparisonLabel || 'Status quo'}</th>
                 <th className="py-3 pl-6 text-[0.75rem] font-mono uppercase tracking-[0.05em] text-accent">Altor</th>
               </tr>
             </thead>
@@ -139,6 +146,29 @@ const BodySection = ({ title, paragraphs, steps, bullets }) => (
   </section>
 )
 
+const RelatedPages = ({ pages }) => (
+  <section className="py-12 border-t border-edge-subtle">
+    <div className="max-w-[1120px] mx-auto px-6">
+      <Reveal>
+        <p className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-5">Related</p>
+        <div className="flex flex-col sm:flex-row gap-4">
+          {pages.map(({ label, path }) => (
+            <Link
+              key={path}
+              to={path}
+              className="group flex-1 border border-edge rounded-xl px-5 py-4 hover:border-edge-hover hover:bg-surface-1 transition-all duration-200"
+            >
+              <span className="text-[0.875rem] text-fg font-medium group-hover:-translate-y-px inline-block transition-transform duration-200">
+                {label}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </Reveal>
+    </div>
+  </section>
+)
+
 const CTASection = ({ title, body, buttonText, buttonUrl }) => (
   <section className="py-20 md:py-28">
     <div className="max-w-[1120px] mx-auto px-6">
@@ -164,7 +194,11 @@ const CTASection = ({ title, body, buttonText, buttonUrl }) => (
 )
 
 const ContentPage = ({ page }) => {
-  const { title, description, slug, datePublished, dateModified, hero, sections, cta } = page
+  const { title, description, slug, datePublished, dateModified, hero, sections, cta, relatedPages } = page
+
+  // Extract category from slug for breadcrumb (e.g., /compare/foo → "Compare")
+  const slugParts = slug.split('/').filter(Boolean)
+  const category = slugParts.length > 1 ? CATEGORY_LABELS[slugParts[0]] : null
 
   return (
     <>
@@ -180,6 +214,12 @@ const ContentPage = ({ page }) => {
       <div className="max-w-[1120px] mx-auto px-6 pt-28 md:pt-32">
         <nav className="text-[0.8125rem] text-fg-muted flex items-center gap-1.5">
           <Link to="/" className="hover:text-fg transition-colors duration-200">Home</Link>
+          {category && (
+            <>
+              <span className="text-fg-faint">/</span>
+              <span className="text-fg-muted">{category}</span>
+            </>
+          )}
           <span className="text-fg-faint">/</span>
           <span className="text-fg-secondary">{title.split(' — ')[0]}</span>
         </nav>
@@ -216,6 +256,9 @@ const ContentPage = ({ page }) => {
             return null
         }
       })}
+
+      {/* Related pages */}
+      {relatedPages && relatedPages.length > 0 && <RelatedPages pages={relatedPages} />}
 
       {/* CTA */}
       <CTASection {...cta} />

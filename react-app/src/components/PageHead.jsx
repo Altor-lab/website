@@ -24,8 +24,11 @@ const PageHead = ({ title, description, slug, datePublished, dateModified }) => 
     setMeta('property', 'og:description', description)
     setMeta('property', 'og:url', `${BASE_URL}${slug}`)
     setMeta('property', 'og:type', 'article')
+    setMeta('property', 'og:image', `${BASE_URL}/og-image.png`)
+    setMeta('name', 'twitter:card', 'summary_large_image')
     setMeta('name', 'twitter:title', title)
     setMeta('name', 'twitter:description', description)
+    setMeta('name', 'twitter:image', `${BASE_URL}/og-image.png`)
 
     // Set canonical URL
     let canonical = document.querySelector('link[rel="canonical"]')
