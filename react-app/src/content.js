@@ -3,7 +3,7 @@ export const content = {
 
   hero: {
     headline: ['Your tickets need investigations,', 'not doc lookups.'],
-    subhead: 'Altor connects to ClickHouse, Linear, Stripe, and GitHub to diagnose support tickets — pulling the same data your engineers check manually, in seconds.',
+    subhead: 'Altor connects to ClickHouse, Linear, Stripe, and GitHub to diagnose support tickets in under 2 minutes — pulling the same data your engineers check manually.',
     proof: 'Live at Portkey — 200+ tickets diagnosed across 6 integrated systems.',
     primaryCTA: { text: 'Book a demo', url: 'https://calendly.com/founders-altorlab/30min' },
     secondaryCTA: { text: 'See how it works', anchor: '#how-it-works' },
@@ -11,8 +11,8 @@ export const content = {
   },
 
   metrics: [
-    { value: 2, suffix: 'min', label: 'median diagnosis time', note: 'across 200+ tickets at Portkey' },
-    { value: 6, suffix: '+', label: 'systems per investigation' },
+    { value: 2, suffix: 'min', label: 'median diagnosis time', note: 'down from 20–45 min manually, across 200+ tickets at Portkey' },
+    { value: 6, suffix: '+', label: 'systems queried per investigation', note: 'ClickHouse, Linear, Stripe, GitHub, docs, StatusPage' },
     { value: 80, suffix: '%', label: 'investigation logic reusable across ticket types' },
   ],
 
@@ -25,10 +25,10 @@ export const content = {
 
   gap: {
     title: 'Support AI answers questions. Your tickets need investigations.',
-    body: 'Doc chatbots handle the 20% where the answer lives in your knowledge base. The other 80% — "my API calls are failing," "latency spiked since yesterday," "webhooks stopped firing" — need live data from your actual systems.',
+    body: 'Doc chatbots handle the 20% of tickets where the answer lives in your knowledge base. The other 80% — "my API calls are failing," "latency spiked since yesterday," "webhooks stopped firing" — require pulling live data from your actual systems. That 80% costs $80–200K per year per support engineer in manual investigation time.',
     comparison: [
       { label: 'Doc chatbot', detail: 'Reads documentation and guesses. Handles password resets and FAQ. Breaks down the moment a ticket needs live customer data.', variant: 'dim' },
-      { label: 'Investigation AI', detail: 'Reads your logs, your bug tracker, your billing system — and investigates like your best engineer would.', variant: 'accent' },
+      { label: 'Investigation AI', detail: 'Queries your logs, bug tracker, and billing system — investigating across 6+ systems like your best engineer would, in 2 minutes instead of 45.', variant: 'accent' },
     ],
     punchline: 'The investigation layer — an AI that pulls live data from your systems to diagnose technical tickets — doesn\'t exist yet.',
   },
@@ -81,7 +81,7 @@ export const content = {
 
   stack: {
     title: 'Your systems. Connected.',
-    subtitle: 'Altor reads from the tools your team already uses. No new dashboards, no data migration.',
+    subtitle: 'Altor reads from the tools your team already uses — 6 integrations out of the box. No new dashboards, no data migration.',
     integrations: [
       { name: 'ClickHouse', role: 'API logs, error rates, latency, customer activity' },
       { name: 'Linear', role: 'Known bugs, backlog items, issue status and priority' },
@@ -90,7 +90,7 @@ export const content = {
       { name: 'Docs / Mintlify', role: 'Documentation, guides, known workarounds' },
       { name: 'StatusPage', role: 'Upstream incidents, provider outage status' },
     ],
-    footnote: 'Works with Pylon, Plain, Zendesk, Intercom. If your system has an API, we can connect to it.',
+    footnote: 'Also works with Pylon, Plain, Zendesk, and Intercom. Custom integrations available for any system with an API.',
   },
 
   trust: {
@@ -109,7 +109,7 @@ export const content = {
     body: 'We start with a forward-deployed engagement: audit your support stack, connect your systems, build investigation playbooks for your top ticket types.',
     steps: [
       { week: 'Week 1', label: 'Stack audit', detail: 'We map your systems, ticket types, and current investigation workflows.' },
-      { week: 'Week 2', label: 'Connections live', detail: 'Read-only integrations connected. First investigations running on real tickets.' },
+      { week: 'Week 2', label: 'Connections live', detail: 'Read-only integrations connected. First investigations running on real tickets from your queue.' },
       { week: 'Week 3–4', label: 'Playbooks tuned', detail: 'Investigation logic refined against your actual ticket patterns. Team trained.' },
     ],
   },
@@ -125,7 +125,7 @@ export const content = {
   },
 
   faq: [
-    { q: 'How is this different from a docs chatbot?', a: 'Docs chatbots answer "how does this work?" from your knowledge base. Altor answers "why is this broken for this customer right now?" by querying their actual API logs, checking your bug tracker, and verifying their billing status.' },
+    { q: 'How is this different from a docs chatbot?', a: 'Docs chatbots answer "how does this work?" from your knowledge base. Altor answers "why is this broken for this customer right now?" by querying their actual API logs, checking your bug tracker, and verifying their billing status — across 6+ systems in under 2 minutes.' },
     { q: 'How is this different from our support platform?', a: 'Pylon, Plain, Zendesk — they route and manage tickets. Altor investigates them. We plug into your existing support tool as the investigation layer. You keep your workflows, we add the diagnosis.' },
     { q: 'Will it take actions without asking?', a: 'Not by default. Altor starts as a read-only investigator — it surfaces a diagnosis for your team to review. You control which action types graduate to auto-approval. Destructive actions are never automated.' },
     { q: 'What if our stack isn\'t listed?', a: 'If an API exists for your system, we can integrate it. The architecture composes tools — it doesn\'t hardcode connectors. We\'ve yet to encounter a B2B stack we can\'t connect to.' },

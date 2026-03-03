@@ -1,0 +1,20 @@
+User-Agent: *
+Allow: /
+
+# AI crawlers — explicitly allow for GEO
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+Sitemap: https://altorlab.com/sitemap.xml

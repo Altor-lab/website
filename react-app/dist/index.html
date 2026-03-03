@@ -12,11 +12,15 @@
   <link rel="preload" href="https://cdn.fontshare.com/wf/AKDKUQ3OWZPFQKXQRHAHXGRWHYCM/4BMQSQPYMXUHEVZRPEXGPWTQKXFN6AGD/LLHNCVZXW5CNZWUXDNFQVGCM2U4QW5C3.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Regular.woff2" as="font" type="font/woff2" crossorigin />
 
+  <!-- PWA / Touch -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+  <link rel="manifest" href="/manifest.json" />
+
   <!-- Primary Meta Tags -->
   <title>Altor — The investigation layer for B2B technical support</title>
   <meta name="title" content="Altor — The investigation layer for B2B technical support" />
   <meta name="description"
-    content="Altor connects to your logs, bugs, billing, and docs to diagnose technical support issues in minutes — not just look up answers in a knowledge base." />
+    content="Altor connects to your logs, bugs, billing, and docs to diagnose technical support tickets in under 2 minutes — not just look up answers in a knowledge base." />
   <meta name="keywords"
     content="B2B technical support, AI support agent, support automation, MCP orchestration, investigation platform, developer tools support" />
   <meta name="author" content="Altor" />
@@ -26,10 +30,11 @@
   <meta property="og:url" content="https://altorlab.com/" />
   <meta property="og:title" content="Altor — The investigation layer for B2B technical support" />
   <meta property="og:description"
-    content="Altor connects to your logs, bugs, billing, and docs to diagnose technical support issues in minutes." />
-  <meta property="og:image" content="https://altorlab.com/og-image.svg" />
+    content="Altor connects to your logs, bugs, billing, and docs to diagnose technical support tickets in under 2 minutes." />
+  <meta property="og:image" content="https://altorlab.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:alt" content="Altor — The investigation layer for B2B technical support" />
   <meta property="og:site_name" content="Altor" />
   <meta property="og:locale" content="en_US" />
@@ -39,18 +44,104 @@
   <meta name="twitter:url" content="https://altorlab.com/" />
   <meta name="twitter:title" content="Altor — The investigation layer for B2B technical support" />
   <meta name="twitter:description"
-    content="Altor connects to your logs, bugs, billing, and docs to diagnose technical support issues in minutes." />
-  <meta name="twitter:image" content="https://altorlab.com/og-image.svg" />
+    content="Altor connects to your logs, bugs, billing, and docs to diagnose technical support tickets in under 2 minutes." />
+  <meta name="twitter:image" content="https://altorlab.com/og-image.png" />
   <meta name="twitter:image:alt" content="Altor — The investigation layer for B2B technical support" />
-
-  <!-- WhatsApp / Telegram -->
-  <meta property="og:image:type" content="image/svg+xml" />
 
   <!-- Additional SEO -->
   <link rel="canonical" href="https://altorlab.com/" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#f6f1eb" />
-  <script type="module" crossorigin src="/assets/index-2d14df35.js"></script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Altor",
+    "url": "https://altorlab.com",
+    "logo": "https://altorlab.com/favicon.svg",
+    "description": "Altor is the investigation engine for B2B technical support. It connects to a company's existing systems to diagnose technical support tickets in minutes instead of hours.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "anshul@altorlab.com",
+      "contactType": "sales"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/ansh27/"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Altor",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Altor is an AI investigation layer for B2B technical support. It connects to ClickHouse, Linear, Stripe, GitHub, and more to diagnose support tickets in under 2 minutes — querying 6+ systems per investigation.",
+    "url": "https://altorlab.com",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Usage-based pricing — per investigation, not per seat. No minimum commitment."
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is Altor different from a docs chatbot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Docs chatbots answer 'how does this work?' from your knowledge base. Altor answers 'why is this broken for this customer right now?' by querying their actual API logs, checking your bug tracker, and verifying their billing status — across 6+ systems in under 2 minutes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Altor different from our support platform?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pylon, Plain, Zendesk — they route and manage tickets. Altor investigates them. We plug into your existing support tool as the investigation layer. You keep your workflows, we add the diagnosis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will Altor take actions without asking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not by default. Altor starts as a read-only investigator — it surfaces a diagnosis for your team to review. You control which action types graduate to auto-approval. Destructive actions are never automated."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if our stack isn't listed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If an API exists for your system, we can integrate it. The architecture composes tools — it doesn't hardcode connectors. We've yet to encounter a B2B stack we can't connect to."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does Altor pricing look like?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usage-based — you pay per investigation, not per seat. No minimum commitment. We'll scope pricing during the demo based on your ticket volume and systems."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="module" crossorigin src="/assets/index-8a9bf285.js"></script>
   <link rel="stylesheet" href="/assets/index-67787e61.css">
 </head>
 
