@@ -4,10 +4,11 @@
  * and writes the full HTML back to dist/ so crawlers see real content.
  */
 
-import { execSync, spawn } from 'child_process'
+import { spawn } from 'child_process'
 import { existsSync, mkdirSync, writeFileSync, readFileSync } from 'fs'
 import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
+import http from 'http'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
@@ -23,50 +24,57 @@ const ROUTES = [
 const PORT = 4173
 const BASE_URL = `http://localhost:${PORT}`
 
+// Hard timeout — kill everything if the script takes longer than 3 minutes
+setTimeout(() => {
+  console.error('[prerender] TIMEOUT: Script exceeded 3 minutes. Exiting.')
+  process.exit(1)
+}, 180_000)
+
+function httpGet(url) {
+  return new Promise((resolve, reject) => {
+    const req = http.get(url, (res) => resolve(res.statusCode))
+    req.on('error', () => resolve(null))
+    req.setTimeout(2000, () => { req.destroy(); resolve(null) })
+  })
+}
+
+async function waitForServer(url, maxAttempts = 30) {
+  for (let i = 0; i < maxAttempts; i++) {
+    const status = await httpGet(url)
+    if (status === 200) return true
+    await new Promise((r) => setTimeout(r, 500))
+  }
+  return false
+}
+
 async function prerender() {
   console.log('[prerender] Starting vite preview server...')
 
-  const preview = spawn('npx', ['vite', 'preview', '--port', String(PORT)], {
+  // Use the local vite binary directly instead of npx
+  const viteBin = join(ROOT, 'node_modules', '.bin', 'vite')
+  const preview = spawn(viteBin, ['preview', '--port', String(PORT)], {
     cwd: ROOT,
     stdio: 'pipe',
     env: { ...process.env },
   })
 
-  // Wait for server to be ready
-  await new Promise((resolve, reject) => {
-    const timeout = setTimeout(() => reject(new Error('Preview server timeout')), 15000)
-    preview.stdout.on('data', (data) => {
-      if (data.toString().includes(String(PORT))) {
-        clearTimeout(timeout)
-        resolve()
-      }
-    })
-    preview.stderr.on('data', (data) => {
-      const msg = data.toString()
-      if (msg.includes(String(PORT))) {
-        clearTimeout(timeout)
-        resolve()
-      }
-    })
-  })
+  preview.stdout.on('data', (d) => process.stdout.write(`  [vite] ${d}`))
+  preview.stderr.on('data', (d) => process.stderr.write(`  [vite] ${d}`))
 
-  // Brief additional wait for server stability
-  await new Promise((r) => setTimeout(r, 1000))
-
-  console.log('[prerender] Server ready. Launching browser...')
-
-  let puppeteer
-  try {
-    puppeteer = await import('puppeteer')
-  } catch {
-    console.error('[prerender] puppeteer not installed. Run: npm install -D puppeteer')
+  const ready = await waitForServer(BASE_URL)
+  if (!ready) {
+    console.error('[prerender] FAILED: Vite preview server did not start within 15s.')
     preview.kill()
     process.exit(1)
   }
 
+  console.log('[prerender] Server ready. Launching browser...')
+
+  const puppeteer = await import('puppeteer')
+
   const browser = await puppeteer.default.launch({
     headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
     executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
   })
 
@@ -106,7 +114,6 @@ async function prerender() {
 
       // Strip Framer Motion opacity:0 inline styles that linger from initial="hidden"
       html = html.replace(/style="[^"]*opacity:\s*0[^"]*"/g, (match) => {
-        // Remove opacity:0 from inline styles, keep other properties
         const cleaned = match
           .replace(/opacity:\s*0;?\s*/g, '')
           .replace(/;\s*"/g, '"')
@@ -145,6 +152,7 @@ async function prerender() {
   }
 
   console.log('[prerender] Done. All routes pre-rendered successfully.')
+  process.exit(0)
 }
 
 prerender().catch((err) => {

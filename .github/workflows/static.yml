@@ -32,11 +32,6 @@ jobs:
           cache: 'npm'
           cache-dependency-path: react-app/package-lock.json
 
-      - name: Install Chromium dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-browser
-
       - name: Install dependencies
         run: |
           cd react-app
@@ -46,8 +41,6 @@ jobs:
         run: |
           cd react-app
           npm run build
-        env:
-          PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
 
       - name: Verify pre-rendered content
         run: |
