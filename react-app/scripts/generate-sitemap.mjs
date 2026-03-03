@@ -24,6 +24,12 @@ const routes = [
   { path: '/use-case/billing-escalation-debugging', priority: '0.8', changefreq: 'monthly' },
   { path: '/for/ai-infrastructure-companies', priority: '0.8', changefreq: 'monthly' },
   { path: '/for/api-first-developer-tools', priority: '0.8', changefreq: 'monthly' },
+  { path: '/blog', priority: '0.7', changefreq: 'weekly' },
+  { path: '/blog/support-ticket-investigation-workflow', priority: '0.7', changefreq: 'monthly' },
+  { path: '/blog/support-investigation-cost', priority: '0.7', changefreq: 'monthly' },
+  { path: '/blog/clickhouse-support-diagnosis', priority: '0.7', changefreq: 'monthly' },
+  { path: '/blog/ai-support-agent-vs-chatbot', priority: '0.7', changefreq: 'monthly' },
+  { path: '/blog/reduce-support-escalations', priority: '0.7', changefreq: 'monthly' },
 ]
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>

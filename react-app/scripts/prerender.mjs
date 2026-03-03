@@ -25,6 +25,12 @@ const ROUTES = [
   '/for/ai-infrastructure-companies',
   '/for/api-first-developer-tools',
   '/customers/portkey',
+  '/blog',
+  '/blog/support-ticket-investigation-workflow',
+  '/blog/support-investigation-cost',
+  '/blog/clickhouse-support-diagnosis',
+  '/blog/ai-support-agent-vs-chatbot',
+  '/blog/reduce-support-escalations',
 ]
 
 const PORT = 4173

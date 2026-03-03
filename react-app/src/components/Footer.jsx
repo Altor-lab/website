@@ -24,6 +24,7 @@ const Footer = () => {
     ['API error investigation', '/use-case/api-error-investigation'],
     ['For AI infrastructure', '/for/ai-infrastructure-companies'],
     ['For API dev tools', '/for/api-first-developer-tools'],
+    ['Blog', '/blog'],
   ]
 
   const go = (id) => (e) => {
