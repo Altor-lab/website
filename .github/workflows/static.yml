@@ -24,32 +24,44 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
           cache-dependency-path: react-app/package-lock.json
-      
+
+      - name: Install Chromium dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser
+
       - name: Install dependencies
         run: |
           cd react-app
           npm ci
-      
+
       - name: Build React app
         run: |
           cd react-app
           npm run build
-      
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
+
+      - name: Verify pre-rendered content
+        run: |
+          grep -q "investigation" react-app/dist/index.html || (echo "ERROR: Pre-render failed — homepage has no content" && exit 1)
+          echo "Pre-render verification passed"
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'react-app/dist'
-      
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

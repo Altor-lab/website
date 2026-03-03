@@ -1,6 +1,10 @@
+import { Link, useLocation } from 'react-router-dom'
 import { content } from '../content'
 
 const Footer = () => {
+  const location = useLocation()
+  const isHome = location.pathname === '/'
+
   const productLinks = [
     ['How it works', 'how-it-works'],
     ['Integrations', 'the-stack'],
@@ -9,9 +13,17 @@ const Footer = () => {
     ['FAQ', 'faq'],
   ]
 
+  const resourceLinks = [
+    ['Altor vs. doc chatbots', '/compare/altor-vs-doc-chatbots'],
+    ['Altor vs. platform AI', '/compare/altor-vs-support-platform-ai'],
+    ['API error investigation', '/use-case/api-error-investigation'],
+  ]
+
   const go = (id) => (e) => {
-    e.preventDefault()
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    if (isHome) {
+      e.preventDefault()
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (
@@ -19,9 +31,9 @@ const Footer = () => {
       <div className="max-w-[1120px] mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row justify-between gap-10">
           <div>
-            <a href="/" className="font-display font-bold text-fg tracking-[-0.02em] text-[1.0625rem]">
+            <Link to="/" className="font-display font-bold text-fg tracking-[-0.02em] text-[1.0625rem]">
               {content.companyName}
-            </a>
+            </Link>
             <p className="text-fg-muted text-[0.8125rem] mt-2 max-w-[28ch] leading-relaxed">
               The investigation layer for B2B technical support.
             </p>
@@ -30,19 +42,44 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex gap-10 sm:gap-16">
+          <div className="flex gap-10 sm:gap-16 flex-wrap">
             <div>
               <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Product</h4>
               <div className="flex flex-col gap-2.5">
                 {productLinks.map(([label, id]) => (
-                  <a
-                    key={id}
-                    href={`#${id}`}
-                    onClick={go(id)}
+                  isHome ? (
+                    <a
+                      key={id}
+                      href={`#${id}`}
+                      onClick={go(id)}
+                      className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200"
+                    >
+                      {label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={id}
+                      to={`/#${id}`}
+                      className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200"
+                    >
+                      {label}
+                    </Link>
+                  )
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Resources</h4>
+              <div className="flex flex-col gap-2.5">
+                {resourceLinks.map(([label, path]) => (
+                  <Link
+                    key={path}
+                    to={path}
                     className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200"
                   >
                     {label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

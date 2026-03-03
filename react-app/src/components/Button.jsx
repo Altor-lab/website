@@ -16,9 +16,18 @@ const Button = ({ children, variant = 'primary', size = 'md', className, onClick
 
   const classes = cn(base, variants[variant], sizes[size], className)
 
+  const handleClick = (e) => {
+    // Fire Plausible custom event for demo/CTA clicks
+    if (typeof window !== 'undefined' && window.plausible) {
+      const label = typeof children === 'string' ? children : href || 'CTA'
+      window.plausible('CTA Click', { props: { label } })
+    }
+    if (onClick) onClick(e)
+  }
+
   const isExternal = href && (href.startsWith('http') || href.startsWith('//'))
-  if (href) return <a href={href} className={classes} {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})} {...props}>{children}</a>
-  return <button className={classes} onClick={onClick} {...props}>{children}</button>
+  if (href) return <a href={href} className={classes} onClick={handleClick} {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})} {...props}>{children}</a>
+  return <button className={classes} onClick={handleClick} {...props}>{children}</button>
 }
 
 export default Button
