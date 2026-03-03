@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import PageHead from './PageHead'
 import Button from './Button'
+import EmailCapture from './EmailCapture'
 
 const ease = [0.25, 0.4, 0.25, 1]
 
@@ -155,6 +156,7 @@ const CTASection = ({ title, body, buttonText, buttonUrl }) => (
               Email us instead
             </Button>
           </div>
+          <EmailCapture className="mt-10" />
         </div>
       </Reveal>
     </div>

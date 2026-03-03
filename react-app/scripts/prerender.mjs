@@ -18,7 +18,13 @@ const ROUTES = [
   '/',
   '/compare/altor-vs-doc-chatbots',
   '/compare/altor-vs-support-platform-ai',
+  '/compare/altor-vs-copilot-for-support',
   '/use-case/api-error-investigation',
+  '/use-case/webhook-failure-investigation',
+  '/use-case/billing-escalation-debugging',
+  '/for/ai-infrastructure-companies',
+  '/for/api-first-developer-tools',
+  '/customers/portkey',
 ]
 
 const PORT = 4173

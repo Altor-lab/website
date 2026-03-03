@@ -14,9 +14,15 @@ const Footer = () => {
   ]
 
   const resourceLinks = [
-    ['Altor vs. doc chatbots', '/compare/altor-vs-doc-chatbots'],
-    ['Altor vs. platform AI', '/compare/altor-vs-support-platform-ai'],
+    ['Portkey case study', '/customers/portkey'],
+    ['vs. doc chatbots', '/compare/altor-vs-doc-chatbots'],
+    ['vs. support platform AI', '/compare/altor-vs-support-platform-ai'],
+    ['vs. AI copilots', '/compare/altor-vs-copilot-for-support'],
     ['API error investigation', '/use-case/api-error-investigation'],
+    ['Webhook failures', '/use-case/webhook-failure-investigation'],
+    ['Billing debugging', '/use-case/billing-escalation-debugging'],
+    ['For AI infrastructure', '/for/ai-infrastructure-companies'],
+    ['For API dev tools', '/for/api-first-developer-tools'],
   ]
 
   const go = (id) => (e) => {

@@ -3,6 +3,7 @@ import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { content } from '../content'
 import { NumberTicker } from '../components/magicui/number-ticker'
 import Button from '../components/Button'
+import EmailCapture from '../components/EmailCapture'
 import FAQ from '../components/FAQ'
 import { cn } from '../lib/utils'
 
@@ -537,10 +538,8 @@ export default function Home() {
                   {content.cta.secondaryText}
                 </a>
               </motion.div>
-              <motion.div variants={up} custom={3} className="mt-6">
-                <a href={`mailto:${content.cta.email}`} className="text-fg-muted hover:text-fg text-[0.8125rem] transition-colors">
-                  or email {content.cta.email}
-                </a>
+              <motion.div variants={up} custom={3} className="mt-8">
+                <EmailCapture />
               </motion.div>
             </div>
           </div>
