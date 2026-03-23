@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support Ticket Investigation: The Missing Piece in AI Support | Altor Blog</title>
+  <meta name="description" content="Why AI support tools solve only 20% of tickets and how support ticket investigation closes the gap for the remaining 80% of technical issues." />
+  <meta name="keywords" content="support ticket investigation, AI support workflows, technical support diagnosis, B2B support" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://altorlab.com/blog/support-ticket-investigation.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Support Ticket Investigation: The Missing Piece in AI Support" />
+  <meta property="og:description" content="Doc chatbots handle FAQ tickets. Investigation is what resolves technical incidents." />
+  <meta property="og:url" content="https://altorlab.com/blog/support-ticket-investigation.html" />
+  <meta property="og:image" content="https://altorlab.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Support Ticket Investigation: The Missing Piece in AI Support" />
+  <meta name="twitter:description" content="A practical view of investigation-first AI support for technical B2B teams." />
+  <meta name="twitter:image" content="https://altorlab.com/og-image.png" />
+  <link rel="stylesheet" href="/blog/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Support Ticket Investigation: The Missing Piece in AI Support","description":"Why technical support teams need live data investigation, not just answer generation.","author":{"@type":"Organization","name":"Altor"},"publisher":{"@type":"Organization","name":"Altor","logo":{"@type":"ImageObject","url":"https://altorlab.com/og-image.png"}},"datePublished":"2026-03-23","dateModified":"2026-03-23","mainEntityOfPage":"https://altorlab.com/blog/support-ticket-investigation.html","keywords":["support ticket investigation","AI support","B2B technical support"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do AI chatbots usually resolve only a minority of support tickets?","acceptedAnswer":{"@type":"Answer","text":"Because chatbot answers come from static documentation while most technical tickets require live investigation of customer-specific data."}},{"@type":"Question","name":"What is support ticket investigation?","acceptedAnswer":{"@type":"Answer","text":"Support ticket investigation is the process of collecting and correlating live evidence across logs, bug trackers, billing systems, and code history to determine root cause."}},{"@type":"Question","name":"Which systems are typically involved?","acceptedAnswer":{"@type":"Answer","text":"Common systems include ClickHouse for telemetry, Linear for bugs, Stripe for billing, and GitHub for deployment and code changes."}},{"@type":"Question","name":"Can investigation be automated safely?","acceptedAnswer":{"@type":"Answer","text":"Yes, by using read-only data access, explicit playbooks, and confidence-based human review for uncertain diagnoses."}}]}</script>
+</head>
+<body>
+  <div class="shell">
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="logo" href="/">Altor</a>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/blog/index.html">Blog</a>
+          <a href="https://calendly.com/founders-altorlab/30min">Book a demo</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">AI Support Architecture</div>
+        <h1>Support Ticket Investigation: The Missing Piece in AI Support</h1>
+        <p class="meta">Published Mar 23, 2026 · 12 min read</p>
+      </div>
+    </section>
+
+    <article class="article">
+      <p>
+        The current AI support market is dominated by deflection stories: faster answers, better summaries, cleaner canned responses. These improvements are real, but they mostly optimize the easiest tickets. In B2B technical support, those easy tickets are usually only 20% of total volume. The other 80% ask a different question: not "How do I configure X?" but "Why did X fail for our account at 11:20 UTC?".
+      </p>
+      <p>
+        That second question cannot be solved by retrieving documentation alone. It requires investigation. The support engineer must pull live data, correlate events across systems, and provide root-cause evidence. If your support stack is missing a deliberate investigation layer, AI improvements plateau quickly.
+      </p>
+
+      <h2>Why doc chatbots plateau at roughly 20%</h2>
+      <p>
+        Doc chatbots are strong at knowledge retrieval and response drafting. They work when the right answer already exists in documentation and the ticket can be solved by explaining that answer. For onboarding tasks, API usage clarifications, and policy questions, this is perfect.
+      </p>
+      <p>
+        Technical incident tickets are different. They involve changing state in production and customer-specific conditions. A rate limit can be misconfigured for one account while the platform is healthy. A billing webhook can fail because one customer endpoint started timing out after a deploy. No static FAQ article can authoritatively answer those cases because the answer changes per tenant, per timeframe, and per incident.
+      </p>
+      <ul>
+        <li>FAQ-style questions: answerable from docs and help center content.</li>
+        <li>Diagnostic questions: answerable only from live telemetry and systems of record.</li>
+        <li>Mixed questions: require both docs context and live investigation evidence.</li>
+      </ul>
+
+      <h2>What support ticket investigation actually means</h2>
+      <p>
+        Investigation is the disciplined process of assembling evidence before proposing a fix or escalation. For B2B SaaS teams, it usually includes four steps:
+      </p>
+      <ol>
+        <li><strong>Validate the symptom</strong> in ClickHouse or equivalent telemetry store to confirm that behavior matches the customer report.</li>
+        <li><strong>Check known issues</strong> in Linear to identify active regressions, duplicate incidents, and expected workarounds.</li>
+        <li><strong>Verify account state</strong> in Stripe to rule out plan limits, payment holds, or entitlement mismatches.</li>
+        <li><strong>Correlate with code changes</strong> in GitHub to connect behavior shifts with deploy windows.</li>
+      </ol>
+      <p>
+        The output is not just raw logs. A good investigation output is a diagnosis packet: what failed, why it failed, confidence level, and what the support agent should communicate immediately.
+      </p>
+
+      <h2>How investigation-first AI works in practice</h2>
+      <p>
+        Investigation-first AI does not replace your support platform. It attaches to it. A ticket arrives, then the system auto-runs playbooks against connected data sources, returning a structured summary in minutes. The support engineer reviews and sends the response with concrete evidence rather than guesses.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Layer</th><th>Traditional AI Support</th><th>Investigation-First AI Support</th></tr></thead>
+          <tbody>
+            <tr><td>Input</td><td>Ticket text + knowledge base</td><td>Ticket text + live system signals</td></tr>
+            <tr><td>Output</td><td>Suggested response</td><td>Diagnosis + evidence + response guidance</td></tr>
+            <tr><td>Coverage</td><td>FAQ-heavy tickets</td><td>Technical incident-heavy tickets</td></tr>
+            <tr><td>Escalation quality</td><td>Often low-context</td><td>Evidence-rich engineering handoff</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Case context: why Portkey-style teams prioritize investigation</h2>
+      <p>
+        Teams operating infrastructure-grade products, such as API gateways and developer tooling platforms, experience support tickets with higher technical depth. A customer report may involve throughput changes, provider-specific error bursts, or account-level quota anomalies. In this context, teams like Portkey have found that the investigation workflow repeats frequently even though ticket text varies.
+      </p>
+      <p>
+        The repeated pattern is exactly where automation pays off. Instead of spending 30 minutes rebuilding the same checks each time, the support team receives pre-collected evidence. The ticket still needs human judgment, but the expensive retrieval work is no longer fully manual.
+      </p>
+
+      <h2>Common investigation scenarios</h2>
+      <h3>429 error burst</h3>
+      <p>
+        A customer reports sudden 429 responses. Investigation checks endpoint-level error distribution, plan limits in Stripe, and recent rate-limiter changes in GitHub. Diagnosis distinguishes between customer-side burst traffic and platform-side policy regression.
+      </p>
+
+      <h3>Latency spike after deploy</h3>
+      <p>
+        Ticket text says "requests are slow". Investigation compares p95 latency by endpoint in ClickHouse, maps spike onset to deployment timeline in GitHub, and checks for open Linear bugs linked to performance regressions.
+      </p>
+
+      <h3>Webhook delivery failures</h3>
+      <p>
+        Customer reports missed events. Investigation checks delivery attempts, destination response codes, retry backlog, and any known incident record. Instead of a generic troubleshooting article, support can return exact failed delivery IDs and likely root cause.
+      </p>
+
+      <h2>What to measure when adopting investigation workflows</h2>
+      <ul>
+        <li>Median investigation time before first diagnosis.</li>
+        <li>First-contact resolution rate for technical tickets.</li>
+        <li>Escalation rate to engineering and percentage of avoidable escalations.</li>
+        <li>Reopen rate caused by incomplete diagnosis.</li>
+        <li>Engineer hours consumed by support investigations per week.</li>
+      </ul>
+      <p>
+        These metrics describe the health of your diagnostic process directly. They also help separate marketing claims from operational improvement. If your tooling project does not lower investigation time, it is not addressing the primary bottleneck.
+      </p>
+
+      <h2>Implementation pitfalls and how to avoid them</h2>
+      <p>
+        Teams adopting investigation-first support usually hit three predictable pitfalls. First, they automate retrieval without standardizing interpretation. The system gathers data quickly, but agents still improvise diagnosis language and confidence levels. Solve this with fixed diagnosis templates. Second, they integrate only one system, usually logs, and expect full results. Single-source evidence helps but rarely resolves end-to-end technical tickets; cross-system correlation is where major value appears. Third, they do not define ownership for playbook maintenance, so diagnosis quality decays as product behavior evolves.
+      </p>
+      <p>
+        The operational fix is straightforward: appoint a rotating support-engineering owner for playbook quality, run monthly drift audits, and maintain a short list of "high-confidence auto-investigation" scenarios. This keeps automation trustworthy and prevents stale logic from spreading through ticket handling.
+      </p>
+
+      <div class="panel">
+        <strong>Key point:</strong> AI support quality depends less on eloquent responses and more on evidence quality. Investigation quality determines response quality.
+      </div>
+
+      <h2>Where Altor fits</h2>
+      <p>
+        Altor is built as the investigation layer for B2B technical support. It integrates with ClickHouse, Linear, Stripe, and GitHub, runs diagnosis playbooks, and returns structured findings into existing support workflows. That means your team keeps the ticketing stack it already uses while gaining faster root-cause context.
+      </p>
+      <p>
+        For support engineers, this reduces repetitive lookup work. For engineering managers, it reduces interrupt-driven escalation load and improves operational predictability. For customers, it means fewer vague replies and faster, evidence-backed answers.
+      </p>
+
+      <div class="cta">
+        <h3>Want to evaluate investigation-first support on your own tickets?</h3>
+        <p>Bring a real ticket from your queue. We will show how automated investigation retrieves evidence across ClickHouse, Linear, Stripe, and GitHub in minutes.</p>
+        <a class="btn" href="https://calendly.com/founders-altorlab/30min">Book a demo</a>
+      </div>
+
+      <h3>Related reading</h3>
+      <div class="related">
+        <a href="/blog/ai-copilot-support-teams.html">AI Copilot for Support Teams: Beyond Deflection</a>
+        <a href="/blog/when-to-escalate-support-ticket.html">When to Escalate a Support Ticket to Engineering</a>
+        <a href="/blog/reduce-support-ticket-resolution-time.html">How to Reduce Support Ticket Resolution Time by 50%</a>
+      </div>
+      <p><a href="/blog/index.html">Back to Blog</a> · <a href="/">Go to Homepage</a></p>
+    </article>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>© 2026 Altor</span>
+        <span>The investigation layer for B2B technical support.</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
