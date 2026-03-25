@@ -67,6 +67,18 @@ const Blog = () => (
           </Reveal>
         ))}
       </div>
+
+      <Reveal delay={0.1}>
+        <div className="mt-12 rounded-xl border border-edge-subtle bg-surface-1 px-5 py-4">
+          <p className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-2">From the Altor ecosystem</p>
+          <p className="text-[0.875rem] text-fg-secondary leading-relaxed" style={{ textWrap: 'pretty' }}>
+            <a href="https://altorlab.dev" target="_blank" rel="noopener noreferrer" className="text-fg hover:text-accent transition-colors duration-200">altorlab.dev</a>
+            {' '}— Client-side vector search {' | '}
+            <a href="https://altorlab.app" target="_blank" rel="noopener noreferrer" className="text-fg hover:text-accent transition-colors duration-200">altorlab.app</a>
+            {' '}— ADA compliance for D2C
+          </p>
+        </div>
+      </Reveal>
     </div>
   </>
 )

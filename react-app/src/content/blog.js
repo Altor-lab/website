@@ -1,8 +1,8 @@
 export const blogPosts = {
   investigationWorkflow: {
     slug: '/blog/support-ticket-investigation-workflow',
-    title: 'The Support Ticket Investigation Workflow — A Framework for B2B Teams',
-    description: 'Most B2B support content focuses on routing and chatbots. The actual bottleneck — the 20-45 minute investigation phase — is invisible. Here\'s a framework for fixing it.',
+    title: 'The Support Investigation Workflow Top B2B Teams Use to Cut Resolution Time',
+    description: 'Most support teams optimize routing and replies while the 20-45 minute investigation step stays manual. This framework shows where resolution time actually goes — and how to shrink it.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
     readTime: '7 min read',
@@ -94,12 +94,19 @@ export const blogPosts = {
       { label: 'The true cost of support ticket investigation', path: '/blog/support-investigation-cost' },
       { label: 'AI support agent vs. chatbot: the investigation gap', path: '/blog/ai-support-agent-vs-chatbot' },
     ],
+
+    seeAlso: [
+      {
+        label: 'See also: altor-vec, our open-source client-side vector search library',
+        href: 'https://altorlab.dev',
+      },
+    ],
   },
 
   investigationCost: {
     slug: '/blog/support-investigation-cost',
-    title: 'The True Cost of Support Ticket Investigation — Why Benchmarks Miss It',
-    description: 'Industry benchmarks measure total resolution time. They miss the biggest line item: the 20-45 minutes engineers spend investigating each ticket across ClickHouse, Linear, Stripe, and GitHub.',
+    title: 'The Hidden Cost of Support Investigation (It\'s Probably Your Biggest Support Expense)',
+    description: 'Benchmarks usually lump support work into one number. This breakdown shows why the real cost is the investigation phase — and why B2B teams keep missing the biggest lever.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
     readTime: '5 min read',
@@ -187,12 +194,19 @@ export const blogPosts = {
       { label: 'The investigation workflow framework', path: '/blog/support-ticket-investigation-workflow' },
       { label: 'How to reduce escalations by automating investigation', path: '/blog/reduce-support-escalations' },
     ],
+
+    seeAlso: [
+      {
+        label: 'See also: altor-vec, our open-source client-side vector search library',
+        href: 'https://altorlab.dev',
+      },
+    ],
   },
 
   clickhouseDiagnosis: {
     slug: '/blog/clickhouse-support-diagnosis',
-    title: 'Using ClickHouse to Diagnose Customer Support Issues in Minutes',
-    description: 'If your team uses ClickHouse for product analytics, it already has the data to diagnose 80% of support tickets. Here are the query patterns that turn ClickHouse into a support investigation tool.',
+    title: 'How Support Teams Use ClickHouse to Diagnose API Issues in Minutes',
+    description: 'If your product data already lives in ClickHouse, your support team may be sitting on the fastest path to root cause. These query patterns help B2B teams investigate without tab-switching for half an hour.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
     readTime: '8 min read',
@@ -272,12 +286,19 @@ export const blogPosts = {
       { label: 'The support investigation workflow framework', path: '/blog/support-ticket-investigation-workflow' },
       { label: 'API error investigation — full walkthrough', path: '/use-case/api-error-investigation' },
     ],
+
+    seeAlso: [
+      {
+        label: 'See also: altor-vec, our open-source client-side vector search library',
+        href: 'https://altorlab.dev',
+      },
+    ],
   },
 
   agentVsChatbot: {
     slug: '/blog/ai-support-agent-vs-chatbot',
-    title: 'AI Support Agent vs. Chatbot — The Investigation Gap',
-    description: 'Chatbots answer questions from your docs. AI agents investigate across live systems. For B2B technical support, the distinction determines whether 80% of your tickets get solved or stuck.',
+    title: 'AI Support Agent vs. Chatbot: Which One Actually Reduces Escalations?',
+    description: 'Chatbots are good at docs. They usually break down on live technical tickets. Here\'s how B2B support teams decide when they need answer generation — and when they need real investigation.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
     readTime: '6 min read',
@@ -346,12 +367,19 @@ export const blogPosts = {
       { label: 'Altor vs. doc chatbots — comparison', path: '/compare/altor-vs-doc-chatbots' },
       { label: 'Altor vs. AI copilots — investigation vs. drafting', path: '/compare/altor-vs-copilot-for-support' },
     ],
+
+    seeAlso: [
+      {
+        label: 'See also: altor-vec, our open-source client-side vector search library',
+        href: 'https://altorlab.dev',
+      },
+    ],
   },
 
   reduceEscalations: {
     slug: '/blog/reduce-support-escalations',
-    title: 'How to Reduce Support Escalations — Automate Investigation, Not Conversation',
-    description: 'Support escalations happen because frontline agents lack technical context, not because they lack communication skills. Automating the investigation phase eliminates the root cause of most escalations.',
+    title: 'Why 70% of Support Escalations Are Preventable — And How to Cut Them',
+    description: 'Most escalations happen because agents lack system context, not training. This guide shows how B2B support teams reduce avoidable handoffs by automating investigation before engineering gets pulled in.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
     readTime: '6 min read',
@@ -439,6 +467,13 @@ export const blogPosts = {
     relatedPosts: [
       { label: 'The true cost of support investigation', path: '/blog/support-investigation-cost' },
       { label: 'The investigation workflow framework', path: '/blog/support-ticket-investigation-workflow' },
+    ],
+
+    seeAlso: [
+      {
+        label: 'See also: altor-vec, our open-source client-side vector search library',
+        href: 'https://altorlab.dev',
+      },
     ],
   },
 }

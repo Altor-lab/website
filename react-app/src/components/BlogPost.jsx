@@ -23,7 +23,7 @@ const Reveal = ({ children, delay = 0 }) => {
 }
 
 const BlogPost = ({ post }) => {
-  const { slug, title, description, datePublished, dateModified, readTime, headline, opening, sections, relatedPosts } = post
+  const { slug, title, description, datePublished, dateModified, readTime, headline, opening, sections, relatedPosts, seeAlso } = post
 
   return (
     <>
@@ -156,6 +156,31 @@ const BlogPost = ({ post }) => {
           ))}
         </div>
       </article>
+
+      {seeAlso && seeAlso.length > 0 && (
+        <section className="pb-12">
+          <div className="max-w-[720px] mx-auto px-6">
+            <Reveal>
+              <div className="rounded-xl border border-edge-subtle bg-surface-1 px-5 py-4">
+                <p className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-2">From the Altor ecosystem</p>
+                <div className="flex flex-col gap-2">
+                  {seeAlso.map(({ label, href }) => (
+                    <a
+                      key={href}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[0.875rem] text-fg-secondary hover:text-fg transition-colors duration-200"
+                    >
+                      {label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
 
       {/* Related posts */}
       {relatedPosts && relatedPosts.length > 0 && (

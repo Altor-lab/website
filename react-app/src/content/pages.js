@@ -643,8 +643,8 @@ export const pages = {
 
   forAIInfra: {
     slug: '/for/ai-infrastructure-companies',
-    title: 'Altor for AI Infrastructure — Gateway and Routing Investigation',
-    description: 'AI infrastructure companies like Portkey, Helicone, and Langfuse deal with tickets about API routing, model fallbacks, and gateway configs. Altor investigates them in 2 minutes.',
+    title: 'AI Infrastructure Support: Diagnose Gateway Tickets in 2 Minutes',
+    description: 'If your customers open tickets about routing failures, fallback chains, or token mismatches, generic support AI will not cut it. See how AI infrastructure teams investigate the issue before it escalates.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
@@ -723,8 +723,8 @@ export const pages = {
 
   forAPIDevTools: {
     slug: '/for/api-first-developer-tools',
-    title: 'Altor for API Developer Tools — Latency, Webhooks, and SDK Investigation',
-    description: 'API-first dev tools like Supabase, Resend, and Clerk get tickets about latency spikes, webhook failures, and SDK errors. Altor investigates across your production systems in 2 minutes.',
+    title: 'For API-First Developer Tools: Resolve Latency and Webhook Tickets Faster',
+    description: 'Developer customers want root cause, not canned replies. See how API-first teams investigate latency spikes, webhook failures, and SDK issues before they turn into long engineering loops.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
