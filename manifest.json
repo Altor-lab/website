@@ -1,0 +1,21 @@
+{
+  "name": "Altor — The investigation layer for B2B technical support",
+  "short_name": "Altor",
+  "description": "Altor connects to your logs, bugs, billing, and docs to diagnose technical support tickets in minutes.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f6f1eb",
+  "theme_color": "#f6f1eb",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
