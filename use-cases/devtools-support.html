@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <title>DevTools Support | Help Developer Customers Faster</title>
+  <meta name="description" content="Help DevTools support teams diagnose SDK, CLI, API, and integration issues faster with Altor.">
+  <link rel="canonical" href="https://altorlab.com/use-cases/devtools-support.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://altorlab.com/use-cases/devtools-support.html">
+  <meta property="og:title" content="DevTools Support | Help Developer Customers Faster">
+  <meta property="og:description" content="Help DevTools support teams diagnose SDK, CLI, API, and integration issues faster with Altor.">
+  <meta property="og:image" content="https://altorlab.com/og-image.png">
+  <meta property="og:site_name" content="Altor">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DevTools Support | Help Developer Customers Faster">
+  <meta name="twitter:description" content="Help DevTools support teams diagnose SDK, CLI, API, and integration issues faster with Altor.">
+  <meta name="twitter:image" content="https://altorlab.com/og-image.png">
+  <meta name="theme-color" content="#04110f">
+  <script defer data-domain="altorlab.com" src="https://plausible.io/js/script.js"></script>
+  <style>
+    :root {--bg:#04110f;--bg-soft:#0a1a17;--panel:#0f2420;--panel-2:#13302a;--text:#e6f5f1;--muted:#9fb8b2;--accent:#29d3aa;--accent-soft:rgba(41,211,170,.14);--border:rgba(170,233,216,.18);--shadow:0 18px 60px rgba(0,0,0,.18);}
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:radial-gradient(circle at 15% 0%,#0f2f28 0%,var(--bg) 48%); color:var(--text); line-height:1.7; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .shell { min-height:100vh; display:flex; flex-direction:column; }
+    .nav { position:sticky; top:0; z-index:20; background:rgba(4,17,15,.92); border-bottom:1px solid var(--border); backdrop-filter:blur(8px); }
+    .nav-inner,.hero-inner,.article,.footer-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.9rem 0; }
+    .logo { font-weight:700; letter-spacing:.02em; color:var(--text); }
+    .nav-links { display:flex; flex-wrap:wrap; gap:1rem; font-size:.95rem; }
+    .nav-cta { display:inline-flex; align-items:center; gap:.5rem; background:var(--text); color:#052019; padding:.62rem 1rem; border-radius:999px; font-weight:700; box-shadow:var(--shadow); }
+    .hero { border-bottom:1px solid var(--border); background:linear-gradient(180deg,rgba(13,44,37,.52) 0%,rgba(4,17,15,0) 100%); }
+    .hero-inner { padding:2.8rem 0 2rem; }
+    .breadcrumb { color:var(--muted); font-size:.9rem; margin-bottom:1rem; }
+    .eyebrow { color:var(--muted); text-transform:uppercase; letter-spacing:.1em; font-size:.74rem; }
+    h1 { margin:.6rem 0 1rem; line-height:1.1; font-size:clamp(2rem,5vw,3.3rem); max-width:14ch; }
+    .lede { font-size:1.08rem; color:#d8ebe6; max-width:64ch; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:.85rem; margin-top:1.35rem; }
+    .hero-card { background:var(--accent-soft); border:1px solid var(--border); border-radius:14px; padding:.95rem 1rem; color:#d4e9e4; }
+    .article { padding:2.4rem 0 4rem; }
+    .article h2 { margin-top:2.4rem; margin-bottom:.6rem; line-height:1.2; font-size:1.75rem; }
+    .article h3 { margin-top:1.3rem; margin-bottom:.35rem; font-size:1.16rem; }
+    .article p,.article li { color:#d4e9e4; }
+    .article ul,.article ol { padding-left:1.2rem; }
+    .panel { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:1.15rem; margin:1.2rem 0; box-shadow:var(--shadow); }
+    .panel.alt { background:linear-gradient(180deg,rgba(19,48,42,.92),rgba(12,32,28,.96)); }
+    .kicker { color:#c5ece2; font-weight:700; text-transform:uppercase; letter-spacing:.08em; font-size:.78rem; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--border); border-radius:16px; background:rgba(9,23,20,.7); box-shadow:var(--shadow); }
+    table { width:100%; border-collapse:collapse; min-width:720px; }
+    th,td { padding:.9rem; text-align:left; vertical-align:top; border-bottom:1px solid var(--border); }
+    th { font-size:.84rem; color:#c5ece2; text-transform:uppercase; letter-spacing:.06em; }
+    tr:last-child td { border-bottom:none; }
+    .grid-2,.grid-3,.related { display:grid; gap:1rem; }
+    .grid-2 { grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+    .grid-3 { grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+    .card,.related a { display:block; background:rgba(14,38,32,.48); border:1px solid var(--border); border-radius:14px; padding:1rem; color:var(--text); }
+    .steps { counter-reset:step; display:grid; gap:.9rem; }
+    .step { position:relative; padding-left:3rem; }
+    .step:before { counter-increment:step; content:counter(step); position:absolute; left:0; top:.05rem; width:2rem; height:2rem; border-radius:999px; display:grid; place-items:center; background:var(--accent-soft); border:1px solid var(--border); font-weight:700; color:#d7fff3; }
+    .faq-item + .faq-item { margin-top:1rem; }
+    .cta { margin-top:2.2rem; padding:1.3rem; border-radius:18px; border:1px solid var(--border); background:linear-gradient(180deg,rgba(41,211,170,.16) 0%,rgba(41,211,170,.05) 100%); }
+    .btn { display:inline-block; margin-top:.85rem; background:var(--accent); color:#052019; padding:.7rem 1.05rem; border-radius:10px; font-weight:800; }
+    .footer { margin-top:auto; border-top:1px solid var(--border); }
+    .footer-inner { padding:1.2rem 0 1.8rem; display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; color:var(--muted); font-size:.92rem; }
+    @media (max-width:760px) { .nav-inner { align-items:flex-start; flex-direction:column; } .nav-cta { display:none; } h1 { max-width:none; } }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is Altor a fit for DevTools support?","acceptedAnswer":{"@type":"Answer","text":"Because developer tooling tickets are highly technical and require evidence from code, runtime systems, and account context."}},{"@type":"Question","name":"Can Altor help with SDK and CLI issues?","acceptedAnswer":{"@type":"Answer","text":"Yes. Release history, regression signals, and tenant-level behavior make it especially useful for SDK and CLI investigations."}},{"@type":"Question","name":"Does this replace engineering support?","acceptedAnswer":{"@type":"Answer","text":"No. It helps support do more of the initial diagnosis before engineering gets involved."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Use cases","item":"https://altorlab.com/use-cases/"},{"@type":"ListItem","position":3,"name":"DevTools","item":"https://altorlab.com/use-cases/devtools-support.html"}]}</script>
+</head>
+<body>
+  <div class="shell">
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="logo" href="/">Altor</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/compare/">Compare</a>
+          <a href="/integrations/">Integrations</a>
+          <a href="/use-cases/">Use cases</a>
+          <a href="/blog/">Blog</a>
+        </nav>
+        <a class="nav-cta" href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo</a>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="breadcrumb"><a href="/">Home</a> / <a href="/use-cases/">Use cases</a> / DevTools</div>
+        <div class="eyebrow">Use case page</div>
+        <h1>DevTools Support Investigation — Help Developer Customers Faster</h1>
+        <p class="lede">Developer customers can tell when a support answer is generic. Altor helps DevTools teams investigate technical tickets with the depth those customers expect.</p>
+        <div class="hero-actions"><div class="hero-card"><strong>Industry:</strong> DevTools</div><div class="hero-card"><strong>Best for:</strong> Complex technical support</div><div class="hero-card"><strong>Outcome:</strong> Help Developers Faster With Real Evidence</div></div>
+      </div>
+    </section>
+    <main class="article">
+      
+      <section>
+        <h2>Industry pain points</h2>
+        <div class="grid-2"><div class="card"><h3>Support needs engineering context to answer credibly</h3><p>SDK regressions, CLI bugs, auth errors, and usage anomalies all depend on product internals.</p></div><div class="card"><h3>Customer issues often depend on release timing</h3><p>A recent package version, rollout, or platform change can explain the behavior.</p></div><div class="card"><h3>Logs and bug history are scattered across tools</h3><p>Support has to jump between GitHub, Linear, ClickHouse, Datadog, and Slack to understand one report.</p></div><div class="card"><h3>Developers expect precise reproduction or cause direction</h3><p>A vague answer increases frustration and churn risk.</p></div></div>
+      </section>
+      <section>
+        <h2>How Altor solves them</h2>
+        <div class="grid-2"><div class="card"><p>Altor combines support ticket context with release history, runtime signals, known bugs, and account state into one diagnostic view.</p></div><div class="card"><p>It helps support point to likely regressions or misconfigurations with more confidence and less guesswork.</p></div><div class="card"><p>It gives engineering better incoming escalations because the first-pass evidence is already structured.</p></div><div class="card"><p>It improves customer trust because support can reference exact versions, timestamps, and related system facts.</p></div></div>
+        <p>That is what makes support investigation different from generic support automation. In DevTools, the issue is rarely that teams cannot draft a response. The issue is that they do not have enough verified context to write the right response. Altor checks the systems behind the ticket first, so support can answer with more precision and less dependency on ad hoc engineering help.</p>
+      </section>
+      <section class="panel alt">
+        <div class="kicker">Example scenario</div>
+        <p>A customer says the latest CLI version fails token refresh in CI only. Altor checks GitHub releases, Linear issues, Datadog auth latency, and account policy changes, then identifies a regression introduced in the newest CLI build for orgs using SSO-enforced tokens. Support can answer like a technical partner, not a script.</p>
+        <p>For leaders in DevTools, the operational payoff is cumulative. Better first-pass diagnosis reduces customer anxiety, limits duplicate internal work, and helps engineering focus on the cases that truly need product changes. Over time, that means lower MTTR, cleaner escalation patterns, and a support team that can handle more technical complexity without adding headcount linearly.</p>
+        <p>It also changes cross-functional trust. Product and engineering teams get escalations with evidence already attached. Support managers get clearer visibility into recurring failure modes. Customers get answers that acknowledge the specifics of their environment. That is the kind of support experience that feels materially different in complex B2B markets.</p>
+      </section>
+    
+      <section>
+        <h2>FAQ</h2>
+        <div class="panel alt"><div class="faq-item"><h3>Why is Altor a fit for DevTools support?</h3><p>Because developer tooling tickets are highly technical and require evidence from code, runtime systems, and account context.</p></div><div class="faq-item"><h3>Can Altor help with SDK and CLI issues?</h3><p>Yes. Release history, regression signals, and tenant-level behavior make it especially useful for SDK and CLI investigations.</p></div><div class="faq-item"><h3>Does this replace engineering support?</h3><p>No. It helps support do more of the initial diagnosis before engineering gets involved.</p></div></div>
+      </section>
+      <section>
+        <h2>Related pages</h2>
+        <div class="related"><a href="/use-cases/"><strong>All use cases</strong><br><span>Browse industry-specific support investigation pages.</span></a><a href="/use-cases/ecommerce-support.html"><strong>E-commerce Support Investigation — Resolve Order and Integration Issues Faster</strong><br><span>E-commerce support problems move fast because they affect conversion, revenue, and merchant trust. Altor helps teams investigate the systems behind order, payment, and integration issues before they spiral.</span></a><a href="/integrations/datadog.html"><strong>Datadog + Altor — Pull Metrics Into Support Investigations</strong><br><span>Datadog tells you what the system is doing. Altor makes that observability useful to support by pulling the right metrics, alerts, and traces into the ticket investigation automatically.</span></a><a href="/compare/front-ai.html"><strong>Altor vs Front AI — Investigation vs Team Inbox Copilots</strong><br><span>Front AI improves collaboration and drafting inside shared inboxes. Altor improves the quality of technical support decisions by investigating the systems behind each ticket.</span></a></div>
+      </section>
+      <section class="cta">
+        <h2>See how Altor investigates differently — Book a demo</h2>
+        <p>Bring one real escalation. We will map the systems behind it, show where investigation time is being lost today, and outline what an under-two-minute diagnosis flow looks like in your stack.</p>
+        <a class="btn" href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo</a>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>Altor investigates support tickets across logs, bugs, billing, and product systems in under 2 minutes.</span>
+        <span><a href="/">Home</a> · <a href="/compare/">Compare</a> · <a href="/integrations/">Integrations</a> · <a href="/use-cases/">Use cases</a></span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

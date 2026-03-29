@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <title>Jira Integration | Auto-Link Support to Issues</title>
+  <meta name="description" content="Connect Jira to Altor to match support tickets with engineering issues, owners, and known regressions automatically.">
+  <link rel="canonical" href="https://altorlab.com/integrations/jira.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://altorlab.com/integrations/jira.html">
+  <meta property="og:title" content="Jira Integration | Auto-Link Support to Issues">
+  <meta property="og:description" content="Connect Jira to Altor to match support tickets with engineering issues, owners, and known regressions automatically.">
+  <meta property="og:image" content="https://altorlab.com/og-image.png">
+  <meta property="og:site_name" content="Altor">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jira Integration | Auto-Link Support to Issues">
+  <meta name="twitter:description" content="Connect Jira to Altor to match support tickets with engineering issues, owners, and known regressions automatically.">
+  <meta name="twitter:image" content="https://altorlab.com/og-image.png">
+  <meta name="theme-color" content="#04110f">
+  <script defer data-domain="altorlab.com" src="https://plausible.io/js/script.js"></script>
+  <style>
+    :root {--bg:#04110f;--bg-soft:#0a1a17;--panel:#0f2420;--panel-2:#13302a;--text:#e6f5f1;--muted:#9fb8b2;--accent:#29d3aa;--accent-soft:rgba(41,211,170,.14);--border:rgba(170,233,216,.18);--shadow:0 18px 60px rgba(0,0,0,.18);}
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:radial-gradient(circle at 15% 0%,#0f2f28 0%,var(--bg) 48%); color:var(--text); line-height:1.7; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .shell { min-height:100vh; display:flex; flex-direction:column; }
+    .nav { position:sticky; top:0; z-index:20; background:rgba(4,17,15,.92); border-bottom:1px solid var(--border); backdrop-filter:blur(8px); }
+    .nav-inner,.hero-inner,.article,.footer-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.9rem 0; }
+    .logo { font-weight:700; letter-spacing:.02em; color:var(--text); }
+    .nav-links { display:flex; flex-wrap:wrap; gap:1rem; font-size:.95rem; }
+    .nav-cta { display:inline-flex; align-items:center; gap:.5rem; background:var(--text); color:#052019; padding:.62rem 1rem; border-radius:999px; font-weight:700; box-shadow:var(--shadow); }
+    .hero { border-bottom:1px solid var(--border); background:linear-gradient(180deg,rgba(13,44,37,.52) 0%,rgba(4,17,15,0) 100%); }
+    .hero-inner { padding:2.8rem 0 2rem; }
+    .breadcrumb { color:var(--muted); font-size:.9rem; margin-bottom:1rem; }
+    .eyebrow { color:var(--muted); text-transform:uppercase; letter-spacing:.1em; font-size:.74rem; }
+    h1 { margin:.6rem 0 1rem; line-height:1.1; font-size:clamp(2rem,5vw,3.3rem); max-width:14ch; }
+    .lede { font-size:1.08rem; color:#d8ebe6; max-width:64ch; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:.85rem; margin-top:1.35rem; }
+    .hero-card { background:var(--accent-soft); border:1px solid var(--border); border-radius:14px; padding:.95rem 1rem; color:#d4e9e4; }
+    .article { padding:2.4rem 0 4rem; }
+    .article h2 { margin-top:2.4rem; margin-bottom:.6rem; line-height:1.2; font-size:1.75rem; }
+    .article h3 { margin-top:1.3rem; margin-bottom:.35rem; font-size:1.16rem; }
+    .article p,.article li { color:#d4e9e4; }
+    .article ul,.article ol { padding-left:1.2rem; }
+    .panel { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:1.15rem; margin:1.2rem 0; box-shadow:var(--shadow); }
+    .panel.alt { background:linear-gradient(180deg,rgba(19,48,42,.92),rgba(12,32,28,.96)); }
+    .kicker { color:#c5ece2; font-weight:700; text-transform:uppercase; letter-spacing:.08em; font-size:.78rem; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--border); border-radius:16px; background:rgba(9,23,20,.7); box-shadow:var(--shadow); }
+    table { width:100%; border-collapse:collapse; min-width:720px; }
+    th,td { padding:.9rem; text-align:left; vertical-align:top; border-bottom:1px solid var(--border); }
+    th { font-size:.84rem; color:#c5ece2; text-transform:uppercase; letter-spacing:.06em; }
+    tr:last-child td { border-bottom:none; }
+    .grid-2,.grid-3,.related { display:grid; gap:1rem; }
+    .grid-2 { grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+    .grid-3 { grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+    .card,.related a { display:block; background:rgba(14,38,32,.48); border:1px solid var(--border); border-radius:14px; padding:1rem; color:var(--text); }
+    .steps { counter-reset:step; display:grid; gap:.9rem; }
+    .step { position:relative; padding-left:3rem; }
+    .step:before { counter-increment:step; content:counter(step); position:absolute; left:0; top:.05rem; width:2rem; height:2rem; border-radius:999px; display:grid; place-items:center; background:var(--accent-soft); border:1px solid var(--border); font-weight:700; color:#d7fff3; }
+    .faq-item + .faq-item { margin-top:1rem; }
+    .cta { margin-top:2.2rem; padding:1.3rem; border-radius:18px; border:1px solid var(--border); background:linear-gradient(180deg,rgba(41,211,170,.16) 0%,rgba(41,211,170,.05) 100%); }
+    .btn { display:inline-block; margin-top:.85rem; background:var(--accent); color:#052019; padding:.7rem 1.05rem; border-radius:10px; font-weight:800; }
+    .footer { margin-top:auto; border-top:1px solid var(--border); }
+    .footer-inner { padding:1.2rem 0 1.8rem; display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; color:var(--muted); font-size:.92rem; }
+    @media (max-width:760px) { .nav-inner { align-items:flex-start; flex-direction:column; } .nav-cta { display:none; } h1 { max-width:none; } }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is this different from manually searching Jira?","acceptedAnswer":{"@type":"Answer","text":"Altor searches Jira as part of a broader investigation, then validates likely matches against live system data and ticket context."}},{"@type":"Question","name":"Can this help reduce duplicate bug reports?","acceptedAnswer":{"@type":"Answer","text":"Yes. Support can identify known issues faster and attach better evidence when a new issue truly needs to be created."}},{"@type":"Question","name":"Is Jira useful only for engineering-heavy teams?","acceptedAnswer":{"@type":"Answer","text":"It is most valuable where support and engineering collaborate frequently, especially on product or integration issues."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Integrations","item":"https://altorlab.com/integrations/"},{"@type":"ListItem","position":3,"name":"Jira","item":"https://altorlab.com/integrations/jira.html"}]}</script>
+</head>
+<body>
+  <div class="shell">
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="logo" href="/">Altor</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/compare/">Compare</a>
+          <a href="/integrations/">Integrations</a>
+          <a href="/use-cases/">Use cases</a>
+          <a href="/blog/">Blog</a>
+        </nav>
+        <a class="nav-cta" href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo</a>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="breadcrumb"><a href="/">Home</a> / <a href="/integrations/">Integrations</a> / Jira</div>
+        <div class="eyebrow">Integration page</div>
+        <h1>Jira + Altor — Auto-Link Support Tickets to Engineering Issues</h1>
+        <p class="lede">Jira often contains the history support needs but cannot reach fast enough. Altor brings issue tracking context into the investigation so agents know whether a ticket maps to known engineering work.</p>
+        <div class="hero-actions"><div class="hero-card"><strong>System:</strong> Jira</div><div class="hero-card"><strong>Primary value:</strong> Auto-Link Support Tickets to Engineering Issues</div><div class="hero-card"><strong>Typical outcome:</strong> Faster investigation and cleaner escalations</div></div>
+      </div>
+    </section>
+    <main class="article">
+      
+      <section class="panel alt">
+        <div class="kicker">How the integration works</div>
+        <div class="steps"><div class="step"><h3>Step 1</h3><p>Altor analyzes the support ticket for symptom, product surface, customer impact, and timing.</p></div><div class="step"><h3>Step 2</h3><p>It searches Jira for matching bugs, related epics, incidents, labels, and recently updated issues tied to the same area.</p></div><div class="step"><h3>Step 3</h3><p>It combines Jira results with live system context from tools like Datadog, GitHub, or Stripe to verify whether the issue is likely known or novel.</p></div><div class="step"><h3>Step 4</h3><p>It returns the best match, issue owner, status, and escalation guidance directly in the support workflow.</p></div></div>
+      </section>
+      <section>
+        <h2>What data Altor pulls from Jira</h2>
+        <div class="panel"><ul><li>Known bugs and owner teams</li><li>Issue status, labels, and priority</li><li>Related incidents and epics</li><li>Workarounds or resolution notes already captured by engineering</li></ul></div>
+        <p>The value of Jira in support is not just knowing that an issue exists. It is knowing whether the issue actually explains the customer symptom right now. Altor makes that distinction by combining issue tracker context with runtime evidence. That helps support avoid both false reassurance and unnecessary engineering loops, which is exactly where technical ticket resolution slows down.</p>
+      </section>
+      <section>
+        <h2>Use case example</h2>
+        <div class="card"><p>A customer reports that invoice exports fail for large accounts. Altor finds a Jira issue already filed by the data platform team, correlates it with a GitHub release, and shows support that a workaround exists. The agent can respond immediately and avoid another duplicate escalation.</p></div>
+        <p>That is the key advantage of using Altor as the support investigation layer. Instead of asking an agent to context-switch into Jira, interpret the data manually, and then explain it back to the customer, the platform brings the relevant evidence into one operating flow. Support gets faster, engineering gets cleaner escalations, and customers get more specific answers while the ticket is still fresh.</p>
+        <p>For B2B support leaders, the practical value is not just that Jira is connected. It is that the connection becomes useful at the moment a ticket arrives. The integration turns raw system context into a repeatable investigation pattern. That is what makes the difference between a nice connector and an actual support operations advantage.</p>
+      </section>
+    
+      <section>
+        <h2>FAQ</h2>
+        <div class="panel alt"><div class="faq-item"><h3>How is this different from manually searching Jira?</h3><p>Altor searches Jira as part of a broader investigation, then validates likely matches against live system data and ticket context.</p></div><div class="faq-item"><h3>Can this help reduce duplicate bug reports?</h3><p>Yes. Support can identify known issues faster and attach better evidence when a new issue truly needs to be created.</p></div><div class="faq-item"><h3>Is Jira useful only for engineering-heavy teams?</h3><p>It is most valuable where support and engineering collaborate frequently, especially on product or integration issues.</p></div></div>
+      </section>
+      <section>
+        <h2>Related pages</h2>
+        <div class="related"><a href="/integrations/"><strong>All integrations</strong><br><span>Explore the tools Altor can investigate across.</span></a><a href="/integrations/clickhouse.html"><strong>ClickHouse + Altor — Auto-Diagnose Database Tickets</strong><br><span>When a customer reports missing events, slow queries, or inconsistent analytics, Altor can query ClickHouse directly, correlate the issue with account context, and return a support-ready diagnosis.</span></a><a href="/use-cases/marketplace-support.html"><strong>Marketplace Support Investigation — Investigate Two-Sided Issues Faster</strong><br><span>Marketplace support is hard because every issue has at least two perspectives. Altor helps teams investigate buyer, seller, payment, and platform signals together so support can identify where the breakdown actually happened.</span></a><a href="/compare/kustomer-ai.html"><strong>Altor vs Kustomer AI — Investigation vs CRM Automation</strong><br><span>Kustomer AI helps automate support within a CRM-centric platform. Altor helps support and engineering teams investigate what changed across the systems behind the ticket.</span></a></div>
+      </section>
+      <section class="cta">
+        <h2>See how Altor investigates differently — Book a demo</h2>
+        <p>Bring one real escalation. We will map the systems behind it, show where investigation time is being lost today, and outline what an under-two-minute diagnosis flow looks like in your stack.</p>
+        <a class="btn" href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo</a>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>Altor investigates support tickets across logs, bugs, billing, and product systems in under 2 minutes.</span>
+        <span><a href="/">Home</a> · <a href="/compare/">Compare</a> · <a href="/integrations/">Integrations</a> · <a href="/use-cases/">Use cases</a></span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
