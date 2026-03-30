@@ -2,16 +2,18 @@ export const content = {
   companyName: 'Altor',
 
   hero: {
+    marketLabel: 'Built for US B2B SaaS teams',
     headline: ['Your tickets need investigations,', 'not doc lookups.'],
-    subhead: 'Altor connects to ClickHouse, Linear, Stripe, and GitHub to diagnose support tickets in under 2 minutes — pulling the same data your engineers check manually.',
-    proof: 'Live at Portkey — 200+ tickets diagnosed across 6 integrated systems.',
-    primaryCTA: { text: 'Book a demo', url: 'https://calendly.com/founders-altorlab/30min' },
+    subhead: 'Altor is the investigation layer for US B2B technical support teams. It connects to ClickHouse, Linear, Stripe, and GitHub to diagnose support tickets in under 2 minutes — pulling the same data your engineers check manually.',
+    proof: 'Trusted by Portkey and other US SaaS companies — 200+ tickets diagnosed for US teams.',
+    supportHours: 'EST & PST support hours',
+    primaryCTA: { text: 'Book a Demo (US Hours)', url: 'https://calendly.com/founders-altorlab/30min' },
     secondaryCTA: { text: 'See how it works', anchor: '#how-it-works' },
     tryProduct: { text: 'Request a walkthrough', url: 'https://calendly.com/founders-altorlab/30min' },
   },
 
   metrics: [
-    { value: 2, suffix: 'min', label: 'median diagnosis time', note: 'down from 20–45 min manually, across 200+ tickets at Portkey' },
+    { value: 2, suffix: 'min', label: 'median diagnosis time', note: 'down from 20–45 min manually, across 200+ tickets for a US support team at Portkey' },
     { value: 6, suffix: '+', label: 'systems queried per investigation', note: 'ClickHouse, Linear, Stripe, GitHub, docs, StatusPage' },
     { value: 80, suffix: '%', label: 'investigation logic reusable across ticket types' },
   ],
@@ -90,7 +92,7 @@ export const content = {
       { name: 'Docs / Mintlify', role: 'Documentation, guides, known workarounds' },
       { name: 'StatusPage', role: 'Upstream incidents, provider outage status' },
     ],
-    footnote: 'Also works with Pylon, Plain, Zendesk, and Intercom. Custom integrations available for any system with an API.',
+    footnote: 'Also works with your US stack: Salesforce, Zendesk, HubSpot, Stripe, PagerDuty, Pylon, Plain, and Intercom. Custom integrations available for any system with an API.',
   },
 
   trust: {
@@ -129,13 +131,13 @@ export const content = {
     { q: 'How is this different from our support platform?', a: 'Pylon, Plain, Zendesk — they route and manage tickets. Altor investigates them. We plug into your existing support tool as the investigation layer. You keep your workflows, we add the diagnosis.' },
     { q: 'Will it take actions without asking?', a: 'Not by default. Altor starts as a read-only investigator — it surfaces a diagnosis for your team to review. You control which action types graduate to auto-approval. Destructive actions are never automated.' },
     { q: 'What if our stack isn\'t listed?', a: 'If an API exists for your system, we can integrate it. The architecture composes tools — it doesn\'t hardcode connectors. We\'ve yet to encounter a B2B stack we can\'t connect to.' },
-    { q: 'What does pricing look like?', a: 'Usage-based — you pay per investigation, not per seat. No minimum commitment. We\'ll scope pricing during the demo based on your ticket volume and systems.' },
+    { q: 'What does pricing look like?', a: 'Usage-based — you pay per investigation, not per seat. Pricing is quoted in USD ($) with no minimum commitment. We\'ll scope pricing during the demo based on your ticket volume and systems.' },
   ],
 
   cta: {
     title: 'See Altor investigate a real ticket',
-    body: 'We\'ll connect to your systems and run a live investigation on a ticket from your queue. Your data, your ticket, diagnosed in real time.',
-    buttonText: 'Book a demo',
+    body: 'We\'ll connect to your systems and run a live investigation on a ticket from your queue. Your data, your ticket, diagnosed in real time during EST or PST support hours.',
+    buttonText: 'Schedule a Call — EST/PST',
     buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     secondaryText: 'Request a walkthrough',
     secondaryUrl: 'https://calendly.com/founders-altorlab/30min',
@@ -143,8 +145,9 @@ export const content = {
   },
 
   footer: {
-    copyright: `© ${new Date().getFullYear()} Altor`,
+    copyright: '© 2026 AltorLab Inc. United States',
     email: 'anshul@altorlab.com',
     linkedIn: 'https://www.linkedin.com/in/ansh27/',
+    serving: 'Serving businesses across the United States',
   },
 }

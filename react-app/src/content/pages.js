@@ -1,14 +1,14 @@
 export const pages = {
   compareDocChatbots: {
     slug: '/compare/altor-vs-doc-chatbots',
-    title: 'Altor vs. Doc Chatbots — Why FAQ Lookup Fails B2B Support',
-    description: 'Doc chatbots answer "how does this work?" Altor answers "why is this broken for this customer right now?" by investigating across 6+ live systems in under 2 minutes.',
+    title: 'Altor vs. Doc Chatbots for US B2B Teams — Why FAQ Lookup Fails B2B Support',
+    description: 'Doc chatbots answer "how does this work?" Altor answers "why is this broken for this customer right now?" for US B2B support teams by investigating across 6+ live systems in under 2 minutes.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
     hero: {
-      headline: 'Doc chatbots answer questions. Your tickets need investigations.',
-      subhead: 'When a customer reports "my API calls are returning 429s," a doc chatbot searches your knowledge base. Altor queries their actual API logs in ClickHouse, checks Linear for known bugs, and verifies their billing in Stripe — delivering a root-cause diagnosis in 2 minutes instead of 45.',
+      headline: 'Doc chatbots answer questions. For US B2B teams, tickets still need investigations.',
+      subhead: 'When a customer reports "my API calls are returning 429s," a doc chatbot searches your knowledge base. Altor queries their actual API logs in ClickHouse, checks Linear for known bugs, and verifies their billing in Stripe — delivering a root-cause diagnosis in 2 minutes instead of 45 for US support teams working EST and PST coverage.',
     },
 
     sections: [
@@ -42,6 +42,16 @@ export const pages = {
             dimension: 'Ticket coverage',
             chatbot: '~20% of B2B support tickets (FAQ-answerable)',
             altor: 'The other 80% — tickets requiring live data from customer systems',
+          },
+          {
+            dimension: 'Pricing for US teams',
+            chatbot: 'Usually bundled into seat-based or platform pricing in USD',
+            altor: 'Usage-based pricing in USD ($) per investigation',
+          },
+          {
+            dimension: 'US team fit',
+            chatbot: 'Useful for US teams prioritizing FAQ deflection',
+            altor: 'Popular with US support teams handling technical escalations',
           },
         ],
       },
@@ -87,22 +97,22 @@ export const pages = {
 
     cta: {
       title: 'See the difference on a real ticket',
-      body: 'We\'ll connect to your systems and investigate a ticket from your queue — live. Your data, your ticket, diagnosed in real time.',
-      buttonText: 'Book a demo',
+      body: 'We\'ll connect to your systems and investigate a ticket from your queue — live. Your data, your ticket, diagnosed in real time during EST or PST hours.',
+      buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
   },
 
   compareSupportPlatformAI: {
     slug: '/compare/altor-vs-support-platform-ai',
-    title: 'Altor vs. Support Platform AI — Investigation, Not Routing',
-    description: 'Zendesk AI routes tickets. Intercom Fin answers from docs. Altor investigates across ClickHouse, Linear, Stripe, and GitHub to diagnose what\'s actually broken — in 2 minutes.',
+    title: 'Altor vs. Support Platform AI for US B2B Teams — Investigation, Not Routing',
+    description: 'Zendesk AI routes tickets. Intercom Fin answers from docs. Altor investigates across ClickHouse, Linear, Stripe, and GitHub to diagnose what\'s actually broken for US B2B teams — in 2 minutes.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
     hero: {
-      headline: 'Support platforms route tickets. Altor investigates them.',
-      subhead: 'Zendesk AI triages and routes. Intercom Fin answers from your help center. Neither queries your customer\'s actual API logs, checks your bug tracker, or verifies their billing status. Altor does — across 6+ systems in under 2 minutes.',
+      headline: 'Support platforms route tickets. For US B2B teams, Altor investigates them.',
+      subhead: 'Zendesk AI triages and routes. Intercom Fin answers from your help center. Neither queries your customer\'s actual API logs, checks your bug tracker, or verifies their billing status. Altor does — across 6+ systems in under 2 minutes for US support teams.',
     },
 
     sections: [
@@ -136,6 +146,16 @@ export const pages = {
             dimension: 'Integration model',
             chatbot: 'Replaces or extends your support workflow',
             altor: 'Plugs into your existing support platform as an investigation layer',
+          },
+          {
+            dimension: 'Pricing for US teams',
+            chatbot: 'Platform or seat-based pricing in USD for US deployments',
+            altor: 'Usage-based pricing in USD ($) per investigation',
+          },
+          {
+            dimension: 'US team fit',
+            chatbot: 'Common for US teams standardizing routing and workflows',
+            altor: 'Popular with US support teams that need faster technical diagnosis',
           },
         ],
       },
@@ -181,8 +201,8 @@ export const pages = {
 
     cta: {
       title: 'See Altor investigate a real ticket from your queue',
-      body: 'We\'ll connect to your systems and run a live investigation. Your support platform stays. Altor adds the diagnosis.',
-      buttonText: 'Book a demo',
+      body: 'We\'ll connect to your systems and run a live investigation. Your support platform stays. Altor adds the diagnosis during EST or PST hours.',
+      buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
   },
@@ -378,14 +398,14 @@ export const pages = {
 
   compareCopilotSupport: {
     slug: '/compare/altor-vs-copilot-for-support',
-    title: 'Altor vs. AI Copilots for Support — Investigation vs. Drafting',
-    description: 'AI copilots help agents write faster replies. Altor investigates the actual problem — querying ClickHouse, Linear, Stripe, and GitHub to produce a root-cause diagnosis before the reply gets written.',
+    title: 'Altor vs. AI Copilots for Support for US B2B Teams — Investigation vs. Drafting',
+    description: 'AI copilots help agents write faster replies. Altor investigates the actual problem for US B2B teams — querying ClickHouse, Linear, Stripe, and GitHub to produce a root-cause diagnosis before the reply gets written.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
     hero: {
-      headline: 'AI copilots write faster replies. They don\'t investigate the problem.',
-      subhead: 'Support copilots draft responses based on ticket history and knowledge base articles. But for B2B technical tickets, the bottleneck isn\'t writing the reply — it\'s the 20–45 minutes of investigation that happens before you know what to write. Altor automates the investigation itself.',
+      headline: 'AI copilots write faster replies. For US B2B teams, they still do not investigate the problem.',
+      subhead: 'Support copilots draft responses based on ticket history and knowledge base articles. But for B2B technical tickets, the bottleneck isn\'t writing the reply — it\'s the 20–45 minutes of investigation that happens before you know what to write. Altor automates the investigation itself for US support teams.',
     },
 
     sections: [
@@ -419,6 +439,16 @@ export const pages = {
             dimension: 'When it helps',
             chatbot: 'Agent already knows the answer, needs to write it faster',
             altor: 'Nobody knows the answer yet — someone needs to investigate across systems',
+          },
+          {
+            dimension: 'Pricing for US teams',
+            chatbot: 'Seat-based copilot pricing in USD for most US teams',
+            altor: 'Usage-based pricing in USD ($) per investigation',
+          },
+          {
+            dimension: 'US team fit',
+            chatbot: 'Useful for US teams improving reply speed',
+            altor: 'Popular with US support teams reducing investigation time',
           },
         ],
       },
@@ -464,8 +494,8 @@ export const pages = {
 
     cta: {
       title: 'See the investigation your copilot can\'t do',
-      body: 'We\'ll investigate a real ticket from your queue — across ClickHouse, Linear, Stripe, and GitHub — and show you the diagnosis in 2 minutes.',
-      buttonText: 'Book a demo',
+      body: 'We\'ll investigate a real ticket from your queue — across ClickHouse, Linear, Stripe, and GitHub — and show you the diagnosis in 2 minutes during EST or PST hours.',
+      buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
   },
@@ -643,14 +673,14 @@ export const pages = {
 
   forAIInfra: {
     slug: '/for/ai-infrastructure-companies',
-    title: 'AI Infrastructure Support: Diagnose Gateway Tickets in 2 Minutes',
-    description: 'If your customers open tickets about routing failures, fallback chains, or token mismatches, generic support AI will not cut it. See how AI infrastructure teams investigate the issue before it escalates.',
+    title: 'AI Infrastructure Support in the United States: Diagnose Gateway Tickets in 2 Minutes',
+    description: 'If your US customers open tickets about routing failures, fallback chains, or token mismatches, generic support AI will not cut it. See how AI infrastructure teams investigate the issue before it escalates.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
     hero: {
-      headline: 'Your customers don\'t file FAQ tickets. They file investigations.',
-      subhead: 'AI infrastructure tickets are about API routing failures, model fallback chains breaking, gateway latency spikes, and token usage discrepancies. These aren\'t questions a knowledge base can answer — they require pulling live data from your customer\'s actual API logs, configs, and billing.',
+      headline: 'US AI infrastructure customers do not file FAQ tickets. They file investigations.',
+      subhead: 'AI infrastructure tickets are about API routing failures, model fallback chains breaking, gateway latency spikes, and token usage discrepancies. These aren\'t questions a knowledge base can answer — they require pulling live data from your customer\'s actual API logs, configs, and billing across the United States.',
     },
 
     sections: [
@@ -673,6 +703,7 @@ export const pages = {
         title: 'What Altor investigates for AI infra teams',
         paragraphs: [
           'For AI infrastructure companies, Altor connects to the specific systems where gateway and routing data lives:',
+          'Works with your US stack: Salesforce, Zendesk, HubSpot, Stripe, PagerDuty, ClickHouse, GitHub, and Linear.',
         ],
         bullets: [
           'ClickHouse / your analytics DB — request logs per model provider, routing decisions, fallback triggers, latency per hop',
@@ -703,6 +734,7 @@ export const pages = {
         paragraphs: [
           'AI infrastructure companies have three traits that make investigation automation especially effective: highly technical tickets that always require multi-system data, well-structured request logs in systems like ClickHouse that Altor can query precisely, and engineering-heavy support teams that value root causes over templates.',
           'Portkey was Altor\'s first deployment. The patterns built there — provider routing failures, latency spike diagnosis, token billing cross-referencing — transfer directly to other AI infrastructure companies.',
+          'A Series B SaaS company in Austin reduced MTTR by 67% after standardizing this investigation workflow for US support coverage.',
         ],
       },
     ],
@@ -715,22 +747,22 @@ export const pages = {
 
     cta: {
       title: 'Your stack looks like Portkey\'s. See what Altor finds.',
-      body: 'We\'ll connect to your API logs, bug tracker, and billing system and investigate a real ticket from your queue.',
-      buttonText: 'Book a demo',
+      body: 'We\'ll connect to your API logs, bug tracker, and billing system and investigate a real ticket from your queue during EST or PST hours.',
+      buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
   },
 
   forAPIDevTools: {
     slug: '/for/api-first-developer-tools',
-    title: 'For API-First Developer Tools: Resolve Latency and Webhook Tickets Faster',
-    description: 'Developer customers want root cause, not canned replies. See how API-first teams investigate latency spikes, webhook failures, and SDK issues before they turn into long engineering loops.',
+    title: 'For US API-First Developer Tools: Resolve Latency and Webhook Tickets Faster',
+    description: 'US developer customers want root cause, not canned replies. See how API-first teams investigate latency spikes, webhook failures, and SDK issues before they turn into long engineering loops.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
     hero: {
-      headline: 'Your developers expect root causes, not "we\'re looking into it."',
-      subhead: 'When your API customers report latency spikes, webhook failures, or SDK errors, they expect a real diagnosis — not a link to your docs. Altor queries their actual API logs, checks your bug tracker, and verifies their billing to deliver root causes in 2 minutes.',
+      headline: 'US developers expect root causes, not "we\'re looking into it."',
+      subhead: 'When your API customers report latency spikes, webhook failures, or SDK errors, they expect a real diagnosis — not a link to your docs. Altor queries their actual API logs, checks your bug tracker, and verifies their billing to deliver root causes in 2 minutes for US support teams.',
     },
 
     sections: [
@@ -754,6 +786,7 @@ export const pages = {
         title: 'What Altor investigates for API-first teams',
         paragraphs: [
           'API-first dev tools have rich, structured data that Altor can query precisely:',
+          'Works with your US stack: Salesforce, Zendesk, HubSpot, Stripe, PagerDuty, ClickHouse, GitHub, and Linear.',
         ],
         bullets: [
           'ClickHouse / Postgres — request logs, latency per endpoint, error rates by SDK version, delivery metrics',
@@ -785,6 +818,7 @@ export const pages = {
         paragraphs: [
           'Three traits make investigation automation critical for API-first companies: developer customers who expect technical depth and will churn without it, high ticket volume driven by integration complexity across many SDK versions and use cases, and well-structured API log data that Altor can query precisely.',
           'Your support team is already technical. They know how to investigate. The problem is time — 20–45 minutes per ticket, checking the same systems in the same order. Altor runs that same workflow in 2 minutes, so your engineers focus on the tickets that actually need human judgment.',
+          'A Series B SaaS company in Austin reduced MTTR by 67% after giving its US support team one investigation workflow across API logs, billing, and bug history.',
         ],
       },
     ],
@@ -797,8 +831,8 @@ export const pages = {
 
     cta: {
       title: 'See Altor investigate a real ticket from your queue',
-      body: 'We\'ll connect to your API logs, bug tracker, and billing system. Your data, your ticket, diagnosed in 2 minutes.',
-      buttonText: 'Book a demo',
+      body: 'We\'ll connect to your API logs, bug tracker, and billing system. Your data, your ticket, diagnosed in 2 minutes during EST or PST hours.',
+      buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
   },

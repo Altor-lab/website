@@ -1,31 +1,107 @@
 # Altor
 
-> Altor is the investigation layer for B2B technical support. It connects to ClickHouse, Linear, Stripe, and GitHub to auto-diagnose support tickets in 2 minutes, replacing 20-45 minutes of manual tab-switching. Based in the United States.
+> Altor is the investigation engine for B2B technical support. It connects to a company's existing systems — ClickHouse, Linear, Stripe, GitHub, and more — to diagnose technical support tickets in minutes instead of hours.
 
-## Products
+## The Problem
 
-- [Support Investigation](https://altorlab.com/#how-it-works): Automated root-cause diagnosis for B2B support tickets
-- [Integrations](https://altorlab.com/#the-stack): ClickHouse, Linear, Stripe, GitHub, PagerDuty
+B2B technical support tickets are investigations, not FAQ lookups. When a customer reports "my API calls are failing," a support engineer spends 20–45 minutes on a manual, repetitive workflow: pulling API logs from ClickHouse, checking Linear for known bugs, verifying billing in Stripe, reviewing recent deploys on GitHub, and cross-referencing documentation. This manual investigation costs companies $80–200K per year per support engineer.
 
-## Comparisons
+Existing AI support tools — doc chatbots — answer questions from a knowledge base. They handle roughly 20% of B2B support tickets. The other 80% require pulling live customer data across multiple systems. No existing tool addresses this gap.
 
-- [vs Zendesk AI](https://altorlab.com/compare/zendesk-ai.html): Investigation vs deflection approach
-- [vs Intercom AI](https://altorlab.com/compare/intercom-ai.html): B2B technical support comparison
-- [All Comparisons](https://altorlab.com/compare/): 25 competitor comparisons
+## What Altor Does
 
-## Industries
+Altor is an AI investigation layer that sits between your support platform and your internal systems. When a ticket arrives, Altor runs a multi-system investigation automatically:
 
-- [For AI Infrastructure](https://altorlab.com/for/ai-infrastructure-companies/): Support automation for AI companies
-- [For API Dev Tools](https://altorlab.com/for/api-first-developer-tools/): Support for developer-focused companies
-- [All Industries](https://altorlab.com/for/): 15 industry use-cases
+1. **Ingests the ticket** from Pylon, Plain, Zendesk, Intercom, or Slack.
+2. **Queries customer data** in ClickHouse for API logs, error rates, latency patterns, and recent activity.
+3. **Checks known issues** by searching Linear for matching bugs and StatusPage for ongoing incidents.
+4. **Verifies billing and configuration** in Stripe for plan status and payment failures.
+5. **Synthesizes a diagnosis** combining findings with evidence, confidence levels, and recommended next steps.
 
-## Blog
+The output is a structured diagnosis delivered directly into the support team's existing workflow. Median diagnosis time: 2 minutes across 200+ tickets at Portkey, compared to 20–45 minutes manually.
 
-- [Blog Index](https://altorlab.com/blog/): Technical articles on support engineering
-- [Reduce Ticket Resolution Time](https://altorlab.com/blog/reduce-support-ticket-resolution-time.html)
-- [AI Copilot for Support](https://altorlab.com/blog/ai-support-agent-vs-chatbot.html)
+## How Altor Differs From Doc Chatbots
+
+Doc chatbots answer "how does this feature work?" by searching a knowledge base. Altor answers "why is this broken for this specific customer right now?" by querying live data across 6+ integrated systems. Doc chatbots handle FAQ-style tickets. Altor handles the 80% of B2B support tickets that require technical investigation with real customer data.
+
+## Architecture
+
+Altor is an orchestration layer, not another connector. It composes existing MCP servers and APIs into investigation playbooks:
+
+- **ClickHouse** — API logs, error patterns, latency metrics, customer activity
+- **Linear** — Known bugs, backlog items, issue status and priority
+- **Stripe** — Billing status, subscriptions, payment failures
+- **GitHub** — Recent deploys, open PRs, code changes
+- **Docs / Mintlify** — Documentation, guides, known workarounds
+- **StatusPage / PagerDuty** — Upstream incidents, provider outages
+
+Altor works with existing support platforms including Pylon, Plain, Zendesk, and Intercom. If a system has an API, Altor can connect to it.
+
+## Trust Model
+
+Altor follows an "assist first, automate gradually" trust model:
+
+- **Read** — Auto-approved. Altor pulls logs, checks bugs, and verifies billing without human intervention.
+- **Write** — Requires human approval. Actions like toggling feature flags or updating configurations need explicit sign-off.
+- **Delete** — Never automated. Destructive actions always stay with the human team. No exceptions.
+
+All connections use encrypted credentials (in transit and at rest). Altor uses read-only credentials by default. SOC 2 Type II certification is in progress.
+
+## Key Metrics
+
+- **2-minute median diagnosis time** across 200+ tickets at Portkey (down from 20–45 minutes manually)
+- **6+ systems queried per investigation** (ClickHouse, Linear, Stripe, GitHub, docs, StatusPage)
+- **80% of investigation logic is reusable** across different ticket types
+- **80% of B2B support tickets** require live data investigation, not doc lookups
+
+## Who Altor Is For
+
+Altor is built for B2B SaaS companies where every support ticket is a debugging session:
+
+- **AI infrastructure companies** (e.g., Portkey, Helicone, Langfuse) — tickets about API routing, model fallbacks, and gateway configurations
+- **API-first developer tools** (e.g., Supabase, Resend, Neon, Clerk) — tickets about latency spikes, webhook failures, and SDK errors
+- **Data and analytics platforms** — tickets about query performance, pipeline failures, and dashboard accuracy
+- **B2B SaaS at scale** — any company paying $80–200K per support engineer to manually investigate tickets
+
+## Onboarding
+
+Altor deploys in weeks, not months. The process is a forward-deployed engagement:
+
+- **Week 1:** Stack audit — mapping systems, ticket types, and current investigation workflows
+- **Week 2:** Connections live — read-only integrations connected, first investigations running on real tickets
+- **Weeks 3–4:** Playbooks tuned — investigation logic refined against actual ticket patterns, team trained
+
+## Pricing
+
+Usage-based pricing — per investigation, not per seat. No minimum commitment. Pricing is scoped during the demo based on ticket volume and connected systems.
 
 ## Contact
 
-- Website: https://altorlab.com
-- Location: United States
+- **Website:** https://altorlab.com
+- **Book a demo:** https://calendly.com/founders-altorlab/30min
+- **Email:** anshul@altorlab.com
+
+## Pages
+
+- **Homepage:** https://altorlab.com/
+- **Portkey Case Study:** https://altorlab.com/customers/portkey — How Portkey cut support investigation time from 45 minutes to 2 across 200+ tickets.
+- **Altor vs. Doc Chatbots:** https://altorlab.com/compare/altor-vs-doc-chatbots — Why FAQ lookup fails B2B support. Side-by-side comparison of doc chatbot vs. investigation AI approaches.
+- **Altor vs. Support Platform AI:** https://altorlab.com/compare/altor-vs-support-platform-ai — How Altor complements Zendesk, Intercom, and Pylon as the investigation layer.
+- **Altor vs. AI Copilots:** https://altorlab.com/compare/altor-vs-copilot-for-support — Investigation vs. response drafting. Why copilots speed up replies but don't solve the investigation bottleneck.
+- **API Error Investigation:** https://altorlab.com/use-case/api-error-investigation — Full walkthrough of how Altor automates API error debugging from 429s to root cause.
+- **Webhook Failure Investigation:** https://altorlab.com/use-case/webhook-failure-investigation — Automating webhook failure diagnosis: endpoint health, regional outages, event queuing.
+- **Billing Escalation Debugging:** https://altorlab.com/use-case/billing-escalation-debugging — Cross-referencing Stripe billing with ClickHouse usage data to resolve disputes in minutes.
+- **For AI Infrastructure Companies:** https://altorlab.com/for/ai-infrastructure-companies — How Altor investigates gateway, routing, and model tickets for AI infra teams.
+- **For API-First Developer Tools:** https://altorlab.com/for/api-first-developer-tools — How Altor investigates latency, webhook, and SDK tickets for API-first teams.
+
+## Blog
+
+- **The Support Ticket Investigation Workflow:** https://altorlab.com/blog/support-ticket-investigation-workflow — A framework for B2B teams: the 4-query investigation method, time breakdown, and automation criteria.
+- **The True Cost of Support Investigation:** https://altorlab.com/blog/support-investigation-cost — Investigation accounts for 75-85% of ticket resolution cost. Breakdown by phase with annual cost calculations.
+- **ClickHouse for Support Diagnosis:** https://altorlab.com/blog/clickhouse-support-diagnosis — 5 ClickHouse query patterns for diagnosing customer support issues: error spikes, latency, activity timelines, blast radius, billing reconciliation.
+- **AI Support Agent vs. Chatbot:** https://altorlab.com/blog/ai-support-agent-vs-chatbot — Why the distinction matters for B2B: chatbots handle 20% of tickets (FAQs), investigation agents handle the other 80% (live data queries).
+- **Reducing Support Escalations:** https://altorlab.com/blog/reduce-support-escalations — Escalations are an information access problem, not a competence problem. Automating investigation eliminates the root cause.
+
+---
+
+Last Updated: 2026-03-03

@@ -45,10 +45,10 @@ const Footer = () => {
               {content.companyName}
             </Link>
             <p className="text-fg-muted text-[0.8125rem] mt-2 max-w-[28ch] leading-relaxed">
-              The investigation layer for B2B technical support.
+              The investigation layer for US B2B technical support.
             </p>
             <p className="text-fg-faint text-[0.75rem] mt-3 leading-relaxed">
-              Usage-based pricing. No seat minimums.
+              Usage-based pricing in USD ($). No seat minimums. EST &amp; PST support hours.
             </p>
           </div>
 
@@ -89,7 +89,7 @@ const Footer = () => {
               <div className="flex flex-col gap-2.5">
                 <a href={`mailto:${content.footer.email}`} className={linkClass}>Email</a>
                 <a href={content.footer.linkedIn} target="_blank" rel="noopener noreferrer" className={linkClass}>LinkedIn</a>
-                <a href={content.hero.primaryCTA.url} target="_blank" rel="noopener noreferrer" className={linkClass}>Book a demo</a>
+                <a href={content.hero.primaryCTA.url} target="_blank" rel="noopener noreferrer" className={linkClass}>{content.hero.primaryCTA.text}</a>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-6 border-t border-edge-subtle flex flex-col sm:flex-row justify-between items-center gap-3">
           <span className="text-[0.75rem] text-fg-faint">{content.footer.copyright}</span>
-          <span className="text-[0.75rem] text-fg-faint">San Francisco, CA</span>
+          <span className="text-[0.75rem] text-fg-faint">{content.footer.serving}</span>
         </div>
       </div>
     </footer>

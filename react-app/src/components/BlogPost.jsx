@@ -71,8 +71,8 @@ const BlogPost = ({ post }) => {
       {/* Article body */}
       <article className="pb-16">
         <div className="max-w-[720px] mx-auto px-6">
-          {sections.map((section, i) => (
-            <Reveal key={i} delay={0}>
+          {sections.map((section) => (
+            <Reveal key={section.heading || section.callout?.title || section.quote?.text || section.paragraphs?.[0] || section.table?.headers?.join('-') || section.steps?.[0] || section.bullets?.[0]} delay={0}>
               <section className="mt-12 first:mt-0">
                 {section.heading && (
                   <h2 className="font-display text-[1.375rem] md:text-[1.5rem] font-bold text-fg tracking-[-0.02em] leading-[1.2] mb-5">
@@ -80,16 +80,16 @@ const BlogPost = ({ post }) => {
                   </h2>
                 )}
 
-                {section.paragraphs && section.paragraphs.map((p, j) => (
-                  <p key={j} className="text-fg-secondary text-[0.9375rem] leading-[1.75] mt-4 first:mt-0" style={{ textWrap: 'pretty' }}>
+                {section.paragraphs && section.paragraphs.map((p) => (
+                  <p key={p} className="text-fg-secondary text-[0.9375rem] leading-[1.75] mt-4 first:mt-0" style={{ textWrap: 'pretty' }}>
                     {p}
                   </p>
                 ))}
 
                 {section.bullets && (
                   <ul className="mt-4 space-y-2">
-                    {section.bullets.map((item, j) => (
-                      <li key={j} className="text-fg-secondary text-[0.9375rem] leading-[1.75] flex gap-2">
+                    {section.bullets.map((item) => (
+                      <li key={item} className="text-fg-secondary text-[0.9375rem] leading-[1.75] flex gap-2">
                         <span className="text-accent mt-1 shrink-0">•</span>
                         <span>{item}</span>
                       </li>
@@ -99,8 +99,8 @@ const BlogPost = ({ post }) => {
 
                 {section.steps && (
                   <ol className="mt-4 space-y-3 list-decimal list-outside pl-5">
-                    {section.steps.map((step, j) => (
-                      <li key={j} className="text-fg-secondary text-[0.9375rem] leading-[1.75] pl-1">
+                    {section.steps.map((step) => (
+                      <li key={step} className="text-fg-secondary text-[0.9375rem] leading-[1.75] pl-1">
                         {step}
                       </li>
                     ))}
@@ -123,18 +123,18 @@ const BlogPost = ({ post }) => {
                     <table className="w-full text-left border-collapse">
                       <thead>
                         <tr className="border-b border-edge">
-                          {section.table.headers.map((h, j) => (
-                            <th key={j} className="py-3 px-4 text-[0.75rem] font-mono uppercase tracking-[0.05em] text-fg-muted first:pl-0">
+                          {section.table.headers.map((h) => (
+                            <th key={h} className="py-3 px-4 text-[0.75rem] font-mono uppercase tracking-[0.05em] text-fg-muted first:pl-0">
                               {h}
                             </th>
                           ))}
                         </tr>
                       </thead>
                       <tbody>
-                        {section.table.rows.map((row, j) => (
-                          <tr key={j} className="border-b border-edge-subtle">
-                            {row.map((cell, k) => (
-                              <td key={k} className="py-3 px-4 text-[0.8125rem] text-fg-secondary leading-relaxed first:pl-0 first:text-fg first:font-medium">
+                        {section.table.rows.map((row) => (
+                          <tr key={row.join('-')} className="border-b border-edge-subtle">
+                            {row.map((cell) => (
+                              <td key={cell} className="py-3 px-4 text-[0.8125rem] text-fg-secondary leading-relaxed first:pl-0 first:text-fg first:font-medium">
                                 {cell}
                               </td>
                             ))}
@@ -215,10 +215,10 @@ const BlogPost = ({ post }) => {
                 See Altor investigate a real ticket
               </h2>
               <p className="text-fg-secondary text-[0.9375rem] mt-4 leading-relaxed" style={{ textWrap: 'pretty' }}>
-                We'll connect to your systems and run a live investigation on a ticket from your queue. Your data, 2 minutes, real diagnosis.
+                We'll connect to your systems and run a live investigation on a ticket from your queue. Your data, 2 minutes, real diagnosis during EST or PST hours.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button href="https://calendly.com/founders-altorlab/30min" size="lg">Book a demo</Button>
+                <Button href="https://calendly.com/founders-altorlab/30min" size="lg">Book a Demo (US Hours)</Button>
                 <Button variant="secondary" size="lg" href="mailto:anshul@altorlab.com">Email us instead</Button>
               </div>
               <EmailCapture className="mt-10" />

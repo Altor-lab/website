@@ -1,39 +1,20 @@
-User-agent: *
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-
-User-agent: GPTBot
+User-Agent: *
 Allow: /
 
-User-agent: ChatGPT-User
+# AI crawlers — explicitly allow for GEO
+User-Agent: GPTBot
 Allow: /
 
-User-agent: OAI-SearchBot
+User-Agent: ChatGPT-User
 Allow: /
 
-User-agent: ClaudeBot
+User-Agent: Google-Extended
 Allow: /
 
-User-agent: Claude-Web
+User-Agent: PerplexityBot
 Allow: /
 
-User-agent: Google-Extended
+User-Agent: ClaudeBot
 Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: Amazonbot
-Allow: /
-
-User-agent: Bytespider
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
 
 Sitemap: https://altorlab.com/sitemap.xml

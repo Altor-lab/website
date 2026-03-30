@@ -55,13 +55,19 @@ export default function Home() {
 
         <W>
           <motion.div initial="hidden" animate="show">
-            <motion.div variants={up} custom={0} className="flex items-center gap-2.5 mb-8">
+            <motion.div variants={up} custom={0} className="mb-4">
+              <span className="inline-flex items-center rounded-full border border-accent/20 bg-accent/[0.06] px-3 py-1 text-[0.75rem] font-mono uppercase tracking-[0.05em] text-accent">
+                {content.hero.marketLabel}
+              </span>
+            </motion.div>
+
+            <motion.div variants={up} custom={1} className="flex items-center gap-2.5 mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               <span className="text-[0.8125rem] text-fg-secondary">{content.hero.proof}</span>
             </motion.div>
 
             <motion.h1
-              variants={up} custom={1}
+              variants={up} custom={2}
               className="font-display font-black text-fg leading-[1.04] tracking-[-0.04em] mb-6"
               style={{ fontSize: 'clamp(2rem, 5.5vw, 4rem)', textWrap: 'balance' }}
             >
@@ -71,22 +77,25 @@ export default function Home() {
             </motion.h1>
 
             <motion.p
-              variants={up} custom={2}
+              variants={up} custom={3}
               className="text-[0.9375rem] sm:text-[1.0625rem] text-fg-secondary leading-[1.7] max-w-[52ch] mb-10"
               style={{ textWrap: 'pretty' }}
             >
               {content.hero.subhead}
             </motion.p>
 
-            <motion.div variants={up} custom={3} className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 mb-14 sm:mb-20">
-              <Button href={content.hero.primaryCTA.url} size="lg">{content.hero.primaryCTA.text}</Button>
-              <button onClick={go('how-it-works')} className="text-fg-secondary hover:text-fg text-[0.9375rem] transition-colors link-underline">
-                {content.hero.secondaryCTA.text}
-              </button>
+            <motion.div variants={up} custom={4} className="mb-14 sm:mb-20">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
+                <Button href={content.hero.primaryCTA.url} size="lg">{content.hero.primaryCTA.text}</Button>
+                <button type="button" onClick={go('how-it-works')} className="text-fg-secondary hover:text-fg text-[0.9375rem] transition-colors link-underline">
+                  {content.hero.secondaryCTA.text}
+                </button>
+              </div>
+              <p className="mt-4 text-[0.8125rem] text-fg-muted">{content.hero.supportHours}</p>
             </motion.div>
 
             {/* ── animated terminal ── */}
-            <motion.div variants={up} custom={4} className="relative max-w-[720px]">
+            <motion.div variants={up} custom={5} className="relative max-w-[720px]">
               <div className="hero-glow" />
               <div className="terminal relative z-10">
                 <div className="terminal-bar">
@@ -152,8 +161,8 @@ export default function Home() {
       <div className="border-y border-edge-subtle bg-surface-1 py-10">
         <W>
           <div className="flex flex-col sm:flex-row gap-8 sm:gap-0 sm:justify-between">
-            {content.metrics.map((m, i) => (
-              <div key={i} className="flex items-baseline gap-3 sm:flex-col sm:gap-1.5">
+            {content.metrics.map((m) => (
+              <div key={`${m.label}-${m.value}`} className="flex items-baseline gap-3 sm:flex-col sm:gap-1.5">
                 <span className="font-display font-black text-[2rem] sm:text-[2.5rem] text-fg tracking-[-0.03em] tabular-nums leading-none">
                   <NumberTicker value={m.value} />{m.suffix}
                 </span>
@@ -215,11 +224,11 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 max-w-[700px] mb-12">
-            {content.gap.comparison.map((c, i) => (
+            {content.gap.comparison.map((c) => (
               <motion.div
-                key={i}
+                key={c.label}
                 variants={up}
-                custom={i + 4}
+                custom={content.gap.comparison.findIndex((item) => item.label === c.label) + 4}
                 className={c.variant === 'dim' ? 'card p-5 md:p-6 opacity-50' : 'card-accent p-5 md:p-6'}
               >
                 <div className="flex items-center gap-2.5 mb-3">
@@ -258,7 +267,8 @@ export default function Home() {
           <motion.div variants={up} custom={3} className="flex gap-2 mb-8 overflow-x-auto pb-2 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0 no-scrollbar">
             {content.investigation.tabs.map((t, i) => (
               <button
-                key={i}
+                type="button"
+                key={t.label}
                 onClick={() => setActiveTab(i)}
                 className="relative px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[0.75rem] sm:text-[0.8125rem] font-medium transition-colors duration-200 text-fg-secondary hover:text-fg whitespace-nowrap"
               >
@@ -311,9 +321,9 @@ export default function Home() {
 
                   {/* Investigation steps */}
                   <div className="space-y-1.5">
-                    {tab.steps.map((s, i) => (
+                    {tab.steps.map((s) => (
                       <motion.div
-                        key={i}
+                        key={`${s.system}-${s.finding}`}
                         variants={{
                           hidden: { opacity: 0, x: -6 },
                           show: { opacity: 1, x: 0, transition: { duration: 0.35, ease } },
@@ -382,7 +392,7 @@ export default function Home() {
 
             <div className="grid sm:grid-cols-2 gap-3">
               {content.stack.integrations.map((int, i) => (
-                <motion.div key={i} variants={up} custom={i + 3} className="card p-5 group">
+                <motion.div key={int.name} variants={up} custom={i + 3} className="card p-5 group">
                   <div className="flex items-center gap-2.5 mb-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent/50 group-hover:bg-accent transition-colors duration-200" />
                     <h3 className="font-mono text-accent text-[0.875rem] font-medium">{int.name}</h3>
@@ -421,7 +431,7 @@ export default function Home() {
             <motion.div variants={up} custom={3} className="space-y-3">
               {content.trust.levels.map((l, i) => (
                 <div
-                  key={i}
+                  key={l.label}
                   className={`rounded-xl p-4 sm:p-5 border transition-colors duration-200 ${
                     l.accent
                       ? 'border-accent/25 bg-accent/[0.04]'
@@ -463,7 +473,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-px bg-edge rounded-xl overflow-hidden">
             {content.onboarding.steps.map((s, i) => (
-              <motion.div key={i} variants={up} custom={i + 3} className="bg-surface-0 p-5 sm:p-8">
+              <motion.div key={s.week} variants={up} custom={i + 3} className="bg-surface-0 p-5 sm:p-8">
                 <span className="font-mono text-accent text-[0.75rem] mb-2 block">{s.week}</span>
                 <h3 className="text-fg font-semibold text-[1rem] tracking-[-0.01em] mb-3">{s.label}</h3>
                 <p className="text-fg-secondary text-[0.875rem] leading-[1.7]">{s.detail}</p>
@@ -486,7 +496,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-edge rounded-xl overflow-hidden">
             {content.audience.groups.map((g, i) => (
-              <motion.div key={i} variants={up} custom={i + 1} className="bg-surface-1 p-5 sm:p-7">
+              <motion.div key={g.name} variants={up} custom={i + 1} className="bg-surface-1 p-5 sm:p-7">
                 <span className="font-mono text-accent text-[0.75rem] mb-3 block">0{i + 1}</span>
                 <h3 className="text-fg font-semibold text-[0.9375rem] tracking-[-0.01em] mb-3">{g.name}</h3>
                 <p className="text-fg-secondary text-[0.8125rem] leading-[1.7]">{g.description}</p>

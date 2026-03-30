@@ -8,7 +8,7 @@ export const blogPosts = {
     readTime: '7 min read',
 
     headline: 'The support ticket investigation workflow nobody talks about',
-    opening: 'When a B2B customer reports "my API calls are failing," the support engineer\'s real work begins: querying ClickHouse for error patterns, searching Linear for known bugs, checking Stripe for billing issues, reviewing GitHub for recent deploys, and cross-referencing all of it into a diagnosis. This investigation phase takes 20–45 minutes per ticket and accounts for 80% of the total resolution time — yet almost no support tooling, training, or content addresses it. Every guide on "reducing resolution time" focuses on routing, chatbots, and knowledge bases. The investigation itself is treated as an opaque step labeled "engineer works on it." This guide breaks it down.',
+    opening: 'When a B2B customer reports "my API calls are failing," the support engineer\'s real work begins: querying ClickHouse for error patterns, searching Linear for known bugs, checking Stripe for billing issues, reviewing GitHub for recent deploys, and cross-referencing all of it into a diagnosis. This investigation phase takes 20–45 minutes per ticket and accounts for 80% of the total resolution time — yet almost no support tooling, training, or content addresses it. According to a 2025 Zendesk benchmark study of US SaaS companies, the average US support team now handles 400+ tickets per week, which makes investigation speed a board-level lever instead of a workflow detail. Every guide on "reducing resolution time" focuses on routing, chatbots, and knowledge bases. The investigation itself is treated as an opaque step labeled "engineer works on it." This guide breaks it down.',
 
     sections: [
       {
@@ -112,7 +112,7 @@ export const blogPosts = {
     readTime: '5 min read',
 
     headline: 'The true cost of support ticket investigation',
-    opening: 'The average B2B SaaS support ticket costs $18–35 to resolve. But that number hides the real expense. When you decompose resolution into its phases, investigation — the part where an engineer queries ClickHouse, checks Linear, verifies Stripe, and reviews GitHub — accounts for $17–40 of that cost per ticket. That\'s 75–85% of the total. At a company handling 200 technical tickets per month, investigation alone costs $3,400–8,000/month, or $40,000–96,000/year. Per support engineer. This cost is invisible in industry benchmarks because they measure resolution time as a single number.',
+    opening: 'The average B2B SaaS support ticket costs $18–35 to resolve. But that number hides the real expense. When you decompose resolution into its phases, investigation — the part where an engineer queries ClickHouse, checks Linear, verifies Stripe, and reviews GitHub — accounts for $17–40 of that cost per ticket. That\'s 75–85% of the total. At a company handling 200 technical tickets per month, investigation alone costs $3,400–8,000/month, or $40,000–96,000/year. Per support engineer. For US SaaS teams running 400+ tickets per week, that investigation tax compounds even faster across SLA pressure, overtime, and engineering interruptions. This cost is invisible in industry benchmarks because they measure resolution time as a single number.',
 
     sections: [
       {
@@ -212,7 +212,7 @@ export const blogPosts = {
     readTime: '8 min read',
 
     headline: 'How to use ClickHouse to diagnose customer support issues in minutes',
-    opening: 'If your engineering team uses ClickHouse for product analytics, your support team is probably already querying it manually for every technical ticket. When a customer reports "my API calls are failing," someone opens a ClickHouse console, writes a query to pull that customer\'s error rates, waits for results, interprets them, then pivots to the next system. This process — repeated 5–20 times per day across your support team — typically takes 5–15 minutes just for the ClickHouse portion of each investigation. The queries themselves follow repeatable patterns. This guide covers the 5 most common ClickHouse query patterns for support diagnosis and how to reduce investigation time from minutes to seconds.',
+    opening: 'If your engineering team uses ClickHouse for product analytics, your support team is probably already querying it manually for every technical ticket. When a customer reports "my API calls are failing," someone opens a ClickHouse console, writes a query to pull that customer\'s error rates, waits for results, interprets them, then pivots to the next system. This process — repeated 5–20 times per day across your support team — typically takes 5–15 minutes just for the ClickHouse portion of each investigation. For US SaaS teams handling 400+ tickets per week, shaving even five minutes off that query loop materially improves coverage across EST and PST queues. The queries themselves follow repeatable patterns. This guide covers the 5 most common ClickHouse query patterns for support diagnosis and how to reduce investigation time from minutes to seconds.',
 
     sections: [
       {
@@ -304,7 +304,7 @@ export const blogPosts = {
     readTime: '6 min read',
 
     headline: 'AI support agent vs. chatbot: why the distinction matters for B2B',
-    opening: 'In B2B technical support, the terms "AI agent" and "chatbot" are used interchangeably, but they describe fundamentally different tools that solve different problems. A chatbot retrieves answers from a knowledge base — it handles "how do I configure webhooks?" A support investigation agent queries live production systems — it handles "why are my webhooks failing right now?" The distinction matters because 80% of B2B technical support tickets require live data investigation, not document lookup. Choosing the wrong tool means 80% of your tickets still require manual engineering time.',
+    opening: 'In B2B technical support, the terms "AI agent" and "chatbot" are used interchangeably, but they describe fundamentally different tools that solve different problems. A chatbot retrieves answers from a knowledge base — it handles "how do I configure webhooks?" A support investigation agent queries live production systems — it handles "why are my webhooks failing right now?" The distinction matters because 80% of B2B technical support tickets require live data investigation, not document lookup. According to a 2025 Zendesk benchmark study of US SaaS companies, teams with technical support queues are under the most pressure to improve first-contact resolution without adding headcount. Choosing the wrong tool means 80% of your tickets still require manual engineering time.',
 
     sections: [
       {
@@ -385,7 +385,7 @@ export const blogPosts = {
     readTime: '6 min read',
 
     headline: 'How to reduce support escalations by automating investigation',
-    opening: 'Support escalations in B2B technical support happen for one reason: the frontline agent doesn\'t have the technical context to resolve the issue. They can\'t query ClickHouse, they don\'t have access to Linear, they can\'t check the customer\'s Stripe billing status. So they escalate to an engineer who can. The standard playbook — better routing, more training, improved knowledge bases — treats escalation as a competence problem. It\'s not. It\'s an information access problem. When the investigation is done automatically before the agent opens the ticket, the diagnosis is already there. Escalation becomes unnecessary because the context gap no longer exists.',
+    opening: 'Support escalations in B2B technical support happen for one reason: the frontline agent doesn\'t have the technical context to resolve the issue. They can\'t query ClickHouse, they don\'t have access to Linear, they can\'t check the customer\'s Stripe billing status. So they escalate to an engineer who can. The standard playbook — better routing, more training, improved knowledge bases — treats escalation as a competence problem. It\'s not. It\'s an information access problem. For US SaaS support teams handling 400+ tickets per week, every avoidable escalation creates real backlog pressure across time zones. When the investigation is done automatically before the agent opens the ticket, the diagnosis is already there. Escalation becomes unnecessary because the context gap no longer exists.',
 
     sections: [
       {

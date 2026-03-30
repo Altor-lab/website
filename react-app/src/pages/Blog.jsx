@@ -38,7 +38,7 @@ const Blog = () => (
           Blog
         </h1>
         <p className="text-fg-secondary text-[1.0625rem] mt-4 max-w-[48ch] leading-relaxed">
-          How B2B support teams are replacing manual investigation with automated diagnosis.
+          How US B2B support teams are replacing manual investigation with automated diagnosis.
         </p>
       </Reveal>
     </div>
