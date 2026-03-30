@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+    <meta name="geo.region" content="US" />
+    <meta name="geo.placename" content="United States" />
     <title>Convert SVG to PNG - OG Image</title>
     <style>
         body {
@@ -79,8 +81,8 @@
             <img id="preview" src="og-image.svg" alt="OG Image Preview">
         </div>
 
-        <button onclick="convertToPNG()">📥 Convert SVG to PNG (1200x630)</button>
-        <button onclick="location.reload()">🔄 Reload Preview</button>
+        <button type="button" onclick="convertToPNG()">📥 Convert SVG to PNG (1200x630)</button>
+        <button type="button" onclick="location.reload()">🔄 Reload Preview</button>
 
         <div class="success" id="success">
             ✅ PNG downloaded successfully! Save it as <code>og-image.png</code> in <code>react-app/public/</code>
