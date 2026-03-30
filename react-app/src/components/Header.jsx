@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
 import { content } from '../content'
 import Button from './Button'
 
@@ -48,7 +48,22 @@ const Header = () => {
 
   return (
     <>
-      <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+      <div className="fixed inset-x-0 top-0 z-50 border-b border-edge-subtle bg-surface-1/95 backdrop-blur-xl">
+        <div className="max-w-[1120px] mx-auto px-4 sm:px-6 min-h-10 py-2 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+          <p className="text-[0.75rem] sm:text-[0.8125rem] text-fg-secondary">
+            Book a Demo — EST &amp; PST Hours Available
+          </p>
+          <a
+            href="mailto:anshul@altorlab.com?subject=Demo%20Request%20%E2%80%94%20Altor%20Support%20Investigation"
+            className="inline-flex items-center gap-1 text-[0.75rem] sm:text-[0.8125rem] font-medium text-accent hover:text-accent/80 transition-colors"
+          >
+            <span>Schedule Call</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <header className={`fixed inset-x-0 top-10 z-50 transition-all duration-300 ${
         scrolled ? 'bg-surface-0/80 backdrop-blur-2xl border-b border-edge-subtle' : ''
       }`}>
         <nav className="max-w-[1120px] mx-auto px-6 h-14 flex items-center justify-between">
@@ -76,6 +91,7 @@ const Header = () => {
 
             {/* Mobile menu button */}
             <button
+              type="button"
               onClick={() => setMenuOpen(!menuOpen)}
               className="md:hidden flex flex-col items-center justify-center gap-[5px] min-w-[44px] min-h-[44px] -mr-2"
               aria-label="Toggle menu"
@@ -110,7 +126,7 @@ const Header = () => {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-40 bg-surface-0/95 backdrop-blur-xl md:hidden"
           >
-            <nav className="flex flex-col items-start px-6 pt-20 gap-1">
+            <nav className="flex flex-col items-start px-6 pt-28 gap-1">
               {links.map(([label, id], i) => (
                 <motion.a
                   key={id}

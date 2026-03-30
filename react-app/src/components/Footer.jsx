@@ -50,6 +50,9 @@ const Footer = () => {
             <p className="text-fg-faint text-[0.75rem] mt-3 leading-relaxed">
               Usage-based pricing in USD ($). No seat minimums. EST &amp; PST support hours.
             </p>
+            <p className="text-fg-faint text-[0.75rem] mt-2 leading-relaxed">
+              Questions? Email <a href="mailto:anshul@altorlab.com" className="text-fg-secondary hover:text-fg transition-colors">anshul@altorlab.com</a>
+            </p>
           </div>
 
           <div className="grid grid-cols-2 sm:flex gap-10 sm:gap-12">
@@ -97,7 +100,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-6 border-t border-edge-subtle flex flex-col sm:flex-row justify-between items-center gap-3">
           <span className="text-[0.75rem] text-fg-faint">{content.footer.copyright}</span>
-          <span className="text-[0.75rem] text-fg-faint">{content.footer.serving}</span>
+          <span className="text-[0.75rem] text-fg-faint">{content.footer.serving} · EST &amp; PST hours</span>
         </div>
       </div>
     </footer>

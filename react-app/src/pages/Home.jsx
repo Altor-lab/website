@@ -1,10 +1,10 @@
+import { AnimatePresence, motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { content } from '../content'
-import { NumberTicker } from '../components/magicui/number-ticker'
 import Button from '../components/Button'
 import EmailCapture from '../components/EmailCapture'
 import FAQ from '../components/FAQ'
+import { NumberTicker } from '../components/magicui/number-ticker'
+import { content } from '../content'
 import { cn } from '../lib/utils'
 
 const ease = [0.25, 0.4, 0.25, 1]
@@ -40,6 +40,7 @@ const statusIcon = {
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(0)
+  const demoRequestHref = 'mailto:anshul@altorlab.com?subject=Demo%20Request%20%E2%80%94%20Altor%20Support%20Investigation'
   const go = (id) => (e) => {
     e.preventDefault()
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -86,7 +87,7 @@ export default function Home() {
 
             <motion.div variants={up} custom={4} className="mb-14 sm:mb-20">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
-                <Button href={content.hero.primaryCTA.url} size="lg">{content.hero.primaryCTA.text}</Button>
+                <Button href={demoRequestHref} size="lg">{content.hero.primaryCTA.text}</Button>
                 <button type="button" onClick={go('how-it-works')} className="text-fg-secondary hover:text-fg text-[0.9375rem] transition-colors link-underline">
                   {content.hero.secondaryCTA.text}
                 </button>
@@ -364,6 +365,31 @@ export default function Home() {
               </AnimatePresence>
             </div>
           </div>
+
+          <motion.div variants={up} custom={4} className="mt-8 md:mt-10 rounded-2xl border border-edge bg-surface-1 p-6 sm:p-8">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+              <div className="max-w-[32rem]">
+                <p className="text-fg-muted font-mono text-[0.75rem] tracking-[0.05em] uppercase mb-3">
+                  Weekly insights
+                </p>
+                <h3 className="font-display font-bold text-fg tracking-[-0.02em] text-[1.375rem] mb-2">
+                  Get weekly support engineering insights
+                </h3>
+                <p className="text-fg-secondary text-[0.9375rem] leading-[1.7]">
+                  Short notes on ticket investigations, support automation, and what US technical teams are operationalizing now.
+                </p>
+              </div>
+
+              <EmailCapture
+                className="w-full max-w-[520px]"
+                headline=""
+                emailAddress="anshul@altorlab.com"
+                subject="Altor Newsletter Signup"
+                buttonLabel="Subscribe"
+                placeholder="Your work email"
+              />
+            </div>
+          </motion.div>
         </W>
       </Reveal>
 
@@ -429,7 +455,7 @@ export default function Home() {
             </div>
 
             <motion.div variants={up} custom={3} className="space-y-3">
-              {content.trust.levels.map((l, i) => (
+              {content.trust.levels.map((l) => (
                 <div
                   key={l.label}
                   className={`rounded-xl p-4 sm:p-5 border transition-colors duration-200 ${
@@ -543,18 +569,32 @@ export default function Home() {
                 {content.cta.body}
               </motion.p>
               <motion.div variants={up} custom={2} className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
-                <Button href={content.cta.buttonUrl} size="lg">{content.cta.buttonText}</Button>
+                <Button href={demoRequestHref} size="lg">{content.cta.buttonText}</Button>
                 <a href={`mailto:${content.cta.email}`} className="text-fg-secondary hover:text-fg text-[0.9375rem] transition-colors link-underline">
                   or email us
                 </a>
               </motion.div>
               <motion.div variants={up} custom={3} className="mt-8">
-                <EmailCapture />
+                <EmailCapture
+                  headline="Get weekly support engineering insights"
+                  emailAddress="anshul@altorlab.com"
+                  subject="Altor Newsletter Signup"
+                  buttonLabel="Subscribe"
+                  placeholder="Your work email"
+                />
               </motion.div>
             </div>
           </div>
         </W>
       </Reveal>
+
+      <a
+        href="mailto:anshul@altorlab.com?subject=Demo%20Request"
+        className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full border border-edge bg-surface-0/95 px-4 py-3 text-[0.875rem] font-medium text-fg shadow-[0_12px_32px_rgba(0,0,0,0.14)] backdrop-blur-xl transition-all duration-200 hover:-translate-y-px hover:border-edge-hover hover:text-accent sm:bottom-6 sm:right-6"
+      >
+        <span aria-hidden="true">📧</span>
+        <span>Book Demo</span>
+      </a>
     </>
   )
 }
