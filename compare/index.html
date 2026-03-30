@@ -1,135 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
-  <link rel="manifest" href="/manifest.json">
-  <title>Compare Altor With Support AI Tools | Altor</title>
-  <meta name="description" content="Compare Altor with support AI tools including Zendesk, Intercom Fin, Forethought, and more.">
-  <link rel="canonical" href="https://altorlab.com/compare/">
-  <meta name="robots" content="index,follow">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://altorlab.com/compare/">
-  <meta property="og:title" content="Compare Altor With Support AI Tools | Altor">
-  <meta property="og:description" content="Compare Altor with support AI tools including Zendesk, Intercom Fin, Forethought, and more.">
-  <meta property="og:image" content="https://altorlab.com/og-image.png">
-  <meta property="og:site_name" content="Altor">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Compare Altor With Support AI Tools | Altor">
-  <meta name="twitter:description" content="Compare Altor with support AI tools including Zendesk, Intercom Fin, Forethought, and more.">
-  <meta name="twitter:image" content="https://altorlab.com/og-image.png">
-  <meta name="theme-color" content="#04110f">
-  <script defer data-domain="altorlab.com" src="https://plausible.io/js/script.js"></script>
-  <style>
-    :root {--bg:#04110f;--bg-soft:#0a1a17;--panel:#0f2420;--panel-2:#13302a;--text:#e6f5f1;--muted:#9fb8b2;--accent:#29d3aa;--accent-soft:rgba(41,211,170,.14);--border:rgba(170,233,216,.18);--shadow:0 18px 60px rgba(0,0,0,.18);}
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:radial-gradient(circle at 15% 0%,#0f2f28 0%,var(--bg) 48%); color:var(--text); line-height:1.7; }
-    a { color:var(--accent); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .shell { min-height:100vh; display:flex; flex-direction:column; }
-    .nav { position:sticky; top:0; z-index:20; background:rgba(4,17,15,.92); border-bottom:1px solid var(--border); backdrop-filter:blur(8px); }
-    .nav-inner,.hero-inner,.article,.footer-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; }
-    .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.9rem 0; }
-    .logo { font-weight:700; letter-spacing:.02em; color:var(--text); }
-    .nav-links { display:flex; flex-wrap:wrap; gap:1rem; font-size:.95rem; }
-    .nav-cta { display:inline-flex; align-items:center; gap:.5rem; background:var(--text); color:#052019; padding:.62rem 1rem; border-radius:999px; font-weight:700; box-shadow:var(--shadow); }
-    .hero { border-bottom:1px solid var(--border); background:linear-gradient(180deg,rgba(13,44,37,.52) 0%,rgba(4,17,15,0) 100%); }
-    .hero-inner { padding:2.8rem 0 2rem; }
-    .breadcrumb { color:var(--muted); font-size:.9rem; margin-bottom:1rem; }
-    .eyebrow { color:var(--muted); text-transform:uppercase; letter-spacing:.1em; font-size:.74rem; }
-    h1 { margin:.6rem 0 1rem; line-height:1.1; font-size:clamp(2rem,5vw,3.3rem); max-width:14ch; }
-    .lede { font-size:1.08rem; color:#d8ebe6; max-width:64ch; }
-    .hero-actions { display:flex; flex-wrap:wrap; gap:.85rem; margin-top:1.35rem; }
-    .hero-card { background:var(--accent-soft); border:1px solid var(--border); border-radius:14px; padding:.95rem 1rem; color:#d4e9e4; }
-    .article { padding:2.4rem 0 4rem; }
-    .article h2 { margin-top:2.4rem; margin-bottom:.6rem; line-height:1.2; font-size:1.75rem; }
-    .article h3 { margin-top:1.3rem; margin-bottom:.35rem; font-size:1.16rem; }
-    .article p,.article li { color:#d4e9e4; }
-    .article ul,.article ol { padding-left:1.2rem; }
-    .panel { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:1.15rem; margin:1.2rem 0; box-shadow:var(--shadow); }
-    .panel.alt { background:linear-gradient(180deg,rgba(19,48,42,.92),rgba(12,32,28,.96)); }
-    .kicker { color:#c5ece2; font-weight:700; text-transform:uppercase; letter-spacing:.08em; font-size:.78rem; }
-    .table-wrap { overflow-x:auto; border:1px solid var(--border); border-radius:16px; background:rgba(9,23,20,.7); box-shadow:var(--shadow); }
-    table { width:100%; border-collapse:collapse; min-width:720px; }
-    th,td { padding:.9rem; text-align:left; vertical-align:top; border-bottom:1px solid var(--border); }
-    th { font-size:.84rem; color:#c5ece2; text-transform:uppercase; letter-spacing:.06em; }
-    tr:last-child td { border-bottom:none; }
-    .grid-2,.grid-3,.related { display:grid; gap:1rem; }
-    .grid-2 { grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
-    .grid-3 { grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
-    .card,.related a { display:block; background:rgba(14,38,32,.48); border:1px solid var(--border); border-radius:14px; padding:1rem; color:var(--text); }
-    .steps { counter-reset:step; display:grid; gap:.9rem; }
-    .step { position:relative; padding-left:3rem; }
-    .step:before { counter-increment:step; content:counter(step); position:absolute; left:0; top:.05rem; width:2rem; height:2rem; border-radius:999px; display:grid; place-items:center; background:var(--accent-soft); border:1px solid var(--border); font-weight:700; color:#d7fff3; }
-    .faq-item + .faq-item { margin-top:1rem; }
-    .cta { margin-top:2.2rem; padding:1.3rem; border-radius:18px; border:1px solid var(--border); background:linear-gradient(180deg,rgba(41,211,170,.16) 0%,rgba(41,211,170,.05) 100%); }
-    .btn { display:inline-block; margin-top:.85rem; background:var(--accent); color:#052019; padding:.7rem 1.05rem; border-radius:10px; font-weight:800; }
-    .footer { margin-top:auto; border-top:1px solid var(--border); }
-    .footer-inner { padding:1.2rem 0 1.8rem; display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; color:var(--muted); font-size:.92rem; }
-    @media (max-width:760px) { .nav-inner { align-items:flex-start; flex-direction:column; } .nav-cta { display:none; } h1 { max-width:none; } }
-  </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Altor built for?","acceptedAnswer":{"@type":"Answer","text":"Altor is built for B2B technical support teams that need investigation across logs, bugs, billing, and engineering systems before escalating tickets."}},{"@type":"Question","name":"Do these pages reflect static HTML routes?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each page is a static HTML resource designed for long-tail SEO and direct internal linking."}},{"@type":"Question","name":"Can Altor work with our current support stack?","acceptedAnswer":{"@type":"Answer","text":"Yes. Altor is designed to sit on top of the tools your support and engineering teams already use."}}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Compare","item":"https://altorlab.com/compare/"}]}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Altor Comparison Pages | AltorLab</title>
+<meta name="description" content="Browse Altor comparison pages for AI support investigation across help desk, chatbot, and support-ops alternatives.">
+<link rel="canonical" href="https://altorlab.com/compare/">
+<meta name="robots" content="index,follow">
+<style>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e5e7eb; background: #0a0a0a; }
+nav { margin-bottom: 24px; color: #9ca3af; }
+article { padding-bottom: 48px; }
+h1 { font-size: 1.95rem; line-height: 1.2; color: #f9fafb; margin-bottom: 0.75rem; }
+h2 { font-size: 1.25rem; color: #34d399; margin-top: 2.25rem; margin-bottom: 0.75rem; }
+h3 { font-size: 1rem; color: #f3f4f6; margin-top: 1.4rem; margin-bottom: 0.35rem; }
+p, li { color: #d1d5db; }
+a { color: #34d399; }
+strong { color: #f9fafb; }
+small, .muted { color: #9ca3af; }
+ul { padding-left: 1.2rem; }
+.card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 16px 18px; margin-top: 1rem; }
+.cta { display: inline-block; margin-top: 1.5rem; font-weight: 600; }</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Altor comparison pages"}</script>
 </head>
 <body>
-  <div class="shell">
-    <header class="nav">
-      <div class="nav-inner">
-        <a class="logo" href="/">Altor</a>
-        <nav class="nav-links" aria-label="Primary">
-          <a href="/compare/">Compare</a>
-          <a href="/integrations/">Integrations</a>
-          <a href="/use-cases/">Use cases</a>
-          <a href="/blog/">Blog</a>
-        </nav>
-        <a class="nav-cta" href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo</a>
-      </div>
-    </header>
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="breadcrumb"><a href="/">Home</a> / Compare</div>
-        <div class="eyebrow">Comparison hub</div>
-        <h1>Compare Altor With Support AI Tools</h1>
-        <p class="lede">These pages compare investigation-first support with the deflection, chatbot, inbox, and workflow automation models used by other tools.</p>
-        <div class="hero-actions"><div class="hero-card"><strong>Pages:</strong> 13</div><div class="hero-card"><strong>Format:</strong> Static HTML</div><div class="hero-card"><strong>Intent:</strong> Long-tail B2B support SEO</div></div>
-      </div>
-    </section>
-    <main class="article">
-      
-      <section class="panel alt">
-        <div class="kicker">Why this hub exists</div>
-        <p>The buying question behind most support AI searches is simple: will this tool help us answer more tickets, or will it help us actually resolve the hard ones faster? Altor is designed for the second problem. These comparison pages explain where investigation fits relative to chatbots, support platform AI, inbox copilots, and knowledge tools.</p>
-        <p>For SEO, these hub pages create a clear crawl path to deeper long-tail content. For buyers, they create a faster path to the comparison, integration, or industry page that matches the question they already have. That is useful for discoverability and for actual buyer navigation once the visitor lands.</p>
-      </section>
-      <section>
-        <h2>Browse pages</h2>
-        <div class="related"><a href="/compare/altor-vs-doc-chatbots/"><strong>Altor vs Doc Chatbots</strong><br><span>Why knowledge-base lookup is not enough for technical B2B support.</span></a><a href="/compare/altor-vs-support-platform-ai/"><strong>Altor vs Support Platform AI</strong><br><span>See how investigation differs from generic platform AI features.</span></a><a href="/compare/altor-vs-copilot-for-support/"><strong>Altor vs Copilot for Support</strong><br><span>Compare investigation against reply drafting and copilot workflows.</span></a><a href="/compare/zendesk-ai.html"><strong>Altor vs Zendesk AI — Investigation vs Deflection</strong><br><span>Zendesk AI is built to answer and route tickets faster. Altor is built to investigate why a technical problem is happening for a specific account before support escalates it.</span></a><a href="/compare/intercom-ai.html"><strong>Altor vs Intercom Fin — Investigation vs Chatbots</strong><br><span>Intercom Fin helps support teams answer more conversations automatically. Altor helps technical teams prove why a ticket exists in the first place, using live system context instead of generated replies alone.</span></a><a href="/compare/freshdesk-ai.html"><strong>Altor vs Freshdesk AI — Investigation vs Workflow Automation</strong><br><span>Freshdesk AI can automate ticket handling. Altor goes one step deeper by investigating product, billing, and engineering context before the human response is written.</span></a><a href="/compare/helpscout-ai.html"><strong>Altor vs Help Scout AI — Investigation vs Shared Inbox Automation</strong><br><span>Help Scout AI helps teams work faster inside a shared inbox. Altor helps them understand why a technical issue happened before they write back to the customer.</span></a><a href="/compare/front-ai.html"><strong>Altor vs Front AI — Investigation vs Team Inbox Copilots</strong><br><span>Front AI improves collaboration and drafting inside shared inboxes. Altor improves the quality of technical support decisions by investigating the systems behind each ticket.</span></a><a href="/compare/ada-support.html"><strong>Altor vs Ada Support — Investigation vs Bot Flows</strong><br><span>Ada Support is built to automate conversations with structured bot flows. Altor is built to investigate live technical issues that require evidence from the stack.</span></a><a href="/compare/forethought.html"><strong>Altor vs Forethought — Investigation vs Resolution Suggestions</strong><br><span>Forethought helps teams automate and suggest answers. Altor helps them verify why an issue happened by checking product, billing, and engineering systems directly.</span></a><a href="/compare/kustomer-ai.html"><strong>Altor vs Kustomer AI — Investigation vs CRM Automation</strong><br><span>Kustomer AI helps automate support within a CRM-centric platform. Altor helps support and engineering teams investigate what changed across the systems behind the ticket.</span></a><a href="/compare/tidio-ai.html"><strong>Altor vs Tidio AI — Investigation vs Live Chat Bots</strong><br><span>Tidio AI helps companies automate live chat and website conversations. Altor helps B2B support teams diagnose technical issues that cannot be solved from chat flows alone.</span></a><a href="/compare/guru-ai.html"><strong>Altor vs Guru AI — Investigation vs Knowledge Retrieval</strong><br><span>Guru AI makes internal knowledge easier to access. Altor makes technical root causes easier to uncover by querying the systems where the issue actually occurred.</span></a></div>
-      </section>
-    
-      <section>
-        <h2>FAQ</h2>
-        <div class="panel alt"><div class="faq-item"><h3>What is Altor built for?</h3><p>Altor is built for B2B technical support teams that need investigation across logs, bugs, billing, and engineering systems before escalating tickets.</p></div><div class="faq-item"><h3>Do these pages reflect static HTML routes?</h3><p>Yes. Each page is a static HTML resource designed for long-tail SEO and direct internal linking.</p></div><div class="faq-item"><h3>Can Altor work with our current support stack?</h3><p>Yes. Altor is designed to sit on top of the tools your support and engineering teams already use.</p></div></div>
-      </section>
-      <section>
-        <h2>Related pages</h2>
-        <div class="related"><a href="/"><strong>Homepage</strong><br><span>Return to the main Altor overview.</span></a><a href="/blog/"><strong>Blog</strong><br><span>Read support investigation articles and guides.</span></a><a href="/integrations/"><strong>Another hub</strong><br><span>Explore adjacent product pages.</span></a><a href="/use-cases/"><strong>Industry pages</strong><br><span>See how Altor applies across B2B support use cases.</span></a></div>
-      </section>
-      <section class="cta">
-        <h2>See how Altor investigates differently — Book a demo</h2>
-        <p>Bring one real escalation. We will map the systems behind it, show where investigation time is being lost today, and outline what an under-two-minute diagnosis flow looks like in your stack.</p>
-        <a class="btn" href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo</a>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer-inner">
-        <span>Altor investigates support tickets across logs, bugs, billing, and product systems in under 2 minutes.</span>
-        <span><a href="/">Home</a> · <a href="/compare/">Compare</a> · <a href="/integrations/">Integrations</a> · <a href="/use-cases/">Use cases</a></span>
-      </div>
-    </footer>
-  </div>
+<nav><a href="/">← AltorLab</a></nav>
+<article>
+<h1>Altor comparison pages</h1>
+<p>Honest comparisons for teams evaluating AI support investigation against support suites, chat platforms, and support-ops tooling.</p>
+<div class="card">
+<ul>
+<li><a href="/compare/zendesk-ai.html">Zendesk AI</a> — Enterprise support suite with strong workflow and omnichannel depth.</li><li><a href="/compare/intercom-ai.html">Intercom AI</a> — Messaging-first automation built around chat and self-serve support.</li><li><a href="/compare/freshdesk-ai.html">Freshdesk AI</a> — General-purpose help desk automation for SMB and mid-market teams.</li><li><a href="/compare/helpscout.html">Help Scout</a> — Human-first shared inbox support with a lighter operating model.</li><li><a href="/compare/front-app.html">Front</a> — Collaborative inbox software for high-stakes customer communication.</li><li><a href="/compare/hubspot-service.html">HubSpot Service Hub</a> — CRM-connected service tooling for go-to-market teams.</li><li><a href="/compare/salesforce-service-cloud.html">Salesforce Service Cloud</a> — Enterprise-grade case management and service operations platform.</li><li><a href="/compare/kayako.html">Kayako</a> — Customer journey-focused support platform with multichannel context.</li><li><a href="/compare/zoho-desk.html">Zoho Desk</a> — Cost-effective help desk software inside the Zoho suite.</li><li><a href="/compare/crisp.html">Crisp</a> — Live chat and lightweight support platform for startups and SMBs.</li><li><a href="/compare/tidio.html">Tidio</a> — SMB chatbot and website chat automation focused on fast responses.</li><li><a href="/compare/drift.html">Drift</a> — Conversational marketing and sales chat, not deep support diagnosis.</li><li><a href="/compare/ada-support.html">Ada</a> — Customer-service automation built around containment and bot flows.</li><li><a href="/compare/forethought.html">Forethought</a> — Broader AI support automation spanning triage, assist, and deflection.</li><li><a href="/compare/assembled.html">Assembled</a> — Support operations and workforce planning rather than ticket diagnosis.</li><li><a href="/compare/gorgias.html">Gorgias</a> — Ecommerce help desk tied closely to stores, orders, and refunds.</li><li><a href="/compare/gladly.html">Gladly</a> — Premium omnichannel service platform centered on customer history.</li><li><a href="/compare/kustomer.html">Kustomer</a> — CRM-style customer service platform with a unified customer record.</li><li><a href="/compare/dixa.html">Dixa</a> — Conversation-centric service software for routing and agent workflow.</li><li><a href="/compare/hiver.html">Hiver</a> — Gmail-native shared inbox software for smaller support teams.</li><li><a href="/compare/teamwork-desk.html">Teamwork Desk</a> — Simple ticketing for teams already using the Teamwork ecosystem.</li><li><a href="/compare/help-center-ai.html">Help Center AI</a> — Knowledge-base AI aimed at FAQ deflection and self-service.</li><li><a href="/compare/theloops.html">TheLoops</a> — Support intelligence and AI triage for queue-level efficiency.</li><li><a href="/compare/supportlogic.html">SupportLogic</a> — Escalation-risk and sentiment analytics for support leaders.</li><li><a href="/compare/cognigy.html">Cognigy</a> — Enterprise conversational AI and contact-center automation.</li>
+</ul>
+</div>
+<p><a class="cta" href="https://altorlab.com">Try Altor →</a></p>
+</article>
 </body>
 </html>
