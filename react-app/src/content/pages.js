@@ -835,7 +835,7 @@ export const pages = {
       buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
-  },,
+  },
 
   forZendeskTeams: {
     slug: '/for/zendesk-teams',
@@ -914,7 +914,7 @@ export const pages = {
       buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
-  }
+  },
 
   forIntercomTeams: {
     slug: '/for/intercom-teams',
@@ -993,7 +993,7 @@ export const pages = {
       buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
-  }
+  },
 
   forFreshdesk: {
     slug: '/for/freshdesk-teams',
@@ -1072,7 +1072,7 @@ export const pages = {
       buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
-  }
+  },
 
   forFintech: {
     slug: '/for/fintech-companies',
@@ -1151,7 +1151,7 @@ export const pages = {
       buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
-  }
+  },
 
   forDevtools: {
     slug: '/for/devtools-companies',
@@ -1230,7 +1230,7 @@ export const pages = {
       buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
-  }
+  },
 
   forDataInfra: {
     slug: '/for/data-infrastructure-companies',
@@ -1309,7 +1309,7 @@ export const pages = {
       buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
-  }
+  },
 
   forEcommercePlatforms: {
     slug: '/for/ecommerce-platforms',
@@ -1388,7 +1388,7 @@ export const pages = {
       buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
-  }
+  },
 
   forObservability: {
     slug: '/for/observability-companies',
@@ -1467,7 +1467,7 @@ export const pages = {
       buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
-  }
+  },
 
   forClickhouseTeams: {
     slug: '/for/clickhouse-teams',
@@ -1546,7 +1546,7 @@ export const pages = {
       buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
-  }
+  },
 
   forStripeBilling: {
     slug: '/for/stripe-billing-teams',
