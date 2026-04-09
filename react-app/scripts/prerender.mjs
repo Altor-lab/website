@@ -43,6 +43,12 @@ const ROUTES = [
   '/blog/reduce-support-escalations',
 ]
 
+// Dynamically add glossary terms
+import { glossaryTerms } from '../src/content/glossary.js'
+for (const slug of Object.keys(glossaryTerms)) {
+  ROUTES.push(`/glossary/${slug}`)
+}
+
 const PORT = 4173
 const BASE_URL = `http://localhost:${PORT}`
 

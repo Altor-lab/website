@@ -42,6 +42,12 @@ const routes = [
   { path: '/blog/reduce-support-escalations', priority: '0.7', changefreq: 'monthly' },
 ]
 
+// Dynamically add glossary terms
+import { glossaryTerms } from '../src/content/glossary.js'
+for (const slug of Object.keys(glossaryTerms)) {
+  routes.push({ path: `/glossary/${slug}`, priority: '0.6', changefreq: 'monthly' })
+}
+
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${routes.map(r => `  <url>
