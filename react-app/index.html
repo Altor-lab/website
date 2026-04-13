@@ -61,6 +61,22 @@
   <!-- Plausible Analytics — privacy-friendly, no cookies, ~1KB -->
   <script defer data-domain="altorlab.com" src="https://plausible.io/js/script.js"></script>
 
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Altor",
+    "url": "https://altorlab.com",
+    "description": "AI-powered investigation layer for US B2B technical support. Diagnose tickets in 2 minutes.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": { "@type": "EntryPoint", "urlTemplate": "https://altorlab.com/?q={search_term_string}" },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <!-- JSON-LD: Organization -->
   <script type="application/ld+json">
   {
