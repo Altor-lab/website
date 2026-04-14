@@ -888,7 +888,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -967,7 +967,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1046,7 +1046,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1125,7 +1125,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1204,7 +1204,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1283,7 +1283,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1362,7 +1362,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1441,7 +1441,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1520,7 +1520,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1599,7 +1599,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1776,7 +1776,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
         author: 'Engineering Lead',
         company: 'Portkey',
       },
