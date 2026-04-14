@@ -476,4 +476,338 @@ export const blogPosts = {
       },
     ],
   },
+
+  whyEnterpriseAIFails: {
+    slug: '/blog/why-enterprise-ai-fails-in-production',
+    title: 'Why Enterprise AI Fails in Production: 7 Critical Mistakes',
+    description: '67% of enterprise AI projects fail at production. Not because the models are bad — because the systems around them are wrong. Here are the 7 mistakes that kill AI deployments, and what successful teams do differently.',
+    datePublished: '2026-04-15',
+    dateModified: '2026-04-15',
+    readTime: '9 min read',
+
+    headline: 'Why enterprise AI fails in production: 7 critical mistakes',
+    opening: '67% of enterprise AI projects fail to reach production. This is not a new statistic — it has hovered around this figure since 2022, surviving multiple model generations and billions in enterprise AI investment. The models have gotten dramatically better. The failure rate has not moved. That tells you something important: the problem is not the model. The problem is everything around the model — the systems, the deployment approach, the organizational structure, and the metrics. This article breaks down the 7 most common reasons enterprise AI fails at production, drawn from our experience deploying AI systems at B2B SaaS companies. Each mistake is fixable. Most are preventable.',
+
+    sections: [
+      {
+        heading: 'Mistake 1: Treating the pilot as the product',
+        paragraphs: [
+          'The single most common pattern: a team runs a successful AI pilot — clean data, controlled environment, enthusiastic stakeholders — and assumes production will be a straightforward scale-up. It is not.',
+          'Production introduces what pilots never have: dirty data, edge cases, latency requirements, concurrent users, and the expectation that the system works every time. The gap between "impressive demo" and "reliable production system" is where most AI projects die.',
+        ],
+        bullets: [
+          'Design pilots explicitly for production transition. Every pilot decision should ask: "Does this hold at scale?"',
+          'Define production success criteria before the pilot starts, not after',
+          'Plan for 3-5x the compute costs observed in pilot (production data is messier and more variable)',
+          'Identify the 20% of edge cases that will appear in production and test them explicitly in the pilot',
+        ],
+      },
+      {
+        heading: 'Mistake 2: Underestimating data quality requirements',
+        paragraphs: [
+          'AI models in pilot environments typically run on curated, cleaned datasets. Production systems run on real data — and real data is messy. Schema changes, missing fields, inconsistent formats, and stale records all degrade model performance in ways that sandbox testing never reveals.',
+          'We have seen production deployments where model accuracy dropped 40% within the first two weeks solely because production data had characteristics the training data did not. No amount of model quality compensates for data quality failure.',
+        ],
+        bullets: [
+          'Build data validation pipelines before deployment, not after problems appear',
+          'Monitor input data distribution continuously — model performance will degrade silently if inputs drift',
+          'Establish data quality SLAs alongside model performance SLAs',
+          'Plan for the most common data quality failures specific to your domain (for support tickets: missing customer IDs, merged accounts, deleted records)',
+        ],
+      },
+      {
+        heading: 'Mistake 3: Skipping the production readiness assessment',
+        paragraphs: [
+          'Production readiness is not a checklist item — it is a systematic evaluation of whether your system can handle real-world conditions. Most teams skip it because it slows down the timeline. The teams that skip it spend 2-3x longer on post-launch fire-fighting than the assessment would have taken.',
+        ],
+        bullets: [
+          'Latency under load: does the system meet response time requirements at 10x pilot volume?',
+          'Failure modes: what happens when a connected system (database, API, third-party service) is unavailable?',
+          'Rollback: can you revert to the previous workflow within 15 minutes if the AI system fails?',
+          'Monitoring: do you have alerts that will fire before users start complaining?',
+          'Access controls: are production credentials properly scoped and audited?',
+        ],
+      },
+      {
+        heading: 'Mistake 4: Measuring the wrong things',
+        paragraphs: [
+          'AI projects report model accuracy. Business stakeholders care about business outcomes. These are not the same thing — and the gap between them is where AI projects lose executive support.',
+          'A support ticket investigation system with 94% root cause accuracy is impressive. "We reduced median investigation time from 45 minutes to 2 minutes across 200 tickets" is the same system, measured in business terms. The second framing survives budget reviews. The first does not.',
+        ],
+        bullets: [
+          'Define business outcome metrics before deployment: time saved, cost reduced, error rate decreased',
+          'Track model metrics and business metrics in parallel — both matter, but business metrics drive continued investment',
+          'Set measurement cadence: weekly for early deployments, monthly for stable systems',
+          'Build an ROI calculation that a finance team can audit (not just an engineering team)',
+        ],
+      },
+      {
+        heading: 'Mistake 5: Deploying without a governance framework',
+        paragraphs: [
+          'Governance sounds like a compliance problem. It is actually an operational problem. Without clear rules about when AI acts autonomously versus when it defers to humans, production systems generate unpredictable behavior at exactly the worst moments.',
+          'This is why every AI system we deploy starts read-only. The system surfaces diagnoses for human review. Write access — any automated action — requires explicit approval and a defined escalation path. Destructive actions are never automated regardless of confidence level.',
+        ],
+        bullets: [
+          'Define the action taxonomy before deployment: what can the AI do autonomously, what requires approval, what is always human-only?',
+          'Build explicit override mechanisms that are easy to use, not buried in admin interfaces',
+          'Log every AI decision with the reasoning — both for debugging and for regulatory requirements',
+          'Review AI action logs weekly for the first month, then monthly as the system matures',
+        ],
+      },
+      {
+        heading: 'Mistake 6: Ignoring model drift',
+        paragraphs: [
+          'A model that works in April may not work in September. The world changes — new product features, new customer segments, new failure modes — and models trained on historical data do not automatically adapt. Most teams discover model drift when users start complaining, not before.',
+          'The fix is monitoring input distributions continuously, not just output quality. When inputs drift, outputs will drift next.',
+        ],
+        bullets: [
+          'Set up input distribution monitoring from day one — track the statistical properties of data your model receives',
+          'Define drift thresholds that trigger retraining before performance degrades visibly',
+          'Build retraining pipelines before the model goes live — not as an afterthought when drift is detected',
+          'Review a sample of AI outputs manually every week for the first quarter',
+        ],
+      },
+      {
+        heading: 'Mistake 7: Treating AI deployment as a one-time project',
+        paragraphs: [
+          'Software is released and maintained. AI systems are deployed and operated. The distinction matters: a production AI system requires ongoing attention — monitoring, retraining, playbook updates, and adaptation to new use cases — that does not exist for traditional software at the same cadence.',
+          'Teams that staff AI projects like software releases — build it, ship it, move on — consistently see performance degrade within 60-90 days. Teams that assign ongoing operational ownership see systems that compound value over time.',
+        ],
+        bullets: [
+          'Assign explicit ownership for AI operations before deployment — not "the team that built it" in their spare time',
+          'Budget for operational costs: monitoring, retraining, infrastructure, and support',
+          'Build a playbook update process: how will the system be updated as your product and customer base evolve?',
+          'Schedule quarterly reviews of AI system performance against business outcomes',
+        ],
+      },
+      {
+        heading: 'What successful deployments look like',
+        paragraphs: [
+          'At Portkey, an AI gateway platform, every support ticket was a 45-minute manual investigation across ClickHouse, Linear, Stripe, and GitHub. The failure modes we had seen repeatedly — dirty data, undefined governance, no monitoring — shaped how we approached the deployment.',
+          'We started read-only. We defined what "investigation" meant precisely before writing code. We built monitoring on the investigation process itself, not just the model outputs. We measured in business terms: median investigation time, not model accuracy. After 200 tickets diagnosed in production, the system still runs at under 2 minutes per investigation. That outcome required getting the 7 things above right, not just the model.',
+        ],
+      },
+    ],
+
+    seeAlso: [
+      { label: 'How Altor approaches production AI deployment', href: '/platform' },
+      { label: 'Portkey case study: 45 minutes to 2', href: '/work/support-investigation' },
+      { label: 'Support investigation cost: the hidden expense', href: '/blog/support-investigation-cost' },
+    ],
+  },
+
+  productionAIGuide: {
+    slug: '/blog/production-ai-complete-guide',
+    title: 'Production AI: The Complete Guide for Engineering Teams',
+    description: 'Production AI is different from pilot AI in every meaningful way. This guide covers what "production" actually means for AI systems, why pilots fail to scale, and the framework for deploying AI that stays working.',
+    datePublished: '2026-04-15',
+    dateModified: '2026-04-15',
+    readTime: '11 min read',
+
+    headline: 'Production AI: the complete guide',
+    opening: 'Every enterprise has done an AI pilot. Most enterprises have not successfully deployed production AI. The gap between these two states — between "it works in the demo" and "it works every day in the real system" — is where most AI investment disappears. This guide defines what production AI actually means, why it is fundamentally different from pilot AI, and what a framework for successful production AI deployment looks like. It is written for engineering teams and technical leads who have seen AI pilots succeed and production deployments fail, and who want to understand why.',
+
+    sections: [
+      {
+        heading: 'What "production AI" means',
+        paragraphs: [
+          'Production AI is an AI system that operates continuously in a live business environment, handling real data, serving real users, and being held to the same reliability and performance standards as any other production software.',
+          'This definition has three components worth unpacking:',
+        ],
+        bullets: [
+          'Continuous operation: the system runs without manual intervention, handles the volume and variety of real-world inputs, and recovers from failures automatically',
+          'Real data: not curated training data or pilot datasets — actual production data with all its messiness, inconsistency, and edge cases',
+          'Production standards: the system is monitored, has defined SLAs, has an on-call runbook, and has a rollback procedure — just like any other production service',
+        ],
+      },
+      {
+        heading: 'Why pilot AI and production AI are different systems',
+        paragraphs: [
+          'Pilot AI is designed to demonstrate capability. Production AI is designed to deliver value reliably, repeatedly, at scale.',
+          'This sounds like a small distinction. It produces completely different engineering requirements.',
+        ],
+        table: {
+          headers: ['Dimension', 'Pilot AI', 'Production AI'],
+          rows: [
+            ['Data', 'Curated, clean, static', 'Messy, evolving, inconsistent'],
+            ['Volume', 'Controlled sample', 'Full production load'],
+            ['Users', 'Internal stakeholders', 'Actual end users'],
+            ['Failure mode', 'Acceptable (it\'s a demo)', 'Must be handled gracefully'],
+            ['Monitoring', 'None or minimal', 'Full observability required'],
+            ['Ownership', 'Project team', 'Permanent operational owner'],
+            ['Timeline', 'Weeks', 'Years'],
+            ['Success metric', 'Accuracy, impressiveness', 'Business outcome, uptime'],
+          ],
+        },
+      },
+      {
+        heading: 'The 5-stage production AI deployment framework',
+        paragraphs: [
+          'Successful production AI deployments follow a consistent pattern. Teams that skip stages spend 3-5x longer on post-launch remediation than the skipped stage would have required.',
+        ],
+        steps: [
+          'Stage 1 — Readiness Assessment: Before writing a line of deployment code, evaluate whether the system is ready for production. Latency under load. Data quality in production (not just training). Failure modes when dependencies are unavailable. Rollback procedure. Access controls. Teams that do this catch 60-70% of production failures before they happen.',
+          'Stage 2 — Integration design: Map every system the AI will connect to. Define the access model (read-only first — always). Design the data flow. Identify the bottlenecks. This is where most teams underestimate scope: a support investigation system that connects to ClickHouse, Linear, Stripe, GitHub, and docs is not one integration — it is five, each with its own failure modes.',
+          'Stage 3 — Staged rollout: Do not deploy to all users on day one. Start with 5-10% of traffic or a specific user segment. Monitor the business metrics and system metrics for 2 weeks. Expand only when you have evidence the system behaves correctly at scale.',
+          'Stage 4 — Operations setup: Before launch, define the monitoring dashboard, set the alert thresholds, write the runbook, and assign on-call ownership. A production AI system that has no alert when it stops working is not a production system — it is a time bomb.',
+          'Stage 5 — Continuous improvement: Production AI is not software you ship and maintain. It requires ongoing playbook updates, retraining triggers, and adaptation to new inputs. Build this process before you need it.',
+        ],
+      },
+      {
+        heading: 'What production AI looks like in practice',
+        paragraphs: [
+          'Abstract frameworks are useful. A concrete example is more useful.',
+          'At Portkey, an AI gateway platform, the production AI system we deployed investigates support tickets. Every ticket that arrives connects to 6 production systems simultaneously: ClickHouse for API logs, Linear for bug tracking, Stripe for billing, GitHub for deploy history, documentation for workarounds, and StatusPage for upstream incidents.',
+          'The system runs read-only. Every investigation is logged. The playbooks are reviewed quarterly and updated as Portkey\'s product evolves. When a new integration type becomes common in their customer base, the investigation logic is updated to handle it.',
+          'After 200+ tickets in production: median investigation time is under 2 minutes. The system handles 6 concurrent system queries per ticket. Zero false positives on high-severity issues in the first 90 days. That is what production AI looks like — not accuracy metrics in a notebook, but measured business outcomes from a system that runs every day.',
+        ],
+      },
+      {
+        heading: 'The production AI readiness checklist',
+        paragraphs: [
+          'Before any AI system goes to production, verify these 10 criteria:',
+        ],
+        steps: [
+          'Latency SLA defined and tested: the system meets its response time requirement under 2x expected peak load',
+          'Data validation pipeline in place: bad inputs are caught and handled gracefully before they reach the model',
+          'Failure modes documented: you know what happens when each dependency is unavailable and have tested it',
+          'Rollback procedure written and tested: you can revert to the previous workflow in under 15 minutes',
+          'Monitoring dashboard live: key metrics visible before users start using the system',
+          'Alert thresholds set: you will know about problems before users report them',
+          'On-call ownership assigned: a specific person is responsible when the system has problems at 2am',
+          'Action governance defined: explicit rules about what the AI can do autonomously vs. what requires human approval',
+          'Business outcome baseline established: you know what "better" looks like in business terms',
+          'Retraining trigger defined: you know what signal will prompt a model update and who will execute it',
+        ],
+      },
+      {
+        heading: 'Common production AI failure modes and their fixes',
+        paragraphs: [],
+        bullets: [
+          'Silent degradation — model accuracy drops without alerts firing. Fix: monitor input distributions, not just output quality. When inputs drift, outputs will drift next.',
+          'Data quality failures — production data has characteristics training data did not. Fix: build data validation pipelines and test them against real production data samples before launch.',
+          'Missing edge cases — the pilot covered 80% of scenarios; the 20% that appear in production break the system. Fix: explicitly enumerate edge cases before launch and test each one.',
+          'Governance gaps — the AI takes an action nobody expected it to take. Fix: define the action taxonomy before deployment and build override mechanisms that are easy to use.',
+          'Dependency failures — a connected system (database, API, service) goes down and the AI system has no graceful degradation. Fix: test every dependency failure explicitly during readiness assessment.',
+          'Operational orphans — the team that built the system moves on; nobody owns it. Fix: assign operational ownership before launch, not after the first production incident.',
+        ],
+      },
+    ],
+
+    seeAlso: [
+      { label: 'Why enterprise AI fails in production: 7 critical mistakes', href: '/blog/why-enterprise-ai-fails-in-production' },
+      { label: 'How Altor deploys production AI systems', href: '/platform' },
+      { label: 'Portkey: production AI investigation in practice', href: '/work/support-investigation' },
+    ],
+  },
+
+  aiServicesVsConsulting: {
+    slug: '/blog/ai-services-vs-ai-consulting-vs-ai-implementation',
+    title: 'AI Services vs AI Consulting vs AI Implementation: What\'s the Difference?',
+    description: 'These three terms are used interchangeably by vendors but mean very different things when it comes to outcomes, cost structure, and what you actually get. Here is how to tell them apart.',
+    datePublished: '2026-04-15',
+    dateModified: '2026-04-15',
+    readTime: '6 min read',
+
+    headline: 'AI services vs AI consulting vs AI implementation: what\'s the difference?',
+    opening: 'If you have asked three vendors what they do and gotten three different answers that sound nearly identical, you are not alone. "AI services," "AI consulting," and "AI implementation" are used interchangeably across the industry — by vendors trying to position themselves, by buyers trying to evaluate options, and by analysts trying to categorize a market that is still defining itself. They are not the same thing. The differences matter because they predict what you will get, how much you will pay, and whether your AI system will actually run in production. This article defines each term clearly and gives you the questions to ask to figure out which one you are actually buying.',
+
+    sections: [
+      {
+        heading: 'AI consulting: strategy and advice',
+        paragraphs: [
+          'AI consulting is the delivery of strategic guidance, roadmaps, and recommendations. A consulting engagement typically results in a document: an AI strategy, an opportunity assessment, a vendor evaluation, or a transformation roadmap.',
+          'What you get: advice about what to do and how to think about AI in your organization.',
+          'What you do not get: working software, deployed systems, or production AI.',
+          'When it makes sense: when you need to understand the landscape, build internal alignment, or make a buy vs. build decision. When you have executive buy-in but no AI technical leadership.',
+          'When it does not make sense: when you already know what you want to build and need someone to build it.',
+        ],
+        bullets: [
+          'Typical deliverable: strategy document, roadmap, opportunity assessment',
+          'Typical engagement length: 4-12 weeks',
+          'Typical team: former Big Tech executives, MBAs, strategy consultants',
+          'Typical pricing: $50-500K for a strategy engagement',
+          'Red flag: the engagement ends when the document is delivered',
+        ],
+      },
+      {
+        heading: 'AI implementation: building the system',
+        paragraphs: [
+          'AI implementation is the delivery of software — the actual build. An implementation engagement results in code, deployed infrastructure, and a working AI system.',
+          'What you get: a built system. Sometimes with training, sometimes with documentation, sometimes with a brief handoff period.',
+          'What you do not get (usually): ongoing operational support, continuous improvement, or accountability for production outcomes.',
+          'When it makes sense: when you have internal technical teams who can own and operate the system after handoff.',
+          'When it does not make sense: when you do not have the internal capability to maintain what gets built.',
+        ],
+        bullets: [
+          'Typical deliverable: working software, deployed infrastructure, documentation',
+          'Typical engagement length: 8-24 weeks',
+          'Typical team: software engineers, ML engineers, data engineers',
+          'Typical pricing: $100K-1M depending on scope',
+          'Red flag: the engagement ends at launch, not at production stability',
+        ],
+      },
+      {
+        heading: 'AI services: building and operating the system',
+        paragraphs: [
+          'AI services is the ongoing delivery of AI capability — not just the initial build, but the deployment, operation, monitoring, and continuous improvement of the system over time.',
+          'What you get: a production AI system that the services company is accountable for operating and improving.',
+          'What you do not get: a handoff. The services company stays involved.',
+          'When it makes sense: when you want a production AI system but do not want to build and maintain it internally. When speed to production matters more than internal ownership.',
+          'When it does not make sense: when you have strong internal AI engineering capability and want to own the system entirely.',
+        ],
+        bullets: [
+          'Typical deliverable: production AI system, ongoing operation, monthly impact reporting',
+          'Typical engagement length: quarterly or annual, ongoing',
+          'Typical team: forward-deployed engineers who stay embedded',
+          'Typical pricing: usage-based or retainer, aligned to outcomes',
+          'Green flag: the services company is measured on business outcomes, not deliverables',
+        ],
+      },
+      {
+        heading: 'The comparison in one table',
+        paragraphs: [],
+        table: {
+          headers: ['', 'AI Consulting', 'AI Implementation', 'AI Services'],
+          rows: [
+            ['Deliverable', 'Strategy document', 'Working software', 'Production system'],
+            ['Outcome ownership', 'Client', 'Client (after handoff)', 'Shared'],
+            ['Engagement end', 'Document delivery', 'Launch', 'When you choose to end it'],
+            ['What happens at 2am', 'Client calls their team', 'Client calls their team', 'Services company handles it'],
+            ['Business outcome accountability', 'Low', 'Medium', 'High'],
+            ['Best for', 'Direction-setting', 'Building with internal ops', 'Building without internal ops'],
+            ['Failure risk', 'Low (just advice)', 'Medium (build risks)', 'Low (outcomes aligned)'],
+          ],
+        },
+      },
+      {
+        heading: 'The questions that reveal which one you are actually buying',
+        paragraphs: [
+          'Every vendor will call what they do "AI services." These questions cut through the positioning:',
+        ],
+        steps: [
+          '"What does the engagement look like after go-live?" — Consulting ends before launch. Implementation ends at launch. Services continues after launch. The answer to this question tells you what you are buying.',
+          '"How is your success measured?" — If the answer is deliverables (documents, code, deployment), you are buying consulting or implementation. If the answer is business outcomes (time saved, cost reduced, accuracy achieved), you are buying services.',
+          '"Who is on the hook if the system stops working in production?" — If the answer is "your team," it is consulting or implementation. If the answer is "us," it is services.',
+          '"What is your standard engagement length?" — Consulting: weeks. Implementation: months. Services: quarters to years.',
+          '"Can I see your pricing structure?" — Consulting and implementation: project-based. Services: usage-based or retainer.',
+        ],
+      },
+      {
+        heading: 'What Altor is (and is not)',
+        paragraphs: [
+          'Altor is an AI services company. We build production AI systems and operate them — we do not hand off at launch and move on.',
+          'We are not AI consultants. We do not produce strategy documents or roadmaps. If you need help deciding whether and what to build, we are not the right fit.',
+          'We are not pure AI implementors. We do not build and hand off. If you have strong internal engineering capability and want to own the system entirely, we are not the right fit.',
+          'We are right for teams that want a production AI system and are not planning to build and maintain it internally. We embed alongside your team, deploy in 3 weeks, and stay accountable for the system running and improving over time.',
+        ],
+      },
+    ],
+
+    seeAlso: [
+      { label: 'How Altor works: our deployment model', href: '/platform' },
+      { label: 'See the Portkey case study', href: '/work/support-investigation' },
+      { label: 'Pricing: how we structure engagements', href: '/pricing' },
+    ],
+  },
 }

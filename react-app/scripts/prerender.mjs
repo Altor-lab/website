@@ -48,6 +48,9 @@ const ROUTES = [
   '/blog/clickhouse-support-diagnosis',
   '/blog/ai-support-agent-vs-chatbot',
   '/blog/reduce-support-escalations',
+  '/blog/why-enterprise-ai-fails-in-production',
+  '/blog/production-ai-complete-guide',
+  '/blog/ai-services-vs-ai-consulting-vs-ai-implementation',
 ]
 
 // Dynamically add glossary terms

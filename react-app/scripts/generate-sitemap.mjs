@@ -47,6 +47,9 @@ const routes = [
   { path: '/blog/clickhouse-support-diagnosis', priority: '0.7', changefreq: 'monthly' },
   { path: '/blog/ai-support-agent-vs-chatbot', priority: '0.7', changefreq: 'monthly' },
   { path: '/blog/reduce-support-escalations', priority: '0.7', changefreq: 'monthly' },
+  { path: '/blog/why-enterprise-ai-fails-in-production', priority: '0.9', changefreq: 'monthly' },
+  { path: '/blog/production-ai-complete-guide', priority: '0.9', changefreq: 'monthly' },
+  { path: '/blog/ai-services-vs-ai-consulting-vs-ai-implementation', priority: '0.8', changefreq: 'monthly' },
 ]
 
 // Dynamically add glossary terms
