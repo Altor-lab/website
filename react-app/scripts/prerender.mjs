@@ -16,6 +16,8 @@ const DIST = join(ROOT, 'dist')
 
 const ROUTES = [
   '/',
+  '/platform',
+  '/about',
   '/compare/altor-vs-doc-chatbots',
   '/compare/altor-vs-support-platform-ai',
   '/compare/altor-vs-copilot-for-support',
@@ -53,11 +55,11 @@ for (const slug of Object.keys(glossaryTerms)) {
 const PORT = 4173
 const BASE_URL = `http://localhost:${PORT}`
 
-// Hard timeout — kill everything if the script takes longer than 3 minutes
+// Hard timeout — glossary growth makes full prerender take longer than 3 minutes
 setTimeout(() => {
-  console.error('[prerender] TIMEOUT: Script exceeded 3 minutes. Exiting.')
+  console.error('[prerender] TIMEOUT: Script exceeded 10 minutes. Exiting.')
   process.exit(1)
-}, 180_000)
+}, 600_000)
 
 function httpGet(url) {
   return new Promise((resolve, reject) => {
@@ -131,12 +133,12 @@ async function prerender() {
         })
       })
 
-      // Wait for Framer Motion animations to complete
-      await new Promise((r) => setTimeout(r, 2000))
+      // Wait for Framer Motion animations to settle
+      await new Promise((r) => setTimeout(r, 750))
 
       // Scroll back to top
       await page.evaluate(() => window.scrollTo(0, 0))
-      await new Promise((r) => setTimeout(r, 500))
+      await new Promise((r) => setTimeout(r, 200))
 
       // Get the full rendered HTML
       let html = await page.content()

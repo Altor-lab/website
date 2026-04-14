@@ -38,11 +38,17 @@ const Header = () => {
     }
   }
 
-  const links = [
+  const pageLinks = [
+    { label: 'Platform', to: '/platform' },
+    { label: 'Portkey', to: '/customers/portkey' },
+    { label: 'About', to: '/about' },
+    { label: 'Blog', to: '/blog' },
+  ]
+
+  const anchorLinks = [
     ['How it works', 'how-it-works'],
     ['Integrations', 'the-stack'],
     ['Trust', 'trust'],
-    ['Getting started', 'onboarding'],
     ['FAQ', 'faq'],
   ]
 
@@ -71,8 +77,17 @@ const Header = () => {
             {content.companyName}
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
-            {links.map(([label, id]) => (
+          <div className="hidden md:flex items-center gap-7">
+            {pageLinks.map(({ label, to }) => (
+              <Link
+                key={to}
+                to={to}
+                className="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200"
+              >
+                {label}
+              </Link>
+            ))}
+            {isHome && anchorLinks.map(([label, id]) => (
               <a
                 key={id}
                 href={`/#${id}`}
@@ -127,14 +142,21 @@ const Header = () => {
             className="fixed inset-0 z-40 bg-surface-0/95 backdrop-blur-xl md:hidden"
           >
             <nav className="flex flex-col items-start px-6 pt-28 gap-1">
-              {links.map(([label, id], i) => (
+              {pageLinks.map(({ label, to }, i) => (
+                <motion.div key={to} initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.06, duration: 0.3, ease }}>
+                  <Link to={to} onClick={() => setMenuOpen(false)} className="text-[1.25rem] text-fg-secondary hover:text-fg transition-colors py-3 block">
+                    {label}
+                  </Link>
+                </motion.div>
+              ))}
+              {anchorLinks.map(([label, id], i) => (
                 <motion.a
                   key={id}
                   href={`/#${id}`}
                   onClick={go(id)}
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.06, duration: 0.3, ease }}
+                  transition={{ delay: (pageLinks.length + i) * 0.06, duration: 0.3, ease }}
                   className="text-[1.25rem] text-fg-secondary hover:text-fg transition-colors py-3 w-full"
                 >
                   {label}
@@ -143,7 +165,7 @@ const Header = () => {
               <motion.div
                 initial={{ opacity: 0, x: -12 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: links.length * 0.06, duration: 0.3, ease }}
+                transition={{ delay: (pageLinks.length + anchorLinks.length) * 0.06, duration: 0.3, ease }}
                 className="pt-6 w-full"
               >
                 <Button href={content.hero.primaryCTA.url} size="lg" className="w-full">

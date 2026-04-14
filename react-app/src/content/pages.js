@@ -1626,4 +1626,266 @@ export const pages = {
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
   },
+
+  platform: {
+    slug: '/platform',
+    title: 'Altor Platform — How the Investigation Engine Works',
+    description: 'Altor is not a chatbot or a copilot. It is an investigation engine that connects read-only to your production systems and reasons over live data to diagnose technical support tickets in under 2 minutes.',
+    datePublished: '2026-04-14',
+    dateModified: '2026-04-14',
+
+    hero: {
+      headline: 'Not a chatbot. Not a copilot. An investigation engine.',
+      subhead: 'Altor connects read-only to the systems your engineers already use — ClickHouse, Linear, Stripe, GitHub, docs, StatusPage — and queries them simultaneously to trace root cause and surface a structured diagnosis. The same investigation your best engineer runs manually, in 2 minutes instead of 45.',
+    },
+
+    sections: [
+      {
+        type: 'body',
+        title: 'How it works: five steps',
+        paragraphs: [],
+        bullets: [
+          'CONNECT — Read-only integrations to 6+ systems. ClickHouse, Linear, Stripe, GitHub, docs, StatusPage. No data migration. No new dashboards. Live in 2 weeks.',
+          'TRIGGER — A ticket arrives in your support tool (Zendesk, Pylon, Plain, Intercom, or direct). Altor receives the ticket context automatically.',
+          'INVESTIGATE — Altor queries all connected systems in parallel — not sequentially, not one at a time. Customer ID goes in, root cause hypothesis comes out.',
+          'REASON — Altor correlates signals across systems. 429 error rate spike + known bug in Linear + recent deploy in GitHub = diagnosis with evidence chain.',
+          'DELIVER — Structured diagnosis surfaces in the agent\'s existing workflow. Slack message, ticket comment, or direct integration. No new dashboard to check.',
+        ],
+      },
+      {
+        type: 'body',
+        title: 'What connects to what',
+        paragraphs: [
+          'Altor is read-only by default. It pulls data, it does not write data. Every connection uses the minimum permissions required for investigation — no write access to any system is requested or needed at deployment.',
+        ],
+        bullets: [
+          'ClickHouse — API logs, error rates, latency percentiles, customer activity timelines, usage metrics',
+          'Linear / Jira — Known bugs, issue status, priority, linked PRs, ETA information',
+          'Stripe / Chargebee — Subscription status, billing period, payment failures, usage metering',
+          'GitHub — Recent deploys, open PRs, commit history correlated to ticket timestamp',
+          'Docs / Mintlify — Documentation content, known workarounds, guides relevant to the issue type',
+          'StatusPage / PagerDuty — Upstream provider incidents, regional degradations, maintenance windows',
+          'Custom integrations — Any system with an API. We have not yet encountered a B2B stack we cannot connect to.',
+        ],
+      },
+      {
+        type: 'stats',
+        items: [
+          { value: '45→2', label: 'minutes per investigation at Portkey' },
+          { value: '200+', label: 'tickets diagnosed in production' },
+          { value: '3 wks', label: 'from kickoff to first live investigation' },
+          { value: 'Read-only', label: 'by default — no write access requested' },
+        ],
+      },
+      {
+        type: 'body',
+        title: 'Trust model: read, write, delete',
+        paragraphs: [
+          'Every Altor deployment starts read-only. Altor pulls logs, checks bug trackers, and verifies billing — it does not take action. As your team builds trust with the system, you control which action types graduate to auto-approval. Destructive actions are never automated, no matter how long you have been deployed.',
+        ],
+        bullets: [
+          'Read (auto-approved from day one) — Pull ClickHouse logs, check Linear bugs, verify Stripe billing, fetch GitHub deploys, search docs, check StatusPage',
+          'Write (human approval required) — Toggle feature flags, update customer configs, create Linear issues, post to Slack channels',
+          'Delete (never automated) — No destructive actions are ever taken automatically. These stay with your team. No exceptions.',
+        ],
+      },
+      {
+        type: 'body',
+        title: 'Self-improving playbooks',
+        paragraphs: [
+          'Altor\'s investigation logic is not a static template. Every investigation refines the playbooks. After 200+ tickets at Portkey, the system had learned which signals to prioritize for which ticket types, which queries to run first, and which findings correlated with specific root causes.',
+          '80% of investigation logic becomes reusable across ticket types within the first month. The system gets faster and more accurate with volume — without requiring manual retraining.',
+        ],
+      },
+      {
+        type: 'quote',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+        author: 'Engineering Lead',
+        company: 'Portkey',
+      },
+      {
+        type: 'body',
+        title: 'Security and compliance',
+        paragraphs: [
+          'All connections are encrypted in transit and at rest. Read-only credentials by default — we request the minimum permissions required for investigation and nothing more. SOC 2 Type II in progress. We can share architecture documentation and a security one-pager during the demo for your team to review.',
+        ],
+      },
+    ],
+
+    relatedPages: [
+      { label: 'Portkey case study — 45 min to 2', path: '/customers/portkey' },
+      { label: 'API error investigation', path: '/use-case/api-error-investigation' },
+      { label: 'For AI infrastructure companies', path: '/for/ai-infrastructure-companies' },
+    ],
+
+    cta: {
+      title: 'See the engine run on a real ticket.',
+      body: 'We will connect to your systems during the demo and run a live investigation on a ticket from your queue. Your data, your stack, diagnosed in real time.',
+      buttonText: 'Book a Demo — EST/PST',
+      buttonUrl: 'https://calendly.com/founders-altorlab/30min',
+    },
+  },
+
+  about: {
+    slug: '/about',
+    title: 'About Altor — Built by Engineers Who Lived the Problem',
+    description: 'Altor was built by engineers who spent years watching brilliant support teams waste hours per ticket manually copying data between ClickHouse, Linear, Stripe, and GitHub. We automated the investigation so they don\'t have to.',
+    datePublished: '2026-04-14',
+    dateModified: '2026-04-14',
+
+    hero: {
+      headline: 'Built by engineers who lived the problem.',
+      subhead: 'Every support ticket at a B2B SaaS company is a debugging session. We spent years watching great engineers waste 45 minutes per ticket manually copying data between ClickHouse, Linear, Stripe, and GitHub — data that a machine could assemble in seconds. Altor is that machine.',
+    },
+
+    sections: [
+      {
+        type: 'body',
+        title: 'The founding insight',
+        paragraphs: [
+          'Technical support at B2B companies is fundamentally different from consumer support. Customers are engineers. Their tickets are debugging sessions, not FAQ lookups. Every ticket requires querying production systems, cross-referencing multiple data sources, and constructing a root-cause hypothesis.',
+          'Existing tools solve the wrong problem. Chatbots search docs. Support platforms route tickets. AI copilots draft replies. None of them touch the investigation phase — the 20–45 minutes of manual work that happens before any of that.',
+          'Altor was built to automate that phase. Not the routing. Not the reply. The investigation itself.',
+        ],
+      },
+      {
+        type: 'body',
+        title: 'The founder',
+        paragraphs: [
+          'Anshul Basia — IIT Delhi (Computer Science), Microsoft Research. Built and shipped production AI systems across enterprise environments. Watched the support investigation problem firsthand across multiple companies before deciding to solve it directly.',
+          'Altor launched with Portkey as the first customer — an AI gateway handling millions of API requests, where every support ticket was a multi-system investigation. 200+ tickets diagnosed. Median time dropped from 45 minutes to 2.',
+        ],
+      },
+      {
+        type: 'stats',
+        items: [
+          { value: '200+', label: 'tickets diagnosed in production at Portkey' },
+          { value: '45→2', label: 'minutes per investigation, consistently' },
+          { value: '3 wks', label: 'typical deployment from kickoff to first live investigation' },
+          { value: '6+', label: 'production systems queried per investigation' },
+        ],
+      },
+      {
+        type: 'body',
+        title: 'How we work with customers',
+        paragraphs: [
+          'We do not hand off software and disappear. Every deployment starts with a forward-deployed engagement — we map your stack, connect your systems, and build investigation playbooks for your top ticket types alongside your team.',
+          'Pricing is usage-based in USD. You pay per investigation, not per seat. No minimum commitment. Scoped during the demo based on your ticket volume and systems.',
+          'We work with US-based B2B SaaS teams during EST and PST hours. If your support team operates in those windows, we can support you directly.',
+        ],
+      },
+      {
+        type: 'quote',
+        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        author: 'Engineering Lead',
+        company: 'Portkey',
+      },
+    ],
+
+    relatedPages: [
+      { label: 'See the Portkey case study', path: '/customers/portkey' },
+      { label: 'How the platform works', path: '/platform' },
+      { label: 'Book a demo', path: 'https://calendly.com/founders-altorlab/30min' },
+    ],
+
+    cta: {
+      title: 'See Altor investigate a ticket from your queue.',
+      body: 'We will connect to your systems during the demo and run a live investigation on a real ticket. Your data, your stack.',
+      buttonText: 'Book a Demo — EST/PST',
+      buttonUrl: 'https://calendly.com/founders-altorlab/30min',
+    },
+  },
+
+  customerPortkeyExpanded: {
+    slug: '/customers/portkey',
+    title: 'Portkey Case Study — 45 Minutes to 2 Minutes, 200+ Tickets | Altor',
+    description: 'Portkey is an AI gateway handling millions of API requests. After deploying Altor, median support investigation time dropped from 45 minutes to 2 minutes across 200+ tickets. Zero workflow changes.',
+    datePublished: '2026-04-14',
+    dateModified: '2026-04-14',
+
+    hero: {
+      headline: '45 minutes to 2. Across 200+ tickets.',
+      subhead: 'Portkey is an AI gateway platform handling billions of API requests from AI-first companies. Every support ticket — rate limit regressions, latency spikes, webhook failures, billing discrepancies — required a full engineering investigation. After deploying Altor: median investigation time dropped to 2 minutes. Zero changes to existing workflows.',
+    },
+
+    sections: [
+      {
+        type: 'stats',
+        items: [
+          { value: '45→2', label: 'minutes per investigation, consistently across 200+ tickets' },
+          { value: '200+', label: 'tickets diagnosed in production since deployment' },
+          { value: '6', label: 'production systems connected: ClickHouse, Linear, Stripe, GitHub, docs, StatusPage' },
+          { value: '2 wks', label: 'from kickoff to first live investigation running on real tickets' },
+        ],
+      },
+      {
+        type: 'body',
+        title: 'The problem: every ticket was a 45-minute debugging session',
+        paragraphs: [
+          'Portkey is an AI infrastructure company. Their customers are engineers building on LLMs — Anthropic, OpenAI, Mistral, and dozens of other providers routing through the Portkey gateway. When something breaks, their customers do not file vague tickets. They report exact symptoms: "my p95 latency jumped 200ms," "my Llama 3 fallback stopped firing," "I\'m getting 429s from the gateway on my Claude requests."',
+          'These tickets cannot be answered from a knowledge base. Every one of them required Portkey\'s team to open ClickHouse, run queries against the customer\'s API logs, check Linear for known bugs, look at recent GitHub deploys, and verify billing in Stripe. One ticket. Six browser tabs. 20–45 minutes. Every time.',
+          'At Portkey\'s scale, this was the single largest bottleneck in their support operation. Not response time. Not ticket routing. The investigation itself.',
+        ],
+      },
+      {
+        type: 'body',
+        title: 'The deployment: 3 weeks from kickoff to production',
+        paragraphs: [],
+        bullets: [
+          'Week 1 — Stack audit: We mapped Portkey\'s ClickHouse schema, Linear project structure, Stripe billing setup, and GitHub deploy cadence. Identified the top 5 ticket types by volume: rate limit issues, latency spikes, webhook failures, billing discrepancies, and model fallback failures.',
+          'Week 2 — Integrations live: Read-only connections established to all 6 systems. First investigations running on real tickets from Portkey\'s active queue. Engineering lead involved in reviewing and validating early diagnoses.',
+          'Weeks 3–4 — Playbooks tuned: Investigation logic refined against actual ticket patterns. By the end of week 4, 80% of ticket types had reusable investigation playbooks. Median time: 2 minutes.',
+        ],
+      },
+      {
+        type: 'body',
+        title: 'A real investigation: rate limit regression',
+        paragraphs: [
+          'A customer reports: "My API calls are returning 429s. This started about 2 hours ago."',
+          'Altor receives the ticket and the customer\'s account ID. It runs the following in parallel:',
+        ],
+        bullets: [
+          'ClickHouse — Queries 429 error rate for this customer\'s API calls over the last 24 hours. Finds: 12% error rate baseline, spiked to 43% at 09:14 UTC. Spike correlates to a specific endpoint.',
+          'Linear — Searches for open issues matching "rate limit" and the affected endpoint. Finds: LIN-482 "rate limit regression on /v1/chat" — open, priority urgent, assigned.',
+          'Stripe — Checks subscription tier, usage limits, and current period usage. Finds: Plan active, usage within limits. Not a billing-related rate limit.',
+          'GitHub — Pulls recent merges to the rate-limiting middleware. Finds: PR #891 "fix/rate-limit" — currently in review, expected merge within 3 days.',
+          'Diagnosis delivered in 94 seconds: "Known regression LIN-482 causing elevated 429s on /v1/chat since 09:14 UTC. Patch in PR #891, ETA 3 days. Workaround: reduce concurrency or add exponential backoff. No billing issue involved."',
+        ],
+      },
+      {
+        type: 'quote',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        author: 'Engineering Lead',
+        company: 'Portkey',
+      },
+      {
+        type: 'body',
+        title: 'The result: investigation time eliminated as a bottleneck',
+        paragraphs: [
+          'After 200+ tickets diagnosed across all major ticket types, the investigation phase effectively stopped being a bottleneck. Support agents receive a structured diagnosis before they finish reading the ticket. Engineers are no longer pulled in for routine investigations. Escalations dropped.',
+          'The investigation logic also became more accurate over time. Early playbooks covered the top 3 ticket types. After 200+ tickets, 80% of all ticket types had reusable investigation logic — including edge cases that would have been hard to anticipate at the outset.',
+        ],
+        bullets: [
+          '2 min median investigation time (down from 45 min)',
+          '200+ tickets diagnosed in production',
+          '6 production systems queried per investigation',
+          '80% of investigation logic reusable across ticket types',
+          'Zero changes to existing support workflows or tooling',
+        ],
+      },
+    ],
+
+    relatedPages: [
+      { label: 'How the platform works', path: '/platform' },
+      { label: 'For AI infrastructure companies', path: '/for/ai-infrastructure-companies' },
+      { label: 'API error investigation', path: '/use-case/api-error-investigation' },
+    ],
+
+    cta: {
+      title: 'Your stack looks like Portkey\'s. See what Altor finds.',
+      body: 'We will connect to your systems during the demo and run a live investigation on a ticket from your queue. Your data, your stack, diagnosed in real time.',
+      buttonText: 'Book a Demo — EST/PST',
+      buttonUrl: 'https://calendly.com/founders-altorlab/30min',
+    },
+  },
 }

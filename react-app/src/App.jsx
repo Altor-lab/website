@@ -14,6 +14,8 @@ import Blog from './pages/Blog'
 import BlogEntry from './pages/BlogEntry'
 import Glossary from './pages/Glossary'
 import GlossaryEntry from './pages/GlossaryEntry'
+import Platform from './pages/Platform'
+import About from './pages/About'
 import NotFound from './pages/NotFound'
 import ForZendeskTeams from './pages/ForZendeskTeams'
 import ForIntercomTeams from './pages/ForIntercomTeams'
@@ -31,6 +33,8 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/platform" element={<Platform />} />
+        <Route path="/about" element={<About />} />
         <Route path="/compare/altor-vs-doc-chatbots" element={<CompareDocChatbots />} />
         <Route path="/compare/altor-vs-support-platform-ai" element={<CompareSupportPlatformAI />} />
         <Route path="/compare/altor-vs-copilot-for-support" element={<CompareCopilotSupport />} />
@@ -39,7 +43,7 @@ function App() {
         <Route path="/use-case/billing-escalation-debugging" element={<UseCaseBillingEscalation />} />
         <Route path="/for/ai-infrastructure-companies" element={<ForAIInfra />} />
         <Route path="/for/api-first-developer-tools" element={<ForAPIDevTools />} />
-                <Route path="/for/zendesk-teams" element={<ForZendeskTeams />} />
+        <Route path="/for/zendesk-teams" element={<ForZendeskTeams />} />
         <Route path="/for/intercom-teams" element={<ForIntercomTeams />} />
         <Route path="/for/freshdesk-teams" element={<ForFreshdesk />} />
         <Route path="/for/fintech-companies" element={<ForFintech />} />

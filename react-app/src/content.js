@@ -2,37 +2,37 @@ export const content = {
   companyName: 'Altor',
 
   hero: {
-    marketLabel: 'Built for US B2B SaaS teams',
-    headline: ['Your tickets need investigations,', 'not doc lookups.'],
-    subhead: 'Altor is the investigation layer for US B2B technical support teams. It connects to ClickHouse, Linear, Stripe, and GitHub to diagnose support tickets in under 2 minutes — pulling the same data your engineers check manually.',
-    proof: 'Trusted by Portkey and other US SaaS companies — 200+ tickets diagnosed for US teams.',
+    marketLabel: 'For US B2B engineering and support teams',
+    headline: ['45 minutes to 2.', 'Every support ticket.'],
+    subhead: 'Altor connects read-only to ClickHouse, Stripe, GitHub, Linear, and StatusPage — querying all 6 systems simultaneously to trace root cause and surface a diagnosis before your engineer finishes reading the ticket. Deployed in 3 weeks. Zero workflow changes.',
+    proof: '200+ tickets diagnosed at Portkey. Median investigation time: 2 minutes.',
     supportHours: 'EST & PST support hours',
     primaryCTA: { text: 'Book a Demo (US Hours)', url: 'https://calendly.com/founders-altorlab/30min' },
-    secondaryCTA: { text: 'See how it works', anchor: '#how-it-works' },
+    secondaryCTA: { text: 'See a real investigation', anchor: '#how-it-works' },
     tryProduct: { text: 'Request a walkthrough', url: 'https://calendly.com/founders-altorlab/30min' },
   },
 
   metrics: [
-    { value: 2, suffix: 'min', label: 'median diagnosis time', note: 'down from 20–45 min manually, across 200+ tickets for a US support team at Portkey' },
-    { value: 6, suffix: '+', label: 'systems queried per investigation', note: 'ClickHouse, Linear, Stripe, GitHub, docs, StatusPage' },
-    { value: 80, suffix: '%', label: 'investigation logic reusable across ticket types' },
+    { value: 45, suffix: '→2', label: 'minutes per investigation', note: 'Across 200+ real tickets at Portkey. Median time dropped from 45 min manual to under 2 min with Altor.' },
+    { value: 6, suffix: '+', label: 'systems queried in parallel', note: 'ClickHouse, Linear, Stripe, GitHub, docs, StatusPage — simultaneously, not sequentially.' },
+    { value: 3, suffix: 'wks', label: 'from kickoff to first live investigation', note: 'Week 1: audit. Week 2: integrations live. Week 3–4: playbooks tuned.' },
   ],
 
   socialProof: {
-    quote: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs.',
-    author: 'Engineering lead',
+    quote: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+    author: 'Engineering Lead',
     company: 'Portkey',
     logos: ['Portkey'],
   },
 
   gap: {
-    title: 'Support AI answers questions. Your tickets need investigations.',
-    body: 'Doc chatbots handle the 20% of tickets where the answer lives in your knowledge base. The other 80% — "my API calls are failing," "latency spiked since yesterday," "webhooks stopped firing" — require pulling live data from your actual systems. That 80% costs $80–200K per year per support engineer in manual investigation time.',
+    title: '$80–200K per engineer, per year. In investigation time.',
+    body: 'Every technical support ticket at a B2B SaaS company is a debugging session. "My API calls are failing" means opening ClickHouse, checking Linear for known bugs, verifying billing in Stripe, and cross-referencing recent GitHub deploys. That\'s 20–45 minutes per ticket, done manually, every time. At $150K fully-loaded cost per support engineer, investigation time is the biggest line item nobody talks about.',
     comparison: [
-      { label: 'Doc chatbot', detail: 'Reads documentation and guesses. Handles password resets and FAQ. Breaks down the moment a ticket needs live customer data.', variant: 'dim' },
-      { label: 'Investigation AI', detail: 'Queries your logs, bug tracker, and billing system — investigating across 6+ systems like your best engineer would, in 2 minutes instead of 45.', variant: 'accent' },
+      { label: 'Without Altor', detail: 'Engineer opens 4–6 browser tabs. Copies customer ID. Runs queries manually. Cross-references results. Writes up diagnosis. 20–45 minutes. Every ticket.', variant: 'dim' },
+      { label: 'With Altor', detail: 'Ticket arrives. Altor queries ClickHouse, Linear, Stripe, GitHub, docs, and StatusPage in parallel. Structured diagnosis delivered in 2 minutes. Engineer reviews and responds.', variant: 'accent' },
     ],
-    punchline: 'The investigation layer — an AI that pulls live data from your systems to diagnose technical tickets — doesn\'t exist yet.',
+    punchline: 'The same investigation. The same 6 systems. The same quality diagnosis — in 2 minutes instead of 45.',
   },
 
   investigation: {
@@ -107,12 +107,12 @@ export const content = {
   },
 
   onboarding: {
-    title: 'Live in weeks, not months',
-    body: 'We start with a forward-deployed engagement: audit your support stack, connect your systems, build investigation playbooks for your top ticket types.',
+    title: 'Live investigations in 3 weeks.',
+    body: 'We forward-deploy alongside your team — auditing your support stack, connecting your systems, and building investigation playbooks for your top ticket types. You own the outcome alongside us.',
     steps: [
-      { week: 'Week 1', label: 'Stack audit', detail: 'We map your systems, ticket types, and current investigation workflows.' },
-      { week: 'Week 2', label: 'Connections live', detail: 'Read-only integrations connected. First investigations running on real tickets from your queue.' },
-      { week: 'Week 3–4', label: 'Playbooks tuned', detail: 'Investigation logic refined against your actual ticket patterns. Team trained.' },
+      { week: 'Week 1', label: 'Stack audit', detail: 'We map your systems, ticket types, and current investigation workflows. No RFPs. No committees. We start building immediately.' },
+      { week: 'Week 2', label: 'Integrations live', detail: 'Read-only connections to ClickHouse, Linear, Stripe, GitHub, docs, and StatusPage. First investigations running on real tickets from your queue.' },
+      { week: 'Week 3–4', label: 'Playbooks tuned', detail: 'Investigation logic refined against your actual ticket patterns. Team trained. Median diagnosis time measured and benchmarked.' },
     ],
   },
 
@@ -135,12 +135,12 @@ export const content = {
   ],
 
   cta: {
-    title: 'See Altor investigate a real ticket',
-    body: 'We\'ll connect to your systems and run a live investigation on a ticket from your queue. Your data, your ticket, diagnosed in real time during EST or PST support hours.',
-    buttonText: 'Schedule a Call — EST/PST',
+    title: 'See Altor investigate a ticket from your queue.',
+    body: 'We\'ll connect to your systems and run a live investigation on a real ticket — your data, your stack, diagnosed in real time. Most teams see their first investigation in the first call.',
+    buttonText: 'Book a Demo — EST/PST',
     buttonUrl: 'https://calendly.com/founders-altorlab/30min',
-    secondaryText: 'Request a walkthrough',
-    secondaryUrl: 'https://calendly.com/founders-altorlab/30min',
+    secondaryText: 'Email us directly',
+    secondaryUrl: 'mailto:anshul@altorlab.com',
     email: 'anshul@altorlab.com',
   },
 
@@ -148,6 +148,6 @@ export const content = {
     copyright: '© 2026 AltorLab Inc. United States',
     email: 'anshul@altorlab.com',
     linkedIn: 'https://www.linkedin.com/in/ansh27/',
-    serving: 'Serving businesses across the United States',
+    serving: 'Serving US B2B engineering and support teams',
   },
 }

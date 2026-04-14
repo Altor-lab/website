@@ -6,11 +6,12 @@ const Footer = () => {
   const isHome = location.pathname === '/'
 
   const productLinks = [
+    ['Platform', '/platform'],
     ['How it works', 'how-it-works'],
     ['Integrations', 'the-stack'],
     ['Trust & safety', 'trust'],
-    ['Getting started', 'onboarding'],
     ['FAQ', 'faq'],
+    ['About', '/about'],
   ]
 
   const compareLinks = [
@@ -20,11 +21,13 @@ const Footer = () => {
   ]
 
   const moreLinks = [
-    ['Portkey case study', '/customers/portkey'],
+    ['Portkey: 45 min → 2', '/customers/portkey'],
     ['API error investigation', '/use-case/api-error-investigation'],
+    ['Webhook failure investigation', '/use-case/webhook-failure-investigation'],
     ['For AI infrastructure', '/for/ai-infrastructure-companies'],
-    ['For API dev tools', '/for/api-first-developer-tools'],
+    ['For ClickHouse teams', '/for/clickhouse-teams'],
     ['Blog', '/blog'],
+    ['Glossary', '/glossary'],
   ]
 
   const go = (id) => (e) => {
@@ -45,13 +48,16 @@ const Footer = () => {
               {content.companyName}
             </Link>
             <p className="text-fg-muted text-[0.8125rem] mt-2 max-w-[28ch] leading-relaxed">
-              The investigation layer for US B2B technical support.
+              45 minutes to 2. Automated support investigation for US B2B engineering teams.
             </p>
             <p className="text-fg-faint text-[0.75rem] mt-3 leading-relaxed">
-              Usage-based pricing in USD ($). No seat minimums. EST &amp; PST support hours.
+              200+ tickets diagnosed at Portkey. Deployed in 3 weeks.
             </p>
             <p className="text-fg-faint text-[0.75rem] mt-2 leading-relaxed">
-              Questions? Email <a href="mailto:anshul@altorlab.com" className="text-fg-secondary hover:text-fg transition-colors">anshul@altorlab.com</a>
+              Usage-based in USD. No seat minimums. EST &amp; PST hours.
+            </p>
+            <p className="text-fg-faint text-[0.75rem] mt-2 leading-relaxed">
+              Email <a href="mailto:anshul@altorlab.com" className="text-fg-secondary hover:text-fg transition-colors">anshul@altorlab.com</a>
             </p>
           </div>
 
@@ -59,11 +65,13 @@ const Footer = () => {
             <div>
               <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Product</h4>
               <div className="flex flex-col gap-2.5">
-                {productLinks.map(([label, id]) => (
-                  isHome ? (
-                    <a key={id} href={`#${id}`} onClick={go(id)} className={linkClass}>{label}</a>
+                {productLinks.map(([label, dest]) => (
+                  dest.startsWith('/') ? (
+                    <Link key={dest} to={dest} className={linkClass}>{label}</Link>
+                  ) : isHome ? (
+                    <a key={dest} href={`#${dest}`} onClick={go(dest)} className={linkClass}>{label}</a>
                   ) : (
-                    <Link key={id} to={`/#${id}`} className={linkClass}>{label}</Link>
+                    <Link key={dest} to={`/#${dest}`} className={linkClass}>{label}</Link>
                   )
                 ))}
               </div>
