@@ -16,6 +16,7 @@ const DIST = join(ROOT, 'dist')
 
 const ROUTES = [
   '/',
+  '/work/support-investigation',
   '/platform',
   '/about',
   '/compare/altor-vs-doc-chatbots',

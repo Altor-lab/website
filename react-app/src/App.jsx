@@ -16,6 +16,7 @@ import Glossary from './pages/Glossary'
 import GlossaryEntry from './pages/GlossaryEntry'
 import Platform from './pages/Platform'
 import About from './pages/About'
+import WorkSupportInvestigation from './pages/WorkSupportInvestigation'
 import NotFound from './pages/NotFound'
 import ForZendeskTeams from './pages/ForZendeskTeams'
 import ForIntercomTeams from './pages/ForIntercomTeams'
@@ -35,6 +36,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/platform" element={<Platform />} />
         <Route path="/about" element={<About />} />
+        <Route path="/work/support-investigation" element={<WorkSupportInvestigation />} />
         <Route path="/compare/altor-vs-doc-chatbots" element={<CompareDocChatbots />} />
         <Route path="/compare/altor-vs-support-platform-ai" element={<CompareSupportPlatformAI />} />
         <Route path="/compare/altor-vs-copilot-for-support" element={<CompareCopilotSupport />} />

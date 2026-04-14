@@ -15,6 +15,7 @@ const TODAY = new Date().toISOString().split('T')[0]
 
 const routes = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },
+  { path: '/work/support-investigation', priority: '0.95', changefreq: 'monthly' },
   { path: '/platform', priority: '0.9', changefreq: 'monthly' },
   { path: '/about', priority: '0.8', changefreq: 'monthly' },
   { path: '/customers/portkey', priority: '0.9', changefreq: 'monthly' },

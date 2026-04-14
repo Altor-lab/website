@@ -6,12 +6,15 @@ const Footer = () => {
   const isHome = location.pathname === '/'
 
   const productLinks = [
-    ['Platform', '/platform'],
-    ['How it works', 'how-it-works'],
-    ['Integrations', 'the-stack'],
-    ['Trust & safety', 'trust'],
-    ['FAQ', 'faq'],
     ['About', '/about'],
+    ['How we work', 'how-we-work'],
+    ['Who we work with', 'who-we-work-with'],
+    ['Blog', '/blog'],
+  ]
+
+  const workLinks = [
+    ['Support Investigation', '/work/support-investigation'],
+    ['Portkey case study', '/customers/portkey'],
   ]
 
   const compareLinks = [
@@ -21,12 +24,9 @@ const Footer = () => {
   ]
 
   const moreLinks = [
-    ['Portkey: 45 min → 2', '/customers/portkey'],
     ['API error investigation', '/use-case/api-error-investigation'],
-    ['Webhook failure investigation', '/use-case/webhook-failure-investigation'],
     ['For AI infrastructure', '/for/ai-infrastructure-companies'],
     ['For ClickHouse teams', '/for/clickhouse-teams'],
-    ['Blog', '/blog'],
     ['Glossary', '/glossary'],
   ]
 
@@ -48,13 +48,13 @@ const Footer = () => {
               {content.companyName}
             </Link>
             <p className="text-fg-muted text-[0.8125rem] mt-2 max-w-[28ch] leading-relaxed">
-              45 minutes to 2. Automated support investigation for US B2B engineering teams.
+              AI services company. We build and deploy production AI systems that rearchitect high-cost manual workflows.
             </p>
             <p className="text-fg-faint text-[0.75rem] mt-3 leading-relaxed">
-              200+ tickets diagnosed at Portkey. Deployed in 3 weeks.
+              Taking on 2–3 new engagements in 2026.
             </p>
             <p className="text-fg-faint text-[0.75rem] mt-2 leading-relaxed">
-              Usage-based in USD. No seat minimums. EST &amp; PST hours.
+              EST &amp; PST hours · US-based
             </p>
             <p className="text-fg-faint text-[0.75rem] mt-2 leading-relaxed">
               Email <a href="mailto:anshul@altorlab.com" className="text-fg-secondary hover:text-fg transition-colors">anshul@altorlab.com</a>
@@ -73,6 +73,15 @@ const Footer = () => {
                   ) : (
                     <Link key={dest} to={`/#${dest}`} className={linkClass}>{label}</Link>
                   )
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Work</h4>
+              <div className="flex flex-col gap-2.5">
+                {workLinks.map(([label, path]) => (
+                  <Link key={path} to={path} className={linkClass}>{label}</Link>
                 ))}
               </div>
             </div>

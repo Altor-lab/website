@@ -39,31 +39,30 @@ const Header = () => {
   }
 
   const pageLinks = [
-    { label: 'Platform', to: '/platform' },
-    { label: 'Portkey', to: '/customers/portkey' },
+    { label: 'Our Work', to: '/work/support-investigation' },
+    { label: 'How We Work', to: '/#how-we-work' },
     { label: 'About', to: '/about' },
     { label: 'Blog', to: '/blog' },
   ]
 
   const anchorLinks = [
-    ['How it works', 'how-it-works'],
-    ['Integrations', 'the-stack'],
-    ['Trust', 'trust'],
-    ['FAQ', 'faq'],
+    ['Our work', 'our-work'],
+    ['How we work', 'how-we-work'],
+    ['Who we work with', 'who-we-work-with'],
   ]
 
   return (
     <>
-      <div className="fixed inset-x-0 top-0 z-50 border-b border-edge-subtle bg-surface-1/95 backdrop-blur-xl">
+          <div className="fixed inset-x-0 top-0 z-50 border-b border-edge-subtle bg-surface-1/95 backdrop-blur-xl">
         <div className="max-w-[1120px] mx-auto px-4 sm:px-6 min-h-10 py-2 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
           <p className="text-[0.75rem] sm:text-[0.8125rem] text-fg-secondary">
-            Book a Demo — EST &amp; PST Hours Available
+            Taking on 2–3 new engagements in 2026 — EST &amp; PST hours
           </p>
           <a
-            href="mailto:anshul@altorlab.com?subject=Demo%20Request%20%E2%80%94%20Altor%20Support%20Investigation"
+            href="mailto:anshul@altorlab.com?subject=New%20Engagement%20%E2%80%94%20Altor%20AI%20Services"
             className="inline-flex items-center gap-1 text-[0.75rem] sm:text-[0.8125rem] font-medium text-accent hover:text-accent/80 transition-colors"
           >
-            <span>Schedule Call</span>
+            <span>Start a Conversation</span>
             <span aria-hidden="true">→</span>
           </a>
         </div>
@@ -100,8 +99,8 @@ const Header = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <Button href={content.hero.primaryCTA.url} size="sm" className="hidden sm:inline-flex">
-              {content.hero.primaryCTA.text}
+            <Button href="https://calendly.com/founders-altorlab/30min" size="sm" className="hidden sm:inline-flex">
+              Work With Us
             </Button>
 
             {/* Mobile menu button */}
