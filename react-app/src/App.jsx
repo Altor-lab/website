@@ -12,6 +12,7 @@ import ForAPIDevTools from './pages/ForAPIDevTools'
 import CustomerPortkey from './pages/CustomerPortkey'
 import Blog from './pages/Blog'
 import BlogEntry from './pages/BlogEntry'
+import Glossary from './pages/Glossary'
 import GlossaryEntry from './pages/GlossaryEntry'
 import NotFound from './pages/NotFound'
 import ForZendeskTeams from './pages/ForZendeskTeams'
@@ -49,6 +50,7 @@ function App() {
         <Route path="/for/clickhouse-teams" element={<ForClickhouseTeams />} />
         <Route path="/for/stripe-billing-teams" element={<ForStripeBilling />} />
         <Route path="/customers/portkey" element={<CustomerPortkey />} />
+        <Route path="/glossary" element={<Glossary />} />
         <Route path="/glossary/:term" element={<GlossaryEntry />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogEntry />} />

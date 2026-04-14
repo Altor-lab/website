@@ -35,6 +35,7 @@ const ROUTES = [
   '/for/clickhouse-teams',
   '/for/stripe-billing-teams',
   '/customers/portkey',
+  '/glossary',
   '/blog',
   '/blog/support-ticket-investigation-workflow',
   '/blog/support-investigation-cost',

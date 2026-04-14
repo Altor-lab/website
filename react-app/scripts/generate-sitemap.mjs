@@ -34,6 +34,7 @@ const routes = [
   { path: '/for/observability-companies', priority: '0.8', changefreq: 'monthly' },
   { path: '/for/clickhouse-teams', priority: '0.8', changefreq: 'monthly' },
   { path: '/for/stripe-billing-teams', priority: '0.8', changefreq: 'monthly' },
+  { path: '/glossary', priority: '0.7', changefreq: 'weekly' },
   { path: '/blog', priority: '0.7', changefreq: 'weekly' },
   { path: '/blog/support-ticket-investigation-workflow', priority: '0.7', changefreq: 'monthly' },
   { path: '/blog/support-investigation-cost', priority: '0.7', changefreq: 'monthly' },

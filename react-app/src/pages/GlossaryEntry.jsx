@@ -18,16 +18,37 @@ const GlossaryEntry = () => {
         acceptedAnswer: { '@type': 'Answer', text: f.a },
       })),
     }
+    const definedTermSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'DefinedTerm',
+      name: entry.term,
+      description: entry.definition,
+      url: `https://altorlab.com${entry.slug}`,
+      inDefinedTermSet: {
+        '@type': 'DefinedTermSet',
+        name: 'Support Operations Glossary',
+        url: 'https://altorlab.com/glossary',
+      },
+    }
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.id = 'glossary-faq-jsonld'
     script.textContent = JSON.stringify(faqSchema)
+    const termScript = document.createElement('script')
+    termScript.type = 'application/ld+json'
+    termScript.id = 'glossary-defined-term-jsonld'
+    termScript.textContent = JSON.stringify(definedTermSchema)
     const existing = document.getElementById('glossary-faq-jsonld')
     if (existing) existing.remove()
+    const existingTerm = document.getElementById('glossary-defined-term-jsonld')
+    if (existingTerm) existingTerm.remove()
     document.head.appendChild(script)
+    document.head.appendChild(termScript)
     return () => {
       const el = document.getElementById('glossary-faq-jsonld')
       if (el) el.remove()
+      const termEl = document.getElementById('glossary-defined-term-jsonld')
+      if (termEl) termEl.remove()
     }
   }, [entry])
 
