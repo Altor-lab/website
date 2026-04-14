@@ -40,8 +40,8 @@ const Header = () => {
 
   const pageLinks = [
     { label: 'Our Work', to: '/work/support-investigation' },
-    { label: 'How We Work', to: '/#how-we-work' },
-    { label: 'About', to: '/about' },
+    { label: 'Pricing', to: '/pricing' },
+    { label: 'Team', to: '/team' },
     { label: 'Blog', to: '/blog' },
   ]
 

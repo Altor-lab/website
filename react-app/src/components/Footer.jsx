@@ -114,13 +114,12 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">AltorLab</h4>
+              <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Trust</h4>
               <div className="flex flex-col gap-2.5">
-                <a href="https://altorlab.dev" target="_blank" rel="noopener noreferrer" className={linkClass}>Vector Search SDK</a>
-                <a href="https://altorlab.app" target="_blank" rel="noopener noreferrer" className={linkClass}>Accessibility Scanner</a>
-                <a href="https://altorlab.xyz" target="_blank" rel="noopener noreferrer" className={linkClass}>AI Marketing Agency</a>
-                <a href="https://app.altorlab.org" target="_blank" rel="noopener noreferrer" className={linkClass}>AI Room Redesign</a>
-                <a href="https://kundlimilan.co.in" target="_blank" rel="noopener noreferrer" className={linkClass}>Kundli Milan</a>
+                <Link to="/security" className={linkClass}>Security & Compliance</Link>
+                <Link to="/team" className={linkClass}>Our Team</Link>
+                <Link to="/pricing" className={linkClass}>Pricing</Link>
+                <Link to="/faq" className={linkClass}>FAQ</Link>
               </div>
             </div>
           </div>

@@ -99,14 +99,21 @@ export default function Home() {
 
             <motion.p
               variants={up} custom={2}
-              className="text-[1rem] sm:text-[1.125rem] text-fg-secondary leading-[1.7] max-w-[48ch] mb-10"
+              className="text-[1rem] sm:text-[1.125rem] text-fg-secondary leading-[1.7] max-w-[48ch] mb-6"
               style={{ textWrap: 'pretty' }}
             >
               Altor is an AI services company. We identify the workflows where AI can create measurable impact,
               then build and deploy the systems — live in production, not demo. Starting with your highest-cost manual process.
             </motion.p>
 
-            <motion.div variants={up} custom={3} className="flex flex-col sm:flex-row items-start gap-4">
+            <motion.div variants={up} custom={3} className="flex items-center gap-2.5 mb-10">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent/60" />
+              <span className="text-[0.8125rem] text-fg-muted">
+                Founded by ex-Microsoft AI Research · IIT Delhi Computer Science
+              </span>
+            </motion.div>
+
+            <motion.div variants={up} custom={4} className="flex flex-col sm:flex-row items-start gap-4">
               <Button href={demoHref} size="lg">Work With Us</Button>
               <Link
                 to="/work/support-investigation"
@@ -122,24 +129,50 @@ export default function Home() {
       {/* ━━━ THE CLAIM ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <div className="border-y border-edge-subtle bg-surface-1 py-10">
         <W>
-          <div className="flex flex-col sm:flex-row gap-6 sm:gap-0 sm:justify-between sm:items-center">
-            <div className="flex items-center gap-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-              <span className="text-[0.875rem] text-fg-secondary">
-                Every system we build is in production. Not demo.
-              </span>
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-0 sm:justify-between sm:items-center">
+              <div className="flex items-center gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                <span className="text-[0.875rem] text-fg-secondary">
+                  Every system we build is in production. Not demo.
+                </span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-6 sm:gap-12">
+                {[
+                  { value: '100%', label: 'production success rate' },
+                  { value: '3 wks', label: 'typical time to production' },
+                  { value: '45→2 min', label: 'impact at Portkey' },
+                ].map((s) => (
+                  <div key={s.label} className="flex items-baseline gap-2.5">
+                    <span className="font-display font-black text-fg text-[1.5rem] tracking-[-0.03em] leading-none">{s.value}</span>
+                    <span className="text-[0.75rem] text-fg-muted">{s.label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-12">
-              {[
-                { value: '100%', label: 'production success rate' },
-                { value: '3 wks', label: 'typical time to production' },
-                { value: '45→2 min', label: 'impact at Portkey' },
-              ].map((s) => (
-                <div key={s.label} className="flex items-baseline gap-2.5">
-                  <span className="font-display font-black text-fg text-[1.5rem] tracking-[-0.03em] leading-none">{s.value}</span>
-                  <span className="text-[0.75rem] text-fg-muted">{s.label}</span>
+
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-6 border-t border-edge-subtle">
+              <div>
+                <p className="text-[0.75rem] font-mono text-fg-muted tracking-[0.04em] uppercase mb-2.5">Systems we connect to</p>
+                <div className="flex flex-wrap gap-2">
+                  {['ClickHouse', 'Linear', 'Stripe', 'GitHub', 'StatusPage', 'PagerDuty', 'Mintlify', 'Zendesk'].map((sys) => (
+                    <span key={sys} className="inline-flex items-center rounded-full border border-edge bg-surface-0 px-3 py-1 text-[0.75rem] font-mono text-fg-secondary">
+                      {sys}
+                    </span>
+                  ))}
+                  <span className="inline-flex items-center rounded-full border border-edge-subtle px-3 py-1 text-[0.75rem] font-mono text-fg-faint">
+                    + custom API
+                  </span>
                 </div>
-              ))}
+              </div>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 shrink-0">
+                {['Read-only by default', 'Encrypted in transit', 'No model training'].map((t) => (
+                  <div key={t} className="flex items-center gap-1.5">
+                    <span className="text-accent text-[0.75rem]">✓</span>
+                    <span className="text-[0.75rem] text-fg-muted">{t}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </W>
@@ -406,13 +439,6 @@ export default function Home() {
         </W>
       </Reveal>
 
-      <a
-        href={demoHref}
-        className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full border border-edge bg-surface-0/95 px-4 py-3 text-[0.875rem] font-medium text-fg shadow-[0_12px_32px_rgba(0,0,0,0.14)] backdrop-blur-xl transition-all duration-200 hover:-translate-y-px hover:border-edge-hover hover:text-accent sm:bottom-6 sm:right-6"
-      >
-        <span className="w-2 h-2 rounded-full bg-accent animate-pulse" aria-hidden="true" />
-        <span>Work With Us</span>
-      </a>
     </>
   )
 }
