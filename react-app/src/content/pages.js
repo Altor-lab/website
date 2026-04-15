@@ -1888,4 +1888,184 @@ export const pages = {
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
   },
+
+  integrationClickhouse: {
+    slug: '/integrations/clickhouse',
+    title: 'Altor + ClickHouse: Automatic Log Queries During Ticket Investigation',
+    description: 'Altor connects to your ClickHouse instance and queries request logs, error rates, and latency percentiles automatically when a support ticket arrives. No manual SQL needed.',
+    datePublished: '2026-04-15',
+    dateModified: '2026-04-15',
+    hero: {
+      headline: 'Your support data is in ClickHouse. Altor queries it automatically.',
+      subhead: 'When a ticket arrives, Altor runs the ClickHouse queries your engineers would write — error rates by customer, latency percentiles, failed request patterns — and delivers the diagnosis before your agent finishes reading the ticket.',
+    },
+    sections: [
+      {
+        type: 'body',
+        title: 'What Altor queries in ClickHouse',
+        paragraphs: ['Altor generates and executes targeted ClickHouse queries for each ticket, pulling exactly the data needed to diagnose the reported issue:'],
+        bullets: [
+          'Request logs — error rates, status codes, response times by customer_id and endpoint over the relevant time window',
+          'system.query_log — slow queries, resource-intensive operations affecting the reporting customer',
+          'Custom event tables — whatever usage or behavioral data your product tracks per customer',
+          'Ingestion and pipeline tables — for data infrastructure products reporting missing or delayed data',
+          'Billing and usage tables — metered consumption reconciled against invoice line items',
+        ],
+      },
+      {
+        type: 'stats',
+        items: [
+          { value: '200+', label: 'tickets diagnosed via ClickHouse queries at Portkey' },
+          { value: '< 2 min', label: 'from ticket to ClickHouse-backed diagnosis' },
+          { value: '5-10', label: 'ClickHouse queries typically needed per investigation' },
+          { value: '0', label: 'queries your support team writes manually' },
+        ],
+      },
+      {
+        type: 'quote',
+        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        author: 'Engineering lead',
+        company: 'Portkey',
+      },
+      {
+        type: 'body',
+        title: 'How the ClickHouse integration works',
+        paragraphs: [
+          'Setup takes under 30 minutes. Altor connects to your ClickHouse instance with read-only credentials, learns your schema, and begins querying on the first ticket.',
+          'You control which tables Altor can access. Most teams grant access to request logs, error tables, and usage data — keeping payment and PII tables off-limits.',
+        ],
+      },
+    ],
+    relatedPages: [
+      { label: 'Altor for ClickHouse teams', path: '/for/clickhouse-teams' },
+      { label: 'API error investigation', path: '/use-case/api-error-investigation' },
+      { label: 'Portkey case study', path: '/customers/portkey' },
+    ],
+    cta: {
+      title: 'See Altor query your ClickHouse during a live ticket',
+      body: 'We connect to your ClickHouse instance and diagnose a real ticket in 2 minutes. US hours.',
+      buttonText: 'Book a Demo',
+      buttonUrl: 'https://calendly.com/founders-altorlab/30min',
+    },
+  },
+
+  integrationLinear: {
+    slug: '/integrations/linear',
+    title: 'Altor + Linear: Bug Tracker Queries in Every Support Investigation',
+    description: 'Altor searches Linear for open bugs, regressions, and known issues matching every support ticket — automatically. No more switching tabs to check if an issue is already filed.',
+    datePublished: '2026-04-15',
+    dateModified: '2026-04-15',
+    hero: {
+      headline: 'Every ticket automatically cross-referenced against your Linear backlog.',
+      subhead: 'When a customer reports a bug, Altor searches Linear for matching open issues, recent regressions, and deploy-correlated problems before your agent responds. No manual backlog search needed.',
+    },
+    sections: [
+      {
+        type: 'body',
+        title: 'What Altor checks in Linear',
+        paragraphs: ['Altor searches Linear using keywords and patterns extracted from each ticket:'],
+        bullets: [
+          'Open bugs matching the reported symptom — error messages, affected features, and impacted user flows',
+          'Recently closed issues that may have regressed — particularly useful for "this was working last week" reports',
+          'Issues correlated with recent deploys — Altor cross-references Linear with GitHub deploy history',
+          'Priority and assignee — so agents know whether the bug is being actively worked and by whom',
+          'ETA from issue labels or comments — gives agents something concrete to share with the customer',
+        ],
+      },
+      {
+        type: 'stats',
+        items: [
+          { value: '60%', label: 'of B2B technical tickets have a matching Linear issue' },
+          { value: '< 30s', label: 'to find and surface relevant Linear issues per ticket' },
+          { value: '3 tabs', label: 'average number of systems agents check before Altor' },
+          { value: '0', label: 'manual Linear searches needed' },
+        ],
+      },
+      {
+        type: 'quote',
+        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        author: 'Engineering lead',
+        company: 'Portkey',
+      },
+      {
+        type: 'body',
+        title: 'Why Linear search matters for support',
+        paragraphs: [
+          'Without automated Linear search, agents ask customers to reproduce issues that engineering already knows about and is actively fixing. This wastes customer trust and agent time.',
+          'With Altor, the first response includes: "We have an open issue tracking this (LINEAR-4821, assigned, no ETA yet). I\'ve added your report as additional context. I\'ll notify you when it\'s resolved."',
+        ],
+      },
+    ],
+    relatedPages: [
+      { label: 'Ticket investigation workflow', path: '/use-case/ticket-investigation' },
+      { label: 'Altor for developer tools', path: '/for/devtools-companies' },
+      { label: 'Portkey case study', path: '/customers/portkey' },
+    ],
+    cta: {
+      title: 'See Altor find the matching Linear issue in your first ticket',
+      body: 'We connect to Linear and your other systems, then diagnose a real ticket live. US hours.',
+      buttonText: 'Book a Demo',
+      buttonUrl: 'https://calendly.com/founders-altorlab/30min',
+    },
+  },
+
+  integrationStripe: {
+    slug: '/integrations/stripe',
+    title: 'Altor + Stripe: Billing Investigation Without Leaving the Ticket',
+    description: 'Altor pulls Stripe invoice data, charge history, and usage metrics automatically when billing tickets arrive — cross-referencing what was charged against what was actually used.',
+    datePublished: '2026-04-15',
+    dateModified: '2026-04-15',
+    hero: {
+      headline: 'Billing disputes resolved with evidence, not explanations.',
+      subhead: 'When a customer disputes a charge, Altor pulls the Stripe invoice, cross-references it against actual usage in your database, and delivers a complete picture before your agent responds.',
+    },
+    sections: [
+      {
+        type: 'body',
+        title: 'What Altor pulls from Stripe',
+        paragraphs: ['For every billing-related ticket, Altor automatically retrieves:'],
+        bullets: [
+          'Invoice line items and proration calculations — the exact breakdown of what was charged and why',
+          'Subscription change history — plan upgrades, downgrades, and the billing dates that affect the invoice',
+          'Payment attempt history — decline codes, retry attempts, and card processor responses',
+          'Stripe Radar decisions — fraud scores and rule triggers for flagged payments',
+          'Refund status — issued date, amount, and bank processing status for pending refunds',
+        ],
+      },
+      {
+        type: 'stats',
+        items: [
+          { value: '30-60 min', label: 'typical manual billing investigation time' },
+          { value: '< 2 min', label: 'Altor cross-references Stripe + usage data' },
+          { value: '#1', label: 'reason for SaaS churn — unresolved billing disputes' },
+          { value: '100%', label: 'of billing resolutions include evidence from both systems' },
+        ],
+      },
+      {
+        type: 'quote',
+        text: 'Our tickets are investigations, not FAQs. Nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        author: 'Engineering lead',
+        company: 'Portkey',
+      },
+      {
+        type: 'body',
+        title: 'Stripe + usage database reconciliation',
+        paragraphs: [
+          'The hardest billing tickets require comparing Stripe data against your internal usage database. A customer says they were charged for 2M API calls but their logs show 1.4M. Altor queries both systems simultaneously and identifies the discrepancy source.',
+          'This cross-system reconciliation used to require an engineer. Now it happens on every billing ticket, automatically.',
+        ],
+      },
+    ],
+    relatedPages: [
+      { label: 'Billing escalation debugging', path: '/use-case/billing-escalation-debugging' },
+      { label: 'Altor for Stripe billing teams', path: '/for/stripe-billing-teams' },
+      { label: 'Portkey case study', path: '/customers/portkey' },
+    ],
+    cta: {
+      title: 'See Altor resolve a billing dispute with Stripe evidence',
+      body: 'We connect to Stripe and your usage database, then diagnose a real billing ticket. US hours.',
+      buttonText: 'Book a Demo',
+      buttonUrl: 'https://calendly.com/founders-altorlab/30min',
+    },
+  },
 }

@@ -14,6 +14,9 @@ import Blog from './pages/Blog'
 import BlogEntry from './pages/BlogEntry'
 import Glossary from './pages/Glossary'
 import GlossaryEntry from './pages/GlossaryEntry'
+import ClickhouseIntegration from './pages/ClickhouseIntegration'
+import LinearIntegration from './pages/LinearIntegration'
+import StripeIntegration from './pages/StripeIntegration'
 import Platform from './pages/Platform'
 import About from './pages/About'
 import Team from './pages/Team'
@@ -63,6 +66,9 @@ function App() {
         <Route path="/for/stripe-billing-teams" element={<ForStripeBilling />} />
         <Route path="/customers/portkey" element={<CustomerPortkey />} />
         <Route path="/glossary" element={<Glossary />} />
+        <Route path="/integrations/clickhouse" element={<ClickhouseIntegration />} />
+        <Route path="/integrations/linear" element={<LinearIntegration />} />
+        <Route path="/integrations/stripe" element={<StripeIntegration />} />
         <Route path="/glossary/:term" element={<GlossaryEntry />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogEntry />} />
