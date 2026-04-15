@@ -86,6 +86,20 @@ const GlossaryEntry = () => {
           <p className="text-fg-muted leading-relaxed">{entry.context}</p>
         </section>
 
+        {entry.stats && entry.stats.length > 0 && (
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold text-fg-default mb-4">Key benchmarks</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {entry.stats.map((stat) => (
+                <div key={`${stat.value}-${stat.label}`} className="rounded-xl border border-border-default p-4">
+                  <div className="text-xl font-semibold text-fg-default mb-1">{stat.value}</div>
+                  <p className="text-xs text-fg-muted leading-relaxed">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         <section className="mb-8 p-5 rounded-xl border border-accent-muted/30 bg-accent-muted/5">
           <h2 className="text-xl font-semibold text-fg-default mb-3">How Altor helps</h2>
           <p className="text-fg-muted leading-relaxed">{entry.howAltorHelps}</p>
