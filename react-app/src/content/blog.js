@@ -810,4 +810,260 @@ export const blogPosts = {
       { label: 'Pricing: how we structure engagements', href: '/pricing' },
     ],
   },
+
+  aiAgentServicesGuide: {
+    slug: '/blog/ai-agent-services-guide',
+    title: 'AI Agent Services: What They Cost, How They Work, and Who Needs Them',
+    description: 'AI agent services cost $10K–$50K for a custom deployment, take 2–4 weeks, and automate specific workflows end-to-end. Here is exactly what you get, what it costs, and whether your business is a fit.',
+    datePublished: '2026-04-15',
+    dateModified: '2026-04-15',
+    readTime: '8 min read',
+
+    headline: 'AI agent services: what they cost, how they work, and who needs them',
+    opening: 'AI agent services cost $10K–$50K for a custom deployment, take 2–4 weeks, and automate specific workflows end-to-end — from customer support triage to invoice processing. Unlike chatbots that answer questions or platforms you configure yourself, AI agent services means a team builds, deploys, and runs the agent for you. This guide explains exactly what is included, what you pay, and how to tell whether your business is ready.',
+
+    sections: [
+      {
+        heading: 'What AI agent services actually means',
+        paragraphs: [
+          'An AI agent is software that takes actions on your behalf — reading tickets, querying databases, routing requests, generating diagnoses — by connecting to your existing tools. An AI agent service means someone builds that agent for you, deploys it into your production environment, and maintains it over time. You do not need engineers. You do not need to learn a platform. You hire a team to deliver a working agent that handles a specific workflow.',
+          'That is different from the three categories buyers usually confuse it with. A chatbot answers questions. It searches documents and produces text, but it usually does not connect to your production systems or complete a workflow end-to-end. An AI platform gives you tooling to build the system yourself, which still means your team owns setup, integrations, testing, and maintenance. AI consulting usually ends with a strategy document, a roadmap, or a recommendation — not a working production system.',
+        ],
+        bullets: [
+          'Chatbots answer questions. They are useful for FAQ deflection, but they do not typically investigate, route, or complete live workflows.',
+          'AI platforms give you the building blocks, but your team still has to design the workflow, connect the APIs, test edge cases, and maintain the system.',
+          'AI consulting gives you advice. AI agent services gives you a working system in production.',
+        ],
+      },
+      {
+        heading: 'What AI agents can actually do (and what they cannot)',
+        bullets: [
+          'Investigate support tickets by querying ClickHouse, Linear, Stripe, and GitHub simultaneously — delivering a root-cause diagnosis in 2 minutes instead of 45',
+          'Triage customer escalations by checking billing status, account history, and known issues before routing to the right team',
+          'Process invoice exceptions by cross-referencing purchase orders, delivery confirmations, and payment records',
+          'Qualify sales leads by pulling company data, prior interactions, and product fit signals from your CRM and web tools',
+          'Handle internal IT triage by querying your ticketing system, documentation, and infrastructure status',
+          'What AI agents cannot do (yet): make judgment calls with no clear criteria, work without structured data sources, or replace roles that require relationship management',
+        ],
+      },
+      {
+        heading: 'What AI agent services cost in 2026',
+        paragraphs: [
+          'Pricing varies by workflow complexity, number of systems connected, and whether you want ongoing support.',
+        ],
+        table: {
+          headers: ['Engagement type', 'What it includes', 'Typical cost', 'Timeline'],
+          rows: [
+            ['Prototype / proof of concept', 'Single workflow, 1-2 system connections, no production deployment', '$10K-$25K', '2-3 weeks'],
+            ['Production deployment', 'Full workflow, 3-6 system connections, monitoring, documentation', '$25K-$75K', '3-6 weeks'],
+            ['Ongoing support & improvement', 'Playbook updates, new ticket types, performance monitoring', '$1K-$5K/month', 'Ongoing'],
+            ['Enterprise / multi-workflow', 'Multiple workflows, full team embedding, custom infrastructure', '$75K-$200K+', '6-12 weeks'],
+          ],
+        },
+      },
+      {
+        heading: 'The ROI math',
+        paragraphs: [
+          'Before evaluating cost, calculate what the manual workflow currently costs.',
+        ],
+        steps: [
+          'Count the volume: how many times per day or week does this workflow run? (e.g., 15 support tickets per day)',
+          'Clock the time: how long does one manual pass take? (e.g., 35 minutes per ticket)',
+          'Calculate the cost: volume × time × loaded engineer hourly rate (e.g., 15 × 35 min × $150/hr × 250 days = $328K/year)',
+          'Compare to deployment cost: a $50K AI agent that reduces 35-minute investigations to 2 minutes pays back in 7 weeks',
+          'Add the invisible costs: escalations that happen because investigation took too long, engineer burnout from repetitive manual work, customers lost while waiting',
+        ],
+      },
+      {
+        heading: 'What to look for in an AI agent services company',
+        bullets: [
+          'They show you working systems, not demos: ask for a live investigation on your actual data during the evaluation',
+          'They deploy in weeks, not months: anything over 6 weeks for a single workflow is too long',
+          'They stay read-only by default: any company that wants write access on day one should be a red flag',
+          'They measure business outcomes, not model accuracy: "2 minutes instead of 45" matters; "94% accuracy" does not tell you enough',
+          'They have a clear governance model: who approves write actions? What happens when the agent is wrong? What is the rollback?',
+        ],
+      },
+      {
+        heading: 'Is your business ready for AI agent services?',
+        paragraphs: [
+          'Three signals that indicate you are a strong candidate:',
+        ],
+        bullets: [
+          'You have a specific, recurring workflow that costs real money: not "we want AI generally" but "our support team spends 30 minutes per ticket doing X"',
+          'You have data in production systems with APIs: ClickHouse, Stripe, Linear, GitHub, Salesforce, Jira, any database with an API connection',
+          'You have a human who will approve agent outputs initially: AI agents work best when a human reviews the first 50-100 outputs before expanding autonomy',
+        ],
+      },
+    ],
+
+    seeAlso: [
+      { label: 'See Altor build an AI agent for Portkey: 45 min to 2 min', href: '/work/support-investigation' },
+      { label: 'How AI agent services are priced', href: '/pricing' },
+      { label: 'What is an AI agent? Non-technical guide', href: '/blog/what-is-an-ai-agent' },
+    ],
+  },
+
+  aiAgentCostGuide: {
+    slug: '/blog/ai-agent-cost-pricing-guide',
+    title: 'How Much Does It Cost to Build an AI Agent? (2026 Pricing Guide)',
+    description: 'Custom AI agent development costs $10K–$75K for a production deployment. Here is the complete pricing breakdown by scope, timeline, and ongoing costs — with real examples.',
+    datePublished: '2026-04-15',
+    dateModified: '2026-04-15',
+    readTime: '6 min read',
+
+    headline: 'How much does it cost to build an AI agent in 2026?',
+    opening: 'Custom AI agent development costs $10K–$75K for a single-workflow production deployment, plus $1K–$5K/month for ongoing maintenance. The range is wide because "AI agent" covers everything from a simple chatbot integration to a multi-system investigation engine that queries 6 production APIs simultaneously. This guide breaks down what drives the cost, what you actually get at each price point, and how to calculate the ROI before you spend anything.',
+
+    sections: [
+      {
+        heading: 'The short answer: what you pay at each tier',
+        table: {
+          headers: ['Scope', 'What it includes', 'Cost', 'Timeline'],
+          rows: [
+            ['Simple agent (1 workflow, 1-2 APIs)', 'Basic automation, limited system connections, no production monitoring', '$5K-$15K', '1-2 weeks'],
+            ['Standard agent (1 workflow, 3-4 APIs)', 'Full workflow automation, production deployment, basic monitoring', '$15K-$40K', '2-4 weeks'],
+            ['Complex agent (1 workflow, 5-6 APIs)', 'Multi-system investigation, governance model, documentation, training', '$40K-$75K', '3-6 weeks'],
+            ['Enterprise (multiple workflows)', 'Multiple agents, infrastructure, ongoing optimization', '$75K-$200K+', '6-12 weeks'],
+          ],
+        },
+      },
+      {
+        heading: 'What drives cost up',
+        bullets: [
+          'Number of system integrations: each API connection adds $3K-$8K in integration work (authentication, schema mapping, error handling)',
+          'Data complexity: unstructured data (emails, PDFs, notes) costs more to process than structured databases',
+          'Governance requirements: human approval workflows, audit logs, and rollback mechanisms add $5K-$15K',
+          'Custom playbook development: the more ticket types or workflow variants you need covered, the higher the cost',
+          'Ongoing maintenance: agents need playbook updates as your product evolves; budget $1K-$5K/month',
+        ],
+      },
+      {
+        heading: 'What drives cost down',
+        bullets: [
+          'Structured data sources: if your data is already in clean databases with APIs, integration is faster',
+          'Single focused workflow: agents built for one specific workflow cost far less than general-purpose agents',
+          'Existing tooling: if you already use standard tools (Stripe, Linear, GitHub, ClickHouse), integrations are faster',
+          'Clear success criteria: the clearer you can define what "good" looks like, the faster and cheaper the build',
+        ],
+      },
+      {
+        heading: 'DIY vs. hiring AI agent services: the real cost comparison',
+        table: {
+          headers: ['Approach', 'Upfront cost', 'Time to production', 'Ongoing cost', 'Risk'],
+          rows: [
+            ['Hire in-house AI engineers', '$200K-$400K/year per engineer', '3-6 months', 'Salary + benefits', 'High — hard to hire, slow to ramp'],
+            ['Use an AI agent platform (DIY)', '$500-$2K/month', '2-6 months of internal time', 'Platform fees + internal time', 'Medium — requires engineering capacity'],
+            ['AI agent services (hire a team)', '$25K-$75K per workflow', '2-6 weeks', '$1K-$5K/month', 'Low — fixed-scope, outcomes-aligned'],
+          ],
+        },
+      },
+      {
+        heading: 'The ROI calculation you should run before paying anything',
+        steps: [
+          'Identify the workflow: what specific process will the agent handle?',
+          'Measure current cost: time per occurrence × frequency × loaded hourly cost',
+          'Example: 20 support tickets/day × 35 min × $150/hr × 250 days = $437,500/year in investigation time',
+          'Estimate AI agent cost: one-time $40K deployment + $2K/month ongoing = $64K in year one',
+          'Calculate payback period: $437K annual cost ÷ $64K agent cost = 6.9x ROI in year one',
+          'Add the secondary benefits: faster resolution time, lower escalation rate, engineer time freed for higher-value work',
+        ],
+      },
+      {
+        heading: 'Red flags that signal a bad AI agent proposal',
+        bullets: [
+          'No fixed price: "time and materials" on an AI agent project with undefined scope will cost 3-5x the estimate',
+          'Vague timeline: "we\'ll need a few months to assess" means they have not done this before',
+          'No examples of working agents: any serious team can show you a live system, not just a demo',
+          'No governance model: if they do not discuss read/write permissions and human approval on day one, your data is at risk',
+          'Pricing based on seats, not outcomes: AI agents should be priced on usage or outcomes, not user count',
+        ],
+      },
+    ],
+
+    seeAlso: [
+      { label: 'AI agent services: what they include and who needs them', href: '/blog/ai-agent-services-guide' },
+      { label: 'See our pricing model', href: '/pricing' },
+      { label: 'Portkey case study: what one agent deployment delivered', href: '/work/support-investigation' },
+    ],
+  },
+
+  whatIsAnAiAgent: {
+    slug: '/blog/what-is-an-ai-agent',
+    title: 'What Is an AI Agent? A Non-Technical Guide for Business Owners',
+    description: 'An AI agent is software that takes actions on your behalf by connecting to your existing tools. Unlike chatbots, agents do work — not just answer questions. Here is what that means for your business.',
+    datePublished: '2026-04-15',
+    dateModified: '2026-04-15',
+    readTime: '5 min read',
+
+    headline: 'What is an AI agent? A non-technical guide for business owners',
+    opening: 'An AI agent is software that takes actions on your behalf — reading tickets, querying your database, investigating problems, routing requests — by connecting to the tools your business already uses. Unlike a chatbot that answers questions from a script, an AI agent does work. It connects to your real systems, pulls real data, and produces real outputs that your team acts on. This guide explains what that means practically, with no technical jargon.',
+
+    sections: [
+      {
+        heading: 'The simplest way to understand AI agents',
+        paragraphs: [
+          'A chatbot is like a FAQ page that talks back. You ask it something, it searches its knowledge base, and it gives you an answer.',
+          'An AI agent is like a junior analyst who has access to your systems. You give it a task, it goes and does the work — pulling your customer\'s billing history from Stripe, checking your bug tracker for known issues, looking at recent deploys in GitHub — and it comes back with findings.',
+          'The difference is the data source. A chatbot reads documents. An AI agent queries your live production systems.',
+        ],
+      },
+      {
+        heading: 'What an AI agent actually does, step by step',
+        steps: [
+          'Receives a task: a support ticket arrives, an invoice exception is flagged, a lead comes in',
+          'Connects to your systems: the agent queries your database, CRM, billing system, bug tracker — wherever the relevant data lives',
+          'Reasons over the data: it correlates findings across systems to identify patterns, root causes, or next actions',
+          'Produces an output: a diagnosis, a recommendation, a routing decision, or a draft response — ready for human review',
+          'Waits for approval (initially): the human reviews the output, confirms it is correct, and the action is taken',
+        ],
+      },
+      {
+        heading: 'AI agents vs chatbots vs AI copilots: the real difference',
+        table: {
+          headers: ['', 'Chatbot', 'AI Copilot', 'AI Agent'],
+          rows: [
+            ['What it reads', 'Documents, FAQs', 'Whatever you paste in', 'Your live production systems'],
+            ['What it does', 'Answers questions', 'Helps you write things', 'Investigates and acts'],
+            ['Data freshness', 'Static (last training)', 'Whatever you provide', 'Real-time'],
+            ['Example output', 'Here is our refund policy', 'Here is a draft email', 'Customer acme-corp: 429 errors since 09:14 UTC. Known bug LIN-482. Fix in 3 days.'],
+            ['Best for', 'FAQ deflection', 'Drafting, summarizing', 'Investigation, triage, automation'],
+          ],
+        },
+      },
+      {
+        heading: 'Real examples of what AI agents do in businesses today',
+        bullets: [
+          'Support investigation: a customer reports an API error. The agent queries logs, checks for known bugs, verifies billing, and delivers a diagnosis in 2 minutes — what a human would take 45 minutes to do manually',
+          'Invoice exception handling: an invoice does not match the purchase order. The agent checks both, identifies the discrepancy, and routes to the right approver with a summary',
+          'Lead qualification: a new lead fills out a form. The agent checks their company size, industry, prior interactions, and signals a score and recommended next step to the sales rep',
+          'IT triage: an employee submits an IT request. The agent checks their permissions, identifies the issue type, and either resolves it automatically or routes to the right team with context',
+        ],
+      },
+      {
+        heading: 'What your business needs to be ready for an AI agent',
+        bullets: [
+          'A specific, repeated workflow: not "we want AI generally" — an agent needs a defined task it does over and over',
+          'Data in systems with APIs: the agent connects to your tools via APIs. If your data is in spreadsheets or paper, you need to solve that first',
+          'A human to review outputs initially: agents work best when humans review the first 50-100 outputs before expanding their autonomy',
+          'Clear success criteria: you need to know what "correct" looks like before you can measure whether the agent is doing it right',
+        ],
+      },
+      {
+        heading: 'Common misconceptions about AI agents',
+        bullets: [
+          'Misconception: AI agents replace employees. Reality: they replace specific tasks — the 45 minutes of manual lookup — not the judgment, communication, or relationship work that makes employees valuable',
+          'Misconception: AI agents are autonomous and unpredictable. Reality: well-built agents are read-only by default, require human approval for any actions, and have explicit rollback procedures',
+          'Misconception: AI agents require a technical team to run. Reality: a good AI agent service deploys the agent, handles maintenance, and updates it as your workflows evolve',
+          'Misconception: AI agents are expensive and slow to deploy. Reality: a focused single-workflow agent can be in production in 2-3 weeks for $25K-$50K',
+        ],
+      },
+    ],
+
+    seeAlso: [
+      { label: 'AI agent services: what they cost and include', href: '/blog/ai-agent-services-guide' },
+      { label: 'See a real AI agent in action: the Portkey investigation', href: '/work/support-investigation' },
+      { label: 'How much does an AI agent cost?', href: '/blog/ai-agent-cost-pricing-guide' },
+    ],
+  },
 }

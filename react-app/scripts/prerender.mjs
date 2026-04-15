@@ -4,11 +4,13 @@
  * and writes the full HTML back to dist/ so crawlers see real content.
  */
 
-import { spawn } from 'child_process'
-import { existsSync, mkdirSync, writeFileSync, readFileSync } from 'fs'
-import { dirname, join } from 'path'
-import { fileURLToPath } from 'url'
-import http from 'http'
+import { spawn } from 'node:child_process'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import http from 'node:http'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+import { glossaryTerms } from '../src/content/glossary.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
@@ -54,10 +56,12 @@ const ROUTES = [
   '/blog/why-enterprise-ai-fails-in-production',
   '/blog/production-ai-complete-guide',
   '/blog/ai-services-vs-ai-consulting-vs-ai-implementation',
+  '/blog/ai-agent-services-guide',
+  '/blog/ai-agent-cost-pricing-guide',
+  '/blog/what-is-an-ai-agent',
 ]
 
 // Dynamically add glossary terms
-import { glossaryTerms } from '../src/content/glossary.js'
 for (const slug of Object.keys(glossaryTerms)) {
   ROUTES.push(`/glossary/${slug}`)
 }
@@ -72,7 +76,7 @@ setTimeout(() => {
 }, 600_000)
 
 function httpGet(url) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const req = http.get(url, (res) => resolve(res.statusCode))
     req.on('error', () => resolve(null))
     req.setTimeout(2000, () => { req.destroy(); resolve(null) })

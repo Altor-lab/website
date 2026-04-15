@@ -73,6 +73,7 @@ const problems = [
 
 export default function Home() {
   const demoHref = 'https://calendly.com/founders-altorlab/30min'
+  const emailWorkflowHref = 'mailto:anshul@altorlab.com?subject=AI%20Services%20Inquiry&body=Workflow%3A%20%0A%0ASample%20cases%3A%20%0A%0ATimeline%3A%20'
 
   return (
     <>
@@ -114,7 +115,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={up} custom={4} className="flex flex-col sm:flex-row items-start gap-4">
-              <Button href={demoHref} size="lg">Work With Us</Button>
+              <Button href={emailWorkflowHref} size="lg">Email us your workflow →</Button>
               <Link
                 to="/work/support-investigation"
                 className="inline-flex items-center gap-2 text-[0.9375rem] text-fg-secondary hover:text-fg transition-colors link-underline"
@@ -122,6 +123,9 @@ export default function Home() {
                 See our work →
               </Link>
             </motion.div>
+            <motion.p variants={up} custom={5} className="text-fg-muted text-[0.8125rem] mt-2">
+              Describe your workflow + 2–3 sample cases. We reply with a 1-page automation plan — free, no call needed.
+            </motion.p>
           </motion.div>
         </W>
       </section>
@@ -292,6 +296,37 @@ export default function Home() {
         </W>
       </Reveal>
 
+      {/* ━━━ WHAT WE AUTOMATE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <Reveal className="py-20 md:py-28 bg-surface-1" id="what-we-automate">
+        <W>
+          <motion.p variants={up} custom={0} className="font-mono text-fg-muted text-[0.75rem] tracking-[0.05em] uppercase mb-5">
+            Workflows we automate
+          </motion.p>
+          <motion.h2
+            variants={up} custom={1}
+            className="font-display font-bold text-fg leading-[1.08] tracking-[-0.03em] mb-12"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)' }}
+          >
+            Any workflow with data in systems and a human doing it manually.
+          </motion.h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { label: 'Support investigation & triage', detail: 'Query logs, bug trackers, and billing to diagnose tickets in 2 min instead of 45' },
+              { label: 'Customer ops exception handling', detail: 'Surface context and route escalations before they reach engineering' },
+              { label: 'Finance ops reconciliation', detail: 'Cross-reference invoices, POs, and payment records to flag discrepancies automatically' },
+              { label: 'Sales ops qualification', detail: 'Score and route inbound leads by querying CRM, web signals, and fit criteria' },
+              { label: 'Internal IT & ops triage', detail: 'Resolve tier-1 requests and route tier-2 with full context already pulled' },
+              { label: 'Any API-connected workflow', detail: 'If your data is in systems with APIs and a human is doing it manually, we can automate it' },
+            ].map((item, i) => (
+              <motion.div key={item.label} variants={up} custom={i + 2} className="rounded-xl border border-edge bg-surface-0 p-5 hover:border-edge-hover transition-colors duration-200">
+                <h3 className="font-display font-semibold text-fg text-[0.9375rem] tracking-[-0.01em] mb-2">{item.label}</h3>
+                <p className="text-fg-secondary text-[0.8125rem] leading-[1.65]">{item.detail}</p>
+              </motion.div>
+            ))}
+          </div>
+        </W>
+      </Reveal>
+
       {/* ━━━ HOW WE WORK ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <Reveal className="py-24 md:py-36 bg-surface-1" id="how-we-work">
         <W>
@@ -428,10 +463,10 @@ export default function Home() {
               <motion.div variants={up} custom={3} className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
                 <Button href={demoHref} size="lg">Start a Conversation</Button>
                 <a
-                  href="mailto:anshul@altorlab.com"
+                  href={emailWorkflowHref}
                   className="text-fg-secondary hover:text-fg text-[0.9375rem] transition-colors link-underline"
                 >
-                  or email anshul@altorlab.com
+                  or email us your workflow →
                 </a>
               </motion.div>
             </div>

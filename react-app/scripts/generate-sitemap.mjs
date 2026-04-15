@@ -3,9 +3,11 @@
  * Runs before vite build so the sitemap is included in dist/.
  */
 
-import { writeFileSync } from 'fs'
-import { join, dirname } from 'path'
-import { fileURLToPath } from 'url'
+import { writeFileSync } from 'node:fs'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+import { glossaryTerms } from '../src/content/glossary.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const PUBLIC = join(__dirname, '..', 'public')
@@ -53,10 +55,12 @@ const routes = [
   { path: '/blog/why-enterprise-ai-fails-in-production', priority: '0.9', changefreq: 'monthly' },
   { path: '/blog/production-ai-complete-guide', priority: '0.9', changefreq: 'monthly' },
   { path: '/blog/ai-services-vs-ai-consulting-vs-ai-implementation', priority: '0.8', changefreq: 'monthly' },
+  { path: '/blog/ai-agent-services-guide', priority: '0.9', changefreq: 'monthly' },
+  { path: '/blog/ai-agent-cost-pricing-guide', priority: '0.9', changefreq: 'monthly' },
+  { path: '/blog/what-is-an-ai-agent', priority: '0.8', changefreq: 'monthly' },
 ]
 
 // Dynamically add glossary terms
-import { glossaryTerms } from '../src/content/glossary.js'
 for (const slug of Object.keys(glossaryTerms)) {
   routes.push({ path: `/glossary/${slug}`, priority: '0.6', changefreq: 'monthly' })
 }
