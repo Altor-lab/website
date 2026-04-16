@@ -103,8 +103,7 @@ export default function Home() {
               className="text-[1rem] sm:text-[1.125rem] text-fg-secondary leading-[1.7] max-w-[48ch] mb-6"
               style={{ textWrap: 'pretty' }}
             >
-              Altor is an AI services company. We identify the workflows where AI can create measurable impact,
-              then build and deploy the systems — live in production, not demo. Starting with your highest-cost manual process.
+              We identify your highest-cost manual workflow, build the AI system, and deploy it to production in 3 weeks — not demo.
             </motion.p>
 
             <motion.div variants={up} custom={3} className="flex items-center gap-2.5 mb-10">
@@ -124,7 +123,7 @@ export default function Home() {
               </Link>
             </motion.div>
             <motion.p variants={up} custom={5} className="text-fg-muted text-[0.8125rem] mt-2">
-              Describe your workflow + 2–3 sample cases. We reply with a 1-page automation plan — free, no call needed.
+              No sales call. Describe your workflow → get a 1-page automation plan back within 24 hours.
             </motion.p>
           </motion.div>
         </W>
@@ -386,6 +385,59 @@ export default function Home() {
               </Link>
             </div>
           </motion.div>
+        </W>
+      </Reveal>
+
+      {/* ━━━ FREE INTELLIGENCE TOOLS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <Reveal className="py-16 md:py-20 bg-surface-1">
+        <W>
+          <motion.p variants={up} custom={0} className="font-mono text-fg-muted text-[0.75rem] tracking-[0.05em] uppercase mb-5">
+            Free intelligence tools
+          </motion.p>
+          <motion.h2
+            variants={up} custom={1}
+            className="font-display font-bold text-fg leading-[1.08] tracking-[-0.03em] mb-4"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', textWrap: 'balance' }}
+          >
+            We built tools to understand the AI landscape. They're free.
+          </motion.h2>
+          <motion.p variants={up} custom={2} className="text-fg-secondary text-[0.9375rem] leading-[1.7] max-w-[52ch] mb-10" style={{ textWrap: 'pretty' }}>
+            The same intelligence we use to identify automation opportunities for clients — now public.
+          </motion.p>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              {
+                label: 'AI Stack Tracker',
+                description: 'Which AI tools is any B2B company actually using? Detected from public signals — updated daily.',
+                path: '/ai-stack',
+                stat: '170+ companies tracked',
+              },
+              {
+                label: 'MCP Server Directory',
+                description: 'Every Model Context Protocol server in one place. Search by category, sort by stars, copy install commands.',
+                path: '/mcp-servers',
+                stat: '2,000+ servers indexed',
+              },
+              {
+                label: 'Automation Guides',
+                description: 'How to automate any business workflow with any AI tool — Claude, ChatGPT, n8n, Zapier and more.',
+                path: '/automate',
+                stat: '20 workflows × 8 tools',
+              },
+            ].map((tool, i) => (
+              <motion.div key={tool.label} variants={up} custom={i + 3}>
+                <Link
+                  to={tool.path}
+                  className="group block rounded-xl border border-edge bg-surface-0 p-6 hover:border-accent/30 transition-colors duration-200 h-full"
+                >
+                  <p className="font-mono text-accent text-[0.75rem] tracking-[0.04em] mb-3">{tool.stat}</p>
+                  <h3 className="font-display font-bold text-fg text-[1rem] tracking-[-0.01em] mb-2 group-hover:text-accent transition-colors duration-200">{tool.label}</h3>
+                  <p className="text-fg-secondary text-[0.8125rem] leading-[1.65] mb-4">{tool.description}</p>
+                  <span className="text-[0.8125rem] text-accent group-hover:opacity-75 transition-opacity">Explore →</span>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </W>
       </Reveal>
 
