@@ -7,6 +7,7 @@ import { writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { readFileSync, existsSync } from 'node:fs'
 import { glossaryTerms } from '../src/content/glossary.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -60,10 +61,29 @@ const routes = [
   { path: '/blog/what-is-an-ai-agent', priority: '0.8', changefreq: 'monthly' },
 ]
 
-// Dynamically add glossary terms
+// Glossary terms
 for (const slug of Object.keys(glossaryTerms)) {
   routes.push({ path: `/glossary/${slug}`, priority: '0.6', changefreq: 'monthly' })
 }
+
+// New programmatic sections — read from data files if they exist
+const DATA_DIR = join(PUBLIC, 'data')
+
+const automationsPath = join(DATA_DIR, 'automations.json')
+if (existsSync(automationsPath)) {
+  try {
+    const automations = JSON.parse(readFileSync(automationsPath, 'utf-8'))
+    routes.push({ path: '/automate', priority: '0.8', changefreq: 'weekly' })
+    for (const page of automations.pages || []) {
+      routes.push({ path: page.slug, priority: '0.7', changefreq: 'weekly' })
+    }
+  } catch { /* skip if malformed */ }
+} else {
+  routes.push({ path: '/automate', priority: '0.8', changefreq: 'weekly' })
+}
+
+routes.push({ path: '/mcp-servers', priority: '0.8', changefreq: 'daily' })
+routes.push({ path: '/ai-stack', priority: '0.8', changefreq: 'daily' })
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

@@ -61,9 +61,23 @@ const ROUTES = [
   '/blog/what-is-an-ai-agent',
 ]
 
-// Dynamically add glossary terms
+// Glossary terms
 for (const slug of Object.keys(glossaryTerms)) {
   ROUTES.push(`/glossary/${slug}`)
+}
+
+// Static programmatic index pages
+ROUTES.push('/ai-stack', '/mcp-servers', '/automate')
+
+// Automation detail pages from data file
+const automationsDataPath = join(ROOT, 'public', 'data', 'automations.json')
+if (existsSync(automationsDataPath)) {
+  try {
+    const automations = JSON.parse(readFileSync(automationsDataPath, 'utf-8'))
+    for (const page of automations.pages || []) {
+      ROUTES.push(page.slug)
+    }
+  } catch { /* skip if data not yet populated */ }
 }
 
 const PORT = 4173
