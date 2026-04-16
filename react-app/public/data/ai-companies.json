@@ -1,10 +1,644 @@
 {
   "meta": {
-    "generated_at": "2026-04-16T00:00:00Z",
-    "company_count": 0,
-    "total_detections": 0,
+    "generated_at": "2026-04-16T13:20:28.707084+00:00",
+    "company_count": 41,
+    "total_detections": 20,
     "crawler_version": "1.0.0",
-    "description": "AI tool adoption intelligence. First crawl pending — check back tomorrow."
+    "description": "AI tool adoption intelligence for B2B SaaS companies. Signals sourced from public web surfaces, ATS job postings, and vendor customer pages. Confidence-scored, evidence-linked."
   },
-  "companies": []
+  "companies": [
+    {
+      "name": "OpenRouter",
+      "domain": "openrouter.ai",
+      "ai_tools": [
+        {
+          "vendor": "Algolia",
+          "tool": "Algolia AI Search",
+          "tier": "app_layer",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://openrouter.ai",
+            "https://openrouter.ai/537s/"
+          ],
+          "confidence": "high"
+        },
+        {
+          "vendor": "AWS",
+          "tool": "Amazon Bedrock",
+          "tier": "model_api",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://openrouter.ai",
+            "https://openrouter.ai/537s/"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "vendor": "Hugging Face",
+          "tool": "Hugging Face",
+          "tier": "orchestration",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://openrouter.ai",
+            "https://openrouter.ai/537s/"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "tool_count": 3,
+      "last_crawled": "2026-04-16T13:20:06.341871+00:00",
+      "altor_fit": "strong",
+      "first_seen": "2026-04-16T13:20:06.341871+00:00"
+    },
+    {
+      "name": "Render",
+      "domain": "render.com",
+      "ai_tools": [
+        {
+          "vendor": "Inkeep",
+          "tool": "Inkeep AI Search",
+          "tier": "app_layer",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://render.com",
+            "https://render.com/_next/static/chunks/4bd1b696-e21779a6db3ba2ac.js?dpl=76f8d4dc77"
+          ],
+          "confidence": "high"
+        },
+        {
+          "vendor": "Algolia",
+          "tool": "Algolia AI Search",
+          "tier": "app_layer",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://render.com",
+            "https://render.com/_next/static/chunks/4bd1b696-e21779a6db3ba2ac.js?dpl=76f8d4dc77"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "tool_count": 2,
+      "last_crawled": "2026-04-16T13:20:28.240134+00:00",
+      "altor_fit": "good",
+      "first_seen": "2026-04-16T13:20:28.240134+00:00"
+    },
+    {
+      "name": "Snyk",
+      "domain": "snyk.io",
+      "ai_tools": [
+        {
+          "vendor": "OpenAI",
+          "tool": "OpenAI API",
+          "tier": "model_api",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://snyk.io",
+            "https://snyk.io/_next/static/chunks/polyfills-42372ed130431b0a.js"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "vendor": "Google",
+          "tool": "Gemini / Vertex AI",
+          "tier": "model_api",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://snyk.io",
+            "https://snyk.io/_next/static/chunks/polyfills-42372ed130431b0a.js"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "tool_count": 2,
+      "last_crawled": "2026-04-16T13:20:28.018408+00:00",
+      "altor_fit": "strong",
+      "first_seen": "2026-04-16T13:20:28.018408+00:00"
+    },
+    {
+      "name": "Twilio",
+      "domain": "twilio.com",
+      "ai_tools": [
+        {
+          "vendor": "LangChain",
+          "tool": "LangChain",
+          "tier": "orchestration",
+          "sources": [
+            "jobs"
+          ],
+          "evidence_urls": [],
+          "confidence": "medium"
+        },
+        {
+          "vendor": "GitHub",
+          "tool": "GitHub Copilot",
+          "tier": "internal_tool",
+          "sources": [
+            "jobs"
+          ],
+          "evidence_urls": [],
+          "confidence": "medium"
+        }
+      ],
+      "tool_count": 2,
+      "last_crawled": "2026-04-16T13:20:12.720616+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-16T13:20:12.720616+00:00"
+    },
+    {
+      "name": "Baseten",
+      "domain": "baseten.co",
+      "ai_tools": [
+        {
+          "vendor": "Cursor",
+          "tool": "Cursor",
+          "tier": "internal_tool",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://baseten.co",
+            "https://baseten.co/_next/static/chunks/d2543580-e3b9c10f1d3a73eb.js"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-04-16T13:20:07.817872+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-16T13:20:07.817872+00:00"
+    },
+    {
+      "name": "Coda",
+      "domain": "coda.io",
+      "ai_tools": [
+        {
+          "vendor": "Intercom",
+          "tool": "Intercom Fin (AI)",
+          "tier": "app_layer",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://coda.io",
+            "https://cdn.coda.io/assets/external-cms.4912bb72ae9fb989.entry.js"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-04-16T13:20:25.680748+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-16T13:20:25.680748+00:00"
+    },
+    {
+      "name": "Cursor",
+      "domain": "cursor.com",
+      "ai_tools": [
+        {
+          "vendor": "Cursor",
+          "tool": "Cursor",
+          "tier": "internal_tool",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://cursor.com",
+            "https://cursor.com/marketing-static/_next/static/chunks/0iy-8817mal06.js?dpl=dpl_5yV48hXjyqb1Z3gAAMrkNyC57nmF"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-04-16T13:20:22.507714+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-16T13:20:22.507714+00:00"
+    },
+    {
+      "name": "Datadog",
+      "domain": "datadoghq.com",
+      "ai_tools": [
+        {
+          "vendor": "Algolia",
+          "tool": "Algolia AI Search",
+          "tier": "app_layer",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://datadoghq.com",
+            "https://www.datadoghq.com/assets/lang-redirects.min.c1ad237f9d953469286cce919fd714d9edf7ad193e6a60798192d8a8c69156a6.js"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-04-16T13:20:06.261369+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-16T13:20:06.261369+00:00"
+    },
+    {
+      "name": "Fly.io",
+      "domain": "fly.io",
+      "ai_tools": [
+        {
+          "vendor": "Algolia",
+          "tool": "Algolia AI Search",
+          "tier": "app_layer",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://fly.io",
+            "https://fly.io/js/events.js"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-04-16T13:20:25.943789+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-16T13:20:25.943789+00:00"
+    },
+    {
+      "name": "Grafana Labs",
+      "domain": "grafana.com",
+      "ai_tools": [
+        {
+          "vendor": "Anthropic",
+          "tool": "Claude API",
+          "tier": "model_api",
+          "sources": [
+            "jobs"
+          ],
+          "evidence_urls": [],
+          "confidence": "medium"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-04-16T13:20:15.997878+00:00",
+      "altor_fit": "good",
+      "first_seen": "2026-04-16T13:20:15.997878+00:00"
+    },
+    {
+      "name": "Intercom",
+      "domain": "intercom.com",
+      "ai_tools": [
+        {
+          "vendor": "Intercom",
+          "tool": "Intercom Fin (AI)",
+          "tier": "app_layer",
+          "sources": [
+            "web",
+            "jobs"
+          ],
+          "evidence_urls": [
+            "https://intercom.com",
+            "https://vercel.intercom.com/_next/static/chunks/622a720c-808383e10886e4e4.js?dpl=dpl_5rjRbr87MyF2Q6VruXRsBR2V1PjG"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-04-16T13:20:23.235919+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-16T13:20:23.235919+00:00"
+    },
+    {
+      "name": "Linear",
+      "domain": "linear.app",
+      "ai_tools": [
+        {
+          "vendor": "Algolia",
+          "tool": "Algolia AI Search",
+          "tier": "app_layer",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://linear.app",
+            "https://static.linear.app/web/_next/static/chunks/bdae276b-c0e1772c77a1b251.js"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-04-16T13:20:24.423739+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-16T13:20:24.423739+00:00"
+    },
+    {
+      "name": "New Relic",
+      "domain": "newrelic.com",
+      "ai_tools": [
+        {
+          "vendor": "AWS",
+          "tool": "Amazon Bedrock",
+          "tier": "model_api",
+          "sources": [
+            "jobs"
+          ],
+          "evidence_urls": [],
+          "confidence": "medium"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-04-16T13:20:09.925577+00:00",
+      "altor_fit": "good",
+      "first_seen": "2026-04-16T13:20:09.925577+00:00"
+    },
+    {
+      "name": "Portkey",
+      "domain": "portkey.ai",
+      "ai_tools": [
+        {
+          "vendor": "Anthropic",
+          "tool": "Claude API",
+          "tier": "model_api",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://portkey.ai",
+            "https://portkey.ai/privacy"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-04-16T13:20:06.010224+00:00",
+      "altor_fit": "good",
+      "first_seen": "2026-04-16T13:20:06.010224+00:00"
+    },
+    {
+      "name": "Supabase",
+      "domain": "supabase.com",
+      "ai_tools": [
+        {
+          "vendor": "LangChain",
+          "tool": "LangChain",
+          "tier": "orchestration",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://supabase.com",
+            "https://frontend-assets.supabase.com/www/0cb71a24976e/_next/static/chunks/polyfills-42372ed130431b0a.js?dpl=dpl_Be9NoXZESuMkBM6DVuWreccVMfUL"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-04-16T13:20:14.123149+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-16T13:20:14.123149+00:00"
+    },
+    {
+      "name": "Brainlid / LangCache",
+      "domain": "langcache.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:06.187122+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:06.187122+00:00"
+    },
+    {
+      "name": "Chronosphere",
+      "domain": "chronosphere.io",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:10.412795+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:10.412795+00:00"
+    },
+    {
+      "name": "Clerk",
+      "domain": "clerk.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:12.083023+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:12.083023+00:00"
+    },
+    {
+      "name": "Convex",
+      "domain": "convex.dev",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:18.065285+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:18.065285+00:00"
+    },
+    {
+      "name": "Drata",
+      "domain": "drata.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:27.189899+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:27.189899+00:00"
+    },
+    {
+      "name": "Fivetran",
+      "domain": "fivetran.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:17.389958+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:17.389958+00:00"
+    },
+    {
+      "name": "Front",
+      "domain": "front.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:22.194626+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:22.194626+00:00"
+    },
+    {
+      "name": "Hex",
+      "domain": "hex.tech",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:22.081901+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:22.081901+00:00"
+    },
+    {
+      "name": "Honeycomb",
+      "domain": "honeycomb.io",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:12.676965+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:12.676965+00:00"
+    },
+    {
+      "name": "Metabase",
+      "domain": "metabase.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:19.925299+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:19.925299+00:00"
+    },
+    {
+      "name": "Modal",
+      "domain": "modal.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:09.043462+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:09.043462+00:00"
+    },
+    {
+      "name": "Neon",
+      "domain": "neon.tech",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:14.309262+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:14.309262+00:00"
+    },
+    {
+      "name": "Notion",
+      "domain": "notion.so",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:26.420716+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:26.420716+00:00"
+    },
+    {
+      "name": "Plain",
+      "domain": "plain.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:18.159609+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:18.159609+00:00"
+    },
+    {
+      "name": "PlanetScale",
+      "domain": "planetscale.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:14.062427+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:14.062427+00:00"
+    },
+    {
+      "name": "Pylon",
+      "domain": "usepylon.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:20.328113+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:20.328113+00:00"
+    },
+    {
+      "name": "Railway",
+      "domain": "railway.app",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:27.677692+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:27.677692+00:00"
+    },
+    {
+      "name": "Replicate",
+      "domain": "replicate.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:05.864911+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:05.864911+00:00"
+    },
+    {
+      "name": "Retool",
+      "domain": "retool.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:18.903696+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:18.903696+00:00"
+    },
+    {
+      "name": "Stripe",
+      "domain": "stripe.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:10.903510+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:10.903510+00:00"
+    },
+    {
+      "name": "Together AI",
+      "domain": "together.ai",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:07.282218+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:07.282218+00:00"
+    },
+    {
+      "name": "Turso",
+      "domain": "turso.tech",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:14.256274+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:14.256274+00:00"
+    },
+    {
+      "name": "Vanta",
+      "domain": "vanta.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:28.705890+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:28.705890+00:00"
+    },
+    {
+      "name": "Vercel",
+      "domain": "vercel.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:25.563132+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:25.563132+00:00"
+    },
+    {
+      "name": "Zendesk",
+      "domain": "zendesk.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:22.500123+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:22.500123+00:00"
+    },
+    {
+      "name": "dbt Labs",
+      "domain": "getdbt.com",
+      "ai_tools": [],
+      "tool_count": 0,
+      "last_crawled": "2026-04-16T13:20:20.182002+00:00",
+      "altor_fit": "low",
+      "first_seen": "2026-04-16T13:20:20.182002+00:00"
+    }
+  ]
 }
