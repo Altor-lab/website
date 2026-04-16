@@ -52,6 +52,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes detected — skipping commit"
           else
+            git pull --rebase origin master
             git commit -m "chore(data): daily AI stack crawl $(date -u '+%Y-%m-%d')"
             git push
           fi

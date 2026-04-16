@@ -48,6 +48,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes — skipping commit"
           else
+            git pull --rebase origin master
             git commit -m "chore(data): daily automation workflows update $(date -u '+%Y-%m-%d')"
             git push
           fi
