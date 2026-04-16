@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write          # needed to commit ai-companies.json back to repo
+  actions: write           # needed to trigger static.yml site rebuild after crawl
 
 jobs:
   crawl:
