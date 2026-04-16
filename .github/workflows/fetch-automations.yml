@@ -44,11 +44,14 @@ jobs:
         run: |
           git config user.name "Altor Crawler Bot"
           git config user.email "bot@altorlab.com"
+          cp react-app/public/data/automations.json /tmp/automations.json
+          git fetch origin master
+          git reset --hard origin/master
+          cp /tmp/automations.json react-app/public/data/automations.json
           git add react-app/public/data/automations.json
           if git diff --staged --quiet; then
             echo "No changes — skipping commit"
           else
-            git pull --rebase origin master
             git commit -m "chore(data): daily automation workflows update $(date -u '+%Y-%m-%d')"
             git push
           fi

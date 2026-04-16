@@ -46,11 +46,14 @@ jobs:
         run: |
           git config user.name "Altor Crawler Bot"
           git config user.email "bot@altorlab.com"
+          cp react-app/public/data/mcp-servers.json /tmp/mcp-servers.json
+          git fetch origin master
+          git reset --hard origin/master
+          cp /tmp/mcp-servers.json react-app/public/data/mcp-servers.json
           git add react-app/public/data/mcp-servers.json
           if git diff --staged --quiet; then
             echo "No changes — skipping commit"
           else
-            git pull --rebase origin master
             git commit -m "chore(data): daily MCP server directory update $(date -u '+%Y-%m-%d')"
             git push
           fi
