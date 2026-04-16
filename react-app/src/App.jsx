@@ -34,6 +34,7 @@ import ForEcommercePlatforms from './pages/ForEcommercePlatforms'
 import ForObservability from './pages/ForObservability'
 import ForClickhouseTeams from './pages/ForClickhouseTeams'
 import ForStripeBilling from './pages/ForStripeBilling'
+import AIStackTracker from './pages/AIStackTracker'
 
 function App() {
   return (
@@ -64,6 +65,7 @@ function App() {
         <Route path="/for/observability-companies" element={<ForObservability />} />
         <Route path="/for/clickhouse-teams" element={<ForClickhouseTeams />} />
         <Route path="/for/stripe-billing-teams" element={<ForStripeBilling />} />
+        <Route path="/ai-stack" element={<AIStackTracker />} />
         <Route path="/customers/portkey" element={<CustomerPortkey />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/integrations/clickhouse" element={<ClickhouseIntegration />} />
