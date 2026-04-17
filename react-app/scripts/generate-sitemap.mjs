@@ -82,19 +82,79 @@ if (existsSync(automationsPath)) {
   routes.push({ path: '/automate', priority: '0.8', changefreq: 'weekly' })
 }
 
-routes.push({ path: '/mcp-servers', priority: '0.8', changefreq: 'daily' })
-routes.push({ path: '/ai-stack', priority: '0.8', changefreq: 'daily' })
+routes.push({ path: '/mcp-servers', priority: '0.9', changefreq: 'daily' })
+routes.push({ path: '/ai-stack', priority: '0.9', changefreq: 'daily' })
+
+const makeUrl = (path, priority, changefreq, lastmod = TODAY) => `  <url>
+    <loc>${BASE_URL}${path}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${routes.map(r => `  <url>
-    <loc>${BASE_URL}${r.path}</loc>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>${BASE_URL}/sitemap-pages.xml</loc>
     <lastmod>${TODAY}</lastmod>
-    <changefreq>${r.changefreq}</changefreq>
-    <priority>${r.priority}</priority>
-  </url>`).join('\n')}
+  </sitemap>
+  <sitemap>
+    <loc>${BASE_URL}/sitemap-data.xml</loc>
+    <lastmod>${TODAY}</lastmod>
+  </sitemap>
+</sitemapindex>
+`
+
+const pagesXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${routes.map(r => makeUrl(r.path, r.priority, r.changefreq)).join('\n')}
 </urlset>
 `
 
 writeFileSync(join(PUBLIC, 'sitemap.xml'), xml, 'utf-8')
-console.log(`[sitemap] Generated sitemap.xml with ${routes.length} URLs`)
+writeFileSync(join(PUBLIC, 'sitemap-pages.xml'), pagesXml, 'utf-8')
+console.log(`[sitemap] Generated sitemap index + sitemap-pages.xml with ${routes.length} URLs`)
+
+const mcpPath = join(DATA_DIR, 'mcp-servers.json')
+const dataRoutes = []
+
+if (existsSync(mcpPath)) {
+  try {
+    const mcpData = JSON.parse(readFileSync(mcpPath, 'utf-8'))
+    const topServers = (mcpData.servers || [])
+      .filter(s => s.owner && s.repo)
+      .slice(0, 1000)
+    for (const s of topServers) {
+      dataRoutes.push(makeUrl(
+        `/mcp-servers/${s.owner}/${s.repo}`,
+        '0.6',
+        'weekly',
+        mcpData.meta?.generated_at?.slice(0, 10) || TODAY
+      ))
+    }
+  } catch { /* skip */ }
+}
+
+if (existsSync(automationsPath)) {
+  try {
+    const automations = JSON.parse(readFileSync(automationsPath, 'utf-8'))
+    for (const page of automations.pages || []) {
+      dataRoutes.push(makeUrl(
+        page.slug,
+        '0.7',
+        'weekly',
+        automations.meta?.generated_at?.slice(0, 10) || TODAY
+      ))
+    }
+  } catch { /* skip */ }
+}
+
+if (dataRoutes.length > 0) {
+  const dataXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${dataRoutes.join('\n')}
+</urlset>
+`
+  writeFileSync(join(PUBLIC, 'sitemap-data.xml'), dataXml, 'utf-8')
+  console.log(`[sitemap] Generated sitemap-data.xml with ${dataRoutes.length} data URLs`)
+}
