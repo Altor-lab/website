@@ -40,15 +40,20 @@ jobs:
           print(f"OK: {n} automation pages, {d['meta']['workflows']} workflows × {d['meta']['tools']} tools")
           EOF
 
+      - name: Update sitemap-data.xml
+        run: python crawler/update_sitemap_data.py
+
       - name: Commit and push
         run: |
           git config user.name "Altor Crawler Bot"
           git config user.email "bot@altorlab.com"
           cp react-app/public/data/automations.json /tmp/automations.json
+          cp react-app/public/sitemap-data.xml /tmp/sitemap-data.xml 2>/dev/null || true
           git fetch origin master
           git reset --hard origin/master
           cp /tmp/automations.json react-app/public/data/automations.json
-          git add react-app/public/data/automations.json
+          [ -f /tmp/sitemap-data.xml ] && cp /tmp/sitemap-data.xml react-app/public/sitemap-data.xml
+          git add react-app/public/data/automations.json react-app/public/sitemap-data.xml
           if git diff --staged --quiet; then
             echo "No changes — skipping commit"
           else

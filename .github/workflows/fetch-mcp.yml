@@ -42,15 +42,20 @@ jobs:
           print(f"OK: {n} MCP servers across {len(d['meta']['categories'])} categories")
           EOF
 
+      - name: Update sitemap-data.xml
+        run: python crawler/update_sitemap_data.py
+
       - name: Commit and push
         run: |
           git config user.name "Altor Crawler Bot"
           git config user.email "bot@altorlab.com"
           cp react-app/public/data/mcp-servers.json /tmp/mcp-servers.json
+          cp react-app/public/sitemap-data.xml /tmp/sitemap-data.xml
           git fetch origin master
           git reset --hard origin/master
           cp /tmp/mcp-servers.json react-app/public/data/mcp-servers.json
-          git add react-app/public/data/mcp-servers.json
+          cp /tmp/sitemap-data.xml react-app/public/sitemap-data.xml
+          git add react-app/public/data/mcp-servers.json react-app/public/sitemap-data.xml
           if git diff --staged --quiet; then
             echo "No changes — skipping commit"
           else

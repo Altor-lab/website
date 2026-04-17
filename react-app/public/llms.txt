@@ -83,6 +83,21 @@ Usage-based — per investigation, not per seat. No seat minimums. No annual com
 - **Root Cause Analysis:** https://altorlab.com/glossary/root-cause-analysis — RCA in the support context.
 - **SLA:** https://altorlab.com/glossary/sla-service-level-agreement — Service Level Agreements in B2B support.
 
+### Free Intelligence Tools (Updated Daily)
+
+- **AI Stack Tracker:** https://altorlab.com/ai-stack — Detects which AI tools 170+ B2B SaaS companies are actually using. Signals sourced from public web surfaces (homepage HTML, CSP headers, JS bundle strings, privacy policy subprocessor disclosures) and public ATS job postings via Greenhouse and Lever APIs. Covers: model APIs (OpenAI, Claude, Gemini, Bedrock, Azure OpenAI, Mistral, Cohere), orchestration frameworks (LangChain, LlamaIndex, n8n, Zapier AI), customer-facing AI (Intercom Fin, Kapa.ai, Inkeep, Ada, Chatbase, Algolia AI), vector infra (Pinecone, Weaviate, Qdrant), and internal tools (Cursor, GitHub Copilot). Each detection is confidence-scored (medium/high) and evidence-linked.
+
+- **MCP Server Directory:** https://altorlab.com/mcp-servers — 2,300+ Model Context Protocol servers indexed from the official MCP registry (registry.modelcontextprotocol.io), GitHub topic:mcp-server search, and the curated awesome-mcp-servers community list. Categorized into 16 groups: Databases, Web & Browser, Developer Tools, AI & ML, File System, Communication, Cloud & Infra, Search, Data & Analytics, Finance, Security, Media, Maps & Location, Productivity, Version Control, Other. Each entry shows: name, description, category, GitHub URL, install command (npx/uvx), star count, source.
+
+- **Automation Guides:** https://altorlab.com/automate — 86 step-by-step guides for automating business workflows with AI tools. 20 workflows: customer support, lead qualification, invoice processing, content repurposing, data entry, report generation, code review, employee onboarding, social media posting, email management, contract review, meeting notes, candidate screening, incident response, customer feedback analysis, inventory management, sales outreach, financial reconciliation, document summarisation, webhook processing. 8 tools per workflow: Claude (Anthropic), ChatGPT/GPT-4o (OpenAI), n8n, Zapier, Make, LangChain, Gemini (Google), Amazon Bedrock. Each guide includes: problem statement, outcome metrics, step-by-step process, tool profile with pricing, related n8n templates where available.
+
+Sample automation guide URLs:
+- https://altorlab.com/automate/customer-support/with/claude
+- https://altorlab.com/automate/invoice-processing/with/n8n
+- https://altorlab.com/automate/incident-response/with/langchain
+- https://altorlab.com/automate/lead-qualification/with/chatgpt
+- https://altorlab.com/automate/code-review/with/claude
+
 ---
 
 ## Field Notes (Blog)
@@ -101,4 +116,4 @@ Usage-based — per investigation, not per seat. No seat minimums. No annual com
 
 ---
 
-Last Updated: 2026-04-15
+Last Updated: 2026-04-17
