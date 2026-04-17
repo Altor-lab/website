@@ -1,14 +1,14 @@
 export const pages = {
   compareDocChatbots: {
     slug: '/compare/altor-vs-doc-chatbots',
-    title: 'Altor vs. Doc Chatbots for US B2B Teams — Why FAQ Lookup Fails B2B Support',
+    title: 'Altor vs. Doc Chatbots for US B2B Teams - Why FAQ Lookup Fails B2B Support',
     description: 'Doc chatbots answer "how does this work?" Altor answers "why is this broken for this customer right now?" for US B2B support teams by investigating across 6+ live systems in under 2 minutes.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
     hero: {
       headline: 'Doc chatbots answer questions. For US B2B teams, tickets still need investigations.',
-      subhead: 'When a customer reports "my API calls are returning 429s," a doc chatbot searches your knowledge base. Altor queries their actual API logs in ClickHouse, checks Linear for known bugs, and verifies their billing in Stripe — delivering a root-cause diagnosis in 2 minutes instead of 45 for US support teams working EST and PST coverage.',
+      subhead: 'When a customer reports "my API calls are returning 429s," a doc chatbot searches your knowledge base. Altor queries their actual API logs in ClickHouse, checks Linear for known bugs, and verifies their billing in Stripe - delivering a root-cause diagnosis in 2 minutes instead of 45 for US support teams working EST and PST coverage.',
     },
 
     sections: [
@@ -35,13 +35,13 @@ export const pages = {
           },
           {
             dimension: 'Time to resolution',
-            chatbot: 'Customer escalates → engineer investigates manually (20–45 min)',
+            chatbot: 'Customer escalates → engineer investigates manually (20-45 min)',
             altor: '2 minutes, no escalation needed',
           },
           {
             dimension: 'Ticket coverage',
             chatbot: '~20% of B2B support tickets (FAQ-answerable)',
-            altor: 'The other 80% — tickets requiring live data from customer systems',
+            altor: 'The other 80% - tickets requiring live data from customer systems',
           },
           {
             dimension: 'Pricing for US teams',
@@ -59,18 +59,18 @@ export const pages = {
         type: 'stats',
         items: [
           { value: '80%', label: 'of B2B support tickets require investigation, not doc lookups' },
-          { value: '2 min', label: 'median diagnosis time with Altor (down from 20–45 min)' },
+          { value: '2 min', label: 'median diagnosis time with Altor (down from 20-45 min)' },
           { value: '6+', label: 'systems queried per investigation' },
-          { value: '$80–200K', label: 'annual cost per support engineer spent on manual investigation' },
+          { value: '$80-200K', label: 'annual cost per support engineer spent on manual investigation' },
         ],
       },
       {
         type: 'body',
         title: 'The 80% gap in support AI',
         paragraphs: [
-          'Doc chatbots solve a real problem — they handle password resets, "how do I configure X?" questions, and onboarding queries well. That covers roughly 20% of B2B support volume.',
+          'Doc chatbots solve a real problem - they handle password resets, "how do I configure X?" questions, and onboarding queries well. That covers roughly 20% of B2B support volume.',
           'The other 80% are technical investigations: "my API calls are failing," "latency spiked since yesterday," "webhooks stopped firing." These require pulling live customer data from ClickHouse, checking Linear for known bugs, verifying Stripe billing status, and cross-referencing recent GitHub deploys. No knowledge base contains this information because it changes with every customer and every ticket.',
-          'This is the gap Altor fills. Not by replacing your doc chatbot — by handling the 80% it was never designed to solve.',
+          'This is the gap Altor fills. Not by replacing your doc chatbot - by handling the 80% it was never designed to solve.',
         ],
       },
       {
@@ -83,7 +83,7 @@ export const pages = {
         type: 'body',
         title: 'How Altor works alongside your existing tools',
         paragraphs: [
-          'Altor is not a replacement for your doc chatbot or your support platform. It\'s the investigation layer that sits between them. Your support platform (Pylon, Zendesk, Intercom) routes and manages tickets. Your doc chatbot handles FAQ-style questions. Altor handles everything else — the technical investigations that currently escalate to engineering.',
+          'Altor is not a replacement for your doc chatbot or your support platform. It\'s the investigation layer that sits between them. Your support platform (Pylon, Zendesk, Intercom) routes and manages tickets. Your doc chatbot handles FAQ-style questions. Altor handles everything else - the technical investigations that currently escalate to engineering.',
           'When a ticket arrives that needs investigation, Altor queries 6+ integrated systems, synthesizes findings into a structured diagnosis, and delivers it back into your existing workflow. Your support team gets root causes, not search results.',
         ],
       },
@@ -97,7 +97,7 @@ export const pages = {
 
     cta: {
       title: 'See the difference on a real ticket',
-      body: 'We\'ll connect to your systems and investigate a ticket from your queue — live. Your data, your ticket, diagnosed in real time during EST or PST hours.',
+      body: 'We\'ll connect to your systems and investigate a ticket from your queue - live. Your data, your ticket, diagnosed in real time during EST or PST hours.',
       buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
@@ -105,21 +105,21 @@ export const pages = {
 
   compareSupportPlatformAI: {
     slug: '/compare/altor-vs-support-platform-ai',
-    title: 'Altor vs. Support Platform AI for US B2B Teams — Investigation, Not Routing',
-    description: 'Zendesk AI routes tickets. Intercom Fin answers from docs. Altor investigates across ClickHouse, Linear, Stripe, and GitHub to diagnose what\'s actually broken for US B2B teams — in 2 minutes.',
+    title: 'Altor vs. Support Platform AI for US B2B Teams - Investigation, Not Routing',
+    description: 'Zendesk AI routes tickets. Intercom Fin answers from docs. Altor investigates across ClickHouse, Linear, Stripe, and GitHub to diagnose what\'s actually broken for US B2B teams - in 2 minutes.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
     hero: {
       headline: 'Support platforms route tickets. For US B2B teams, Altor investigates them.',
-      subhead: 'Zendesk AI triages and routes. Intercom Fin answers from your help center. Neither queries your customer\'s actual API logs, checks your bug tracker, or verifies their billing status. Altor does — across 6+ systems in under 2 minutes for US support teams.',
+      subhead: 'Zendesk AI triages and routes. Intercom Fin answers from your help center. Neither queries your customer\'s actual API logs, checks your bug tracker, or verifies their billing status. Altor does - across 6+ systems in under 2 minutes for US support teams.',
     },
 
     sections: [
       {
         type: 'comparison',
         title: 'What each tool actually does',
-        subtitle: 'Altor complements your existing support platform — it doesn\'t replace it.',
+        subtitle: 'Altor complements your existing support platform - it doesn\'t replace it.',
         comparisonLabel: 'Support platform AI',
         rows: [
           {
@@ -163,18 +163,18 @@ export const pages = {
         type: 'body',
         title: 'Why your support platform AI isn\'t enough',
         paragraphs: [
-          'Support platform AI is built for workflow optimization — routing tickets to the right team, suggesting relevant articles, auto-categorizing by topic. This is valuable. But it doesn\'t touch the core bottleneck in B2B technical support: the investigation itself.',
-          'When a customer reports "latency spiked since this morning," your support platform can route it to the right engineer. But that engineer still needs to open ClickHouse, check the customer\'s API logs, compare against yesterday\'s baseline, check GitHub for recent deploys, and search Linear for known issues. That\'s 20–45 minutes of manual investigation per ticket.',
-          'Altor automates the investigation. It queries ClickHouse, finds the latency spike at 09:14 UTC, identifies deploy #447 as the likely cause, checks that no upstream incidents exist, and delivers a structured diagnosis — all in 2 minutes.',
+          'Support platform AI is built for workflow optimization - routing tickets to the right team, suggesting relevant articles, auto-categorizing by topic. This is valuable. But it doesn\'t touch the core bottleneck in B2B technical support: the investigation itself.',
+          'When a customer reports "latency spiked since this morning," your support platform can route it to the right engineer. But that engineer still needs to open ClickHouse, check the customer\'s API logs, compare against yesterday\'s baseline, check GitHub for recent deploys, and search Linear for known issues. That\'s 20-45 minutes of manual investigation per ticket.',
+          'Altor automates the investigation. It queries ClickHouse, finds the latency spike at 09:14 UTC, identifies deploy #447 as the likely cause, checks that no upstream incidents exist, and delivers a structured diagnosis - all in 2 minutes.',
         ],
       },
       {
         type: 'stats',
         items: [
-          { value: '20–45 min', label: 'typical manual investigation time per technical ticket' },
+          { value: '20-45 min', label: 'typical manual investigation time per technical ticket' },
           { value: '2 min', label: 'Altor\'s median diagnosis time across 200+ tickets' },
           { value: '6+', label: 'production systems queried per investigation' },
-          { value: '0', label: 'workflows you need to change — Altor plugs into your existing tools' },
+          { value: '0', label: 'workflows you need to change - Altor plugs into your existing tools' },
         ],
       },
       {
@@ -187,7 +187,7 @@ export const pages = {
         type: 'body',
         title: 'How Altor fits into your stack',
         paragraphs: [
-          'Altor works with Pylon, Plain, Zendesk, and Intercom — it ingests tickets from your existing platform and delivers diagnoses back into the same workflow. You keep your routing rules, SLAs, and team structure. Altor adds the investigation layer your support AI is missing.',
+          'Altor works with Pylon, Plain, Zendesk, and Intercom - it ingests tickets from your existing platform and delivers diagnoses back into the same workflow. You keep your routing rules, SLAs, and team structure. Altor adds the investigation layer your support AI is missing.',
           'Think of it this way: your support platform is the operating system for your support team. Altor is the investigator that actually solves the technical tickets.',
         ],
       },
@@ -209,14 +209,14 @@ export const pages = {
 
   useCaseAPIErrors: {
     slug: '/use-case/api-error-investigation',
-    title: 'Automate API Error Investigation — Root Cause in 2 Minutes',
+    title: 'Automate API Error Investigation - Root Cause in 2 Minutes',
     description: 'When customers report API errors, Altor queries ClickHouse logs, checks Linear for known bugs, verifies Stripe billing, and delivers a root-cause diagnosis in under 2 minutes.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
     hero: {
       headline: 'From "my API is broken" to root cause in 2 minutes.',
-      subhead: 'API error tickets are the most common — and most time-consuming — category in B2B technical support. Altor automates the entire investigation: querying logs, checking for known bugs, verifying billing, and cross-referencing recent deploys.',
+      subhead: 'API error tickets are the most common - and most time-consuming - category in B2B technical support. Altor automates the entire investigation: querying logs, checking for known bugs, verifying billing, and cross-referencing recent deploys.',
     },
 
     sections: [
@@ -228,7 +228,7 @@ export const pages = {
         ],
         steps: [
           'Support engineer opens ClickHouse. Queries the customer\'s API logs for 429 responses. Finds error rate spiked from 12% to 43% over the last 2 hours.',
-          'Opens Linear. Searches for rate limit bugs. Finds LIN-482: "rate limit regression" — open, priority urgent.',
+          'Opens Linear. Searches for rate limit bugs. Finds LIN-482: "rate limit regression" - open, priority urgent.',
           'Checks Stripe. Confirms the customer\'s plan is active and usage is within limits. Rules out billing.',
           'Checks GitHub. Finds PR #891 (fix/rate-limit) in review. ETA: 3 days.',
           'Writes the response. Explains the known bug, links the workaround docs, gives the ETA for the fix.',
@@ -237,23 +237,23 @@ export const pages = {
       {
         type: 'stats',
         items: [
-          { value: '20–45 min', label: 'time for a support engineer to manually investigate an API error ticket' },
-          { value: '4–6', label: 'systems checked per investigation (logs, bugs, billing, code, docs, status)' },
-          { value: '5–10', label: 'copy-paste operations between tabs per investigation' },
+          { value: '20-45 min', label: 'time for a support engineer to manually investigate an API error ticket' },
+          { value: '4-6', label: 'systems checked per investigation (logs, bugs, billing, code, docs, status)' },
+          { value: '5-10', label: 'copy-paste operations between tabs per investigation' },
         ],
       },
       {
         type: 'body',
         title: 'The same investigation, automated by Altor',
         paragraphs: [
-          'Altor runs the same workflow — but in 2 minutes instead of 45:',
+          'Altor runs the same workflow - but in 2 minutes instead of 45:',
         ],
         steps: [
           'Ingests the ticket from your support platform (Pylon, Zendesk, Intercom, or Slack).',
           'Queries ClickHouse: 429 error rate for this customer spiked 12% → 43% over 2 hours.',
-          'Searches Linear: LIN-482 "rate limit regression" — open, priority urgent.',
+          'Searches Linear: LIN-482 "rate limit regression" - open, priority urgent.',
           'Checks Stripe: Plan active, usage within limits. Not a billing issue.',
-          'Checks GitHub: fix/rate-limit PR #891 — in review, shipping in 3 days.',
+          'Checks GitHub: fix/rate-limit PR #891 - in review, shipping in 3 days.',
           'Delivers structured diagnosis with root cause, workaround, and ETA to your support team.',
         ],
       },
@@ -262,9 +262,9 @@ export const pages = {
         title: 'What the support team sees',
         paragraphs: [
           'Altor delivers a structured diagnosis directly into your support workflow:',
-          'Diagnosis: Known bug LIN-482 causing elevated 429s for this customer. Error rate spiked from 12% to 43% over the last 2 hours. Fix is in review (PR #891, ETA 3 days). Customer billing is current — not a plan/usage issue.',
+          'Diagnosis: Known bug LIN-482 causing elevated 429s for this customer. Error rate spiked from 12% to 43% over the last 2 hours. Fix is in review (PR #891, ETA 3 days). Customer billing is current - not a plan/usage issue.',
           'Recommended response: Explain the known issue, link to rate limit documentation with exponential backoff workaround, and provide the 3-day ETA for the permanent fix.',
-          'The support engineer reviews the diagnosis, optionally edits the draft response, and sends — turning a 45-minute investigation into a 2-minute review-and-send.',
+          'The support engineer reviews the diagnosis, optionally edits the draft response, and sends - turning a 45-minute investigation into a 2-minute review-and-send.',
         ],
       },
       {
@@ -280,11 +280,11 @@ export const pages = {
           'Rate limit errors are one pattern. Altor handles the full spectrum of API error investigations:',
         ],
         bullets: [
-          '5xx server errors — correlates with recent deploys, upstream outages, and resource exhaustion',
-          'Authentication failures — checks token expiration, permission changes, and billing status',
-          'Timeout errors — traces latency across the request chain, identifies bottleneck services',
-          'Webhook delivery failures — verifies endpoint health, checks for regional outages, confirms event queuing',
-          'SDK version issues — matches client SDK version against known compatibility bugs',
+          '5xx server errors - correlates with recent deploys, upstream outages, and resource exhaustion',
+          'Authentication failures - checks token expiration, permission changes, and billing status',
+          'Timeout errors - traces latency across the request chain, identifies bottleneck services',
+          'Webhook delivery failures - verifies endpoint health, checks for regional outages, confirms event queuing',
+          'SDK version issues - matches client SDK version against known compatibility bugs',
         ],
       },
     ],
@@ -306,20 +306,20 @@ export const pages = {
   customerPortkey: {
     slug: '/customers/portkey',
     title: 'How Portkey Cut Investigation Time From 45 Min to 2',
-    description: 'Portkey deployed Altor to automate technical support investigations across ClickHouse, Linear, Stripe, and GitHub. Result: 200+ tickets diagnosed at a 2-minute median, down from 20–45 minutes manually.',
+    description: 'Portkey deployed Altor to automate technical support investigations across ClickHouse, Linear, Stripe, and GitHub. Result: 200+ tickets diagnosed at a 2-minute median, down from 20-45 minutes manually.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
     hero: {
       headline: 'Portkey: 45 minutes to 2, across 200+ tickets.',
-      subhead: 'Portkey is an AI gateway platform handling billions of API requests. Their support team was spending 20–45 minutes per ticket manually pulling data from ClickHouse, Linear, Stripe, and GitHub. After deploying Altor, median investigation time dropped to 2 minutes — with zero changes to their existing support workflow.',
+      subhead: 'Portkey is an AI gateway platform handling billions of API requests. Their support team was spending 20-45 minutes per ticket manually pulling data from ClickHouse, Linear, Stripe, and GitHub. After deploying Altor, median investigation time dropped to 2 minutes - with zero changes to their existing support workflow.',
     },
 
     sections: [
       {
         type: 'stats',
         items: [
-          { value: '2 min', label: 'median diagnosis time (down from 20–45 min manually)' },
+          { value: '2 min', label: 'median diagnosis time (down from 20-45 min manually)' },
           { value: '200+', label: 'tickets diagnosed since deployment' },
           { value: '6', label: 'production systems connected (ClickHouse, Linear, Stripe, GitHub, docs, StatusPage)' },
           { value: '2 weeks', label: 'from kickoff to first live investigation' },
@@ -330,8 +330,8 @@ export const pages = {
         title: 'The problem',
         paragraphs: [
           'Portkey routes billions of LLM API requests through their gateway. When a customer reports "my API calls are failing" or "latency spiked since this morning," Portkey\'s support team needs to investigate across multiple systems: API logs in ClickHouse, known bugs in Linear, customer billing in Stripe, and recent deploys on GitHub.',
-          'Each investigation followed the same manual pattern: open ClickHouse, write a query, find the error pattern, switch to Linear, search for matching bugs, check Stripe, check GitHub deploys, cross-reference everything, and write the response. This took 20–45 minutes per ticket — for a workflow that was 80% identical every time.',
-          'Portkey wasn\'t lacking a support platform. They had one. What they lacked was the investigation layer — something that could pull live data from their actual systems and produce a diagnosis, not just route the ticket to the right person.',
+          'Each investigation followed the same manual pattern: open ClickHouse, write a query, find the error pattern, switch to Linear, search for matching bugs, check Stripe, check GitHub deploys, cross-reference everything, and write the response. This took 20-45 minutes per ticket - for a workflow that was 80% identical every time.',
+          'Portkey wasn\'t lacking a support platform. They had one. What they lacked was the investigation layer - something that could pull live data from their actual systems and produce a diagnosis, not just route the ticket to the right person.',
         ],
       },
       {
@@ -354,7 +354,7 @@ export const pages = {
         ],
         steps: [
           'Queries ClickHouse: p95 latency jumped from 340ms to 1.2s starting at 09:14 UTC.',
-          'Checks GitHub: Deploy #447 shipped at 09:12 UTC — introduced a new query in the /analytics endpoint.',
+          'Checks GitHub: Deploy #447 shipped at 09:12 UTC - introduced a new query in the /analytics endpoint.',
           'Searches Linear: No related bugs filed yet.',
           'Checks StatusPage: No upstream incidents. All providers green.',
           'Delivers diagnosis: Deploy #447 introduced an unindexed query in /analytics. Rollback or index addition will resolve.',
@@ -373,8 +373,8 @@ export const pages = {
           'After 200+ tickets diagnosed through Altor, the numbers speak for themselves:',
         ],
         bullets: [
-          'Median investigation time: 2 minutes (down from 20–45 minutes)',
-          '6 systems queried per investigation automatically — no more copying data between tabs',
+          'Median investigation time: 2 minutes (down from 20-45 minutes)',
+          '6 systems queried per investigation automatically - no more copying data between tabs',
           '80% of investigation logic reusable across different ticket types',
           'Zero changes to Portkey\'s existing support platform or team workflows',
           'Support engineers shifted from manual investigation to reviewing and sending AI-generated diagnoses',
@@ -390,7 +390,7 @@ export const pages = {
 
     cta: {
       title: 'Your stack looks like Portkey\'s. See what Altor finds.',
-      body: 'We\'ll connect to your systems and investigate a real ticket from your queue — live. Same 2-minute diagnosis, on your data.',
+      body: 'We\'ll connect to your systems and investigate a real ticket from your queue - live. Same 2-minute diagnosis, on your data.',
       buttonText: 'Book a demo',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
@@ -398,14 +398,14 @@ export const pages = {
 
   compareCopilotSupport: {
     slug: '/compare/altor-vs-copilot-for-support',
-    title: 'Altor vs. AI Copilots for Support for US B2B Teams — Investigation vs. Drafting',
-    description: 'AI copilots help agents write faster replies. Altor investigates the actual problem for US B2B teams — querying ClickHouse, Linear, Stripe, and GitHub to produce a root-cause diagnosis before the reply gets written.',
+    title: 'Altor vs. AI Copilots for Support for US B2B Teams - Investigation vs. Drafting',
+    description: 'AI copilots help agents write faster replies. Altor investigates the actual problem for US B2B teams - querying ClickHouse, Linear, Stripe, and GitHub to produce a root-cause diagnosis before the reply gets written.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
     hero: {
       headline: 'AI copilots write faster replies. For US B2B teams, they still do not investigate the problem.',
-      subhead: 'Support copilots draft responses based on ticket history and knowledge base articles. But for B2B technical tickets, the bottleneck isn\'t writing the reply — it\'s the 20–45 minutes of investigation that happens before you know what to write. Altor automates the investigation itself for US support teams.',
+      subhead: 'Support copilots draft responses based on ticket history and knowledge base articles. But for B2B technical tickets, the bottleneck isn\'t writing the reply - it\'s the 20-45 minutes of investigation that happens before you know what to write. Altor automates the investigation itself for US support teams.',
     },
 
     sections: [
@@ -432,13 +432,13 @@ export const pages = {
           },
           {
             dimension: 'Time saved',
-            chatbot: '1–2 minutes (writing the response faster)',
-            altor: '20–45 minutes (eliminates the manual investigation entirely)',
+            chatbot: '1-2 minutes (writing the response faster)',
+            altor: '20-45 minutes (eliminates the manual investigation entirely)',
           },
           {
             dimension: 'When it helps',
             chatbot: 'Agent already knows the answer, needs to write it faster',
-            altor: 'Nobody knows the answer yet — someone needs to investigate across systems',
+            altor: 'Nobody knows the answer yet - someone needs to investigate across systems',
           },
           {
             dimension: 'Pricing for US teams',
@@ -456,16 +456,16 @@ export const pages = {
         type: 'body',
         title: 'The investigation bottleneck',
         paragraphs: [
-          'In B2B technical support, the time breakdown for a typical ticket is roughly: 20–45 minutes investigating across systems, 5 minutes writing the response. Copilots optimize the 5-minute part. Altor eliminates the 20–45 minute part.',
-          'This matters because the investigation is where support teams burn engineering time and miss SLAs. A copilot that helps write "we\'re looking into it" faster doesn\'t solve the problem — it just ships a polished version of "we don\'t know yet."',
+          'In B2B technical support, the time breakdown for a typical ticket is roughly: 20-45 minutes investigating across systems, 5 minutes writing the response. Copilots optimize the 5-minute part. Altor eliminates the 20-45 minute part.',
+          'This matters because the investigation is where support teams burn engineering time and miss SLAs. A copilot that helps write "we\'re looking into it" faster doesn\'t solve the problem - it just ships a polished version of "we don\'t know yet."',
           'Altor produces the root-cause diagnosis that makes a real response possible. The copilot and the investigator solve different problems at different stages of the ticket lifecycle.',
         ],
       },
       {
         type: 'stats',
         items: [
-          { value: '20–45 min', label: 'spent investigating — the part copilots don\'t touch' },
-          { value: '5 min', label: 'spent writing the response — the part copilots speed up' },
+          { value: '20-45 min', label: 'spent investigating - the part copilots don\'t touch' },
+          { value: '5 min', label: 'spent writing the response - the part copilots speed up' },
           { value: '2 min', label: 'Altor\'s median investigation time across 200+ tickets at Portkey' },
           { value: '80%', label: 'of B2B tickets need investigation, not just a faster reply' },
         ],
@@ -478,10 +478,10 @@ export const pages = {
       },
       {
         type: 'body',
-        title: 'Use both — they solve different problems',
+        title: 'Use both - they solve different problems',
         paragraphs: [
           'Altor isn\'t a replacement for your copilot. The best workflow is: Altor investigates the ticket and produces a structured diagnosis. Your copilot (or your agent) turns that diagnosis into a polished customer response. Investigation first, response second.',
-          'Altor plugs into your existing support platform — Pylon, Zendesk, Intercom — and delivers the diagnosis into the same workflow your copilot already uses.',
+          'Altor plugs into your existing support platform - Pylon, Zendesk, Intercom - and delivers the diagnosis into the same workflow your copilot already uses.',
         ],
       },
     ],
@@ -494,7 +494,7 @@ export const pages = {
 
     cta: {
       title: 'See the investigation your copilot can\'t do',
-      body: 'We\'ll investigate a real ticket from your queue — across ClickHouse, Linear, Stripe, and GitHub — and show you the diagnosis in 2 minutes during EST or PST hours.',
+      body: 'We\'ll investigate a real ticket from your queue - across ClickHouse, Linear, Stripe, and GitHub - and show you the diagnosis in 2 minutes during EST or PST hours.',
       buttonText: 'Book a Demo (US Hours)',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
@@ -502,8 +502,8 @@ export const pages = {
 
   useCaseWebhookFailure: {
     slug: '/use-case/webhook-failure-investigation',
-    title: 'Automate Webhook Failure Investigation — Root Cause in Minutes',
-    description: 'When customers report webhook failures, Altor checks delivery rates, endpoint health, regional outages, and event queuing — producing a root-cause diagnosis in under 2 minutes.',
+    title: 'Automate Webhook Failure Investigation - Root Cause in Minutes',
+    description: 'When customers report webhook failures, Altor checks delivery rates, endpoint health, regional outages, and event queuing - producing a root-cause diagnosis in under 2 minutes.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
@@ -520,17 +520,17 @@ export const pages = {
           'A customer reports: "Our webhook endpoint stopped receiving events." The support engineer\'s investigation path:',
         ],
         steps: [
-          'Check delivery logs in ClickHouse. Look at success rate over the last 4–6 hours. Find it dropped from 98% to 12%.',
-          'Check what errors the endpoint is returning. Find 503 responses — customer\'s server is unreachable.',
+          'Check delivery logs in ClickHouse. Look at success rate over the last 4-6 hours. Find it dropped from 98% to 12%.',
+          'Check what errors the endpoint is returning. Find 503 responses - customer\'s server is unreachable.',
           'Check Stripe to rule out billing. Subscription active, webhook quota not exceeded.',
-          'Check StatusPage for upstream outages. Find AWS us-east-1 is degraded — matches the customer\'s region.',
+          'Check StatusPage for upstream outages. Find AWS us-east-1 is degraded - matches the customer\'s region.',
           'Synthesize: customer endpoint is down due to AWS outage. Events are queued for retry. No data loss.',
         ],
       },
       {
         type: 'stats',
         items: [
-          { value: '25–40 min', label: 'typical manual investigation for a webhook failure ticket' },
+          { value: '25-40 min', label: 'typical manual investigation for a webhook failure ticket' },
           { value: '4+', label: 'systems checked: delivery logs, endpoint status, billing, upstream incidents' },
           { value: '2 min', label: 'Altor\'s investigation time for the same ticket' },
         ],
@@ -539,18 +539,18 @@ export const pages = {
         type: 'body',
         title: 'How Altor investigates webhook failures',
         paragraphs: [
-          'Altor runs all the same checks — but simultaneously, in under 2 minutes:',
+          'Altor runs all the same checks - but simultaneously, in under 2 minutes:',
         ],
         steps: [
           'Queries ClickHouse: webhook delivery success rate dropped from 98% to 12% over the last 4 hours. Endpoint returning 503.',
           'Checks Stripe: subscription active, webhook quota not exceeded. Not a billing issue.',
-          'Checks StatusPage: AWS us-east-1 degraded — matches customer\'s region.',
+          'Checks StatusPage: AWS us-east-1 degraded - matches customer\'s region.',
           'Delivers diagnosis: customer endpoint is down due to regional AWS degradation. Events are queued and will auto-retry. No data loss.',
         ],
       },
       {
         type: 'quote',
-        text: 'Webhook failures used to be our scariest tickets — the customer thinks they\'re losing data. Now we have the full picture in 2 minutes: what\'s failing, why, and whether events are safe.',
+        text: 'Webhook failures used to be our scariest tickets - the customer thinks they\'re losing data. Now we have the full picture in 2 minutes: what\'s failing, why, and whether events are safe.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -561,12 +561,12 @@ export const pages = {
           'Every webhook failure has a different root cause. Altor investigates across all common patterns:',
         ],
         bullets: [
-          'Endpoint down (503/502) — identifies whether it\'s the customer\'s server or an upstream outage',
-          'Timeout failures — checks if payload size increased or endpoint response time degraded',
-          'Authentication rejected (401/403) — verifies webhook signing secret rotation and credential status',
-          'Rate limiting (429) — checks if delivery volume exceeded the customer\'s endpoint capacity',
-          'SSL/TLS errors — identifies certificate expiration or misconfiguration',
-          'Partial failures — compares delivery rates across event types to isolate the affected subset',
+          'Endpoint down (503/502) - identifies whether it\'s the customer\'s server or an upstream outage',
+          'Timeout failures - checks if payload size increased or endpoint response time degraded',
+          'Authentication rejected (401/403) - verifies webhook signing secret rotation and credential status',
+          'Rate limiting (429) - checks if delivery volume exceeded the customer\'s endpoint capacity',
+          'SSL/TLS errors - identifies certificate expiration or misconfiguration',
+          'Partial failures - compares delivery rates across event types to isolate the affected subset',
         ],
       },
     ],
@@ -579,7 +579,7 @@ export const pages = {
 
     cta: {
       title: 'See Altor investigate a real webhook failure',
-      body: 'We\'ll connect to your delivery logs, billing, and monitoring systems and diagnose a webhook issue from your queue — live.',
+      body: 'We\'ll connect to your delivery logs, billing, and monitoring systems and diagnose a webhook issue from your queue - live.',
       buttonText: 'Book a demo',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
@@ -587,7 +587,7 @@ export const pages = {
 
   useCaseBillingEscalation: {
     slug: '/use-case/billing-escalation-debugging',
-    title: 'Automate Billing Dispute Resolution — Evidence in Minutes',
+    title: 'Automate Billing Dispute Resolution - Evidence in Minutes',
     description: 'When customers dispute charges or report billing issues, Altor cross-references Stripe billing data with actual API usage in ClickHouse to surface the facts in under 2 minutes.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
@@ -615,10 +615,10 @@ export const pages = {
       {
         type: 'stats',
         items: [
-          { value: '30–60 min', label: 'typical time to resolve a billing dispute manually' },
+          { value: '30-60 min', label: 'typical time to resolve a billing dispute manually' },
           { value: '2', label: 'systems that must be cross-referenced (billing + usage logs)' },
           { value: '2 min', label: 'Altor\'s investigation time for the same ticket' },
-          { value: '#1', label: 'cause of churn — unresolved billing disputes' },
+          { value: '#1', label: 'cause of churn - unresolved billing disputes' },
         ],
       },
       {
@@ -631,13 +631,13 @@ export const pages = {
           'Queries Stripe: Current invoice is $2,412. Plan is Growth ($1,500/mo) with per-request overage at $0.002/request.',
           'Queries ClickHouse: Customer made 456,000 requests this period. 300,000 included in plan, 156,000 overage at $0.002 = $312 overage. Total should be $1,812.',
           'Identifies discrepancy: Billed $2,412 vs. calculated $1,812. Difference is $600.',
-          'Searches Linear: Finds LIN-671 "double-counting on /v2/batch endpoint" — fixed in last week\'s deploy but this invoice period was affected.',
+          'Searches Linear: Finds LIN-671 "double-counting on /v2/batch endpoint" - fixed in last week\'s deploy but this invoice period was affected.',
           'Delivers diagnosis: Overage charge is partially incorrect due to a known tracking bug. $600 should be credited. Links to the Linear ticket as evidence.',
         ],
       },
       {
         type: 'quote',
-        text: 'Billing disputes went from our most dreaded ticket type to the fastest to resolve. Altor pulls the Stripe invoice and the ClickHouse usage data in parallel — our engineer just reviews the comparison.',
+        text: 'Billing disputes went from our most dreaded ticket type to the fastest to resolve. Altor pulls the Stripe invoice and the ClickHouse usage data in parallel - our engineer just reviews the comparison.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -648,11 +648,11 @@ export const pages = {
           'Billing tickets come in many forms. Altor investigates all of them by cross-referencing Stripe with your usage data:',
         ],
         bullets: [
-          'Overage disputes — compares billed usage against actual ClickHouse logs',
-          'Payment failures — checks Stripe for declined cards, expired methods, and retry status',
-          'Plan mismatch — verifies when plan changes took effect vs. when the customer expected them',
-          'Feature access issues — cross-references plan tier with feature flag status',
-          'Credit requests — calculates exactly how much should be credited based on actual vs. billed usage',
+          'Overage disputes - compares billed usage against actual ClickHouse logs',
+          'Payment failures - checks Stripe for declined cards, expired methods, and retry status',
+          'Plan mismatch - verifies when plan changes took effect vs. when the customer expected them',
+          'Feature access issues - cross-references plan tier with feature flag status',
+          'Credit requests - calculates exactly how much should be credited based on actual vs. billed usage',
         ],
       },
     ],
@@ -665,7 +665,7 @@ export const pages = {
 
     cta: {
       title: 'See Altor resolve a billing dispute in real time',
-      body: 'We\'ll connect to your Stripe and usage data and investigate a billing ticket from your queue — with evidence, not guesswork.',
+      body: 'We\'ll connect to your Stripe and usage data and investigate a billing ticket from your queue - with evidence, not guesswork.',
       buttonText: 'Book a demo',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
@@ -680,7 +680,7 @@ export const pages = {
 
     hero: {
       headline: 'US AI infrastructure customers do not file FAQ tickets. They file investigations.',
-      subhead: 'AI infrastructure tickets are about API routing failures, model fallback chains breaking, gateway latency spikes, and token usage discrepancies. These aren\'t questions a knowledge base can answer — they require pulling live data from your customer\'s actual API logs, configs, and billing across the United States.',
+      subhead: 'AI infrastructure tickets are about API routing failures, model fallback chains breaking, gateway latency spikes, and token usage discrepancies. These aren\'t questions a knowledge base can answer - they require pulling live data from your customer\'s actual API logs, configs, and billing across the United States.',
     },
 
     sections: [
@@ -688,14 +688,14 @@ export const pages = {
         type: 'body',
         title: 'Ticket patterns unique to AI infrastructure',
         paragraphs: [
-          'If you\'re building an AI gateway, observability platform, or prompt management layer — your support tickets are fundamentally different from typical SaaS. Your customers are developers pushing production LLM traffic through your platform. When something breaks, they need root causes with evidence.',
+          'If you\'re building an AI gateway, observability platform, or prompt management layer - your support tickets are fundamentally different from typical SaaS. Your customers are developers pushing production LLM traffic through your platform. When something breaks, they need root causes with evidence.',
         ],
         bullets: [
-          '"Requests to Claude are failing but GPT-4 works" — routing config, provider outage, or fallback chain not triggering?',
-          '"Model fallback isn\'t activating when OpenAI times out" — threshold config issue, or a gateway bug introduced in a recent deploy?',
-          '"Token counts on our invoice don\'t match our logged usage" — tracking discrepancy from prompt caching, or a billing pipeline bug?',
-          '"Latency doubled on our production routing requests" — your gateway overhead, the provider\'s response time, or a DNS issue?',
-          '"Our custom metadata isn\'t being passed through to the model provider" — request transformation bug or API version mismatch?',
+          '"Requests to Claude are failing but GPT-4 works" - routing config, provider outage, or fallback chain not triggering?',
+          '"Model fallback isn\'t activating when OpenAI times out" - threshold config issue, or a gateway bug introduced in a recent deploy?',
+          '"Token counts on our invoice don\'t match our logged usage" - tracking discrepancy from prompt caching, or a billing pipeline bug?',
+          '"Latency doubled on our production routing requests" - your gateway overhead, the provider\'s response time, or a DNS issue?',
+          '"Our custom metadata isn\'t being passed through to the model provider" - request transformation bug or API version mismatch?',
         ],
       },
       {
@@ -706,17 +706,17 @@ export const pages = {
           'Works with your US stack: Salesforce, Zendesk, HubSpot, Stripe, PagerDuty, ClickHouse, GitHub, and Linear.',
         ],
         bullets: [
-          'ClickHouse / your analytics DB — request logs per model provider, routing decisions, fallback triggers, latency per hop',
-          'Linear / Jira — known gateway bugs, routing issues, provider compatibility problems',
-          'Stripe — token-based billing, usage tiers, overage calculations against actual logged tokens',
-          'GitHub — gateway deploys, routing config changes, SDK version releases',
-          'StatusPage / PagerDuty — upstream provider outages (OpenAI, Anthropic, Azure, AWS)',
+          'ClickHouse / your analytics DB - request logs per model provider, routing decisions, fallback triggers, latency per hop',
+          'Linear / Jira - known gateway bugs, routing issues, provider compatibility problems',
+          'Stripe - token-based billing, usage tiers, overage calculations against actual logged tokens',
+          'GitHub - gateway deploys, routing config changes, SDK version releases',
+          'StatusPage / PagerDuty - upstream provider outages (OpenAI, Anthropic, Azure, AWS)',
         ],
       },
       {
         type: 'stats',
         items: [
-          { value: '2 min', label: 'median diagnosis at Portkey — an AI gateway handling billions of requests' },
+          { value: '2 min', label: 'median diagnosis at Portkey - an AI gateway handling billions of requests' },
           { value: '200+', label: 'tickets diagnosed across gateway routing, latency, and billing patterns' },
           { value: '70%', label: 'of Portkey\'s support volume covered by 3 investigation playbooks' },
           { value: '3 weeks', label: 'from kickoff to full deployment at Portkey' },
@@ -724,7 +724,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Our tickets are investigations — "why is this model routing failing for this customer?" Nobody else could even attempt to answer that automatically. Altor can because it actually queries our ClickHouse logs.',
+        text: 'Our tickets are investigations - "why is this model routing failing for this customer?" Nobody else could even attempt to answer that automatically. Altor can because it actually queries our ClickHouse logs.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -733,14 +733,14 @@ export const pages = {
         title: 'Why AI infra is the ideal fit for Altor',
         paragraphs: [
           'AI infrastructure companies have three traits that make investigation automation especially effective: highly technical tickets that always require multi-system data, well-structured request logs in systems like ClickHouse that Altor can query precisely, and engineering-heavy support teams that value root causes over templates.',
-          'Portkey was Altor\'s first deployment. The patterns built there — provider routing failures, latency spike diagnosis, token billing cross-referencing — transfer directly to other AI infrastructure companies.',
+          'Portkey was Altor\'s first deployment. The patterns built there - provider routing failures, latency spike diagnosis, token billing cross-referencing - transfer directly to other AI infrastructure companies.',
           'A Series B SaaS company in Austin reduced MTTR by 67% after standardizing this investigation workflow for US support coverage.',
         ],
       },
     ],
 
     relatedPages: [
-      { label: 'How Portkey uses Altor — full case study', path: '/customers/portkey' },
+      { label: 'How Portkey uses Altor - full case study', path: '/customers/portkey' },
       { label: 'Altor for API-first developer tools', path: '/for/api-first-developer-tools' },
       { label: 'API error investigation walkthrough', path: '/use-case/api-error-investigation' },
     ],
@@ -762,7 +762,7 @@ export const pages = {
 
     hero: {
       headline: 'US developers expect root causes, not "we\'re looking into it."',
-      subhead: 'When your API customers report latency spikes, webhook failures, or SDK errors, they expect a real diagnosis — not a link to your docs. Altor queries their actual API logs, checks your bug tracker, and verifies their billing to deliver root causes in 2 minutes for US support teams.',
+      subhead: 'When your API customers report latency spikes, webhook failures, or SDK errors, they expect a real diagnosis - not a link to your docs. Altor queries their actual API logs, checks your bug tracker, and verifies their billing to deliver root causes in 2 minutes for US support teams.',
     },
 
     sections: [
@@ -774,11 +774,11 @@ export const pages = {
           'Typical tickets at API-first developer tools:',
         ],
         bullets: [
-          '"Email deliverability dropped from 98% to 72% this week" — reputation issue, DNS config change, or provider problem?',
-          '"Database connections timeout intermittently under load" — connection pool exhaustion, query performance, or infrastructure scaling?',
-          '"SDK v3.2.1 throws a type error on the batch endpoint" — known bug in this version, or an API contract change?',
-          '"Our auth tokens expire after 15 minutes instead of the configured 60" — config not propagated, or a regression in the last deploy?',
-          '"Webhook payloads are missing the metadata field we added yesterday" — API version mismatch or webhook serialization bug?',
+          '"Email deliverability dropped from 98% to 72% this week" - reputation issue, DNS config change, or provider problem?',
+          '"Database connections timeout intermittently under load" - connection pool exhaustion, query performance, or infrastructure scaling?',
+          '"SDK v3.2.1 throws a type error on the batch endpoint" - known bug in this version, or an API contract change?',
+          '"Our auth tokens expire after 15 minutes instead of the configured 60" - config not propagated, or a regression in the last deploy?',
+          '"Webhook payloads are missing the metadata field we added yesterday" - API version mismatch or webhook serialization bug?',
         ],
       },
       {
@@ -789,26 +789,26 @@ export const pages = {
           'Works with your US stack: Salesforce, Zendesk, HubSpot, Stripe, PagerDuty, ClickHouse, GitHub, and Linear.',
         ],
         bullets: [
-          'ClickHouse / Postgres — request logs, latency per endpoint, error rates by SDK version, delivery metrics',
-          'Linear / Jira — SDK bugs, API contract changes, endpoint deprecation tracking',
-          'Stripe — per-endpoint billing, usage tier enforcement, metered billing reconciliation',
-          'GitHub — SDK releases, breaking change PRs, migration guides for affected versions',
-          'StatusPage — infrastructure status, planned maintenance, third-party provider health',
-          'Docs / Mintlify — SDK migration guides, breaking change notices, version compatibility matrices',
+          'ClickHouse / Postgres - request logs, latency per endpoint, error rates by SDK version, delivery metrics',
+          'Linear / Jira - SDK bugs, API contract changes, endpoint deprecation tracking',
+          'Stripe - per-endpoint billing, usage tier enforcement, metered billing reconciliation',
+          'GitHub - SDK releases, breaking change PRs, migration guides for affected versions',
+          'StatusPage - infrastructure status, planned maintenance, third-party provider health',
+          'Docs / Mintlify - SDK migration guides, breaking change notices, version compatibility matrices',
         ],
       },
       {
         type: 'stats',
         items: [
-          { value: '20–45 min', label: 'typical investigation time for a developer support ticket' },
+          { value: '20-45 min', label: 'typical investigation time for a developer support ticket' },
           { value: '2 min', label: 'Altor\'s median diagnosis time' },
-          { value: '$80–200K', label: 'annual cost per support engineer in manual investigation time' },
+          { value: '$80-200K', label: 'annual cost per support engineer in manual investigation time' },
           { value: '0', label: 'changes to your existing support workflow' },
         ],
       },
       {
         type: 'quote',
-        text: 'Developer customers don\'t want empathy — they want data. Altor gives our support team the data before the customer even finishes writing the ticket.',
+        text: 'Developer customers don\'t want empathy - they want data. Altor gives our support team the data before the customer even finishes writing the ticket.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -817,7 +817,7 @@ export const pages = {
         title: 'Why API-first companies choose Altor',
         paragraphs: [
           'Three traits make investigation automation critical for API-first companies: developer customers who expect technical depth and will churn without it, high ticket volume driven by integration complexity across many SDK versions and use cases, and well-structured API log data that Altor can query precisely.',
-          'Your support team is already technical. They know how to investigate. The problem is time — 20–45 minutes per ticket, checking the same systems in the same order. Altor runs that same workflow in 2 minutes, so your engineers focus on the tickets that actually need human judgment.',
+          'Your support team is already technical. They know how to investigate. The problem is time - 20-45 minutes per ticket, checking the same systems in the same order. Altor runs that same workflow in 2 minutes, so your engineers focus on the tickets that actually need human judgment.',
           'A Series B SaaS company in Austin reduced MTTR by 67% after giving its US support team one investigation workflow across API logs, billing, and bug history.',
         ],
       },
@@ -840,7 +840,7 @@ export const pages = {
   forZendeskTeams: {
     slug: '/for/zendesk-teams',
     title: 'Altor for Zendesk Teams: Investigate Tickets Beyond Routing in the US',
-    description: 'Zendesk AI routes and tags. Altor investigates — querying ClickHouse, Stripe, and Linear to diagnose what\'s actually broken. Built for US B2B teams.',
+    description: 'Zendesk AI routes and tags. Altor investigates - querying ClickHouse, Stripe, and Linear to diagnose what\'s actually broken. Built for US B2B teams.',
     datePublished: '2026-04-01',
     dateModified: '2026-04-01',
 
@@ -857,10 +857,10 @@ export const pages = {
           'These are the tickets that sit in queue until an engineer has time to investigate:',
         ],
         bullets: [
-          '"API response times doubled for our enterprise tier" — infrastructure bottleneck, query regression, or upstream provider degradation?',
-          '"Our SSO integration broke after your last update" — config drift, OAuth token expiry, or a breaking change in the latest deploy?',
-          '"Webhook delivery success rate dropped from 99% to 83%" — their endpoint failing, your delivery pipeline backed up, or a regional outage?',
-          '"Billing shows 2M requests but our internal counter shows 1.4M" — double-counting bug, or a metering discrepancy in batch endpoints?',
+          '"API response times doubled for our enterprise tier" - infrastructure bottleneck, query regression, or upstream provider degradation?',
+          '"Our SSO integration broke after your last update" - config drift, OAuth token expiry, or a breaking change in the latest deploy?',
+          '"Webhook delivery success rate dropped from 99% to 83%" - their endpoint failing, your delivery pipeline backed up, or a regional outage?',
+          '"Billing shows 2M requests but our internal counter shows 1.4M" - double-counting bug, or a metering discrepancy in batch endpoints?',
         ],
       },
       {
@@ -870,25 +870,25 @@ export const pages = {
           'Altor connects to the systems where your investigation data actually lives:',
         ],
         bullets: [
-          'ClickHouse / your analytics DB — per-customer request logs, latency percentiles, error rates by endpoint and time window',
-          'Linear / Jira — open bugs matching ticket keywords, recent regressions, deploy-correlated issues',
-          'Stripe — subscription tier, usage metering, invoice line items vs. actual logged usage',
-          'GitHub — recent deploys, breaking change PRs, SDK version compatibility',
-          'Zendesk ticket context — prior ticket history, account tier, escalation patterns',
+          'ClickHouse / your analytics DB - per-customer request logs, latency percentiles, error rates by endpoint and time window',
+          'Linear / Jira - open bugs matching ticket keywords, recent regressions, deploy-correlated issues',
+          'Stripe - subscription tier, usage metering, invoice line items vs. actual logged usage',
+          'GitHub - recent deploys, breaking change PRs, SDK version compatibility',
+          'Zendesk ticket context - prior ticket history, account tier, escalation patterns',
         ],
       },
       {
         type: 'stats',
         items: [
           { value: '2 min', label: 'median investigation time vs. 25 min manual' },
-          { value: '6+', label: 'systems queried per ticket — automatically' },
+          { value: '6+', label: 'systems queried per ticket - automatically' },
           { value: '80%', label: 'of B2B tickets need investigation, not article lookup' },
           { value: '$0', label: 'changes to your existing Zendesk workflows' },
         ],
       },
       {
         type: 'quote',
-        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs - nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -896,7 +896,7 @@ export const pages = {
         type: 'body',
         title: 'Why Zendesk teams adopt Altor',
         paragraphs: [
-          'Zendesk\'s AI handles routing and article suggestions — that covers maybe 20% of B2B technical volume. The other 80% sits in queue until an engineer manually checks logs, billing, and bug trackers. That\'s the 20-45 minute bottleneck per ticket.',
+          'Zendesk\'s AI handles routing and article suggestions - that covers maybe 20% of B2B technical volume. The other 80% sits in queue until an engineer manually checks logs, billing, and bug trackers. That\'s the 20-45 minute bottleneck per ticket.',
           'Altor plugs into Zendesk as an investigation layer. Tickets that need diagnosis get investigated automatically. Your Zendesk workflows, macros, SLAs, and team structure stay exactly the same.',
         ],
       },
@@ -919,13 +919,13 @@ export const pages = {
   forIntercomTeams: {
     slug: '/for/intercom-teams',
     title: 'Altor for Intercom Teams: Technical Investigation Beyond Fin',
-    description: 'Intercom Fin answers from your help center. Altor investigates across production systems — ClickHouse, Linear, Stripe — to resolve what Fin can\'t.',
+    description: 'Intercom Fin answers from your help center. Altor investigates across production systems - ClickHouse, Linear, Stripe - to resolve what Fin can\'t.',
     datePublished: '2026-04-01',
     dateModified: '2026-04-01',
 
     hero: {
       headline: 'Fin answers FAQs. Your engineers still investigate the hard tickets.',
-      subhead: 'Intercom Fin resolves common questions from your help center. When a customer reports a production issue — latency spikes, webhook failures, billing discrepancies — Fin can\'t query your ClickHouse logs or check your bug tracker. Altor can.',
+      subhead: 'Intercom Fin resolves common questions from your help center. When a customer reports a production issue - latency spikes, webhook failures, billing discrepancies - Fin can\'t query your ClickHouse logs or check your bug tracker. Altor can.',
     },
 
     sections: [
@@ -936,10 +936,10 @@ export const pages = {
           'These are the tickets that sit in queue until an engineer has time to investigate:',
         ],
         bullets: [
-          '"Events stopped flowing into our dashboard 3 hours ago" — ingestion pipeline stalled, schema change, or customer-side config error?',
-          '"Our monthly invoice is $800 higher than expected" — usage spike, plan change mid-cycle, or metering bug?',
-          '"SDK throws auth errors intermittently on iOS" — token refresh race condition, clock skew, or a known SDK bug?',
-          '"Data export job fails with timeout after running fine for months" — dataset grew past threshold, or infrastructure change?',
+          '"Events stopped flowing into our dashboard 3 hours ago" - ingestion pipeline stalled, schema change, or customer-side config error?',
+          '"Our monthly invoice is $800 higher than expected" - usage spike, plan change mid-cycle, or metering bug?',
+          '"SDK throws auth errors intermittently on iOS" - token refresh race condition, clock skew, or a known SDK bug?',
+          '"Data export job fails with timeout after running fine for months" - dataset grew past threshold, or infrastructure change?',
         ],
       },
       {
@@ -949,11 +949,11 @@ export const pages = {
           'Altor connects to the systems where your investigation data actually lives:',
         ],
         bullets: [
-          'ClickHouse — event ingestion rates, pipeline latency, error logs by customer and endpoint',
-          'Stripe — invoice breakdown, plan changes, metered billing reconciliation against actual usage',
-          'Linear — open bugs, recent regressions, SDK compatibility issues',
-          'GitHub — deploy history, config changes, SDK release notes matching the customer\'s version',
-          'StatusPage / PagerDuty — upstream outages, planned maintenance windows',
+          'ClickHouse - event ingestion rates, pipeline latency, error logs by customer and endpoint',
+          'Stripe - invoice breakdown, plan changes, metered billing reconciliation against actual usage',
+          'Linear - open bugs, recent regressions, SDK compatibility issues',
+          'GitHub - deploy history, config changes, SDK release notes matching the customer\'s version',
+          'StatusPage / PagerDuty - upstream outages, planned maintenance windows',
         ],
       },
       {
@@ -967,7 +967,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs - nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -975,7 +975,7 @@ export const pages = {
         type: 'body',
         title: 'Why Intercom teams add Altor',
         paragraphs: [
-          'Fin is excellent at deflecting FAQ-style questions. But B2B technical support isn\'t mostly FAQs — it\'s mostly investigations. A customer reporting intermittent auth failures needs someone to check their token flow against your OAuth logs, not read a help article.',
+          'Fin is excellent at deflecting FAQ-style questions. But B2B technical support isn\'t mostly FAQs - it\'s mostly investigations. A customer reporting intermittent auth failures needs someone to check their token flow against your OAuth logs, not read a help article.',
           'Altor works alongside Intercom as the investigation layer. Fin handles the 20% it can. Altor handles the 80% that requires pulling live data from production systems.',
         ],
       },
@@ -998,7 +998,7 @@ export const pages = {
   forFreshdesk: {
     slug: '/for/freshdesk-teams',
     title: 'Altor for Freshdesk Teams: Automate B2B Ticket Investigation',
-    description: 'Freshdesk manages tickets. Altor investigates them — querying logs, billing, and bug trackers to deliver root causes in 2 minutes for US support teams.',
+    description: 'Freshdesk manages tickets. Altor investigates them - querying logs, billing, and bug trackers to deliver root causes in 2 minutes for US support teams.',
     datePublished: '2026-04-01',
     dateModified: '2026-04-01',
 
@@ -1015,10 +1015,10 @@ export const pages = {
           'These are the tickets that sit in queue until an engineer has time to investigate:',
         ],
         bullets: [
-          '"Our data sync runs but records are missing in the destination" — partial failure, schema mismatch, or rate limiting at the destination API?',
-          '"PDF generation returns blank pages for our Japanese content" — encoding issue, font rendering bug, or a known CJK processing limitation?',
-          '"Scheduled reports stopped sending last Tuesday" — cron job failed, email delivery blocked, or the report query started timing out?',
-          '"Upload endpoint rejects files over 8MB but our plan allows 25MB" — misconfigured limit, CDN caching stale config, or a regression in the latest deploy?',
+          '"Our data sync runs but records are missing in the destination" - partial failure, schema mismatch, or rate limiting at the destination API?',
+          '"PDF generation returns blank pages for our Japanese content" - encoding issue, font rendering bug, or a known CJK processing limitation?',
+          '"Scheduled reports stopped sending last Tuesday" - cron job failed, email delivery blocked, or the report query started timing out?',
+          '"Upload endpoint rejects files over 8MB but our plan allows 25MB" - misconfigured limit, CDN caching stale config, or a regression in the latest deploy?',
         ],
       },
       {
@@ -1028,11 +1028,11 @@ export const pages = {
           'Altor connects to the systems where your investigation data actually lives:',
         ],
         bullets: [
-          'Application logs — sync job output, error traces, processing pipeline status per customer',
-          'Postgres / MySQL — customer configuration, feature flags, plan-specific limits',
-          'Stripe / Chargebee — subscription tier, add-on features, billing status',
-          'Linear / Jira — matching bugs, recent regressions, version-specific known issues',
-          'GitHub — recent deploys, configuration changes, migration scripts',
+          'Application logs - sync job output, error traces, processing pipeline status per customer',
+          'Postgres / MySQL - customer configuration, feature flags, plan-specific limits',
+          'Stripe / Chargebee - subscription tier, add-on features, billing status',
+          'Linear / Jira - matching bugs, recent regressions, version-specific known issues',
+          'GitHub - recent deploys, configuration changes, migration scripts',
         ],
       },
       {
@@ -1046,7 +1046,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs - nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1054,7 +1054,7 @@ export const pages = {
         type: 'body',
         title: 'Why Freshdesk teams adopt Altor',
         paragraphs: [
-          'Freshdesk excels at ticket management — routing, SLAs, automations, and customer communication. It does not excel at the actual technical investigation that B2B tickets require.',
+          'Freshdesk excels at ticket management - routing, SLAs, automations, and customer communication. It does not excel at the actual technical investigation that B2B tickets require.',
           'Altor delivers structured diagnoses directly into your Freshdesk workflow. Your agents review the root cause and respond instead of spending 30+ minutes checking logs and bug trackers.',
         ],
       },
@@ -1082,7 +1082,7 @@ export const pages = {
     dateModified: '2026-04-01',
 
     hero: {
-      headline: 'Fintech tickets aren\'t FAQs — they\'re forensic investigations.',
+      headline: 'Fintech tickets aren\'t FAQs - they\'re forensic investigations.',
       subhead: 'When a customer reports a failed payment, a flagged transaction, or a compliance hold, your support team needs to cross-reference payment processors, KYC systems, fraud detection, and audit logs. Altor does that in 2 minutes.',
     },
 
@@ -1094,10 +1094,10 @@ export const pages = {
           'These are the tickets that sit in queue until an engineer has time to investigate:',
         ],
         bullets: [
-          '"My ACH transfer has been pending for 5 days" — bank processing delay, compliance hold, insufficient funds, or a stuck state in your payment orchestration?',
-          '"Customer was flagged for fraud but this is a legitimate business" — which risk rule triggered, what evidence was scored, and can the decision be overridden?',
-          '"Webhook notifications for successful payments stopped reaching our server" — delivery failure, endpoint misconfiguration, or event type filtering change?',
-          '"Our settlement report shows a $2,300 discrepancy vs. our dashboard" — timing difference, currency conversion rounding, or a reconciliation bug?',
+          '"My ACH transfer has been pending for 5 days" - bank processing delay, compliance hold, insufficient funds, or a stuck state in your payment orchestration?',
+          '"Customer was flagged for fraud but this is a legitimate business" - which risk rule triggered, what evidence was scored, and can the decision be overridden?',
+          '"Webhook notifications for successful payments stopped reaching our server" - delivery failure, endpoint misconfiguration, or event type filtering change?',
+          '"Our settlement report shows a $2,300 discrepancy vs. our dashboard" - timing difference, currency conversion rounding, or a reconciliation bug?',
         ],
       },
       {
@@ -1107,11 +1107,11 @@ export const pages = {
           'Altor connects to the systems where your investigation data actually lives:',
         ],
         bullets: [
-          'Payment processor logs — transaction status, retry history, failure codes, settlement timelines',
-          'KYC / compliance system — verification status, risk scores, hold reasons, required documents',
-          'Fraud detection — rule triggers, score breakdown, false positive patterns',
-          'Stripe / Adyen / Plaid — payment method status, bank connectivity, reconciliation data',
-          'Audit trail — who changed what, when, and the regulatory context for each action',
+          'Payment processor logs - transaction status, retry history, failure codes, settlement timelines',
+          'KYC / compliance system - verification status, risk scores, hold reasons, required documents',
+          'Fraud detection - rule triggers, score breakdown, false positive patterns',
+          'Stripe / Adyen / Plaid - payment method status, bank connectivity, reconciliation data',
+          'Audit trail - who changed what, when, and the regulatory context for each action',
         ],
       },
       {
@@ -1125,7 +1125,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs - nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1162,7 +1162,7 @@ export const pages = {
 
     hero: {
       headline: 'Developer customers don\'t want empathy. They want your logs.',
-      subhead: 'When developers report SDK errors, API regressions, or integration failures, they\'ve already read your docs and tried debugging. They need the data they can\'t access — your internal logs, deploy history, and bug tracker. Altor pulls it all in 2 minutes.',
+      subhead: 'When developers report SDK errors, API regressions, or integration failures, they\'ve already read your docs and tried debugging. They need the data they can\'t access - your internal logs, deploy history, and bug tracker. Altor pulls it all in 2 minutes.',
     },
 
     sections: [
@@ -1173,10 +1173,10 @@ export const pages = {
           'These are the tickets that sit in queue until an engineer has time to investigate:',
         ],
         bullets: [
-          '"SDK v4.2 crashes on React 19 with a hydration error" — known incompatibility, or a new regression introduced in the latest patch?',
-          '"GraphQL subscriptions disconnect every 30 seconds in production" — WebSocket timeout config, load balancer idle timeout, or a known issue with your gateway?',
-          '"Rate limit headers show 1000/min but I get 429 at 600 requests" — shared rate limit across API keys, or a counting bug in the middleware?',
-          '"Batch API returns partial success but no indication of which items failed" — by design, a serialization bug, or a payload size edge case?',
+          '"SDK v4.2 crashes on React 19 with a hydration error" - known incompatibility, or a new regression introduced in the latest patch?',
+          '"GraphQL subscriptions disconnect every 30 seconds in production" - WebSocket timeout config, load balancer idle timeout, or a known issue with your gateway?',
+          '"Rate limit headers show 1000/min but I get 429 at 600 requests" - shared rate limit across API keys, or a counting bug in the middleware?',
+          '"Batch API returns partial success but no indication of which items failed" - by design, a serialization bug, or a payload size edge case?',
         ],
       },
       {
@@ -1186,11 +1186,11 @@ export const pages = {
           'Altor connects to the systems where your investigation data actually lives:',
         ],
         bullets: [
-          'ClickHouse / application logs — per-customer request patterns, error rates by SDK version, latency by endpoint',
-          'GitHub — SDK release notes, breaking changes, compatibility matrix, open issues matching the report',
-          'Linear — known bugs for this SDK version, regression tracking, priority and ETA',
-          'API gateway metrics — rate limit counters, throttle events, per-key vs. per-org limits',
-          'Documentation — version-specific migration guides, deprecation notices, known limitations',
+          'ClickHouse / application logs - per-customer request patterns, error rates by SDK version, latency by endpoint',
+          'GitHub - SDK release notes, breaking changes, compatibility matrix, open issues matching the report',
+          'Linear - known bugs for this SDK version, regression tracking, priority and ETA',
+          'API gateway metrics - rate limit counters, throttle events, per-key vs. per-org limits',
+          'Documentation - version-specific migration guides, deprecation notices, known limitations',
         ],
       },
       {
@@ -1204,7 +1204,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs - nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1213,7 +1213,7 @@ export const pages = {
         title: 'Why developer tool companies are the ideal fit',
         paragraphs: [
           'Three traits make investigation automation especially effective for devtools: developer customers who expect technical depth and will churn without it, high ticket volume driven by integration complexity across many SDK versions, and well-structured API log data that Altor can query precisely.',
-          'Your support team is already technical. The bottleneck isn\'t skill — it\'s time. Twenty minutes per ticket checking the same systems in the same order. Altor runs that workflow in 2 minutes.',
+          'Your support team is already technical. The bottleneck isn\'t skill - it\'s time. Twenty minutes per ticket checking the same systems in the same order. Altor runs that workflow in 2 minutes.',
         ],
       },
     ],
@@ -1252,10 +1252,10 @@ export const pages = {
           'These are the tickets that sit in queue until an engineer has time to investigate:',
         ],
         bullets: [
-          '"Our nightly sync to Snowflake failed with a schema mismatch" — source schema changed, connector type mapping issue, or a Snowflake DDL permission error?',
-          '"Query performance degraded 10x after upgrading to your v3.0" — query plan regression, missing index rebuild step, or new memory allocation defaults?',
-          '"CDC pipeline stopped capturing deletes from our Postgres source" — WAL level setting, replication slot full, or a connector bug with logical decoding?',
-          '"Scheduled job runs but outputs zero rows — it was working fine last week" — upstream table renamed, partition filter mismatch, or credential rotation?',
+          '"Our nightly sync to Snowflake failed with a schema mismatch" - source schema changed, connector type mapping issue, or a Snowflake DDL permission error?',
+          '"Query performance degraded 10x after upgrading to your v3.0" - query plan regression, missing index rebuild step, or new memory allocation defaults?',
+          '"CDC pipeline stopped capturing deletes from our Postgres source" - WAL level setting, replication slot full, or a connector bug with logical decoding?',
+          '"Scheduled job runs but outputs zero rows - it was working fine last week" - upstream table renamed, partition filter mismatch, or credential rotation?',
         ],
       },
       {
@@ -1265,11 +1265,11 @@ export const pages = {
           'Altor connects to the systems where your investigation data actually lives:',
         ],
         bullets: [
-          'Query engine logs — execution plans, memory usage, partition pruning effectiveness, timeout traces',
-          'Connector framework — sync history, schema evolution tracking, error patterns by source type',
-          'Scheduler — job run history, dependency chains, resource contention, retry outcomes',
-          'Customer configuration — source/destination credentials, schema mappings, transformation rules',
-          'Linear / Jira — known connector bugs, version-specific regressions, migration blockers',
+          'Query engine logs - execution plans, memory usage, partition pruning effectiveness, timeout traces',
+          'Connector framework - sync history, schema evolution tracking, error patterns by source type',
+          'Scheduler - job run history, dependency chains, resource contention, retry outcomes',
+          'Customer configuration - source/destination credentials, schema mappings, transformation rules',
+          'Linear / Jira - known connector bugs, version-specific regressions, migration blockers',
         ],
       },
       {
@@ -1283,7 +1283,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs - nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1291,7 +1291,7 @@ export const pages = {
         type: 'body',
         title: 'Why data infrastructure is ideal for Altor',
         paragraphs: [
-          'Data infrastructure companies have deeply structured operational data — query logs, sync histories, schema evolution trails — that Altor can query precisely. Every pipeline failure follows a diagnostic tree: check the source, check the connector, check the destination, check the schedule.',
+          'Data infrastructure companies have deeply structured operational data - query logs, sync histories, schema evolution trails - that Altor can query precisely. Every pipeline failure follows a diagnostic tree: check the source, check the connector, check the destination, check the schedule.',
           'Your support engineers run this same diagnostic tree manually, 30-40 minutes per ticket. Altor automates the entire tree and delivers a root cause with evidence.',
         ],
       },
@@ -1331,10 +1331,10 @@ export const pages = {
           'These are the tickets that sit in queue until an engineer has time to investigate:',
         ],
         bullets: [
-          '"Checkout is failing for customers using Apple Pay since this morning" — payment provider issue, your tokenization layer, or a Safari update breaking the flow?',
-          '"Inventory shows 0 for products that have 500 units in our warehouse" — sync delay, webhook failure from their ERP, or a stock calculation bug?',
-          '"Shipping rates doubled overnight for all orders to California" — carrier rate table update, zone mapping change, or a weight calculation error?',
-          '"Discount code SUMMER25 applies on preview but not at checkout" — coupon rule conflict, minimum order threshold, or a caching issue?',
+          '"Checkout is failing for customers using Apple Pay since this morning" - payment provider issue, your tokenization layer, or a Safari update breaking the flow?',
+          '"Inventory shows 0 for products that have 500 units in our warehouse" - sync delay, webhook failure from their ERP, or a stock calculation bug?',
+          '"Shipping rates doubled overnight for all orders to California" - carrier rate table update, zone mapping change, or a weight calculation error?',
+          '"Discount code SUMMER25 applies on preview but not at checkout" - coupon rule conflict, minimum order threshold, or a caching issue?',
         ],
       },
       {
@@ -1344,11 +1344,11 @@ export const pages = {
           'Altor connects to the systems where your investigation data actually lives:',
         ],
         bullets: [
-          'Payment processor — transaction attempts, failure codes, tokenization logs, provider status',
-          'Order management — checkout flow logs, cart state, pricing calculations, discount rule evaluation',
-          'Catalog / inventory — sync history, webhook delivery, stock level changes, ERP connection status',
-          'Shipping engine — rate calculation logs, zone mappings, carrier API responses',
-          'Stripe / PayPal / Adyen — merchant account status, settlement history, chargeback data',
+          'Payment processor - transaction attempts, failure codes, tokenization logs, provider status',
+          'Order management - checkout flow logs, cart state, pricing calculations, discount rule evaluation',
+          'Catalog / inventory - sync history, webhook delivery, stock level changes, ERP connection status',
+          'Shipping engine - rate calculation logs, zone mappings, carrier API responses',
+          'Stripe / PayPal / Adyen - merchant account status, settlement history, chargeback data',
         ],
       },
       {
@@ -1362,7 +1362,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs - nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1371,7 +1371,7 @@ export const pages = {
         title: 'Why e-commerce platforms need fast investigation',
         paragraphs: [
           'E-commerce support has a unique pressure: merchant revenue is directly tied to resolution speed. A checkout bug during peak hours costs your merchants thousands per hour. Your support team\'s investigation speed is literally a revenue metric.',
-          'Altor investigates merchant tickets by pulling payment logs, inventory sync history, and order system data simultaneously — delivering root causes before the merchant\'s next message.',
+          'Altor investigates merchant tickets by pulling payment logs, inventory sync history, and order system data simultaneously - delivering root causes before the merchant\'s next message.',
         ],
       },
     ],
@@ -1398,7 +1398,7 @@ export const pages = {
     dateModified: '2026-04-01',
 
     hero: {
-      headline: 'Your customers monitor everything — except your support queue.',
+      headline: 'Your customers monitor everything - except your support queue.',
       subhead: 'When customers report missing metrics, alert storms, or ingestion failures, the root cause lives in agent configs, collector pipelines, and your ingest infrastructure. Altor investigates all three layers in 2 minutes.',
     },
 
@@ -1410,10 +1410,10 @@ export const pages = {
           'These are the tickets that sit in queue until an engineer has time to investigate:',
         ],
         bullets: [
-          '"Metrics stopped flowing from 3 of our 200 hosts since the agent upgrade" — agent crash, network policy change, or a collector config incompatibility?',
-          '"Alert fired 47 times in one hour for a metric that looks stable" — threshold too sensitive, evaluation window too short, or a data gap causing false positives?',
-          '"Our ingestion bill jumped 3x this month but our infrastructure has not changed" — cardinality explosion from new labels, custom metrics growth, or a metering bug?',
-          '"Dashboard query takes 45 seconds — it used to load in 2" — query hitting cold storage, cardinality bloom, or tenant resource contention?',
+          '"Metrics stopped flowing from 3 of our 200 hosts since the agent upgrade" - agent crash, network policy change, or a collector config incompatibility?',
+          '"Alert fired 47 times in one hour for a metric that looks stable" - threshold too sensitive, evaluation window too short, or a data gap causing false positives?',
+          '"Our ingestion bill jumped 3x this month but our infrastructure has not changed" - cardinality explosion from new labels, custom metrics growth, or a metering bug?',
+          '"Dashboard query takes 45 seconds - it used to load in 2" - query hitting cold storage, cardinality bloom, or tenant resource contention?',
         ],
       },
       {
@@ -1423,11 +1423,11 @@ export const pages = {
           'Altor connects to the systems where your investigation data actually lives:',
         ],
         bullets: [
-          'Ingestion pipeline — per-tenant data volume, cardinality metrics, rejected/dropped samples',
-          'Agent/collector logs — version, config diffs, connection status, sample delivery rates',
-          'Query engine — slow query logs, resource utilization, storage tier access patterns',
-          'Billing / usage metering — per-metric-series costs, cardinality breakdowns, plan limits',
-          'StatusPage — infrastructure incidents, maintenance windows, regional capacity',
+          'Ingestion pipeline - per-tenant data volume, cardinality metrics, rejected/dropped samples',
+          'Agent/collector logs - version, config diffs, connection status, sample delivery rates',
+          'Query engine - slow query logs, resource utilization, storage tier access patterns',
+          'Billing / usage metering - per-metric-series costs, cardinality breakdowns, plan limits',
+          'StatusPage - infrastructure incidents, maintenance windows, regional capacity',
         ],
       },
       {
@@ -1441,7 +1441,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs - nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1450,7 +1450,7 @@ export const pages = {
         title: 'Why observability companies adopt Altor',
         paragraphs: [
           'Observability companies handle ironically difficult support problems: customers who expect instant answers (they\'re monitoring experts) about deeply technical issues (data pipelines, query engines, distributed agents).',
-          'Altor matches this expectation. It investigates by querying your ingestion pipeline data, agent fleet status, and billing metering — delivering root causes with the same precision your customers use to monitor their own infrastructure.',
+          'Altor matches this expectation. It investigates by querying your ingestion pipeline data, agent fleet status, and billing metering - delivering root causes with the same precision your customers use to monitor their own infrastructure.',
         ],
       },
     ],
@@ -1472,13 +1472,13 @@ export const pages = {
   forClickhouseTeams: {
     slug: '/for/clickhouse-teams',
     title: 'Altor for ClickHouse Teams: Query Customer Logs Automatically During Investigation',
-    description: 'If your customer data lives in ClickHouse, Altor queries it automatically during ticket investigation — correlating logs, metrics, and errors in 2 minutes.',
+    description: 'If your customer data lives in ClickHouse, Altor queries it automatically during ticket investigation - correlating logs, metrics, and errors in 2 minutes.',
     datePublished: '2026-04-01',
     dateModified: '2026-04-01',
 
     hero: {
       headline: 'Your support data is in ClickHouse. Let Altor query it.',
-      subhead: 'ClickHouse holds your customer\'s API logs, event streams, and operational metrics. Today your support engineers write ad-hoc queries to investigate tickets. Altor runs those same queries automatically — every ticket, every time, in 2 minutes.',
+      subhead: 'ClickHouse holds your customer\'s API logs, event streams, and operational metrics. Today your support engineers write ad-hoc queries to investigate tickets. Altor runs those same queries automatically - every ticket, every time, in 2 minutes.',
     },
 
     sections: [
@@ -1489,10 +1489,10 @@ export const pages = {
           'These are the tickets that sit in queue until an engineer has time to investigate:',
         ],
         bullets: [
-          '"Error rate spiked for our production workload" — Altor queries ClickHouse for error_count by endpoint, time window, and customer_id to isolate the pattern',
-          '"Latency doubled on our batch processing endpoint" — Altor queries p50/p95/p99 latency over the last 48 hours, segments by payload size and region',
-          '"We are seeing intermittent timeouts on reads" — Altor checks query_log for slow queries, MergeTree part counts, and concurrent merge activity',
-          '"Our event pipeline dropped events between 2-4am UTC" — Altor queries ingestion_log for gaps, checks insert_errors, and correlates with merge operations',
+          '"Error rate spiked for our production workload" - Altor queries ClickHouse for error_count by endpoint, time window, and customer_id to isolate the pattern',
+          '"Latency doubled on our batch processing endpoint" - Altor queries p50/p95/p99 latency over the last 48 hours, segments by payload size and region',
+          '"We are seeing intermittent timeouts on reads" - Altor checks query_log for slow queries, MergeTree part counts, and concurrent merge activity',
+          '"Our event pipeline dropped events between 2-4am UTC" - Altor queries ingestion_log for gaps, checks insert_errors, and correlates with merge operations',
         ],
       },
       {
@@ -1502,11 +1502,11 @@ export const pages = {
           'Altor connects to the systems where your investigation data actually lives:',
         ],
         bullets: [
-          'Request/event logs — error rates, latency percentiles, status codes by customer, endpoint, and time window',
-          'system.query_log — slow queries affecting specific customers, resource-intensive operations',
-          'system.merges / system.parts — merge activity, part counts, storage health indicators',
-          'Custom analytics tables — whatever customer-facing metrics your product tracks',
-          'Billing/usage tables — metered consumption reconciled against Stripe invoices',
+          'Request/event logs - error rates, latency percentiles, status codes by customer, endpoint, and time window',
+          'system.query_log - slow queries affecting specific customers, resource-intensive operations',
+          'system.merges / system.parts - merge activity, part counts, storage health indicators',
+          'Custom analytics tables - whatever customer-facing metrics your product tracks',
+          'Billing/usage tables - metered consumption reconciled against Stripe invoices',
         ],
       },
       {
@@ -1520,7 +1520,7 @@ export const pages = {
       },
       {
         type: 'quote',
-        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs - nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1528,8 +1528,8 @@ export const pages = {
         type: 'body',
         title: 'Why ClickHouse teams get the most from Altor',
         paragraphs: [
-          'ClickHouse is the ideal investigation backend: it stores massive volumes of customer operational data with sub-second query performance. The problem isn\'t that the data doesn\'t exist — it\'s that writing the right queries for each ticket takes 15-20 minutes.',
-          'Altor knows your schema. It generates and executes the right ClickHouse queries for each ticket automatically — the same queries your best engineer would write, but in seconds instead of minutes.',
+          'ClickHouse is the ideal investigation backend: it stores massive volumes of customer operational data with sub-second query performance. The problem isn\'t that the data doesn\'t exist - it\'s that writing the right queries for each ticket takes 15-20 minutes.',
+          'Altor knows your schema. It generates and executes the right ClickHouse queries for each ticket automatically - the same queries your best engineer would write, but in seconds instead of minutes.',
         ],
       },
     ],
@@ -1557,7 +1557,7 @@ export const pages = {
 
     hero: {
       headline: 'Billing disputes need evidence, not explanations.',
-      subhead: 'When customers dispute charges, your team cross-references Stripe invoices against usage logs, checks for proration errors, and verifies plan changes. Altor does this automatically — pulling Stripe data and usage logs in parallel to deliver evidence-backed resolutions.',
+      subhead: 'When customers dispute charges, your team cross-references Stripe invoices against usage logs, checks for proration errors, and verifies plan changes. Altor does this automatically - pulling Stripe data and usage logs in parallel to deliver evidence-backed resolutions.',
     },
 
     sections: [
@@ -1568,10 +1568,10 @@ export const pages = {
           'These are the tickets that sit in queue until an engineer has time to investigate:',
         ],
         bullets: [
-          '"My invoice is $800 higher than last month but nothing changed" — usage tier crossed, proration from mid-cycle plan change, or metering discrepancy?',
-          '"I downgraded but was charged the full amount" — downgrade effective date, billing cycle timing, or Stripe subscription update lag?',
-          '"Payment failed but my card works everywhere else" — card processor decline code, 3D Secure challenge required, or Stripe Radar fraud block?',
-          '"Refund was issued 2 weeks ago but has not appeared on my statement" — Stripe refund status, bank processing time, or partial refund applied to wrong invoice?',
+          '"My invoice is $800 higher than last month but nothing changed" - usage tier crossed, proration from mid-cycle plan change, or metering discrepancy?',
+          '"I downgraded but was charged the full amount" - downgrade effective date, billing cycle timing, or Stripe subscription update lag?',
+          '"Payment failed but my card works everywhere else" - card processor decline code, 3D Secure challenge required, or Stripe Radar fraud block?',
+          '"Refund was issued 2 weeks ago but has not appeared on my statement" - Stripe refund status, bank processing time, or partial refund applied to wrong invoice?',
         ],
       },
       {
@@ -1581,11 +1581,11 @@ export const pages = {
           'Altor connects to the systems where your investigation data actually lives:',
         ],
         bullets: [
-          'Stripe Billing — invoices, line items, proration calculations, subscription change history',
-          'Stripe Payments — charge attempts, decline codes, 3DS challenges, refund status',
-          'Stripe Radar — fraud scores, rule triggers, block reasons for flagged payments',
-          'Usage metering — actual API calls or resource consumption vs. billed amounts',
-          'Customer config — plan tier, add-ons, coupon codes, billing contact details',
+          'Stripe Billing - invoices, line items, proration calculations, subscription change history',
+          'Stripe Payments - charge attempts, decline codes, 3DS challenges, refund status',
+          'Stripe Radar - fraud scores, rule triggers, block reasons for flagged payments',
+          'Usage metering - actual API calls or resource consumption vs. billed amounts',
+          'Customer config - plan tier, add-ons, coupon codes, billing contact details',
         ],
       },
       {
@@ -1593,13 +1593,13 @@ export const pages = {
         items: [
           { value: '30-60 min', label: 'typical manual billing investigation time' },
           { value: '< 2 min', label: 'Altor\'s time to cross-reference Stripe + usage data' },
-          { value: '#1', label: 'cause of SaaS churn — unresolved billing disputes' },
+          { value: '#1', label: 'cause of SaaS churn - unresolved billing disputes' },
           { value: '100%', label: 'of billing resolutions include evidence from both systems' },
         ],
       },
       {
         type: 'quote',
-        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs - nobody else could even attempt to answer them automatically.',
         author: 'Engineering lead',
         company: 'Portkey',
       },
@@ -1608,7 +1608,7 @@ export const pages = {
         title: 'Why Stripe teams add Altor for billing support',
         paragraphs: [
           'Billing disputes are high-stakes: the customer is upset about money, and the answer requires cross-referencing two systems (Stripe + your usage database) that don\'t talk to each other natively.',
-          'Altor queries both simultaneously. It pulls the Stripe invoice, compares line items against actual usage in your database, identifies discrepancies, and delivers a resolution with evidence — all before your agent finishes reading the ticket.',
+          'Altor queries both simultaneously. It pulls the Stripe invoice, compares line items against actual usage in your database, identifies discrepancies, and delivers a resolution with evidence - all before your agent finishes reading the ticket.',
         ],
       },
     ],
@@ -1629,14 +1629,14 @@ export const pages = {
 
   platform: {
     slug: '/platform',
-    title: 'Altor Platform — How the Investigation Engine Works',
+    title: 'Altor Platform - How the Investigation Engine Works',
     description: 'Altor is not a chatbot or a copilot. It is an investigation engine that connects read-only to your production systems and reasons over live data to diagnose technical support tickets in under 2 minutes.',
     datePublished: '2026-04-14',
     dateModified: '2026-04-14',
 
     hero: {
       headline: 'Not a chatbot. Not a copilot. An investigation engine.',
-      subhead: 'Altor connects read-only to the systems your engineers already use — ClickHouse, Linear, Stripe, GitHub, docs, StatusPage — and queries them simultaneously to trace root cause and surface a structured diagnosis. The same investigation your best engineer runs manually, in 2 minutes instead of 45.',
+      subhead: 'Altor connects read-only to the systems your engineers already use - ClickHouse, Linear, Stripe, GitHub, docs, StatusPage - and queries them simultaneously to trace root cause and surface a structured diagnosis. The same investigation your best engineer runs manually, in 2 minutes instead of 45.',
     },
 
     sections: [
@@ -1645,27 +1645,27 @@ export const pages = {
         title: 'How it works: five steps',
         paragraphs: [],
         bullets: [
-          'CONNECT — Read-only integrations to 6+ systems. ClickHouse, Linear, Stripe, GitHub, docs, StatusPage. No data migration. No new dashboards. Live in 2 weeks.',
-          'TRIGGER — A ticket arrives in your support tool (Zendesk, Pylon, Plain, Intercom, or direct). Altor receives the ticket context automatically.',
-          'INVESTIGATE — Altor queries all connected systems in parallel — not sequentially, not one at a time. Customer ID goes in, root cause hypothesis comes out.',
-          'REASON — Altor correlates signals across systems. 429 error rate spike + known bug in Linear + recent deploy in GitHub = diagnosis with evidence chain.',
-          'DELIVER — Structured diagnosis surfaces in the agent\'s existing workflow. Slack message, ticket comment, or direct integration. No new dashboard to check.',
+          'CONNECT - Read-only integrations to 6+ systems. ClickHouse, Linear, Stripe, GitHub, docs, StatusPage. No data migration. No new dashboards. Live in 2 weeks.',
+          'TRIGGER - A ticket arrives in your support tool (Zendesk, Pylon, Plain, Intercom, or direct). Altor receives the ticket context automatically.',
+          'INVESTIGATE - Altor queries all connected systems in parallel - not sequentially, not one at a time. Customer ID goes in, root cause hypothesis comes out.',
+          'REASON - Altor correlates signals across systems. 429 error rate spike + known bug in Linear + recent deploy in GitHub = diagnosis with evidence chain.',
+          'DELIVER - Structured diagnosis surfaces in the agent\'s existing workflow. Slack message, ticket comment, or direct integration. No new dashboard to check.',
         ],
       },
       {
         type: 'body',
         title: 'What connects to what',
         paragraphs: [
-          'Altor is read-only by default. It pulls data, it does not write data. Every connection uses the minimum permissions required for investigation — no write access to any system is requested or needed at deployment.',
+          'Altor is read-only by default. It pulls data, it does not write data. Every connection uses the minimum permissions required for investigation - no write access to any system is requested or needed at deployment.',
         ],
         bullets: [
-          'ClickHouse — API logs, error rates, latency percentiles, customer activity timelines, usage metrics',
-          'Linear / Jira — Known bugs, issue status, priority, linked PRs, ETA information',
-          'Stripe / Chargebee — Subscription status, billing period, payment failures, usage metering',
-          'GitHub — Recent deploys, open PRs, commit history correlated to ticket timestamp',
-          'Docs / Mintlify — Documentation content, known workarounds, guides relevant to the issue type',
-          'StatusPage / PagerDuty — Upstream provider incidents, regional degradations, maintenance windows',
-          'Custom integrations — Any system with an API. We have not yet encountered a B2B stack we cannot connect to.',
+          'ClickHouse - API logs, error rates, latency percentiles, customer activity timelines, usage metrics',
+          'Linear / Jira - Known bugs, issue status, priority, linked PRs, ETA information',
+          'Stripe / Chargebee - Subscription status, billing period, payment failures, usage metering',
+          'GitHub - Recent deploys, open PRs, commit history correlated to ticket timestamp',
+          'Docs / Mintlify - Documentation content, known workarounds, guides relevant to the issue type',
+          'StatusPage / PagerDuty - Upstream provider incidents, regional degradations, maintenance windows',
+          'Custom integrations - Any system with an API. We have not yet encountered a B2B stack we cannot connect to.',
         ],
       },
       {
@@ -1674,19 +1674,19 @@ export const pages = {
           { value: '45→2', label: 'minutes per investigation at Portkey' },
           { value: '200+', label: 'tickets diagnosed in production' },
           { value: '3 wks', label: 'from kickoff to first live investigation' },
-          { value: 'Read-only', label: 'by default — no write access requested' },
+          { value: 'Read-only', label: 'by default - no write access requested' },
         ],
       },
       {
         type: 'body',
         title: 'Trust model: read, write, delete',
         paragraphs: [
-          'Every Altor deployment starts read-only. Altor pulls logs, checks bug trackers, and verifies billing — it does not take action. As your team builds trust with the system, you control which action types graduate to auto-approval. Destructive actions are never automated, no matter how long you have been deployed.',
+          'Every Altor deployment starts read-only. Altor pulls logs, checks bug trackers, and verifies billing - it does not take action. As your team builds trust with the system, you control which action types graduate to auto-approval. Destructive actions are never automated, no matter how long you have been deployed.',
         ],
         bullets: [
-          'Read (auto-approved from day one) — Pull ClickHouse logs, check Linear bugs, verify Stripe billing, fetch GitHub deploys, search docs, check StatusPage',
-          'Write (human approval required) — Toggle feature flags, update customer configs, create Linear issues, post to Slack channels',
-          'Delete (never automated) — No destructive actions are ever taken automatically. These stay with your team. No exceptions.',
+          'Read (auto-approved from day one) - Pull ClickHouse logs, check Linear bugs, verify Stripe billing, fetch GitHub deploys, search docs, check StatusPage',
+          'Write (human approval required) - Toggle feature flags, update customer configs, create Linear issues, post to Slack channels',
+          'Delete (never automated) - No destructive actions are ever taken automatically. These stay with your team. No exceptions.',
         ],
       },
       {
@@ -1694,12 +1694,12 @@ export const pages = {
         title: 'Self-improving playbooks',
         paragraphs: [
           'Altor\'s investigation logic is not a static template. Every investigation refines the playbooks. After 200+ tickets at Portkey, the system had learned which signals to prioritize for which ticket types, which queries to run first, and which findings correlated with specific root causes.',
-          '80% of investigation logic becomes reusable across ticket types within the first month. The system gets faster and more accurate with volume — without requiring manual retraining.',
+          '80% of investigation logic becomes reusable across ticket types within the first month. The system gets faster and more accurate with volume - without requiring manual retraining.',
         ],
       },
       {
         type: 'quote',
-        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs - nobody else could even attempt to answer them automatically.',
         author: 'Engineering Lead',
         company: 'Portkey',
       },
@@ -1707,13 +1707,13 @@ export const pages = {
         type: 'body',
         title: 'Security and compliance',
         paragraphs: [
-          'All connections are encrypted in transit and at rest. Read-only credentials by default — we request the minimum permissions required for investigation and nothing more. SOC 2 Type II in progress. We can share architecture documentation and a security one-pager during the demo for your team to review.',
+          'All connections are encrypted in transit and at rest. Read-only credentials by default - we request the minimum permissions required for investigation and nothing more. SOC 2 Type II in progress. We can share architecture documentation and a security one-pager during the demo for your team to review.',
         ],
       },
     ],
 
     relatedPages: [
-      { label: 'Portkey case study — 45 min to 2', path: '/customers/portkey' },
+      { label: 'Portkey case study - 45 min to 2', path: '/customers/portkey' },
       { label: 'API error investigation', path: '/use-case/api-error-investigation' },
       { label: 'For AI infrastructure companies', path: '/for/ai-infrastructure-companies' },
     ],
@@ -1721,21 +1721,21 @@ export const pages = {
     cta: {
       title: 'See the engine run on a real ticket.',
       body: 'We will connect to your systems during the demo and run a live investigation on a ticket from your queue. Your data, your stack, diagnosed in real time.',
-      buttonText: 'Book a Demo — EST/PST',
+      buttonText: 'Book a Demo - EST/PST',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
   },
 
   about: {
     slug: '/about',
-    title: 'About Altor — Built by Engineers Who Lived the Problem',
+    title: 'About Altor - Built by Engineers Who Lived the Problem',
     description: 'Altor was built by engineers who spent years watching brilliant support teams waste hours per ticket manually copying data between ClickHouse, Linear, Stripe, and GitHub. We automated the investigation so they don\'t have to.',
     datePublished: '2026-04-14',
     dateModified: '2026-04-14',
 
     hero: {
       headline: 'Built by engineers who lived the problem.',
-      subhead: 'Every support ticket at a B2B SaaS company is a debugging session. We spent years watching great engineers waste 45 minutes per ticket manually copying data between ClickHouse, Linear, Stripe, and GitHub — data that a machine could assemble in seconds. Altor is that machine.',
+      subhead: 'Every support ticket at a B2B SaaS company is a debugging session. We spent years watching great engineers waste 45 minutes per ticket manually copying data between ClickHouse, Linear, Stripe, and GitHub - data that a machine could assemble in seconds. Altor is that machine.',
     },
 
     sections: [
@@ -1744,7 +1744,7 @@ export const pages = {
         title: 'The founding insight',
         paragraphs: [
           'Technical support at B2B companies is fundamentally different from consumer support. Customers are engineers. Their tickets are debugging sessions, not FAQ lookups. Every ticket requires querying production systems, cross-referencing multiple data sources, and constructing a root-cause hypothesis.',
-          'Existing tools solve the wrong problem. Chatbots search docs. Support platforms route tickets. AI copilots draft replies. None of them touch the investigation phase — the 20–45 minutes of manual work that happens before any of that.',
+          'Existing tools solve the wrong problem. Chatbots search docs. Support platforms route tickets. AI copilots draft replies. None of them touch the investigation phase - the 20-45 minutes of manual work that happens before any of that.',
           'Altor was built to automate that phase. Not the routing. Not the reply. The investigation itself.',
         ],
       },
@@ -1752,8 +1752,8 @@ export const pages = {
         type: 'body',
         title: 'The founder',
         paragraphs: [
-          'Anshul Basia — IIT Delhi (Computer Science), Microsoft Research. Built and shipped production AI systems across enterprise environments. Watched the support investigation problem firsthand across multiple companies before deciding to solve it directly.',
-          'Altor launched with Portkey as the first customer — an AI gateway handling millions of API requests, where every support ticket was a multi-system investigation. 200+ tickets diagnosed. Median time dropped from 45 minutes to 2.',
+          'Anshul Basia - IIT Delhi (Computer Science), Microsoft Research. Built and shipped production AI systems across enterprise environments. Watched the support investigation problem firsthand across multiple companies before deciding to solve it directly.',
+          'Altor launched with Portkey as the first customer - an AI gateway handling millions of API requests, where every support ticket was a multi-system investigation. 200+ tickets diagnosed. Median time dropped from 45 minutes to 2.',
         ],
       },
       {
@@ -1769,14 +1769,14 @@ export const pages = {
         type: 'body',
         title: 'How we work with customers',
         paragraphs: [
-          'We do not hand off software and disappear. Every deployment starts with a forward-deployed engagement — we map your stack, connect your systems, and build investigation playbooks for your top ticket types alongside your team.',
+          'We do not hand off software and disappear. Every deployment starts with a forward-deployed engagement - we map your stack, connect your systems, and build investigation playbooks for your top ticket types alongside your team.',
           'Pricing is usage-based in USD. You pay per investigation, not per seat. No minimum commitment. Scoped during the demo based on your ticket volume and systems.',
           'We work with US-based B2B SaaS teams during EST and PST hours. If your support team operates in those windows, we can support you directly.',
         ],
       },
       {
         type: 'quote',
-        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs - nobody else could even attempt to answer them automatically.',
         author: 'Engineering Lead',
         company: 'Portkey',
       },
@@ -1791,21 +1791,21 @@ export const pages = {
     cta: {
       title: 'See Altor investigate a ticket from your queue.',
       body: 'We will connect to your systems during the demo and run a live investigation on a real ticket. Your data, your stack.',
-      buttonText: 'Book a Demo — EST/PST',
+      buttonText: 'Book a Demo - EST/PST',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
   },
 
   customerPortkeyExpanded: {
     slug: '/customers/portkey',
-    title: 'Portkey Case Study — 45 Minutes to 2 Minutes, 200+ Tickets | Altor',
+    title: 'Portkey Case Study - 45 Minutes to 2 Minutes, 200+ Tickets | Altor',
     description: 'Portkey is an AI gateway handling millions of API requests. After deploying Altor, median support investigation time dropped from 45 minutes to 2 minutes across 200+ tickets. Zero workflow changes.',
     datePublished: '2026-04-14',
     dateModified: '2026-04-14',
 
     hero: {
       headline: '45 minutes to 2. Across 200+ tickets.',
-      subhead: 'Portkey is an AI gateway platform handling billions of API requests from AI-first companies. Every support ticket — rate limit regressions, latency spikes, webhook failures, billing discrepancies — required a full engineering investigation. After deploying Altor: median investigation time dropped to 2 minutes. Zero changes to existing workflows.',
+      subhead: 'Portkey is an AI gateway platform handling billions of API requests from AI-first companies. Every support ticket - rate limit regressions, latency spikes, webhook failures, billing discrepancies - required a full engineering investigation. After deploying Altor: median investigation time dropped to 2 minutes. Zero changes to existing workflows.',
     },
 
     sections: [
@@ -1822,8 +1822,8 @@ export const pages = {
         type: 'body',
         title: 'The problem: every ticket was a 45-minute debugging session',
         paragraphs: [
-          'Portkey is an AI infrastructure company. Their customers are engineers building on LLMs — Anthropic, OpenAI, Mistral, and dozens of other providers routing through the Portkey gateway. When something breaks, their customers do not file vague tickets. They report exact symptoms: "my p95 latency jumped 200ms," "my Llama 3 fallback stopped firing," "I\'m getting 429s from the gateway on my Claude requests."',
-          'These tickets cannot be answered from a knowledge base. Every one of them required Portkey\'s team to open ClickHouse, run queries against the customer\'s API logs, check Linear for known bugs, look at recent GitHub deploys, and verify billing in Stripe. One ticket. Six browser tabs. 20–45 minutes. Every time.',
+          'Portkey is an AI infrastructure company. Their customers are engineers building on LLMs - Anthropic, OpenAI, Mistral, and dozens of other providers routing through the Portkey gateway. When something breaks, their customers do not file vague tickets. They report exact symptoms: "my p95 latency jumped 200ms," "my Llama 3 fallback stopped firing," "I\'m getting 429s from the gateway on my Claude requests."',
+          'These tickets cannot be answered from a knowledge base. Every one of them required Portkey\'s team to open ClickHouse, run queries against the customer\'s API logs, check Linear for known bugs, look at recent GitHub deploys, and verify billing in Stripe. One ticket. Six browser tabs. 20-45 minutes. Every time.',
           'At Portkey\'s scale, this was the single largest bottleneck in their support operation. Not response time. Not ticket routing. The investigation itself.',
         ],
       },
@@ -1832,9 +1832,9 @@ export const pages = {
         title: 'The deployment: 3 weeks from kickoff to production',
         paragraphs: [],
         bullets: [
-          'Week 1 — Stack audit: We mapped Portkey\'s ClickHouse schema, Linear project structure, Stripe billing setup, and GitHub deploy cadence. Identified the top 5 ticket types by volume: rate limit issues, latency spikes, webhook failures, billing discrepancies, and model fallback failures.',
-          'Week 2 — Integrations live: Read-only connections established to all 6 systems. First investigations running on real tickets from Portkey\'s active queue. Engineering lead involved in reviewing and validating early diagnoses.',
-          'Weeks 3–4 — Playbooks tuned: Investigation logic refined against actual ticket patterns. By the end of week 4, 80% of ticket types had reusable investigation playbooks. Median time: 2 minutes.',
+          'Week 1 - Stack audit: We mapped Portkey\'s ClickHouse schema, Linear project structure, Stripe billing setup, and GitHub deploy cadence. Identified the top 5 ticket types by volume: rate limit issues, latency spikes, webhook failures, billing discrepancies, and model fallback failures.',
+          'Week 2 - Integrations live: Read-only connections established to all 6 systems. First investigations running on real tickets from Portkey\'s active queue. Engineering lead involved in reviewing and validating early diagnoses.',
+          'Weeks 3-4 - Playbooks tuned: Investigation logic refined against actual ticket patterns. By the end of week 4, 80% of ticket types had reusable investigation playbooks. Median time: 2 minutes.',
         ],
       },
       {
@@ -1845,16 +1845,16 @@ export const pages = {
           'Altor receives the ticket and the customer\'s account ID. It runs the following in parallel:',
         ],
         bullets: [
-          'ClickHouse — Queries 429 error rate for this customer\'s API calls over the last 24 hours. Finds: 12% error rate baseline, spiked to 43% at 09:14 UTC. Spike correlates to a specific endpoint.',
-          'Linear — Searches for open issues matching "rate limit" and the affected endpoint. Finds: LIN-482 "rate limit regression on /v1/chat" — open, priority urgent, assigned.',
-          'Stripe — Checks subscription tier, usage limits, and current period usage. Finds: Plan active, usage within limits. Not a billing-related rate limit.',
-          'GitHub — Pulls recent merges to the rate-limiting middleware. Finds: PR #891 "fix/rate-limit" — currently in review, expected merge within 3 days.',
+          'ClickHouse - Queries 429 error rate for this customer\'s API calls over the last 24 hours. Finds: 12% error rate baseline, spiked to 43% at 09:14 UTC. Spike correlates to a specific endpoint.',
+          'Linear - Searches for open issues matching "rate limit" and the affected endpoint. Finds: LIN-482 "rate limit regression on /v1/chat" - open, priority urgent, assigned.',
+          'Stripe - Checks subscription tier, usage limits, and current period usage. Finds: Plan active, usage within limits. Not a billing-related rate limit.',
+          'GitHub - Pulls recent merges to the rate-limiting middleware. Finds: PR #891 "fix/rate-limit" - currently in review, expected merge within 3 days.',
           'Diagnosis delivered in 94 seconds: "Known regression LIN-482 causing elevated 429s on /v1/chat since 09:14 UTC. Patch in PR #891, ETA 3 days. Workaround: reduce concurrency or add exponential backoff. No billing issue involved."',
         ],
       },
       {
         type: 'quote',
-        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs — nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
+        text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs. Our tickets are investigations, not FAQs - nobody else could even attempt to answer them automatically. Altor can because it queries our actual production data.',
         author: 'Engineering Lead',
         company: 'Portkey',
       },
@@ -1863,7 +1863,7 @@ export const pages = {
         title: 'The result: investigation time eliminated as a bottleneck',
         paragraphs: [
           'After 200+ tickets diagnosed across all major ticket types, the investigation phase effectively stopped being a bottleneck. Support agents receive a structured diagnosis before they finish reading the ticket. Engineers are no longer pulled in for routine investigations. Escalations dropped.',
-          'The investigation logic also became more accurate over time. Early playbooks covered the top 3 ticket types. After 200+ tickets, 80% of all ticket types had reusable investigation logic — including edge cases that would have been hard to anticipate at the outset.',
+          'The investigation logic also became more accurate over time. Early playbooks covered the top 3 ticket types. After 200+ tickets, 80% of all ticket types had reusable investigation logic - including edge cases that would have been hard to anticipate at the outset.',
         ],
         bullets: [
           '2 min median investigation time (down from 45 min)',
@@ -1884,7 +1884,7 @@ export const pages = {
     cta: {
       title: 'Your stack looks like Portkey\'s. See what Altor finds.',
       body: 'We will connect to your systems during the demo and run a live investigation on a ticket from your queue. Your data, your stack, diagnosed in real time.',
-      buttonText: 'Book a Demo — EST/PST',
+      buttonText: 'Book a Demo - EST/PST',
       buttonUrl: 'https://calendly.com/founders-altorlab/30min',
     },
   },
@@ -1897,7 +1897,7 @@ export const pages = {
     dateModified: '2026-04-15',
     hero: {
       headline: 'Your support data is in ClickHouse. Altor queries it automatically.',
-      subhead: 'When a ticket arrives, Altor runs the ClickHouse queries your engineers would write — error rates by customer, latency percentiles, failed request patterns — and delivers the diagnosis before your agent finishes reading the ticket.',
+      subhead: 'When a ticket arrives, Altor runs the ClickHouse queries your engineers would write - error rates by customer, latency percentiles, failed request patterns - and delivers the diagnosis before your agent finishes reading the ticket.',
     },
     sections: [
       {
@@ -1905,11 +1905,11 @@ export const pages = {
         title: 'What Altor queries in ClickHouse',
         paragraphs: ['Altor generates and executes targeted ClickHouse queries for each ticket, pulling exactly the data needed to diagnose the reported issue:'],
         bullets: [
-          'Request logs — error rates, status codes, response times by customer_id and endpoint over the relevant time window',
-          'system.query_log — slow queries, resource-intensive operations affecting the reporting customer',
-          'Custom event tables — whatever usage or behavioral data your product tracks per customer',
-          'Ingestion and pipeline tables — for data infrastructure products reporting missing or delayed data',
-          'Billing and usage tables — metered consumption reconciled against invoice line items',
+          'Request logs - error rates, status codes, response times by customer_id and endpoint over the relevant time window',
+          'system.query_log - slow queries, resource-intensive operations affecting the reporting customer',
+          'Custom event tables - whatever usage or behavioral data your product tracks per customer',
+          'Ingestion and pipeline tables - for data infrastructure products reporting missing or delayed data',
+          'Billing and usage tables - metered consumption reconciled against invoice line items',
         ],
       },
       {
@@ -1932,7 +1932,7 @@ export const pages = {
         title: 'How the ClickHouse integration works',
         paragraphs: [
           'Setup takes under 30 minutes. Altor connects to your ClickHouse instance with read-only credentials, learns your schema, and begins querying on the first ticket.',
-          'You control which tables Altor can access. Most teams grant access to request logs, error tables, and usage data — keeping payment and PII tables off-limits.',
+          'You control which tables Altor can access. Most teams grant access to request logs, error tables, and usage data - keeping payment and PII tables off-limits.',
         ],
       },
     ],
@@ -1952,7 +1952,7 @@ export const pages = {
   integrationLinear: {
     slug: '/integrations/linear',
     title: 'Altor + Linear: Bug Tracker Queries in Every Support Investigation',
-    description: 'Altor searches Linear for open bugs, regressions, and known issues matching every support ticket — automatically. No more switching tabs to check if an issue is already filed.',
+    description: 'Altor searches Linear for open bugs, regressions, and known issues matching every support ticket - automatically. No more switching tabs to check if an issue is already filed.',
     datePublished: '2026-04-15',
     dateModified: '2026-04-15',
     hero: {
@@ -1965,11 +1965,11 @@ export const pages = {
         title: 'What Altor checks in Linear',
         paragraphs: ['Altor searches Linear using keywords and patterns extracted from each ticket:'],
         bullets: [
-          'Open bugs matching the reported symptom — error messages, affected features, and impacted user flows',
-          'Recently closed issues that may have regressed — particularly useful for "this was working last week" reports',
-          'Issues correlated with recent deploys — Altor cross-references Linear with GitHub deploy history',
-          'Priority and assignee — so agents know whether the bug is being actively worked and by whom',
-          'ETA from issue labels or comments — gives agents something concrete to share with the customer',
+          'Open bugs matching the reported symptom - error messages, affected features, and impacted user flows',
+          'Recently closed issues that may have regressed - particularly useful for "this was working last week" reports',
+          'Issues correlated with recent deploys - Altor cross-references Linear with GitHub deploy history',
+          'Priority and assignee - so agents know whether the bug is being actively worked and by whom',
+          'ETA from issue labels or comments - gives agents something concrete to share with the customer',
         ],
       },
       {
@@ -2012,7 +2012,7 @@ export const pages = {
   integrationStripe: {
     slug: '/integrations/stripe',
     title: 'Altor + Stripe: Billing Investigation Without Leaving the Ticket',
-    description: 'Altor pulls Stripe invoice data, charge history, and usage metrics automatically when billing tickets arrive — cross-referencing what was charged against what was actually used.',
+    description: 'Altor pulls Stripe invoice data, charge history, and usage metrics automatically when billing tickets arrive - cross-referencing what was charged against what was actually used.',
     datePublished: '2026-04-15',
     dateModified: '2026-04-15',
     hero: {
@@ -2025,11 +2025,11 @@ export const pages = {
         title: 'What Altor pulls from Stripe',
         paragraphs: ['For every billing-related ticket, Altor automatically retrieves:'],
         bullets: [
-          'Invoice line items and proration calculations — the exact breakdown of what was charged and why',
-          'Subscription change history — plan upgrades, downgrades, and the billing dates that affect the invoice',
-          'Payment attempt history — decline codes, retry attempts, and card processor responses',
-          'Stripe Radar decisions — fraud scores and rule triggers for flagged payments',
-          'Refund status — issued date, amount, and bank processing status for pending refunds',
+          'Invoice line items and proration calculations - the exact breakdown of what was charged and why',
+          'Subscription change history - plan upgrades, downgrades, and the billing dates that affect the invoice',
+          'Payment attempt history - decline codes, retry attempts, and card processor responses',
+          'Stripe Radar decisions - fraud scores and rule triggers for flagged payments',
+          'Refund status - issued date, amount, and bank processing status for pending refunds',
         ],
       },
       {
@@ -2037,7 +2037,7 @@ export const pages = {
         items: [
           { value: '30-60 min', label: 'typical manual billing investigation time' },
           { value: '< 2 min', label: 'Altor cross-references Stripe + usage data' },
-          { value: '#1', label: 'reason for SaaS churn — unresolved billing disputes' },
+          { value: '#1', label: 'reason for SaaS churn - unresolved billing disputes' },
           { value: '100%', label: 'of billing resolutions include evidence from both systems' },
         ],
       },

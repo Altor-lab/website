@@ -1,0 +1,28 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Altor",
+  "url": "https://altorlab.com",
+  "description": "AI-powered support ticket investigation for US B2B teams. Altor queries ClickHouse, Linear, Stripe, and GitHub to diagnose technical support tickets in 2 minutes.",
+  "foundingDate": "2025",
+  "areaServed": "US",
+  "inLanguage": "en-US",
+  "serviceType": "B2B SaaS \u2014 AI Support Automation",
+  "offers": {
+    "priceCurrency": "USD"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/altor-lab"
+  ],
+  "contactPoint": {
+    "email": "founders@altorlab.com",
+    "contactType": "sales"
+  },
+  "knowsAbout": [
+    "support ticket investigation",
+    "AI support automation",
+    "reduce support escalations",
+    "ClickHouse support",
+    "B2B support"
+  ]
+}

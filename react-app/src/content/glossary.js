@@ -3,12 +3,12 @@ export const glossaryTerms = {
     term: 'Mean Time to Resolution (MTTR)',
     slug: '/glossary/mean-time-to-resolution',
     definition: 'Mean Time to Resolution measures the average time from when a support ticket is created to when it is fully resolved. For B2B technical support, MTTR is the primary metric that drives customer satisfaction and retention.',
-    context: 'B2B SaaS companies typically see MTTR of 4-24 hours for technical tickets. The investigation phase — checking logs, querying databases, and cross-referencing systems — accounts for 60-80% of total resolution time.',
+    context: 'B2B SaaS companies typically see MTTR of 4-24 hours for technical tickets. The investigation phase - checking logs, querying databases, and cross-referencing systems - accounts for 60-80% of total resolution time.',
     howAltorHelps: 'Altor reduces the investigation phase from 20-45 minutes to under 2 minutes by automatically querying ClickHouse, Linear, Stripe, and GitHub when a ticket arrives.',
     relatedTerms: ['first-response-time', 'support-escalation-rate', 'ticket-investigation'],
     faqs: [
       { q: 'What is a good MTTR for B2B support?', a: 'For B2B SaaS, under 4 hours is excellent, 4-8 hours is good, and over 24 hours indicates investigation bottlenecks.' },
-      { q: 'How do you reduce MTTR?', a: 'The biggest lever is automating ticket investigation. Manual log checking takes 20-45 minutes per ticket — automating this cuts MTTR by 40-60%.' },
+      { q: 'How do you reduce MTTR?', a: 'The biggest lever is automating ticket investigation. Manual log checking takes 20-45 minutes per ticket - automating this cuts MTTR by 40-60%.' },
     ],
   },
   'first-response-time': {
@@ -20,7 +20,7 @@ export const glossaryTerms = {
     relatedTerms: ['mean-time-to-resolution', 'customer-satisfaction-score', 'support-escalation-rate'],
     faqs: [
       { q: 'What is a good first response time for B2B support?', a: 'Under 1 hour is excellent for B2B. Under 4 hours is the industry standard. Anything over 8 hours risks customer escalation.' },
-      { q: 'Does faster first response improve resolution time?', a: 'Yes — when the first response includes diagnostic data rather than clarifying questions, the entire resolution cycle shortens by 30-50%.' },
+      { q: 'Does faster first response improve resolution time?', a: 'Yes - when the first response includes diagnostic data rather than clarifying questions, the entire resolution cycle shortens by 30-50%.' },
     ],
   },
   'support-escalation-rate': {
@@ -38,9 +38,9 @@ export const glossaryTerms = {
   'ticket-investigation': {
     term: 'Ticket Investigation',
     slug: '/glossary/ticket-investigation',
-    definition: 'Ticket investigation is the process of diagnosing the root cause of a customer-reported issue by querying multiple internal systems — application logs, databases, billing platforms, bug trackers, and monitoring tools.',
+    definition: 'Ticket investigation is the process of diagnosing the root cause of a customer-reported issue by querying multiple internal systems - application logs, databases, billing platforms, bug trackers, and monitoring tools.',
     context: 'Unlike consumer support where agents follow scripts, B2B technical investigation requires querying 3-6 different systems per ticket. Each investigation takes 20-45 minutes manually and requires production-level system access.',
-    howAltorHelps: 'Altor automates the entire investigation workflow — connecting to ClickHouse, Linear, Stripe, GitHub, and other systems to deliver a root-cause diagnosis in under 2 minutes.',
+    howAltorHelps: 'Altor automates the entire investigation workflow - connecting to ClickHouse, Linear, Stripe, GitHub, and other systems to deliver a root-cause diagnosis in under 2 minutes.',
     relatedTerms: ['mean-time-to-resolution', 'root-cause-analysis', 'support-escalation-rate'],
     faqs: [
       { q: 'What is the difference between support investigation and support triage?', a: 'Triage categorizes and routes tickets. Investigation diagnoses root causes by querying production systems. Triage takes seconds; investigation takes 20-45 minutes.' },
@@ -87,7 +87,7 @@ export const glossaryTerms = {
     term: 'Support Automation',
     slug: '/glossary/support-automation',
     definition: 'Support automation uses software to handle parts of the support workflow without human intervention. This ranges from chatbots answering FAQs to AI systems investigating technical issues by querying production databases.',
-    context: 'Most support automation focuses on deflection — routing tickets or suggesting help articles. B2B technical support requires investigation automation — AI that can query ClickHouse, check Linear for bugs, and cross-reference Stripe billing data.',
+    context: 'Most support automation focuses on deflection - routing tickets or suggesting help articles. B2B technical support requires investigation automation - AI that can query ClickHouse, check Linear for bugs, and cross-reference Stripe billing data.',
     howAltorHelps: 'Altor is investigation automation, not deflection automation. It queries your actual production systems to deliver root-cause diagnoses, handling the 80% of B2B tickets that chatbots and article-suggestion tools cannot.',
     relatedTerms: ['ticket-investigation', 'support-escalation-rate', 'ai-support-agent'],
     faqs: [
@@ -100,7 +100,7 @@ export const glossaryTerms = {
     slug: '/glossary/ai-support-agent',
     definition: 'An AI support agent is software that handles support interactions autonomously, from reading tickets to investigating issues to drafting responses. Unlike chatbots, AI support agents connect to production systems.',
     context: 'The term covers a spectrum: from chatbots that suggest articles, to copilots that help agents draft responses, to autonomous agents that investigate and resolve tickets end-to-end. The key differentiator is whether the AI can access your actual data.',
-    howAltorHelps: 'Altor is an AI investigation agent — it reads ticket context, queries your production systems (ClickHouse, Linear, Stripe, GitHub), and delivers structured root-cause diagnoses that human agents review and send.',
+    howAltorHelps: 'Altor is an AI investigation agent - it reads ticket context, queries your production systems (ClickHouse, Linear, Stripe, GitHub), and delivers structured root-cause diagnoses that human agents review and send.',
     relatedTerms: ['support-automation', 'ticket-investigation', 'support-escalation-rate'],
     faqs: [
       { q: 'What is the difference between an AI support agent and a chatbot?', a: 'A chatbot searches your help center. An AI support agent queries your production logs, bug tracker, and billing system to investigate what is actually broken.' },
@@ -112,7 +112,7 @@ export const glossaryTerms = {
     slug: '/glossary/incident-management',
     definition: 'Incident management is the process of detecting, responding to, and resolving service disruptions. In B2B SaaS, incidents often surface first through customer support tickets before monitoring alerts.',
     context: '30-50% of B2B incidents are first reported by customers, not internal monitoring. Support teams need the same system access as on-call engineers to quickly determine whether a customer report indicates a widespread incident.',
-    howAltorHelps: 'When a ticket arrives, Altor checks production metrics and error rates across the customer base — not just the reporting customer — to quickly identify whether the issue is isolated or an incident.',
+    howAltorHelps: 'When a ticket arrives, Altor checks production metrics and error rates across the customer base - not just the reporting customer - to quickly identify whether the issue is isolated or an incident.',
     relatedTerms: ['root-cause-analysis', 'ticket-investigation', 'mean-time-to-resolution'],
     faqs: [
       { q: 'How does support relate to incident management?', a: 'Support teams are often the first to detect incidents through customer reports. Fast investigation determines whether a ticket is an isolated issue or a widespread incident requiring engineering response.' },
@@ -135,7 +135,7 @@ export const glossaryTerms = {
     term: 'Service Level Agreement (SLA)',
     slug: '/glossary/sla-service-level-agreement',
     definition: 'An SLA defines the committed response and resolution times for different ticket priorities. SLA breaches result in service credits, penalty fees, or contract termination in B2B agreements.',
-    context: 'Enterprise B2B SLAs typically require P1 response within 15-30 minutes and resolution within 4 hours. SLA compliance directly affects revenue — a single enterprise SLA breach can cost $10,000-100,000 in credits.',
+    context: 'Enterprise B2B SLAs typically require P1 response within 15-30 minutes and resolution within 4 hours. SLA compliance directly affects revenue - a single enterprise SLA breach can cost $10,000-100,000 in credits.',
     howAltorHelps: 'Altor helps meet SLA targets by starting investigation the moment a ticket arrives, rather than when an agent picks it up. This eliminates the queue-to-investigation gap that causes most SLA breaches.',
     relatedTerms: ['mean-time-to-resolution', 'first-response-time', 'incident-management'],
     faqs: [
@@ -150,7 +150,7 @@ export const glossaryTerms = {
     context: 'B2B companies often over-optimize for deflection and accidentally make it harder for paying customers to reach an expert when a real production issue happens. The right goal is to deflect repetitive FAQ traffic while preserving a fast path for urgent technical tickets.',
     howAltorHelps: 'Altor does not try to deflect complex incidents into a help center loop. It lets teams safely deflect simple questions while automatically investigating the tickets that should reach support immediately.',
     stats: [
-      { value: '10–25%', label: 'healthy deflection range for technical B2B support' },
+      { value: '10-25%', label: 'healthy deflection range for technical B2B support' },
       { value: '80%', label: 'of complex tickets that still require live investigation' },
       { value: '2 min', label: 'target diagnosis time once a technical ticket is accepted' },
       { value: '1 route', label: 'clear escalation path customers need for urgent incidents' },
@@ -168,10 +168,10 @@ export const glossaryTerms = {
     context: 'Technical support teams struggle with FCR because the first response often asks for logs, account IDs, and screenshots instead of giving an answer. That creates extra cycles, longer queues, and more customer frustration.',
     howAltorHelps: 'Altor investigates before the agent replies, so the first response can include root cause, evidence, and a recommended action instead of a list of clarifying questions.',
     stats: [
-      { value: '45–70%', label: 'typical FCR range for mature B2B support teams' },
-      { value: '30–50%', label: 'lift possible when first replies include diagnostics' },
+      { value: '45-70%', label: 'typical FCR range for mature B2B support teams' },
+      { value: '30-50%', label: 'lift possible when first replies include diagnostics' },
       { value: '1 reply', label: 'ideal number of customer touches for common technical issues' },
-      { value: '20–45 min', label: 'manual investigation time that usually blocks FCR' },
+      { value: '20-45 min', label: 'manual investigation time that usually blocks FCR' },
     ],
     relatedTerms: ['first-response-time', 'mean-time-to-resolution', 'ticket-investigation'],
     faqs: [
@@ -187,7 +187,7 @@ export const glossaryTerms = {
     howAltorHelps: 'Altor starts the investigation immediately when the ticket lands, shrinking the gap between ticket creation and meaningful technical work so more tickets stay inside SLA windows.',
     stats: [
       { value: '95%+', label: 'common enterprise SLA compliance target' },
-      { value: '15–30 min', label: 'typical P1 response commitment' },
+      { value: '15-30 min', label: 'typical P1 response commitment' },
       { value: '4 hr', label: 'common P1 resolution deadline' },
       { value: '$10K+', label: 'possible impact of a serious enterprise SLA breach' },
     ],
@@ -204,9 +204,9 @@ export const glossaryTerms = {
     context: 'Leaders often underestimate this metric because they count support salaries but ignore the hidden cost of engineering interruptions. A ticket that escalates to product or infra teams can cost several times more than it appears in the help desk.',
     howAltorHelps: 'By reducing manual investigation and lowering escalations, Altor cuts the most expensive portion of technical ticket handling: engineering time spent reproducing and diagnosing customer-specific issues.',
     stats: [
-      { value: '$15–60', label: 'common cost range for a standard B2B support ticket' },
+      { value: '$15-60', label: 'common cost range for a standard B2B support ticket' },
       { value: '$100+', label: 'cost of tickets that require engineering attention' },
-      { value: '60–80%', label: 'share of resolution time often spent investigating' },
+      { value: '60-80%', label: 'share of resolution time often spent investigating' },
       { value: '2 min', label: 'investigation target that improves unit economics' },
     ],
     relatedTerms: ['mean-time-to-resolution', 'support-escalation-rate', 'ticket-investigation'],
@@ -222,7 +222,7 @@ export const glossaryTerms = {
     context: 'For B2B support, documentation works best on predictable questions and weakest on production-specific failures. Teams need to know exactly where the help center stops being useful so technical tickets are not trapped in self-serve loops.',
     howAltorHelps: 'Altor complements the knowledge base by handling the cases docs cannot solve. When customers move from “how do I do this?” to “why did this break for my account?”, Altor takes over the investigation layer.',
     stats: [
-      { value: '15–35%', label: 'common deflection range for strong B2B help centers' },
+      { value: '15-35%', label: 'common deflection range for strong B2B help centers' },
       { value: '0%', label: 'help-center usefulness on customer-specific production incidents' },
       { value: '24/7', label: 'availability advantage of strong documentation' },
       { value: '1 click', label: 'ideal handoff path from docs to support for urgent issues' },
@@ -240,9 +240,9 @@ export const glossaryTerms = {
     context: 'High utilization can look efficient on dashboards while customers still wait because every agent is stuck gathering data from logs, bug trackers, and billing tools. Sustainable utilization matters more than maxed-out utilization.',
     howAltorHelps: 'Altor removes repetitive investigation work from the agent queue, which improves productive utilization without forcing agents into constant context switching or escalation chasing.',
     stats: [
-      { value: '65–80%', label: 'healthy utilization range for support teams' },
+      { value: '65-80%', label: 'healthy utilization range for support teams' },
       { value: '85%+', label: 'utilization level where burnout and queue delays rise' },
-      { value: '20–45 min', label: 'manual investigation time that inflates utilization' },
+      { value: '20-45 min', label: 'manual investigation time that inflates utilization' },
       { value: '1 queue', label: 'simpler workflow once investigation is automated' },
     ],
     relatedTerms: ['support-cost-per-ticket', 'mean-time-to-resolution', 'support-escalation-rate'],
@@ -258,8 +258,8 @@ export const glossaryTerms = {
     context: 'B2B buyers remember effort almost as strongly as outcome. Even when an issue is eventually fixed, a high-effort experience damages renewal confidence and makes executive escalation more likely.',
     howAltorHelps: 'Altor lowers customer effort by giving the support team an evidence-backed diagnosis early, reducing the need for repeated clarification loops and unnecessary transfers to engineering.',
     stats: [
-      { value: '1–7', label: 'common CES survey scale' },
-      { value: '2–3', label: 'target low-effort score for strong support teams' },
+      { value: '1-7', label: 'common CES survey scale' },
+      { value: '2-3', label: 'target low-effort score for strong support teams' },
       { value: '3+', label: 'internal handoffs that usually hurt CES' },
       { value: '1 reply', label: 'ideal number of times customers explain the issue' },
     ],
@@ -276,7 +276,7 @@ export const glossaryTerms = {
     context: 'The best B2B teams do not wait for customers to discover every issue first. Proactive communication reduces churn risk because customers see that the vendor is watching, investigating, and responding before they have to chase updates.',
     howAltorHelps: 'Altor helps teams move toward proactive support by detecting patterns across incoming tickets and shared systems, making it easier to see whether a “single ticket” is actually the first sign of a wider problem.',
     stats: [
-      { value: '30–50%', label: 'share of incidents first surfaced by customers in B2B SaaS' },
+      { value: '30-50%', label: 'share of incidents first surfaced by customers in B2B SaaS' },
       { value: '1 alert', label: 'signal needed to start proactive outreach fast' },
       { value: '2 min', label: 'investigation window that enables proactive replies' },
       { value: '24 hr', label: 'time saved when customers do not need to discover the issue first' },
@@ -295,7 +295,7 @@ export const glossaryTerms = {
     howAltorHelps: 'Altor improves quality scores by giving agents structured diagnostic findings they can review before sending. That reduces speculative replies and increases consistency across the team.',
     stats: [
       { value: '85%+', label: 'target internal QA score for mature teams' },
-      { value: '2–5', label: 'review criteria often used in support QA rubrics' },
+      { value: '2-5', label: 'review criteria often used in support QA rubrics' },
       { value: '1 source', label: 'minimum evidence expected in technical answers' },
       { value: '70%', label: 'quality risk when agents answer before investigating' },
     ],
@@ -313,7 +313,7 @@ export const glossaryTerms = {
     howAltorHelps: 'Altor cuts the investigation time that causes technical queues to clog, helping teams clear backlog faster without immediately adding more engineers or restructuring every shift.',
     stats: [
       { value: '1 day', label: 'threshold where backlog starts becoming visible to customers' },
-      { value: '20–45 min', label: 'manual investigation time that creates queue pressure' },
+      { value: '20-45 min', label: 'manual investigation time that creates queue pressure' },
       { value: '2x', label: 'backlog growth risk during incidents or launch weeks' },
       { value: '0 breach', label: 'ideal SLA outcome while clearing backlog' },
     ],
@@ -349,8 +349,8 @@ export const glossaryTerms = {
     howAltorHelps: 'Altor shortens time to first response by preparing a technical diagnosis immediately, allowing agents to send a useful reply faster instead of delaying until they finish manual research.',
     stats: [
       { value: '<1 hr', label: 'excellent first response target for B2B teams' },
-      { value: '1–4 hr', label: 'common contract expectation during business hours' },
-      { value: '30–50%', label: 'resolution improvement when first replies include data' },
+      { value: '1-4 hr', label: 'common contract expectation during business hours' },
+      { value: '30-50%', label: 'resolution improvement when first replies include data' },
       { value: '0 guesswork', label: 'goal for technical first responses' },
     ],
     relatedTerms: ['first-response-time', 'first-contact-resolution', 'customer-effort-score'],
@@ -366,7 +366,7 @@ export const glossaryTerms = {
     context: 'For B2B teams, support deflection is useful only when it protects team capacity without blocking real customer problems. Technical support leaders need a clear line between “deflectable” and “investigation-required” issues.',
     howAltorHelps: 'Altor helps teams practice safer support deflection by taking the complex investigation work off the table. That means you can deflect simple questions confidently while still moving serious tickets into a fast, evidence-based resolution path.',
     stats: [
-      { value: '20–40%', label: 'common overall deflection range for mature support programs' },
+      { value: '20-40%', label: 'common overall deflection range for mature support programs' },
       { value: '80%', label: 'share of technical tickets that are poor deflection candidates' },
       { value: '1 split', label: 'critical line between FAQ and investigation workflows' },
       { value: '24/7', label: 'self-serve coverage advantage of strong deflection systems' },

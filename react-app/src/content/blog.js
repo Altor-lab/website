@@ -2,13 +2,13 @@ export const blogPosts = {
   investigationWorkflow: {
     slug: '/blog/support-ticket-investigation-workflow',
     title: 'The Support Investigation Workflow Top B2B Teams Use to Cut Resolution Time',
-    description: 'Most support teams optimize routing and replies while the 20-45 minute investigation step stays manual. This framework shows where resolution time actually goes — and how to shrink it.',
+    description: 'Most support teams optimize routing and replies while the 20-45 minute investigation step stays manual. This framework shows where resolution time actually goes - and how to shrink it.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
     readTime: '7 min read',
 
     headline: 'The support ticket investigation workflow nobody talks about',
-    opening: 'When a B2B customer reports "my API calls are failing," the support engineer\'s real work begins: querying ClickHouse for error patterns, searching Linear for known bugs, checking Stripe for billing issues, reviewing GitHub for recent deploys, and cross-referencing all of it into a diagnosis. This investigation phase takes 20–45 minutes per ticket and accounts for 80% of the total resolution time — yet almost no support tooling, training, or content addresses it. According to a 2025 Zendesk benchmark study of US SaaS companies, the average US support team now handles 400+ tickets per week, which makes investigation speed a board-level lever instead of a workflow detail. Every guide on "reducing resolution time" focuses on routing, chatbots, and knowledge bases. The investigation itself is treated as an opaque step labeled "engineer works on it." This guide breaks it down.',
+    opening: 'When a B2B customer reports "my API calls are failing," the support engineer\'s real work begins: querying ClickHouse for error patterns, searching Linear for known bugs, checking Stripe for billing issues, reviewing GitHub for recent deploys, and cross-referencing all of it into a diagnosis. This investigation phase takes 20-45 minutes per ticket and accounts for 80% of the total resolution time - yet almost no support tooling, training, or content addresses it. According to a 2025 Zendesk benchmark study of US SaaS companies, the average US support team now handles 400+ tickets per week, which makes investigation speed a board-level lever instead of a workflow detail. Every guide on "reducing resolution time" focuses on routing, chatbots, and knowledge bases. The investigation itself is treated as an opaque step labeled "engineer works on it." This guide breaks it down.',
 
     sections: [
       {
@@ -17,15 +17,15 @@ export const blogPosts = {
           'Support ticket lifecycle is typically modeled as: receive → triage → assign → resolve → close. But "resolve" hides the most expensive step. For technical B2B tickets, resolution decomposes into two distinct phases:',
         ],
         bullets: [
-          'Investigation (20–45 minutes): Querying systems, correlating data, identifying root cause',
+          'Investigation (20-45 minutes): Querying systems, correlating data, identifying root cause',
           'Response (5 minutes): Writing the customer reply once you know the answer',
         ],
         paragraphs2: null,
       },
       {
         paragraphs: [
-          'Support platforms optimize triage and assignment. Chatbots handle the 20% of tickets that are FAQ-answerable. AI copilots help draft the 5-minute response faster. But nobody automates the 20–45 minute investigation — the part where an engineer manually queries 4–6 systems and correlates the results.',
-          'This is why resolution time benchmarks plateau. You can route tickets instantly, deflect the simple ones, and draft responses with AI — but if the investigation still takes 30 minutes, resolution time stays at 35 minutes.',
+          'Support platforms optimize triage and assignment. Chatbots handle the 20% of tickets that are FAQ-answerable. AI copilots help draft the 5-minute response faster. But nobody automates the 20-45 minute investigation - the part where an engineer manually queries 4-6 systems and correlates the results.',
+          'This is why resolution time benchmarks plateau. You can route tickets instantly, deflect the simple ones, and draft responses with AI - but if the investigation still takes 30 minutes, resolution time stays at 35 minutes.',
         ],
       },
       {
@@ -34,37 +34,37 @@ export const blogPosts = {
           'After studying hundreds of B2B support investigations at companies using ClickHouse, Linear, Stripe, and GitHub, a consistent pattern emerges. Most technical investigations follow 4 queries in sequence:',
         ],
         steps: [
-          'Symptom query — What is actually happening? Pull the customer\'s specific data from your observability system (ClickHouse, Datadog, etc.). Don\'t rely on their description — measure it. Example: "429 error rate for customer acme-corp spiked from 12% to 43% over the last 2 hours."',
-          'Correlation query — Is this a known issue? Search your bug tracker (Linear, Jira) for matching symptoms. Check your status page for ongoing incidents. Example: "LIN-482: rate limit regression — open, priority urgent."',
-          'Elimination query — What isn\'t causing it? Check billing (Stripe) for payment issues, plan limits, or feature access changes. Check deployment history (GitHub) for recent changes. Example: "Plan active, usage within limits. Last deploy: 6 days ago, unrelated endpoint."',
-          'Synthesis — Combine findings into a diagnosis with confidence level and recommended action. Example: "Known bug LIN-482 causing elevated 429s. Fix in PR #891, shipping in 3 days. Workaround: exponential backoff."',
+          'Symptom query - What is actually happening? Pull the customer\'s specific data from your observability system (ClickHouse, Datadog, etc.). Don\'t rely on their description - measure it. Example: "429 error rate for customer acme-corp spiked from 12% to 43% over the last 2 hours."',
+          'Correlation query - Is this a known issue? Search your bug tracker (Linear, Jira) for matching symptoms. Check your status page for ongoing incidents. Example: "LIN-482: rate limit regression - open, priority urgent."',
+          'Elimination query - What isn\'t causing it? Check billing (Stripe) for payment issues, plan limits, or feature access changes. Check deployment history (GitHub) for recent changes. Example: "Plan active, usage within limits. Last deploy: 6 days ago, unrelated endpoint."',
+          'Synthesis - Combine findings into a diagnosis with confidence level and recommended action. Example: "Known bug LIN-482 causing elevated 429s. Fix in PR #891, shipping in 3 days. Workaround: exponential backoff."',
         ],
       },
       {
-        heading: 'Why this method takes 20–45 minutes manually',
+        heading: 'Why this method takes 20-45 minutes manually',
         paragraphs: [
           'Each query requires context-switching to a different tool, writing or adjusting a search query, interpreting results, and mentally holding findings from previous queries. The total time breaks down approximately:',
         ],
         table: {
           headers: ['Step', 'Tool', 'Time', 'What makes it slow'],
           rows: [
-            ['Symptom query', 'ClickHouse / Datadog', '5–15 min', 'Writing SQL, finding the right table, narrowing the time window'],
-            ['Correlation query', 'Linear / Jira + StatusPage', '5–10 min', 'Searching with the right keywords, reading through matches'],
-            ['Elimination query', 'Stripe + GitHub', '5–10 min', 'Navigating to the right customer, checking multiple fields'],
-            ['Synthesis', 'Your brain', '5–10 min', 'Correlating findings, assessing confidence, drafting response'],
+            ['Symptom query', 'ClickHouse / Datadog', '5-15 min', 'Writing SQL, finding the right table, narrowing the time window'],
+            ['Correlation query', 'Linear / Jira + StatusPage', '5-10 min', 'Searching with the right keywords, reading through matches'],
+            ['Elimination query', 'Stripe + GitHub', '5-10 min', 'Navigating to the right customer, checking multiple fields'],
+            ['Synthesis', 'Your brain', '5-10 min', 'Correlating findings, assessing confidence, drafting response'],
           ],
         },
       },
       {
         paragraphs: [
-          'The biggest cost isn\'t any single query — it\'s the context-switching. An engineer averages 5–10 tab switches per investigation, each requiring them to mentally reload where they are in the investigation and what they\'ve found so far.',
+          'The biggest cost isn\'t any single query - it\'s the context-switching. An engineer averages 5-10 tab switches per investigation, each requiring them to mentally reload where they are in the investigation and what they\'ve found so far.',
         ],
       },
       {
         heading: 'What automated investigation looks like',
         paragraphs: [
-          'The 4-query method can be automated when three conditions are met: the systems have APIs, the query patterns are repeatable, and the investigation logic can be encoded into playbooks. When automated, the same investigation that takes a human 20–45 minutes completes in under 2 minutes.',
-          'At Portkey, an AI gateway handling billions of API requests, this automation reduced median investigation time from 20–45 minutes to 2 minutes across 200+ tickets — with zero changes to their existing support platform or team workflows.',
+          'The 4-query method can be automated when three conditions are met: the systems have APIs, the query patterns are repeatable, and the investigation logic can be encoded into playbooks. When automated, the same investigation that takes a human 20-45 minutes completes in under 2 minutes.',
+          'At Portkey, an AI gateway handling billions of API requests, this automation reduced median investigation time from 20-45 minutes to 2 minutes across 200+ tickets - with zero changes to their existing support platform or team workflows.',
         ],
         quote: {
           text: 'The investigation pattern was the same 80% of the time. Check ClickHouse, check Linear, check Stripe, synthesize. We just couldn\'t justify the engineering time to automate it ourselves.',
@@ -106,13 +106,13 @@ export const blogPosts = {
   investigationCost: {
     slug: '/blog/support-investigation-cost',
     title: 'The Hidden Cost of Support Investigation (It\'s Probably Your Biggest Support Expense)',
-    description: 'Benchmarks usually lump support work into one number. This breakdown shows why the real cost is the investigation phase — and why B2B teams keep missing the biggest lever.',
+    description: 'Benchmarks usually lump support work into one number. This breakdown shows why the real cost is the investigation phase - and why B2B teams keep missing the biggest lever.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
     readTime: '5 min read',
 
     headline: 'The true cost of support ticket investigation',
-    opening: 'The average B2B SaaS support ticket costs $18–35 to resolve. But that number hides the real expense. When you decompose resolution into its phases, investigation — the part where an engineer queries ClickHouse, checks Linear, verifies Stripe, and reviews GitHub — accounts for $17–40 of that cost per ticket. That\'s 75–85% of the total. At a company handling 200 technical tickets per month, investigation alone costs $3,400–8,000/month, or $40,000–96,000/year. Per support engineer. For US SaaS teams running 400+ tickets per week, that investigation tax compounds even faster across SLA pressure, overtime, and engineering interruptions. This cost is invisible in industry benchmarks because they measure resolution time as a single number.',
+    opening: 'The average B2B SaaS support ticket costs $18-35 to resolve. But that number hides the real expense. When you decompose resolution into its phases, investigation - the part where an engineer queries ClickHouse, checks Linear, verifies Stripe, and reviews GitHub - accounts for $17-40 of that cost per ticket. That\'s 75-85% of the total. At a company handling 200 technical tickets per month, investigation alone costs $3,400-8,000/month, or $40,000-96,000/year. Per support engineer. For US SaaS teams running 400+ tickets per week, that investigation tax compounds even faster across SLA pressure, overtime, and engineering interruptions. This cost is invisible in industry benchmarks because they measure resolution time as a single number.',
 
     sections: [
       {
@@ -123,16 +123,16 @@ export const blogPosts = {
         table: {
           headers: ['Phase', 'Time', 'Cost at $50/hr', '% of total'],
           rows: [
-            ['Triage and routing', '1–2 min', '$0.83–1.67', '3–5%'],
-            ['Investigation', '20–45 min', '$16.67–37.50', '75–85%'],
-            ['Response drafting', '3–5 min', '$2.50–4.17', '10–12%'],
-            ['Follow-up', '2–3 min', '$1.67–2.50', '5–8%'],
+            ['Triage and routing', '1-2 min', '$0.83-1.67', '3-5%'],
+            ['Investigation', '20-45 min', '$16.67-37.50', '75-85%'],
+            ['Response drafting', '3-5 min', '$2.50-4.17', '10-12%'],
+            ['Follow-up', '2-3 min', '$1.67-2.50', '5-8%'],
           ],
         },
       },
       {
         paragraphs: [
-          'The $50/hour fully-loaded cost is conservative for a support engineer at a B2B SaaS company — when you factor in salary, benefits, tooling, and management overhead, the real number is often $60–80/hour. At $70/hour, investigation costs $23–52 per ticket.',
+          'The $50/hour fully-loaded cost is conservative for a support engineer at a B2B SaaS company - when you factor in salary, benefits, tooling, and management overhead, the real number is often $60-80/hour. At $70/hour, investigation costs $23-52 per ticket.',
         ],
       },
       {
@@ -141,10 +141,10 @@ export const blogPosts = {
           'The support tooling ecosystem is built around everything except investigation:',
         ],
         bullets: [
-          'Support platforms (Zendesk, Intercom, Pylon) optimize triage and routing — the $1 phase',
-          'Doc chatbots deflect FAQ-answerable tickets — roughly 20% of B2B volume',
-          'AI copilots speed up response drafting — the $3 phase',
-          'Investigation — the $17–40 phase — has no dedicated tooling in most stacks',
+          'Support platforms (Zendesk, Intercom, Pylon) optimize triage and routing - the $1 phase',
+          'Doc chatbots deflect FAQ-answerable tickets - roughly 20% of B2B volume',
+          'AI copilots speed up response drafting - the $3 phase',
+          'Investigation - the $17-40 phase - has no dedicated tooling in most stacks',
         ],
         paragraphs2: null,
       },
@@ -170,13 +170,13 @@ export const blogPosts = {
       },
       {
         paragraphs: [
-          'These numbers represent the investigation cost alone — not total support cost. And they don\'t include the second-order costs: missed SLAs, delayed escalation resolution, engineer burnout, and customer churn from slow response times.',
+          'These numbers represent the investigation cost alone - not total support cost. And they don\'t include the second-order costs: missed SLAs, delayed escalation resolution, engineer burnout, and customer churn from slow response times.',
         ],
       },
       {
         heading: 'What happens when you automate investigation',
         paragraphs: [
-          'When investigation is automated — running the same ClickHouse queries, Linear searches, Stripe checks, and GitHub lookups in parallel instead of sequentially — the time drops from 20–45 minutes to under 2 minutes. The cost per ticket drops proportionally.',
+          'When investigation is automated - running the same ClickHouse queries, Linear searches, Stripe checks, and GitHub lookups in parallel instead of sequentially - the time drops from 20-45 minutes to under 2 minutes. The cost per ticket drops proportionally.',
         ],
         quote: {
           text: 'Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs.',
@@ -212,15 +212,15 @@ export const blogPosts = {
     readTime: '8 min read',
 
     headline: 'How to use ClickHouse to diagnose customer support issues in minutes',
-    opening: 'If your engineering team uses ClickHouse for product analytics, your support team is probably already querying it manually for every technical ticket. When a customer reports "my API calls are failing," someone opens a ClickHouse console, writes a query to pull that customer\'s error rates, waits for results, interprets them, then pivots to the next system. This process — repeated 5–20 times per day across your support team — typically takes 5–15 minutes just for the ClickHouse portion of each investigation. For US SaaS teams handling 400+ tickets per week, shaving even five minutes off that query loop materially improves coverage across EST and PST queues. The queries themselves follow repeatable patterns. This guide covers the 5 most common ClickHouse query patterns for support diagnosis and how to reduce investigation time from minutes to seconds.',
+    opening: 'If your engineering team uses ClickHouse for product analytics, your support team is probably already querying it manually for every technical ticket. When a customer reports "my API calls are failing," someone opens a ClickHouse console, writes a query to pull that customer\'s error rates, waits for results, interprets them, then pivots to the next system. This process - repeated 5-20 times per day across your support team - typically takes 5-15 minutes just for the ClickHouse portion of each investigation. For US SaaS teams handling 400+ tickets per week, shaving even five minutes off that query loop materially improves coverage across EST and PST queues. The queries themselves follow repeatable patterns. This guide covers the 5 most common ClickHouse query patterns for support diagnosis and how to reduce investigation time from minutes to seconds.',
 
     sections: [
       {
         heading: 'Pattern 1: Error rate spike detection',
         paragraphs: [
-          'The most common support query. Customer reports errors — you need to quantify the problem, identify when it started, and determine the severity.',
+          'The most common support query. Customer reports errors - you need to quantify the problem, identify when it started, and determine the severity.',
           'What you\'re looking for: the customer\'s error rate over time, compared to their baseline. The query should answer: "Is this actually happening? When did it start? How bad is it?"',
-          'Typical approach: Query the API logs table filtered by customer ID, group by time interval (5 min or 1 hour), calculate error rate as percentage of total requests. Compare the current window against the previous 24–48 hours to establish baseline.',
+          'Typical approach: Query the API logs table filtered by customer ID, group by time interval (5 min or 1 hour), calculate error rate as percentage of total requests. Compare the current window against the previous 24-48 hours to establish baseline.',
           'Key fields: customer_id, timestamp, http_status_code (or error_type), endpoint, request_id.',
           'What this tells you: Whether the customer\'s complaint is valid, when the problem started (which narrows the root cause), and whether it\'s getting worse or stabilizing.',
         ],
@@ -236,7 +236,7 @@ export const blogPosts = {
       {
         heading: 'Pattern 3: Customer activity timeline',
         paragraphs: [
-          'For debugging configuration or authentication issues, you need a timeline of the customer\'s recent activity — what they called, when, and what happened.',
+          'For debugging configuration or authentication issues, you need a timeline of the customer\'s recent activity - what they called, when, and what happened.',
           'What you\'re looking for: the last N requests from this customer, ordered by time, with status codes and relevant metadata. This is the "replay the tape" query.',
           'Key insight: Often reveals the root cause immediately. A customer reporting "auth stopped working" may have rotated their API key 2 hours ago and the old key is cached somewhere. The timeline shows the exact moment behavior changed.',
         ],
@@ -254,13 +254,13 @@ export const blogPosts = {
         paragraphs: [
           'Customer disputes their invoice. You need to count their actual usage for the billing period and compare it against what they were charged.',
           'What you\'re looking for: total request count (or whatever your billing unit is) for the customer during the billing period, broken down by billable vs. non-billable requests, by endpoint, and by day to identify any spikes.',
-          'Key insight: The most common billing disputes come from unexpected usage spikes — a customer\'s CI pipeline running in a loop, a misconfigured retry policy, or a legitimate traffic increase they didn\'t anticipate. The daily breakdown reveals these patterns instantly.',
+          'Key insight: The most common billing disputes come from unexpected usage spikes - a customer\'s CI pipeline running in a loop, a misconfigured retry policy, or a legitimate traffic increase they didn\'t anticipate. The daily breakdown reveals these patterns instantly.',
         ],
       },
       {
         heading: 'The manual bottleneck: not the query, but the context',
         paragraphs: [
-          'If your support team runs these queries manually, the bottleneck isn\'t ClickHouse\'s execution time — it\'s everything around it:',
+          'If your support team runs these queries manually, the bottleneck isn\'t ClickHouse\'s execution time - it\'s everything around it:',
         ],
         bullets: [
           'Opening the ClickHouse console and connecting to the right cluster',
@@ -272,7 +272,7 @@ export const blogPosts = {
       },
       {
         paragraphs: [
-          'When these 5 query patterns are automated — running in parallel, with results correlated against Linear bugs, Stripe billing, and GitHub deploys — the entire investigation completes in under 2 minutes instead of 20–45.',
+          'When these 5 query patterns are automated - running in parallel, with results correlated against Linear bugs, Stripe billing, and GitHub deploys - the entire investigation completes in under 2 minutes instead of 20-45.',
         ],
         quote: {
           text: 'Our support engineers were writing the same ClickHouse queries 10 times a day. Same tables, same columns, different customer ID. Automating that alone saved hours per week.',
@@ -284,7 +284,7 @@ export const blogPosts = {
 
     relatedPosts: [
       { label: 'The support investigation workflow framework', path: '/blog/support-ticket-investigation-workflow' },
-      { label: 'API error investigation — full walkthrough', path: '/use-case/api-error-investigation' },
+      { label: 'API error investigation - full walkthrough', path: '/use-case/api-error-investigation' },
     ],
 
     seeAlso: [
@@ -298,13 +298,13 @@ export const blogPosts = {
   agentVsChatbot: {
     slug: '/blog/ai-support-agent-vs-chatbot',
     title: 'AI Support Agent vs. Chatbot: Which One Actually Reduces Escalations?',
-    description: 'Chatbots are good at docs. They usually break down on live technical tickets. Here\'s how B2B support teams decide when they need answer generation — and when they need real investigation.',
+    description: 'Chatbots are good at docs. They usually break down on live technical tickets. Here\'s how B2B support teams decide when they need answer generation - and when they need real investigation.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
     readTime: '6 min read',
 
     headline: 'AI support agent vs. chatbot: why the distinction matters for B2B',
-    opening: 'In B2B technical support, the terms "AI agent" and "chatbot" are used interchangeably, but they describe fundamentally different tools that solve different problems. A chatbot retrieves answers from a knowledge base — it handles "how do I configure webhooks?" A support investigation agent queries live production systems — it handles "why are my webhooks failing right now?" The distinction matters because 80% of B2B technical support tickets require live data investigation, not document lookup. According to a 2025 Zendesk benchmark study of US SaaS companies, teams with technical support queues are under the most pressure to improve first-contact resolution without adding headcount. Choosing the wrong tool means 80% of your tickets still require manual engineering time.',
+    opening: 'In B2B technical support, the terms "AI agent" and "chatbot" are used interchangeably, but they describe fundamentally different tools that solve different problems. A chatbot retrieves answers from a knowledge base - it handles "how do I configure webhooks?" A support investigation agent queries live production systems - it handles "why are my webhooks failing right now?" The distinction matters because 80% of B2B technical support tickets require live data investigation, not document lookup. According to a 2025 Zendesk benchmark study of US SaaS companies, teams with technical support queues are under the most pressure to improve first-contact resolution without adding headcount. Choosing the wrong tool means 80% of your tickets still require manual engineering time.',
 
     sections: [
       {
@@ -317,7 +317,7 @@ export const blogPosts = {
             ['Output', 'Article links, generated text from docs', 'Structured diagnosis with evidence from actual data'],
             ['Ticket coverage', '~20% (FAQ-answerable)', '~80% (requires live investigation)'],
             ['Time saved', 'Deflects simple tickets entirely', 'Reduces 20-45 min investigations to 2 min'],
-            ['Data freshness', 'Static — updated when docs change', 'Real-time — queries live customer data per ticket'],
+            ['Data freshness', 'Static - updated when docs change', 'Real-time - queries live customer data per ticket'],
             ['Failure mode', 'Gives generic answer or says "I don\'t know"', 'Returns "insufficient data" with what it did find'],
           ],
         },
@@ -334,13 +334,13 @@ export const blogPosts = {
       },
       {
         paragraphs: [
-          'The 20% that chatbots handle are the cheapest tickets anyway — they take 2–3 minutes to resolve manually. The 80% that require investigation are the expensive ones — 20–45 minutes each. A chatbot that handles 100% of the cheap tickets and 0% of the expensive tickets reduces your support cost by roughly 10–15%. An investigation agent that handles the expensive tickets reduces cost by 60–70%.',
+          'The 20% that chatbots handle are the cheapest tickets anyway - they take 2-3 minutes to resolve manually. The 80% that require investigation are the expensive ones - 20-45 minutes each. A chatbot that handles 100% of the cheap tickets and 0% of the expensive tickets reduces your support cost by roughly 10-15%. An investigation agent that handles the expensive tickets reduces cost by 60-70%.',
         ],
       },
       {
         heading: 'Why chatbots fail on investigation tickets',
         paragraphs: [
-          'When a chatbot encounters an investigation ticket — "my API calls are failing" — it does the only thing it can: search the knowledge base for "API errors" and return the most relevant article. The customer gets a link to "Troubleshooting API Errors" that tells them to check their API key and verify their endpoint URL.',
+          'When a chatbot encounters an investigation ticket - "my API calls are failing" - it does the only thing it can: search the knowledge base for "API errors" and return the most relevant article. The customer gets a link to "Troubleshooting API Errors" that tells them to check their API key and verify their endpoint URL.',
           'This fails because the answer isn\'t in the documentation. The answer is in the customer\'s actual API logs (12% → 43% error rate spike), your bug tracker (LIN-482, rate limit regression), and your deployment history (fix in PR #891, 3 days out). No amount of knowledge base improvement will put live, per-customer, per-ticket data into a static document.',
           'The customer escalates. An engineer spends 30 minutes doing the investigation the chatbot couldn\'t. The chatbot\'s "deflection" actually increased resolution time by adding a wasted round-trip.',
         ],
@@ -348,7 +348,7 @@ export const blogPosts = {
       {
         heading: 'When to use each tool',
         paragraphs: [
-          'The answer isn\'t either/or — it\'s both, each in their lane:',
+          'The answer isn\'t either/or - it\'s both, each in their lane:',
         ],
         bullets: [
           'Deploy a doc chatbot for customer-facing FAQ deflection. It handles onboarding questions, feature documentation, and self-service workflows. Measure it by deflection rate on FAQ-type tickets.',
@@ -364,8 +364,8 @@ export const blogPosts = {
     ],
 
     relatedPosts: [
-      { label: 'Altor vs. doc chatbots — comparison', path: '/compare/altor-vs-doc-chatbots' },
-      { label: 'Altor vs. AI copilots — investigation vs. drafting', path: '/compare/altor-vs-copilot-for-support' },
+      { label: 'Altor vs. doc chatbots - comparison', path: '/compare/altor-vs-doc-chatbots' },
+      { label: 'Altor vs. AI copilots - investigation vs. drafting', path: '/compare/altor-vs-copilot-for-support' },
     ],
 
     seeAlso: [
@@ -378,14 +378,14 @@ export const blogPosts = {
 
   reduceEscalations: {
     slug: '/blog/reduce-support-escalations',
-    title: 'Why 70% of Support Escalations Are Preventable — And How to Cut Them',
+    title: 'Why 70% of Support Escalations Are Preventable - And How to Cut Them',
     description: 'Most escalations happen because agents lack system context, not training. This guide shows how B2B support teams reduce avoidable handoffs by automating investigation before engineering gets pulled in.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
     readTime: '6 min read',
 
     headline: 'How to reduce support escalations: the complete guide for B2B teams',
-    opening: 'Yes — software can reduce support escalations. Tools that automatically investigate tickets by querying your production systems (logs, bug trackers, billing, recent deploys) give frontline agents the context they need before escalating. At Portkey, this approach cut escalations by eliminating the information gap that causes them: investigation time dropped from 45 minutes to 2 minutes, and agents could resolve tickets without pulling in engineers.\n\nSupport escalations in B2B technical support happen for one reason: the frontline agent doesn\'t have the technical context to resolve the issue. They can\'t query ClickHouse, they don\'t have access to Linear, they can\'t check the customer\'s Stripe billing status. So they escalate to an engineer who can. The standard playbook — better routing, more training, improved knowledge bases — treats escalation as a competence problem. It\'s not. It\'s an information access problem. For US SaaS support teams handling 400+ tickets per week, every avoidable escalation creates real backlog pressure across time zones. When the investigation is done automatically before the agent opens the ticket, the diagnosis is already there. Escalation becomes unnecessary because the context gap no longer exists.',
+    opening: 'Yes - software can reduce support escalations. Tools that automatically investigate tickets by querying your production systems (logs, bug trackers, billing, recent deploys) give frontline agents the context they need before escalating. At Portkey, this approach cut escalations by eliminating the information gap that causes them: investigation time dropped from 45 minutes to 2 minutes, and agents could resolve tickets without pulling in engineers.\n\nSupport escalations in B2B technical support happen for one reason: the frontline agent doesn\'t have the technical context to resolve the issue. They can\'t query ClickHouse, they don\'t have access to Linear, they can\'t check the customer\'s Stripe billing status. So they escalate to an engineer who can. The standard playbook - better routing, more training, improved knowledge bases - treats escalation as a competence problem. It\'s not. It\'s an information access problem. For US SaaS support teams handling 400+ tickets per week, every avoidable escalation creates real backlog pressure across time zones. When the investigation is done automatically before the agent opens the ticket, the diagnosis is already there. Escalation becomes unnecessary because the context gap no longer exists.',
 
     sections: [
       {
@@ -394,14 +394,14 @@ export const blogPosts = {
           'The conventional explanation for escalations is "the agent didn\'t know the answer." But when you decompose escalated tickets, a more specific pattern emerges:',
         ],
         bullets: [
-          '65–75% escalate because the answer requires querying internal systems the agent can\'t access (database logs, bug trackers, deployment history)',
-          '15–20% escalate because the issue is genuinely novel and requires engineering judgment',
-          '10–15% escalate due to miscategorization or routing errors',
+          '65-75% escalate because the answer requires querying internal systems the agent can\'t access (database logs, bug trackers, deployment history)',
+          '15-20% escalate because the issue is genuinely novel and requires engineering judgment',
+          '10-15% escalate due to miscategorization or routing errors',
         ],
       },
       {
         paragraphs: [
-          'The first category — system access — is the only one that scales with ticket volume. More tickets means more manual investigations, more escalations, more engineering time burned on support instead of product work. And it\'s the only category that\'s fully automatable.',
+          'The first category - system access - is the only one that scales with ticket volume. More tickets means more manual investigations, more escalations, more engineering time burned on support instead of product work. And it\'s the only category that\'s fully automatable.',
         ],
       },
       {
@@ -413,14 +413,14 @@ export const blogPosts = {
           'Customer submits: "Our API calls have been failing with 429 errors since this morning."',
           'Frontline agent reads the ticket. They can see the customer\'s account info and ticket history in the support platform, but they can\'t query API logs, check the bug tracker, or verify billing details.',
           'Agent tries the knowledge base. Finds the "Rate Limit Troubleshooting" article. Sends it to the customer.',
-          'Customer replies: "I already tried that. This isn\'t a rate limit on my end — your error rate spiked."',
+          'Customer replies: "I already tried that. This isn\'t a rate limit on my end - your error rate spiked."',
           'Agent escalates to engineering. An engineer opens ClickHouse, finds the error spike, checks Linear for known bugs, verifies Stripe billing, reviews recent deploys. Investigation takes 25 minutes.',
           'Engineer resolves: "Known bug LIN-482. Fix shipping in 3 days. Workaround available."',
         ],
       },
       {
         paragraphs: [
-          'Steps 2–4 were wasted time. The escalation happened not because the agent lacked skill — but because they lacked data. If the ClickHouse query, Linear search, and Stripe check had been done automatically when the ticket arrived, the agent could have resolved it in step 2.',
+          'Steps 2-4 were wasted time. The escalation happened not because the agent lacked skill - but because they lacked data. If the ClickHouse query, Linear search, and Stripe check had been done automatically when the ticket arrived, the agent could have resolved it in step 2.',
         ],
       },
       {
@@ -433,7 +433,7 @@ export const blogPosts = {
           'Search Linear for bugs matching the customer\'s symptoms',
           'Check Stripe for billing status, plan limits, and payment issues',
           'Review GitHub for recent deploys that might correlate with the reported issue',
-          'Deliver a structured diagnosis — root cause, evidence, confidence level, recommended response — into the agent\'s existing support platform',
+          'Deliver a structured diagnosis - root cause, evidence, confidence level, recommended response - into the agent\'s existing support platform',
         ],
       },
       {
@@ -480,19 +480,19 @@ export const blogPosts = {
   whyEnterpriseAIFails: {
     slug: '/blog/why-enterprise-ai-fails-in-production',
     title: 'Why Enterprise AI Fails in Production: 7 Critical Mistakes',
-    description: '67% of enterprise AI projects fail at production. Not because the models are bad — because the systems around them are wrong. Here are the 7 mistakes that kill AI deployments, and what successful teams do differently.',
+    description: '67% of enterprise AI projects fail at production. Not because the models are bad - because the systems around them are wrong. Here are the 7 mistakes that kill AI deployments, and what successful teams do differently.',
     datePublished: '2026-04-15',
     dateModified: '2026-04-15',
     readTime: '9 min read',
 
     headline: 'Why enterprise AI fails in production: 7 critical mistakes',
-    opening: '67% of enterprise AI projects fail to reach production. This is not a new statistic — it has hovered around this figure since 2022, surviving multiple model generations and billions in enterprise AI investment. The models have gotten dramatically better. The failure rate has not moved. That tells you something important: the problem is not the model. The problem is everything around the model — the systems, the deployment approach, the organizational structure, and the metrics. This article breaks down the 7 most common reasons enterprise AI fails at production, drawn from our experience deploying AI systems at B2B SaaS companies. Each mistake is fixable. Most are preventable.',
+    opening: '67% of enterprise AI projects fail to reach production. This is not a new statistic - it has hovered around this figure since 2022, surviving multiple model generations and billions in enterprise AI investment. The models have gotten dramatically better. The failure rate has not moved. That tells you something important: the problem is not the model. The problem is everything around the model - the systems, the deployment approach, the organizational structure, and the metrics. This article breaks down the 7 most common reasons enterprise AI fails at production, drawn from our experience deploying AI systems at B2B SaaS companies. Each mistake is fixable. Most are preventable.',
 
     sections: [
       {
         heading: 'Mistake 1: Treating the pilot as the product',
         paragraphs: [
-          'The single most common pattern: a team runs a successful AI pilot — clean data, controlled environment, enthusiastic stakeholders — and assumes production will be a straightforward scale-up. It is not.',
+          'The single most common pattern: a team runs a successful AI pilot - clean data, controlled environment, enthusiastic stakeholders - and assumes production will be a straightforward scale-up. It is not.',
           'Production introduces what pilots never have: dirty data, edge cases, latency requirements, concurrent users, and the expectation that the system works every time. The gap between "impressive demo" and "reliable production system" is where most AI projects die.',
         ],
         bullets: [
@@ -505,12 +505,12 @@ export const blogPosts = {
       {
         heading: 'Mistake 2: Underestimating data quality requirements',
         paragraphs: [
-          'AI models in pilot environments typically run on curated, cleaned datasets. Production systems run on real data — and real data is messy. Schema changes, missing fields, inconsistent formats, and stale records all degrade model performance in ways that sandbox testing never reveals.',
+          'AI models in pilot environments typically run on curated, cleaned datasets. Production systems run on real data - and real data is messy. Schema changes, missing fields, inconsistent formats, and stale records all degrade model performance in ways that sandbox testing never reveals.',
           'We have seen production deployments where model accuracy dropped 40% within the first two weeks solely because production data had characteristics the training data did not. No amount of model quality compensates for data quality failure.',
         ],
         bullets: [
           'Build data validation pipelines before deployment, not after problems appear',
-          'Monitor input data distribution continuously — model performance will degrade silently if inputs drift',
+          'Monitor input data distribution continuously - model performance will degrade silently if inputs drift',
           'Establish data quality SLAs alongside model performance SLAs',
           'Plan for the most common data quality failures specific to your domain (for support tickets: missing customer IDs, merged accounts, deleted records)',
         ],
@@ -518,7 +518,7 @@ export const blogPosts = {
       {
         heading: 'Mistake 3: Skipping the production readiness assessment',
         paragraphs: [
-          'Production readiness is not a checklist item — it is a systematic evaluation of whether your system can handle real-world conditions. Most teams skip it because it slows down the timeline. The teams that skip it spend 2-3x longer on post-launch fire-fighting than the assessment would have taken.',
+          'Production readiness is not a checklist item - it is a systematic evaluation of whether your system can handle real-world conditions. Most teams skip it because it slows down the timeline. The teams that skip it spend 2-3x longer on post-launch fire-fighting than the assessment would have taken.',
         ],
         bullets: [
           'Latency under load: does the system meet response time requirements at 10x pilot volume?',
@@ -531,12 +531,12 @@ export const blogPosts = {
       {
         heading: 'Mistake 4: Measuring the wrong things',
         paragraphs: [
-          'AI projects report model accuracy. Business stakeholders care about business outcomes. These are not the same thing — and the gap between them is where AI projects lose executive support.',
+          'AI projects report model accuracy. Business stakeholders care about business outcomes. These are not the same thing - and the gap between them is where AI projects lose executive support.',
           'A support ticket investigation system with 94% root cause accuracy is impressive. "We reduced median investigation time from 45 minutes to 2 minutes across 200 tickets" is the same system, measured in business terms. The second framing survives budget reviews. The first does not.',
         ],
         bullets: [
           'Define business outcome metrics before deployment: time saved, cost reduced, error rate decreased',
-          'Track model metrics and business metrics in parallel — both matter, but business metrics drive continued investment',
+          'Track model metrics and business metrics in parallel - both matter, but business metrics drive continued investment',
           'Set measurement cadence: weekly for early deployments, monthly for stable systems',
           'Build an ROI calculation that a finance team can audit (not just an engineering team)',
         ],
@@ -545,36 +545,36 @@ export const blogPosts = {
         heading: 'Mistake 5: Deploying without a governance framework',
         paragraphs: [
           'Governance sounds like a compliance problem. It is actually an operational problem. Without clear rules about when AI acts autonomously versus when it defers to humans, production systems generate unpredictable behavior at exactly the worst moments.',
-          'This is why every AI system we deploy starts read-only. The system surfaces diagnoses for human review. Write access — any automated action — requires explicit approval and a defined escalation path. Destructive actions are never automated regardless of confidence level.',
+          'This is why every AI system we deploy starts read-only. The system surfaces diagnoses for human review. Write access - any automated action - requires explicit approval and a defined escalation path. Destructive actions are never automated regardless of confidence level.',
         ],
         bullets: [
           'Define the action taxonomy before deployment: what can the AI do autonomously, what requires approval, what is always human-only?',
           'Build explicit override mechanisms that are easy to use, not buried in admin interfaces',
-          'Log every AI decision with the reasoning — both for debugging and for regulatory requirements',
+          'Log every AI decision with the reasoning - both for debugging and for regulatory requirements',
           'Review AI action logs weekly for the first month, then monthly as the system matures',
         ],
       },
       {
         heading: 'Mistake 6: Ignoring model drift',
         paragraphs: [
-          'A model that works in April may not work in September. The world changes — new product features, new customer segments, new failure modes — and models trained on historical data do not automatically adapt. Most teams discover model drift when users start complaining, not before.',
+          'A model that works in April may not work in September. The world changes - new product features, new customer segments, new failure modes - and models trained on historical data do not automatically adapt. Most teams discover model drift when users start complaining, not before.',
           'The fix is monitoring input distributions continuously, not just output quality. When inputs drift, outputs will drift next.',
         ],
         bullets: [
-          'Set up input distribution monitoring from day one — track the statistical properties of data your model receives',
+          'Set up input distribution monitoring from day one - track the statistical properties of data your model receives',
           'Define drift thresholds that trigger retraining before performance degrades visibly',
-          'Build retraining pipelines before the model goes live — not as an afterthought when drift is detected',
+          'Build retraining pipelines before the model goes live - not as an afterthought when drift is detected',
           'Review a sample of AI outputs manually every week for the first quarter',
         ],
       },
       {
         heading: 'Mistake 7: Treating AI deployment as a one-time project',
         paragraphs: [
-          'Software is released and maintained. AI systems are deployed and operated. The distinction matters: a production AI system requires ongoing attention — monitoring, retraining, playbook updates, and adaptation to new use cases — that does not exist for traditional software at the same cadence.',
-          'Teams that staff AI projects like software releases — build it, ship it, move on — consistently see performance degrade within 60-90 days. Teams that assign ongoing operational ownership see systems that compound value over time.',
+          'Software is released and maintained. AI systems are deployed and operated. The distinction matters: a production AI system requires ongoing attention - monitoring, retraining, playbook updates, and adaptation to new use cases - that does not exist for traditional software at the same cadence.',
+          'Teams that staff AI projects like software releases - build it, ship it, move on - consistently see performance degrade within 60-90 days. Teams that assign ongoing operational ownership see systems that compound value over time.',
         ],
         bullets: [
-          'Assign explicit ownership for AI operations before deployment — not "the team that built it" in their spare time',
+          'Assign explicit ownership for AI operations before deployment - not "the team that built it" in their spare time',
           'Budget for operational costs: monitoring, retraining, infrastructure, and support',
           'Build a playbook update process: how will the system be updated as your product and customer base evolve?',
           'Schedule quarterly reviews of AI system performance against business outcomes',
@@ -583,7 +583,7 @@ export const blogPosts = {
       {
         heading: 'What successful deployments look like',
         paragraphs: [
-          'At Portkey, an AI gateway platform, every support ticket was a 45-minute manual investigation across ClickHouse, Linear, Stripe, and GitHub. The failure modes we had seen repeatedly — dirty data, undefined governance, no monitoring — shaped how we approached the deployment.',
+          'At Portkey, an AI gateway platform, every support ticket was a 45-minute manual investigation across ClickHouse, Linear, Stripe, and GitHub. The failure modes we had seen repeatedly - dirty data, undefined governance, no monitoring - shaped how we approached the deployment.',
           'We started read-only. We defined what "investigation" meant precisely before writing code. We built monitoring on the investigation process itself, not just the model outputs. We measured in business terms: median investigation time, not model accuracy. After 200 tickets diagnosed in production, the system still runs at under 2 minutes per investigation. That outcome required getting the 7 things above right, not just the model.',
         ],
       },
@@ -605,7 +605,7 @@ export const blogPosts = {
     readTime: '11 min read',
 
     headline: 'Production AI: the complete guide',
-    opening: 'Every enterprise has done an AI pilot. Most enterprises have not successfully deployed production AI. The gap between these two states — between "it works in the demo" and "it works every day in the real system" — is where most AI investment disappears. This guide defines what production AI actually means, why it is fundamentally different from pilot AI, and what a framework for successful production AI deployment looks like. It is written for engineering teams and technical leads who have seen AI pilots succeed and production deployments fail, and who want to understand why.',
+    opening: 'Every enterprise has done an AI pilot. Most enterprises have not successfully deployed production AI. The gap between these two states - between "it works in the demo" and "it works every day in the real system" - is where most AI investment disappears. This guide defines what production AI actually means, why it is fundamentally different from pilot AI, and what a framework for successful production AI deployment looks like. It is written for engineering teams and technical leads who have seen AI pilots succeed and production deployments fail, and who want to understand why.',
 
     sections: [
       {
@@ -616,8 +616,8 @@ export const blogPosts = {
         ],
         bullets: [
           'Continuous operation: the system runs without manual intervention, handles the volume and variety of real-world inputs, and recovers from failures automatically',
-          'Real data: not curated training data or pilot datasets — actual production data with all its messiness, inconsistency, and edge cases',
-          'Production standards: the system is monitored, has defined SLAs, has an on-call runbook, and has a rollback procedure — just like any other production service',
+          'Real data: not curated training data or pilot datasets - actual production data with all its messiness, inconsistency, and edge cases',
+          'Production standards: the system is monitored, has defined SLAs, has an on-call runbook, and has a rollback procedure - just like any other production service',
         ],
       },
       {
@@ -646,11 +646,11 @@ export const blogPosts = {
           'Successful production AI deployments follow a consistent pattern. Teams that skip stages spend 3-5x longer on post-launch remediation than the skipped stage would have required.',
         ],
         steps: [
-          'Stage 1 — Readiness Assessment: Before writing a line of deployment code, evaluate whether the system is ready for production. Latency under load. Data quality in production (not just training). Failure modes when dependencies are unavailable. Rollback procedure. Access controls. Teams that do this catch 60-70% of production failures before they happen.',
-          'Stage 2 — Integration design: Map every system the AI will connect to. Define the access model (read-only first — always). Design the data flow. Identify the bottlenecks. This is where most teams underestimate scope: a support investigation system that connects to ClickHouse, Linear, Stripe, GitHub, and docs is not one integration — it is five, each with its own failure modes.',
-          'Stage 3 — Staged rollout: Do not deploy to all users on day one. Start with 5-10% of traffic or a specific user segment. Monitor the business metrics and system metrics for 2 weeks. Expand only when you have evidence the system behaves correctly at scale.',
-          'Stage 4 — Operations setup: Before launch, define the monitoring dashboard, set the alert thresholds, write the runbook, and assign on-call ownership. A production AI system that has no alert when it stops working is not a production system — it is a time bomb.',
-          'Stage 5 — Continuous improvement: Production AI is not software you ship and maintain. It requires ongoing playbook updates, retraining triggers, and adaptation to new inputs. Build this process before you need it.',
+          'Stage 1 - Readiness Assessment: Before writing a line of deployment code, evaluate whether the system is ready for production. Latency under load. Data quality in production (not just training). Failure modes when dependencies are unavailable. Rollback procedure. Access controls. Teams that do this catch 60-70% of production failures before they happen.',
+          'Stage 2 - Integration design: Map every system the AI will connect to. Define the access model (read-only first - always). Design the data flow. Identify the bottlenecks. This is where most teams underestimate scope: a support investigation system that connects to ClickHouse, Linear, Stripe, GitHub, and docs is not one integration - it is five, each with its own failure modes.',
+          'Stage 3 - Staged rollout: Do not deploy to all users on day one. Start with 5-10% of traffic or a specific user segment. Monitor the business metrics and system metrics for 2 weeks. Expand only when you have evidence the system behaves correctly at scale.',
+          'Stage 4 - Operations setup: Before launch, define the monitoring dashboard, set the alert thresholds, write the runbook, and assign on-call ownership. A production AI system that has no alert when it stops working is not a production system - it is a time bomb.',
+          'Stage 5 - Continuous improvement: Production AI is not software you ship and maintain. It requires ongoing playbook updates, retraining triggers, and adaptation to new inputs. Build this process before you need it.',
         ],
       },
       {
@@ -659,7 +659,7 @@ export const blogPosts = {
           'Abstract frameworks are useful. A concrete example is more useful.',
           'At Portkey, an AI gateway platform, the production AI system we deployed investigates support tickets. Every ticket that arrives connects to 6 production systems simultaneously: ClickHouse for API logs, Linear for bug tracking, Stripe for billing, GitHub for deploy history, documentation for workarounds, and StatusPage for upstream incidents.',
           'The system runs read-only. Every investigation is logged. The playbooks are reviewed quarterly and updated as Portkey\'s product evolves. When a new integration type becomes common in their customer base, the investigation logic is updated to handle it.',
-          'After 200+ tickets in production: median investigation time is under 2 minutes. The system handles 6 concurrent system queries per ticket. Zero false positives on high-severity issues in the first 90 days. That is what production AI looks like — not accuracy metrics in a notebook, but measured business outcomes from a system that runs every day.',
+          'After 200+ tickets in production: median investigation time is under 2 minutes. The system handles 6 concurrent system queries per ticket. Zero false positives on high-severity issues in the first 90 days. That is what production AI looks like - not accuracy metrics in a notebook, but measured business outcomes from a system that runs every day.',
         ],
       },
       {
@@ -684,12 +684,12 @@ export const blogPosts = {
         heading: 'Common production AI failure modes and their fixes',
         paragraphs: [],
         bullets: [
-          'Silent degradation — model accuracy drops without alerts firing. Fix: monitor input distributions, not just output quality. When inputs drift, outputs will drift next.',
-          'Data quality failures — production data has characteristics training data did not. Fix: build data validation pipelines and test them against real production data samples before launch.',
-          'Missing edge cases — the pilot covered 80% of scenarios; the 20% that appear in production break the system. Fix: explicitly enumerate edge cases before launch and test each one.',
-          'Governance gaps — the AI takes an action nobody expected it to take. Fix: define the action taxonomy before deployment and build override mechanisms that are easy to use.',
-          'Dependency failures — a connected system (database, API, service) goes down and the AI system has no graceful degradation. Fix: test every dependency failure explicitly during readiness assessment.',
-          'Operational orphans — the team that built the system moves on; nobody owns it. Fix: assign operational ownership before launch, not after the first production incident.',
+          'Silent degradation - model accuracy drops without alerts firing. Fix: monitor input distributions, not just output quality. When inputs drift, outputs will drift next.',
+          'Data quality failures - production data has characteristics training data did not. Fix: build data validation pipelines and test them against real production data samples before launch.',
+          'Missing edge cases - the pilot covered 80% of scenarios; the 20% that appear in production break the system. Fix: explicitly enumerate edge cases before launch and test each one.',
+          'Governance gaps - the AI takes an action nobody expected it to take. Fix: define the action taxonomy before deployment and build override mechanisms that are easy to use.',
+          'Dependency failures - a connected system (database, API, service) goes down and the AI system has no graceful degradation. Fix: test every dependency failure explicitly during readiness assessment.',
+          'Operational orphans - the team that built the system moves on; nobody owns it. Fix: assign operational ownership before launch, not after the first production incident.',
         ],
       },
     ],
@@ -710,7 +710,7 @@ export const blogPosts = {
     readTime: '6 min read',
 
     headline: 'AI services vs AI consulting vs AI implementation: what\'s the difference?',
-    opening: 'If you have asked three vendors what they do and gotten three different answers that sound nearly identical, you are not alone. "AI services," "AI consulting," and "AI implementation" are used interchangeably across the industry — by vendors trying to position themselves, by buyers trying to evaluate options, and by analysts trying to categorize a market that is still defining itself. They are not the same thing. The differences matter because they predict what you will get, how much you will pay, and whether your AI system will actually run in production. This article defines each term clearly and gives you the questions to ask to figure out which one you are actually buying.',
+    opening: 'If you have asked three vendors what they do and gotten three different answers that sound nearly identical, you are not alone. "AI services," "AI consulting," and "AI implementation" are used interchangeably across the industry - by vendors trying to position themselves, by buyers trying to evaluate options, and by analysts trying to categorize a market that is still defining itself. They are not the same thing. The differences matter because they predict what you will get, how much you will pay, and whether your AI system will actually run in production. This article defines each term clearly and gives you the questions to ask to figure out which one you are actually buying.',
 
     sections: [
       {
@@ -733,7 +733,7 @@ export const blogPosts = {
       {
         heading: 'AI implementation: building the system',
         paragraphs: [
-          'AI implementation is the delivery of software — the actual build. An implementation engagement results in code, deployed infrastructure, and a working AI system.',
+          'AI implementation is the delivery of software - the actual build. An implementation engagement results in code, deployed infrastructure, and a working AI system.',
           'What you get: a built system. Sometimes with training, sometimes with documentation, sometimes with a brief handoff period.',
           'What you do not get (usually): ongoing operational support, continuous improvement, or accountability for production outcomes.',
           'When it makes sense: when you have internal technical teams who can own and operate the system after handoff.',
@@ -750,7 +750,7 @@ export const blogPosts = {
       {
         heading: 'AI services: building and operating the system',
         paragraphs: [
-          'AI services is the ongoing delivery of AI capability — not just the initial build, but the deployment, operation, monitoring, and continuous improvement of the system over time.',
+          'AI services is the ongoing delivery of AI capability - not just the initial build, but the deployment, operation, monitoring, and continuous improvement of the system over time.',
           'What you get: a production AI system that the services company is accountable for operating and improving.',
           'What you do not get: a handoff. The services company stays involved.',
           'When it makes sense: when you want a production AI system but do not want to build and maintain it internally. When speed to production matters more than internal ownership.',
@@ -786,17 +786,17 @@ export const blogPosts = {
           'Every vendor will call what they do "AI services." These questions cut through the positioning:',
         ],
         steps: [
-          '"What does the engagement look like after go-live?" — Consulting ends before launch. Implementation ends at launch. Services continues after launch. The answer to this question tells you what you are buying.',
-          '"How is your success measured?" — If the answer is deliverables (documents, code, deployment), you are buying consulting or implementation. If the answer is business outcomes (time saved, cost reduced, accuracy achieved), you are buying services.',
-          '"Who is on the hook if the system stops working in production?" — If the answer is "your team," it is consulting or implementation. If the answer is "us," it is services.',
-          '"What is your standard engagement length?" — Consulting: weeks. Implementation: months. Services: quarters to years.',
-          '"Can I see your pricing structure?" — Consulting and implementation: project-based. Services: usage-based or retainer.',
+          '"What does the engagement look like after go-live?" - Consulting ends before launch. Implementation ends at launch. Services continues after launch. The answer to this question tells you what you are buying.',
+          '"How is your success measured?" - If the answer is deliverables (documents, code, deployment), you are buying consulting or implementation. If the answer is business outcomes (time saved, cost reduced, accuracy achieved), you are buying services.',
+          '"Who is on the hook if the system stops working in production?" - If the answer is "your team," it is consulting or implementation. If the answer is "us," it is services.',
+          '"What is your standard engagement length?" - Consulting: weeks. Implementation: months. Services: quarters to years.',
+          '"Can I see your pricing structure?" - Consulting and implementation: project-based. Services: usage-based or retainer.',
         ],
       },
       {
         heading: 'What Altor is (and is not)',
         paragraphs: [
-          'Altor is an AI services company. We build production AI systems and operate them — we do not hand off at launch and move on.',
+          'Altor is an AI services company. We build production AI systems and operate them - we do not hand off at launch and move on.',
           'We are not AI consultants. We do not produce strategy documents or roadmaps. If you need help deciding whether and what to build, we are not the right fit.',
           'We are not pure AI implementors. We do not build and hand off. If you have strong internal engineering capability and want to own the system entirely, we are not the right fit.',
           'We are right for teams that want a production AI system and are not planning to build and maintain it internally. We embed alongside your team, deploy in 3 weeks, and stay accountable for the system running and improving over time.',
@@ -814,20 +814,20 @@ export const blogPosts = {
   aiAgentServicesGuide: {
     slug: '/blog/ai-agent-services-guide',
     title: 'AI Agent Services: What They Cost, How They Work, and Who Needs Them',
-    description: 'AI agent services cost $10K–$50K for a custom deployment, take 2–4 weeks, and automate specific workflows end-to-end. Here is exactly what you get, what it costs, and whether your business is a fit.',
+    description: 'AI agent services cost $10K-$50K for a custom deployment, take 2-4 weeks, and automate specific workflows end-to-end. Here is exactly what you get, what it costs, and whether your business is a fit.',
     datePublished: '2026-04-15',
     dateModified: '2026-04-15',
     readTime: '8 min read',
 
     headline: 'AI agent services: what they cost, how they work, and who needs them',
-    opening: 'AI agent services cost $10K–$50K for a custom deployment, take 2–4 weeks, and automate specific workflows end-to-end — from customer support triage to invoice processing. Unlike chatbots that answer questions or platforms you configure yourself, AI agent services means a team builds, deploys, and runs the agent for you. This guide explains exactly what is included, what you pay, and how to tell whether your business is ready.',
+    opening: 'AI agent services cost $10K-$50K for a custom deployment, take 2-4 weeks, and automate specific workflows end-to-end - from customer support triage to invoice processing. Unlike chatbots that answer questions or platforms you configure yourself, AI agent services means a team builds, deploys, and runs the agent for you. This guide explains exactly what is included, what you pay, and how to tell whether your business is ready.',
 
     sections: [
       {
         heading: 'What AI agent services actually means',
         paragraphs: [
-          'An AI agent is software that takes actions on your behalf — reading tickets, querying databases, routing requests, generating diagnoses — by connecting to your existing tools. An AI agent service means someone builds that agent for you, deploys it into your production environment, and maintains it over time. You do not need engineers. You do not need to learn a platform. You hire a team to deliver a working agent that handles a specific workflow.',
-          'That is different from the three categories buyers usually confuse it with. A chatbot answers questions. It searches documents and produces text, but it usually does not connect to your production systems or complete a workflow end-to-end. An AI platform gives you tooling to build the system yourself, which still means your team owns setup, integrations, testing, and maintenance. AI consulting usually ends with a strategy document, a roadmap, or a recommendation — not a working production system.',
+          'An AI agent is software that takes actions on your behalf - reading tickets, querying databases, routing requests, generating diagnoses - by connecting to your existing tools. An AI agent service means someone builds that agent for you, deploys it into your production environment, and maintains it over time. You do not need engineers. You do not need to learn a platform. You hire a team to deliver a working agent that handles a specific workflow.',
+          'That is different from the three categories buyers usually confuse it with. A chatbot answers questions. It searches documents and produces text, but it usually does not connect to your production systems or complete a workflow end-to-end. An AI platform gives you tooling to build the system yourself, which still means your team owns setup, integrations, testing, and maintenance. AI consulting usually ends with a strategy document, a roadmap, or a recommendation - not a working production system.',
         ],
         bullets: [
           'Chatbots answer questions. They are useful for FAQ deflection, but they do not typically investigate, route, or complete live workflows.',
@@ -838,7 +838,7 @@ export const blogPosts = {
       {
         heading: 'What AI agents can actually do (and what they cannot)',
         bullets: [
-          'Investigate support tickets by querying ClickHouse, Linear, Stripe, and GitHub simultaneously — delivering a root-cause diagnosis in 2 minutes instead of 45',
+          'Investigate support tickets by querying ClickHouse, Linear, Stripe, and GitHub simultaneously - delivering a root-cause diagnosis in 2 minutes instead of 45',
           'Triage customer escalations by checking billing status, account history, and known issues before routing to the right team',
           'Process invoice exceptions by cross-referencing purchase orders, delivery confirmations, and payment records',
           'Qualify sales leads by pulling company data, prior interactions, and product fit signals from your CRM and web tools',
@@ -907,13 +907,13 @@ export const blogPosts = {
   aiAgentCostGuide: {
     slug: '/blog/ai-agent-cost-pricing-guide',
     title: 'How Much Does It Cost to Build an AI Agent? (2026 Pricing Guide)',
-    description: 'Custom AI agent development costs $10K–$75K for a production deployment. Here is the complete pricing breakdown by scope, timeline, and ongoing costs — with real examples.',
+    description: 'Custom AI agent development costs $10K-$75K for a production deployment. Here is the complete pricing breakdown by scope, timeline, and ongoing costs - with real examples.',
     datePublished: '2026-04-15',
     dateModified: '2026-04-15',
     readTime: '6 min read',
 
     headline: 'How much does it cost to build an AI agent in 2026?',
-    opening: 'Custom AI agent development costs $10K–$75K for a single-workflow production deployment, plus $1K–$5K/month for ongoing maintenance. The range is wide because "AI agent" covers everything from a simple chatbot integration to a multi-system investigation engine that queries 6 production APIs simultaneously. This guide breaks down what drives the cost, what you actually get at each price point, and how to calculate the ROI before you spend anything.',
+    opening: 'Custom AI agent development costs $10K-$75K for a single-workflow production deployment, plus $1K-$5K/month for ongoing maintenance. The range is wide because "AI agent" covers everything from a simple chatbot integration to a multi-system investigation engine that queries 6 production APIs simultaneously. This guide breaks down what drives the cost, what you actually get at each price point, and how to calculate the ROI before you spend anything.',
 
     sections: [
       {
@@ -952,9 +952,9 @@ export const blogPosts = {
         table: {
           headers: ['Approach', 'Upfront cost', 'Time to production', 'Ongoing cost', 'Risk'],
           rows: [
-            ['Hire in-house AI engineers', '$200K-$400K/year per engineer', '3-6 months', 'Salary + benefits', 'High — hard to hire, slow to ramp'],
-            ['Use an AI agent platform (DIY)', '$500-$2K/month', '2-6 months of internal time', 'Platform fees + internal time', 'Medium — requires engineering capacity'],
-            ['AI agent services (hire a team)', '$25K-$75K per workflow', '2-6 weeks', '$1K-$5K/month', 'Low — fixed-scope, outcomes-aligned'],
+            ['Hire in-house AI engineers', '$200K-$400K/year per engineer', '3-6 months', 'Salary + benefits', 'High - hard to hire, slow to ramp'],
+            ['Use an AI agent platform (DIY)', '$500-$2K/month', '2-6 months of internal time', 'Platform fees + internal time', 'Medium - requires engineering capacity'],
+            ['AI agent services (hire a team)', '$25K-$75K per workflow', '2-6 weeks', '$1K-$5K/month', 'Low - fixed-scope, outcomes-aligned'],
           ],
         },
       },
@@ -991,20 +991,20 @@ export const blogPosts = {
   whatIsAnAiAgent: {
     slug: '/blog/what-is-an-ai-agent',
     title: 'What Is an AI Agent? A Non-Technical Guide for Business Owners',
-    description: 'An AI agent is software that takes actions on your behalf by connecting to your existing tools. Unlike chatbots, agents do work — not just answer questions. Here is what that means for your business.',
+    description: 'An AI agent is software that takes actions on your behalf by connecting to your existing tools. Unlike chatbots, agents do work - not just answer questions. Here is what that means for your business.',
     datePublished: '2026-04-15',
     dateModified: '2026-04-15',
     readTime: '5 min read',
 
     headline: 'What is an AI agent? A non-technical guide for business owners',
-    opening: 'An AI agent is software that takes actions on your behalf — reading tickets, querying your database, investigating problems, routing requests — by connecting to the tools your business already uses. Unlike a chatbot that answers questions from a script, an AI agent does work. It connects to your real systems, pulls real data, and produces real outputs that your team acts on. This guide explains what that means practically, with no technical jargon.',
+    opening: 'An AI agent is software that takes actions on your behalf - reading tickets, querying your database, investigating problems, routing requests - by connecting to the tools your business already uses. Unlike a chatbot that answers questions from a script, an AI agent does work. It connects to your real systems, pulls real data, and produces real outputs that your team acts on. This guide explains what that means practically, with no technical jargon.',
 
     sections: [
       {
         heading: 'The simplest way to understand AI agents',
         paragraphs: [
           'A chatbot is like a FAQ page that talks back. You ask it something, it searches its knowledge base, and it gives you an answer.',
-          'An AI agent is like a junior analyst who has access to your systems. You give it a task, it goes and does the work — pulling your customer\'s billing history from Stripe, checking your bug tracker for known issues, looking at recent deploys in GitHub — and it comes back with findings.',
+          'An AI agent is like a junior analyst who has access to your systems. You give it a task, it goes and does the work - pulling your customer\'s billing history from Stripe, checking your bug tracker for known issues, looking at recent deploys in GitHub - and it comes back with findings.',
           'The difference is the data source. A chatbot reads documents. An AI agent queries your live production systems.',
         ],
       },
@@ -1012,9 +1012,9 @@ export const blogPosts = {
         heading: 'What an AI agent actually does, step by step',
         steps: [
           'Receives a task: a support ticket arrives, an invoice exception is flagged, a lead comes in',
-          'Connects to your systems: the agent queries your database, CRM, billing system, bug tracker — wherever the relevant data lives',
+          'Connects to your systems: the agent queries your database, CRM, billing system, bug tracker - wherever the relevant data lives',
           'Reasons over the data: it correlates findings across systems to identify patterns, root causes, or next actions',
-          'Produces an output: a diagnosis, a recommendation, a routing decision, or a draft response — ready for human review',
+          'Produces an output: a diagnosis, a recommendation, a routing decision, or a draft response - ready for human review',
           'Waits for approval (initially): the human reviews the output, confirms it is correct, and the action is taken',
         ],
       },
@@ -1034,7 +1034,7 @@ export const blogPosts = {
       {
         heading: 'Real examples of what AI agents do in businesses today',
         bullets: [
-          'Support investigation: a customer reports an API error. The agent queries logs, checks for known bugs, verifies billing, and delivers a diagnosis in 2 minutes — what a human would take 45 minutes to do manually',
+          'Support investigation: a customer reports an API error. The agent queries logs, checks for known bugs, verifies billing, and delivers a diagnosis in 2 minutes - what a human would take 45 minutes to do manually',
           'Invoice exception handling: an invoice does not match the purchase order. The agent checks both, identifies the discrepancy, and routes to the right approver with a summary',
           'Lead qualification: a new lead fills out a form. The agent checks their company size, industry, prior interactions, and signals a score and recommended next step to the sales rep',
           'IT triage: an employee submits an IT request. The agent checks their permissions, identifies the issue type, and either resolves it automatically or routes to the right team with context',
@@ -1043,7 +1043,7 @@ export const blogPosts = {
       {
         heading: 'What your business needs to be ready for an AI agent',
         bullets: [
-          'A specific, repeated workflow: not "we want AI generally" — an agent needs a defined task it does over and over',
+          'A specific, repeated workflow: not "we want AI generally" - an agent needs a defined task it does over and over',
           'Data in systems with APIs: the agent connects to your tools via APIs. If your data is in spreadsheets or paper, you need to solve that first',
           'A human to review outputs initially: agents work best when humans review the first 50-100 outputs before expanding their autonomy',
           'Clear success criteria: you need to know what "correct" looks like before you can measure whether the agent is doing it right',
@@ -1052,7 +1052,7 @@ export const blogPosts = {
       {
         heading: 'Common misconceptions about AI agents',
         bullets: [
-          'Misconception: AI agents replace employees. Reality: they replace specific tasks — the 45 minutes of manual lookup — not the judgment, communication, or relationship work that makes employees valuable',
+          'Misconception: AI agents replace employees. Reality: they replace specific tasks - the 45 minutes of manual lookup - not the judgment, communication, or relationship work that makes employees valuable',
           'Misconception: AI agents are autonomous and unpredictable. Reality: well-built agents are read-only by default, require human approval for any actions, and have explicit rollback procedures',
           'Misconception: AI agents require a technical team to run. Reality: a good AI agent service deploys the agent, handles maintenance, and updates it as your workflows evolve',
           'Misconception: AI agents are expensive and slow to deploy. Reality: a focused single-workflow agent can be in production in 2-3 weeks for $25K-$50K',
