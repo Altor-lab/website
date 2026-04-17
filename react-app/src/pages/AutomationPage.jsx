@@ -41,36 +41,52 @@ export default function AutomationPage() {
   const toolData = page?.tool
   const todayStr = new Date().toISOString().slice(0, 10)
 
+  const howToSchema = page ? {
+    '@type': 'HowTo',
+    '@id': `https://altorlab.com${page.slug}#howto`,
+    name: `How to Automate ${wf?.label} with ${toolData?.label}`,
+    description: wf?.description,
+    totalTime: 'P3W',
+    step: (wf?.steps || []).map((text, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: text.split(' ').slice(0, 6).join(' '),
+      text,
+    })),
+  } : null
+
   const faqSchema = page ? {
-    '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    '@id': `https://altorlab.com${page.slug}#faq`,
     mainEntity: [
       {
         '@type': 'Question',
         name: `How do I automate ${wf?.label?.toLowerCase()} with ${toolData?.label}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `${wf?.description} ${wf?.outcome}`,
-        },
+        acceptedAnswer: { '@type': 'Answer', text: `${wf?.description} ${wf?.outcome}` },
       },
       {
         '@type': 'Question',
-        name: `What are the steps to set up ${wf?.label?.toLowerCase()} automation?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: (wf?.steps || []).join(' Then: '),
-        },
+        name: `What are the steps to automate ${wf?.label?.toLowerCase()}?`,
+        acceptedAnswer: { '@type': 'Answer', text: (wf?.steps || []).join(' ') },
       },
       {
         '@type': 'Question',
-        name: `How long does it take to automate ${wf?.label?.toLowerCase()}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'With Altor, most workflows go from audit to live production in 3 weeks. DIY with tools like n8n or Make typically takes 2-6 weeks depending on integration complexity.',
-        },
+        name: `How long does ${wf?.label?.toLowerCase()} automation take to set up?`,
+        acceptedAnswer: { '@type': 'Answer', text: 'With Altor, most workflows go from audit to live production in 3 weeks. DIY with n8n or Make typically takes 2–6 weeks depending on integration complexity.' },
+      },
+      {
+        '@type': 'Question',
+        name: `What does ${toolData?.label} cost for ${wf?.label?.toLowerCase()} automation?`,
+        acceptedAnswer: { '@type': 'Answer', text: toolData?.pricing_model || 'See the tool documentation for current pricing.' },
       },
     ],
   } : null
+
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Automate', url: '/automate' },
+    { name: wf?.label || 'Workflow', url: null },
+  ]
 
   return (
     <>
@@ -81,13 +97,9 @@ export default function AutomationPage() {
           slug={page.slug}
           datePublished="2026-04-16"
           dateModified={todayStr}
-        />
-      )}
-
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          schemaType="WebPage"
+          breadcrumbs={breadcrumbs}
+          extraSchema={[howToSchema, faqSchema].filter(Boolean)}
         />
       )}
 

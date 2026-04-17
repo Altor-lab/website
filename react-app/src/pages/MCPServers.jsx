@@ -118,6 +118,19 @@ export default function MCPServers() {
         slug="/mcp-servers"
         datePublished="2026-04-16"
         dateModified={meta?.generated_at?.slice(0, 10) ?? '2026-04-16'}
+        schemaType="WebPage"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'MCP Servers', url: null }]}
+        extraSchema={meta ? {
+          '@type': 'Dataset',
+          '@id': 'https://altorlab.com/mcp-servers#dataset',
+          name: 'Model Context Protocol (MCP) Server Directory',
+          description: `Comprehensive directory of ${meta.total_servers.toLocaleString()} MCP servers across ${Object.keys(meta.categories || {}).length} categories. Sourced from the official MCP registry, GitHub topic search, and community curation.`,
+          url: 'https://altorlab.com/mcp-servers',
+          creator: { '@type': 'Organization', name: 'Altor', url: 'https://altorlab.com' },
+          dateModified: meta.generated_at,
+          keywords: 'MCP server, Model Context Protocol, Claude tools, AI agents, LLM tools',
+          temporalCoverage: '2026/..',
+        } : undefined}
       />
 
       <section className="max-w-6xl mx-auto px-4 py-12">

@@ -69,6 +69,17 @@ export default function AutomationsIndex() {
         slug="/automate"
         datePublished="2026-04-16"
         dateModified={data?.meta?.generated_at?.slice(0, 10) ?? '2026-04-16'}
+        schemaType="WebPage"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Automation Guides', url: null }]}
+        extraSchema={data ? {
+          '@type': 'CollectionPage',
+          '@id': 'https://altorlab.com/automate#collection',
+          name: 'Business Workflow Automation Guides',
+          description: `${data.meta.total_pages} step-by-step automation guides covering ${data.meta.workflows} workflows and ${data.meta.tools} AI tools.`,
+          url: 'https://altorlab.com/automate',
+          numberOfItems: data.meta.total_pages,
+          creator: { '@type': 'Organization', name: 'Altor', url: 'https://altorlab.com' },
+        } : undefined}
       />
 
       <section className="max-w-6xl mx-auto px-4 py-12">

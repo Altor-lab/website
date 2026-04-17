@@ -184,6 +184,20 @@ export default function AIStackTracker() {
         slug="/ai-stack"
         datePublished="2026-04-16"
         dateModified={data?.meta?.generated_at?.slice(0, 10) ?? '2026-04-16'}
+        schemaType="WebPage"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'AI Stack Tracker', url: null }]}
+        extraSchema={data ? {
+          '@type': 'Dataset',
+          '@id': 'https://altorlab.com/ai-stack#dataset',
+          name: 'AI Stack Intelligence — B2B Company AI Tool Adoption',
+          description: `Real-time dataset tracking AI tool adoption across ${data.meta.company_count} B2B SaaS companies. Signals sourced from public web surfaces, ATS job postings, and vendor customer pages.`,
+          url: 'https://altorlab.com/ai-stack',
+          creator: { '@type': 'Organization', name: 'Altor', url: 'https://altorlab.com' },
+          dateModified: data.meta.generated_at,
+          temporalCoverage: '2026/..',
+          variableMeasured: 'AI tool adoption by B2B company',
+          measurementTechnique: 'Automated crawling of public web surfaces and ATS job postings',
+        } : undefined}
       />
 
       <section className="max-w-6xl mx-auto px-4 py-12">
