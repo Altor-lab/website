@@ -159,19 +159,27 @@ def fetch_official_registry() -> list[dict]:
             log.warning(f"Official registry fetch failed (page {page}): {e}")
             break
 
-        for s in data.get("servers", []):
-            repo_url = (
-                s.get("repository", {}).get("url", "")
-                if isinstance(s.get("repository"), dict)
-                else s.get("repository", "")
+        for item in data.get("servers", []):
+            # API wraps each entry as {"server": {...}, "_meta": {...}}
+            s = item.get("server", item)
+            meta = item.get("_meta", {}).get(
+                "io.modelcontextprotocol.registry/official", {}
             )
-            name = s.get("name", "")
+            if not meta.get("isLatest", True):
+                continue
+
+            name = s.get("name", "") or s.get("title", "")
             description = s.get("description", "")
 
+            # Extract GitHub URL from remotes list or source_url
             owner, repo = "", ""
-            m = re.search(r"github\.com/([^/]+)/([^/]+)", repo_url or "")
-            if m:
-                owner, repo = m.group(1), m.group(2).rstrip(".git")
+            all_urls = [str(rem.get("url", "")) for rem in s.get("remotes", [])]
+            all_urls.append(str(s.get("source_url", "") or ""))
+            for u in all_urls:
+                m = re.search(r"github\.com/([^/]+)/([^/.]+)", u)
+                if m:
+                    owner, repo = m.group(1), m.group(2).rstrip(".git")
+                    break
 
             packages = s.get("packages", [])
             install_cmd = ""
@@ -185,7 +193,7 @@ def fetch_official_registry() -> list[dict]:
             servers.append(
                 {
                     "id": f"{owner}/{repo}" if owner else name,
-                    "name": name,
+                    "name": s.get("title") or name,
                     "description": description,
                     "category": classify_category(name, description),
                     "github_url": f"https://github.com/{owner}/{repo}" if owner else "",
@@ -197,7 +205,7 @@ def fetch_official_registry() -> list[dict]:
                 }
             )
 
-        cursor = data.get("nextCursor")
+        cursor = data.get("nextCursor") or data.get("metadata", {}).get("nextCursor")
         page += 1
         if not cursor or page > 50:
             break
