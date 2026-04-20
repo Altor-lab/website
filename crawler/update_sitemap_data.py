@@ -63,6 +63,27 @@ def build_data_routes() -> list[str]:
         except Exception as e:
             print(f"  Automations parse error: {e}")
 
+    ai_companies_path = DATA_DIR / "ai-companies.json"
+    if ai_companies_path.exists():
+        try:
+            data = json.loads(ai_companies_path.read_text())
+            lastmod = (data.get("meta", {}).get("generated_at") or TODAY)[:10]
+            detected = [
+                c for c in data.get("companies", []) if c.get("tool_count", 0) > 0
+            ]
+            for company in detected:
+                routes.append(
+                    make_url(
+                        f"/ai-stack/{company['domain']}",
+                        "0.7",
+                        "weekly",
+                        lastmod,
+                    )
+                )
+            print(f"  AI company pages: {len(detected)} URLs")
+        except Exception as e:
+            print(f"  AI companies parse error: {e}")
+
     return routes
 
 

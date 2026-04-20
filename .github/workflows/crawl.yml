@@ -44,15 +44,20 @@ jobs:
           print(f"OK: {count} companies, {data['meta']['total_detections']} total detections")
           EOF
 
+      - name: Update sitemap-data.xml
+        run: python crawler/update_sitemap_data.py
+
       - name: Commit updated data
         run: |
           git config user.name  "Altor Crawler Bot"
           git config user.email "bot@altorlab.com"
           cp react-app/public/data/ai-companies.json /tmp/ai-companies.json
+          cp react-app/public/sitemap-data.xml /tmp/sitemap-data.xml
           git fetch origin master
           git reset --hard origin/master
           cp /tmp/ai-companies.json react-app/public/data/ai-companies.json
-          git add react-app/public/data/ai-companies.json
+          cp /tmp/sitemap-data.xml react-app/public/sitemap-data.xml
+          git add react-app/public/data/ai-companies.json react-app/public/sitemap-data.xml
           if git diff --staged --quiet; then
             echo "No changes detected — skipping commit"
           else

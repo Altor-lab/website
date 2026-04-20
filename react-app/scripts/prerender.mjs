@@ -94,6 +94,18 @@ if (existsSync(mcpDataPath)) {
   } catch { /* skip if data not yet populated */ }
 }
 
+// AI company detail pages — prerender all detected companies
+const aiDataPath = join(ROOT, 'public', 'data', 'ai-companies.json')
+if (existsSync(aiDataPath)) {
+  try {
+    const aiData = JSON.parse(readFileSync(aiDataPath, 'utf-8'))
+    const detected = (aiData.companies || []).filter(c => c.tool_count > 0)
+    for (const c of detected) {
+      ROUTES.push(`/ai-stack/${c.domain}`)
+    }
+  } catch { /* skip if data not yet populated */ }
+}
+
 const PORT = 4173
 const BASE_URL = `http://localhost:${PORT}`
 
