@@ -18,6 +18,7 @@ const DIST = join(ROOT, 'dist')
 
 const ROUTES = [
   '/',
+  '/nyc',
   '/work/support-investigation',
   '/platform',
   '/pricing',
