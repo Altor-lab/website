@@ -80,6 +80,20 @@ if (existsSync(automationsDataPath)) {
   } catch { /* skip if data not yet populated */ }
 }
 
+// Top MCP server detail pages (cap at 200 for prerender budget)
+const mcpDataPath = join(ROOT, 'public', 'data', 'mcp-servers.json')
+if (existsSync(mcpDataPath)) {
+  try {
+    const mcpData = JSON.parse(readFileSync(mcpDataPath, 'utf-8'))
+    const top = (mcpData.servers || [])
+      .filter(s => s.owner && s.repo && s.stars > 50)
+      .slice(0, 200)
+    for (const s of top) {
+      ROUTES.push(`/mcp-servers/${s.owner}/${s.repo}`)
+    }
+  } catch { /* skip if data not yet populated */ }
+}
+
 const PORT = 4173
 const BASE_URL = `http://localhost:${PORT}`
 
