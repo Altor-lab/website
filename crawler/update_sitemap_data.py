@@ -72,9 +72,10 @@ def build_data_routes() -> list[str]:
                 c for c in data.get("companies", []) if c.get("tool_count", 0) > 0
             ]
             for company in detected:
+                slug = company["domain"].replace(".", "-")
                 routes.append(
                     make_url(
-                        f"/ai-stack/{company['domain']}",
+                        f"/ai-stack/{slug}",
                         "0.7",
                         "weekly",
                         lastmod,

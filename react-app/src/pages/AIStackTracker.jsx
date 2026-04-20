@@ -92,7 +92,7 @@ function CompanyCard({ company }) {
           Updated {new Date(company.last_crawled).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
         </p>
         <Link
-          to={`/ai-stack/${company.domain}`}
+          to={`/ai-stack/${company.domain.replace(/\./g, '-')}`}
           className="text-xs text-accent-default hover:opacity-75 transition-opacity flex-shrink-0"
         >
           Details →

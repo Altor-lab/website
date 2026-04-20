@@ -71,7 +71,7 @@ function App() {
         <Route path="/for/clickhouse-teams" element={<ForClickhouseTeams />} />
         <Route path="/for/stripe-billing-teams" element={<ForStripeBilling />} />
         <Route path="/ai-stack" element={<AIStackTracker />} />
-        <Route path="/ai-stack/:domain" element={<AIStackEntry />} />
+        <Route path="/ai-stack/:domainSlug" element={<AIStackEntry />} />
         <Route path="/mcp-servers" element={<MCPServers />} />
         <Route path="/mcp-servers/:owner/:repo" element={<MCPServerEntry />} />
         <Route path="/automate" element={<AutomationsIndex />} />

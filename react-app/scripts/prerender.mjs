@@ -103,7 +103,7 @@ if (existsSync(aiDataPath)) {
       c => c.tool_count > 0 && (c.altor_fit === 'strong' || c.altor_fit === 'good')
     )
     for (const c of priority) {
-      ROUTES.push(`/ai-stack/${c.domain}`)
+      ROUTES.push(`/ai-stack/${c.domain.replace(/\./g, '-')}`)
     }
   } catch { /* skip if data not yet populated */ }
 }

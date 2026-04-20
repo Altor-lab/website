@@ -81,8 +81,17 @@ function ToolRow({ tool }) {
   )
 }
 
+function slugToDomain(slug) {
+  return slug.replace(/-/g, '.')
+}
+
+function domainToSlug(domain) {
+  return domain.replace(/\./g, '-')
+}
+
 export default function AIStackEntry() {
-  const { domain } = useParams()
+  const { domainSlug } = useParams()
+  const domain = slugToDomain(domainSlug)
   const [company, setCompany] = useState(null)
   const [related, setRelated] = useState([])
   const [loading, setLoading] = useState(true)
@@ -124,7 +133,7 @@ export default function AIStackEntry() {
 
   if (!company) return <Navigate to="/ai-stack" replace />
 
-  const slug = `/ai-stack/${domain}`
+  const slug = `/ai-stack/${domainToSlug(domain)}`
   const vendors = company.ai_tools.map(t => t.vendor).join(', ')
   const updatedDate = new Date(company.last_crawled).toLocaleDateString('en-US', {
     month: 'long', day: 'numeric', year: 'numeric',
@@ -298,7 +307,7 @@ export default function AIStackEntry() {
               {related.map(c => (
                 <Link
                   key={c.domain}
-                  to={`/ai-stack/${c.domain}`}
+                  to={`/ai-stack/${domainToSlug(c.domain)}`}
                   className="rounded-lg border border-border-default p-4 hover:border-accent-muted transition-colors"
                 >
                   <div className="flex items-center justify-between gap-2 mb-1">
