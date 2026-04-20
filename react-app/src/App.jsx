@@ -35,6 +35,7 @@ import ForObservability from './pages/ForObservability'
 import ForClickhouseTeams from './pages/ForClickhouseTeams'
 import ForStripeBilling from './pages/ForStripeBilling'
 import AIStackTracker from './pages/AIStackTracker'
+import AIStackEntry from './pages/AIStackEntry'
 import MCPServers from './pages/MCPServers'
 import MCPServerEntry from './pages/MCPServerEntry'
 import AutomationsIndex from './pages/AutomationsIndex'
@@ -70,6 +71,7 @@ function App() {
         <Route path="/for/clickhouse-teams" element={<ForClickhouseTeams />} />
         <Route path="/for/stripe-billing-teams" element={<ForStripeBilling />} />
         <Route path="/ai-stack" element={<AIStackTracker />} />
+        <Route path="/ai-stack/:domain" element={<AIStackEntry />} />
         <Route path="/mcp-servers" element={<MCPServers />} />
         <Route path="/mcp-servers/:owner/:repo" element={<MCPServerEntry />} />
         <Route path="/automate" element={<AutomationsIndex />} />

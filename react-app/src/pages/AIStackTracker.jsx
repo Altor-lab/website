@@ -85,11 +85,19 @@ function CompanyCard({ company }) {
         ))}
       </div>
 
-      <p className="text-xs text-fg-muted">
-        {company.tool_count} tool{company.tool_count !== 1 ? 's' : ''} detected
-        {' · '}
-        Updated {new Date(company.last_crawled).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-      </p>
+      <div className="flex items-center justify-between mt-1">
+        <p className="text-xs text-fg-muted">
+          {company.tool_count} tool{company.tool_count !== 1 ? 's' : ''} detected
+          {' · '}
+          Updated {new Date(company.last_crawled).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+        </p>
+        <Link
+          to={`/ai-stack/${company.domain}`}
+          className="text-xs text-accent-default hover:opacity-75 transition-opacity flex-shrink-0"
+        >
+          Details →
+        </Link>
+      </div>
     </article>
   )
 }
