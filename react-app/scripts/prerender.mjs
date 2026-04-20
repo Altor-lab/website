@@ -171,30 +171,35 @@ async function prerender() {
       const page = await browser.newPage()
       await page.setViewport({ width: 1280, height: 800 })
 
-      await page.goto(`${BASE_URL}${route}`, { waitUntil: 'networkidle0', timeout: 30000 })
+      const isDataPage = route.startsWith('/ai-stack/') || route.startsWith('/mcp-servers/') || route.startsWith('/automate/')
+      const waitStrategy = isDataPage ? 'domcontentloaded' : 'networkidle0'
+      const pageTimeout = isDataPage ? 15000 : 30000
 
-      // Scroll to bottom to trigger all IntersectionObserver-based animations
-      await page.evaluate(async () => {
-        await new Promise((resolve) => {
-          let total = 0
-          const step = 400
-          const timer = setInterval(() => {
-            window.scrollBy(0, step)
-            total += step
-            if (total >= document.body.scrollHeight) {
-              clearInterval(timer)
-              resolve()
-            }
-          }, 50)
+      try {
+        await page.goto(`${BASE_URL}${route}`, { waitUntil: waitStrategy, timeout: pageTimeout })
+        // Scroll to bottom to trigger all IntersectionObserver-based animations
+        await page.evaluate(async () => {
+          await new Promise((resolve) => {
+            let total = 0
+            const step = 400
+            const timer = setInterval(() => {
+              window.scrollBy(0, step)
+              total += step
+              if (total >= document.body.scrollHeight) {
+                clearInterval(timer)
+                resolve()
+              }
+            }, 50)
+          })
         })
-      })
-
-      // Wait for Framer Motion animations to settle
-      await new Promise((r) => setTimeout(r, 750))
-
-      // Scroll back to top
-      await page.evaluate(() => window.scrollTo(0, 0))
-      await new Promise((r) => setTimeout(r, 200))
+        // Wait for Framer Motion animations to settle
+        await new Promise((r) => setTimeout(r, isDataPage ? 300 : 750))
+        // Scroll back to top
+        await page.evaluate(() => window.scrollTo(0, 0))
+        await new Promise((r) => setTimeout(r, 200))
+      } catch (e) {
+        console.warn(`[prerender] Warning: ${route} — ${e.message?.slice(0, 80)}`)
+      }
 
       // Get the full rendered HTML
       let html = await page.content()
