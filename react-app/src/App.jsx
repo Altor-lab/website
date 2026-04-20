@@ -40,12 +40,14 @@ import MCPServers from './pages/MCPServers'
 import MCPServerEntry from './pages/MCPServerEntry'
 import AutomationsIndex from './pages/AutomationsIndex'
 import AutomationPage from './pages/AutomationPage'
+import NYC from './pages/NYC'
 
 function App() {
   return (
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/nyc" element={<NYC />} />
         <Route path="/platform" element={<Platform />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />} />
