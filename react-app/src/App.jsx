@@ -36,6 +36,7 @@ import ForClickhouseTeams from './pages/ForClickhouseTeams'
 import ForStripeBilling from './pages/ForStripeBilling'
 import AIStackTracker from './pages/AIStackTracker'
 import MCPServers from './pages/MCPServers'
+import MCPServerEntry from './pages/MCPServerEntry'
 import AutomationsIndex from './pages/AutomationsIndex'
 import AutomationPage from './pages/AutomationPage'
 
@@ -70,6 +71,7 @@ function App() {
         <Route path="/for/stripe-billing-teams" element={<ForStripeBilling />} />
         <Route path="/ai-stack" element={<AIStackTracker />} />
         <Route path="/mcp-servers" element={<MCPServers />} />
+        <Route path="/mcp-servers/:owner/:repo" element={<MCPServerEntry />} />
         <Route path="/automate" element={<AutomationsIndex />} />
         <Route path="/automate/:workflow/with/:tool" element={<AutomationPage />} />
         <Route path="/customers/portkey" element={<CustomerPortkey />} />
