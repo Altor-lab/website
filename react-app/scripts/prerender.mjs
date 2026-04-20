@@ -80,27 +80,29 @@ if (existsSync(automationsDataPath)) {
   } catch { /* skip if data not yet populated */ }
 }
 
-// Top MCP server detail pages (cap at 200 for prerender budget)
+// Top MCP server detail pages — only highest-star servers to stay within budget
 const mcpDataPath = join(ROOT, 'public', 'data', 'mcp-servers.json')
 if (existsSync(mcpDataPath)) {
   try {
     const mcpData = JSON.parse(readFileSync(mcpDataPath, 'utf-8'))
     const top = (mcpData.servers || [])
-      .filter(s => s.owner && s.repo && s.stars > 50)
-      .slice(0, 200)
+      .filter(s => s.owner && s.repo && s.stars > 500)
+      .slice(0, 50)
     for (const s of top) {
       ROUTES.push(`/mcp-servers/${s.owner}/${s.repo}`)
     }
   } catch { /* skip if data not yet populated */ }
 }
 
-// AI company detail pages — prerender all detected companies
+// AI company detail pages — only strong/good fit for prerender budget
 const aiDataPath = join(ROOT, 'public', 'data', 'ai-companies.json')
 if (existsSync(aiDataPath)) {
   try {
     const aiData = JSON.parse(readFileSync(aiDataPath, 'utf-8'))
-    const detected = (aiData.companies || []).filter(c => c.tool_count > 0)
-    for (const c of detected) {
+    const priority = (aiData.companies || []).filter(
+      c => c.tool_count > 0 && (c.altor_fit === 'strong' || c.altor_fit === 'good')
+    )
+    for (const c of priority) {
       ROUTES.push(`/ai-stack/${c.domain}`)
     }
   } catch { /* skip if data not yet populated */ }
