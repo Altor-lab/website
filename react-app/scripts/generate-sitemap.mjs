@@ -86,6 +86,10 @@ if (existsSync(automationsPath)) {
 routes.push({ path: '/mcp-servers', priority: '0.9', changefreq: 'daily' })
 routes.push({ path: '/ai-stack', priority: '0.9', changefreq: 'daily' })
 
+for (const slug of ['databases','file-system','web-browser','version-control','communication','productivity','cloud-infra','ai-ml','search','data-analytics','finance','security','media','maps-location','developer-tools','other']) {
+  routes.push({ path: `/mcp-servers/${slug}`, priority: '0.85', changefreq: 'daily' })
+}
+
 const makeUrl = (path, priority, changefreq, lastmod = TODAY) => `  <url>
     <loc>${BASE_URL}${path}</loc>
     <lastmod>${lastmod}</lastmod>

@@ -70,6 +70,11 @@ for (const slug of Object.keys(glossaryTerms)) {
 // Static programmatic index pages
 ROUTES.push('/ai-stack', '/mcp-servers', '/automate')
 
+// MCP category hub pages (16 pages — prerender all, they're static)
+for (const slug of ['databases','file-system','web-browser','version-control','communication','productivity','cloud-infra','ai-ml','search','data-analytics','finance','security','media','maps-location','developer-tools','other']) {
+  ROUTES.push(`/mcp-servers/${slug}`)
+}
+
 // Automation detail pages from data file
 const automationsDataPath = join(ROOT, 'public', 'data', 'automations.json')
 if (existsSync(automationsDataPath)) {
