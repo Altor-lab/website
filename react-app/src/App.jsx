@@ -39,6 +39,8 @@ import AIStackEntry from './pages/AIStackEntry'
 import MCPServers from './pages/MCPServers'
 import MCPServerEntry from './pages/MCPServerEntry'
 import MCPCategory from './pages/MCPCategory'
+import MCPInspector from './pages/MCPInspector'
+import PlaywrightMCP from './pages/PlaywrightMCP'
 import AutomationsIndex from './pages/AutomationsIndex'
 import AutomationPage from './pages/AutomationPage'
 import NYC from './pages/NYC'
@@ -75,7 +77,9 @@ function App() {
         <Route path="/for/stripe-billing-teams" element={<ForStripeBilling />} />
         <Route path="/ai-stack" element={<AIStackTracker />} />
         <Route path="/ai-stack/:domainSlug" element={<AIStackEntry />} />
+        <Route path="/mcp-inspector" element={<MCPInspector />} />
         <Route path="/mcp-servers" element={<MCPServers />} />
+        <Route path="/mcp-servers/microsoft/playwright-mcp" element={<PlaywrightMCP />} />
         <Route path="/mcp-servers/:categorySlug" element={<MCPCategory />} />
         <Route path="/mcp-servers/:owner/:repo" element={<MCPServerEntry />} />
         <Route path="/automate" element={<AutomationsIndex />} />
