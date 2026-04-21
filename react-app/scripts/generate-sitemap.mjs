@@ -19,6 +19,8 @@ const TODAY = new Date().toISOString().split('T')[0]
 const routes = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },
   { path: '/nyc', priority: '0.95', changefreq: 'monthly' },
+  { path: '/mcp-inspector', priority: '0.9', changefreq: 'monthly' },
+  { path: '/mcp-servers/microsoft/playwright-mcp', priority: '0.9', changefreq: 'weekly' },
   { path: '/work/support-investigation', priority: '0.95', changefreq: 'monthly' },
   { path: '/platform', priority: '0.9', changefreq: 'monthly' },
   { path: '/pricing', priority: '0.9', changefreq: 'monthly' },

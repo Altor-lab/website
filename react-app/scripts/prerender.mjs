@@ -68,7 +68,7 @@ for (const slug of Object.keys(glossaryTerms)) {
 }
 
 // Static programmatic index pages
-ROUTES.push('/ai-stack', '/mcp-servers', '/automate')
+ROUTES.push('/ai-stack', '/mcp-servers', '/automate', '/mcp-inspector', '/mcp-servers/microsoft/playwright-mcp')
 
 // MCP category hub pages (16 pages — prerender all, they're static)
 for (const slug of ['databases','file-system','web-browser','version-control','communication','productivity','cloud-infra','ai-ml','search','data-analytics','finance','security','media','maps-location','developer-tools','other']) {
