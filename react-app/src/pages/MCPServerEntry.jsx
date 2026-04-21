@@ -2,6 +2,15 @@ import { useEffect, useState } from 'react'
 import { useParams, Navigate, Link } from 'react-router-dom'
 import PageHead from '../components/PageHead'
 
+const CATEGORY_SLUGS = {
+  'Databases': 'databases', 'File System': 'file-system', 'Web & Browser': 'web-browser',
+  'Version Control': 'version-control', 'Communication': 'communication',
+  'Productivity': 'productivity', 'Cloud & Infra': 'cloud-infra', 'AI & ML': 'ai-ml',
+  'Search': 'search', 'Data & Analytics': 'data-analytics', 'Finance': 'finance',
+  'Security': 'security', 'Media': 'media', 'Maps & Location': 'maps-location',
+  'Developer Tools': 'developer-tools', 'Other': 'other',
+}
+
 const CATEGORY_COLORS = {
   'Databases': 'bg-blue-50 text-blue-800 border-blue-200',
   'File System': 'bg-amber-50 text-amber-800 border-amber-200',
@@ -130,6 +139,7 @@ export default function MCPServerEntry() {
         breadcrumbs={[
           { name: 'Home', url: '/' },
           { name: 'MCP Servers', url: '/mcp-servers' },
+          { name: server.category, url: `/mcp-servers/${CATEGORY_SLUGS[server.category] ?? 'other'}` },
           { name: server.name, url: null },
         ]}
         extraSchema={[softwareSchema, faqSchema]}
@@ -140,6 +150,8 @@ export default function MCPServerEntry() {
           <Link to="/" className="hover:text-fg-default">Home</Link>
           <span className="mx-2">&gt;</span>
           <Link to="/mcp-servers" className="hover:text-fg-default">MCP Servers</Link>
+          <span className="mx-2">&gt;</span>
+          <Link to={`/mcp-servers/${CATEGORY_SLUGS[server.category] ?? 'other'}`} className="hover:text-fg-default">{server.category}</Link>
           <span className="mx-2">&gt;</span>
           <span className="text-fg-default">{server.name}</span>
         </nav>
@@ -204,7 +216,7 @@ export default function MCPServerEntry() {
                 </a>
               )}
               <Link
-                to="/mcp-servers"
+                to={`/mcp-servers/${CATEGORY_SLUGS[server.category] ?? 'other'}`}
                 className="flex items-center gap-2 text-sm text-fg-muted hover:text-fg-default transition-colors"
               >
                 Browse all {server.category} MCP servers →

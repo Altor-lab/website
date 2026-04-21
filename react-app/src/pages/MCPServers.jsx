@@ -80,11 +80,24 @@ function ServerCard({ server }) {
   )
 }
 
+const CATEGORY_SLUGS = {
+  'Databases': 'databases', 'File System': 'file-system', 'Web & Browser': 'web-browser',
+  'Version Control': 'version-control', 'Communication': 'communication',
+  'Productivity': 'productivity', 'Cloud & Infra': 'cloud-infra', 'AI & ML': 'ai-ml',
+  'Search': 'search', 'Data & Analytics': 'data-analytics', 'Finance': 'finance',
+  'Security': 'security', 'Media': 'media', 'Maps & Location': 'maps-location',
+  'Developer Tools': 'developer-tools', 'Other': 'other',
+}
+
+const PAGE_SIZE = 48
+
 export default function MCPServers() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
   const [activeCategory, setActiveCategory] = useState('All')
+  const [sort, setSort] = useState('stars')
+  const [page, setPage] = useState(1)
 
   useEffect(() => {
     fetch('/data/mcp-servers.json')
@@ -98,15 +111,23 @@ export default function MCPServers() {
     return ['All', ...Object.keys(data.meta.categories || {}).sort()]
   }, [data])
 
-  const servers = useMemo(() => {
+  const allFiltered = useMemo(() => {
     if (!data) return []
-    return data.servers.filter(s => {
+    let list = data.servers.filter(s => {
       const matchCat = activeCategory === 'All' || s.category === activeCategory
       const q = search.toLowerCase()
       const matchSearch = !q || s.name.toLowerCase().includes(q) || (s.description || '').toLowerCase().includes(q) || (s.owner || '').toLowerCase().includes(q)
       return matchCat && matchSearch
     })
-  }, [data, activeCategory, search])
+    if (sort === 'stars') list = [...list].sort((a, b) => (b.stars || 0) - (a.stars || 0))
+    else if (sort === 'name') list = [...list].sort((a, b) => a.name.localeCompare(b.name))
+    return list
+  }, [data, activeCategory, search, sort])
+
+  const servers = useMemo(() => allFiltered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE), [allFiltered, page])
+  const totalPages = Math.ceil(allFiltered.length / PAGE_SIZE)
+
+  useEffect(() => { setPage(1) }, [search, activeCategory, sort])
 
   const meta = data?.meta
 
@@ -191,7 +212,7 @@ export default function MCPServers() {
 
         {data && data.servers?.length > 0 && (
           <>
-            <div className="flex flex-col sm:flex-row gap-3 mb-6">
+            <div className="flex flex-col sm:flex-row gap-3 mb-4">
               <input
                 type="search"
                 placeholder="Search servers..."
@@ -199,23 +220,46 @@ export default function MCPServers() {
                 onChange={e => setSearch(e.target.value)}
                 className="flex-1 px-3 py-2 text-sm rounded-lg border border-border-default bg-surface-0 text-fg-default placeholder-fg-muted focus:outline-none focus:border-accent-default transition-colors"
               />
+              <select
+                value={sort}
+                onChange={e => setSort(e.target.value)}
+                className="px-3 py-2 text-sm rounded-lg border border-border-default bg-surface-0 text-fg-default focus:outline-none focus:border-accent-default"
+              >
+                <option value="stars">Sort: Stars</option>
+                <option value="name">Sort: Name</option>
+              </select>
             </div>
 
-            <div className="flex flex-wrap gap-1.5 mb-8">
-              {categories.map(cat => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors ${
-                    activeCategory === cat
-                      ? 'bg-accent-default text-white border-accent-default'
-                      : 'bg-surface-0 text-fg-muted border-border-default hover:border-accent-muted hover:text-fg-default'
-                  }`}
-                >
-                  {cat}{cat !== 'All' && meta?.categories?.[cat] ? ` (${meta.categories[cat]})` : ''}
-                </button>
-              ))}
+            <div className="flex flex-wrap gap-1.5 mb-6">
+              {categories.map(cat => {
+                const isActive = activeCategory === cat
+                const slug = CATEGORY_SLUGS[cat]
+                const label = cat + (cat !== 'All' && meta?.categories?.[cat] ? ` (${meta.categories[cat]})` : '')
+                if (cat !== 'All' && slug && !search) {
+                  return (
+                    <Link key={cat} to={`/mcp-servers/${slug}`}
+                      className="px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors bg-surface-0 text-fg-muted border-border-default hover:border-accent-muted hover:text-fg-default">
+                      {label}
+                    </Link>
+                  )
+                }
+                return (
+                  <button key={cat} onClick={() => setActiveCategory(cat)}
+                    className={`px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors ${
+                      isActive ? 'bg-accent-default text-white border-accent-default' : 'bg-surface-0 text-fg-muted border-border-default hover:border-accent-muted hover:text-fg-default'
+                    }`}>
+                    {label}
+                  </button>
+                )
+              })}
             </div>
+
+            <p className="text-xs text-fg-muted mb-6">
+              {allFiltered.length.toLocaleString()} servers
+              {activeCategory !== 'All' ? ` in ${activeCategory}` : ''}
+              {search ? ` matching "${search}"` : ''}
+              {totalPages > 1 ? ` · page ${page} of ${totalPages}` : ''}
+            </p>
 
             {servers.length === 0 ? (
               <p className="text-fg-muted text-sm">No servers match your filters.</p>
@@ -224,6 +268,28 @@ export default function MCPServers() {
                 {servers.map(server => (
                   <ServerCard key={server.id} server={server} />
                 ))}
+              </div>
+            )}
+
+            {totalPages > 1 && (
+              <div className="flex items-center gap-2 mt-8 flex-wrap">
+                <button onClick={() => setPage(p => Math.max(1, p - 1))} disabled={page === 1}
+                  className="px-3 py-1.5 text-sm rounded-lg border border-border-default text-fg-muted disabled:opacity-40 hover:border-accent-muted transition-colors">
+                  ← Previous
+                </button>
+                {Array.from({ length: Math.min(totalPages, 7) }, (_, i) => {
+                  const pg = totalPages <= 7 ? i + 1 : page <= 4 ? i + 1 : page >= totalPages - 3 ? totalPages - 6 + i : page - 3 + i
+                  return (
+                    <button key={pg} onClick={() => setPage(pg)}
+                      className={`px-3 py-1.5 text-sm rounded-lg border transition-colors ${pg === page ? 'bg-accent-default text-white border-accent-default' : 'border-border-default text-fg-muted hover:border-accent-muted'}`}>
+                      {pg}
+                    </button>
+                  )
+                })}
+                <button onClick={() => setPage(p => Math.min(totalPages, p + 1))} disabled={page === totalPages}
+                  className="px-3 py-1.5 text-sm rounded-lg border border-border-default text-fg-muted disabled:opacity-40 hover:border-accent-muted transition-colors">
+                  Next →
+                </button>
               </div>
             )}
 
