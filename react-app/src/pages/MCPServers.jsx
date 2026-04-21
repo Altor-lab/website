@@ -134,22 +134,22 @@ export default function MCPServers() {
   return (
     <>
       <PageHead
-        title="MCP Server Directory — Model Context Protocol Servers | Altor"
-        description="The most comprehensive directory of Model Context Protocol (MCP) servers. Find, install, and connect MCP servers for databases, browsers, files, APIs, and more. Updated daily."
+        title="MCP Server Directory & Registry — List of MCP Servers | Altor"
+        description={`Daily updated MCP directory and MCP server registry with ${meta ? meta.total_servers.toLocaleString() + '+' : '4,000+'} servers. Browse the full list of MCP servers from the official registry, GitHub, and the community.`}
         slug="/mcp-servers"
         datePublished="2026-04-16"
         dateModified={meta?.generated_at?.slice(0, 10) ?? '2026-04-16'}
         schemaType="WebPage"
-        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'MCP Servers', url: null }]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'MCP Server Directory', url: null }]}
         extraSchema={meta ? {
           '@type': 'Dataset',
           '@id': 'https://altorlab.com/mcp-servers#dataset',
-          name: 'Model Context Protocol (MCP) Server Directory',
-          description: `Comprehensive directory of ${meta.total_servers.toLocaleString()} MCP servers across ${Object.keys(meta.categories || {}).length} categories. Sourced from the official MCP registry, GitHub topic search, and community curation.`,
+          name: 'MCP Server Directory & Registry — List of MCP Servers',
+          description: `Daily updated MCP directory with ${meta.total_servers.toLocaleString()} MCP servers across ${Object.keys(meta.categories || {}).length} categories. Sourced from the official MCP registry, GitHub, and community curation.`,
           url: 'https://altorlab.com/mcp-servers',
           creator: { '@type': 'Organization', name: 'Altor', url: 'https://altorlab.com' },
           dateModified: meta.generated_at,
-          keywords: 'MCP server, Model Context Protocol, Claude tools, AI agents, LLM tools',
+          keywords: 'MCP server, MCP directory, MCP server registry, list of MCP servers, Model Context Protocol',
           temporalCoverage: '2026/..',
         } : undefined}
       />
@@ -162,14 +162,15 @@ export default function MCPServers() {
         </nav>
 
         <header className="mb-10 max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.12em] text-accent-default mb-3">MCP server directory</p>
+          <p className="text-sm uppercase tracking-[0.12em] text-accent-default mb-3">MCP server directory & registry</p>
           <h1 className="text-3xl md:text-5xl font-bold text-fg-default tracking-[-0.03em] mb-4 text-balance">
-            Model Context Protocol Servers
+            MCP Server Directory
           </h1>
           <p className="text-lg text-fg-muted leading-relaxed text-pretty">
-            Every MCP server in one place. Connect Claude, Cursor, and your AI agents to databases,
-            browsers, APIs, files, and more — without writing integration code.
-            Sourced from the official MCP registry, GitHub, and the community. Updated daily.
+            The most complete MCP server registry and list of MCP servers — updated daily.
+            Connect Claude, Cursor, and your AI agents to databases, browsers, APIs, files,
+            and more without writing integration code. Sourced from the official MCP registry,
+            GitHub topic search, and community curation.
           </p>
           {meta && meta.total_servers > 0 && (
             <div className="flex flex-wrap gap-6 mt-6">
