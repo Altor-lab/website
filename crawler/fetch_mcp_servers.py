@@ -200,6 +200,8 @@ def fetch_official_registry() -> list[dict]:
                     "owner": owner,
                     "repo": repo,
                     "install_command": install_cmd,
+                    "language": "",
+                    "last_updated": "",
                     "stars": 0,
                     "source": "official",
                 }
@@ -248,6 +250,8 @@ def fetch_github_topic(max_pages: int = 5) -> list[dict]:
                     "repo": repo_name,
                     "install_command": "",
                     "stars": repo.get("stargazers_count", 0),
+                    "language": repo.get("language") or "",
+                    "last_updated": (repo.get("pushed_at") or "")[:10],
                     "source": "github",
                 }
             )
@@ -294,6 +298,8 @@ def fetch_awesome_list() -> list[dict]:
                 "repo": repo,
                 "install_command": "",
                 "stars": 0,
+                "language": "",
+                "last_updated": "",
                 "source": "awesome",
             }
         )
@@ -310,6 +316,8 @@ def deduplicate(all_servers: list[dict]) -> list[dict]:
         sid = s["id"].lower().strip("/")
         if not sid or sid == "/":
             continue
+        s.setdefault("language", "")
+        s.setdefault("last_updated", "")
         existing = seen.get(sid)
         if not existing:
             seen[sid] = s
@@ -319,9 +327,17 @@ def deduplicate(all_servers: list[dict]) -> list[dict]:
             ):
                 merged = {**s}
                 merged["stars"] = max(s.get("stars", 0), existing.get("stars", 0))
+                merged["language"] = s.get("language") or existing.get("language") or ""
+                merged["last_updated"] = (
+                    s.get("last_updated") or existing.get("last_updated") or ""
+                )
                 seen[sid] = merged
             else:
                 existing["stars"] = max(existing.get("stars", 0), s.get("stars", 0))
+                if not existing.get("language"):
+                    existing["language"] = s.get("language") or ""
+                if not existing.get("last_updated"):
+                    existing["last_updated"] = s.get("last_updated") or ""
 
     return list(seen.values())
 
