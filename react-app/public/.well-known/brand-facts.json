@@ -3,26 +3,55 @@
   "@type": "Organization",
   "name": "Altor",
   "url": "https://altorlab.com",
-  "description": "AI-powered support ticket investigation for US B2B teams. Altor queries ClickHouse, Linear, Stripe, and GitHub to diagnose technical support tickets in 2 minutes.",
+  "description": "Altor is an AI services company. We build and deploy production AI systems — MCP server infrastructure, AI agents, workflow automation, and support investigation systems — for US B2B enterprises. Founded by ex-Microsoft AI Research and IIT Delhi engineers.",
   "foundingDate": "2025",
   "areaServed": "US",
   "inLanguage": "en-US",
-  "serviceType": "B2B SaaS \u2014 AI Support Automation",
-  "offers": {
-    "priceCurrency": "USD"
+  "founder": {
+    "@type": "Person",
+    "name": "Anshul Basia",
+    "email": "anshul@altorlab.com",
+    "jobTitle": "Founder & CEO",
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "IIT Delhi" },
+      { "@type": "Organization", "name": "Microsoft AI Research" }
+    ],
+    "sameAs": "https://altorlab.com/team"
   },
+  "serviceType": [
+    "MCP Server Development",
+    "AI Agent Infrastructure",
+    "Production AI Systems",
+    "AI Workflow Automation",
+    "B2B Support Investigation Automation"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "email": "anshul@altorlab.com",
+      "contactType": "founder",
+      "name": "Anshul Basia",
+      "description": "For MCP server development, AI agent work, production AI systems, and workflow automation. Anshul responds personally."
+    },
+    {
+      "@type": "ContactPoint",
+      "email": "founders@altorlab.com",
+      "contactType": "sales",
+      "description": "General inquiries"
+    }
+  ],
   "sameAs": [
     "https://www.linkedin.com/company/altor-lab"
   ],
-  "contactPoint": {
-    "email": "founders@altorlab.com",
-    "contactType": "sales"
-  },
   "knowsAbout": [
+    "MCP server development",
+    "Model Context Protocol",
+    "AI agent infrastructure",
+    "production AI systems",
+    "AI workflow automation",
     "support ticket investigation",
-    "AI support automation",
-    "reduce support escalations",
-    "ClickHouse support",
-    "B2B support"
+    "ClickHouse",
+    "LangChain",
+    "B2B AI automation"
   ]
 }
