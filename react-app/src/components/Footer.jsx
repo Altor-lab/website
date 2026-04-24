@@ -105,6 +105,16 @@ const Footer = () => {
             </div>
 
             <div>
+              <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">From the team</h4>
+              <div className="flex flex-col gap-2.5">
+                <a href="https://altorlab.xyz/geo-insights/" target="_blank" rel="noopener noreferrer" className={linkClass}>AI search visibility data</a>
+                <a href="https://altorlab.xyz/guides/what-is-geo-optimization/" target="_blank" rel="noopener noreferrer" className={linkClass}>What is GEO optimization?</a>
+                <a href="https://altorlab.xyz/guides/how-to-optimize-for-chatgpt/" target="_blank" rel="noopener noreferrer" className={linkClass}>Optimizing for ChatGPT</a>
+                <a href="https://altorlab.xyz" target="_blank" rel="noopener noreferrer" className={linkClass}>AltorLab Marketing →</a>
+              </div>
+            </div>
+
+            <div>
               <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Connect</h4>
               <div className="flex flex-col gap-2.5">
                 <a href={`mailto:${content.footer.email}`} className={linkClass}>Email</a>
