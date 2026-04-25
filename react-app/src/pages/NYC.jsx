@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import PageHead from '../components/PageHead'
+import TrustBar from '../components/TrustBar'
 import { cn } from '../lib/utils'
 
 const ease = [0.25, 0.4, 0.25, 1]
@@ -206,6 +207,8 @@ export default function NYC() {
         </W>
       </section>
 
+      <TrustBar />
+
       {/* ── PROOF BAR ───────────────────────────────────────────────────── */}
       <Reveal className="py-10 border-y border-edge bg-surface-1">
         <W>
@@ -307,6 +310,9 @@ export default function NYC() {
               </div>
               <p className="text-fg-muted text-[0.75rem] text-center mt-4">
                 Or text directly: available in Flatiron, Midtown, DUMBO
+              </p>
+              <p className="text-fg-muted text-[0.75rem] text-center mt-3 leading-relaxed border-t border-edge pt-3">
+                In person: 30 minutes → you leave with a clear picture of whether Altor fits your workflow and what we'd build. Not a deck.
               </p>
             </motion.div>
           </div>

@@ -2,6 +2,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
+import TrustBar from '../components/TrustBar'
 import { cn } from '../lib/utils'
 
 const ease = [0.25, 0.4, 0.25, 1]
@@ -114,13 +115,13 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={up} custom={4} className="flex flex-col sm:flex-row items-start gap-4">
-              <Button href={emailWorkflowHref} size="lg">Email us your workflow →</Button>
               <Link
                 to="/work/support-investigation"
-                className="inline-flex items-center gap-2 text-[0.9375rem] text-fg-secondary hover:text-fg transition-colors link-underline"
+                className="inline-flex items-center gap-2 rounded-xl bg-accent text-surface-0 font-semibold text-[0.9375rem] px-5 py-3 hover:opacity-90 transition-opacity"
               >
-                See our work →
+                See how we diagnosed Portkey →
               </Link>
+              <Button href={emailWorkflowHref} size="lg" variant="ghost">Email your workflow</Button>
             </motion.div>
             <motion.p variants={up} custom={5} className="text-fg-muted text-[0.8125rem] mt-2">
               No sales call. Describe your workflow → get a 1-page automation plan back within 24 hours.
@@ -128,6 +129,8 @@ export default function Home() {
           </motion.div>
         </W>
       </section>
+
+      <TrustBar />
 
       {/* ━━━ THE CLAIM ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <div className="border-y border-edge-subtle bg-surface-1 py-10">
@@ -366,77 +369,71 @@ export default function Home() {
         </W>
       </Reveal>
 
-      {/* ━━━ QUOTE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      {/* ━━━ PROOF ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <Reveal className="py-16 md:py-20">
         <W>
-          <motion.div variants={up} custom={0} className="max-w-[680px] mx-auto text-center">
-            <blockquote
-              className="font-display font-bold text-fg leading-[1.2] tracking-[-0.02em] mb-6"
-              style={{ fontSize: 'clamp(1.25rem, 3vw, 1.75rem)', textWrap: 'balance' }}
-            >
-              "Altor diagnosed in 2 minutes what used to take our engineers 45 minutes of copying data between tabs.
-              Nobody else could even attempt to answer them automatically."
-            </blockquote>
-            <div className="flex items-center justify-center gap-2">
-              <span className="text-[0.8125rem] text-fg-secondary">Engineering Lead</span>
-              <span className="text-fg-faint">·</span>
+          <div className="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-16 items-start max-w-[960px]">
+            {/* Proof card */}
+            <motion.div variants={up} custom={0} className="rounded-2xl border border-edge bg-surface-1 p-7 sm:p-8">
+              <p className="font-mono text-accent text-[0.75rem] tracking-[0.05em] uppercase mb-4">Case study — Portkey</p>
+              <p className="text-fg-secondary text-[0.8125rem] leading-relaxed mb-5">
+                Portkey is an AI gateway platform handling billions of API requests from AI-first engineering teams.
+                Their support queue required querying ClickHouse, Linear, Stripe, and GitHub — every ticket, every time.
+              </p>
+              <div className="grid grid-cols-2 gap-3 mb-5">
+                {[
+                  { before: '45 min', after: '2 min', label: 'per investigation' },
+                  { before: 'manual', after: '200+ tickets', label: 'diagnosed automatically' },
+                ].map(({ before, after, label }) => (
+                  <div key={label} className="rounded-xl border border-edge bg-surface-0 p-3.5">
+                    <div className="flex items-baseline gap-1.5 mb-0.5">
+                      <span className="text-fg-faint text-[0.75rem] line-through">{before}</span>
+                      <span className="text-fg font-display font-black text-[1.125rem] tracking-tight">{after}</span>
+                    </div>
+                    <p className="text-fg-muted text-[0.75rem]">{label}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="font-mono text-[0.7rem] text-accent bg-accent/[0.08] border border-accent/20 rounded-full px-2 py-0.5">ClickHouse</span>
+                <span className="font-mono text-[0.7rem] text-fg-muted bg-surface-0 border border-edge rounded-full px-2 py-0.5">Linear</span>
+                <span className="font-mono text-[0.7rem] text-fg-muted bg-surface-0 border border-edge rounded-full px-2 py-0.5">Stripe</span>
+                <span className="font-mono text-[0.7rem] text-fg-muted bg-surface-0 border border-edge rounded-full px-2 py-0.5">GitHub</span>
+              </div>
+              <blockquote className="text-fg-secondary text-[0.875rem] leading-relaxed italic mb-4 border-l-2 border-accent/30 pl-3">
+                "Nobody else could even attempt to answer them automatically."
+                <span className="not-italic text-fg-muted"> — Engineering Lead, Portkey</span>
+              </blockquote>
               <Link to="/work/support-investigation" className="text-[0.8125rem] text-accent font-medium hover:opacity-75 transition-opacity">
-                Portkey
+                Read the full case study →
               </Link>
-            </div>
-          </motion.div>
-        </W>
-      </Reveal>
+            </motion.div>
 
-      {/* ━━━ FREE INTELLIGENCE TOOLS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <Reveal className="py-16 md:py-20 bg-surface-1">
-        <W>
-          <motion.p variants={up} custom={0} className="font-mono text-fg-muted text-[0.75rem] tracking-[0.05em] uppercase mb-5">
-            Free intelligence tools
-          </motion.p>
-          <motion.h2
-            variants={up} custom={1}
-            className="font-display font-bold text-fg leading-[1.08] tracking-[-0.03em] mb-4"
-            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', textWrap: 'balance' }}
-          >
-            We built tools to understand the AI landscape. They're free.
-          </motion.h2>
-          <motion.p variants={up} custom={2} className="text-fg-secondary text-[0.9375rem] leading-[1.7] max-w-[52ch] mb-10" style={{ textWrap: 'pretty' }}>
-            The same intelligence we use to identify automation opportunities for clients — now public.
-          </motion.p>
-          <div className="grid sm:grid-cols-3 gap-4">
-            {[
-              {
-                label: 'AI Stack Tracker',
-                description: 'Which AI tools is any B2B company actually using? Detected from public signals — updated daily.',
-                path: '/ai-stack',
-                stat: '170+ companies tracked',
-              },
-              {
-                label: 'MCP Server Directory',
-                description: 'Every Model Context Protocol server in one place. Search by category, sort by stars, copy install commands.',
-                path: '/mcp-servers',
-                stat: '2,000+ servers indexed',
-              },
-              {
-                label: 'Automation Guides',
-                description: 'How to automate any business workflow with any AI tool — Claude, ChatGPT, n8n, Zapier and more.',
-                path: '/automate',
-                stat: '20 workflows × 8 tools',
-              },
-            ].map((tool, i) => (
-              <motion.div key={tool.label} variants={up} custom={i + 3}>
-                <Link
-                  to={tool.path}
-                  className="group block rounded-xl border border-edge bg-surface-0 p-6 hover:border-accent/30 transition-colors duration-200 h-full"
-                >
-                  <p className="font-mono text-accent text-[0.75rem] tracking-[0.04em] mb-3">{tool.stat}</p>
-                  <h3 className="font-display font-bold text-fg text-[1rem] tracking-[-0.01em] mb-2 group-hover:text-accent transition-colors duration-200">{tool.label}</h3>
-                  <p className="text-fg-secondary text-[0.8125rem] leading-[1.65] mb-4">{tool.description}</p>
-                  <span className="text-[0.8125rem] text-accent group-hover:opacity-75 transition-opacity">Explore →</span>
+            {/* ICP checklist */}
+            <motion.div variants={up} custom={1}>
+              <p className="font-mono text-fg-muted text-[0.75rem] tracking-[0.05em] uppercase mb-5">Who we work best with</p>
+              <div className="space-y-3">
+                {[
+                  { label: 'B2B SaaS with production support queues', detail: 'Tickets that require querying live systems — not just searching a knowledge base.' },
+                  { label: 'Stacks with APIs: ClickHouse, Linear, Stripe, GitHub, Pylon, Zendesk, or similar', detail: 'If your data is in systems with APIs, we can connect to it.' },
+                  { label: 'Recurring investigation patterns', detail: 'The same 5–10 ticket types, over and over. That\'s what we automate.' },
+                  { label: 'Engineering teams who own the problem', detail: 'You understand your stack. We understand AI systems. We work best together.' },
+                ].map(({ label, detail }) => (
+                  <div key={label} className="flex gap-3 p-4 rounded-xl border border-accent/15 bg-accent/[0.02]">
+                    <span className="text-accent text-[0.875rem] shrink-0 mt-0.5">✓</span>
+                    <div>
+                      <p className="text-fg text-[0.875rem] font-medium mb-0.5">{label}</p>
+                      <p className="text-fg-secondary text-[0.8125rem] leading-relaxed">{detail}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5">
+                <Link to="/work/support-investigation" className="inline-flex items-center gap-1.5 text-[0.875rem] text-fg-secondary hover:text-fg transition-colors">
+                  Your stack looks like Portkey's — see what we built →
                 </Link>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
           </div>
         </W>
       </Reveal>

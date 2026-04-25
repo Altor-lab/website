@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import PageHead from '../components/PageHead'
+import TrustBar from '../components/TrustBar'
 
 const ease = [0.25, 0.4, 0.25, 1]
 const up = { hidden: { opacity: 0, y: 20 }, show: (d = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.5, delay: d * 0.08, ease } }) }
@@ -118,8 +119,24 @@ export default function Pricing() {
         </W>
       </section>
 
-      <section className="py-8 md:py-16">
+      <TrustBar />
+
+      <section className="py-4 md:py-8">
         <W>
+          <Reveal>
+            <div className="max-w-[820px] rounded-2xl border border-accent/20 bg-accent/[0.03] px-6 py-5 mb-6 flex flex-col sm:flex-row sm:items-center gap-4">
+              <div className="flex-1">
+                <p className="font-mono text-accent text-[0.75rem] tracking-[0.05em] uppercase mb-1.5">Pilot engagements from $14K</p>
+                <p className="text-fg-secondary text-[0.875rem] leading-relaxed">
+                  3-week engagement · up to 3 system integrations · 500 investigations · playbooks for your top 5 ticket types.
+                  {' '}At Portkey: 45 min per ticket became 2 min. 200+ tickets diagnosed.
+                </p>
+              </div>
+              <a href="https://calendly.com/founders-altorlab/30min" className="shrink-0 inline-flex items-center gap-1.5 text-[0.875rem] font-medium text-accent hover:opacity-80 transition-opacity whitespace-nowrap">
+                Start a conversation →
+              </a>
+            </div>
+          </Reveal>
           <div className="grid md:grid-cols-2 gap-4 max-w-[820px]">
             {tiers.map((tier) => (
               <Reveal key={tier.name}>

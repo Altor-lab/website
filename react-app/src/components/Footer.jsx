@@ -30,6 +30,13 @@ const Footer = () => {
     ['Glossary', '/glossary'],
   ]
 
+  const toolLinks = [
+    ['AI Stack Tracker', '/ai-stack'],
+    ['MCP Server Directory', '/mcp-servers'],
+    ['Automation Guides', '/automate'],
+    ['MCP Inspector', '/mcp-inspector'],
+  ]
+
   const go = (id) => (e) => {
     if (isHome) {
       e.preventDefault()
@@ -99,6 +106,15 @@ const Footer = () => {
               <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Resources</h4>
               <div className="flex flex-col gap-2.5">
                 {moreLinks.map(([label, path]) => (
+                  <Link key={path} to={path} className={linkClass}>{label}</Link>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Free Tools</h4>
+              <div className="flex flex-col gap-2.5">
+                {toolLinks.map(([label, path]) => (
                   <Link key={path} to={path} className={linkClass}>{label}</Link>
                 ))}
               </div>
