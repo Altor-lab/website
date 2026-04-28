@@ -254,12 +254,22 @@ export default function AutomationPage() {
             in 3 weeks, and stay until the system delivers measurable impact.
             {wf?.outcome && ` ${wf.outcome}`}
           </p>
-          <a
-            href={`mailto:anshul@altorlab.com?subject=${encodeURIComponent(`${wf?.label} Automation — Altor Engagement`)}&body=${encodeURIComponent(`Workflow: ${wf?.label}\n\nSample cases:\n\nTimeline:`)}`}
-            className="inline-flex items-center gap-2 text-sm font-medium text-accent-default hover:opacity-80 transition-opacity"
-          >
-            Email us your workflow →
-          </a>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href="https://calendly.com/founders-altorlab/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-accent-default text-white text-sm font-medium hover:opacity-90 transition-opacity"
+            >
+              Book a call →
+            </a>
+            <a
+              href={`mailto:anshul@altorlab.com?subject=${encodeURIComponent(`${wf?.label} Automation — Altor Engagement`)}&body=${encodeURIComponent(`Workflow: ${wf?.label}\n\nSample cases:\n\nTimeline:`)}`}
+              className="inline-flex items-center text-sm text-fg-muted hover:text-fg-default transition-colors self-center"
+            >
+              or email your workflow →
+            </a>
+          </div>
         </div>
       </article>
     </>
