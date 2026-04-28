@@ -25,6 +25,25 @@ const CATEGORY_COLORS = {
   'Other': 'bg-zinc-50 text-zinc-500 border-zinc-200',
 }
 
+const CATEGORY_USE_CASES = {
+  'Databases': ['Query and mutate production databases via natural language', 'Run schema migrations with AI-assisted validation', 'Generate and explain SQL queries from plain English', 'Debug slow queries by pulling execution plans automatically'],
+  'File System': ['Read, write, and search files without leaving your AI client', 'Automate file organization and batch renaming workflows', 'Extract and summarize content from large document collections', 'Watch directories and trigger workflows on file changes'],
+  'Web & Browser': ['Scrape and summarize live web pages inside Claude', 'Automate browser-based workflows end-to-end', 'Extract structured data from any website on demand', 'Monitor web pages for changes and trigger alerts'],
+  'Version Control': ['Review diffs and PRs without switching tabs', 'Search commit history with natural language queries', 'Automate branch management and issue linking', 'Generate release notes from commit history automatically'],
+  'Communication': ['Draft and send messages from your AI client', 'Search and summarize conversation history', 'Automate notification workflows across channels', 'Set up AI-powered message routing and triage'],
+  'Productivity': ['Create and update tasks directly from AI conversations', 'Summarize and extract action items from documents', 'Automate recurring workflow steps across productivity tools', 'Build AI-powered project status reports automatically'],
+  'Cloud & Infra': ['Query cloud resource state and metrics in real time', 'Automate infrastructure changes with AI-assisted validation', 'Debug deployment failures by pulling logs and config diffs', 'Monitor costs and trigger alerts on anomalies'],
+  'AI & ML': ['Chain AI models and pipelines from a single interface', 'Query model outputs and fine-tuning runs programmatically', 'Automate eval pipelines and benchmark comparisons', 'Connect AI agents to specialized ML infrastructure'],
+  'Search': ['Run semantic and keyword searches across multiple indices', 'Summarize and cluster search results automatically', 'Integrate external search APIs into AI agent workflows', 'Build RAG pipelines connecting AI to live search indexes'],
+  'Developer Tools': ['Trigger CI/CD pipelines and view build status in chat', 'Search and manage issues across projects automatically', 'Automate code review and static analysis workflows', 'Query deployment history and rollback with natural language'],
+  'Data & Analytics': ['Query analytics dashboards and export results via AI', 'Build automated reporting pipelines without code', 'Connect AI agents to BI tools for live data access', 'Summarize trends from large datasets in seconds'],
+  'Finance': ['Query transaction history and detect anomalies', 'Generate financial reports from raw data automatically', 'Automate reconciliation workflows across accounts', 'Connect AI agents to accounting and billing systems'],
+  'Security': ['Query security logs and detect threat patterns', 'Automate vulnerability scanning and triage workflows', 'Connect AI agents to SIEM and compliance systems', 'Generate security incident reports from raw event data'],
+  'Media': ['Process, convert, and summarize media files via AI', 'Automate media tagging and metadata extraction', 'Connect AI agents to CDN and media management systems', 'Generate captions and transcripts automatically'],
+  'Maps & Location': ['Query location data and generate route optimizations', 'Automate geofencing and proximity alert workflows', 'Connect AI agents to mapping and logistics APIs', 'Generate location-based insights from movement data'],
+  'Other': ['Connect AI agents to specialized external systems', 'Automate custom workflows via API integration', 'Extend Claude capabilities with domain-specific tools', 'Build AI-powered integrations for niche use cases'],
+}
+
 export default function MCPServerEntry() {
   const { owner, repo } = useParams()
   const [server, setServer] = useState(null)
@@ -123,14 +142,26 @@ export default function MCPServerEntry() {
     ],
   }
 
+  const howToSchema = server.install_command ? {
+    '@type': 'HowTo',
+    '@id': `https://altorlab.com${slug}#howto`,
+    name: `How to install ${server.name} MCP server`,
+    description: `Step-by-step installation guide for ${server.name} MCP server`,
+    step: [
+      { '@type': 'HowToStep', position: 1, name: 'Install the server', text: `Run: ${server.install_command}` },
+      { '@type': 'HowToStep', position: 2, name: 'Configure your MCP client', text: `Add the server entry to your claude_desktop_config.json or MCP client configuration file with the server name and command.` },
+      { '@type': 'HowToStep', position: 3, name: 'Restart and verify', text: `Restart your AI client. ${server.name} will appear in the available tools list once the client detects the new server configuration.` },
+    ],
+  } : null
+
   return (
     <>
       <PageHead
-        title={`${server.name} — MCP Server for ${server.category} | Altor`}
+        title={`${server.name} MCP Server — Install & Use with Claude | Altor`}
         description={
           server.description
-            ? `${server.description.slice(0, 140)}. Install and configure ${server.name} as an MCP server for Claude and AI agents.`
-            : `${server.name} is an MCP server in the ${server.category} category by ${owner}. Works with Claude and any Model Context Protocol client.`
+            ? `${server.description.slice(0, 120)}. ${server.stars > 0 ? '★ ' + server.stars.toLocaleString() + ' stars.' : ''} Install ${server.name} as an MCP server for Claude, Cursor, or any MCP client.`
+            : `${server.name} is an open-source MCP server${server.language ? ' built in ' + server.language : ''} in the ${server.category} category. Works with Claude and any Model Context Protocol client.`
         }
         slug={slug}
         datePublished="2026-04-16"
@@ -142,7 +173,7 @@ export default function MCPServerEntry() {
           { name: server.category, url: `/mcp-servers/${CATEGORY_SLUGS[server.category] ?? 'other'}` },
           { name: server.name, url: null },
         ]}
-        extraSchema={[softwareSchema, faqSchema]}
+        extraSchema={[softwareSchema, faqSchema, ...(howToSchema ? [howToSchema] : [])].filter(Boolean)}
       />
 
       <article className="max-w-4xl mx-auto px-4 pt-28 pb-12 md:pt-36">
@@ -245,6 +276,80 @@ export default function MCPServerEntry() {
                 </ol>
               </div>
             )}
+          </div>
+        </section>
+
+        <section className="mb-10 rounded-xl border border-border-default bg-surface-1 p-6">
+          <h2 className="text-lg font-bold text-fg-default mb-4 tracking-tight">
+            About {server.name}
+          </h2>
+          <div className="flex flex-wrap gap-3 mb-4">
+            {server.language && (
+              <span className="text-xs px-2.5 py-1 rounded-full border border-border-default text-fg-muted">
+                {server.language}
+              </span>
+            )}
+            {server.stars > 0 && (
+              <span className="text-xs px-2.5 py-1 rounded-full border border-border-default text-fg-muted">
+                ★ {server.stars.toLocaleString()} stars
+              </span>
+            )}
+            {server.last_updated && (
+              <span className="text-xs px-2.5 py-1 rounded-full border border-border-default text-fg-muted">
+                Updated {new Date(server.last_updated).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
+              </span>
+            )}
+            {server.source && (
+              <span className="text-xs px-2.5 py-1 rounded-full border border-border-default text-fg-muted capitalize">
+                Source: {server.source}
+              </span>
+            )}
+          </div>
+          <p className="text-sm text-fg-muted leading-relaxed">
+            {server.name} is an open-source MCP server in the{' '}
+            <strong className="text-fg-default">{server.category}</strong> category
+            {server.language && <>, built in <strong className="text-fg-default">{server.language}</strong></>}.
+            {' '}It connects Claude and other MCP-compatible clients to {server.category.toLowerCase()} systems directly.
+            {server.github_url && (
+              <> Source available on{' '}
+                <a href={server.github_url} target="_blank" rel="noopener noreferrer" className="text-accent-default hover:opacity-80">
+                  GitHub
+                </a>.
+              </>
+            )}
+          </p>
+        </section>
+
+        {(CATEGORY_USE_CASES[server.category] || CATEGORY_USE_CASES['Other']).length > 0 && (
+          <section className="mb-10">
+            <h2 className="text-xl font-bold text-fg-default mb-4 tracking-tight">
+              Use cases for {server.category} MCP servers
+            </h2>
+            <ul className="space-y-3">
+              {(CATEGORY_USE_CASES[server.category] || CATEGORY_USE_CASES['Other']).map((uc) => (
+                <li key={uc} className="flex gap-3 text-sm text-fg-muted leading-relaxed">
+                  <span className="text-accent-default flex-shrink-0 mt-0.5">→</span>
+                  <span>{uc}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <section className="mb-10 rounded-xl border border-border-default bg-surface-1 p-6">
+          <h2 className="text-lg font-bold text-fg-default mb-4 tracking-tight">
+            Where {server.name} fits in an MCP workflow
+          </h2>
+          <div className="space-y-3 text-sm text-fg-muted leading-relaxed">
+            <p>
+              Teams use <strong className="text-fg-default">{server.name}</strong> to give Claude a direct bridge into
+              {' '}{server.category.toLowerCase()} workflows, so routine actions happen inside the AI client instead of across separate tabs and dashboards.
+            </p>
+            <p>
+              {server.install_command
+                ? `Once installed and configured, ${server.name} can be part of repeatable MCP workflows for research, operations, and execution tasks tied to your ${server.category.toLowerCase()} stack.`
+                : `${server.name} can be connected to MCP clients by following the repository setup instructions, making it useful for teams that want AI access to ${server.category.toLowerCase()} systems.`}
+            </p>
           </div>
         </section>
 

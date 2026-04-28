@@ -188,6 +188,67 @@ export default function AutomationPage() {
           </section>
         )}
 
+        {page?.sections?.length > 0 && (
+          <div className="space-y-10 mb-12">
+            {page.sections.map((section, idx) => (
+              <section key={idx}>
+                {section.heading && (
+                  <h2 className="text-xl font-bold text-fg-default mb-5 tracking-tight">
+                    {section.heading}
+                  </h2>
+                )}
+                {section.paragraphs && section.paragraphs.map((p, i) => (
+                  <p key={i} className="text-sm text-fg-muted leading-relaxed mt-3 first:mt-0" style={{ textWrap: 'pretty' }}>
+                    {p}
+                  </p>
+                ))}
+                {section.table && (
+                  <div className="mt-5 overflow-x-auto">
+                    <table className="w-full text-left border-collapse">
+                      <thead>
+                        <tr className="border-b border-border-default">
+                          {section.table.headers.map(h => (
+                            <th key={h} className="py-3 px-4 text-xs font-mono uppercase tracking-[0.05em] text-fg-muted first:pl-0">
+                              {h}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {section.table.rows.map((row, ri) => (
+                          <tr key={ri} className="border-b border-border-default">
+                            {row.map((cell, ci) => (
+                              <td key={ci} className="py-3 px-4 text-xs text-fg-muted leading-relaxed first:pl-0 first:text-fg-default first:font-medium">
+                                {cell}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+                {section.bullets && (
+                  <ul className="mt-4 space-y-2">
+                    {section.bullets.map((item, i) => (
+                      <li key={i} className="text-sm text-fg-muted leading-relaxed flex gap-2">
+                        <span className="text-accent-default flex-shrink-0 mt-0.5">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {section.callout && (
+                  <div className="mt-5 rounded-xl bg-surface-1 border border-border-default p-5">
+                    <p className="text-sm font-medium text-fg-default mb-1">{section.callout.title}</p>
+                    <p className="text-xs text-fg-muted leading-relaxed">{section.callout.text}</p>
+                  </div>
+                )}
+              </section>
+            ))}
+          </div>
+        )}
+
         {page?.n8n_templates?.length > 0 && (
           <section className="mb-12">
             <h2 className="text-lg font-bold text-fg-default mb-4 tracking-tight">
