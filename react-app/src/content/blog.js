@@ -88,6 +88,66 @@ export const blogPosts = {
           text: 'If 80% or more of your investigations follow 3 or fewer patterns, and the data sources have APIs, the investigation is automatable. The question is whether to build it yourself or use a purpose-built tool.',
         },
       },
+      {
+        heading: 'Time breakdown: where the 20-45 minutes actually goes',
+        table: {
+          headers: ['Investigation stage', 'Time without automation', 'Time with Altor', 'Time saved'],
+          rows: [
+            ['Ticket read + context gathering', '3-5 min', '0 min (AI reads simultaneously)', '3-5 min'],
+            ['Symptom query (observability/logs)', '5-15 min', '15 sec', '5-14 min'],
+            ['Correlation query (bug tracker)', '5-10 min', '15 sec', '5-10 min'],
+            ['Elimination query (billing + deployments)', '5-10 min', '15 sec', '5-10 min'],
+            ['Synthesis + diagnosis write-up', '5-10 min', '30 sec', '5-10 min'],
+            ['Total investigation time', '20-45 min', '~1.5 min', '19-43 min per ticket'],
+          ],
+        },
+      },
+      {
+        heading: 'System integration checklist: what your workflow needs access to',
+        bullets: [
+          'Observability/logs (ClickHouse, Datadog, Elasticsearch): provides error rates, query performance, request traces, and system health. This is the first query in every technical investigation — "what does the system show around the time of the customer\'s reported issue?"',
+          'Bug tracker (Linear, Jira, GitHub Issues): tells you whether the symptom is a known issue, when it was filed, and whether engineering has acknowledged or fixed it. Eliminates 30% of investigation paths by confirming known issues.',
+          'Billing/subscription (Stripe, Recurly, internal database): determines whether the customer\'s access level and subscription state are consistent with their behavior. Billing mismatches cause 15-20% of B2B access errors that appear to be product bugs.',
+          'Deployment history (GitHub, CircleCI, PagerDuty): identifies what changed when the problem started. A query that worked yesterday and fails today likely correlates with a deploy. Checking the deploy timestamp against the first error timestamp is the fastest way to assign root cause.',
+          'CRM/account (Salesforce, HubSpot): provides customer tier, contract terms, CSM owner, and recent account activity. Determines whether the issue warrants emergency escalation (at-risk enterprise customer) or standard resolution.',
+          'Internal knowledge base: surfaces similar past tickets and their resolutions. Avoids re-investigating issues that have known solutions. Agents with investigation tooling resolve known-issue tickets in 2 minutes; agents without it spend 15 minutes rediscovering the same root cause.',
+        ],
+      },
+      {
+        heading: 'ROI calculation template: build your own business case',
+        table: {
+          headers: ['Variable', 'Your number', 'Altor benchmark', 'Monthly impact'],
+          rows: [
+            ['Technical tickets per month', 'Enter here', '1,000 for mid-market', '—'],
+            ['Investigation time per ticket (min)', 'Enter here', '25 min average', '—'],
+            ['Loaded hourly cost per agent ($)', 'Enter here', '$75/hr US', '—'],
+            ['Monthly investigation cost', 'tickets × time/60 × $/hr', '—', '$31,250/mo at benchmark'],
+            ['Altor reduction (%)', '—', '80% reduction', '—'],
+            ['Monthly savings', 'cost × reduction %', '—', '$25,000/mo at benchmark'],
+            ['Annual savings', 'monthly × 12', '—', '$300,000/yr at benchmark'],
+            ['Altor engagement cost (year 1)', '—', '$45K build + $24K ops', '$69,000'],
+            ['Year 1 ROI', 'savings / cost', '—', '4.3× at benchmark'],
+          ],
+        },
+      },
+      {
+        heading: 'Build internally vs. use a service: the honest tradeoff',
+        paragraphs: [
+          'Building a multi-system investigation agent internally requires: an AI engineer who understands LLM orchestration and tool use (2024 market rate: $180,000-$280,000/year), 3-4 months of development time before the first production deployment, ongoing maintenance as your product evolves (schema changes, new ticket patterns, model updates), and a governance framework for human-in-loop review. Total year-1 cost: $120,000-$200,000 in engineering time.',
+          'Using an AI services firm costs $25,000-$75,000 upfront with production deployment in 3 weeks. The tradeoff is ownership versus time-to-value. If you have an AI engineer with bandwidth and a 6-month runway before you need the system live, building internally makes sense. If you need the investigation time reduction in Q2, not Q4, and do not have dedicated AI engineering capacity, a services firm is the rational choice.',
+          'The false comparison to avoid: comparing "build for free with existing engineering" to "pay $45K." Engineering time is not free — it is diverted from product development. Every sprint an engineer spends building internal tooling is a sprint they are not building the product. The correct comparison is: $45K services engagement versus $150,000+ in engineering opportunity cost.',
+        ],
+        callout: {
+          title: 'The 3-week decision rule',
+          text: 'If your internal team cannot scope, build, and deploy a working investigation agent in 3 weeks with existing resources — without delaying product roadmap — the correct answer is a services engagement. Most teams that attempt internal builds underestimate integration complexity and end up with a 4-month project that still requires ongoing maintenance investment.',
+        },
+      },
+    ],
+
+    faq: [
+      { q: 'How long does support ticket investigation take without automation?', a: 'Manual support ticket investigation takes 20-45 minutes per technical ticket. The time breaks down as: 3-5 min context gathering, 5-15 min symptom query in observability tools, 5-10 min correlation query in the bug tracker, 5-10 min elimination query in billing and deployment history, and 5-10 min synthesis. This investigation phase accounts for 55-70% of total resolution time.' },
+      { q: 'What systems do you need to investigate a support ticket?', a: 'A complete technical ticket investigation requires access to 4-6 systems: observability/logs (ClickHouse, Datadog) for error rates and query performance, a bug tracker (Linear, Jira) for known issues, billing (Stripe) for subscription state, deployment history (GitHub) for recent changes, CRM for account context, and your internal knowledge base for past resolutions. Most B2B support agents have access to only 1-2 of these, which is why investigation takes so long.' },
+      { q: 'Can AI fully automate support ticket investigation?', a: 'Yes, for the data-gathering and synthesis phases. AI can query ClickHouse, check Linear for known bugs, verify Stripe billing state, and pull GitHub deployment history simultaneously in under 2 minutes. Human judgment is still required for novel bugs not in the issue tracker, communication with the customer, and decisions about remediation approach. Altor reduced investigation time from 45 minutes to 2 minutes at Portkey by automating the multi-system query phase.' },
     ],
 
     relatedPosts: [
@@ -190,6 +250,12 @@ export const blogPosts = {
       },
     ],
 
+    faq: [
+      { q: 'What does manual support ticket investigation cost per ticket?', a: 'Manual investigation costs $25-$50 per technical ticket when you include loaded agent cost. At 25 minutes of investigation per ticket ($75/hr loaded) that is $31.25 per ticket in labor — before adding overhead, tooling, and escalation costs. For a team processing 400 technical tickets per week, that is $650,000+ per year in investigation labor alone.' },
+      { q: 'How do you calculate the ROI of support automation?', a: 'Multiply: technical tickets per month × investigation time per ticket (minutes) ÷ 60 × loaded hourly cost. This gives you monthly investigation cost. An AI system that reduces investigation time by 80% saves 80% of that cost. At Portkey, investigation time dropped from 45 to 2 minutes — an 95% reduction — on 200+ weekly tickets.' },
+      { q: 'What is the payback period for AI support investigation automation?', a: 'For a team processing 200+ technical tickets per week, payback on a $45K Altor engagement typically occurs in 8-16 weeks. Monthly savings of $25,000-$50,000 (from eliminating 20-35 minutes of investigation per ticket) exceed the engagement cost within 2-4 months. Teams with higher ticket volume or higher loaded agent costs see faster payback.' },
+    ],
+
     relatedPosts: [
       { label: 'The investigation workflow framework', path: '/blog/support-ticket-investigation-workflow' },
       { label: 'How to reduce escalations by automating investigation', path: '/blog/reduce-support-escalations' },
@@ -282,6 +348,12 @@ export const blogPosts = {
       },
     ],
 
+    faq: [
+      { q: 'How do you diagnose ClickHouse performance issues in support tickets?', a: 'ClickHouse performance diagnosis requires querying system.query_log for recent slow queries, system.merges for background merge activity competing for I/O, system.replicas for replication health, and system.parts for storage pressure. A customer reporting slow queries is usually experiencing one of three root causes: a missing index, a merge storm consuming I/O, or a query that expanded due to schema changes. Each has a distinct signature in the system tables.' },
+      { q: 'What ClickHouse system tables are most useful for support investigation?', a: 'The four essential tables: system.query_log (query duration, memory usage, error codes for every query in the last 7 days), system.merges (ongoing background merges — a merge storm is the most common cause of sudden performance degradation), system.replicas (replication lag and health for each table), system.parts (number of parts per table — high part counts cause slow queries and trigger compaction). Read-only access to these four tables covers 80% of ClickHouse support investigations.' },
+      { q: 'How can AI help with ClickHouse support diagnosis?', a: 'AI can automate the query phase of ClickHouse diagnosis — executing the system table queries, correlating the results, and identifying the root cause pattern (merge storm, missing index, replication lag, etc.) in under 2 minutes. This replaces the 30-60 minutes an engineer spends manually running queries, interpreting results, and drafting the diagnosis. Altor connects to ClickHouse via read-only service account and automates this investigation for support tickets.' },
+    ],
+
     relatedPosts: [
       { label: 'The support investigation workflow framework', path: '/blog/support-ticket-investigation-workflow' },
       { label: 'API error investigation - full walkthrough', path: '/use-case/api-error-investigation' },
@@ -361,6 +433,55 @@ export const blogPosts = {
           company: 'Portkey',
         },
       },
+      {
+        heading: 'Feature comparison: AI support agent vs. chatbot',
+        table: {
+          headers: ['Capability', 'Chatbot', 'AI support agent'],
+          rows: [
+            ['Data access', 'Knowledge base, FAQs, static docs', 'Live production systems (ClickHouse, Stripe, GitHub, Linear)'],
+            ['Question types handled', 'How-to, FAQ, navigation', 'Why-is-this-broken, what-changed, is-this-a-bug'],
+            ['Investigation capability', 'None — cannot query customer-specific data', 'Full — queries customer account, usage, and error history'],
+            ['Escalation reduction', 'Deflects 15-25% of low-complexity tickets', 'Resolves 60-70% of previously escalated technical tickets'],
+            ['Setup complexity', 'Low — connect to knowledge base', 'Medium — requires read-only system integrations'],
+            ['Best ticket type', 'FAQ, onboarding, billing navigation', 'API errors, performance issues, integration failures'],
+            ['Accuracy on technical tickets', '< 40% (lacks live data)', '85-92% (queries ground truth)'],
+            ['Customer experience', 'Frustrating for complex issues', 'Specific, data-backed responses'],
+          ],
+        },
+      },
+      {
+        heading: 'Decision framework: which one does your team actually need?',
+        steps: [
+          'Classify your ticket distribution: What percentage of your tickets are FAQ or navigation questions vs. technical investigation questions? If > 60% are FAQ, start with a chatbot. If > 40% are technical, you need an investigation agent.',
+          'Audit your current escalation rate: If your L1 to L2 escalation rate is > 20%, the bottleneck is investigation, not knowledge — a chatbot will not help. An AI support agent addresses the investigation gap directly.',
+          'Check your data access: Do your L1 agents currently have access to ClickHouse, your bug tracker, billing system, and deployment history? If no, you are already proving that the bottleneck is data access — the same gap an AI agent addresses.',
+          'Calculate the ROI at your ticket volume: At 200 technical tickets per week × 35 minutes investigation time × $75/hr loaded cost = $87,500/month in investigation labor. A chatbot saves $0 of this. An AI agent saves 60-80% = $52,500-$70,000/month.',
+          'Consider your customer profile: Enterprise B2B customers escalate to account managers when chatbots fail to resolve their issues. The cost of failed chatbot deflection (lost renewal, AM time) typically exceeds the cost of the original ticket. Technical B2B customers expect investigation-quality responses.',
+        ],
+      },
+      {
+        heading: 'The hybrid model: when to use both',
+        paragraphs: [
+          'The optimal architecture for most B2B SaaS support teams is chatbot + investigation agent in series: the chatbot handles the initial triage and deflects FAQ tickets (typically 20-30% of volume), while the investigation agent handles the technical tickets that pass through. This is not a compromise — it is the production pattern that best matches how ticket types are distributed.',
+          'Implementation sequence: deploy the chatbot first (it is faster and cheaper), measure what actually gets deflected versus what passes through, then deploy the investigation agent on the ticket types that are consuming the most resolution time. The chatbot deflection data tells you exactly which investigation playbooks to build first.',
+          'The failure mode to avoid: deploying a chatbot that tries to handle technical investigation questions. Customers who receive a chatbot response to a production incident ticket will escalate immediately — and the escalation cost (AM time, trust erosion, renewal risk) exceeds the original ticket cost by 3-5×.',
+        ],
+      },
+      {
+        heading: 'Common misconceptions about AI support agents',
+        bullets: [
+          '"AI agents will replace support engineers" — False. AI agents automate investigation (the data-querying phase). Engineers still handle novel bugs, architecture decisions, and escalations where the investigation reveals an unknown issue. The correct framing: AI agents let engineers focus on problems that require their expertise, not on querying logs.',
+          '"Chatbots and AI agents are the same thing with different marketing" — False. Chatbots operate on static knowledge. AI agents query live systems. This is a fundamental architecture difference — not a marketing distinction. A chatbot cannot tell you why a specific customer\'s API call failed yesterday. An AI agent can.',
+          '"You need to choose one or the other" — False. See hybrid model section above. Most production deployments use both: chatbot for deflection, agent for investigation.',
+          '"AI agents are only for large enterprises" — False. The ROI is strongest for mid-market B2B teams (50-500 employees, 200-2,000 technical tickets/month) where investigation time is high but headcount is constrained. Enterprise teams often have the headcount to absorb investigation costs; mid-market teams cannot.',
+        ],
+      },
+    ],
+
+    faq: [
+      { q: 'What is the difference between an AI support agent and a chatbot?', a: 'A chatbot searches static content — your knowledge base, FAQs, and documentation. An AI support agent connects to live production systems — querying ClickHouse for error logs, Linear for known bugs, Stripe for billing state, and GitHub for recent deployments. Chatbots handle FAQ deflection effectively; AI agents handle technical investigation. The key differentiator is live data access: chatbots work from static content, AI agents query live systems.' },
+      { q: 'Can a chatbot reduce B2B support escalation rates?', a: 'Chatbots reduce escalation rates for FAQ and navigation questions — typically 15-25% of B2B ticket volume. They do not reduce escalations for technical investigation tickets, which represent 40-60% of B2B SaaS volume. If your escalation problem is in the technical investigation category (agents lack access to production data), a chatbot will not address it. An AI investigation agent will.' },
+      { q: 'Should B2B companies use a chatbot or an AI support agent?', a: 'Most B2B SaaS companies benefit from both: a chatbot for initial triage and FAQ deflection (handling the 20-30% of tickets that are answerable from documentation), and an AI investigation agent for technical tickets (handling the 40-60% that require querying production systems). Deploy the chatbot first — it is faster and cheaper. Use the chatbot deflection data to identify which technical ticket types need investigation automation first.' },
     ],
 
     relatedPosts: [
@@ -462,6 +583,12 @@ export const blogPosts = {
           text: 'Track three metrics before and after automating investigation: escalation rate (% of tickets escalated to engineering), investigation time (minutes from ticket open to diagnosis), and first-contact resolution rate. At Portkey, investigation time dropped from 20-45 minutes to 2 minutes across 200+ tickets.',
         },
       },
+    ],
+
+    faq: [
+      { q: 'How do you reduce support escalations in B2B SaaS?', a: 'The root cause of most B2B support escalations is investigation access, not agent knowledge. L1 agents escalate because they cannot query ClickHouse, check Linear, or verify Stripe billing state — not because they lack technical skill. The fix: automate investigation so L1 agents receive diagnostic data before opening the ticket. Teams that implement investigation automation see 60-70% reduction in escalation rates without additional headcount.' },
+      { q: 'What percentage of B2B support escalations are preventable?', a: 'Based on Altor\'s data across B2B SaaS deployments, 60-70% of escalations to engineering are preventable through investigation automation. These are escalations driven by agents lacking production system access, not escalations driven by novel bugs or architecture decisions. The remaining 30-40% require genuine engineering judgment and should reach engineering.' },
+      { q: 'What is the cost of a support escalation to engineering?', a: 'Each engineering escalation costs 45-90 minutes of engineer time at a loaded rate of $150-$250/hr — $112 to $375 per escalation. For a team escalating 100 tickets per week, that is $580K-$1.95M per year in engineering time diverted to support. Eliminating 65% of those escalations with investigation automation saves $377K-$1.27M annually — before factoring in the product velocity lost to support interruptions.' },
     ],
 
     relatedPosts: [
@@ -589,6 +716,12 @@ export const blogPosts = {
       },
     ],
 
+    faq: [
+      { q: 'Why do enterprise AI projects fail to reach production?', a: 'The primary reasons: undefined success criteria (67% of AI projects have no measurable production goal), governance gaps (no human-in-loop review before AI decisions affect customers), infrastructure underestimation (connecting AI to live production systems is 3-5× harder than demos suggest), and pilot-to-production gap (pilots run in sandboxes without real data volumes, latency requirements, or edge cases). Most AI projects succeed in demos and fail in production.' },
+      { q: 'What makes production AI different from pilot AI?', a: 'Production AI handles real data, real users, and real failures — with the same reliability requirements as any other production software. Pilot AI runs in controlled environments with clean data and no SLA. The gap: production data is messy (schema changes, missing fields, edge cases), production volume creates latency constraints pilots ignore, and production failures affect real customers. 67% of enterprise AI projects fail to cross the pilot-to-production threshold.' },
+      { q: 'How long does it take to deploy AI to production for B2B support?', a: 'With a focused services engagement, a single-workflow AI investigation system deploys in 3 weeks: Week 1 is stack audit and integration planning, Week 2 is read-only system connections live, Weeks 3-4 are playbook tuning and team training. Internal builds take 3-6 months on average. The difference is integration expertise — connecting AI to live production systems (ClickHouse, Linear, Stripe, GitHub) is where most internal builds stall.' },
+    ],
+
     seeAlso: [
       { label: 'How Altor approaches production AI deployment', href: '/platform' },
       { label: 'Portkey case study: 45 minutes to 2', href: '/work/support-investigation' },
@@ -692,6 +825,12 @@ export const blogPosts = {
           'Operational orphans - the team that built the system moves on; nobody owns it. Fix: assign operational ownership before launch, not after the first production incident.',
         ],
       },
+    ],
+
+    faq: [
+      { q: 'What is production AI and how is it different from AI tools?', a: 'Production AI is an AI system that operates continuously in a live business environment, handling real data and real users — held to the same reliability, security, and audit standards as any other production software. AI tools (ChatGPT, Claude, Copilot) are interfaces for human interaction. Production AI is infrastructure: it runs without human supervision, connects to live systems, and its outputs affect business operations.' },
+      { q: 'What are the components of a production AI system?', a: 'A production AI system has four layers: (1) ingestion — reading tickets, events, or data from live systems via API, (2) context — querying relevant production data to ground the AI\'s response in facts, (3) inference — the AI model synthesizing a diagnosis, decision, or draft output, (4) governance — human review checkpoints, audit logs, and rollback procedures. Systems missing layer 4 are pilots, not production.' },
+      { q: 'How do you measure production AI performance?', a: 'Production AI metrics mirror the business process they automate: investigation time reduction (minutes per ticket), resolution rate improvement (percentage of tickets resolved without escalation), escalation rate change (percentage of tickets escalated to engineering), and accuracy (percentage of AI diagnoses confirmed correct by the agent reviewing them). These are measurable from day one in production — unlike pilot metrics that measure demo quality.' },
     ],
 
     seeAlso: [
@@ -804,6 +943,12 @@ export const blogPosts = {
       },
     ],
 
+    faq: [
+      { q: 'What is the difference between AI services, AI consulting, and AI implementation?', a: 'AI consulting provides strategy and recommendations — they tell you what to build, then leave. AI implementation is project-based — they build what you spec, then leave. AI services is outcome-based — the team builds, deploys, and maintains the system, staying until it delivers measurable results. For production AI in B2B support, you want services: the critical work is post-deployment tuning based on real ticket patterns, which consulting and implementation engagements do not cover.' },
+      { q: 'How do you choose between AI consulting, implementation, and services?', a: 'Choose consulting when you need a strategy or vendor evaluation before committing budget. Choose implementation when you have a clear spec, internal engineering capacity to maintain it, and a 3-6 month timeline. Choose services when you need production deployment in under 8 weeks, lack internal AI engineering capacity, and want the vendor to own quality post-launch. Most B2B SaaS teams at 50-500 employees need services, not consulting.' },
+      { q: 'What should an AI services contract include?', a: 'A production-quality AI services contract must specify: defined success metrics (investigation time reduction, escalation rate target), timeline with production milestone (not just "go live" — measurable improvement), system access scope (which systems, read vs. write, credential rotation procedures), human-in-loop requirements (who reviews what before AI outputs reach customers), maintenance terms (who updates prompts when your product changes), and audit logging requirements.' },
+    ],
+
     seeAlso: [
       { label: 'How Altor works: our deployment model', href: '/platform' },
       { label: 'See the Portkey case study', href: '/work/support-investigation' },
@@ -895,6 +1040,67 @@ export const blogPosts = {
           'You have a human who will approve agent outputs initially: AI agents work best when a human reviews the first 50-100 outputs before expanding autonomy',
         ],
       },
+      {
+        heading: 'Types of AI agent services: what you can actually buy',
+        bullets: [
+          'Investigation agents — automate the diagnostic phase of support: query logs, bug trackers, billing, and deployment history to deliver root-cause diagnoses before agents respond. Best for: B2B SaaS with 200+ technical tickets/month.',
+          'Workflow automation agents — automate end-to-end business processes (invoice processing, lead qualification, onboarding sequences). Best for: operations teams with high-volume repetitive workflows.',
+          'Data pipeline agents — automate ETL, reporting, and analytics workflows. Query multiple data sources and generate structured outputs without human intervention. Best for: data teams at scale.',
+          'Customer-facing agents — handle initial customer contact, triage, and FAQ deflection. Limited to knowledge base content — cannot access production systems. Best for: high-volume consumer support, not B2B technical.',
+          'Internal ops agents — automate HR, finance, IT helpdesk, and compliance workflows. Best for: companies with repetitive internal processes costing significant employee time.',
+        ],
+      },
+      {
+        heading: 'AI agent vendor landscape: how to evaluate who builds what',
+        table: {
+          headers: ['Vendor type', 'Best for', 'Time to deploy', 'Ongoing maintenance', 'Price range'],
+          rows: [
+            ['AI services firm (e.g., Altor)', 'Custom multi-system workflows, production deployment', '3-6 weeks', 'Included in engagement', '$25K-$75K per workflow'],
+            ['No-code platforms (Zapier, Make)', 'Simple workflow automation, API integrations', '1-4 weeks DIY', 'Self-managed', '$500-$2,500/mo'],
+            ['LLM orchestration (LangChain, n8n)', 'Developer-built custom agents', '2-6 months DIY', 'Internal engineering', '$200-$2,000/mo + eng'],
+            ['Enterprise AI platforms (ServiceNow, Salesforce AI)', 'Within-platform automation', '3-6 months', 'Vendor + internal', '$50K-$250K+/yr'],
+            ['In-house build', 'Full control, complex requirements', '4-12 months', 'Dedicated AI team', '$200K-$600K/yr in eng'],
+          ],
+        },
+      },
+      {
+        heading: 'How to evaluate AI agent service vendors: 5 specific criteria',
+        bullets: [
+          'Ask to see a live system — not a demo, not a prototype. Any AI services firm with production experience can show you a working agent handling real data. If they show only slides or a sandboxed demo, they have not shipped to production.',
+          'Verify the integration depth — how many systems do they connect to, and are those connections live read-only access or just API mocks? Ask specifically: "What is your fastest integration time per system, and what credentials do you need?" If they cannot answer in minutes, they are not experienced.',
+          'Check the governance model upfront — what happens when the AI is wrong? Who reviews outputs before they reach customers? A production-ready agent has human-in-loop checkpoints, audit logs, and rollback procedures documented before deployment starts.',
+          'Understand the pricing model — per-seat, per-investigation, per-workflow, or retainer? Per-investigation pricing aligns incentives — you pay for value delivered. Per-seat pricing scales with headcount, not with the AI doing more work.',
+          'Ask for reference customers at your scale — a vendor who has only deployed for enterprise Fortune 500 companies has different experience than one who has deployed for 50-200 person B2B SaaS teams. Ask for 2-3 references in your company size and industry.',
+        ],
+      },
+      {
+        heading: 'Red flags that signal an unqualified AI agent vendor',
+        bullets: [
+          '"Time and materials" pricing with no fixed scope — AI agent projects with undefined scope on T&M pricing consistently come in at 3-5× the initial estimate. Require a fixed-price proposal with defined deliverables and success criteria.',
+          'No production examples in your industry — a general AI services firm that has never deployed for B2B SaaS, or has never integrated with your specific tech stack, will spend your money learning on your project.',
+          'Governance gaps — if the vendor does not proactively discuss read/write access controls, human approval workflows, and audit logging in the first conversation, they are not thinking about production safety.',
+          '"We use GPT" as the full technical answer — which model the agent uses is a minor implementation detail. What matters is how the agent connects to your systems, handles errors, manages context, and falls back gracefully. A vendor who leads with model choice is optimizing for the wrong variable.',
+          'No post-deployment SLA — the AI agent industry has normalized "ship and leave." A serious vendor commits to monitoring, alerting, and prompt updates as your product and ticket patterns evolve. Get this in the contract.',
+        ],
+      },
+      {
+        heading: 'AI agent services pricing: what you should actually pay',
+        table: {
+          headers: ['Scope', 'What is included', 'Fair price range', 'Watch out for'],
+          rows: [
+            ['Single workflow, 2-3 system integrations', 'Discovery, build, deployment, 3-month monitoring', '$15K-$35K', 'Anything under $10K lacks integration depth'],
+            ['Single workflow, 4-6 system integrations', 'Discovery, build, deployment, governance model, 6-month monitoring', '$35K-$75K', 'T&M contracts without scope caps'],
+            ['Multi-workflow suite', 'Multiple agents, shared infrastructure, training', '$75K-$200K', 'Per-seat licensing on AI systems'],
+            ['Investigation agent (Altor standard engagement)', 'ClickHouse + Linear + Stripe + GitHub integration, playbooks, training', '$25K-$45K', 'Vendors who have never done multi-system investigation'],
+          ],
+        },
+      },
+    ],
+
+    faq: [
+      { q: 'What are AI agent services?', a: 'AI agent services are professional services engagements where a specialized team builds, deploys, and maintains AI agents for specific business workflows. Unlike buying SaaS AI tools (which you configure yourself), AI agent services deliver a production-ready system connected to your live data systems. Engagements typically cover: discovery and scoping, system integrations, agent development, governance framework, deployment, and ongoing maintenance.' },
+      { q: 'Who needs AI agent services vs. AI SaaS tools?', a: 'AI SaaS tools (Zapier AI, Make AI, HubSpot AI) work well for simple workflows involving standard integrations and low complexity. AI agent services are needed when: your workflow requires 3+ system integrations, you need production deployment in under 8 weeks without internal engineering capacity, your workflow involves proprietary systems that standard tools cannot connect to, or you need guaranteed quality with human-in-loop governance from day one.' },
+      { q: 'How much do AI agent services cost?', a: 'AI agent services for a single production workflow cost $15,000-$75,000 depending on integration complexity (systems to connect), governance requirements (human approval workflows, audit logs), and timeline. A focused investigation agent for B2B support (4-6 system integrations, 3-week deployment) typically costs $25,000-$45,000. Ongoing maintenance runs $1,000-$5,000/month depending on ticket volume and prompt update frequency.' },
     ],
 
     seeAlso: [
@@ -1011,6 +1217,12 @@ export const blogPosts = {
       },
     ],
 
+    faq: [
+      { q: 'How much does it cost to build an AI agent?', a: 'Custom AI agent development costs $10,000-$75,000 for a single-workflow production deployment. Simple agents (1-2 system integrations, basic automation) run $10,000-$25,000. Standard agents (3-4 integrations, full workflow) run $25,000-$50,000. Complex agents (5-6 integrations, governance model, documentation) run $50,000-$75,000. Add $1,000-$5,000/month for ongoing maintenance. These figures are for US-based AI services firms; offshore vendors run 40-60% less with 2-3× longer timelines.' },
+      { q: 'What drives AI agent development costs up?', a: 'The five cost drivers: number of system integrations (each adds $3,000-$8,000 in integration work), data complexity (unstructured data like emails and PDFs costs more than structured databases), governance requirements (human approval workflows and audit logs add $5,000-$15,000), custom playbook development (more ticket types or workflow variants increase cost), and ongoing maintenance (agents need updates as your product evolves — $1,000-$5,000/month).' },
+      { q: 'What is the ROI of building an AI agent for support?', a: 'For a B2B team processing 200 technical tickets per week: 200 × 25 min × $75/hr = $62,500/month in investigation labor. An AI agent reducing investigation by 80% saves $50,000/month. A $45,000 build cost pays back in under 30 days. Annual savings: $600,000. Annual agent cost (maintenance included): $69,000. Net annual value: $531,000. This is the median ROI profile for investigation automation at mid-market B2B SaaS.' },
+    ],
+
     seeAlso: [
       { label: 'AI agent services: what they include and who needs them', href: '/blog/ai-agent-services-guide' },
       { label: 'See our pricing model', href: '/pricing' },
@@ -1088,6 +1300,12 @@ export const blogPosts = {
           'Misconception: AI agents are expensive and slow to deploy. Reality: a focused single-workflow agent can be in production in 2-3 weeks for $25K-$50K',
         ],
       },
+    ],
+
+    faq: [
+      { q: 'What is an AI agent?', a: 'An AI agent is software that perceives its environment, makes decisions, and takes actions to achieve defined goals — without continuous human instruction for each step. Unlike AI assistants (which respond to prompts), AI agents operate autonomously: they read a ticket, query the relevant systems, synthesize a diagnosis, and present findings — all in a single automated cycle. The key capability that distinguishes agents from assistants is tool use: the ability to call external APIs and query live data systems.' },
+      { q: 'What is the difference between an AI agent and an AI assistant?', a: 'An AI assistant (ChatGPT, Claude) responds to prompts — it works only with information you provide in the conversation. An AI agent uses tools — it can query databases, call APIs, read files, and take actions in external systems. For B2B support, the difference is critical: an assistant can help draft a response but cannot check why the customer\'s API is failing. An agent can query your ClickHouse, check Linear, and verify Stripe billing state to find the actual answer.' },
+      { q: 'How does an AI agent connect to production systems?', a: 'AI agents connect to production systems via read-only API access or direct database connections using service accounts with minimal required permissions. A properly configured investigation agent uses read-only credentials scoped to specific tables or API endpoints — it cannot write to your systems, cannot access unrelated data, and every query is logged for audit. The connection is established during the deployment phase and reviewed for security before going live.' },
     ],
 
     seeAlso: [
