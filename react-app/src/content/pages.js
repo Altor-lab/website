@@ -89,6 +89,12 @@ export const pages = {
       },
     ],
 
+    faq: [
+      { q: 'How does Altor integrate with AI infrastructure systems?', a: 'Altor connects to your ClickHouse logs, Linear bug tracker, Stripe billing API, and GitHub deployment history via read-only service accounts. It queries all four systems simultaneously when a ticket arrives and delivers a structured root-cause diagnosis in under 2 minutes — without requiring engineering involvement for routine investigations.' },
+      { q: 'What types of tickets does Altor handle for AI infrastructure companies?', a: 'Altor handles the investigative work for API routing failures, gateway latency spikes, token usage discrepancies, model fallback chain errors, and rate limit incidents. These are tickets that currently require engineers to pull logs manually — Altor automates that investigation step.' },
+      { q: 'How long does Altor take to deploy for an AI infrastructure team?', a: 'Altor deploys in 3 weeks: Week 1 is stack audit and integration planning, Week 2 is connecting to your live systems with read-only credentials, and Weeks 3-4 are playbook tuning and team training. Most AI infrastructure teams see measurable investigation time reduction in the first week of live operation.' },
+    ],
+
     relatedPages: [
       { label: 'How Portkey cut investigation time from 45 min to 2', path: '/customers/portkey' },
       { label: 'Altor vs. support platform AI', path: '/compare/altor-vs-support-platform-ai' },
@@ -193,6 +199,12 @@ export const pages = {
       },
     ],
 
+    faq: [
+      { q: 'How does Altor help API-first developer tool companies?', a: 'API-first developer tools generate tickets about authentication failures, SDK version mismatches, webhook delivery gaps, and rate limit collisions. Altor investigates these by querying your API logs, bug tracker, and deployment history simultaneously — giving L1 agents the same diagnostic data that L2 engineers currently pull manually.' },
+      { q: 'Does Altor work with developer-focused support stacks?', a: 'Yes. Altor integrates with GitHub for deployment and issue history, Linear for bug tracking, ClickHouse or Datadog for API metrics, and Stripe for billing. These are the standard data sources for API-first product tickets. Integration takes 2-4 hours per system via read-only service account.' },
+      { q: 'What is the typical ROI for API developer tool companies using Altor?', a: 'At Portkey (an AI API gateway), Altor reduced ticket investigation time from 45 minutes to 2 minutes per ticket. For a team processing 200 technical tickets per week, that is 140+ engineer-hours saved monthly. Most API developer tool teams see payback within 60-90 days of deployment.' },
+    ],
+
     relatedPages: [
       { label: 'Altor vs. doc chatbots', path: '/compare/altor-vs-doc-chatbots' },
       { label: 'Altor vs. AI copilots', path: '/compare/altor-vs-copilot-for-support' },
@@ -289,6 +301,12 @@ export const pages = {
       },
     ],
 
+    faq: [
+      { q: 'Does Altor integrate with Zendesk?', a: 'Yes. Altor reads ticket content via the Zendesk API and writes investigation results back as internal notes on the ticket — so agents see the diagnosis without leaving Zendesk. It connects to your backend systems (ClickHouse, Linear, Stripe, GitHub) separately and uses the ticket context to query the right data.' },
+      { q: 'How does Altor reduce Zendesk ticket resolution time?', a: 'The investigation phase — pulling logs, checking bug trackers, verifying billing state — accounts for 55-70% of resolution time on technical tickets. Altor automates this investigation and delivers the findings as a structured note in Zendesk before the agent opens the ticket. Agents move directly to response instead of spending 20-45 minutes investigating.' },
+      { q: 'Will Altor replace our Zendesk AI features?', a: 'No. Zendesk AI handles deflection, auto-tagging, and reply suggestions. Altor handles investigation — querying your production systems to diagnose what is actually broken. The two are complementary: Zendesk AI routes and deflects simple tickets, Altor investigates the technical ones that get through.' },
+    ],
+
     relatedPages: [
       { label: 'Webhook failure investigation', path: '/use-case/webhook-failure-investigation' },
       { label: 'Billing escalation debugging', path: '/use-case/billing-escalation-debugging' },
@@ -380,6 +398,12 @@ export const pages = {
           'Support engineers shifted from manual investigation to reviewing and sending AI-generated diagnoses',
         ],
       },
+    ],
+
+    faq: [
+      { q: 'How does Altor work alongside Intercom?', a: 'Altor integrates with Intercom via the Conversations API, reading incoming tickets and posting investigation results as internal notes. When a technical ticket arrives in Intercom, Altor queries your backend systems and delivers a diagnosis within 2 minutes — giving your support team the context to resolve without escalating.' },
+      { q: 'Can Altor reduce escalations from Intercom to engineering?', a: 'Yes. The majority of escalations from Intercom to engineering happen because L1 agents lack access to production data — they cannot diagnose what is broken. Altor provides that diagnosis automatically, enabling L1 agents to resolve 60-70% of previously escalated tickets without engineering involvement.' },
+      { q: 'What is the setup process for Intercom teams?', a: 'Setup takes 3 weeks. Week 1: Altor team audits your support workflow and identifies the highest-volume investigation patterns. Week 2: read-only integrations to your data systems go live. Weeks 3-4: playbooks are tuned to your specific ticket types, and your team is trained. No engineering work required from your side beyond approving read-only credentials.' },
     ],
 
     relatedPages: [
@@ -486,6 +510,12 @@ export const pages = {
       },
     ],
 
+    faq: [
+      { q: 'Does Altor integrate with Freshdesk?', a: 'Yes. Altor reads tickets from Freshdesk via the API and posts investigation results as private notes on the ticket. Agents see the diagnosis inline in their existing Freshdesk workflow. The integration is read-write on Freshdesk and read-only on your backend data systems.' },
+      { q: 'How does Altor improve Freshdesk resolution rates?', a: 'Freshdesk resolution rate is limited by investigation speed on technical tickets. Altor reduces investigation time from 20-45 minutes to under 2 minutes by querying your production systems automatically. For a team processing 300 tickets per week, this typically improves resolution rate by 15-25% and reduces average handle time by 35%.' },
+      { q: 'What data does Altor access when connected to Freshdesk?', a: 'Altor accesses Freshdesk ticket content and metadata (read-write to post notes). It separately accesses your backend systems with read-only credentials: ClickHouse or your observability stack for logs, Linear or Jira for bug history, Stripe for billing state, GitHub for recent deployments. All access is role-scoped and auditable.' },
+    ],
+
     relatedPages: [
       { label: 'Altor vs. doc chatbots', path: '/compare/altor-vs-doc-chatbots' },
       { label: 'Altor vs. support platform AI', path: '/compare/altor-vs-support-platform-ai' },
@@ -569,6 +599,12 @@ export const pages = {
           'Partial failures - compares delivery rates across event types to isolate the affected subset',
         ],
       },
+    ],
+
+    faq: [
+      { q: 'How does Altor handle fintech-specific support tickets?', a: 'Fintech tickets typically involve payment failures, transaction state mismatches, KYC verification errors, and compliance-related access issues. These require querying Stripe transaction history, your internal ledger, compliance logs, and customer identity records simultaneously. Altor automates this multi-system investigation and delivers the root cause in 2 minutes.' },
+      { q: 'Is Altor compliant with fintech data security requirements?', a: 'Altor operates with read-only service accounts, never writes to financial systems, and processes data in memory without persistent storage of customer financial data. All integrations are auditable and access can be revoked instantly. For SOC 2 environments, Altor provides audit logs of every system query made during investigation.' },
+      { q: 'What fintech systems does Altor integrate with?', a: 'Altor integrates with Stripe for payment and billing data, Plaid for bank connection status, your internal transaction database via ClickHouse or PostgreSQL, Linear or Jira for engineering issue tracking, and GitHub for deployment history. Custom integrations to proprietary fintech ledgers or compliance systems are scoped in Week 1 of deployment.' },
     ],
 
     relatedPages: [
@@ -657,6 +693,12 @@ export const pages = {
       },
     ],
 
+    faq: [
+      { q: 'What types of developer tool tickets does Altor handle?', a: 'Developer tool tickets cluster around SDK behavior, CLI errors, plugin compatibility, API authentication, and documentation gaps. The investigation-heavy ones — where the agent needs to check which SDK version introduced a regression, or whether a bug has been filed, or what changed in the last deploy — are where Altor reduces resolution time by 70-80%.' },
+      { q: 'How does Altor fit into a developer-focused support workflow?', a: 'Developer customers expect fast, technically accurate responses. Altor gives L1 agents the same diagnostic information that engineers have — version history, recent commits, open issues, API error logs — so they can respond with specifics rather than asking clarifying questions that frustrate technical users.' },
+      { q: 'Does Altor require engineering resources to deploy for dev tool companies?', a: 'Altor requires 2-4 hours of engineering time per integration to approve read-only service account credentials. That is the full engineering commitment. The Altor team handles all integration work, playbook configuration, and testing. Most devtools companies are live within 3 weeks with minimal internal resource investment.' },
+    ],
+
     relatedPages: [
       { label: 'API error investigation', path: '/use-case/api-error-investigation' },
       { label: 'Webhook failure investigation', path: '/use-case/webhook-failure-investigation' },
@@ -737,6 +779,12 @@ export const pages = {
           'A Series B SaaS company in Austin reduced MTTR by 67% after standardizing this investigation workflow for US support coverage.',
         ],
       },
+    ],
+
+    faq: [
+      { q: 'How does Altor integrate with AI infrastructure systems?', a: 'Altor connects to your ClickHouse logs, Linear bug tracker, Stripe billing API, and GitHub deployment history via read-only service accounts. It queries all four systems simultaneously when a ticket arrives and delivers a structured root-cause diagnosis in under 2 minutes — without requiring engineering involvement for routine investigations.' },
+      { q: 'What types of tickets does Altor handle for AI infrastructure companies?', a: 'Altor handles the investigative work for API routing failures, gateway latency spikes, token usage discrepancies, model fallback chain errors, and rate limit incidents. These are tickets that currently require engineers to pull logs manually — Altor automates that investigation step.' },
+      { q: 'How long does Altor take to deploy for an AI infrastructure team?', a: 'Altor deploys in 3 weeks: Week 1 is stack audit and integration planning, Week 2 is connecting to your live systems with read-only credentials, and Weeks 3-4 are playbook tuning and team training. Most AI infrastructure teams see measurable investigation time reduction in the first week of live operation.' },
     ],
 
     relatedPages: [
@@ -823,6 +871,12 @@ export const pages = {
       },
     ],
 
+    faq: [
+      { q: 'How does Altor help API-first developer tool companies?', a: 'API-first developer tools generate tickets about authentication failures, SDK version mismatches, webhook delivery gaps, and rate limit collisions. Altor investigates these by querying your API logs, bug tracker, and deployment history simultaneously — giving L1 agents the same diagnostic data that L2 engineers currently pull manually.' },
+      { q: 'Does Altor work with developer-focused support stacks?', a: 'Yes. Altor integrates with GitHub for deployment and issue history, Linear for bug tracking, ClickHouse or Datadog for API metrics, and Stripe for billing. These are the standard data sources for API-first product tickets. Integration takes 2-4 hours per system via read-only service account.' },
+      { q: 'What is the typical ROI for API developer tool companies using Altor?', a: 'At Portkey (an AI API gateway), Altor reduced ticket investigation time from 45 minutes to 2 minutes per ticket. For a team processing 200 technical tickets per week, that is 140+ engineer-hours saved monthly. Most API developer tool teams see payback within 60-90 days of deployment.' },
+    ],
+
     relatedPages: [
       { label: 'Altor for AI infrastructure companies', path: '/for/ai-infrastructure-companies' },
       { label: 'Webhook failure investigation', path: '/use-case/webhook-failure-investigation' },
@@ -900,6 +954,12 @@ export const pages = {
           'Altor plugs into Zendesk as an investigation layer. Tickets that need diagnosis get investigated automatically. Your Zendesk workflows, macros, SLAs, and team structure stay exactly the same.',
         ],
       },
+    ],
+
+    faq: [
+      { q: 'Does Altor integrate with Zendesk?', a: 'Yes. Altor reads ticket content via the Zendesk API and writes investigation results back as internal notes on the ticket — so agents see the diagnosis without leaving Zendesk. It connects to your backend systems (ClickHouse, Linear, Stripe, GitHub) separately and uses the ticket context to query the right data.' },
+      { q: 'How does Altor reduce Zendesk ticket resolution time?', a: 'The investigation phase — pulling logs, checking bug trackers, verifying billing state — accounts for 55-70% of resolution time on technical tickets. Altor automates this investigation and delivers the findings as a structured note in Zendesk before the agent opens the ticket. Agents move directly to response instead of spending 20-45 minutes investigating.' },
+      { q: 'Will Altor replace our Zendesk AI features?', a: 'No. Zendesk AI handles deflection, auto-tagging, and reply suggestions. Altor handles investigation — querying your production systems to diagnose what is actually broken. The two are complementary: Zendesk AI routes and deflects simple tickets, Altor investigates the technical ones that get through.' },
     ],
 
     relatedPages: [
@@ -981,6 +1041,12 @@ export const pages = {
       },
     ],
 
+    faq: [
+      { q: 'How does Altor work alongside Intercom?', a: 'Altor integrates with Intercom via the Conversations API, reading incoming tickets and posting investigation results as internal notes. When a technical ticket arrives in Intercom, Altor queries your backend systems and delivers a diagnosis within 2 minutes — giving your support team the context to resolve without escalating.' },
+      { q: 'Can Altor reduce escalations from Intercom to engineering?', a: 'Yes. The majority of escalations from Intercom to engineering happen because L1 agents lack access to production data — they cannot diagnose what is broken. Altor provides that diagnosis automatically, enabling L1 agents to resolve 60-70% of previously escalated tickets without engineering involvement.' },
+      { q: 'What is the setup process for Intercom teams?', a: 'Setup takes 3 weeks. Week 1: Altor team audits your support workflow and identifies the highest-volume investigation patterns. Week 2: read-only integrations to your data systems go live. Weeks 3-4: playbooks are tuned to your specific ticket types, and your team is trained. No engineering work required from your side beyond approving read-only credentials.' },
+    ],
+
     relatedPages: [
       { label: 'Altor vs. doc chatbots', path: '/compare/altor-vs-doc-chatbots' },
       { label: 'Webhook failure investigation', path: '/use-case/webhook-failure-investigation' },
@@ -1058,6 +1124,12 @@ export const pages = {
           'Altor delivers structured diagnoses directly into your Freshdesk workflow. Your agents review the root cause and respond instead of spending 30+ minutes checking logs and bug trackers.',
         ],
       },
+    ],
+
+    faq: [
+      { q: 'Does Altor integrate with Freshdesk?', a: 'Yes. Altor reads tickets from Freshdesk via the API and posts investigation results as private notes on the ticket. Agents see the diagnosis inline in their existing Freshdesk workflow. The integration is read-write on Freshdesk and read-only on your backend data systems.' },
+      { q: 'How does Altor improve Freshdesk resolution rates?', a: 'Freshdesk resolution rate is limited by investigation speed on technical tickets. Altor reduces investigation time from 20-45 minutes to under 2 minutes by querying your production systems automatically. For a team processing 300 tickets per week, this typically improves resolution rate by 15-25% and reduces average handle time by 35%.' },
+      { q: 'What data does Altor access when connected to Freshdesk?', a: 'Altor accesses Freshdesk ticket content and metadata (read-write to post notes). It separately accesses your backend systems with read-only credentials: ClickHouse or your observability stack for logs, Linear or Jira for bug history, Stripe for billing state, GitHub for recent deployments. All access is role-scoped and auditable.' },
     ],
 
     relatedPages: [
@@ -1139,6 +1211,12 @@ export const pages = {
       },
     ],
 
+    faq: [
+      { q: 'How does Altor handle fintech-specific support tickets?', a: 'Fintech tickets typically involve payment failures, transaction state mismatches, KYC verification errors, and compliance-related access issues. These require querying Stripe transaction history, your internal ledger, compliance logs, and customer identity records simultaneously. Altor automates this multi-system investigation and delivers the root cause in 2 minutes.' },
+      { q: 'Is Altor compliant with fintech data security requirements?', a: 'Altor operates with read-only service accounts, never writes to financial systems, and processes data in memory without persistent storage of customer financial data. All integrations are auditable and access can be revoked instantly. For SOC 2 environments, Altor provides audit logs of every system query made during investigation.' },
+      { q: 'What fintech systems does Altor integrate with?', a: 'Altor integrates with Stripe for payment and billing data, Plaid for bank connection status, your internal transaction database via ClickHouse or PostgreSQL, Linear or Jira for engineering issue tracking, and GitHub for deployment history. Custom integrations to proprietary fintech ledgers or compliance systems are scoped in Week 1 of deployment.' },
+    ],
+
     relatedPages: [
       { label: 'Billing escalation debugging', path: '/use-case/billing-escalation-debugging' },
       { label: 'Altor for API-first developer tools', path: '/for/api-first-developer-tools' },
@@ -1216,6 +1294,12 @@ export const pages = {
           'Your support team is already technical. The bottleneck isn\'t skill - it\'s time. Twenty minutes per ticket checking the same systems in the same order. Altor runs that workflow in 2 minutes.',
         ],
       },
+    ],
+
+    faq: [
+      { q: 'What types of developer tool tickets does Altor handle?', a: 'Developer tool tickets cluster around SDK behavior, CLI errors, plugin compatibility, API authentication, and documentation gaps. The investigation-heavy ones — where the agent needs to check which SDK version introduced a regression, or whether a bug has been filed, or what changed in the last deploy — are where Altor reduces resolution time by 70-80%.' },
+      { q: 'How does Altor fit into a developer-focused support workflow?', a: 'Developer customers expect fast, technically accurate responses. Altor gives L1 agents the same diagnostic information that engineers have — version history, recent commits, open issues, API error logs — so they can respond with specifics rather than asking clarifying questions that frustrate technical users.' },
+      { q: 'Does Altor require engineering resources to deploy for dev tool companies?', a: 'Altor requires 2-4 hours of engineering time per integration to approve read-only service account credentials. That is the full engineering commitment. The Altor team handles all integration work, playbook configuration, and testing. Most devtools companies are live within 3 weeks with minimal internal resource investment.' },
     ],
 
     relatedPages: [
@@ -1297,6 +1381,12 @@ export const pages = {
       },
     ],
 
+    faq: [
+      { q: 'How does Altor diagnose data infrastructure tickets?', a: 'Data infrastructure tickets — pipeline failures, slow queries, connector errors — require querying your query engine metrics, connector logs, job scheduler, and sometimes the customer\'s source and destination system configs. Altor connects to ClickHouse, dbt, Airflow or your equivalent, and delivers a diagnosis that includes which layer failed and what specifically triggered the failure.' },
+      { q: 'What data infrastructure systems does Altor integrate with?', a: 'Altor integrates with ClickHouse for query metrics and error logs, dbt Cloud or Core for transformation run history, Airflow or Prefect for pipeline job status, Fivetran or Airbyte for connector sync status, and GitHub for recent code changes. Custom integration to proprietary data systems is scoped during onboarding.' },
+      { q: 'How does Altor help data infrastructure teams meet SLAs?', a: 'Most data infrastructure SLA breaches happen because investigation takes longer than the SLA window allows. A P1 pipeline failure with a 4-hour resolution SLA consumes 45-90 minutes just on diagnosis. Altor reduces that to under 2 minutes, giving teams 3+ hours for actual remediation and communication within the same SLA window.' },
+    ],
+
     relatedPages: [
       { label: 'Altor for ClickHouse teams', path: '/for/clickhouse-teams' },
       { label: 'Altor for AI infrastructure', path: '/for/ai-infrastructure-companies' },
@@ -1374,6 +1464,12 @@ export const pages = {
           'Altor investigates merchant tickets by pulling payment logs, inventory sync history, and order system data simultaneously - delivering root causes before the merchant\'s next message.',
         ],
       },
+    ],
+
+    faq: [
+      { q: 'What ecommerce support tickets does Altor handle?', a: 'Ecommerce platform tickets cluster around order processing failures, inventory sync errors, payment gateway issues, checkout abandonment bugs, and third-party app conflicts. These require querying your order management system, Stripe, inventory database, and app integration logs simultaneously — exactly what Altor automates.' },
+      { q: 'How does Altor integrate with ecommerce platforms?', a: 'Altor connects to your order management database or Shopify Admin API, Stripe for payment data, your inventory system, and your error monitoring stack (Datadog, Sentry) for application errors. Setup takes 3 weeks and requires read-only credentials to each system — no code changes to your ecommerce platform.' },
+      { q: 'What ROI do ecommerce companies see from Altor?', a: 'Ecommerce support teams handling 500+ tickets per week typically see 30-40% reduction in average handle time on technical tickets. At $35 per ticket in support cost, a 35% reduction on 200 technical tickets per week generates $7,000+ in weekly savings — a payback period of 8-12 weeks on a typical Altor engagement.' },
     ],
 
     relatedPages: [
@@ -1455,6 +1551,12 @@ export const pages = {
       },
     ],
 
+    faq: [
+      { q: 'How does Altor help observability company support teams?', a: 'Observability platform tickets often involve instrumentation failures, missing traces, alert misconfiguration, and integration setup errors. These require querying your ingestion pipeline status, customer agent configuration, and alert rule evaluation logs. Altor investigates these automatically, giving L1 agents diagnostic context that currently requires L2 or engineering to pull.' },
+      { q: 'Does Altor work with observability-specific data systems?', a: 'Yes. Altor integrates natively with ClickHouse (common backend for observability platforms), your ingestion pipeline metrics, GitHub for customer-reported configuration issues, and Linear or Jira for known bugs. If your platform uses a custom backend, Altor can integrate via your internal API or direct database read access.' },
+      { q: 'How does Altor complement an observability platform\'s own monitoring?', a: 'Your observability platform monitors your infrastructure. Altor monitors your support workflow. When a customer reports a problem, Altor queries your backend systems to determine whether the issue is a customer configuration problem, a platform bug, or an infrastructure incident — the same classification an L2 engineer would make, automated.' },
+    ],
+
     relatedPages: [
       { label: 'Altor for data infrastructure', path: '/for/data-infrastructure-companies' },
       { label: 'Altor for Datadog teams', path: '/for/datadog-teams' },
@@ -1534,6 +1636,12 @@ export const pages = {
       },
     ],
 
+    faq: [
+      { q: 'How does Altor specifically help ClickHouse-based support teams?', a: 'ClickHouse tickets involve slow queries, schema issues, replication lag, disk pressure, and query memory limits. Altor connects directly to your ClickHouse cluster with read-only credentials and diagnoses these issues by querying system.query_log, system.merges, system.replicas, and system.parts — giving agents a specific diagnosis instead of asking customers to run EXPLAIN queries.' },
+      { q: 'What ClickHouse system tables does Altor query during investigation?', a: 'Altor queries system.query_log for recent query performance, system.merges for background merge status, system.replicas for replication health, system.parts for storage pressure, and system.errors for error history. All queries use read-only service accounts and are logged for audit purposes.' },
+      { q: 'Can Altor help ClickHouse teams meet their enterprise SLAs?', a: 'Yes. ClickHouse enterprise contracts typically require P1 resolution within 4 hours. The investigation phase — pulling query logs, checking replication status, diagnosing merge storms — takes 45-90 minutes manually. Altor reduces this to under 2 minutes, giving teams 3+ hours within the SLA window for remediation and customer communication.' },
+    ],
+
     relatedPages: [
       { label: 'Altor for AI infrastructure', path: '/for/ai-infrastructure-companies' },
       { label: 'API error investigation', path: '/use-case/api-error-investigation' },
@@ -1611,6 +1719,12 @@ export const pages = {
           'Altor queries both simultaneously. It pulls the Stripe invoice, compares line items against actual usage in your database, identifies discrepancies, and delivers a resolution with evidence - all before your agent finishes reading the ticket.',
         ],
       },
+    ],
+
+    faq: [
+      { q: 'How does Altor help Stripe billing support teams?', a: 'Billing tickets involve payment failures, subscription state mismatches, invoice disputes, and webhook delivery gaps. Altor queries Stripe event history, your internal billing database, and your customer account records simultaneously — delivering a diagnosis that includes the specific Stripe error code, the customer\'s subscription state, and whether a webhook was missed.' },
+      { q: 'Does Altor have direct Stripe integration?', a: 'Yes. Altor integrates with Stripe via the Stripe API using a read-only restricted key scoped to customers, subscriptions, invoices, payment intents, and events. It does not have write access to Stripe — it cannot charge cards, modify subscriptions, or issue refunds. All queries are logged and auditable.' },
+      { q: 'What billing ticket types does Altor reduce investigation time on?', a: 'Altor reduces investigation time on: payment failure diagnosis (querying Stripe for decline code and payment method state), subscription sync errors (comparing your database state to Stripe subscription objects), invoice disputes (pulling the full event timeline for a subscription), and webhook delivery failures (querying Stripe webhook attempt logs).' },
     ],
 
     relatedPages: [

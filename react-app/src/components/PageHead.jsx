@@ -68,6 +68,10 @@ const PageHead = ({
         dateModified: dateModified || datePublished,
         author: { '@type': 'Organization', name: 'Altor', url: BASE_URL },
         publisher,
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.blog-opening', 'h2', '.callout-text'],
+        },
       })
     } else if (schemaType === 'WebPage') {
       graph.push({

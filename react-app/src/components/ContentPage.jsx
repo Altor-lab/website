@@ -199,6 +199,14 @@ const ContentPage = ({ page }) => {
   // Extract category from slug for breadcrumb (e.g., /compare/foo → "Compare")
   const slugParts = slug.split('/').filter(Boolean)
   const category = slugParts.length > 1 ? CATEGORY_LABELS[slugParts[0]] : null
+  const faqSchema = page.faq && page.faq.length > 0 ? {
+    '@type': 'FAQPage',
+    mainEntity: page.faq.map(({ q, a }) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+  } : null
 
   return (
     <>
@@ -208,6 +216,7 @@ const ContentPage = ({ page }) => {
         slug={slug}
         datePublished={datePublished}
         dateModified={dateModified}
+        extraSchema={faqSchema ? [faqSchema] : undefined}
       />
 
       {/* Breadcrumb */}
