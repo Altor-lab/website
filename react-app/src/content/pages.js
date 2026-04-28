@@ -398,8 +398,8 @@ export const pages = {
 
   compareCopilotSupport: {
     slug: '/compare/altor-vs-copilot-for-support',
-    title: 'Altor vs. AI Copilots for Support for US B2B Teams - Investigation vs. Drafting',
-    description: 'AI copilots help agents write faster replies. Altor investigates the actual problem for US B2B teams - querying ClickHouse, Linear, Stripe, and GitHub to produce a root-cause diagnosis before the reply gets written.',
+    title: 'Altor vs. AI Copilot for Support — Which Actually Resolves B2B Tickets? | Altor',
+    description: 'AI copilots draft faster replies. Altor investigates the actual problem — querying ClickHouse, Linear, Stripe, and GitHub in 2 minutes. See the side-by-side comparison for US B2B support teams.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
@@ -673,8 +673,8 @@ export const pages = {
 
   forAIInfra: {
     slug: '/for/ai-infrastructure-companies',
-    title: 'AI Infrastructure Support in the United States: Diagnose Gateway Tickets in 2 Minutes',
-    description: 'If your US customers open tickets about routing failures, fallback chains, or token mismatches, generic support AI will not cut it. See how AI infrastructure teams investigate the issue before it escalates.',
+    title: 'AI Support for AI Infrastructure Companies — Gateway & Routing Ticket Investigation | Altor',
+    description: 'AI gateway and routing tickets require live data from API logs, configs, and billing. Altor investigates across all systems in 2 minutes — built for US AI infrastructure teams.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
 
@@ -1234,8 +1234,8 @@ export const pages = {
 
   forDataInfra: {
     slug: '/for/data-infrastructure-companies',
-    title: 'Altor for Data Infrastructure: Diagnose Pipeline and Query Tickets Fast',
-    description: 'Data infrastructure tickets involve failed pipelines, query performance, and connector issues. Altor investigates across your systems in 2 minutes.',
+    title: 'AI Support for Data Infrastructure Companies — Diagnose Pipeline Failures in 2 Min | Altor',
+    description: 'Pipeline failures, slow queries, and connector errors require multi-system investigation. Altor queries your systems automatically and delivers root-cause diagnosis in 2 minutes.',
     datePublished: '2026-04-01',
     dateModified: '2026-04-01',
 

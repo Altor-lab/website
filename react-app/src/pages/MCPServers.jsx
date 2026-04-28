@@ -134,7 +134,7 @@ export default function MCPServers() {
   return (
     <>
       <PageHead
-        title="MCP Server Directory & Registry — List of MCP Servers | Altor"
+        title={`MCP Server Directory — ${meta ? meta.total_servers.toLocaleString() + '+' : '4,000+'} MCP Servers Listed | Altor`}
         description={`Daily updated MCP directory and MCP server registry with ${meta ? meta.total_servers.toLocaleString() + '+' : '4,000+'} servers. Browse the full list of MCP servers from the official registry, GitHub, and the community.`}
         slug="/mcp-servers"
         datePublished="2026-04-16"
@@ -261,6 +261,23 @@ export default function MCPServers() {
               {search ? ` matching "${search}"` : ''}
               {totalPages > 1 ? ` · page ${page} of ${totalPages}` : ''}
             </p>
+
+            {activeCategory === 'All' && !search && page === 1 && (
+              <div className="mb-8 rounded-xl border border-accent-muted/40 bg-accent-muted/5 p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <p className="text-sm font-semibold text-fg-default">Building with MCP in production?</p>
+                  <p className="text-xs text-fg-muted mt-0.5">Altor deploys MCP-connected AI agents into live systems in 3 weeks.</p>
+                </div>
+                <a
+                  href="https://calendly.com/founders-altorlab/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="shrink-0 px-4 py-2 rounded-lg bg-accent-default text-white text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
+                >
+                  Book a call →
+                </a>
+              </div>
+            )}
 
             {servers.length === 0 ? (
               <p className="text-fg-muted text-sm">No servers match your filters.</p>

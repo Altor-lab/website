@@ -378,8 +378,8 @@ export const blogPosts = {
 
   reduceEscalations: {
     slug: '/blog/reduce-support-escalations',
-    title: 'Why 70% of Support Escalations Are Preventable - And How to Cut Them',
-    description: 'Most escalations happen because agents lack system context, not training. This guide shows how B2B support teams reduce avoidable handoffs by automating investigation before engineering gets pulled in.',
+    title: 'How to Reduce Support Escalations: The Complete Guide for B2B Teams (2026)',
+    description: 'Most B2B support escalations are preventable. This guide shows exactly how to reduce escalation rates by 70% by automating ticket investigation — with real data from Portkey.',
     datePublished: '2026-03-03',
     dateModified: '2026-03-03',
     readTime: '6 min read',
@@ -978,6 +978,36 @@ export const blogPosts = {
           'No governance model: if they do not discuss read/write permissions and human approval on day one, your data is at risk',
           'Pricing based on seats, not outcomes: AI agents should be priced on usage or outcomes, not user count',
         ],
+      },
+      {
+        heading: 'AI agent cost by use case: real 2026 benchmarks',
+        table: {
+          headers: ['Use Case', 'Scope', 'Build Cost', 'Monthly Ops Cost'],
+          rows: [
+            ['Support ticket investigation', 'Read-only, 4–6 systems', '$15K–$35K', '$2K–$5K/mo'],
+            ['Invoice processing automation', 'Read + write, 2–3 systems', '$20K–$45K', '$3K–$6K/mo'],
+            ['Inventory management', 'Read + write, 3–5 systems', '$25K–$50K', '$4K–$8K/mo'],
+            ['Customer onboarding automation', 'Multi-system workflow', '$30K–$60K', '$5K–$10K/mo'],
+            ['Internal IT helpdesk agent', 'Read-only, 3–4 systems', '$12K–$28K', '$1.5K–$4K/mo'],
+          ],
+        },
+      },
+      {
+        heading: 'Hidden costs most AI agent vendors don\'t quote',
+        paragraphs: [
+          'The $10K–$75K range covers build cost. But three cost categories consistently surprise buyers: system integration fees (connecting to ClickHouse, Stripe, or a proprietary data warehouse adds $3K–$8K per integration), model inference costs ($500–$3,000/month depending on call volume and model tier), and ongoing maintenance ($1K–$3K/month for prompt updates, schema changes, and new ticket patterns).',
+          'For US B2B companies processing 400+ support tickets/week, the total cost of ownership over 12 months typically runs $40K–$120K. The break-even calculation: if each manual investigation costs $25 in engineer time (20–45 min at $75/hr loaded), 400 tickets/week = $10K/week in investigation cost. An AI system that handles 80% of investigations pays back in 3–6 months.',
+        ],
+      },
+      {
+        heading: 'Build vs. buy: the decision framework',
+        paragraphs: [
+          'Most AI agent vendors sell software you configure yourself. Building custom means a services engagement where a team deploys and maintains the system. The cost difference is real: SaaS AI tools run $500–$2,500/month but require 3–6 months of internal engineering to integrate properly. Custom builds cost $15K–$75K upfront but go to production in 3 weeks with zero internal engineering burden.',
+        ],
+        callout: {
+          title: 'Rule of thumb for US B2B teams',
+          text: 'If your workflow touches more than 2 proprietary systems or requires live data (not document search), custom beats SaaS. The integration work that would take your team 3 months takes a specialized AI services firm 3 weeks.',
+        },
       },
     ],
 

@@ -696,8 +696,8 @@
       "workflow_slug": "invoice-processing",
       "tool_slug": "chatgpt",
       "slug": "/automate/invoice-processing/with/chatgpt",
-      "title": "How to Automate Invoice Processing with ChatGPT / GPT-4o (OpenAI)",
-      "description": "Step-by-step guide to automating invoice processing using ChatGPT / GPT-4o (OpenAI). Invoice cycle time drops from days to minutes. Discrepancies caught before payment. Zero manual data entry.",
+      "title": "Automate Invoice Processing with ChatGPT \u2014 Step-by-Step Guide (2026)",
+      "description": "How to automate invoice processing with ChatGPT (GPT-4o). Invoice cycle time from days to minutes \u2014 with cost comparison, common failure modes, and integration architecture for QuickBooks, NetSuite, and Xero.",
       "workflow": {
         "label": "Invoice Processing",
         "description": "Extract line items from PDF invoices, match against POs, flag discrepancies, and push to accounting automatically.",
@@ -740,6 +740,62 @@
         "claude",
         "n8n",
         "zapier"
+      ],
+      "sections": [
+        {
+          "heading": "Invoice automation cost: manual vs ChatGPT \u2014 2026 benchmarks",
+          "table": {
+            "headers": [
+              "Method",
+              "Cost per Invoice",
+              "Processing Time",
+              "Error Rate"
+            ],
+            "rows": [
+              [
+                "Manual AP team",
+                "$8\u2013$15",
+                "3\u20135 days",
+                "3\u20135%"
+              ],
+              [
+                "Basic OCR + rules",
+                "$2\u2013$5",
+                "1\u20132 days",
+                "5\u20138% (structured only)"
+              ],
+              [
+                "ChatGPT (GPT-4o)",
+                "$0.10\u2013$0.50",
+                "30\u201390 seconds",
+                "<1% with validation layer"
+              ],
+              [
+                "Altor production deployment",
+                "$0.20\u2013$0.60 all-in",
+                "60\u2013120 seconds",
+                "<0.5% with human-in-loop exceptions"
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "Common failure modes and how to handle them",
+          "paragraphs": [
+            "ChatGPT invoice automation fails in four predictable ways. First, hallucinated totals \u2014 the model miscalculates line item sums on invoices with complex discount structures. Fix: always re-compute totals programmatically from extracted line items; never trust the LLM's arithmetic.",
+            "Second, missing line items on multi-page PDFs \u2014 GPT-4o's context window handles most invoices but can miss items on page 3+ when the document is poorly formatted. Fix: chunk multi-page invoices by page and merge results before validation.",
+            "Third, currency handling errors on international invoices \u2014 USD, EUR, GBP amounts get confused when the invoice uses ambiguous symbols. Fix: extract currency code explicitly as a separate field (\"USD\", \"EUR\"), never infer from symbol alone.",
+            "Fourth, PO matching failures when vendor names vary \u2014 \"Acme Corp\", \"Acme Corporation\", \"ACME\" all fail exact-match PO lookup. Fix: fuzzy match vendor names against your vendor master using a similarity threshold of 0.85."
+          ]
+        },
+        {
+          "heading": "Integration architecture: connecting ChatGPT to your accounting system",
+          "paragraphs": [
+            "The production architecture has four layers: (1) ingestion \u2014 email parser or upload portal captures the PDF/image; (2) extraction \u2014 GPT-4o extracts structured JSON (vendor, amount, line items, due date, PO number, currency); (3) validation \u2014 rules engine checks totals, matches PO, flags exceptions; (4) posting \u2014 approved invoices write to QuickBooks via QBO API, NetSuite via SuiteScript, or Xero via Xero API.",
+            "For QuickBooks Online: use the QBO API endpoint POST /v3/company/{companyId}/bill with the extracted invoice data mapped to the Bill object schema. For NetSuite: use the SuiteScript 2.0 N/record module to create a VendorBill record. For Xero: use the POST /api.xro/2.0/Invoices endpoint.",
+            "The exception queue is the most important piece. Any invoice where confidence < 0.90, amount > $5,000, or PO match fails gets routed to a human reviewer in Slack or email before posting. This keeps your error rate below 0.5% in production."
+          ]
+        }
       ]
     },
     {
@@ -3734,8 +3790,8 @@
       "workflow_slug": "inventory-management",
       "tool_slug": "claude",
       "slug": "/automate/inventory-management/with/claude",
-      "title": "How to Automate Inventory Management with Claude (Anthropic)",
-      "description": "Step-by-step guide to automating inventory management using Claude (Anthropic). Reorder happens automatically before stockout. POs generated and sent for approval without manual intervention.",
+      "title": "Automate Inventory Management with Claude AI \u2014 Step-by-Step Guide (2026)",
+      "description": "How to build an inventory management automation using Claude (Anthropic). Stock monitoring, reorder prediction, and supply chain alerts \u2014 step-by-step implementation guide with real examples.",
       "workflow": {
         "label": "Inventory Management",
         "description": "Monitor stock levels, predict reorder points, generate POs, and alert on supply chain anomalies.",

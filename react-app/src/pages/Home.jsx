@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import TrustBar from '../components/TrustBar'
 import { cn } from '../lib/utils'
+import PageHead from '../components/PageHead'
 
 const ease = [0.25, 0.4, 0.25, 1]
 const up = {
@@ -78,6 +79,12 @@ export default function Home() {
 
   return (
     <>
+      <PageHead
+        title="Altor — AI Systems Built and Deployed in 3 Weeks | US-Based"
+        description="We identify your highest-cost manual workflow, build the AI investigation system, and deploy it to production in 3 weeks. Ex-Microsoft AI Research. US-based."
+        slug="/"
+        schemaType="WebPage"
+      />
       {/* ━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-accent/[0.03] to-transparent pointer-events-none" />
