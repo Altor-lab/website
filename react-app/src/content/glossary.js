@@ -62,13 +62,21 @@ export const glossaryTerms = {
   'tiered-support-model': {
     term: 'Tiered Support Model (L1/L2/L3)',
     slug: '/glossary/tiered-support-model',
-    definition: 'A tiered support model organizes support teams into levels: L1 (frontline agents handling initial contact), L2 (senior agents with deeper technical knowledge), and L3 (engineering teams handling the most complex issues).',
-    context: 'The tiered model was designed for consumer support where L1 resolves most tickets with scripts. In B2B technical support, the model breaks down because 60-80% of tickets require investigation that L1 cannot perform, creating chronic escalation.',
+    definition: 'A tiered support model organizes support teams into levels: L1 (frontline agents handling initial contact), L2 (senior agents with deeper technical knowledge), and L3 (engineering teams handling the most complex issues). Each tier has defined scope and escalation paths to the tier above.',
+    context: 'The tiered model was designed for consumer support in the 1990s where L1 resolved most tickets with scripts. In B2B technical support, the model breaks down because 60–80% of tickets require investigation that L1 agents cannot perform — they lack access to production databases, API logs, and billing systems. The result: chronic escalation rates of 25–40% for technical B2B teams, with each escalation adding 45–90 minutes to resolution time and pulling engineers away from product work. Companies like Portkey found that their L1 agents were escalating not because they lacked knowledge, but because they had no way to query ClickHouse or Linear to diagnose the issue.',
     howAltorHelps: 'Altor eliminates the investigation bottleneck that forces escalation. L1 agents receive automated diagnoses, enabling them to resolve tickets that previously required L2 or L3.',
+    stats: [
+      { value: '25–40%', label: 'typical escalation rate for B2B technical support teams using tiered models' },
+      { value: '45–90 min', label: 'added to resolution time per escalated ticket' },
+      { value: '60–80%', label: 'of B2B tickets that require investigation L1 cannot perform manually' },
+      { value: '3×', label: 'higher cost per ticket when escalated to L2/L3 vs. resolved at L1' },
+    ],
     relatedTerms: ['support-escalation-rate', 'ticket-investigation', 'first-response-time'],
     faqs: [
-      { q: 'Does the tiered support model work for B2B technical support?', a: 'Poorly. L1 agents cannot investigate production issues, so 30-40% of tickets get escalated regardless of agent skill. The bottleneck is data access, not knowledge.' },
+      { q: 'What is L1, L2, and L3 support?', a: 'L1 (Tier 1) handles initial contact and resolves simple issues using scripts and knowledge bases. L2 (Tier 2) handles escalations requiring deeper technical knowledge or system access. L3 (Tier 3) is usually engineering — handling bugs, outages, and issues requiring code-level investigation. In B2B SaaS, the boundary between L2 and L3 is often where 70% of resolution time is lost.' },
+      { q: 'Does the tiered support model work for B2B technical support?', a: 'Poorly. L1 agents cannot investigate production issues, so 30–40% of tickets get escalated regardless of agent skill. The bottleneck is data access, not knowledge.' },
       { q: 'What is the alternative to tiered support?', a: 'Swarming (all agents handle all tickets) combined with investigation automation. When every agent has automated access to diagnostic data, the tier distinction becomes unnecessary.' },
+      { q: 'How do you reduce L2/L3 escalations in a tiered model?', a: 'The highest-leverage fix is giving L1 agents automated access to the same data L2 engineers use. When L1 can query your ClickHouse, Stripe, and GitHub automatically, they resolve 60–70% of tickets previously requiring escalation — without changing headcount or training programs.' },
     ],
   },
   'customer-satisfaction-score': {
@@ -134,13 +142,22 @@ export const glossaryTerms = {
   'sla-service-level-agreement': {
     term: 'Service Level Agreement (SLA)',
     slug: '/glossary/sla-service-level-agreement',
-    definition: 'An SLA defines the committed response and resolution times for different ticket priorities. SLA breaches result in service credits, penalty fees, or contract termination in B2B agreements.',
-    context: 'Enterprise B2B SLAs typically require P1 response within 15-30 minutes and resolution within 4 hours. SLA compliance directly affects revenue - a single enterprise SLA breach can cost $10,000-100,000 in credits.',
+    definition: 'A Service Level Agreement (SLA) is a contractual commitment between a vendor and customer that defines the maximum acceptable response and resolution times for support tickets by priority level. SLA breaches — where actual resolution time exceeds the committed window — trigger financial penalties including service credits, pro-rated refunds, or contract termination clauses. For B2B SaaS companies, SLA compliance is a direct revenue protection mechanism.',
+    context: 'Enterprise B2B SLAs typically define 3–4 priority tiers: P1 (production down, 15–30 min response, 4 hr resolution), P2 (major feature broken, 1 hr response, 8 hr resolution), P3 (degraded performance, 4 hr response, 24 hr resolution), and P4 (general questions, 8 hr response, 72 hr resolution). SLA breach economics are severe: a single P1 breach for a $200K/year enterprise customer can cost $10K–$50K in credits. At 5% monthly churn risk per breach, a single missed SLA on a $1M ARR account represents $50K in expected annual revenue loss.',
     howAltorHelps: 'Altor helps meet SLA targets by starting investigation the moment a ticket arrives, rather than when an agent picks it up. This eliminates the queue-to-investigation gap that causes most SLA breaches.',
+    stats: [
+      { value: 'P1: 4 hrs', label: 'maximum resolution time in typical enterprise B2B SLA' },
+      { value: '$10K–$100K', label: 'cost per SLA breach in enterprise B2B contracts' },
+      { value: '40%', label: 'of SLA breaches caused by investigation delay, not agent unavailability' },
+      { value: '2 min', label: 'Altor investigation time vs. 20–45 min manual — eliminates investigation-driven breaches' },
+    ],
     relatedTerms: ['mean-time-to-resolution', 'first-response-time', 'incident-management'],
     faqs: [
+      { q: 'What is an SLA in customer support?', a: 'An SLA in customer support is a contractual promise that defines maximum response and resolution times. Tier 1 (P1) issues — production outages — typically require a 15–30 minute first response and 4-hour resolution. Breaching these triggers financial penalties and damages customer trust.' },
       { q: 'What are typical B2B SaaS SLA targets?', a: 'P1: 15 min response, 4 hr resolution. P2: 1 hr response, 8 hr resolution. P3: 4 hr response, 24 hr resolution. P4: 8 hr response, 72 hr resolution.' },
-      { q: 'What happens when you breach an SLA?', a: 'Contractually: service credits (typically 5-25% of monthly fee per breach). Practically: eroded customer trust, increased churn risk, and escalation to executive sponsors.' },
+      { q: 'What happens when you breach an SLA?', a: 'Contractually: service credits (typically 5–25% of monthly fee per breach). Practically: eroded customer trust, increased churn risk, and escalation to executive sponsors.' },
+      { q: 'How do you track SLA compliance?', a: 'SLA compliance is tracked by measuring time-to-first-response and time-to-resolution per ticket against the contracted tier thresholds. Modern helpdesks (Zendesk, Freshdesk, Intercom) have built-in SLA timers. The operational challenge is not tracking — it\'s investigation speed. The 20–45 minute manual investigation window is where most P1 SLAs are lost.' },
+      { q: 'What is the difference between SLA and SLO?', a: 'An SLA is a contractual commitment with financial penalties. An SLO (Service Level Objective) is an internal target, often more aggressive than the contractual SLA. For example, your SLA might commit to 4-hour P1 resolution while your internal SLO targets 2 hours. SLOs give you buffer to absorb investigation delays without breaching the customer-facing SLA.' },
     ],
   },
   'ticket-deflection-rate': {
