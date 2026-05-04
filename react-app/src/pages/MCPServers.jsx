@@ -2,10 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import PageHead from '../components/PageHead'
 
-// ─── Beehiiv ──────────────────────────────────────────────────────────────────
-// After creating your Beehiiv publication, paste the publication ID here.
-// Dashboard → Settings → General → Publication ID  (format: pub_xxxxxxxx)
-const BEEHIIV_PUB_ID = 'REPLACE_WITH_YOUR_PUB_ID'
+const SUBSCRIBE_URL = 'https://kundlimilan.co.in/api/subscribe'
 
 function MCPEmailCapture() {
   const [email, setEmail] = useState('')
@@ -17,15 +14,12 @@ function MCPEmailCapture() {
     if (!email || state === 'loading') return
     setState('loading')
     try {
-      const res = await fetch(
-        `https://api.beehiiv.com/v2/publications/${BEEHIIV_PUB_ID}/subscriptions`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, reactivate_existing: false, send_welcome_email: true }),
-        }
-      )
-      if (res.ok || res.status === 201 || res.status === 200) {
+      const res = await fetch(SUBSCRIBE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, audience: 'mcp-production' }),
+      })
+      if (res.ok) {
         setState('success')
       } else {
         setState('error')
