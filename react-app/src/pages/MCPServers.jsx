@@ -1,6 +1,81 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import PageHead from '../components/PageHead'
+
+// ─── Beehiiv ──────────────────────────────────────────────────────────────────
+// After creating your Beehiiv publication, paste the publication ID here.
+// Dashboard → Settings → General → Publication ID  (format: pub_xxxxxxxx)
+const BEEHIIV_PUB_ID = 'REPLACE_WITH_YOUR_PUB_ID'
+
+function MCPEmailCapture() {
+  const [email, setEmail] = useState('')
+  const [state, setState] = useState('idle')
+  const inputRef = useRef(null)
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    if (!email || state === 'loading') return
+    setState('loading')
+    try {
+      const res = await fetch(
+        `https://api.beehiiv.com/v2/publications/${BEEHIIV_PUB_ID}/subscriptions`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, reactivate_existing: false, send_welcome_email: true }),
+        }
+      )
+      if (res.ok || res.status === 201 || res.status === 200) {
+        setState('success')
+      } else {
+        setState('error')
+      }
+    } catch {
+      setState('error')
+    }
+  }
+
+  if (state === 'success') {
+    return (
+      <div className="mb-10 rounded-xl border border-accent-muted/40 bg-accent-muted/5 px-5 py-4 flex items-center gap-3">
+        <span className="text-accent-default text-lg">✓</span>
+        <p className="text-sm text-fg-default">You're in. We'll send MCP production patterns weekly — no fluff.</p>
+      </div>
+    )
+  }
+
+  return (
+    <div className="mb-10 rounded-xl border border-accent-muted/40 bg-accent-muted/5 px-5 py-4">
+      <p className="text-sm font-semibold text-fg-default mb-0.5">
+        Get weekly MCP production patterns
+      </p>
+      <p className="text-xs text-fg-muted mb-3">
+        How teams ship MCP servers into production — use cases, config patterns, and what breaks. One email/week.
+      </p>
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
+        <input
+          ref={inputRef}
+          type="email"
+          required
+          placeholder="you@company.com"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          className="flex-1 px-3 py-2 text-sm rounded-lg border border-border-default bg-surface-0 text-fg-default placeholder-fg-muted focus:outline-none focus:border-accent-default transition-colors"
+        />
+        <button
+          type="submit"
+          disabled={state === 'loading'}
+          className="shrink-0 px-4 py-2 rounded-lg bg-accent-default text-white text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-60 whitespace-nowrap"
+        >
+          {state === 'loading' ? 'Subscribing…' : 'Subscribe →'}
+        </button>
+      </form>
+      {state === 'error' && (
+        <p className="text-xs text-red-500 mt-2">Something went wrong — try again or email us directly.</p>
+      )}
+    </div>
+  )
+}
 
 const CATEGORY_COLORS = {
   'Databases': 'bg-blue-50 text-blue-800 border-blue-200',
@@ -192,6 +267,8 @@ export default function MCPServers() {
             </div>
           )}
         </header>
+
+        <MCPEmailCapture />
 
         {loading && (
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
