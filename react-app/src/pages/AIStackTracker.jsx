@@ -187,8 +187,8 @@ export default function AIStackTracker() {
   return (
     <>
       <PageHead
-        title="AI Stack Tracker — See Which B2B Companies Use OpenAI, Claude & LangChain | Altor"
-        description="Free tracker: which B2B SaaS companies use OpenAI, Anthropic, LangChain, n8n, and more. 1,000+ companies tracked, updated daily. Search by tool or company name."
+        title="AI Stack Tracker — Which B2B SaaS Companies Use OpenAI, Claude, LangChain | Altor"
+        description="1,000+ B2B SaaS companies tracked by AI tool. See which use OpenAI, Anthropic, Claude, LangChain, n8n — updated daily. Filter by tool or company. Free."
         slug="/ai-stack"
         datePublished="2026-04-16"
         dateModified={data?.meta?.generated_at?.slice(0, 10) ?? '2026-04-16'}

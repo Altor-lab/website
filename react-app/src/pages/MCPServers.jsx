@@ -134,8 +134,8 @@ export default function MCPServers() {
   return (
     <>
       <PageHead
-        title={`MCP Server Directory — ${meta ? meta.total_servers.toLocaleString() + '+' : '4,000+'} MCP Servers Listed | Altor`}
-        description={`Daily updated MCP directory and MCP server registry with ${meta ? meta.total_servers.toLocaleString() + '+' : '4,000+'} servers. Browse the full list of MCP servers from the official registry, GitHub, and the community.`}
+        title={`MCP Servers List — ${meta ? meta.total_servers.toLocaleString() + '+' : '4,000+'} Servers, Searchable by Category | Altor`}
+        description={`The most complete MCP servers list — ${meta ? meta.total_servers.toLocaleString() + '+' : '4,000+'} servers indexed daily from the official registry, GitHub, and community sources. Filter by category, search by name. Free.`}
         slug="/mcp-servers"
         datePublished="2026-04-16"
         dateModified={meta?.generated_at?.slice(0, 10) ?? '2026-04-16'}
@@ -265,8 +265,8 @@ export default function MCPServers() {
             {activeCategory === 'All' && !search && page === 1 && (
               <div className="mb-8 rounded-xl border border-accent-muted/40 bg-accent-muted/5 p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <p className="text-sm font-semibold text-fg-default">Building with MCP in production?</p>
-                  <p className="text-xs text-fg-muted mt-0.5">Altor deploys MCP-connected AI agents into live systems in 3 weeks.</p>
+                  <p className="text-sm font-semibold text-fg-default">Deploying MCP in production?</p>
+                  <p className="text-xs text-fg-muted mt-0.5">Altor connects MCP servers to ClickHouse, Linear, Stripe, and GitHub — live in 3 weeks. Fixed price.</p>
                 </div>
                 <a
                   href="https://calendly.com/founders-altorlab/30min"
@@ -312,13 +312,12 @@ export default function MCPServers() {
             )}
 
             <div className="mt-16 rounded-xl border border-border-default bg-surface-1 p-6 md:p-8 max-w-2xl">
-              <p className="text-sm uppercase tracking-[0.12em] text-accent-default mb-3">Built with MCP?</p>
+              <p className="text-sm uppercase tracking-[0.12em] text-accent-default mb-3">Ship MCP in production</p>
               <h2 className="text-xl font-bold text-fg-default mb-3 tracking-tight">
-                Altor builds production AI systems that use MCP in production.
+                Get your MCP server wired into production in 3 weeks.
               </h2>
               <p className="text-sm text-fg-muted leading-relaxed mb-5">
-                We connect AI agents to your live data systems — ClickHouse, Linear, Stripe, GitHub — and deploy them
-                into production in 3 weeks. MCP is the protocol. Altor is the team that makes it work.
+                Altor integrates MCP servers with your live data systems — ClickHouse, Linear, Stripe, GitHub — writes the glue code, handles auth, and deploys. Fixed-scope engagement, fixed price.
               </p>
               <a
                 href="https://calendly.com/founders-altorlab/30min"
@@ -326,7 +325,7 @@ export default function MCPServers() {
                 rel="noopener noreferrer"
                 className="text-sm font-medium text-accent-default hover:opacity-80 transition-opacity"
               >
-                Talk to Altor about production AI systems →
+                Book a 30-min scoping call →
               </a>
             </div>
 
