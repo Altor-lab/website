@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="geo.region" content="US" />
+  <meta name="geo.placename" content="United States" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <title>Free B2B Support Tools — MTTR Calculator, Ticket Analyzer, Escalation Audit | Altor</title>
+  <meta name="description" content="Free tools for B2B support engineering teams: support ticket investigation analyzer, MTTR ROI calculator, escalation audit, and more. No signup required.">
+  <link rel="canonical" href="https://altorlab.com/tools/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://altorlab.com/tools/">
+  <meta property="og:title" content="Free B2B Support Tools — MTTR Calculator, Ticket Analyzer, Escalation Audit">
+  <meta property="og:description" content="Free tools for B2B support engineering teams. No signup required.">
+  <meta property="og:image" content="https://altorlab.com/og-image.png">
+  <meta property="og:site_name" content="Altor">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free B2B Support Tools | Altor">
+  <meta name="twitter:description" content="Free tools for B2B support engineering teams: MTTR calculator, ticket analyzer, escalation audit.">
+  <meta name="twitter:image" content="https://altorlab.com/og-image.png">
+  <meta name="theme-color" content="#04110f">
+  <script defer data-domain="altorlab.com" src="https://plausible.io/js/script.js"></script>
+  <style>
+    :root {--bg:#04110f;--panel:#0f2420;--text:#e6f5f1;--muted:#9fb8b2;--accent:#29d3aa;--accent-soft:rgba(41,211,170,.14);--border:rgba(170,233,216,.18);--shadow:0 18px 60px rgba(0,0,0,.18);}
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:radial-gradient(circle at 15% 0%,#0f2f28 0%,var(--bg) 48%); color:var(--text); line-height:1.7; min-height:100vh; display:flex; flex-direction:column; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .nav { position:sticky; top:0; z-index:20; background:rgba(4,17,15,.92); border-bottom:1px solid var(--border); backdrop-filter:blur(8px); }
+    .nav-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.9rem 0; }
+    .logo { font-weight:700; letter-spacing:.02em; color:var(--text); }
+    .nav-links { display:flex; flex-wrap:wrap; gap:1rem; font-size:.95rem; }
+    .nav-cta { display:inline-flex; align-items:center; background:var(--text); color:#052019; padding:.55rem .9rem; border-radius:999px; font-weight:700; font-size:.9rem; }
+    .hero { border-bottom:1px solid var(--border); background:linear-gradient(180deg,rgba(13,44,37,.52) 0%,rgba(4,17,15,0) 100%); }
+    .hero-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; padding:2.4rem 0 1.8rem; }
+    .eyebrow { color:var(--muted); text-transform:uppercase; letter-spacing:.1em; font-size:.74rem; margin-bottom:.5rem; }
+    h1 { margin:0 0 .8rem; font-size:clamp(1.8rem,4vw,2.6rem); line-height:1.1; }
+    .lede { color:#d8ebe6; max-width:60ch; margin:0; }
+    .main { flex:1; width:min(960px,calc(100% - 2rem)); margin:2rem auto 4rem; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.2rem; }
+    .card { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:1.3rem; box-shadow:var(--shadow); display:flex; flex-direction:column; }
+    .card-tag { font-size:.74rem; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin-bottom:.5rem; }
+    .card h2 { margin:0 0 .5rem; font-size:1.05rem; }
+    .card h2 a { color:var(--text); }
+    .card h2 a:hover { color:var(--accent); }
+    .card p { color:#9fb8b2; font-size:.9rem; margin:0 0 1rem; flex:1; }
+    .card-cta { display:inline-block; background:var(--accent-soft); border:1px solid rgba(41,211,170,.25); color:var(--accent); padding:.45rem .85rem; border-radius:8px; font-size:.85rem; font-weight:600; }
+    .section-label { font-size:.8rem; color:var(--muted); text-transform:uppercase; letter-spacing:.1em; margin:2rem 0 .8rem; padding-bottom:.5rem; border-bottom:1px solid var(--border); }
+    .footer { border-top:1px solid var(--border); margin-top:auto; }
+    .footer-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; padding:1.2rem 0 1.8rem; display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; color:var(--muted); font-size:.9rem; }
+    @media (max-width:640px) { .nav-cta { display:none; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/">Altor</a>
+      <div class="nav-links">
+        <a href="/blog/">Blog</a>
+        <a href="/compare/">Compare</a>
+        <a href="/benchmarks/">Benchmarks</a>
+      </div>
+      <a class="nav-cta" href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Free Tools · No signup required</div>
+      <h1>Free tools for B2B support engineering teams</h1>
+      <p class="lede">Client-side tools built by Altor to help support and engineering teams diagnose faster, calculate ROI, and audit their investigation process. All free, no data sent anywhere.</p>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="section-label">Investigation tools</div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-tag">Free tool · Client-side</div>
+        <h2><a href="/tools/support-ticket-analyzer/">Support Ticket Analyzer</a></h2>
+        <p>Paste any B2B support ticket and get an instant investigation checklist: which systems to query, what evidence to collect, and probable root causes.</p>
+        <a class="card-cta" href="/tools/support-ticket-analyzer/">Open tool →</a>
+      </div>
+      <div class="card">
+        <div class="card-tag">Free calculator · Client-side</div>
+        <h2><a href="/tools/mttr-calculator/">Support MTTR ROI Calculator</a></h2>
+        <p>Enter ticket volume, average resolution time, and engineer cost. Get your annual investigation cost and AI automation ROI — instantly, with live recalculation.</p>
+        <a class="card-cta" href="/tools/mttr-calculator/">Open calculator →</a>
+      </div>
+      <div class="card">
+        <div class="card-tag">Free audit · 2 minutes</div>
+        <h2><a href="/tools/escalation-audit/">Support Escalation Maturity Audit</a></h2>
+        <p>10 questions to score your support team's investigation maturity. See where engineering time is being lost to avoidable escalations — with specific findings per answer.</p>
+        <a class="card-cta" href="/tools/escalation-audit/">Take the audit →</a>
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-top:2.5rem;">Data and benchmarks</div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-tag">Public data · Updated quarterly</div>
+        <h2><a href="/benchmarks/">B2B Support Investigation Benchmarks 2026</a></h2>
+        <p>MTTR, escalation rates, cost of manual investigation, and AI automation ROI. Sourced from published studies and Altor customer deployments, all cited.</p>
+        <a class="card-cta" href="/benchmarks/">View benchmarks →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Altor — AI investigation for B2B support teams. <a href="/">altorlab.com</a></span>
+      <span><a href="/blog/">Blog</a> · <a href="/compare/">Compare</a> · <a href="/benchmarks/">Benchmarks</a></span>
+    </div>
+  </footer>
+</body>
+</html>

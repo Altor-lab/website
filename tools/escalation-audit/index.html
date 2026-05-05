@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="geo.region" content="US" />
+  <meta name="geo.placename" content="United States" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <title>Support Escalation Audit — Free B2B Support Investigation Score | Altor</title>
+  <meta name="description" content="10-question audit to score your support team's investigation maturity. Find out how much engineering time you're losing to avoidable escalations. Free, no signup.">
+  <link rel="canonical" href="https://altorlab.com/tools/escalation-audit/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://altorlab.com/tools/escalation-audit/">
+  <meta property="og:title" content="Support Escalation Audit — Free Investigation Maturity Score">
+  <meta property="og:description" content="10-question audit to score your support team's investigation maturity. See where escalation time is being lost.">
+  <meta property="og:image" content="https://altorlab.com/og-image.png">
+  <meta property="og:site_name" content="Altor">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Support Escalation Audit — Free Investigation Maturity Score">
+  <meta name="twitter:description" content="Score your support team's investigation maturity in 2 minutes. Free, no signup.">
+  <meta name="twitter:image" content="https://altorlab.com/og-image.png">
+  <meta name="theme-color" content="#04110f">
+  <script defer data-domain="altorlab.com" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Support Escalation Audit","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"10-question audit to score your B2B support team's investigation maturity and find where escalation time is being lost.","url":"https://altorlab.com/tools/escalation-audit/","publisher":{"@type":"Organization","name":"Altor","url":"https://altorlab.com"}}</script>
+  <style>
+    :root {--bg:#04110f;--panel:#0f2420;--text:#e6f5f1;--muted:#9fb8b2;--accent:#29d3aa;--accent-soft:rgba(41,211,170,.14);--border:rgba(170,233,216,.18);--shadow:0 18px 60px rgba(0,0,0,.18);}
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:radial-gradient(circle at 15% 0%,#0f2f28 0%,var(--bg) 48%); color:var(--text); line-height:1.7; min-height:100vh; display:flex; flex-direction:column; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .nav { position:sticky; top:0; z-index:20; background:rgba(4,17,15,.92); border-bottom:1px solid var(--border); backdrop-filter:blur(8px); }
+    .nav-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.9rem 0; }
+    .logo { font-weight:700; letter-spacing:.02em; color:var(--text); }
+    .nav-links { display:flex; flex-wrap:wrap; gap:1rem; font-size:.95rem; }
+    .nav-cta { display:inline-flex; align-items:center; background:var(--text); color:#052019; padding:.55rem .9rem; border-radius:999px; font-weight:700; font-size:.9rem; }
+    .hero { border-bottom:1px solid var(--border); background:linear-gradient(180deg,rgba(13,44,37,.52) 0%,rgba(4,17,15,0) 100%); }
+    .hero-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; padding:2.4rem 0 1.8rem; }
+    .eyebrow { color:var(--muted); text-transform:uppercase; letter-spacing:.1em; font-size:.74rem; margin-bottom:.5rem; }
+    h1 { margin:0 0 .8rem; font-size:clamp(1.8rem,4vw,2.8rem); line-height:1.1; max-width:22ch; }
+    .lede { color:#d8ebe6; max-width:60ch; margin:0; }
+    .main { flex:1; width:min(760px,calc(100% - 2rem)); margin:2rem auto; }
+    .tool-card { background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:1.5rem; box-shadow:var(--shadow); margin-bottom:1.5rem; }
+    .progress-bar-wrap { background:rgba(9,23,20,.7); border-radius:999px; height:6px; margin-bottom:1.5rem; overflow:hidden; }
+    .progress-bar { height:100%; border-radius:999px; background:var(--accent); transition:width .4s; }
+    .q-label { font-size:.8rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; margin-bottom:.3rem; }
+    .q-text { font-size:1.05rem; color:var(--text); font-weight:600; margin-bottom:1rem; }
+    .options { display:grid; gap:.55rem; }
+    .opt { display:flex; align-items:center; gap:.75rem; cursor:pointer; background:rgba(9,23,20,.5); border:1px solid var(--border); border-radius:10px; padding:.7rem 1rem; transition:border-color .15s, background .15s; }
+    .opt:hover { border-color:var(--accent); background:rgba(41,211,170,.07); }
+    .opt input[type=radio] { accent-color:var(--accent); width:16px; height:16px; flex-shrink:0; }
+    .opt.selected { border-color:var(--accent); background:rgba(41,211,170,.1); }
+    .opt-label { font-size:.93rem; color:#d4e9e4; }
+    .btn-row { display:flex; gap:.75rem; margin-top:1.2rem; }
+    button { cursor:pointer; border:none; border-radius:10px; font-family:inherit; font-size:.95rem; font-weight:700; padding:.7rem 1.3rem; transition:opacity .15s; }
+    .btn-primary { background:var(--accent); color:#052019; }
+    .btn-ghost { background:rgba(41,211,170,.1); color:var(--accent); border:1px solid var(--border); }
+    button:hover { opacity:.88; }
+    #result-card { display:none; }
+    .score-display { text-align:center; padding:1.5rem 0 1rem; }
+    .score-num { font-size:4rem; font-weight:900; line-height:1; }
+    .score-grade { font-size:1.5rem; font-weight:700; margin-top:.3rem; }
+    .score-desc { color:#d4e9e4; max-width:50ch; margin:.8rem auto 0; font-size:.95rem; }
+    .findings { margin-top:1.5rem; }
+    .findings h3 { font-size:.9rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; margin-bottom:.75rem; }
+    .finding { display:flex; gap:.7rem; align-items:flex-start; padding:.65rem 0; border-bottom:1px solid rgba(170,233,216,.1); font-size:.9rem; color:#d4e9e4; }
+    .finding:last-child { border-bottom:none; }
+    .finding-icon { flex-shrink:0; margin-top:.1rem; }
+    .cta-inline { margin-top:1.4rem; padding:1.1rem; border-radius:14px; border:1px solid var(--border); background:linear-gradient(180deg,rgba(41,211,170,.14) 0%,rgba(41,211,170,.04) 100%); }
+    .cta-inline p { margin:.3rem 0 .7rem; color:#d4e9e4; font-size:.92rem; }
+    .cta-inline a { display:inline-block; background:var(--accent); color:#052019; padding:.6rem 1rem; border-radius:8px; font-weight:800; font-size:.9rem; }
+    .footer { border-top:1px solid var(--border); margin-top:auto; }
+    .footer-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; padding:1.2rem 0 1.8rem; display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; color:var(--muted); font-size:.9rem; }
+    @media (max-width:640px) { .nav-cta { display:none; } h1 { max-width:none; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/">Altor</a>
+      <div class="nav-links">
+        <a href="/tools/">Tools</a>
+        <a href="/blog/">Blog</a>
+        <a href="/compare/">Compare</a>
+      </div>
+      <a class="nav-cta" href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Free Audit · No signup required · 2 minutes</div>
+      <h1>Support Escalation Maturity Audit</h1>
+      <p class="lede">10 questions to score how much engineering time your team loses to manual investigation. See exactly where the hours go — and what automated investigation would recover.</p>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="tool-card" id="quiz-card">
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="progress" style="width:10%"></div>
+      </div>
+      <div id="question-area"></div>
+      <div class="btn-row">
+        <button class="btn-ghost" id="btn-back" onclick="prev()" style="display:none">← Back</button>
+        <button class="btn-primary" id="btn-next" onclick="next()">Next →</button>
+      </div>
+    </div>
+
+    <div class="tool-card" id="result-card">
+      <div class="score-display">
+        <div class="score-num" id="score-num">—</div>
+        <div class="score-grade" id="score-grade">—</div>
+        <div class="score-desc" id="score-desc">—</div>
+      </div>
+      <div class="findings">
+        <h3>Key findings</h3>
+        <div id="findings-list"></div>
+      </div>
+      <div class="cta-inline" id="result-cta"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Altor — AI investigation for B2B support teams. <a href="/">altorlab.com</a></span>
+      <span><a href="/tools/">Tools</a> · <a href="/blog/">Blog</a> · <a href="/compare/">Compare</a></span>
+    </div>
+  </footer>
+
+  <script>
+    const QUESTIONS = [
+      {
+        q: "When a technical ticket arrives, how quickly does your team have evidence from logs/billing/engineering systems?",
+        opts: [
+          { label: "Under 5 minutes — automated tools pull it in", score: 10 },
+          { label: "5-20 minutes — manual queries but team is fast", score: 6 },
+          { label: "20-60 minutes — requires engineer context switching", score: 3 },
+          { label: "Over 60 minutes or ticket gets escalated before evidence is gathered", score: 0 }
+        ],
+        finding: { bad: "Context collection is your #1 time sink — this is exactly what automated investigation solves.", threshold: 3 }
+      },
+      {
+        q: "How many engineers typically touch a single escalated technical ticket?",
+        opts: [
+          { label: "1 — support engineer resolves with tools available", score: 10 },
+          { label: "2 — support plus one backend engineer", score: 6 },
+          { label: "3+ — multiple engineers involved before resolution", score: 2 },
+          { label: "It varies widely and we don't track it", score: 1 }
+        ],
+        finding: { bad: "Multiple engineers per ticket multiplies your investigation cost. Each handoff means re-explaining context and re-gathering evidence.", threshold: 6 }
+      },
+      {
+        q: "What percentage of your engineering escalations could have been resolved by support if they had better system access?",
+        opts: [
+          { label: "Under 10% — most escalations genuinely need engineering", score: 9 },
+          { label: "10-30% — some could be self-served with more context", score: 6 },
+          { label: "30-60% — a significant portion are avoidable", score: 2 },
+          { label: "Over 60% — most escalations are context gaps, not real engineering issues", score: 0 }
+        ],
+        finding: { bad: "A majority of your escalations are avoidable. That is direct engineering productivity lost to context retrieval, not real technical issues.", threshold: 6 }
+      },
+      {
+        q: "Do you have automated playbooks that run when a ticket opens (e.g., auto-fetching customer logs, Stripe status, recent deploys)?",
+        opts: [
+          { label: "Yes — most ticket types trigger automated context collection", score: 10 },
+          { label: "Partially — some ticket types have automation, most are manual", score: 5 },
+          { label: "No — all context collection is done manually by engineers", score: 0 },
+          { label: "We've discussed it but haven't built it", score: 1 }
+        ],
+        finding: { bad: "No automated playbooks means every ticket starts from zero context. Your engineers are re-running the same queries manually every day.", threshold: 5 }
+      },
+      {
+        q: "What is your team's median time from ticket open to root cause identified for technical P1/P2 issues?",
+        opts: [
+          { label: "Under 30 minutes", score: 10 },
+          { label: "30-90 minutes", score: 7 },
+          { label: "90 minutes to 4 hours", score: 3 },
+          { label: "Over 4 hours or we don't measure this", score: 0 }
+        ],
+        finding: { bad: "A 4-hour median to root cause on P1/P2s is costly — both in engineering hours and in customer trust during a live incident.", threshold: 7 }
+      },
+      {
+        q: "How do support engineers access ClickHouse, database logs, or event streams when investigating tickets?",
+        opts: [
+          { label: "One-click internal tool or dashboard built for support", score: 10 },
+          { label: "They can run queries but need to know the right commands", score: 5 },
+          { label: "They have to ask a backend engineer to run the queries", score: 1 },
+          { label: "We don't use these systems or they're inaccessible to support", score: 0 }
+        ],
+        finding: { bad: "If support must ask engineering to query logs, you have a structural bottleneck. Every query request is a context switch that interrupts product work.", threshold: 5 }
+      },
+      {
+        q: "Do you track escalation rate by ticket category and trend it over time?",
+        opts: [
+          { label: "Yes — we have a dashboard and review it weekly", score: 10 },
+          { label: "Somewhat — we track total escalations but not by category", score: 5 },
+          { label: "No — we don't track this systematically", score: 1 },
+          { label: "We know we should but haven't prioritized it", score: 0 }
+        ],
+        finding: { bad: "Without tracking escalation rate by category, you can't identify which ticket types are most automatable or where playbooks would have the highest impact.", threshold: 5 }
+      },
+      {
+        q: "When an engineer resolves a ticket, is their investigation process documented for future reuse?",
+        opts: [
+          { label: "Yes — playbooks are updated automatically from resolutions", score: 10 },
+          { label: "Sometimes — engineers add notes but it's inconsistent", score: 5 },
+          { label: "Rarely — knowledge stays in individuals' heads", score: 1 },
+          { label: "No formal process for this", score: 0 }
+        ],
+        finding: { bad: "Investigation knowledge not captured means each new ticket starts from scratch. The same queries are written manually again and again across your team.", threshold: 5 }
+      },
+      {
+        q: "How does your team handle similar tickets arriving from different customers?",
+        opts: [
+          { label: "Automated detection groups them and applies the same diagnosis", score: 10 },
+          { label: "We have a process to link related tickets manually", score: 6 },
+          { label: "Each ticket is investigated independently", score: 2 },
+          { label: "We don't have a consistent approach", score: 0 }
+        ],
+        finding: { bad: "Independent investigation of similar tickets is a significant waste. The same evidence-gathering steps are repeated for each account rather than diagnosed once and applied across the cohort.", threshold: 6 }
+      },
+      {
+        q: "What happens when your best support engineer is out sick on a day with a P1 incident?",
+        opts: [
+          { label: "The system and playbooks mean any engineer can investigate effectively", score: 10 },
+          { label: "Another senior engineer can usually step in with minimal friction", score: 7 },
+          { label: "Investigation takes significantly longer without that person", score: 2 },
+          { label: "The P1 waits or gets escalated higher than necessary", score: 0 }
+        ],
+        finding: { bad: "Key-person dependency on investigation is a reliability risk. When one person has all the context, every absence is an incident risk.", threshold: 7 }
+      }
+    ];
+
+    let current = 0;
+    const answers = new Array(QUESTIONS.length).fill(null);
+
+    function renderQ() {
+      const q = QUESTIONS[current];
+      document.getElementById('progress').style.width = ((current + 1) / QUESTIONS.length * 100) + '%';
+      document.getElementById('question-area').innerHTML = `
+        <div class="q-label">Question ${current + 1} of ${QUESTIONS.length}</div>
+        <div class="q-text">${q.q}</div>
+        <div class="options">
+          ${q.opts.map((o, i) => `
+            <label class="opt ${answers[current] === i ? 'selected' : ''}" onclick="select(${i})">
+              <input type="radio" name="q${current}" value="${i}" ${answers[current] === i ? 'checked' : ''}>
+              <span class="opt-label">${o.label}</span>
+            </label>`).join('')}
+        </div>`;
+      document.getElementById('btn-back').style.display = current > 0 ? 'block' : 'none';
+      document.getElementById('btn-next').textContent = current === QUESTIONS.length - 1 ? 'See my score →' : 'Next →';
+    }
+
+    function select(i) {
+      answers[current] = i;
+      document.querySelectorAll('.opt').forEach((el, idx) => el.classList.toggle('selected', idx === i));
+    }
+
+    function next() {
+      if (answers[current] === null) { alert('Please select an answer to continue.'); return; }
+      if (current < QUESTIONS.length - 1) { current++; renderQ(); }
+      else showResult();
+    }
+
+    function prev() { if (current > 0) { current--; renderQ(); } }
+
+    function showResult() {
+      const total = answers.reduce((sum, a, i) => sum + (a !== null ? QUESTIONS[i].opts[a].score : 0), 0);
+      const maxScore = QUESTIONS.length * 10;
+      const pct = Math.round((total / maxScore) * 100);
+
+      let grade, color, desc, ctaText, ctaMsg;
+      if (pct >= 80) {
+        grade = 'High Maturity'; color = '#29d3aa';
+        desc = 'Your investigation process is well-automated. Focus on expanding coverage to new ticket categories and measuring investigation time at the query level.';
+        ctaText = 'See how Altor further reduces the remaining manual overhead';
+        ctaMsg = 'Even high-maturity teams find gaps in cross-system investigation. See what Altor adds on top of your existing tooling.';
+      } else if (pct >= 55) {
+        grade = 'Moderate Maturity'; color = '#fbbf24';
+        desc = 'You have some automation in place but a significant portion of engineering time is still spent on manual investigation. Targeted automation on your top 3 ticket categories would have high ROI.';
+        ctaText = 'See exactly where your investigation time goes';
+        ctaMsg = `At ${pct}% maturity, you're likely losing $80-150K/year in engineering time to manual investigation. See what automated investigation looks like on your actual tickets.`;
+      } else {
+        grade = 'Manual Process'; color = '#f87171';
+        desc = 'Your team is spending significant engineering time on manual context collection. Most of these hours can be recovered with investigation automation — without changing your existing ticketing workflow.';
+        ctaText = 'See a 2-minute investigation on your actual tickets';
+        ctaMsg = `At ${pct}% maturity, manual investigation is your largest hidden cost. Altor connects to your live systems and runs investigation automatically when tickets open. Median time: 2 minutes.`;
+      }
+
+      document.getElementById('score-num').textContent = pct + '%';
+      document.getElementById('score-num').style.color = color;
+      document.getElementById('score-grade').textContent = grade;
+      document.getElementById('score-grade').style.color = color;
+      document.getElementById('score-desc').textContent = desc;
+
+      // Findings
+      const findings = [];
+      answers.forEach((a, i) => {
+        if (a !== null) {
+          const score = QUESTIONS[i].opts[a].score;
+          if (score <= QUESTIONS[i].finding.threshold) {
+            findings.push({ icon: '⚠', text: QUESTIONS[i].finding.bad });
+          }
+        }
+      });
+      const noIssues = findings.length === 0;
+      document.getElementById('findings-list').innerHTML = noIssues
+        ? '<div class="finding"><span class="finding-icon">✓</span><span>No major gaps detected. Your team has strong investigation practices.</span></div>'
+        : findings.slice(0, 5).map(f => `<div class="finding"><span class="finding-icon">${f.icon}</span><span>${f.text}</span></div>`).join('');
+
+      document.getElementById('result-cta').innerHTML = `
+        <strong>${ctaText}</strong>
+        <p>${ctaMsg}</p>
+        <a href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo — US hours →</a>`;
+
+      document.getElementById('quiz-card').style.display = 'none';
+      document.getElementById('result-card').style.display = 'block';
+      document.getElementById('result-card').scrollIntoView({ behavior:'smooth' });
+    }
+
+    renderQ();
+  </script>
+</body>
+</html>

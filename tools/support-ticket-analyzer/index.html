@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="geo.region" content="US" />
+  <meta name="geo.placename" content="United States" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <title>Support Ticket Analyzer — Free AI Investigation Checklist Generator | Altor</title>
+  <meta name="description" content="Paste any B2B support ticket and get an instant investigation checklist: which systems to query, what evidence to collect, and probable root causes. Free, client-side, no signup.">
+  <link rel="canonical" href="https://altorlab.com/tools/support-ticket-analyzer/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://altorlab.com/tools/support-ticket-analyzer/">
+  <meta property="og:title" content="Support Ticket Analyzer — Free Investigation Checklist Generator">
+  <meta property="og:description" content="Paste a support ticket, get an instant investigation checklist: systems to query, evidence to collect, probable root causes.">
+  <meta property="og:image" content="https://altorlab.com/og-image.png">
+  <meta property="og:site_name" content="Altor">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Support Ticket Analyzer — Free Investigation Checklist Generator">
+  <meta name="twitter:description" content="Paste a support ticket, get an instant investigation checklist: systems to query, evidence to collect, probable root causes.">
+  <meta name="twitter:image" content="https://altorlab.com/og-image.png">
+  <meta name="theme-color" content="#04110f">
+  <script defer data-domain="altorlab.com" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Support Ticket Analyzer","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Paste any B2B support ticket and get an instant investigation checklist: which systems to query, what evidence to collect, and probable root causes. Free, client-side.","url":"https://altorlab.com/tools/support-ticket-analyzer/","publisher":{"@type":"Organization","name":"Altor","url":"https://altorlab.com"}}</script>
+  <style>
+    :root {--bg:#04110f;--panel:#0f2420;--text:#e6f5f1;--muted:#9fb8b2;--accent:#29d3aa;--accent-soft:rgba(41,211,170,.14);--border:rgba(170,233,216,.18);--shadow:0 18px 60px rgba(0,0,0,.18);}
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:radial-gradient(circle at 15% 0%,#0f2f28 0%,var(--bg) 48%); color:var(--text); line-height:1.7; min-height:100vh; display:flex; flex-direction:column; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .nav { position:sticky; top:0; z-index:20; background:rgba(4,17,15,.92); border-bottom:1px solid var(--border); backdrop-filter:blur(8px); }
+    .nav-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.9rem 0; }
+    .logo { font-weight:700; letter-spacing:.02em; color:var(--text); }
+    .nav-links { display:flex; flex-wrap:wrap; gap:1rem; font-size:.95rem; }
+    .nav-cta { display:inline-flex; align-items:center; background:var(--text); color:#052019; padding:.55rem .9rem; border-radius:999px; font-weight:700; font-size:.9rem; }
+    .hero { border-bottom:1px solid var(--border); background:linear-gradient(180deg,rgba(13,44,37,.52) 0%,rgba(4,17,15,0) 100%); }
+    .hero-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; padding:2.4rem 0 1.8rem; }
+    .eyebrow { color:var(--muted); text-transform:uppercase; letter-spacing:.1em; font-size:.74rem; margin-bottom:.5rem; }
+    h1 { margin:0 0 .8rem; font-size:clamp(1.8rem,4vw,2.8rem); line-height:1.1; max-width:20ch; }
+    .lede { color:#d8ebe6; max-width:60ch; margin:0; }
+    .main { flex:1; width:min(960px,calc(100% - 2rem)); margin:2rem auto; display:grid; gap:1.5rem; }
+    .tool-card { background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:1.5rem; box-shadow:var(--shadow); }
+    label { display:block; font-weight:600; margin-bottom:.5rem; color:#c5ece2; font-size:.9rem; text-transform:uppercase; letter-spacing:.06em; }
+    textarea { width:100%; background:rgba(9,23,20,.7); border:1px solid var(--border); border-radius:10px; color:var(--text); font-family:inherit; font-size:.95rem; line-height:1.6; padding:.8rem 1rem; resize:vertical; min-height:160px; outline:none; transition:border-color .2s; }
+    textarea:focus { border-color:var(--accent); }
+    .btn-row { display:flex; gap:.75rem; margin-top:1rem; flex-wrap:wrap; }
+    button { cursor:pointer; border:none; border-radius:10px; font-family:inherit; font-size:.95rem; font-weight:700; padding:.7rem 1.2rem; transition:opacity .15s; }
+    button:hover { opacity:.88; }
+    .btn-primary { background:var(--accent); color:#052019; }
+    .btn-ghost { background:rgba(41,211,170,.12); color:var(--accent); border:1px solid var(--border); }
+    #result { display:none; }
+    .result-section { margin-bottom:1.2rem; }
+    .result-section h3 { margin:0 0 .5rem; font-size:1rem; color:var(--accent); text-transform:uppercase; letter-spacing:.06em; }
+    .chip-row { display:flex; flex-wrap:wrap; gap:.45rem; }
+    .chip { background:rgba(41,211,170,.12); border:1px solid rgba(41,211,170,.25); border-radius:8px; padding:.3rem .7rem; font-size:.85rem; color:#c5ece2; }
+    .chip.high { background:rgba(239,68,68,.12); border-color:rgba(239,68,68,.25); color:#fca5a5; }
+    .chip.med { background:rgba(251,191,36,.1); border-color:rgba(251,191,36,.22); color:#fde68a; }
+    .check-list { list-style:none; padding:0; margin:0; display:grid; gap:.4rem; }
+    .check-list li { display:flex; gap:.6rem; align-items:flex-start; font-size:.93rem; color:#d4e9e4; }
+    .check-list li::before { content:"☐"; color:var(--accent); flex-shrink:0; margin-top:.05rem; }
+    .cta-inline { margin-top:1.5rem; padding:1.1rem; border-radius:14px; border:1px solid var(--border); background:linear-gradient(180deg,rgba(41,211,170,.14) 0%,rgba(41,211,170,.04) 100%); }
+    .cta-inline p { margin:.3rem 0 .8rem; color:#d4e9e4; font-size:.95rem; }
+    .cta-inline a { display:inline-block; background:var(--accent); color:#052019; padding:.6rem 1rem; border-radius:8px; font-weight:800; font-size:.9rem; }
+    .footer { border-top:1px solid var(--border); margin-top:auto; }
+    .footer-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; padding:1.2rem 0 1.8rem; display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; color:var(--muted); font-size:.9rem; }
+    @media (max-width:640px) { .nav-cta { display:none; } h1 { max-width:none; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/">Altor</a>
+      <div class="nav-links">
+        <a href="/tools/">Tools</a>
+        <a href="/blog/">Blog</a>
+        <a href="/compare/">Compare</a>
+      </div>
+      <a class="nav-cta" href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Free Tool · No signup required</div>
+      <h1>Support Ticket Investigation Analyzer</h1>
+      <p class="lede">Paste any B2B support ticket. Get an instant investigation checklist — which systems to query, what evidence to collect, and probable root causes. Client-side, no data sent anywhere.</p>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="tool-card">
+      <label for="ticket-input">Paste your support ticket</label>
+      <textarea id="ticket-input" placeholder="e.g. 'Customer reports webhook events stopped firing for order.completed at 14:32 UTC. They verified their endpoint is reachable and returning 200. The issue started after they rotated their API keys yesterday...'"></textarea>
+      <div class="btn-row">
+        <button class="btn-primary" onclick="analyze()">Generate investigation checklist</button>
+        <button class="btn-ghost" onclick="loadExample()">Load example ticket</button>
+      </div>
+    </div>
+
+    <div class="tool-card" id="result">
+      <div class="result-section">
+        <h3>Ticket category</h3>
+        <div class="chip-row" id="categories"></div>
+      </div>
+      <div class="result-section">
+        <h3>Systems to investigate</h3>
+        <div class="chip-row" id="systems"></div>
+      </div>
+      <div class="result-section">
+        <h3>Evidence checklist</h3>
+        <ul class="check-list" id="checklist"></ul>
+      </div>
+      <div class="result-section">
+        <h3>Probable root causes</h3>
+        <div class="chip-row" id="causes"></div>
+      </div>
+      <div class="cta-inline">
+        <strong>This is what Altor does automatically — at scale, connected to your live systems.</strong>
+        <p>Altor connects to ClickHouse, Linear, Stripe, GitHub, and Datadog and runs this investigation automatically when a ticket opens. Median resolution time: 2 minutes.</p>
+        <a href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">See it on your actual tickets →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Altor — production AI systems for B2B support investigation. <a href="/">altorlab.com</a></span>
+      <span><a href="/tools/">Tools</a> · <a href="/blog/">Blog</a> · <a href="/compare/">Compare</a></span>
+    </div>
+  </footer>
+
+  <script>
+    const EXAMPLES = [
+      "Customer reports getting 402 Payment Required on all API calls starting at 09:15 UTC today. They say their subscription is active. They are on our Enterprise plan and have been a customer for 14 months. Their team lead says they haven't changed anything on their end.",
+      "Webhook events for order.completed stopped firing around 14:30 UTC yesterday. The customer verified their endpoint is reachable (returns 200 for test pings). They rotated their API keys yesterday morning. The issue affects all webhook event types, not just order.completed.",
+      "Customer reports high latency on all dashboard queries — pages taking 8-12 seconds to load, normally under 1 second. Started approximately 2 hours ago. They are on a shared infrastructure plan. No changes on their end. Other customers are not reporting issues."
+    ];
+
+    const PATTERNS = {
+      auth: {
+        keywords: ['401','402','403','unauthorized','auth','token','key','api key','permission','forbidden','access denied','oauth','credential','login','signin'],
+        category: 'Authentication / Authorization',
+        systems: ['Stripe (plan & subscription status)','Auth service / IAM','API key registry','Recent key rotation logs','SSO / IdP config'],
+        checklist: [
+          'Query Stripe for current subscription status and plan tier',
+          'Check API key creation timestamp — is the key being used the one they rotated to?',
+          'Verify key has not been revoked or expired in the key registry',
+          'Check auth service logs for rejected token attempts with specific error codes',
+          'Confirm customer is using the correct API endpoint for their plan tier',
+          'Review recent account changes: role changes, team member additions, plan upgrades'
+        ],
+        causes: ['Expired API key','Wrong key being used after rotation','Plan downgrade removing endpoint access','SSO misconfiguration','Rate limit on auth endpoint']
+      },
+      webhook: {
+        keywords: ['webhook','event','not firing','stopped','delivery','payload','endpoint','hook','notification'],
+        category: 'Webhook / Event delivery',
+        systems: ['Webhook delivery queue','Endpoint health logs','Event bus','API gateway','Customer endpoint response logs'],
+        checklist: [
+          'Check webhook delivery queue for failed delivery attempts with status codes',
+          'Query delivery logs for the customer\'s endpoint URL around the reported time window',
+          'Verify endpoint is returning 2xx (not just reachable with ping)',
+          'Check if customer endpoint returned a 410 Gone at any point (triggers auto-unsubscribe)',
+          'Review SSL certificate validity on the customer endpoint',
+          'Check if webhook subscription is still active in the subscriptions table',
+          'Correlate timing with recent deploys or config changes'
+        ],
+        causes: ['Endpoint SSL cert expired or chain changed','Endpoint returned 410 triggering unsubscribe','Webhook subscription silently disabled','Delivery queue backpressure','API key rotation breaking webhook auth header']
+      },
+      latency: {
+        keywords: ['slow','latency','timeout','taking too long','8 second','10 second','performance','loading','hung','unresponsive','high response time'],
+        category: 'Latency / Performance',
+        systems: ['Application performance monitoring (Datadog/Sentry)','Database query logs (ClickHouse)','Infrastructure metrics','CDN / edge logs','Recent deploys'],
+        checklist: [
+          'Query APM for p95/p99 latency trend starting at reported time window',
+          'Check ClickHouse slow query log for queries from customer account during the window',
+          'Identify if the latency is tenant-specific or affects all customers (blast radius)',
+          'Review infrastructure metrics: CPU, memory, connection pool exhaustion',
+          'Check for recent deploys that correlate with latency onset time',
+          'Identify which specific endpoints are slow vs healthy',
+          'Check CDN cache hit rate — cold cache after deploy can cause this'
+        ],
+        causes: ['N+1 query on customer\'s data shape','Missing index hit after data growth','Deploy introduced regression','Connection pool exhausted at peak time','CDN cold start after config change']
+      },
+      billing: {
+        keywords: ['charge','billing','invoice','payment','refund','subscription','plan','price','overage','credit','money','cost'],
+        category: 'Billing / Subscription',
+        systems: ['Stripe (charges, invoices, subscriptions)','Internal usage metering','Plan entitlement service','Customer portal logs'],
+        checklist: [
+          'Pull full Stripe charge history for the customer account',
+          'Verify subscription status: active, past_due, canceled, or trialing',
+          'Check metered usage against plan limits for the billing period',
+          'Review most recent invoice: line items, applied credits, discounts',
+          'Check payment method status: card expired, bank declined',
+          'Verify any proration calculations if plan was changed mid-cycle',
+          'Look for duplicate charges or double-processing events'
+        ],
+        causes: ['Payment method expired or declined','Metered usage exceeded plan limit','Proration calculation error','Subscription state mismatch between Stripe and internal system','Manual adjustment applied incorrectly']
+      },
+      default: {
+        category: 'General technical issue',
+        systems: ['Application logs (error rate around reported time)','Customer account state','Recent deploys (GitHub)','Known issues (Linear/bug tracker)','Monitoring / alerting history'],
+        checklist: [
+          'Confirm the exact time the issue started and correlate with deploys',
+          'Check application error logs for the customer\'s account ID',
+          'Verify current account state: active, any flags, plan entitlements',
+          'Search bug tracker (Linear) for matching symptoms or open issues',
+          'Check if the issue is customer-specific or affects a cohort of accounts',
+          'Review monitoring dashboards for anomalies at reported time',
+          'Ask customer for specific steps to reproduce and collect exact error message/code'
+        ],
+        causes: ['Deploy regression','Account-specific data edge case','Configuration drift','Infrastructure incident','Third-party service dependency failure']
+      }
+    };
+
+    function detect(text) {
+      const t = text.toLowerCase();
+      if (PATTERNS.auth.keywords.some(k => t.includes(k))) return PATTERNS.auth;
+      if (PATTERNS.webhook.keywords.some(k => t.includes(k))) return PATTERNS.webhook;
+      if (PATTERNS.latency.keywords.some(k => t.includes(k))) return PATTERNS.latency;
+      if (PATTERNS.billing.keywords.some(k => t.includes(k))) return PATTERNS.billing;
+      return PATTERNS.default;
+    }
+
+    function analyze() {
+      const text = document.getElementById('ticket-input').value.trim();
+      if (!text || text.length < 20) {
+        alert('Please paste a support ticket (at least a sentence or two).');
+        return;
+      }
+      const pattern = detect(text);
+      document.getElementById('categories').innerHTML = `<span class="chip">${pattern.category}</span>`;
+      const sys = (pattern.systems || PATTERNS.default.systems);
+      document.getElementById('systems').innerHTML = sys.map(s => `<span class="chip">${s}</span>`).join('');
+      const cl = (pattern.checklist || PATTERNS.default.checklist);
+      document.getElementById('checklist').innerHTML = cl.map(c => `<li>${c}</li>`).join('');
+      const causes = (pattern.causes || ['Deploy regression','Account-specific data edge case','Third-party dependency failure']);
+      document.getElementById('causes').innerHTML = causes.map((c, i) => `<span class="chip ${i===0?'high':i===1?'med':''}">${c}</span>`).join('');
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('result').scrollIntoView({ behavior:'smooth', block:'start' });
+    }
+
+    function loadExample() {
+      const ex = EXAMPLES[Math.floor(Math.random() * EXAMPLES.length)];
+      document.getElementById('ticket-input').value = ex;
+    }
+
+    document.getElementById('ticket-input').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && e.metaKey) analyze();
+    });
+  </script>
+</body>
+</html>

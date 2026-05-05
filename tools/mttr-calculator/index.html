@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="geo.region" content="US" />
+  <meta name="geo.placename" content="United States" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <title>Support MTTR Calculator — ROI of AI Investigation Automation | Altor</title>
+  <meta name="description" content="Calculate your annual cost of manual support ticket investigation and ROI of AI automation. Enter ticket volume, resolution time, and engineer cost to see your number.">
+  <link rel="canonical" href="https://altorlab.com/tools/mttr-calculator/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://altorlab.com/tools/mttr-calculator/">
+  <meta property="og:title" content="Support MTTR ROI Calculator — AI Investigation Automation">
+  <meta property="og:description" content="Calculate your annual cost of manual support investigation and ROI of AI automation. Free calculator, no signup.">
+  <meta property="og:image" content="https://altorlab.com/og-image.png">
+  <meta property="og:site_name" content="Altor">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Support MTTR ROI Calculator — AI Investigation Automation">
+  <meta name="twitter:description" content="Calculate your annual investigation cost and AI automation ROI. Free calculator.">
+  <meta name="twitter:image" content="https://altorlab.com/og-image.png">
+  <meta name="theme-color" content="#04110f">
+  <script defer data-domain="altorlab.com" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Support MTTR ROI Calculator","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Calculate your annual cost of manual support ticket investigation and ROI of AI investigation automation. Free, client-side.","url":"https://altorlab.com/tools/mttr-calculator/","publisher":{"@type":"Organization","name":"Altor","url":"https://altorlab.com"}}</script>
+  <style>
+    :root {--bg:#04110f;--panel:#0f2420;--text:#e6f5f1;--muted:#9fb8b2;--accent:#29d3aa;--accent-soft:rgba(41,211,170,.14);--border:rgba(170,233,216,.18);--shadow:0 18px 60px rgba(0,0,0,.18);}
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:radial-gradient(circle at 15% 0%,#0f2f28 0%,var(--bg) 48%); color:var(--text); line-height:1.7; min-height:100vh; display:flex; flex-direction:column; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .nav { position:sticky; top:0; z-index:20; background:rgba(4,17,15,.92); border-bottom:1px solid var(--border); backdrop-filter:blur(8px); }
+    .nav-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.9rem 0; }
+    .logo { font-weight:700; letter-spacing:.02em; color:var(--text); }
+    .nav-links { display:flex; flex-wrap:wrap; gap:1rem; font-size:.95rem; }
+    .nav-cta { display:inline-flex; align-items:center; background:var(--text); color:#052019; padding:.55rem .9rem; border-radius:999px; font-weight:700; font-size:.9rem; }
+    .hero { border-bottom:1px solid var(--border); background:linear-gradient(180deg,rgba(13,44,37,.52) 0%,rgba(4,17,15,0) 100%); }
+    .hero-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; padding:2.4rem 0 1.8rem; }
+    .eyebrow { color:var(--muted); text-transform:uppercase; letter-spacing:.1em; font-size:.74rem; margin-bottom:.5rem; }
+    h1 { margin:0 0 .8rem; font-size:clamp(1.8rem,4vw,2.8rem); line-height:1.1; max-width:22ch; }
+    .lede { color:#d8ebe6; max-width:60ch; margin:0; }
+    .main { flex:1; width:min(960px,calc(100% - 2rem)); margin:2rem auto; display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; align-items:start; }
+    @media (max-width:680px) { .main { grid-template-columns:1fr; } }
+    .tool-card { background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:1.5rem; box-shadow:var(--shadow); }
+    .field { margin-bottom:1.1rem; }
+    label { display:block; font-size:.88rem; font-weight:600; color:#c5ece2; text-transform:uppercase; letter-spacing:.06em; margin-bottom:.4rem; }
+    .hint { font-size:.8rem; color:var(--muted); margin-bottom:.4rem; }
+    input[type=number] { width:100%; background:rgba(9,23,20,.7); border:1px solid var(--border); border-radius:8px; color:var(--text); font-family:inherit; font-size:1rem; padding:.65rem .9rem; outline:none; transition:border-color .2s; -moz-appearance:textfield; }
+    input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button { -webkit-appearance:none; }
+    input[type=number]:focus { border-color:var(--accent); }
+    button { cursor:pointer; border:none; border-radius:10px; font-family:inherit; font-size:.95rem; font-weight:700; padding:.75rem 1.4rem; background:var(--accent); color:#052019; width:100%; margin-top:.5rem; transition:opacity .15s; }
+    button:hover { opacity:.88; }
+    .stat-grid { display:grid; gap:1rem; }
+    .stat { background:rgba(9,23,20,.5); border:1px solid var(--border); border-radius:12px; padding:1rem; }
+    .stat-label { font-size:.8rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; margin-bottom:.25rem; }
+    .stat-val { font-size:1.7rem; font-weight:800; color:var(--accent); line-height:1.1; }
+    .stat-val.big { font-size:2.1rem; color:#29d3aa; }
+    .stat-sub { font-size:.82rem; color:var(--muted); margin-top:.2rem; }
+    .insight { background:rgba(41,211,170,.08); border:1px solid rgba(41,211,170,.2); border-radius:12px; padding:1rem; margin-top:1rem; font-size:.9rem; color:#d4e9e4; }
+    .cta-inline { margin-top:1.2rem; padding:1rem; border-radius:14px; border:1px solid var(--border); background:linear-gradient(180deg,rgba(41,211,170,.14) 0%,rgba(41,211,170,.04) 100%); }
+    .cta-inline p { margin:.3rem 0 .7rem; color:#d4e9e4; font-size:.92rem; }
+    .cta-inline a { display:inline-block; background:var(--accent); color:#052019; padding:.55rem .95rem; border-radius:8px; font-weight:800; font-size:.88rem; }
+    .hidden { display:none; }
+    .footer { border-top:1px solid var(--border); margin-top:auto; }
+    .footer-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; padding:1.2rem 0 1.8rem; display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; color:var(--muted); font-size:.9rem; }
+    @media (max-width:640px) { .nav-cta { display:none; } h1 { max-width:none; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/">Altor</a>
+      <div class="nav-links">
+        <a href="/tools/">Tools</a>
+        <a href="/blog/">Blog</a>
+        <a href="/compare/">Compare</a>
+      </div>
+      <a class="nav-cta" href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Free Calculator · No signup required</div>
+      <h1>Support Investigation ROI Calculator</h1>
+      <p class="lede">Enter your ticket volume, resolution time, and engineer cost. See exactly how much manual investigation costs your team annually — and what AI automation saves.</p>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="tool-card">
+      <div class="field">
+        <label for="tickets">Monthly technical escalations</label>
+        <div class="hint">Tickets requiring engineer investigation (not simple FAQ)</div>
+        <input type="number" id="tickets" value="200" min="1" max="50000">
+      </div>
+      <div class="field">
+        <label for="mttr">Avg investigation time (minutes)</label>
+        <div class="hint">Time from ticket open to root cause identified</div>
+        <input type="number" id="mttr" value="45" min="1" max="480">
+      </div>
+      <div class="field">
+        <label for="salary">Engineer hourly cost (USD)</label>
+        <div class="hint">Total loaded cost incl. benefits. US average: $120/hr</div>
+        <input type="number" id="salary" value="120" min="20" max="500">
+      </div>
+      <div class="field">
+        <label for="ai-mttr">AI investigation time (minutes)</label>
+        <div class="hint">Altor benchmark: 2 min (Portkey case study). Adjust to your estimate.</div>
+        <input type="number" id="ai-mttr" value="2" min="1" max="60">
+      </div>
+      <button onclick="calculate()">Calculate my ROI</button>
+    </div>
+
+    <div class="tool-card" id="results">
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="stat-label">Annual investigation cost (current)</div>
+          <div class="stat-val big" id="current-cost">—</div>
+          <div class="stat-sub" id="current-hours">—</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Annual cost with AI automation</div>
+          <div class="stat-val" id="ai-cost">—</div>
+          <div class="stat-sub" id="ai-hours">—</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Annual savings</div>
+          <div class="stat-val big" id="savings" style="color:#4ade80;">—</div>
+          <div class="stat-sub" id="reduction">—</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Engineering hours freed per year</div>
+          <div class="stat-val" id="hours-freed">—</div>
+          <div class="stat-sub">Hours returned to product work</div>
+        </div>
+      </div>
+      <div class="insight hidden" id="insight"></div>
+      <div class="cta-inline hidden" id="cta">
+        <strong>Teams at your volume use Altor to automate this.</strong>
+        <p>Bring one escalation to the demo call. We will show you what a 2-minute automated investigation looks like on your actual tickets.</p>
+        <a href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo — US hours →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Altor — AI investigation for B2B support teams. <a href="/">altorlab.com</a></span>
+      <span><a href="/tools/">Tools</a> · <a href="/blog/">Blog</a> · <a href="/compare/">Compare</a></span>
+    </div>
+  </footer>
+
+  <script>
+    function fmt(n) {
+      if (n >= 1000000) return '$' + (n/1000000).toFixed(1) + 'M';
+      if (n >= 1000) return '$' + Math.round(n/1000) + 'K';
+      return '$' + Math.round(n);
+    }
+
+    function calculate() {
+      const tickets = parseFloat(document.getElementById('tickets').value) || 0;
+      const mttr = parseFloat(document.getElementById('mttr').value) || 0;
+      const hourly = parseFloat(document.getElementById('salary').value) || 0;
+      const aiMttr = parseFloat(document.getElementById('ai-mttr').value) || 2;
+
+      const annualTickets = tickets * 12;
+      const currentHoursPerYear = (annualTickets * mttr) / 60;
+      const currentCost = currentHoursPerYear * hourly;
+
+      const aiHoursPerYear = (annualTickets * aiMttr) / 60;
+      const aiCost = aiHoursPerYear * hourly;
+
+      const savings = currentCost - aiCost;
+      const hoursFreed = currentHoursPerYear - aiHoursPerYear;
+      const reductionPct = currentCost > 0 ? Math.round((savings / currentCost) * 100) : 0;
+
+      document.getElementById('current-cost').textContent = fmt(currentCost);
+      document.getElementById('current-hours').textContent = Math.round(currentHoursPerYear).toLocaleString() + ' engineer-hours/year at current pace';
+      document.getElementById('ai-cost').textContent = fmt(aiCost);
+      document.getElementById('ai-hours').textContent = Math.round(aiHoursPerYear).toLocaleString() + ' engineer-hours/year with AI';
+      document.getElementById('savings').textContent = fmt(savings);
+      document.getElementById('reduction').textContent = reductionPct + '% reduction in investigation cost';
+      document.getElementById('hours-freed').textContent = Math.round(hoursFreed).toLocaleString() + ' hrs';
+
+      // Contextual insight
+      const insightEl = document.getElementById('insight');
+      const ctaEl = document.getElementById('cta');
+      let insight = '';
+      if (savings > 200000) {
+        insight = `At ${fmt(currentCost)}/year in investigation cost, this is a senior engineering hire equivalent. Teams at this scale typically see payback on AI investigation in under 60 days.`;
+      } else if (savings > 50000) {
+        insight = `${fmt(savings)} in annual savings is a material engineering budget line. Most B2B SaaS teams at this volume get ROI on AI investigation in the first quarter.`;
+      } else {
+        insight = `Even at this volume, ${fmt(savings)}/year freed from manual investigation is engineering time returned to product work — and the gap widens as ticket volume grows.`;
+      }
+      insightEl.textContent = insight;
+      insightEl.classList.remove('hidden');
+      ctaEl.classList.remove('hidden');
+    }
+
+    // Calculate on load with defaults
+    calculate();
+
+    // Recalculate on input change
+    ['tickets','mttr','salary','ai-mttr'].forEach(id => {
+      document.getElementById(id).addEventListener('input', calculate);
+    });
+  </script>
+</body>
+</html>

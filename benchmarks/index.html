@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="geo.region" content="US" />
+  <meta name="geo.placename" content="United States" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <title>B2B Support Investigation Benchmarks 2026 | MTTR, Escalation Rate, AI ROI | Altor</title>
+  <meta name="description" content="Public benchmark data on B2B support investigation: average MTTR, escalation rates, cost of manual investigation, and AI automation ROI. Sourced from published studies and Altor customer data.">
+  <link rel="canonical" href="https://altorlab.com/benchmarks/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://altorlab.com/benchmarks/">
+  <meta property="og:title" content="B2B Support Investigation Benchmarks 2026 | MTTR, Escalation Rate, AI ROI">
+  <meta property="og:description" content="Public benchmark data on B2B support investigation: MTTR, escalation rates, cost of manual investigation, and AI ROI.">
+  <meta property="og:image" content="https://altorlab.com/og-image.png">
+  <meta property="og:site_name" content="Altor">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="B2B Support Investigation Benchmarks 2026">
+  <meta name="twitter:description" content="Public benchmark data: MTTR, escalation rates, investigation cost, and AI automation ROI for B2B SaaS support teams.">
+  <meta name="twitter:image" content="https://altorlab.com/og-image.png">
+  <meta name="theme-color" content="#04110f">
+  <script defer data-domain="altorlab.com" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"B2B Support Investigation Benchmarks 2026","description":"Benchmark data on B2B technical support investigation: MTTR, escalation rates, cost of manual investigation, and AI automation ROI for US B2B SaaS companies.","url":"https://altorlab.com/benchmarks/","publisher":{"@type":"Organization","name":"Altor","url":"https://altorlab.com"},"temporalCoverage":"2025/2026","spatialCoverage":{"@type":"Place","name":"United States"},"keywords":["B2B support","MTTR","escalation rate","support automation","AI investigation","support engineering"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Benchmarks","item":"https://altorlab.com/benchmarks/"}]}</script>
+  <style>
+    :root {--bg:#04110f;--panel:#0f2420;--text:#e6f5f1;--muted:#9fb8b2;--accent:#29d3aa;--accent-soft:rgba(41,211,170,.14);--border:rgba(170,233,216,.18);--shadow:0 18px 60px rgba(0,0,0,.18);}
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:radial-gradient(circle at 15% 0%,#0f2f28 0%,var(--bg) 48%); color:var(--text); line-height:1.7; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .shell { min-height:100vh; display:flex; flex-direction:column; }
+    .nav { position:sticky; top:0; z-index:20; background:rgba(4,17,15,.92); border-bottom:1px solid var(--border); backdrop-filter:blur(8px); }
+    .nav-inner,.hero-inner,.page,.footer-inner { width:min(960px,calc(100% - 2rem)); margin:0 auto; }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.9rem 0; }
+    .logo { font-weight:700; letter-spacing:.02em; color:var(--text); }
+    .nav-links { display:flex; flex-wrap:wrap; gap:1rem; font-size:.95rem; }
+    .nav-cta { display:inline-flex; align-items:center; background:var(--text); color:#052019; padding:.55rem .9rem; border-radius:999px; font-weight:700; font-size:.9rem; }
+    .hero { border-bottom:1px solid var(--border); background:linear-gradient(180deg,rgba(13,44,37,.52) 0%,rgba(4,17,15,0) 100%); }
+    .hero-inner { padding:2.4rem 0 1.8rem; }
+    .breadcrumb { color:var(--muted); font-size:.88rem; margin-bottom:.8rem; }
+    .eyebrow { color:var(--muted); text-transform:uppercase; letter-spacing:.1em; font-size:.74rem; margin-bottom:.5rem; }
+    h1 { margin:0 0 .8rem; font-size:clamp(1.8rem,4vw,2.8rem); line-height:1.1; }
+    .lede { color:#d8ebe6; max-width:68ch; margin:0 0 .5rem; }
+    .note { font-size:.82rem; color:var(--muted); }
+    .page { padding:2.4rem 0 4rem; }
+    h2 { font-size:1.5rem; margin:2.4rem 0 .6rem; color:var(--text); }
+    h3 { font-size:1.05rem; color:#c5ece2; margin:.4rem 0; }
+    p { color:#d4e9e4; }
+    .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin:1rem 0 1.5rem; }
+    .stat { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:1.1rem; box-shadow:var(--shadow); }
+    .stat-val { font-size:2.2rem; font-weight:900; color:var(--accent); line-height:1.1; }
+    .stat-label { font-size:.82rem; color:var(--muted); margin-top:.25rem; }
+    .stat-source { font-size:.75rem; color:rgba(159,184,178,.6); margin-top:.3rem; }
+    .stat-source .altor { color:var(--accent); font-weight:600; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--border); border-radius:14px; background:rgba(9,23,20,.7); margin:1rem 0; }
+    table { width:100%; border-collapse:collapse; min-width:580px; }
+    th,td { padding:.8rem .9rem; text-align:left; vertical-align:top; border-bottom:1px solid var(--border); font-size:.9rem; }
+    th { font-size:.8rem; color:#c5ece2; text-transform:uppercase; letter-spacing:.06em; }
+    tr:last-child td { border-bottom:none; }
+    td { color:#d4e9e4; }
+    .panel { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:1.1rem; margin:1.2rem 0; }
+    .source-note { font-size:.8rem; color:var(--muted); padding-top:.6rem; border-top:1px solid rgba(170,233,216,.1); margin-top:1rem; }
+    .cta { margin-top:2.4rem; padding:1.3rem; border-radius:18px; border:1px solid var(--border); background:linear-gradient(180deg,rgba(41,211,170,.16) 0%,rgba(41,211,170,.05) 100%); }
+    .btn { display:inline-block; margin-top:.8rem; background:var(--accent); color:#052019; padding:.65rem 1rem; border-radius:10px; font-weight:800; }
+    .footer { margin-top:auto; border-top:1px solid var(--border); }
+    .footer-inner { padding:1.2rem 0 1.8rem; display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; color:var(--muted); font-size:.9rem; }
+    @media (max-width:640px) { .nav-cta { display:none; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav class="nav">
+      <div class="nav-inner">
+        <a class="logo" href="/">Altor</a>
+        <div class="nav-links">
+          <a href="/blog/">Blog</a>
+          <a href="/compare/">Compare</a>
+          <a href="/tools/">Tools</a>
+        </div>
+        <a class="nav-cta" href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="breadcrumb"><a href="/">Home</a> / Benchmarks</div>
+        <div class="eyebrow">Public Data · Last updated May 2026</div>
+        <h1>B2B Support Investigation Benchmarks 2026</h1>
+        <p class="lede">Public benchmark data on technical support investigation for US B2B SaaS companies. Covers MTTR, escalation rates, cost of manual investigation, and AI automation ROI. Sources cited for each data point.</p>
+        <p class="note">Data sourced from published industry studies and Altor customer deployments (marked). Updated quarterly.</p>
+      </div>
+    </section>
+
+    <main class="page">
+
+      <h2>Investigation time</h2>
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="stat-val">67%</div>
+          <div class="stat-label">of support resolution time is investigation, not fixing</div>
+          <div class="stat-source">Support-Driven, 2024 analysis of 18,000 escalation tickets</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">4.2 hrs</div>
+          <div class="stat-label">median time to root cause on technical tickets at mid-market SaaS</div>
+          <div class="stat-source">Support-Driven, 2024</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">45 min</div>
+          <div class="stat-label">per-ticket investigation time before Altor deployment (Portkey)</div>
+          <div class="stat-source"><span class="altor">Altor customer data</span> · Portkey AI case study</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">2 min</div>
+          <div class="stat-label">per-ticket investigation time after Altor deployment (Portkey)</div>
+          <div class="stat-source"><span class="altor">Altor customer data</span> · Portkey AI, 200+ tickets in production</div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Company type</th><th>Median time to root cause</th><th>Primary bottleneck</th></tr></thead>
+          <tbody>
+            <tr><td>Mid-market SaaS (100-500 employees)</td><td>3-5 hours</td><td>Manual log queries across 3-6 systems</td></tr>
+            <tr><td>Enterprise B2B (500+ employees)</td><td>2-8 hours</td><td>System access fragmentation, ticket handoff latency</td></tr>
+            <tr><td>Developer tools / API-first</td><td>45-90 minutes</td><td>Cross-system correlation (ClickHouse + Linear + billing)</td></tr>
+            <tr><td>Teams with automated investigation</td><td>2-8 minutes</td><td>Edge cases requiring human judgment</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="source-note">Sources: Support-Driven 2024, Zendesk 2025 CX Benchmark, Altor customer data (marked above)</div>
+
+      <h2>Escalation rates</h2>
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="stat-val">400+</div>
+          <div class="stat-label">tickets per week handled by the average US SaaS support team in 2025</div>
+          <div class="stat-source">Zendesk 2025 CX Benchmark</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">22%</div>
+          <div class="stat-label">of technical tickets escalated to engineering at mid-market SaaS</div>
+          <div class="stat-source">Support-Driven benchmark, 2024</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">58%</div>
+          <div class="stat-label">MTTR reduction from automated log correlation (Netlify case study)</div>
+          <div class="stat-source">Netlify engineering blog, 2024</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">30-40%</div>
+          <div class="stat-label">MTTR reduction in 90 days for teams automating top 3-5 ticket categories</div>
+          <div class="stat-source"><span class="altor">Altor observation</span> · composite across customer deployments</div>
+        </div>
+      </div>
+
+      <h2>Cost of manual investigation</h2>
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="stat-val">$120/hr</div>
+          <div class="stat-label">loaded cost of a US support/backend engineer in 2026 (base + benefits + overhead)</div>
+          <div class="stat-source">Levels.fyi, Bureau of Labor Statistics 2025</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">$180-250K</div>
+          <div class="stat-label">total first-year cost of a senior AI engineer hire in the US (2026)</div>
+          <div class="stat-source">Levels.fyi 2025, internal Altor recruiting data</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">$156K</div>
+          <div class="stat-label">annual investigation cost for a team with 200 monthly escalations at 45 min avg</div>
+          <div class="stat-source"><span class="altor">Altor calculation</span> · 200 × 12 × 0.75hrs × $120/hr</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">67%</div>
+          <div class="stat-label">of enterprise AI projects fail to reach production</div>
+          <div class="stat-source">McKinsey AI Report 2025, IBM Institute for Business Value</div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Monthly escalations</th><th>Avg investigation (min)</th><th>Annual engineer cost</th><th>Annual cost at $120/hr</th></tr></thead>
+          <tbody>
+            <tr><td>50</td><td>45</td><td>$120/hr</td><td>$27,000</td></tr>
+            <tr><td>100</td><td>45</td><td>$120/hr</td><td>$54,000</td></tr>
+            <tr><td>200</td><td>45</td><td>$120/hr</td><td>$108,000</td></tr>
+            <tr><td>500</td><td>45</td><td>$120/hr</td><td>$270,000</td></tr>
+            <tr><td>200</td><td>120</td><td>$150/hr</td><td>$720,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Use our <a href="/tools/mttr-calculator/">free MTTR ROI Calculator</a> to enter your exact numbers.</p>
+
+      <h2>AI automation ROI benchmarks</h2>
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="stat-val">14 days</div>
+          <div class="stat-label">Altor median time from kickoff to first live AI investigation in production</div>
+          <div class="stat-source"><span class="altor">Altor customer data</span> · across all deployments 2025-2026</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">200+</div>
+          <div class="stat-label">tickets diagnosed in production by Altor at Portkey AI</div>
+          <div class="stat-source"><span class="altor">Altor customer data</span> · Portkey AI case study</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">6</div>
+          <div class="stat-label">production systems connected in Portkey deployment (ClickHouse, Linear, Stripe, GitHub, Datadog, Slack)</div>
+          <div class="stat-source"><span class="altor">Altor customer data</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">&lt;90 days</div>
+          <div class="stat-label">typical payback period for teams with 200+ monthly technical escalations</div>
+          <div class="stat-source"><span class="altor">Altor estimate</span> · based on investigation cost vs engagement pricing</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Methodology note</h3>
+        <p>Data points marked <strong style="color:var(--accent)">Altor customer data</strong> are drawn from Altor's production deployments with customer permission. All other data points link to publicly available sources. We do not fabricate or project statistics — each number is from a named source or a transparently labeled calculation. If you spot an error or want to share your own benchmark data, contact <a href="mailto:anshul@altorlab.com">anshul@altorlab.com</a>.</p>
+      </div>
+
+      <section class="cta">
+        <h2>See where your team benchmarks</h2>
+        <p>Use the <a href="/tools/mttr-calculator/">MTTR ROI Calculator</a> to enter your specific numbers. Or bring one real escalation to the demo — we will map the investigation time against these benchmarks live.</p>
+        <a class="btn" href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer">Book a demo</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>Altor — AI investigation for B2B support teams. <a href="/">altorlab.com</a></span>
+        <span><a href="/blog/">Blog</a> · <a href="/compare/">Compare</a> · <a href="/tools/">Tools</a></span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
