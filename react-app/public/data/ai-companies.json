@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-05-07T08:18:08.451433+00:00",
+    "generated_at": "2026-05-08T07:19:15.239825+00:00",
     "company_count": 268,
-    "total_detections": 88,
+    "total_detections": 89,
     "crawler_version": "1.0.0",
     "description": "AI tool adoption intelligence for B2B SaaS companies. Signals sourced from public web surfaces, ATS job postings, and vendor customer pages. Confidence-scored, evidence-linked."
   },
@@ -63,7 +63,7 @@
         }
       ],
       "tool_count": 5,
-      "last_crawled": "2026-05-07T08:14:27.475460+00:00",
+      "last_crawled": "2026-05-08T07:15:35.147989+00:00",
       "altor_fit": "strong",
       "first_seen": "2026-04-17T07:19:28.254449+00:00"
     },
@@ -112,7 +112,7 @@
         }
       ],
       "tool_count": 3,
-      "last_crawled": "2026-05-07T08:15:48.643258+00:00",
+      "last_crawled": "2026-05-08T07:16:56.664170+00:00",
       "altor_fit": "strong",
       "first_seen": "2026-04-20T08:47:22.306164+00:00"
     },
@@ -155,7 +155,7 @@
         }
       ],
       "tool_count": 3,
-      "last_crawled": "2026-05-07T08:15:12.553199+00:00",
+      "last_crawled": "2026-05-08T07:16:16.679156+00:00",
       "altor_fit": "good",
       "first_seen": "2026-04-17T07:20:18.211326+00:00"
     },
@@ -204,7 +204,7 @@
         }
       ],
       "tool_count": 3,
-      "last_crawled": "2026-05-07T08:14:01.096576+00:00",
+      "last_crawled": "2026-05-08T07:15:08.907683+00:00",
       "altor_fit": "strong",
       "first_seen": "2026-04-16T13:20:06.341871+00:00"
     },
@@ -244,7 +244,7 @@
         }
       ],
       "tool_count": 3,
-      "last_crawled": "2026-05-07T08:14:12.203662+00:00",
+      "last_crawled": "2026-05-08T07:15:20.681837+00:00",
       "altor_fit": "strong",
       "first_seen": "2026-04-17T07:19:13.615208+00:00"
     },
@@ -284,7 +284,7 @@
         }
       ],
       "tool_count": 3,
-      "last_crawled": "2026-05-07T08:14:18.736320+00:00",
+      "last_crawled": "2026-05-08T07:15:27.731645+00:00",
       "altor_fit": "strong",
       "first_seen": "2026-04-16T13:20:12.720616+00:00"
     },
@@ -301,7 +301,7 @@
           ],
           "evidence_urls": [
             "https://n8n.io",
-            "https://n8n.io/_nuxt/DWbMPaXZ.js"
+            "https://n8n.io/_nuxt/brCOAL2F.js"
           ],
           "confidence": "medium"
         },
@@ -314,7 +314,7 @@
           ],
           "evidence_urls": [
             "https://n8n.io",
-            "https://n8n.io/_nuxt/DWbMPaXZ.js"
+            "https://n8n.io/_nuxt/brCOAL2F.js"
           ],
           "confidence": "medium"
         },
@@ -327,13 +327,13 @@
           ],
           "evidence_urls": [
             "https://n8n.io",
-            "https://n8n.io/_nuxt/DWbMPaXZ.js"
+            "https://n8n.io/_nuxt/brCOAL2F.js"
           ],
           "confidence": "medium"
         }
       ],
       "tool_count": 3,
-      "last_crawled": "2026-05-07T08:15:26.063095+00:00",
+      "last_crawled": "2026-05-08T07:16:31.942926+00:00",
       "altor_fit": "strong",
       "first_seen": "2026-04-17T07:20:34.503159+00:00"
     },
@@ -366,7 +366,7 @@
         }
       ],
       "tool_count": 2,
-      "last_crawled": "2026-05-07T08:14:43.043655+00:00",
+      "last_crawled": "2026-05-08T07:15:50.971752+00:00",
       "altor_fit": "good",
       "first_seen": "2026-04-17T07:19:46.575233+00:00"
     },
@@ -402,39 +402,9 @@
         }
       ],
       "tool_count": 2,
-      "last_crawled": "2026-05-07T08:16:05.857876+00:00",
+      "last_crawled": "2026-05-08T07:17:13.897201+00:00",
       "altor_fit": "strong",
       "first_seen": "2026-04-20T08:48:01.654987+00:00"
-    },
-    {
-      "name": "Apollo.io",
-      "domain": "apollo.io",
-      "ai_tools": [
-        {
-          "vendor": "LangChain",
-          "tool": "LangChain",
-          "tier": "orchestration",
-          "sources": [
-            "jobs"
-          ],
-          "evidence_urls": [],
-          "confidence": "medium"
-        },
-        {
-          "vendor": "LlamaIndex",
-          "tool": "LlamaIndex",
-          "tier": "orchestration",
-          "sources": [
-            "jobs"
-          ],
-          "evidence_urls": [],
-          "confidence": "medium"
-        }
-      ],
-      "tool_count": 2,
-      "last_crawled": "2026-05-07T08:14:55.773858+00:00",
-      "altor_fit": "moderate",
-      "first_seen": "2026-04-17T07:19:58.126773+00:00"
     },
     {
       "name": "Asana",
@@ -462,7 +432,7 @@
         }
       ],
       "tool_count": 2,
-      "last_crawled": "2026-05-07T08:15:23.932782+00:00",
+      "last_crawled": "2026-05-08T07:16:28.209148+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:20:32.594895+00:00"
     },
@@ -479,7 +449,7 @@
           ],
           "evidence_urls": [
             "https://coderabbit.ai",
-            "https://coderabbit.ai/_next/static/chunks/0k7eq-4_7b5ub.js?dpl=dpl_9AYs6kD9wRYDyCnJYAUZfcmfdDSj"
+            "https://coderabbit.ai/_next/static/chunks/0ttv.mqgfh2u_.js?dpl=dpl_G5qcXdV8nEsQrCvk723XsrGi3pQJ"
           ],
           "confidence": "medium"
         },
@@ -492,84 +462,15 @@
           ],
           "evidence_urls": [
             "https://coderabbit.ai",
-            "https://coderabbit.ai/_next/static/chunks/0k7eq-4_7b5ub.js?dpl=dpl_9AYs6kD9wRYDyCnJYAUZfcmfdDSj"
+            "https://coderabbit.ai/_next/static/chunks/0ttv.mqgfh2u_.js?dpl=dpl_G5qcXdV8nEsQrCvk723XsrGi3pQJ"
           ],
           "confidence": "medium"
         }
       ],
       "tool_count": 2,
-      "last_crawled": "2026-05-07T08:16:11.777811+00:00",
+      "last_crawled": "2026-05-08T07:17:18.586532+00:00",
       "altor_fit": "strong",
       "first_seen": "2026-04-20T08:47:55.554230+00:00"
-    },
-    {
-      "name": "Datadog",
-      "domain": "datadoghq.com",
-      "ai_tools": [
-        {
-          "vendor": "Algolia",
-          "tool": "Algolia AI Search",
-          "tier": "app_layer",
-          "sources": [
-            "web"
-          ],
-          "evidence_urls": [
-            "https://datadoghq.com",
-            "https://www.datadoghq.com/assets/lang-redirects.min.c1ad237f9d953469286cce919fd714d9edf7ad193e6a60798192d8a8c69156a6.js"
-          ],
-          "confidence": "high"
-        },
-        {
-          "vendor": "LangChain",
-          "tool": "LangChain",
-          "tier": "orchestration",
-          "sources": [
-            "jobs"
-          ],
-          "evidence_urls": [],
-          "confidence": "medium"
-        }
-      ],
-      "tool_count": 2,
-      "last_crawled": "2026-05-07T08:14:08.529875+00:00",
-      "altor_fit": "good",
-      "first_seen": "2026-04-16T13:20:06.261369+00:00"
-    },
-    {
-      "name": "Hugging Face",
-      "domain": "huggingface.co",
-      "ai_tools": [
-        {
-          "vendor": "Mistral AI",
-          "tool": "Mistral API",
-          "tier": "model_api",
-          "sources": [
-            "web"
-          ],
-          "evidence_urls": [
-            "https://huggingface.co",
-            "https://huggingface.co/js/script.js"
-          ],
-          "confidence": "medium"
-        },
-        {
-          "vendor": "Hugging Face",
-          "tool": "Hugging Face",
-          "tier": "orchestration",
-          "sources": [
-            "web"
-          ],
-          "evidence_urls": [
-            "https://huggingface.co",
-            "https://huggingface.co/js/script.js"
-          ],
-          "confidence": "medium"
-        }
-      ],
-      "tool_count": 2,
-      "last_crawled": "2026-05-07T08:14:04.295727+00:00",
-      "altor_fit": "strong",
-      "first_seen": "2026-04-17T07:19:04.551812+00:00"
     },
     {
       "name": "LaunchDarkly",
@@ -597,7 +498,7 @@
         }
       ],
       "tool_count": 2,
-      "last_crawled": "2026-05-07T08:14:49.244429+00:00",
+      "last_crawled": "2026-05-08T07:15:56.450121+00:00",
       "altor_fit": "strong",
       "first_seen": "2026-04-17T07:20:05.713459+00:00"
     },
@@ -627,7 +528,7 @@
         }
       ],
       "tool_count": 2,
-      "last_crawled": "2026-05-07T08:15:28.128099+00:00",
+      "last_crawled": "2026-05-08T07:16:33.250118+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:20:39.506494+00:00"
     },
@@ -657,7 +558,7 @@
         }
       ],
       "tool_count": 2,
-      "last_crawled": "2026-05-07T08:14:50.062855+00:00",
+      "last_crawled": "2026-05-08T07:15:56.318438+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:19:52.471111+00:00"
     },
@@ -693,7 +594,7 @@
         }
       ],
       "tool_count": 2,
-      "last_crawled": "2026-05-07T08:14:00.307096+00:00",
+      "last_crawled": "2026-05-08T07:15:08.352922+00:00",
       "altor_fit": "strong",
       "first_seen": "2026-04-16T13:20:06.010224+00:00"
     },
@@ -710,7 +611,7 @@
           ],
           "evidence_urls": [
             "https://render.com",
-            "https://render.com/_next/static/chunks/4bd1b696-e21779a6db3ba2ac.js?dpl=f9d5cc7c7"
+            "https://render.com/_next/static/chunks/4bd1b696-e21779a6db3ba2ac.js?dpl=65b8d5697b"
           ],
           "confidence": "high"
         },
@@ -723,13 +624,13 @@
           ],
           "evidence_urls": [
             "https://render.com",
-            "https://render.com/_next/static/chunks/4bd1b696-e21779a6db3ba2ac.js?dpl=f9d5cc7c7"
+            "https://render.com/_next/static/chunks/4bd1b696-e21779a6db3ba2ac.js?dpl=65b8d5697b"
           ],
           "confidence": "high"
         }
       ],
       "tool_count": 2,
-      "last_crawled": "2026-05-07T08:15:17.226816+00:00",
+      "last_crawled": "2026-05-08T07:16:23.830402+00:00",
       "altor_fit": "good",
       "first_seen": "2026-04-16T13:20:28.240134+00:00"
     },
@@ -762,7 +663,7 @@
         }
       ],
       "tool_count": 2,
-      "last_crawled": "2026-05-07T08:14:55.424554+00:00",
+      "last_crawled": "2026-05-08T07:16:04.269206+00:00",
       "altor_fit": "good",
       "first_seen": "2026-04-17T07:19:59.475004+00:00"
     },
@@ -798,7 +699,7 @@
         }
       ],
       "tool_count": 2,
-      "last_crawled": "2026-05-07T08:14:59.545246+00:00",
+      "last_crawled": "2026-05-08T07:16:07.036312+00:00",
       "altor_fit": "strong",
       "first_seen": "2026-04-16T13:20:28.018408+00:00"
     },
@@ -828,7 +729,7 @@
         }
       ],
       "tool_count": 2,
-      "last_crawled": "2026-05-07T08:15:59.060426+00:00",
+      "last_crawled": "2026-05-08T07:17:07.195715+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-20T08:47:36.980018+00:00"
     },
@@ -858,9 +759,52 @@
         }
       ],
       "tool_count": 2,
-      "last_crawled": "2026-05-07T08:15:01.033803+00:00",
+      "last_crawled": "2026-05-08T07:16:04.476566+00:00",
       "altor_fit": "strong",
       "first_seen": "2026-04-17T07:20:04.322492+00:00"
+    },
+    {
+      "name": "Amplemarket",
+      "domain": "amplemarket.com",
+      "ai_tools": [
+        {
+          "vendor": "OpenAI",
+          "tool": "OpenAI API",
+          "tier": "model_api",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://amplemarket.com",
+            "https://storage.googleapis.com/assets.amplemarket.com/webflow/scripts/homepage/home-pillars.min.js"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-05-08T07:17:10.207468+00:00",
+      "altor_fit": "good",
+      "first_seen": "2026-04-20T08:47:47.134407+00:00"
+    },
+    {
+      "name": "Apollo.io",
+      "domain": "apollo.io",
+      "ai_tools": [
+        {
+          "vendor": "Intercom",
+          "tool": "Intercom Fin (AI)",
+          "tier": "app_layer",
+          "sources": [
+            "jobs"
+          ],
+          "evidence_urls": [],
+          "confidence": "high"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-05-08T07:16:00.201392+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-17T07:19:58.126773+00:00"
     },
     {
       "name": "Baseten",
@@ -881,7 +825,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:14:04.407376+00:00",
+      "last_crawled": "2026-05-08T07:15:11.775256+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-16T13:20:07.817872+00:00"
     },
@@ -901,9 +845,29 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:15:33.097529+00:00",
+      "last_crawled": "2026-05-08T07:16:38.525781+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:20:43.345245+00:00"
+    },
+    {
+      "name": "Celigo",
+      "domain": "celigo.com",
+      "ai_tools": [
+        {
+          "vendor": "GitHub",
+          "tool": "GitHub Copilot",
+          "tier": "internal_tool",
+          "sources": [
+            "jobs"
+          ],
+          "evidence_urls": [],
+          "confidence": "medium"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-05-08T07:16:32.491484+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-17T07:20:35.798663+00:00"
     },
     {
       "name": "CircleCI",
@@ -924,9 +888,29 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:15:07.805057+00:00",
+      "last_crawled": "2026-05-08T07:16:13.425284+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:20:13.510994+00:00"
+    },
+    {
+      "name": "Cloudflare",
+      "domain": "cloudflare.com",
+      "ai_tools": [
+        {
+          "vendor": "GitHub",
+          "tool": "GitHub Copilot",
+          "tier": "internal_tool",
+          "sources": [
+            "jobs"
+          ],
+          "evidence_urls": [],
+          "confidence": "medium"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-05-08T07:16:16.077275+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-17T07:20:17.362739+00:00"
     },
     {
       "name": "Coda",
@@ -941,13 +925,13 @@
           ],
           "evidence_urls": [
             "https://coda.io",
-            "https://cdn.coda.io/assets/external-cms.6bf04824aa4a4ac1.entry.js"
+            "https://cdn.coda.io/assets/external-cms.cc4f467a90713c8a.entry.js"
           ],
           "confidence": "high"
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:15:15.762033+00:00",
+      "last_crawled": "2026-05-08T07:16:23.329205+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-16T13:20:25.680748+00:00"
     },
@@ -964,13 +948,13 @@
           ],
           "evidence_urls": [
             "https://cursor.com",
-            "https://cursor.com/marketing-static/_next/static/chunks/0dn4egpfx.9oq.js?dpl=dpl_HQZJ3j72K8CVqxpa1CxLBGK2s9nW"
+            "https://cursor.com/marketing-static/_next/static/chunks/0dn4egpfx.9oq.js?dpl=dpl_HSURNf9H7BVQXPGcDvSb7RjxdGCx"
           ],
           "confidence": "medium"
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:15:11.770011+00:00",
+      "last_crawled": "2026-05-08T07:16:17.135842+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-16T13:20:22.507714+00:00"
     },
@@ -990,9 +974,32 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:14:30.437078+00:00",
+      "last_crawled": "2026-05-08T07:15:39.360647+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:19:31.987259+00:00"
+    },
+    {
+      "name": "Datadog",
+      "domain": "datadoghq.com",
+      "ai_tools": [
+        {
+          "vendor": "Algolia",
+          "tool": "Algolia AI Search",
+          "tier": "app_layer",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://datadoghq.com",
+            "https://www.datadoghq.com/assets/lang-redirects.min.c1ad237f9d953469286cce919fd714d9edf7ad193e6a60798192d8a8c69156a6.js"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-05-08T07:15:16.380274+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-16T13:20:06.261369+00:00"
     },
     {
       "name": "Drift",
@@ -1012,7 +1019,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:14:44.902093+00:00",
+      "last_crawled": "2026-05-08T07:15:51.936816+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:19:48.127900+00:00"
     },
@@ -1032,7 +1039,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:14:16.187642+00:00",
+      "last_crawled": "2026-05-08T07:15:23.785301+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:19:15.079378+00:00"
     },
@@ -1055,7 +1062,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:16:13.987001+00:00",
+      "last_crawled": "2026-05-08T07:17:20.754254+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-20T08:48:00.085283+00:00"
     },
@@ -1078,7 +1085,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:15:16.194938+00:00",
+      "last_crawled": "2026-05-08T07:16:21.981725+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-16T13:20:25.943789+00:00"
     },
@@ -1098,7 +1105,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:14:13.903266+00:00",
+      "last_crawled": "2026-05-08T07:15:26.458195+00:00",
       "altor_fit": "good",
       "first_seen": "2026-04-16T13:20:15.997878+00:00"
     },
@@ -1121,7 +1128,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:16:37.433661+00:00",
+      "last_crawled": "2026-05-08T07:17:47.504505+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-20T08:48:42.766612+00:00"
     },
@@ -1138,15 +1145,38 @@
           ],
           "evidence_urls": [
             "https://hightouch.com",
-            "https://hightouch.com/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js?dpl=dpl_5z2oRBhMX7oK1pCAYvDVQhsAgrVL"
+            "https://hightouch.com/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js?dpl=dpl_BGUDufCT47amqSdHw7p6SZdFBwh1"
           ],
           "confidence": "high"
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:16:14.332207+00:00",
+      "last_crawled": "2026-05-08T07:17:21.938192+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-20T08:48:12.120810+00:00"
+    },
+    {
+      "name": "Hugging Face",
+      "domain": "huggingface.co",
+      "ai_tools": [
+        {
+          "vendor": "Hugging Face",
+          "tool": "Hugging Face",
+          "tier": "orchestration",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://huggingface.co",
+            "https://huggingface.co/js/script.js"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-05-08T07:15:11.673643+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-17T07:19:04.551812+00:00"
     },
     {
       "name": "Inngest",
@@ -1167,7 +1197,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:16:35.745591+00:00",
+      "last_crawled": "2026-05-08T07:17:45.397575+00:00",
       "altor_fit": "good",
       "first_seen": "2026-04-20T08:48:41.470508+00:00"
     },
@@ -1185,13 +1215,13 @@
           ],
           "evidence_urls": [
             "https://intercom.com",
-            "https://vercel.intercom.com/_next/static/chunks/9fb8213e-5cfb9a88ae5dce42.js?dpl=dpl_GU3sssvzY2BLgBWLpqAAuYyHPPqN"
+            "https://vercel.intercom.com/_next/static/chunks/9fb8213e-b50e54beb6be0904.js?dpl=dpl_4kboZV6WLEwd7uwbEHymSr2Vnjgh"
           ],
           "confidence": "high"
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:14:37.417308+00:00",
+      "last_crawled": "2026-05-08T07:15:45.132807+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-16T13:20:23.235919+00:00"
     },
@@ -1211,7 +1241,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:15:43.776048+00:00",
+      "last_crawled": "2026-05-08T07:16:48.302734+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:20:56.187981+00:00"
     },
@@ -1234,7 +1264,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:16:40.445257+00:00",
+      "last_crawled": "2026-05-08T07:17:50.570582+00:00",
       "altor_fit": "good",
       "first_seen": "2026-04-20T08:48:56.786703+00:00"
     },
@@ -1257,7 +1287,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:14:41.878649+00:00",
+      "last_crawled": "2026-05-08T07:15:50.116523+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:19:49.061933+00:00"
     },
@@ -1280,7 +1310,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:14:08.106499+00:00",
+      "last_crawled": "2026-05-08T07:15:15.844548+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:19:13.325911+00:00"
     },
@@ -1297,13 +1327,13 @@
           ],
           "evidence_urls": [
             "https://linear.app",
-            "https://static.linear.app/web/_next/static/chunks/4b101069-772b47233c1a052e.js"
+            "https://static.linear.app/web/_next/static/chunks/f2106627-82bcd12416b2fab7.js"
           ],
           "confidence": "high"
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:15:15.292859+00:00",
+      "last_crawled": "2026-05-08T07:16:20.661324+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-16T13:20:24.423739+00:00"
     },
@@ -1326,7 +1356,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:14:43.011396+00:00",
+      "last_crawled": "2026-05-08T07:15:52.050869+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:19:46.505940+00:00"
     },
@@ -1346,7 +1376,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:14:08.421053+00:00",
+      "last_crawled": "2026-05-08T07:15:16.268173+00:00",
       "altor_fit": "good",
       "first_seen": "2026-04-16T13:20:09.925577+00:00"
     },
@@ -1369,7 +1399,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:15:05.766620+00:00",
+      "last_crawled": "2026-05-08T07:16:10.889018+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:20:12.394938+00:00"
     },
@@ -1392,7 +1422,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:14:33.752818+00:00",
+      "last_crawled": "2026-05-08T07:15:42.667439+00:00",
       "altor_fit": "good",
       "first_seen": "2026-04-16T13:20:20.328113+00:00"
     },
@@ -1409,13 +1439,13 @@
           ],
           "evidence_urls": [
             "https://resend.com",
-            "https://resend.com/_next/static/chunks/0gspcv0j_63dm.js?dpl=dpl_4EARWfSmAJ44H6RA37U29k4ZJwSm"
+            "https://resend.com/_next/static/chunks/13hy7y01e2b-m.js?dpl=dpl_5SQdgbLmV97oyHgoRhvRwwpVVhuy"
           ],
           "confidence": "high"
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:16:33.970666+00:00",
+      "last_crawled": "2026-05-08T07:17:42.307365+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-20T08:48:39.586913+00:00"
     },
@@ -1432,13 +1462,13 @@
           ],
           "evidence_urls": [
             "https://scale.com",
-            "https://scale.com/_next/static/chunks/c88fcc5f8b21ff92.js?dpl=dpl_12b6SDWV3E7zzkyqNcf7bBEeJdU4"
+            "https://scale.com/_next/static/chunks/0o2pg6lyby.wf.js?dpl=dpl_13rUV6cvaWdVjgdhAhtHwTbmEPXe"
           ],
           "confidence": "medium"
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:14:05.199439+00:00",
+      "last_crawled": "2026-05-08T07:15:12.579609+00:00",
       "altor_fit": "good",
       "first_seen": "2026-04-17T07:19:04.116590+00:00"
     },
@@ -1458,7 +1488,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:15:01.028424+00:00",
+      "last_crawled": "2026-05-08T07:16:06.688815+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:20:04.132014+00:00"
     },
@@ -1481,7 +1511,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:15:12.892351+00:00",
+      "last_crawled": "2026-05-08T07:16:18.296635+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:20:23.626399+00:00"
     },
@@ -1504,7 +1534,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:15:04.519903+00:00",
+      "last_crawled": "2026-05-08T07:16:09.578999+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:20:08.680292+00:00"
     },
@@ -1527,7 +1557,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:16:44.957589+00:00",
+      "last_crawled": "2026-05-08T07:17:54.765458+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-20T08:48:48.995385+00:00"
     },
@@ -1550,7 +1580,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:15:55.200854+00:00",
+      "last_crawled": "2026-05-08T07:16:59.979551+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-20T08:47:32.122043+00:00"
     },
@@ -1567,15 +1597,38 @@
           ],
           "evidence_urls": [
             "https://supabase.com",
-            "https://frontend-assets.supabase.com/www/757598cd8c7c/_next/static/chunks/polyfills-42372ed130431b0a.js?dpl=dpl_AmuRMBFiZw7qn4yyc4aWYFrUx7R2"
+            "https://frontend-assets.supabase.com/www/ae66a6a9c092/_next/static/chunks/polyfills-42372ed130431b0a.js?dpl=dpl_Bo8DETLKJ12AEUDUNBsNVQJpRuZc"
           ],
           "confidence": "medium"
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:14:19.384895+00:00",
+      "last_crawled": "2026-05-08T07:15:27.259033+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-16T13:20:14.123149+00:00"
+    },
+    {
+      "name": "Supermetrics",
+      "domain": "supermetrics.com",
+      "ai_tools": [
+        {
+          "vendor": "Intercom",
+          "tool": "Intercom Fin (AI)",
+          "tier": "app_layer",
+          "sources": [
+            "web"
+          ],
+          "evidence_urls": [
+            "https://supermetrics.com",
+            "https://supermetrics.com/_astro/avo.astro_astro_type_script_index_0_lang.nKTOPzjT.js"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "tool_count": 1,
+      "last_crawled": "2026-05-08T07:15:41.062151+00:00",
+      "altor_fit": "moderate",
+      "first_seen": "2026-04-17T07:19:40.369433+00:00"
     },
     {
       "name": "Wiz",
@@ -1596,7 +1649,7 @@
         }
       ],
       "tool_count": 1,
-      "last_crawled": "2026-05-07T08:15:04.245210+00:00",
+      "last_crawled": "2026-05-08T07:16:10.355178+00:00",
       "altor_fit": "moderate",
       "first_seen": "2026-04-17T07:20:10.857283+00:00"
     },
@@ -1605,7 +1658,7 @@
       "domain": "abnormalsecurity.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:48.568166+00:00",
+      "last_crawled": "2026-05-08T07:16:54.226410+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:18.983264+00:00"
     },
@@ -1614,7 +1667,7 @@
       "domain": "abridge.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:54.207938+00:00",
+      "last_crawled": "2026-05-08T07:16:59.198508+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:26.835324+00:00"
     },
@@ -1623,7 +1676,7 @@
       "domain": "agiloft.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:55.298013+00:00",
+      "last_crawled": "2026-05-08T07:17:00.098606+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:38.619736+00:00"
     },
@@ -1632,7 +1685,7 @@
       "domain": "aidoc.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:00.962890+00:00",
+      "last_crawled": "2026-05-08T07:17:06.327789+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:33.757695+00:00"
     },
@@ -1641,7 +1694,7 @@
       "domain": "airbyte.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:24.993821+00:00",
+      "last_crawled": "2026-05-08T07:15:32.936505+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:26.558363+00:00"
     },
@@ -1650,25 +1703,16 @@
       "domain": "airtable.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:21.012406+00:00",
+      "last_crawled": "2026-05-08T07:16:26.943732+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:30.346021+00:00"
-    },
-    {
-      "name": "Amplemarket",
-      "domain": "amplemarket.com",
-      "ai_tools": [],
-      "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:02.524228+00:00",
-      "altor_fit": "low",
-      "first_seen": "2026-04-20T08:47:47.134407+00:00"
     },
     {
       "name": "Anterior",
       "domain": "anterior.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:55.331547+00:00",
+      "last_crawled": "2026-05-08T07:17:00.915820+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:29.648336+00:00"
     },
@@ -1677,7 +1721,7 @@
       "domain": "anyscale.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:04.326032+00:00",
+      "last_crawled": "2026-05-08T07:15:12.949172+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:04.642676+00:00"
     },
@@ -1686,7 +1730,7 @@
       "domain": "appdynamics.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:15.122080+00:00",
+      "last_crawled": "2026-05-08T07:15:23.159317+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:16.727562+00:00"
     },
@@ -1695,7 +1739,7 @@
       "domain": "appcues.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:28.008208+00:00",
+      "last_crawled": "2026-05-08T07:16:31.945999+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:36.641921+00:00"
     },
@@ -1704,7 +1748,7 @@
       "domain": "astronomer.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:50.694898+00:00",
+      "last_crawled": "2026-05-08T07:15:51.301353+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:43.100732+00:00"
     },
@@ -1713,7 +1757,7 @@
       "domain": "attentive.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:43.628975+00:00",
+      "last_crawled": "2026-05-08T07:16:49.467440+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:55.160046+00:00"
     },
@@ -1722,7 +1766,7 @@
       "domain": "augmedix.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:57.210861+00:00",
+      "last_crawled": "2026-05-08T07:17:03.078741+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:30.566404+00:00"
     },
@@ -1731,7 +1775,7 @@
       "domain": "auth0.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:24.117445+00:00",
+      "last_crawled": "2026-05-08T07:15:31.844565+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:25.534544+00:00"
     },
@@ -1740,7 +1784,7 @@
       "domain": "aviso.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:59.593170+00:00",
+      "last_crawled": "2026-05-08T07:17:08.171018+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:37.045281+00:00"
     },
@@ -1749,7 +1793,7 @@
       "domain": "bentoml.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:06.607571+00:00",
+      "last_crawled": "2026-05-08T07:15:14.478556+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:08.593090+00:00"
     },
@@ -1758,7 +1802,7 @@
       "domain": "bigcommerce.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:41.758359+00:00",
+      "last_crawled": "2026-05-08T07:16:47.534257+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:54.777778+00:00"
     },
@@ -1767,7 +1811,7 @@
       "domain": "blend.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:59.023577+00:00",
+      "last_crawled": "2026-05-08T07:17:04.155377+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:35.539386+00:00"
     },
@@ -1776,7 +1820,7 @@
       "domain": "boomi.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:25.649258+00:00",
+      "last_crawled": "2026-05-08T07:16:31.517552+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:32.820503+00:00"
     },
@@ -1785,7 +1829,7 @@
       "domain": "botpress.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:24.600104+00:00",
+      "last_crawled": "2026-05-08T07:17:32.406453+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:27.870733+00:00"
     },
@@ -1794,7 +1838,7 @@
       "domain": "cal.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:35.073219+00:00",
+      "last_crawled": "2026-05-08T07:17:42.989205+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:40.819655+00:00"
     },
@@ -1803,7 +1847,7 @@
       "domain": "catalyst.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:28.372948+00:00",
+      "last_crawled": "2026-05-08T07:17:36.964400+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:30.178735+00:00"
     },
@@ -1812,25 +1856,16 @@
       "domain": "causal.app",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:16.489552+00:00",
+      "last_crawled": "2026-05-08T07:17:23.501093+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:13.080849+00:00"
-    },
-    {
-      "name": "Celigo",
-      "domain": "celigo.com",
-      "ai_tools": [],
-      "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:27.668499+00:00",
-      "altor_fit": "low",
-      "first_seen": "2026-04-17T07:20:35.798663+00:00"
     },
     {
       "name": "Census",
       "domain": "getcensus.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:15.238960+00:00",
+      "last_crawled": "2026-05-08T07:17:22.665063+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:11.034833+00:00"
     },
@@ -1839,7 +1874,7 @@
       "domain": "chameleon.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:31.271596+00:00",
+      "last_crawled": "2026-05-08T07:16:34.727803+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:38.855959+00:00"
     },
@@ -1848,7 +1883,7 @@
       "domain": "chorus.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:57.855107+00:00",
+      "last_crawled": "2026-05-08T07:16:02.898305+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:02.436010+00:00"
     },
@@ -1857,7 +1892,7 @@
       "domain": "chorus.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:44.061703+00:00",
+      "last_crawled": "2026-05-08T07:17:10.576065+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:02.436010+00:00"
     },
@@ -1866,7 +1901,7 @@
       "domain": "chronosphere.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:10.515775+00:00",
+      "last_crawled": "2026-05-08T07:15:17.638342+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:10.412795+00:00"
     },
@@ -1875,7 +1910,7 @@
       "domain": "churnzero.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:31.401353+00:00",
+      "last_crawled": "2026-05-08T07:16:34.890893+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:39.449443+00:00"
     },
@@ -1884,7 +1919,7 @@
       "domain": "clari.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:57.275874+00:00",
+      "last_crawled": "2026-05-08T07:16:02.512275+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:01.231290+00:00"
     },
@@ -1893,7 +1928,7 @@
       "domain": "clay.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:04.757017+00:00",
+      "last_crawled": "2026-05-08T07:17:11.402306+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:43.006965+00:00"
     },
@@ -1902,7 +1937,7 @@
       "domain": "clerk.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:18.309757+00:00",
+      "last_crawled": "2026-05-08T07:15:25.913504+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:12.083023+00:00"
     },
@@ -1911,25 +1946,16 @@
       "domain": "clickup.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:21.704800+00:00",
+      "last_crawled": "2026-05-08T07:16:26.359709+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:29.351394+00:00"
-    },
-    {
-      "name": "Cloudflare",
-      "domain": "cloudflare.com",
-      "ai_tools": [],
-      "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:10.903707+00:00",
-      "altor_fit": "low",
-      "first_seen": "2026-04-17T07:20:17.362739+00:00"
     },
     {
       "name": "Codeium",
       "domain": "codeium.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:10.170057+00:00",
+      "last_crawled": "2026-05-08T07:17:18.483457+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:52.615302+00:00"
     },
@@ -1938,7 +1964,7 @@
       "domain": "cohere.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:05.166609+00:00",
+      "last_crawled": "2026-05-08T07:15:12.680424+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:03.371433+00:00"
     },
@@ -1947,7 +1973,7 @@
       "domain": "continue.dev",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:12.817157+00:00",
+      "last_crawled": "2026-05-08T07:17:21.193925+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:57.782625+00:00"
     },
@@ -1956,7 +1982,7 @@
       "domain": "contractpodai.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:51.202126+00:00",
+      "last_crawled": "2026-05-08T07:16:56.648240+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:23.947419+00:00"
     },
@@ -1965,7 +1991,7 @@
       "domain": "convex.dev",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:20.553327+00:00",
+      "last_crawled": "2026-05-08T07:15:30.011250+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:18.065285+00:00"
     },
@@ -1974,7 +2000,7 @@
       "domain": "cortex.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:24.442343+00:00",
+      "last_crawled": "2026-05-08T07:17:32.244871+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:30.468834+00:00"
     },
@@ -1983,7 +2009,7 @@
       "domain": "corti.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:55.373973+00:00",
+      "last_crawled": "2026-05-08T07:17:02.869946+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:30.458019+00:00"
     },
@@ -1992,7 +2018,7 @@
       "domain": "courier.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:39.994313+00:00",
+      "last_crawled": "2026-05-08T07:17:47.916380+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:46.574669+00:00"
     },
@@ -2001,7 +2027,7 @@
       "domain": "cribl.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:12.261819+00:00",
+      "last_crawled": "2026-05-08T07:15:20.453381+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:13.752125+00:00"
     },
@@ -2010,7 +2036,7 @@
       "domain": "crowdstrike.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:04.215598+00:00",
+      "last_crawled": "2026-05-08T07:16:10.847150+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:09.350304+00:00"
     },
@@ -2019,7 +2045,7 @@
       "domain": "cultureamp.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:39.691513+00:00",
+      "last_crawled": "2026-05-08T07:16:45.172334+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:51.714691+00:00"
     },
@@ -2028,7 +2054,7 @@
       "domain": "dagster.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:25.172174+00:00",
+      "last_crawled": "2026-05-08T07:15:33.134701+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:28.354843+00:00"
     },
@@ -2037,7 +2063,7 @@
       "domain": "darktrace.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:45.942244+00:00",
+      "last_crawled": "2026-05-08T07:16:53.135936+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:22.505402+00:00"
     },
@@ -2046,7 +2072,7 @@
       "domain": "deel.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:38.167792+00:00",
+      "last_crawled": "2026-05-08T07:16:43.653274+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:48.341025+00:00"
     },
@@ -2055,7 +2081,7 @@
       "domain": "descript.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:32.587095+00:00",
+      "last_crawled": "2026-05-08T07:17:39.804733+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:34.471305+00:00"
     },
@@ -2064,7 +2090,7 @@
       "domain": "devin.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:11.215042+00:00",
+      "last_crawled": "2026-05-08T07:17:18.741387+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:56.628711+00:00"
     },
@@ -2073,7 +2099,7 @@
       "domain": "dixa.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:44.625209+00:00",
+      "last_crawled": "2026-05-08T07:15:47.667932+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:47.466128+00:00"
     },
@@ -2082,7 +2108,7 @@
       "domain": "docsumo.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:19.117244+00:00",
+      "last_crawled": "2026-05-08T07:17:26.076309+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:07.792635+00:00"
     },
@@ -2091,7 +2117,7 @@
       "domain": "doppler.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:11.986432+00:00",
+      "last_crawled": "2026-05-08T07:16:18.779221+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:23.398901+00:00"
     },
@@ -2100,7 +2126,7 @@
       "domain": "drata.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:00.931111+00:00",
+      "last_crawled": "2026-05-08T07:16:06.985591+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:27.189899+00:00"
     },
@@ -2109,7 +2135,7 @@
       "domain": "dynatrace.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:10.484937+00:00",
+      "last_crawled": "2026-05-08T07:15:17.942829+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:10.812189+00:00"
     },
@@ -2118,7 +2144,7 @@
       "domain": "elevenlabs.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:31.874772+00:00",
+      "last_crawled": "2026-05-08T07:17:40.808727+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:39.119072+00:00"
     },
@@ -2127,7 +2153,7 @@
       "domain": "evisort.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:50.952730+00:00",
+      "last_crawled": "2026-05-08T07:18:43.715310+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:49:00.307523+00:00"
     },
@@ -2136,7 +2162,7 @@
       "domain": "fastly.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:14.281092+00:00",
+      "last_crawled": "2026-05-08T07:16:18.997439+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:19.813765+00:00"
     },
@@ -2145,7 +2171,7 @@
       "domain": "figma.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:23.974548+00:00",
+      "last_crawled": "2026-05-08T07:16:29.501019+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:30.031096+00:00"
     },
@@ -2154,7 +2180,7 @@
       "domain": "finixpayments.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:33.821936+00:00",
+      "last_crawled": "2026-05-08T07:16:38.754731+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:49.090308+00:00"
     },
@@ -2163,7 +2189,7 @@
       "domain": "fireflies.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:04.742720+00:00",
+      "last_crawled": "2026-05-08T07:17:10.771747+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:42.185686+00:00"
     },
@@ -2172,7 +2198,7 @@
       "domain": "gofirefly.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:18:08.450103+00:00",
+      "last_crawled": "2026-05-08T07:19:15.238672+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:50:05.970840+00:00"
     },
@@ -2181,7 +2207,7 @@
       "domain": "fireworks.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:03.399986+00:00",
+      "last_crawled": "2026-05-08T07:15:11.718782+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:01.692987+00:00"
     },
@@ -2190,7 +2216,7 @@
       "domain": "fivetran.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:25.057814+00:00",
+      "last_crawled": "2026-05-08T07:15:33.219853+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:17.389958+00:00"
     },
@@ -2199,7 +2225,7 @@
       "domain": "freshworks.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:38.589541+00:00",
+      "last_crawled": "2026-05-08T07:15:46.729321+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:48.695362+00:00"
     },
@@ -2208,7 +2234,7 @@
       "domain": "front.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:36.854381+00:00",
+      "last_crawled": "2026-05-08T07:15:44.624473+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:22.194626+00:00"
     },
@@ -2217,7 +2243,7 @@
       "domain": "fullstory.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:44.992788+00:00",
+      "last_crawled": "2026-05-08T07:15:52.452414+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:50.708563+00:00"
     },
@@ -2226,7 +2252,7 @@
       "domain": "gainsight.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:31.454399+00:00",
+      "last_crawled": "2026-05-08T07:16:36.825404+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:41.170625+00:00"
     },
@@ -2235,7 +2261,7 @@
       "domain": "gitlab.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:07.368291+00:00",
+      "last_crawled": "2026-05-08T07:16:14.241198+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:12.981111+00:00"
     },
@@ -2244,7 +2270,7 @@
       "domain": "gladly.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:41.969329+00:00",
+      "last_crawled": "2026-05-08T07:15:47.681500+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:45.692468+00:00"
     },
@@ -2253,7 +2279,7 @@
       "domain": "glean.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:30.585751+00:00",
+      "last_crawled": "2026-05-08T07:17:39.498276+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:30.954123+00:00"
     },
@@ -2262,7 +2288,7 @@
       "domain": "gong.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:54.761056+00:00",
+      "last_crawled": "2026-05-08T07:16:00.962470+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:59.296233+00:00"
     },
@@ -2271,7 +2297,7 @@
       "domain": "gorgias.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:42.803080+00:00",
+      "last_crawled": "2026-05-08T07:16:48.404724+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:54.754854+00:00"
     },
@@ -2280,7 +2306,7 @@
       "domain": "groq.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:01.255506+00:00",
+      "last_crawled": "2026-05-08T07:15:09.101476+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:00.048855+00:00"
     },
@@ -2289,7 +2315,7 @@
       "domain": "harness.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:23.207402+00:00",
+      "last_crawled": "2026-05-08T07:17:30.533439+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:17.603726+00:00"
     },
@@ -2298,7 +2324,7 @@
       "domain": "harvey.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:50.389071+00:00",
+      "last_crawled": "2026-05-08T07:16:56.586235+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:35.662456+00:00"
     },
@@ -2307,7 +2333,7 @@
       "domain": "hashicorp.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:05.153798+00:00",
+      "last_crawled": "2026-05-08T07:16:11.400711+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:17.328490+00:00"
     },
@@ -2316,7 +2342,7 @@
       "domain": "heap.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:44.797981+00:00",
+      "last_crawled": "2026-05-08T07:15:49.400940+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:46.436541+00:00"
     },
@@ -2325,7 +2351,7 @@
       "domain": "helpscout.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:36.698059+00:00",
+      "last_crawled": "2026-05-08T07:15:44.825287+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:41.334901+00:00"
     },
@@ -2334,7 +2360,7 @@
       "domain": "hex.tech",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:28.445706+00:00",
+      "last_crawled": "2026-05-08T07:15:36.822920+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:22.081901+00:00"
     },
@@ -2343,7 +2369,7 @@
       "domain": "highspot.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:54.855774+00:00",
+      "last_crawled": "2026-05-08T07:15:59.662352+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:59.346921+00:00"
     },
@@ -2352,7 +2378,7 @@
       "domain": "honeycomb.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:08.784201+00:00",
+      "last_crawled": "2026-05-08T07:15:16.837937+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:12.676965+00:00"
     },
@@ -2361,7 +2387,7 @@
       "domain": "hotjar.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:49.587112+00:00",
+      "last_crawled": "2026-05-08T07:15:56.748518+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:53.063051+00:00"
     },
@@ -2370,7 +2396,7 @@
       "domain": "hubspot.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:01.517155+00:00",
+      "last_crawled": "2026-05-08T07:16:07.152458+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:06.089456+00:00"
     },
@@ -2379,7 +2405,7 @@
       "domain": "humanitec.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:08.649162+00:00",
+      "last_crawled": "2026-05-08T07:16:13.960469+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:16.066525+00:00"
     },
@@ -2388,7 +2414,7 @@
       "domain": "hyperscience.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:17.727099+00:00",
+      "last_crawled": "2026-05-08T07:17:24.832773+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:05.390378+00:00"
     },
@@ -2397,7 +2423,7 @@
       "domain": "hypotenuse.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:08.998105+00:00",
+      "last_crawled": "2026-05-08T07:17:15.118988+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:50.937828+00:00"
     },
@@ -2406,7 +2432,7 @@
       "domain": "indico.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:16.809925+00:00",
+      "last_crawled": "2026-05-08T07:17:23.788005+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:12.399591+00:00"
     },
@@ -2415,7 +2441,7 @@
       "domain": "inscribe.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:58.496313+00:00",
+      "last_crawled": "2026-05-08T07:17:04.321080+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:37.318636+00:00"
     },
@@ -2424,7 +2450,7 @@
       "domain": "instabase.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:16.940688+00:00",
+      "last_crawled": "2026-05-08T07:17:24.679899+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:03.727798+00:00"
     },
@@ -2433,7 +2459,7 @@
       "domain": "ironcladapp.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:50.685849+00:00",
+      "last_crawled": "2026-05-08T07:16:56.807778+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:22.104573+00:00"
     },
@@ -2442,7 +2468,7 @@
       "domain": "jasper.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:04.145623+00:00",
+      "last_crawled": "2026-05-08T07:17:11.988616+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:45.142666+00:00"
     },
@@ -2451,7 +2477,7 @@
       "domain": "kasisto.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:00.923690+00:00",
+      "last_crawled": "2026-05-08T07:17:07.671068+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:46.550065+00:00"
     },
@@ -2460,7 +2486,7 @@
       "domain": "konghq.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:20.669199+00:00",
+      "last_crawled": "2026-05-08T07:15:30.023927+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:20.967559+00:00"
     },
@@ -2469,7 +2495,7 @@
       "domain": "kore.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:24.543235+00:00",
+      "last_crawled": "2026-05-08T07:17:32.970371+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:20.551927+00:00"
     },
@@ -2478,7 +2504,7 @@
       "domain": "lacework.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:04.429177+00:00",
+      "last_crawled": "2026-05-08T07:16:10.587869+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:07.933700+00:00"
     },
@@ -2487,7 +2513,7 @@
       "domain": "lattice.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:36.602056+00:00",
+      "last_crawled": "2026-05-08T07:16:41.851182+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:49.334164+00:00"
     },
@@ -2496,7 +2522,7 @@
       "domain": "lavender.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:02.423399+00:00",
+      "last_crawled": "2026-05-08T07:17:10.095027+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:46.771163+00:00"
     },
@@ -2505,7 +2531,7 @@
       "domain": "lawgeex.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:53.576020+00:00",
+      "last_crawled": "2026-05-08T07:16:59.694335+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:26.102548+00:00"
     },
@@ -2514,7 +2540,7 @@
       "domain": "leapsome.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:38.809225+00:00",
+      "last_crawled": "2026-05-08T07:16:43.490873+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:50.305137+00:00"
     },
@@ -2523,7 +2549,7 @@
       "domain": "lightstep.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:16.776017+00:00",
+      "last_crawled": "2026-05-08T07:15:24.262873+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:16.435073+00:00"
     },
@@ -2532,7 +2558,7 @@
       "domain": "lithic.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:35.563979+00:00",
+      "last_crawled": "2026-05-08T07:16:41.104992+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:46.545735+00:00"
     },
@@ -2541,7 +2567,7 @@
       "domain": "liveblocks.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:34.633042+00:00",
+      "last_crawled": "2026-05-08T07:17:43.189693+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:39.539890+00:00"
     },
@@ -2550,7 +2576,7 @@
       "domain": "logrocket.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:46.623731+00:00",
+      "last_crawled": "2026-05-08T07:15:51.916741+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:49.481338+00:00"
     },
@@ -2559,7 +2585,7 @@
       "domain": "loom.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:18.623310+00:00",
+      "last_crawled": "2026-05-08T07:16:27.154280+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:29.961002+00:00"
     },
@@ -2568,7 +2594,7 @@
       "domain": "loops.so",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:35.050930+00:00",
+      "last_crawled": "2026-05-08T07:17:42.101000+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:39.868604+00:00"
     },
@@ -2577,7 +2603,7 @@
       "domain": "luminance.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:57.306738+00:00",
+      "last_crawled": "2026-05-08T07:16:58.513305+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:27.244222+00:00"
     },
@@ -2586,7 +2612,7 @@
       "domain": "matillion.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:32.869291+00:00",
+      "last_crawled": "2026-05-08T07:15:41.878881+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:35.736372+00:00"
     },
@@ -2595,7 +2621,7 @@
       "domain": "meltano.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:43.551382+00:00",
+      "last_crawled": "2026-05-08T07:15:39.236568+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:34.445935+00:00"
     },
@@ -2604,7 +2630,7 @@
       "domain": "metabase.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:28.777815+00:00",
+      "last_crawled": "2026-05-08T07:15:37.000747+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:19.925299+00:00"
     },
@@ -2613,7 +2639,7 @@
       "domain": "mintlify.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:12.507763+00:00",
+      "last_crawled": "2026-05-08T07:17:19.575756+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:54.961803+00:00"
     },
@@ -2622,7 +2648,7 @@
       "domain": "miro.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:21.650161+00:00",
+      "last_crawled": "2026-05-08T07:16:27.399352+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:30.674759+00:00"
     },
@@ -2631,7 +2657,7 @@
       "domain": "mistral.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:09.476995+00:00",
+      "last_crawled": "2026-05-08T07:15:18.025577+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:09.461743+00:00"
     },
@@ -2640,7 +2666,7 @@
       "domain": "modal.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:01.290203+00:00",
+      "last_crawled": "2026-05-08T07:15:08.442328+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:09.043462+00:00"
     },
@@ -2649,7 +2675,7 @@
       "domain": "modal.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:38.143502+00:00",
+      "last_crawled": "2026-05-08T07:17:46.094254+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:09.043462+00:00"
     },
@@ -2658,7 +2684,7 @@
       "domain": "moderntreasury.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:35.894927+00:00",
+      "last_crawled": "2026-05-08T07:16:40.371784+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:45.917443+00:00"
     },
@@ -2667,7 +2693,7 @@
       "domain": "montecarlodata.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:30.591713+00:00",
+      "last_crawled": "2026-05-08T07:15:38.064988+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:33.525658+00:00"
     },
@@ -2676,7 +2702,7 @@
       "domain": "moov.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:35.192842+00:00",
+      "last_crawled": "2026-05-08T07:16:40.236387+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:45.796915+00:00"
     },
@@ -2685,7 +2711,7 @@
       "domain": "nabla.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:54.713030+00:00",
+      "last_crawled": "2026-05-08T07:17:00.902268+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:26.844974+00:00"
     },
@@ -2694,7 +2720,7 @@
       "domain": "neon.tech",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:19.251133+00:00",
+      "last_crawled": "2026-05-08T07:15:28.207867+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:14.309262+00:00"
     },
@@ -2703,7 +2729,7 @@
       "domain": "netlify.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:11.126595+00:00",
+      "last_crawled": "2026-05-08T07:16:16.918506+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:16.867096+00:00"
     },
@@ -2712,7 +2738,7 @@
       "domain": "nonamesecurity.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:03.197687+00:00",
+      "last_crawled": "2026-05-08T07:16:09.981362+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:08.822651+00:00"
     },
@@ -2721,7 +2747,7 @@
       "domain": "northbeam.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:16.318877+00:00",
+      "last_crawled": "2026-05-08T07:17:23.184381+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:04.467253+00:00"
     },
@@ -2730,7 +2756,7 @@
       "domain": "notablehealth.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:58.126311+00:00",
+      "last_crawled": "2026-05-08T07:17:04.004685+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:32.666416+00:00"
     },
@@ -2739,7 +2765,7 @@
       "domain": "notion.so",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:17.598508+00:00",
+      "last_crawled": "2026-05-08T07:16:21.362788+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:26.420716+00:00"
     },
@@ -2748,7 +2774,7 @@
       "domain": "novu.co",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:39.681313+00:00",
+      "last_crawled": "2026-05-08T07:17:49.279420+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:44.596414+00:00"
     },
@@ -2757,7 +2783,7 @@
       "domain": "observeinc.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:13.720984+00:00",
+      "last_crawled": "2026-05-08T07:15:21.418136+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:16.902889+00:00"
     },
@@ -2766,7 +2792,7 @@
       "domain": "ocrolus.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:00.520623+00:00",
+      "last_crawled": "2026-05-08T07:17:05.871748+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:35.516666+00:00"
     },
@@ -2775,7 +2801,7 @@
       "domain": "opslevel.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:21.095172+00:00",
+      "last_crawled": "2026-05-08T07:17:29.749934+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:14.488034+00:00"
     },
@@ -2784,7 +2810,7 @@
       "domain": "optimizely.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:54.866763+00:00",
+      "last_crawled": "2026-05-08T07:16:02.094075+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:59.063003+00:00"
     },
@@ -2793,7 +2819,7 @@
       "domain": "outreach.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:51.755046+00:00",
+      "last_crawled": "2026-05-08T07:15:58.288650+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:54.961394+00:00"
     },
@@ -2802,7 +2828,7 @@
       "domain": "people.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:00.868132+00:00",
+      "last_crawled": "2026-05-08T07:17:06.652535+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:38.916127+00:00"
     },
@@ -2811,7 +2837,7 @@
       "domain": "perplexity.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:06.602426+00:00",
+      "last_crawled": "2026-05-08T07:15:14.094462+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:04.279186+00:00"
     },
@@ -2820,7 +2846,7 @@
       "domain": "persado.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:07.375319+00:00",
+      "last_crawled": "2026-05-08T07:17:14.139635+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:48.433188+00:00"
     },
@@ -2829,7 +2855,7 @@
       "domain": "plaid.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:33.456443+00:00",
+      "last_crawled": "2026-05-08T07:16:38.538094+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:43.808697+00:00"
     },
@@ -2838,7 +2864,7 @@
       "domain": "plain.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:32.627274+00:00",
+      "last_crawled": "2026-05-08T07:15:41.427155+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:18.159609+00:00"
     },
@@ -2847,7 +2873,7 @@
       "domain": "planetscale.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:20.976978+00:00",
+      "last_crawled": "2026-05-08T07:15:27.957478+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:14.062427+00:00"
     },
@@ -2856,7 +2882,7 @@
       "domain": "planhat.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:28.228913+00:00",
+      "last_crawled": "2026-05-08T07:17:35.949633+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:37.044065+00:00"
     },
@@ -2865,7 +2891,7 @@
       "domain": "posthog.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:46.263285+00:00",
+      "last_crawled": "2026-05-08T07:15:54.206690+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:59.480215+00:00"
     },
@@ -2874,7 +2900,7 @@
       "domain": "postman.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:21.267186+00:00",
+      "last_crawled": "2026-05-08T07:15:29.793677+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:23.282669+00:00"
     },
@@ -2883,7 +2909,7 @@
       "domain": "prefect.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:25.732545+00:00",
+      "last_crawled": "2026-05-08T07:15:35.750197+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:27.382363+00:00"
     },
@@ -2892,7 +2918,7 @@
       "domain": "propelauth.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:41.653871+00:00",
+      "last_crawled": "2026-05-08T07:17:51.691162+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:47.469883+00:00"
     },
@@ -2901,7 +2927,7 @@
       "domain": "pulumi.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:08.818598+00:00",
+      "last_crawled": "2026-05-08T07:16:14.579188+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:15.803042+00:00"
     },
@@ -2910,7 +2936,7 @@
       "domain": "rasa.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:26.937690+00:00",
+      "last_crawled": "2026-05-08T07:17:34.043154+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:23.701271+00:00"
     },
@@ -2919,7 +2945,7 @@
       "domain": "railway.app",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:18.550459+00:00",
+      "last_crawled": "2026-05-08T07:16:22.899514+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:27.677692+00:00"
     },
@@ -2928,7 +2954,7 @@
       "domain": "ramp.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:32.339051+00:00",
+      "last_crawled": "2026-05-08T07:16:37.913112+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:42.811018+00:00"
     },
@@ -2937,7 +2963,7 @@
       "domain": "readme.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:22.567619+00:00",
+      "last_crawled": "2026-05-08T07:15:30.404189+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:22.804012+00:00"
     },
@@ -2946,7 +2972,7 @@
       "domain": "rechargepayments.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:41.803137+00:00",
+      "last_crawled": "2026-05-08T07:16:47.494641+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:54.839923+00:00"
     },
@@ -2955,7 +2981,7 @@
       "domain": "recordedfuture.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:45.462528+00:00",
+      "last_crawled": "2026-05-08T07:16:51.793088+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:17.251158+00:00"
     },
@@ -2964,7 +2990,7 @@
       "domain": "remote.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:36.731286+00:00",
+      "last_crawled": "2026-05-08T07:16:42.545150+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:47.492137+00:00"
     },
@@ -2973,7 +2999,7 @@
       "domain": "replicate.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:01.219803+00:00",
+      "last_crawled": "2026-05-08T07:15:08.989907+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:05.864911+00:00"
     },
@@ -2982,7 +3008,7 @@
       "domain": "retool.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:28.700211+00:00",
+      "last_crawled": "2026-05-08T07:15:36.788468+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:18.903696+00:00"
     },
@@ -2991,7 +3017,7 @@
       "domain": "revenue.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:27.801355+00:00",
+      "last_crawled": "2026-05-08T07:18:44.218126+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:52.463467+00:00"
     },
@@ -3000,7 +3026,7 @@
       "domain": "rippling.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:39.353059+00:00",
+      "last_crawled": "2026-05-08T07:16:45.608888+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:50.272900+00:00"
     },
@@ -3009,7 +3035,7 @@
       "domain": "rossum.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:17.412115+00:00",
+      "last_crawled": "2026-05-08T07:17:24.930395+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:17.564117+00:00"
     },
@@ -3018,7 +3044,7 @@
       "domain": "runwayml.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:30.709279+00:00",
+      "last_crawled": "2026-05-08T07:17:38.387831+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:32.844221+00:00"
     },
@@ -3027,7 +3053,7 @@
       "domain": "salt.security",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:04.551968+00:00",
+      "last_crawled": "2026-05-08T07:16:10.748104+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:12.727088+00:00"
     },
@@ -3036,7 +3062,7 @@
       "domain": "secureframe.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:01.946020+00:00",
+      "last_crawled": "2026-05-08T07:16:08.484715+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:11.742428+00:00"
     },
@@ -3045,7 +3071,7 @@
       "domain": "segment.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:51.425609+00:00",
+      "last_crawled": "2026-05-08T07:15:57.533193+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:53.655405+00:00"
     },
@@ -3054,7 +3080,7 @@
       "domain": "seismic.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:57.038456+00:00",
+      "last_crawled": "2026-05-08T07:16:04.050888+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:04.413400+00:00"
     },
@@ -3063,7 +3089,7 @@
       "domain": "sentinelone.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:49.626475+00:00",
+      "last_crawled": "2026-05-08T07:16:53.507837+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:22.129376+00:00"
     },
@@ -3072,7 +3098,7 @@
       "domain": "sentry.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:15.403497+00:00",
+      "last_crawled": "2026-05-08T07:15:22.532066+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:15.107910+00:00"
     },
@@ -3081,7 +3107,7 @@
       "domain": "shopify.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:39.212847+00:00",
+      "last_crawled": "2026-05-08T07:16:45.523857+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:52.032476+00:00"
     },
@@ -3090,7 +3116,7 @@
       "domain": "smartly.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:09.355076+00:00",
+      "last_crawled": "2026-05-08T07:17:15.523872+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:52.167271+00:00"
     },
@@ -3099,7 +3125,7 @@
       "domain": "snowflake.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:31.025393+00:00",
+      "last_crawled": "2026-05-08T07:15:40.138990+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:40.548270+00:00"
     },
@@ -3108,7 +3134,7 @@
       "domain": "sourcegraph.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:10.964751+00:00",
+      "last_crawled": "2026-05-08T07:17:19.940288+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:54.630514+00:00"
     },
@@ -3117,7 +3143,7 @@
       "domain": "spacelift.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:07.343843+00:00",
+      "last_crawled": "2026-05-08T07:16:13.427609+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:15.427503+00:00"
     },
@@ -3126,7 +3152,7 @@
       "domain": "spellbook.legal",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:51.251272+00:00",
+      "last_crawled": "2026-05-08T07:16:57.263429+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:25.628155+00:00"
     },
@@ -3135,7 +3161,7 @@
       "domain": "split.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:56.625190+00:00",
+      "last_crawled": "2026-05-08T07:15:56.826086+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:54.805106+00:00"
     },
@@ -3144,7 +3170,7 @@
       "domain": "splunk.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:12.667955+00:00",
+      "last_crawled": "2026-05-08T07:15:21.276120+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:11.942007+00:00"
     },
@@ -3153,7 +3179,7 @@
       "domain": "starburst.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:37.180389+00:00",
+      "last_crawled": "2026-05-08T07:15:44.624335+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:39.626198+00:00"
     },
@@ -3162,7 +3188,7 @@
       "domain": "statsig.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:48.598287+00:00",
+      "last_crawled": "2026-05-08T07:15:55.573592+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:51.422532+00:00"
     },
@@ -3171,7 +3197,7 @@
       "domain": "steep.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:14.289218+00:00",
+      "last_crawled": "2026-05-08T07:17:21.311035+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:00.867002+00:00"
     },
@@ -3180,7 +3206,7 @@
       "domain": "stoplight.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:21.657745+00:00",
+      "last_crawled": "2026-05-08T07:15:30.411136+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:23.163152+00:00"
     },
@@ -3189,25 +3215,16 @@
       "domain": "stripe.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:16.286818+00:00",
+      "last_crawled": "2026-05-08T07:15:24.705374+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:10.903510+00:00"
-    },
-    {
-      "name": "Supermetrics",
-      "domain": "supermetrics.com",
-      "ai_tools": [],
-      "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:32.265801+00:00",
-      "altor_fit": "low",
-      "first_seen": "2026-04-17T07:19:40.369433+00:00"
     },
     {
       "name": "Swimm",
       "domain": "swimm.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:14.052009+00:00",
+      "last_crawled": "2026-05-08T07:17:18.639960+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:57.920865+00:00"
     },
@@ -3216,7 +3233,7 @@
       "domain": "synthesia.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:32.357707+00:00",
+      "last_crawled": "2026-05-08T07:17:39.482836+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:34.104374+00:00"
     },
@@ -3225,7 +3242,7 @@
       "domain": "tabnine.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:09.423411+00:00",
+      "last_crawled": "2026-05-08T07:17:16.495005+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:52.327338+00:00"
     },
@@ -3234,7 +3251,7 @@
       "domain": "temporal.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:37.799381+00:00",
+      "last_crawled": "2026-05-08T07:17:45.827349+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:42.312468+00:00"
     },
@@ -3243,7 +3260,7 @@
       "domain": "tines.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:48.451509+00:00",
+      "last_crawled": "2026-05-08T07:16:52.890691+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:22.769348+00:00"
     },
@@ -3252,7 +3269,7 @@
       "domain": "together.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:02.556921+00:00",
+      "last_crawled": "2026-05-08T07:15:09.548503+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:07.282218+00:00"
     },
@@ -3261,7 +3278,7 @@
       "domain": "torq.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:48.007928+00:00",
+      "last_crawled": "2026-05-08T07:16:52.706750+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:20.786472+00:00"
     },
@@ -3270,7 +3287,7 @@
       "domain": "totango.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:31.494041+00:00",
+      "last_crawled": "2026-05-08T07:16:35.757877+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:41.676376+00:00"
     },
@@ -3279,7 +3296,7 @@
       "domain": "traceable.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:28.024488+00:00",
+      "last_crawled": "2026-05-08T07:16:25.346862+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:42.938083+00:00"
     },
@@ -3288,7 +3305,7 @@
       "domain": "tray.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:22.212612+00:00",
+      "last_crawled": "2026-05-08T07:16:30.427368+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:35.124480+00:00"
     },
@@ -3297,7 +3314,7 @@
       "domain": "trigger.dev",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:37.455598+00:00",
+      "last_crawled": "2026-05-08T07:17:45.382718+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:42.061921+00:00"
     },
@@ -3306,7 +3323,7 @@
       "domain": "tyk.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:23.451801+00:00",
+      "last_crawled": "2026-05-08T07:15:31.115781+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:25.822446+00:00"
     },
@@ -3315,7 +3332,7 @@
       "domain": "typeform.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:34.934426+00:00",
+      "last_crawled": "2026-05-08T07:17:47.319559+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:37.874019+00:00"
     },
@@ -3324,7 +3341,7 @@
       "domain": "unit.co",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:35.374109+00:00",
+      "last_crawled": "2026-05-08T07:16:41.624033+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:47.727013+00:00"
     },
@@ -3333,7 +3350,7 @@
       "domain": "userflow.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:29.594618+00:00",
+      "last_crawled": "2026-05-08T07:16:34.908717+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:37.468110+00:00"
     },
@@ -3342,7 +3359,7 @@
       "domain": "userpilot.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:29.822679+00:00",
+      "last_crawled": "2026-05-08T07:16:34.561596+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:39.670185+00:00"
     },
@@ -3351,7 +3368,7 @@
       "domain": "vanta.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:59.996690+00:00",
+      "last_crawled": "2026-05-08T07:16:07.123895+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:28.705890+00:00"
     },
@@ -3360,7 +3377,7 @@
       "domain": "vectra.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:46.652898+00:00",
+      "last_crawled": "2026-05-08T07:16:53.040648+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:18.307672+00:00"
     },
@@ -3369,7 +3386,7 @@
       "domain": "vercel.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:15.853766+00:00",
+      "last_crawled": "2026-05-08T07:16:21.305350+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:25.563132+00:00"
     },
@@ -3378,7 +3395,7 @@
       "domain": "vitally.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:28.114126+00:00",
+      "last_crawled": "2026-05-08T07:17:35.545342+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:38.459968+00:00"
     },
@@ -3387,7 +3404,7 @@
       "domain": "voiceflow.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:23.023507+00:00",
+      "last_crawled": "2026-05-08T07:17:29.691739+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:27.916775+00:00"
     },
@@ -3396,7 +3413,7 @@
       "domain": "walkme.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:28.174004+00:00",
+      "last_crawled": "2026-05-08T07:16:38.258147+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:41.454230+00:00"
     },
@@ -3405,7 +3422,7 @@
       "domain": "wandb.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:04.514710+00:00",
+      "last_crawled": "2026-05-08T07:15:12.011683+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:19:04.667634+00:00"
     },
@@ -3414,7 +3431,7 @@
       "domain": "workos.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:41.477225+00:00",
+      "last_crawled": "2026-05-08T07:17:51.204874+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:58.743249+00:00"
     },
@@ -3423,7 +3440,7 @@
       "domain": "workato.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:26.439543+00:00",
+      "last_crawled": "2026-05-08T07:16:31.043878+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:36.353982+00:00"
     },
@@ -3432,7 +3449,7 @@
       "domain": "workday.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:15:41.398749+00:00",
+      "last_crawled": "2026-05-08T07:16:47.340029+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-17T07:20:52.849936+00:00"
     },
@@ -3441,7 +3458,7 @@
       "domain": "writer.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:05.283290+00:00",
+      "last_crawled": "2026-05-08T07:17:13.652977+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:47.649002+00:00"
     },
@@ -3450,7 +3467,7 @@
       "domain": "wundergraph.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:38.183556+00:00",
+      "last_crawled": "2026-05-08T07:17:48.621917+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:44.371858+00:00"
     },
@@ -3459,7 +3476,7 @@
       "domain": "yellow.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:30.704119+00:00",
+      "last_crawled": "2026-05-08T07:17:36.014479+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:27.912124+00:00"
     },
@@ -3468,7 +3485,7 @@
       "domain": "zendesk.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:33.928846+00:00",
+      "last_crawled": "2026-05-08T07:15:42.759201+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:22.500123+00:00"
     },
@@ -3477,7 +3494,7 @@
       "domain": "zest.ai",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:01.919015+00:00",
+      "last_crawled": "2026-05-08T07:17:07.913678+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:47:38.613442+00:00"
     },
@@ -3486,7 +3503,7 @@
       "domain": "getdbt.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:14:26.853124+00:00",
+      "last_crawled": "2026-05-08T07:15:35.543322+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-16T13:20:20.182002+00:00"
     },
@@ -3495,7 +3512,7 @@
       "domain": "env0.com",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:20.110571+00:00",
+      "last_crawled": "2026-05-08T07:17:26.940147+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:10.924077+00:00"
     },
@@ -3504,7 +3521,7 @@
       "domain": "incident.io",
       "ai_tools": [],
       "tool_count": 0,
-      "last_crawled": "2026-05-07T08:16:21.348883+00:00",
+      "last_crawled": "2026-05-08T07:17:29.371957+00:00",
       "altor_fit": "low",
       "first_seen": "2026-04-20T08:48:20.714142+00:00"
     }
