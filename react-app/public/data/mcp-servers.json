@@ -1,27 +1,27 @@
 {
   "meta": {
-    "generated_at": "2026-05-10T06:32:29.951210+00:00",
-    "total_servers": 4528,
+    "generated_at": "2026-05-11T07:40:17.169027+00:00",
+    "total_servers": 4527,
     "categories": {
-      "AI & ML": 113,
-      "Cloud & Infra": 91,
+      "AI & ML": 111,
+      "Cloud & Infra": 93,
       "Communication": 81,
       "Data & Analytics": 29,
       "Databases": 163,
       "Developer Tools": 182,
-      "File System": 100,
+      "File System": 101,
       "Finance": 25,
       "Maps & Location": 44,
-      "Media": 67,
-      "Other": 2466,
+      "Media": 68,
+      "Other": 2473,
       "Productivity": 40,
-      "Search": 323,
+      "Search": 326,
       "Security": 75,
-      "Version Control": 492,
-      "Web & Browser": 237
+      "Version Control": 477,
+      "Web & Browser": 239
     },
     "sources": {
-      "official": 1967,
+      "official": 1966,
       "github": 408,
       "awesome": 2153
     }
@@ -36,9 +36,9 @@
       "owner": "n8n-io",
       "repo": "n8n",
       "install_command": "",
-      "stars": 187271,
+      "stars": 187391,
       "language": "TypeScript",
-      "last_updated": "2026-05-10",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -50,7 +50,7 @@
       "owner": "google-gemini",
       "repo": "gemini-cli",
       "install_command": "",
-      "stars": 103563,
+      "stars": 103657,
       "language": "TypeScript",
       "last_updated": "2026-05-10",
       "source": "github"
@@ -64,7 +64,7 @@
       "owner": "sansan0",
       "repo": "TrendRadar",
       "install_command": "",
-      "stars": 57149,
+      "stars": 57239,
       "language": "Python",
       "last_updated": "2026-04-30",
       "source": "github"
@@ -78,24 +78,10 @@
       "owner": "upstash",
       "repo": "context7",
       "install_command": "",
-      "stars": 54900,
+      "stars": 54979,
       "language": "TypeScript",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "awesome"
-    },
-    {
-      "id": "D4Vinci/Scrapling",
-      "name": "Scrapling",
-      "description": "\ud83d\udd77\ufe0f An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
-      "category": "Web & Browser",
-      "github_url": "https://github.com/D4Vinci/Scrapling",
-      "owner": "D4Vinci",
-      "repo": "Scrapling",
-      "install_command": "",
-      "stars": 48321,
-      "language": "Python",
-      "last_updated": "2026-05-09",
-      "source": "github"
     },
     {
       "id": "ruvnet/ruflo",
@@ -106,9 +92,23 @@
       "owner": "ruvnet",
       "repo": "ruflo",
       "install_command": "",
-      "stars": 47986,
+      "stars": 48658,
       "language": "TypeScript",
-      "last_updated": "2026-05-10",
+      "last_updated": "2026-05-11",
+      "source": "github"
+    },
+    {
+      "id": "D4Vinci/Scrapling",
+      "name": "Scrapling",
+      "description": "\ud83d\udd77\ufe0f An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
+      "category": "Web & Browser",
+      "github_url": "https://github.com/D4Vinci/Scrapling",
+      "owner": "D4Vinci",
+      "repo": "Scrapling",
+      "install_command": "",
+      "stars": 48646,
+      "language": "Python",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -120,7 +120,7 @@
       "owner": "ChromeDevTools",
       "repo": "chrome-devtools-mcp",
       "install_command": "",
-      "stars": 38927,
+      "stars": 39157,
       "language": "TypeScript",
       "last_updated": "2026-05-10",
       "source": "github"
@@ -134,7 +134,7 @@
       "owner": "bytedance",
       "repo": "UI-TARS-desktop",
       "install_command": "",
-      "stars": 31582,
+      "stars": 32504,
       "language": "TypeScript",
       "last_updated": "2026-04-29",
       "source": "github"
@@ -148,9 +148,9 @@
       "owner": "github",
       "repo": "github-mcp-server",
       "install_command": "",
-      "stars": 29669,
+      "stars": 29702,
       "language": "Go",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-05-11",
       "source": "awesome"
     },
     {
@@ -162,7 +162,7 @@
       "owner": "assafelovic",
       "repo": "gpt-researcher",
       "install_command": "",
-      "stars": 26962,
+      "stars": 26977,
       "language": "Python",
       "last_updated": "2026-04-16",
       "source": "github"
@@ -176,9 +176,9 @@
       "owner": "oraios",
       "repo": "serena",
       "install_command": "",
-      "stars": 24021,
+      "stars": 24064,
       "language": "Python",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "awesome"
     },
     {
@@ -190,9 +190,9 @@
       "owner": "activepieces",
       "repo": "activepieces",
       "install_command": "",
-      "stars": 22124,
+      "stars": 22140,
       "language": "TypeScript",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -204,9 +204,9 @@
       "owner": "1Panel-dev",
       "repo": "MaxKB",
       "install_command": "",
-      "stars": 20907,
+      "stars": 20920,
       "language": "Python",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -218,7 +218,7 @@
       "owner": "czlonkowski",
       "repo": "n8n-mcp",
       "install_command": "",
-      "stars": 20470,
+      "stars": 20527,
       "language": "TypeScript",
       "last_updated": "2026-05-06",
       "source": "github"
@@ -232,9 +232,9 @@
       "owner": "nukeop",
       "repo": "nuclear",
       "install_command": "",
-      "stars": 17508,
+      "stars": 17546,
       "language": "TypeScript",
-      "last_updated": "2026-05-10",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -246,9 +246,9 @@
       "owner": "microsoft",
       "repo": "mcp-for-beginners",
       "install_command": "",
-      "stars": 16059,
+      "stars": 16067,
       "language": "Jupyter Notebook",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -260,23 +260,23 @@
       "owner": "triggerdotdev",
       "repo": "trigger.dev",
       "install_command": "",
-      "stars": 14843,
+      "stars": 14864,
       "language": "TypeScript",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
       "id": "mksglu/context-mode",
       "name": "Context Mode",
-      "description": "Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 14 platforms",
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 15 platforms",
       "category": "Databases",
       "github_url": "https://github.com/mksglu/context-mode",
       "owner": "mksglu",
       "repo": "context-mode",
       "install_command": "",
-      "stars": 14189,
+      "stars": 14286,
       "language": "TypeScript",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -288,9 +288,9 @@
       "owner": "open-metadata",
       "repo": "OpenMetadata",
       "install_command": "",
-      "stars": 13866,
+      "stars": 13876,
       "language": "TypeScript",
-      "last_updated": "2026-05-10",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -302,7 +302,7 @@
       "owner": "xpzouying",
       "repo": "xiaohongshu-mcp",
       "install_command": "",
-      "stars": 13440,
+      "stars": 13508,
       "language": "Go",
       "last_updated": "2026-04-27",
       "source": "github"
@@ -316,7 +316,7 @@
       "owner": "yusufkaraaslan",
       "repo": "Skill_Seekers",
       "install_command": "",
-      "stars": 13391,
+      "stars": 13418,
       "language": "Python",
       "last_updated": "2026-05-03",
       "source": "awesome"
@@ -330,7 +330,7 @@
       "owner": "tadata-org",
       "repo": "fastapi_mcp",
       "install_command": "",
-      "stars": 11856,
+      "stars": 11857,
       "language": "Python",
       "last_updated": "2025-11-24",
       "source": "github"
@@ -344,7 +344,7 @@
       "owner": "0xJacky",
       "repo": "nginx-ui",
       "install_command": "",
-      "stars": 11131,
+      "stars": 11133,
       "language": "Go",
       "last_updated": "2026-05-09",
       "source": "github"
@@ -358,7 +358,7 @@
       "owner": "JoeanAmier",
       "repo": "XHS-Downloader",
       "install_command": "",
-      "stars": 11111,
+      "stars": 11121,
       "language": "Python",
       "last_updated": "2026-05-09",
       "source": "github"
@@ -372,7 +372,7 @@
       "owner": "mcp-use",
       "repo": "mcp-use",
       "install_command": "",
-      "stars": 9918,
+      "stars": 9925,
       "language": "TypeScript",
       "last_updated": "2026-05-10",
       "source": "github"
@@ -386,9 +386,9 @@
       "owner": "xinnan-tech",
       "repo": "xiaozhi-esp32-server",
       "install_command": "",
-      "stars": 9490,
+      "stars": 9503,
       "language": "JavaScript",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -400,24 +400,10 @@
       "owner": "awslabs",
       "repo": "mcp",
       "install_command": "",
-      "stars": 9009,
+      "stars": 9015,
       "language": "Python",
       "last_updated": "2026-05-08",
       "source": "awesome"
-    },
-    {
-      "id": "0x4m4/hexstrike-ai",
-      "name": "Hexstrike Ai",
-      "description": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capabilities.",
-      "category": "AI & ML",
-      "github_url": "https://github.com/0x4m4/hexstrike-ai",
-      "owner": "0x4m4",
-      "repo": "hexstrike-ai",
-      "install_command": "",
-      "stars": 8647,
-      "language": "Python",
-      "last_updated": "2026-04-27",
-      "source": "github"
     },
     {
       "id": "wanshuiyin/Auto-claude-code-research-in-sleep",
@@ -428,9 +414,23 @@
       "owner": "wanshuiyin",
       "repo": "Auto-claude-code-research-in-sleep",
       "install_command": "",
-      "stars": 8593,
+      "stars": 8762,
       "language": "Python",
       "last_updated": "2026-05-07",
+      "source": "github"
+    },
+    {
+      "id": "0x4m4/hexstrike-ai",
+      "name": "Hexstrike Ai",
+      "description": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capabilities.",
+      "category": "AI & ML",
+      "github_url": "https://github.com/0x4m4/hexstrike-ai",
+      "owner": "0x4m4",
+      "repo": "hexstrike-ai",
+      "install_command": "",
+      "stars": 8662,
+      "language": "Python",
+      "last_updated": "2026-04-27",
       "source": "github"
     },
     {
@@ -442,7 +442,7 @@
       "owner": "mrexodia",
       "repo": "ida-pro-mcp",
       "install_command": "",
-      "stars": 8372,
+      "stars": 8403,
       "language": "Python",
       "last_updated": "2026-05-09",
       "source": "awesome"
@@ -456,7 +456,7 @@
       "owner": "firerpa",
       "repo": "lamda",
       "install_command": "",
-      "stars": 7777,
+      "stars": 7781,
       "language": "Python",
       "last_updated": "2026-03-24",
       "source": "github"
@@ -484,7 +484,7 @@
       "owner": "yzfly",
       "repo": "Awesome-MCP-ZH",
       "install_command": "",
-      "stars": 7038,
+      "stars": 7044,
       "language": "",
       "last_updated": "2026-03-31",
       "source": "github"
@@ -498,7 +498,7 @@
       "owner": "browsermcp",
       "repo": "mcp",
       "install_command": "",
-      "stars": 6478,
+      "stars": 6484,
       "language": "TypeScript",
       "last_updated": "2025-04-24",
       "source": "awesome"
@@ -512,7 +512,7 @@
       "owner": "firecrawl",
       "repo": "firecrawl-mcp-server",
       "install_command": "",
-      "stars": 6260,
+      "stars": 6272,
       "language": "JavaScript",
       "last_updated": "2026-05-07",
       "source": "github"
@@ -540,7 +540,7 @@
       "owner": "getsentry",
       "repo": "XcodeBuildMCP",
       "install_command": "",
-      "stars": 5466,
+      "stars": 5474,
       "language": "TypeScript",
       "last_updated": "2026-05-09",
       "source": "github"
@@ -554,9 +554,9 @@
       "owner": "osaurus-ai",
       "repo": "osaurus",
       "install_command": "",
-      "stars": 5214,
+      "stars": 5217,
       "language": "C",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -568,7 +568,7 @@
       "owner": "FunnyWolf",
       "repo": "Viper",
       "install_command": "",
-      "stars": 5038,
+      "stars": 5041,
       "language": "",
       "last_updated": "2026-03-31",
       "source": "github"
@@ -582,9 +582,9 @@
       "owner": "maximhq",
       "repo": "bifrost",
       "install_command": "",
-      "stars": 4747,
+      "stars": 4807,
       "language": "Go",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -596,7 +596,7 @@
       "owner": "u14app",
       "repo": "deep-research",
       "install_command": "",
-      "stars": 4581,
+      "stars": 4580,
       "language": "JavaScript",
       "last_updated": "2026-04-22",
       "source": "github"
@@ -610,7 +610,7 @@
       "owner": "exa-labs",
       "repo": "exa-mcp-server",
       "install_command": "",
-      "stars": 4404,
+      "stars": 4408,
       "language": "TypeScript",
       "last_updated": "2026-05-07",
       "source": "awesome"
@@ -624,7 +624,7 @@
       "owner": "wgpsec",
       "repo": "ENScan_GO",
       "install_command": "",
-      "stars": 4385,
+      "stars": 4386,
       "language": "Go",
       "last_updated": "2026-03-30",
       "source": "github"
@@ -638,7 +638,7 @@
       "owner": "httprunner",
       "repo": "httprunner",
       "install_command": "",
-      "stars": 4276,
+      "stars": 4277,
       "language": "Go",
       "last_updated": "2025-12-11",
       "source": "github"
@@ -654,7 +654,7 @@
       "install_command": "",
       "stars": 4253,
       "language": "C#",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -666,7 +666,7 @@
       "owner": "open-webui",
       "repo": "mcpo",
       "install_command": "",
-      "stars": 4180,
+      "stars": 4183,
       "language": "Python",
       "last_updated": "2026-02-27",
       "source": "github"
@@ -680,7 +680,7 @@
       "owner": "txn2",
       "repo": "kubefwd",
       "install_command": "",
-      "stars": 4103,
+      "stars": 4104,
       "language": "Go",
       "last_updated": "2026-05-06",
       "source": "awesome"
@@ -694,7 +694,7 @@
       "owner": "antvis",
       "repo": "mcp-server-chart",
       "install_command": "",
-      "stars": 4051,
+      "stars": 4055,
       "language": "TypeScript",
       "last_updated": "2026-05-06",
       "source": "awesome"
@@ -708,9 +708,9 @@
       "owner": "lemonade-sdk",
       "repo": "lemonade",
       "install_command": "",
-      "stars": 3879,
+      "stars": 3896,
       "language": "C++",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -722,7 +722,7 @@
       "owner": "haris-musa",
       "repo": "excel-mcp-server",
       "install_command": "",
-      "stars": 3803,
+      "stars": 3807,
       "language": "Python",
       "last_updated": "2026-04-12",
       "source": "awesome"
@@ -736,9 +736,9 @@
       "owner": "evalstate",
       "repo": "fast-agent",
       "install_command": "",
-      "stars": 3770,
+      "stars": 3773,
       "language": "Python",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -750,9 +750,9 @@
       "owner": "archestra-ai",
       "repo": "archestra",
       "install_command": "",
-      "stars": 3640,
+      "stars": 3644,
       "language": "TypeScript",
-      "last_updated": "2026-05-10",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -764,7 +764,7 @@
       "owner": "liaokongVFX",
       "repo": "MCP-Chinese-Getting-Started-Guide",
       "install_command": "",
-      "stars": 3485,
+      "stars": 3483,
       "language": "",
       "last_updated": "2025-04-23",
       "source": "github"
@@ -778,7 +778,7 @@
       "owner": "huangjunsen0406",
       "repo": "py-xiaozhi",
       "install_command": "",
-      "stars": 3303,
+      "stars": 3305,
       "language": "Python",
       "last_updated": "2026-01-07",
       "source": "github"
@@ -792,23 +792,9 @@
       "owner": "davepoon",
       "repo": "buildwithclaude",
       "install_command": "",
-      "stars": 2900,
+      "stars": 2905,
       "language": "Python",
       "last_updated": "2026-05-09",
-      "source": "github"
-    },
-    {
-      "id": "opensolon/solon",
-      "name": "Solon",
-      "description": "\ud83d\udd25 Java enterprise application development framework for full scenario: Restrained, Efficient, Open, Ecologicalll!!! 700% higher concurrency 50% memory savings Startup is 10 times faster. Packing 90% smaller; Compatible with java8 ~ java25; Supports LTS. (Replaceable spring)",
-      "category": "Other",
-      "github_url": "https://github.com/opensolon/solon",
-      "owner": "opensolon",
-      "repo": "solon",
-      "install_command": "",
-      "stars": 2725,
-      "language": "Java",
-      "last_updated": "2026-04-26",
       "source": "github"
     },
     {
@@ -820,9 +806,23 @@
       "owner": "bytebase",
       "repo": "dbhub",
       "install_command": "",
-      "stars": 2722,
+      "stars": 2726,
       "language": "TypeScript",
       "last_updated": "2026-04-21",
+      "source": "github"
+    },
+    {
+      "id": "opensolon/solon",
+      "name": "Solon",
+      "description": "\ud83d\udd25 Java enterprise application development framework for full scenario: Restrained, Efficient, Open, Ecologicalll!!! 700% higher concurrency 50% memory savings Startup is 10 times faster. Packing 90% smaller; Compatible with java8 ~ java25; Supports LTS. (Replaceable spring)",
+      "category": "Other",
+      "github_url": "https://github.com/opensolon/solon",
+      "owner": "opensolon",
+      "repo": "solon",
+      "install_command": "",
+      "stars": 2726,
+      "language": "Java",
+      "last_updated": "2026-04-26",
       "source": "github"
     },
     {
@@ -834,7 +834,7 @@
       "owner": "blazickjp",
       "repo": "arxiv-mcp-server",
       "install_command": "",
-      "stars": 2682,
+      "stars": 2689,
       "language": "Python",
       "last_updated": "2026-04-26",
       "source": "awesome"
@@ -848,9 +848,9 @@
       "owner": "IvanMurzak",
       "repo": "Unity-MCP",
       "install_command": "",
-      "stars": 2660,
+      "stars": 2680,
       "language": "C#",
-      "last_updated": "2026-05-10",
+      "last_updated": "2026-05-11",
       "source": "awesome"
     },
     {
@@ -862,7 +862,7 @@
       "owner": "deedy5",
       "repo": "ddgs",
       "install_command": "",
-      "stars": 2612,
+      "stars": 2616,
       "language": "Python",
       "last_updated": "2026-05-03",
       "source": "github"
@@ -882,6 +882,20 @@
       "source": "github"
     },
     {
+      "id": "atilaahmettaner/tradingview-mcp",
+      "name": "Tradingview Mcp",
+      "description": "Real-time crypto & stock screening, advanced technical indicators, Bollinger Bands intelligence, candlestick patterns + native Claude Desktop integration. Multi-exchange (Binance, KuCoin, Bybit+). Open-source AI trading infrastructure.",
+      "category": "Other",
+      "github_url": "https://github.com/atilaahmettaner/tradingview-mcp",
+      "owner": "atilaahmettaner",
+      "repo": "tradingview-mcp",
+      "install_command": "",
+      "stars": 2559,
+      "language": "Python",
+      "last_updated": "2026-05-07",
+      "source": "github"
+    },
+    {
       "id": "go-nunu/nunu",
       "name": "Nunu",
       "description": "A CLI tool for building Go applications.",
@@ -890,7 +904,7 @@
       "owner": "go-nunu",
       "repo": "nunu",
       "install_command": "",
-      "stars": 2557,
+      "stars": 2558,
       "language": "Go",
       "last_updated": "2026-04-26",
       "source": "github"
@@ -904,23 +918,9 @@
       "owner": "sparfenyuk",
       "repo": "mcp-proxy",
       "install_command": "",
-      "stars": 2501,
+      "stars": 2503,
       "language": "Python",
       "last_updated": "2026-05-08",
-      "source": "github"
-    },
-    {
-      "id": "atilaahmettaner/tradingview-mcp",
-      "name": "Tradingview Mcp",
-      "description": "Real-time crypto & stock screening, advanced technical indicators, Bollinger Bands intelligence, candlestick patterns + native Claude Desktop integration. Multi-exchange (Binance, KuCoin, Bybit+). Open-source AI trading infrastructure.",
-      "category": "Other",
-      "github_url": "https://github.com/atilaahmettaner/tradingview-mcp",
-      "owner": "atilaahmettaner",
-      "repo": "tradingview-mcp",
-      "install_command": "",
-      "stars": 2413,
-      "language": "Python",
-      "last_updated": "2026-05-07",
       "source": "github"
     },
     {
@@ -932,9 +932,9 @@
       "owner": "Manavarya09",
       "repo": "design-extract",
       "install_command": "",
-      "stars": 2405,
+      "stars": 2439,
       "language": "JavaScript",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -946,23 +946,9 @@
       "owner": "punitarani",
       "repo": "fli",
       "install_command": "",
-      "stars": 2379,
+      "stars": 2398,
       "language": "Python",
       "last_updated": "2026-04-13",
-      "source": "github"
-    },
-    {
-      "id": "brightdata/brightdata-mcp",
-      "name": "Brightdata Mcp",
-      "description": "A powerful Model Context Protocol (MCP) server that provides an all-in-one solution for public web access.",
-      "category": "Web & Browser",
-      "github_url": "https://github.com/brightdata/brightdata-mcp",
-      "owner": "brightdata",
-      "repo": "brightdata-mcp",
-      "install_command": "",
-      "stars": 2353,
-      "language": "JavaScript",
-      "last_updated": "2026-04-20",
       "source": "github"
     },
     {
@@ -974,10 +960,24 @@
       "owner": "taylorwilsdon",
       "repo": "google_workspace_mcp",
       "install_command": "",
-      "stars": 2346,
+      "stars": 2366,
       "language": "Python",
       "last_updated": "2026-05-09",
       "source": "awesome"
+    },
+    {
+      "id": "brightdata/brightdata-mcp",
+      "name": "Brightdata Mcp",
+      "description": "A powerful Model Context Protocol (MCP) server that provides an all-in-one solution for public web access.",
+      "category": "Web & Browser",
+      "github_url": "https://github.com/brightdata/brightdata-mcp",
+      "owner": "brightdata",
+      "repo": "brightdata-mcp",
+      "install_command": "",
+      "stars": 2355,
+      "language": "JavaScript",
+      "last_updated": "2026-04-20",
+      "source": "github"
     },
     {
       "id": "metatool-ai/metamcp",
@@ -988,7 +988,7 @@
       "owner": "metatool-ai",
       "repo": "metamcp",
       "install_command": "",
-      "stars": 2308,
+      "stars": 2311,
       "language": "TypeScript",
       "last_updated": "2026-02-08",
       "source": "github"
@@ -1002,9 +1002,9 @@
       "owner": "DeusData",
       "repo": "codebase-memory-mcp",
       "install_command": "",
-      "stars": 2199,
+      "stars": 2234,
       "language": "C",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -1016,9 +1016,9 @@
       "owner": "geekjourneyx",
       "repo": "md2wechat-skill",
       "install_command": "",
-      "stars": 2135,
+      "stars": 2148,
       "language": "Go",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -1030,9 +1030,23 @@
       "owner": "AmoyLab",
       "repo": "Unla",
       "install_command": "",
-      "stars": 2108,
+      "stars": 2109,
       "language": "TypeScript",
       "last_updated": "2026-04-22",
+      "source": "github"
+    },
+    {
+      "id": "crbnos/carbon",
+      "name": "Carbon",
+      "description": "Carbon is an open source ERP, MES and QMS for manufacturing. Perfect for complex assembly, contract manufacturing, and configure to order manufacturing.",
+      "category": "Other",
+      "github_url": "https://github.com/crbnos/carbon",
+      "owner": "crbnos",
+      "repo": "carbon",
+      "install_command": "",
+      "stars": 2098,
+      "language": "TypeScript",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -1044,24 +1058,10 @@
       "owner": "cjo4m06",
       "repo": "mcp-shrimp-task-manager",
       "install_command": "",
-      "stars": 2095,
+      "stars": 2097,
       "language": "JavaScript",
       "last_updated": "2025-08-21",
       "source": "awesome"
-    },
-    {
-      "id": "crbnos/carbon",
-      "name": "Carbon",
-      "description": "Carbon is an open source ERP, MES and QMS for manufacturing. Perfect for complex assembly, contract manufacturing, and configure to order manufacturing.",
-      "category": "Other",
-      "github_url": "https://github.com/crbnos/carbon",
-      "owner": "crbnos",
-      "repo": "carbon",
-      "install_command": "",
-      "stars": 2092,
-      "language": "TypeScript",
-      "last_updated": "2026-05-10",
-      "source": "github"
     },
     {
       "id": "apioo/fusio",
@@ -1086,7 +1086,7 @@
       "owner": "samanhappy",
       "repo": "mcphub",
       "install_command": "",
-      "stars": 2069,
+      "stars": 2072,
       "language": "TypeScript",
       "last_updated": "2026-05-10",
       "source": "github"
@@ -1100,7 +1100,7 @@
       "owner": "mcp-router",
       "repo": "mcp-router",
       "install_command": "",
-      "stars": 2002,
+      "stars": 2004,
       "language": "TypeScript",
       "last_updated": "2026-01-24",
       "source": "github"
@@ -1114,7 +1114,7 @@
       "owner": "zinja-coder",
       "repo": "jadx-ai-mcp",
       "install_command": "",
-      "stars": 1980,
+      "stars": 1984,
       "language": "Java",
       "last_updated": "2026-04-20",
       "source": "awesome"
@@ -1128,7 +1128,7 @@
       "owner": "martin-ger",
       "repo": "esp32_nat_router",
       "install_command": "",
-      "stars": 1945,
+      "stars": 1946,
       "language": "C",
       "last_updated": "2026-05-06",
       "source": "github"
@@ -1142,9 +1142,9 @@
       "owner": "MCPJam",
       "repo": "inspector",
       "install_command": "",
-      "stars": 1929,
+      "stars": 1932,
       "language": "TypeScript",
-      "last_updated": "2026-05-10",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -1156,7 +1156,7 @@
       "owner": "forloopcodes",
       "repo": "contextplus",
       "install_command": "",
-      "stars": 1864,
+      "stars": 1883,
       "language": "TypeScript",
       "last_updated": "2026-05-02",
       "source": "github"
@@ -1170,7 +1170,7 @@
       "owner": "chongdashu",
       "repo": "unreal-mcp",
       "install_command": "",
-      "stars": 1855,
+      "stars": 1857,
       "language": "C++",
       "last_updated": "2025-04-22",
       "source": "github"
@@ -1184,9 +1184,9 @@
       "owner": "stickerdaniel",
       "repo": "linkedin-mcp-server",
       "install_command": "",
-      "stars": 1831,
+      "stars": 1845,
       "language": "Python",
-      "last_updated": "2026-05-07",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -1198,9 +1198,9 @@
       "owner": "doobidoo",
       "repo": "mcp-memory-service",
       "install_command": "",
-      "stars": 1816,
+      "stars": 1820,
       "language": "Python",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-10",
       "source": "awesome"
     },
     {
@@ -1218,6 +1218,20 @@
       "source": "github"
     },
     {
+      "id": "skyhook-io/radar",
+      "name": "Radar",
+      "description": "The missing open source Kubernetes UI. Topology, event timeline, and service traffic \u2014 plus resource browsing and Helm management.",
+      "category": "Cloud & Infra",
+      "github_url": "https://github.com/skyhook-io/radar",
+      "owner": "skyhook-io",
+      "repo": "radar",
+      "install_command": "",
+      "stars": 1779,
+      "language": "TypeScript",
+      "last_updated": "2026-05-11",
+      "source": "github"
+    },
+    {
       "id": "ravitemer/mcphub.nvim",
       "name": "Mcphub.Nvim",
       "description": "An MCP client for Neovim that seamlessly integrates MCP servers into your editing workflow with an intuitive interface for managing, testing, and using MCP servers with your favorite chat plugins.",
@@ -1232,20 +1246,6 @@
       "source": "github"
     },
     {
-      "id": "skyhook-io/radar",
-      "name": "Radar",
-      "description": "The missing open source Kubernetes UI. Topology, event timeline, and service traffic \u2014 plus resource browsing and Helm management.",
-      "category": "Cloud & Infra",
-      "github_url": "https://github.com/skyhook-io/radar",
-      "owner": "skyhook-io",
-      "repo": "radar",
-      "install_command": "",
-      "stars": 1763,
-      "language": "TypeScript",
-      "last_updated": "2026-05-09",
-      "source": "github"
-    },
-    {
       "id": "timescale/pg-aiguide",
       "name": "Pg Aiguide",
       "description": "MCP server and Claude plugin for Postgres skills and documentation. Helps AI coding tools generate better PostgreSQL code.",
@@ -1254,7 +1254,7 @@
       "owner": "timescale",
       "repo": "pg-aiguide",
       "install_command": "",
-      "stars": 1718,
+      "stars": 1722,
       "language": "Python",
       "last_updated": "2026-04-28",
       "source": "github"
@@ -1268,15 +1268,15 @@
       "owner": "chrisryugj",
       "repo": "korean-law-mcp",
       "install_command": "",
-      "stars": 1687,
+      "stars": 1697,
       "language": "TypeScript",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
       "id": "glidea/zenfeed",
       "name": "Zenfeed",
-      "description": "Make RSS \ud83d\udcf0 great again with AI \ud83e\udde0\u2728!! [gpt-5.5 -> https://pay.ldxp.cn/shop/8465P8HU 0.2 \u500d\u7387, 0.2\u5143\u5f531\u5200\u82b1\uff0c\u6bd4\u5b98\u65b9\u4fbf\u5b9c35\u500d]",
+      "description": "Make RSS \ud83d\udcf0 great again with AI \ud83e\udde0\u2728!! [\u4f5c\u8005\u65b0\u5f00\u7684Gpt\u6a21\u578b\u4e2d\u8f6c\u7ad9 - 0.2 \u500d\u7387, 0.2\u5143\u5f531\u5200\u82b1\uff0c\u6bd4\u5b98\u65b9\u4fbf\u5b9c35\u500d  https://token.glidea.app]",
       "category": "Web & Browser",
       "github_url": "https://github.com/glidea/zenfeed",
       "owner": "glidea",
@@ -1296,7 +1296,7 @@
       "owner": "korotovsky",
       "repo": "slack-mcp-server",
       "install_command": "",
-      "stars": 1586,
+      "stars": 1589,
       "language": "Go",
       "last_updated": "2026-04-30",
       "source": "awesome"
@@ -1310,7 +1310,7 @@
       "owner": "f",
       "repo": "mcptools",
       "install_command": "",
-      "stars": 1579,
+      "stars": 1580,
       "language": "Go",
       "last_updated": "2025-12-18",
       "source": "github"
@@ -1324,9 +1324,23 @@
       "owner": "Mcp-Brasil",
       "repo": "mcp-brasil",
       "install_command": "",
-      "stars": 1546,
+      "stars": 1548,
       "language": "Python",
       "last_updated": "2026-04-26",
+      "source": "github"
+    },
+    {
+      "id": "Prismer-AI/PrismerCloud",
+      "name": "Prismercloud",
+      "description": "Prismer Cloud",
+      "category": "Cloud & Infra",
+      "github_url": "https://github.com/Prismer-AI/PrismerCloud",
+      "owner": "Prismer-AI",
+      "repo": "PrismerCloud",
+      "install_command": "",
+      "stars": 1539,
+      "language": "TypeScript",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -1344,16 +1358,16 @@
       "source": "awesome"
     },
     {
-      "id": "Prismer-AI/PrismerCloud",
-      "name": "Prismercloud",
-      "description": "Prismer Cloud",
-      "category": "Cloud & Infra",
-      "github_url": "https://github.com/Prismer-AI/PrismerCloud",
-      "owner": "Prismer-AI",
-      "repo": "PrismerCloud",
+      "id": "yvgude/lean-ctx",
+      "name": "Lean Ctx",
+      "description": "The Context OS for AI Development. Reduce token waste in Cursor, Claude Code, Copilot, Windsurf, Codex, Gemini & more by 60\u201395% (up to 99% on cached reads) Shell Hook + MCP Server \u00b7 49 tools \u00b7 10 read modes \u00b7 90+ patterns \u00b7 Single Rust binary ",
+      "category": "Developer Tools",
+      "github_url": "https://github.com/yvgude/lean-ctx",
+      "owner": "yvgude",
+      "repo": "lean-ctx",
       "install_command": "",
-      "stars": 1511,
-      "language": "TypeScript",
+      "stars": 1522,
+      "language": "Rust",
       "last_updated": "2026-05-10",
       "source": "github"
     },
@@ -1366,7 +1380,7 @@
       "owner": "rulego",
       "repo": "rulego",
       "install_command": "",
-      "stars": 1503,
+      "stars": 1504,
       "language": "Go",
       "last_updated": "2026-04-23",
       "source": "github"
@@ -1380,7 +1394,7 @@
       "owner": "MiniMax-AI",
       "repo": "MiniMax-MCP",
       "install_command": "",
-      "stars": 1471,
+      "stars": 1472,
       "language": "Python",
       "last_updated": "2026-04-15",
       "source": "github"
@@ -1408,23 +1422,9 @@
       "owner": "datagouv",
       "repo": "datagouv-mcp",
       "install_command": "",
-      "stars": 1438,
+      "stars": 1441,
       "language": "Python",
       "last_updated": "2026-05-07",
-      "source": "github"
-    },
-    {
-      "id": "yvgude/lean-ctx",
-      "name": "Lean Ctx",
-      "description": "The Context OS for AI Development. Reduce token waste in Cursor, Claude Code, Copilot, Windsurf, Codex, Gemini & more by 60\u201395% (up to 99% on cached reads) Shell Hook + MCP Server \u00b7 49 tools \u00b7 10 read modes \u00b7 90+ patterns \u00b7 Single Rust binary ",
-      "category": "Developer Tools",
-      "github_url": "https://github.com/yvgude/lean-ctx",
-      "owner": "yvgude",
-      "repo": "lean-ctx",
-      "install_command": "",
-      "stars": 1433,
-      "language": "Rust",
-      "last_updated": "2026-05-09",
       "source": "github"
     },
     {
@@ -1450,7 +1450,7 @@
       "owner": "llmsresearch",
       "repo": "paperbanana",
       "install_command": "",
-      "stars": 1406,
+      "stars": 1407,
       "language": "Python",
       "last_updated": "2026-04-22",
       "source": "github"
@@ -1470,20 +1470,6 @@
       "source": "github"
     },
     {
-      "id": "qdrant/mcp-server-qdrant",
-      "name": "qdrant/mcp-server-qdrant",
-      "description": "",
-      "category": "Other",
-      "github_url": "https://github.com/qdrant/mcp-server-qdrant",
-      "owner": "qdrant",
-      "repo": "mcp-server-qdrant",
-      "install_command": "",
-      "stars": 1390,
-      "language": "Python",
-      "last_updated": "2026-04-27",
-      "source": "awesome"
-    },
-    {
       "id": "openags/paper-search-mcp",
       "name": "Paper Search Mcp",
       "description": "MCP, CLI, Skills for searching and downloading academic papers from multiple sources like arXiv, PubMed, bioRxiv, etc.",
@@ -1492,9 +1478,37 @@
       "owner": "openags",
       "repo": "paper-search-mcp",
       "install_command": "",
-      "stars": 1380,
+      "stars": 1399,
       "language": "Python",
       "last_updated": "2026-04-27",
+      "source": "github"
+    },
+    {
+      "id": "qdrant/mcp-server-qdrant",
+      "name": "qdrant/mcp-server-qdrant",
+      "description": "",
+      "category": "Other",
+      "github_url": "https://github.com/qdrant/mcp-server-qdrant",
+      "owner": "qdrant",
+      "repo": "mcp-server-qdrant",
+      "install_command": "",
+      "stars": 1391,
+      "language": "Python",
+      "last_updated": "2026-04-27",
+      "source": "awesome"
+    },
+    {
+      "id": "NPC-Worldwide/npcpy",
+      "name": "Npcpy",
+      "description": "The python library for research and development in NLP, multimodal LLMs, Agents, ML, Knowledge Graphs, and more.",
+      "category": "AI & ML",
+      "github_url": "https://github.com/NPC-Worldwide/npcpy",
+      "owner": "NPC-Worldwide",
+      "repo": "npcpy",
+      "install_command": "",
+      "stars": 1335,
+      "language": "Python",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -1506,23 +1520,9 @@
       "owner": "taielab",
       "repo": "awesome-hacking-lists",
       "install_command": "",
-      "stars": 1335,
+      "stars": 1334,
       "language": "",
       "last_updated": "2025-12-04",
-      "source": "github"
-    },
-    {
-      "id": "NPC-Worldwide/npcpy",
-      "name": "Npcpy",
-      "description": "The python library for research and development in NLP, multimodal LLMs, Agents, ML, Knowledge Graphs, and more.",
-      "category": "AI & ML",
-      "github_url": "https://github.com/NPC-Worldwide/npcpy",
-      "owner": "NPC-Worldwide",
-      "repo": "npcpy",
-      "install_command": "",
-      "stars": 1333,
-      "language": "Python",
-      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -1534,7 +1534,7 @@
       "owner": "svnscha",
       "repo": "mcp-windbg",
       "install_command": "",
-      "stars": 1276,
+      "stars": 1280,
       "language": "Python",
       "last_updated": "2026-04-13",
       "source": "github"
@@ -1548,9 +1548,9 @@
       "owner": "chunkhound",
       "repo": "chunkhound",
       "install_command": "",
-      "stars": 1249,
+      "stars": 1251,
       "language": "Python",
-      "last_updated": "2026-05-06",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -1562,7 +1562,7 @@
       "owner": "joey-zhou",
       "repo": "xiaozhi-esp32-server-java",
       "install_command": "",
-      "stars": 1243,
+      "stars": 1244,
       "language": "Java",
       "last_updated": "2026-05-09",
       "source": "github"
@@ -1604,7 +1604,7 @@
       "owner": "caol64",
       "repo": "wenyan-mcp",
       "install_command": "",
-      "stars": 1213,
+      "stars": 1214,
       "language": "JavaScript",
       "last_updated": "2026-04-29",
       "source": "awesome"
@@ -1618,9 +1618,9 @@
       "owner": "robotmcp",
       "repo": "ros-mcp-server",
       "install_command": "",
-      "stars": 1207,
+      "stars": 1212,
       "language": "Python",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -1632,9 +1632,9 @@
       "owner": "apify",
       "repo": "apify-mcp-server",
       "install_command": "",
-      "stars": 1202,
+      "stars": 1204,
       "language": "TypeScript",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -1660,9 +1660,9 @@
       "owner": "mbailey",
       "repo": "voicemode",
       "install_command": "",
-      "stars": 1161,
+      "stars": 1163,
       "language": "Python",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -1690,7 +1690,7 @@
       "install_command": "",
       "stars": 1128,
       "language": "TypeScript",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -1716,9 +1716,9 @@
       "owner": "0xMassi",
       "repo": "webclaw",
       "install_command": "",
-      "stars": 1101,
+      "stars": 1116,
       "language": "Rust",
-      "last_updated": "2026-05-06",
+      "last_updated": "2026-05-10",
       "source": "awesome"
     },
     {
@@ -1730,7 +1730,7 @@
       "owner": "ref-tools",
       "repo": "ref-tools-mcp",
       "install_command": "",
-      "stars": 1101,
+      "stars": 1102,
       "language": "TypeScript",
       "last_updated": "2026-05-06",
       "source": "github"
@@ -1744,7 +1744,7 @@
       "owner": "cgoinglove",
       "repo": "better-chatbot",
       "install_command": "",
-      "stars": 1092,
+      "stars": 1093,
       "language": "TypeScript",
       "last_updated": "2026-04-26",
       "source": "github"
@@ -1772,7 +1772,7 @@
       "owner": "datalayer",
       "repo": "jupyter-mcp-server",
       "install_command": "",
-      "stars": 1079,
+      "stars": 1080,
       "language": "Python",
       "last_updated": "2026-04-27",
       "source": "awesome"
@@ -1786,9 +1786,23 @@
       "owner": "ridafkih",
       "repo": "keeper.sh",
       "install_command": "",
-      "stars": 1056,
+      "stars": 1058,
       "language": "TypeScript",
       "last_updated": "2026-04-10",
+      "source": "github"
+    },
+    {
+      "id": "Dataojitori/nocturne_memory",
+      "name": "Nocturne Memory",
+      "description": "A lightweight, rollbackable, and visual Long-Term Memory Server for MCP Agents. Say goodbye to Vector RAG and amnesia. Empower your AI with persistent, graph-like structured memory across any model, session, or tool. Drop-in replacement for OpenClaw.",
+      "category": "Databases",
+      "github_url": "https://github.com/Dataojitori/nocturne_memory",
+      "owner": "Dataojitori",
+      "repo": "nocturne_memory",
+      "install_command": "",
+      "stars": 1051,
+      "language": "Python",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -1803,20 +1817,6 @@
       "stars": 1049,
       "language": "TypeScript",
       "last_updated": "2025-05-11",
-      "source": "github"
-    },
-    {
-      "id": "Dataojitori/nocturne_memory",
-      "name": "Nocturne Memory",
-      "description": "A lightweight, rollbackable, and visual Long-Term Memory Server for MCP Agents. Say goodbye to Vector RAG and amnesia. Empower your AI with persistent, graph-like structured memory across any model, session, or tool. Drop-in replacement for OpenClaw.",
-      "category": "Databases",
-      "github_url": "https://github.com/Dataojitori/nocturne_memory",
-      "owner": "Dataojitori",
-      "repo": "nocturne_memory",
-      "install_command": "",
-      "stars": 1045,
-      "language": "Python",
-      "last_updated": "2026-05-06",
       "source": "github"
     },
     {
@@ -1862,20 +1862,6 @@
       "source": "awesome"
     },
     {
-      "id": "openops-cloud/openops",
-      "name": "Openops",
-      "description": "The batteries-included, No-Code FinOps automation platform, with the AI you trust.",
-      "category": "Developer Tools",
-      "github_url": "https://github.com/openops-cloud/openops",
-      "owner": "openops-cloud",
-      "repo": "openops",
-      "install_command": "",
-      "stars": 1021,
-      "language": "TypeScript",
-      "last_updated": "2026-05-09",
-      "source": "github"
-    },
-    {
       "id": "mcpjungle/MCPJungle",
       "name": "Mcpjungle",
       "description": "One place to manage & connect to all your MCP servers",
@@ -1884,8 +1870,22 @@
       "owner": "mcpjungle",
       "repo": "MCPJungle",
       "install_command": "",
-      "stars": 1020,
+      "stars": 1022,
       "language": "Go",
+      "last_updated": "2026-05-11",
+      "source": "github"
+    },
+    {
+      "id": "openops-cloud/openops",
+      "name": "Openops",
+      "description": "The batteries-included, No-Code FinOps automation platform, with the AI you trust.",
+      "category": "Developer Tools",
+      "github_url": "https://github.com/openops-cloud/openops",
+      "owner": "openops-cloud",
+      "repo": "openops",
+      "install_command": "",
+      "stars": 1022,
+      "language": "TypeScript",
       "last_updated": "2026-05-09",
       "source": "github"
     },
@@ -1898,9 +1898,9 @@
       "owner": "mongodb-js",
       "repo": "mongodb-mcp-server",
       "install_command": "",
-      "stars": 1017,
+      "stars": 1020,
       "language": "TypeScript",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -1912,7 +1912,7 @@
       "owner": "samuelgursky",
       "repo": "davinci-resolve-mcp",
       "install_command": "",
-      "stars": 1004,
+      "stars": 1015,
       "language": "Python",
       "last_updated": "2026-05-09",
       "source": "awesome"
@@ -1926,10 +1926,24 @@
       "owner": "jau123",
       "repo": "MeiGen-AI-Design-MCP",
       "install_command": "",
-      "stars": 981,
+      "stars": 992,
       "language": "TypeScript",
       "last_updated": "2026-05-09",
       "source": "awesome"
+    },
+    {
+      "id": "irinabuht12-oss/google-meta-ads-ga4-mcp",
+      "name": "Google Meta Ads Ga4 Mcp",
+      "description": "MCP server for Google Ads, Meta Ads & GA4 \u2014 works with ChatGPT, Claude, Cursor, n8n, Windsurf & more. 250+ tools for campaign management, analytics & optimization.",
+      "category": "Search",
+      "github_url": "https://github.com/irinabuht12-oss/google-meta-ads-ga4-mcp",
+      "owner": "irinabuht12-oss",
+      "repo": "google-meta-ads-ga4-mcp",
+      "install_command": "",
+      "stars": 979,
+      "language": "",
+      "last_updated": "2026-04-07",
+      "source": "github"
     },
     {
       "id": "splx-ai/agentic-radar",
@@ -1940,7 +1954,7 @@
       "owner": "splx-ai",
       "repo": "agentic-radar",
       "install_command": "",
-      "stars": 965,
+      "stars": 966,
       "language": "Python",
       "last_updated": "2025-11-27",
       "source": "github"
@@ -1954,7 +1968,7 @@
       "owner": "JetBrains",
       "repo": "mcp-jetbrains",
       "install_command": "",
-      "stars": 951,
+      "stars": 952,
       "language": "JavaScript",
       "last_updated": "2026-01-07",
       "source": "github"
@@ -1968,24 +1982,10 @@
       "owner": "neo4j-contrib",
       "repo": "mcp-neo4j",
       "install_command": "",
-      "stars": 946,
+      "stars": 945,
       "language": "Python",
       "last_updated": "2026-04-10",
       "source": "awesome"
-    },
-    {
-      "id": "irinabuht12-oss/google-meta-ads-ga4-mcp",
-      "name": "Google Meta Ads Ga4 Mcp",
-      "description": "MCP server for Google Ads, Meta Ads & GA4 \u2014 works with ChatGPT, Claude, Cursor, n8n, Windsurf & more. 250+ tools for campaign management, analytics & optimization.",
-      "category": "Search",
-      "github_url": "https://github.com/irinabuht12-oss/google-meta-ads-ga4-mcp",
-      "owner": "irinabuht12-oss",
-      "repo": "google-meta-ads-ga4-mcp",
-      "install_command": "",
-      "stars": 941,
-      "language": "",
-      "last_updated": "2026-04-07",
-      "source": "github"
     },
     {
       "id": "SecretiveShell/MCP-Bridge",
@@ -2010,7 +2010,7 @@
       "owner": "Azure-Samples",
       "repo": "AI-Gateway",
       "install_command": "",
-      "stars": 916,
+      "stars": 917,
       "language": "Jupyter Notebook",
       "last_updated": "2026-05-09",
       "source": "github"
@@ -2038,9 +2038,9 @@
       "owner": "asciimoo",
       "repo": "hister",
       "install_command": "",
-      "stars": 892,
+      "stars": 893,
       "language": "Go",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -2096,7 +2096,7 @@
       "install_command": "",
       "stars": 874,
       "language": "Java",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -2108,23 +2108,9 @@
       "owner": "hyper-mcp-rs",
       "repo": "hyper-mcp",
       "install_command": "",
-      "stars": 872,
+      "stars": 871,
       "language": "Rust",
-      "last_updated": "2026-05-09",
-      "source": "github"
-    },
-    {
-      "id": "Davidyz/VectorCode",
-      "name": "Vectorcode",
-      "description": "A code repository indexing tool to supercharge your LLM experience.",
-      "category": "Version Control",
-      "github_url": "https://github.com/Davidyz/VectorCode",
-      "owner": "Davidyz",
-      "repo": "VectorCode",
-      "install_command": "",
-      "stars": 857,
-      "language": "Python",
-      "last_updated": "2026-02-23",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -2136,9 +2122,37 @@
       "owner": "iosifache",
       "repo": "annas-mcp",
       "install_command": "",
-      "stars": 855,
+      "stars": 859,
       "language": "Go",
       "last_updated": "2026-02-22",
+      "source": "github"
+    },
+    {
+      "id": "Davidyz/VectorCode",
+      "name": "Vectorcode",
+      "description": "A code repository indexing tool to supercharge your LLM experience.",
+      "category": "Version Control",
+      "github_url": "https://github.com/Davidyz/VectorCode",
+      "owner": "Davidyz",
+      "repo": "VectorCode",
+      "install_command": "",
+      "stars": 858,
+      "language": "Python",
+      "last_updated": "2026-02-23",
+      "source": "github"
+    },
+    {
+      "id": "lucasastorian/llmwiki",
+      "name": "Llmwiki",
+      "description": "Open Source Implementation of Karpathy's LLM Wiki. Upload documents, connect your Claude account via MCP, and have it write your wiki ! ",
+      "category": "AI & ML",
+      "github_url": "https://github.com/lucasastorian/llmwiki",
+      "owner": "lucasastorian",
+      "repo": "llmwiki",
+      "install_command": "",
+      "stars": 857,
+      "language": "Python",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -2150,10 +2164,24 @@
       "owner": "TM9657",
       "repo": "flow-like",
       "install_command": "",
-      "stars": 854,
+      "stars": 855,
       "language": "Rust",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-05-11",
       "source": "github"
+    },
+    {
+      "id": "mnemox-ai/tradememory-protocol",
+      "name": "mnemox-ai/tradememory-protocol",
+      "description": "",
+      "category": "Other",
+      "github_url": "https://github.com/mnemox-ai/tradememory-protocol",
+      "owner": "mnemox-ai",
+      "repo": "tradememory-protocol",
+      "install_command": "",
+      "stars": 850,
+      "language": "Python",
+      "last_updated": "2026-04-10",
+      "source": "awesome"
     },
     {
       "id": "xing5/mcp-google-sheets",
@@ -2170,34 +2198,6 @@
       "source": "awesome"
     },
     {
-      "id": "lucasastorian/llmwiki",
-      "name": "Llmwiki",
-      "description": "Open Source Implementation of Karpathy's LLM Wiki. Upload documents, connect your Claude account via MCP, and have it write your wiki ! ",
-      "category": "AI & ML",
-      "github_url": "https://github.com/lucasastorian/llmwiki",
-      "owner": "lucasastorian",
-      "repo": "llmwiki",
-      "install_command": "",
-      "stars": 846,
-      "language": "Python",
-      "last_updated": "2026-05-09",
-      "source": "github"
-    },
-    {
-      "id": "mnemox-ai/tradememory-protocol",
-      "name": "mnemox-ai/tradememory-protocol",
-      "description": "",
-      "category": "Other",
-      "github_url": "https://github.com/mnemox-ai/tradememory-protocol",
-      "owner": "mnemox-ai",
-      "repo": "tradememory-protocol",
-      "install_command": "",
-      "stars": 837,
-      "language": "Python",
-      "last_updated": "2026-04-10",
-      "source": "awesome"
-    },
-    {
       "id": "ankorstore/yokai",
       "name": "Yokai",
       "description": "Simple, modular, and observable Go framework for backend applications.",
@@ -2206,7 +2206,7 @@
       "owner": "ankorstore",
       "repo": "yokai",
       "install_command": "",
-      "stars": 834,
+      "stars": 833,
       "language": "Go",
       "last_updated": "2026-02-24",
       "source": "github"
@@ -2222,7 +2222,7 @@
       "install_command": "",
       "stars": 831,
       "language": "C#",
-      "last_updated": "2026-05-07",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -2262,9 +2262,23 @@
       "owner": "LeslieLeung",
       "repo": "glean",
       "install_command": "",
-      "stars": 815,
+      "stars": 814,
       "language": "TypeScript",
       "last_updated": "2026-05-08",
+      "source": "github"
+    },
+    {
+      "id": "AminForou/mcp-gsc",
+      "name": "Mcp Gsc",
+      "description": "Google Search Console Insights with Claude AI for SEOs",
+      "category": "Search",
+      "github_url": "https://github.com/AminForou/mcp-gsc",
+      "owner": "AminForou",
+      "repo": "mcp-gsc",
+      "install_command": "",
+      "stars": 814,
+      "language": "Python",
+      "last_updated": "2026-04-30",
       "source": "github"
     },
     {
@@ -2290,7 +2304,7 @@
       "owner": "WJZ-P",
       "repo": "gemini-skill",
       "install_command": "",
-      "stars": 810,
+      "stars": 811,
       "language": "JavaScript",
       "last_updated": "2026-04-07",
       "source": "github"
@@ -2310,20 +2324,6 @@
       "source": "github"
     },
     {
-      "id": "AminForou/mcp-gsc",
-      "name": "Mcp Gsc",
-      "description": "Google Search Console Insights with Claude AI for SEOs",
-      "category": "Search",
-      "github_url": "https://github.com/AminForou/mcp-gsc",
-      "owner": "AminForou",
-      "repo": "mcp-gsc",
-      "install_command": "",
-      "stars": 809,
-      "language": "Python",
-      "last_updated": "2026-04-30",
-      "source": "github"
-    },
-    {
       "id": "jacksteamdev/obsidian-mcp-tools",
       "name": "Obsidian Mcp Tools",
       "description": "Add Obsidian integrations like semantic search and custom Templater prompts to Claude or any MCP client.",
@@ -2332,7 +2332,7 @@
       "owner": "jacksteamdev",
       "repo": "obsidian-mcp-tools",
       "install_command": "",
-      "stars": 803,
+      "stars": 806,
       "language": "TypeScript",
       "last_updated": "2026-04-25",
       "source": "github"
@@ -2346,7 +2346,7 @@
       "owner": "browser-use",
       "repo": "vibetest-use",
       "install_command": "",
-      "stars": 790,
+      "stars": 791,
       "language": "Python",
       "last_updated": "2025-09-02",
       "source": "github"
@@ -2360,38 +2360,24 @@
       "owner": "dadbodgeoff",
       "repo": "drift",
       "install_command": "",
-      "stars": 778,
+      "stars": 779,
       "language": "TypeScript",
       "last_updated": "2026-02-13",
       "source": "github"
     },
     {
-      "id": "Cyfrin/aderyn",
-      "name": "Aderyn",
-      "description": "Solidity Static Analyzer that easily integrates into your editor",
-      "category": "Other",
-      "github_url": "https://github.com/Cyfrin/aderyn",
-      "owner": "Cyfrin",
-      "repo": "aderyn",
+      "id": "ThinkWatchProject/ThinkWatch",
+      "name": "Thinkwatch",
+      "description": "Enterprise AI bastion host for secure AI API and MCP access, with unified proxying, RBAC, audit logs, rate limiting, and cost tracking across OpenAI, Anthropic, Gemini, and self-hosted LLMs.",
+      "category": "AI & ML",
+      "github_url": "https://github.com/ThinkWatchProject/ThinkWatch",
+      "owner": "ThinkWatchProject",
+      "repo": "ThinkWatch",
       "install_command": "",
-      "stars": 769,
+      "stars": 777,
       "language": "Rust",
-      "last_updated": "2026-05-03",
+      "last_updated": "2026-05-11",
       "source": "github"
-    },
-    {
-      "id": "ihor-sokoliuk/mcp-searxng",
-      "name": "Ihor-Sokoliuk/MCP-SearXNG",
-      "description": "",
-      "category": "Other",
-      "github_url": "https://github.com/ihor-sokoliuk/mcp-searxng",
-      "owner": "ihor-sokoliuk",
-      "repo": "mcp-searxng",
-      "install_command": "",
-      "stars": 764,
-      "language": "TypeScript",
-      "last_updated": "2026-04-28",
-      "source": "awesome"
     },
     {
       "id": "jnMetaCode/agency-orchestrator",
@@ -2402,7 +2388,7 @@
       "owner": "jnMetaCode",
       "repo": "agency-orchestrator",
       "install_command": "",
-      "stars": 763,
+      "stars": 775,
       "language": "TypeScript",
       "last_updated": "2026-04-30",
       "source": "github"
@@ -2416,10 +2402,38 @@
       "owner": "MinishLab",
       "repo": "semble",
       "install_command": "",
-      "stars": 763,
+      "stars": 773,
       "language": "Python",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
+    },
+    {
+      "id": "Cyfrin/aderyn",
+      "name": "Aderyn",
+      "description": "Solidity Static Analyzer that easily integrates into your editor",
+      "category": "Other",
+      "github_url": "https://github.com/Cyfrin/aderyn",
+      "owner": "Cyfrin",
+      "repo": "aderyn",
+      "install_command": "",
+      "stars": 769,
+      "language": "Rust",
+      "last_updated": "2026-05-10",
+      "source": "github"
+    },
+    {
+      "id": "ihor-sokoliuk/mcp-searxng",
+      "name": "Ihor-Sokoliuk/MCP-SearXNG",
+      "description": "",
+      "category": "Other",
+      "github_url": "https://github.com/ihor-sokoliuk/mcp-searxng",
+      "owner": "ihor-sokoliuk",
+      "repo": "mcp-searxng",
+      "install_command": "",
+      "stars": 769,
+      "language": "TypeScript",
+      "last_updated": "2026-04-28",
+      "source": "awesome"
     },
     {
       "id": "cookjohn/zotero-mcp",
@@ -2430,23 +2444,9 @@
       "owner": "cookjohn",
       "repo": "zotero-mcp",
       "install_command": "",
-      "stars": 756,
+      "stars": 760,
       "language": "TypeScript",
       "last_updated": "2026-03-22",
-      "source": "github"
-    },
-    {
-      "id": "ThinkWatchProject/ThinkWatch",
-      "name": "Thinkwatch",
-      "description": "Enterprise AI bastion host for secure AI API and MCP access, with unified proxying, RBAC, audit logs, rate limiting, and cost tracking across OpenAI, Anthropic, Gemini, and self-hosted LLMs.",
-      "category": "AI & ML",
-      "github_url": "https://github.com/ThinkWatchProject/ThinkWatch",
-      "owner": "ThinkWatchProject",
-      "repo": "ThinkWatch",
-      "install_command": "",
-      "stars": 746,
-      "language": "Rust",
-      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -2458,7 +2458,7 @@
       "owner": "vercel",
       "repo": "next-devtools-mcp",
       "install_command": "",
-      "stars": 741,
+      "stars": 742,
       "language": "TypeScript",
       "last_updated": "2026-03-23",
       "source": "awesome"
@@ -2474,7 +2474,7 @@
       "install_command": "",
       "stars": 730,
       "language": "Swift",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -2486,9 +2486,9 @@
       "owner": "cyberkaida",
       "repo": "reverse-engineering-assistant",
       "install_command": "",
-      "stars": 725,
+      "stars": 726,
       "language": "Java",
-      "last_updated": "2026-05-05",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -2500,9 +2500,37 @@
       "owner": "orneryd",
       "repo": "NornicDB",
       "install_command": "",
-      "stars": 722,
+      "stars": 724,
       "language": "Go",
       "last_updated": "2026-05-09",
+      "source": "github"
+    },
+    {
+      "id": "mihaelamj/cupertino",
+      "name": "mihaelamj/cupertino",
+      "description": "",
+      "category": "Other",
+      "github_url": "https://github.com/mihaelamj/cupertino",
+      "owner": "mihaelamj",
+      "repo": "cupertino",
+      "install_command": "",
+      "stars": 720,
+      "language": "Swift",
+      "last_updated": "2026-05-10",
+      "source": "awesome"
+    },
+    {
+      "id": "alpacahq/alpaca-mcp-server",
+      "name": "Alpaca Mcp Server",
+      "description": "Alpaca\u2019s official MCP Server lets you trade stocks, ETFs, crypto, and options, run data analysis, and build strategies in plain English directly from your favorite LLM tools and IDEs",
+      "category": "AI & ML",
+      "github_url": "https://github.com/alpacahq/alpaca-mcp-server",
+      "owner": "alpacahq",
+      "repo": "alpaca-mcp-server",
+      "install_command": "",
+      "stars": 719,
+      "language": "Python",
+      "last_updated": "2026-04-17",
       "source": "github"
     },
     {
@@ -2520,34 +2548,6 @@
       "source": "github"
     },
     {
-      "id": "alpacahq/alpaca-mcp-server",
-      "name": "Alpaca Mcp Server",
-      "description": "Alpaca\u2019s official MCP Server lets you trade stocks, ETFs, crypto, and options, run data analysis, and build strategies in plain English directly from your favorite LLM tools and IDEs",
-      "category": "AI & ML",
-      "github_url": "https://github.com/alpacahq/alpaca-mcp-server",
-      "owner": "alpacahq",
-      "repo": "alpaca-mcp-server",
-      "install_command": "",
-      "stars": 716,
-      "language": "Python",
-      "last_updated": "2026-04-17",
-      "source": "github"
-    },
-    {
-      "id": "mihaelamj/cupertino",
-      "name": "mihaelamj/cupertino",
-      "description": "",
-      "category": "Other",
-      "github_url": "https://github.com/mihaelamj/cupertino",
-      "owner": "mihaelamj",
-      "repo": "cupertino",
-      "install_command": "",
-      "stars": 708,
-      "language": "Swift",
-      "last_updated": "2026-05-09",
-      "source": "awesome"
-    },
-    {
       "id": "Shy2593666979/AgentChat",
       "name": "Agentchat",
       "description": "AgentChat \u662f\u4e00\u4e2a\u57fa\u4e8e LLM \u7684\u667a\u80fd\u4f53\u4ea4\u6d41\u5e73\u53f0\uff0c\u5185\u7f6e\u9ed8\u8ba4 Agent \u5e76\u652f\u6301\u7528\u6237\u81ea\u5b9a\u4e49 Agent\u3002\u901a\u8fc7\u591a\u8f6e\u5bf9\u8bdd\u548c\u4efb\u52a1\u534f\u4f5c\uff0cAgent \u53ef\u4ee5\u7406\u89e3\u5e76\u534f\u52a9\u5b8c\u6210\u590d\u6742\u4efb\u52a1\u3002\u9879\u76ee\u96c6\u6210 LangChain\u3001Function Call\u3001MCP \u534f\u8bae\u3001RAG\u3001Memory\u3001HITL\u3001Skill\u3001Milvus \u548c ElasticSearch \u7b49\u6280\u672f\uff0c\u5b9e\u73b0\u9ad8\u6548\u7684\u77e5\u8bc6\u68c0\u7d22\u4e0e\u5de5\u5177\u8c03\u7528\uff0c\u4f7f\u7528 FastAPI \u6784\u5efa\u9ad8\u6027\u80fd\u540e\u7aef\u670d\u52a1\u3002",
@@ -2556,7 +2556,7 @@
       "owner": "Shy2593666979",
       "repo": "AgentChat",
       "install_command": "",
-      "stars": 700,
+      "stars": 707,
       "language": "Python",
       "last_updated": "2026-04-15",
       "source": "github"
@@ -2570,7 +2570,7 @@
       "owner": "jonigl",
       "repo": "mcp-client-for-ollama",
       "install_command": "",
-      "stars": 699,
+      "stars": 697,
       "language": "Python",
       "last_updated": "2026-05-08",
       "source": "github"
@@ -2598,7 +2598,7 @@
       "owner": "whchien",
       "repo": "ai-trader",
       "install_command": "",
-      "stars": 690,
+      "stars": 691,
       "language": "Python",
       "last_updated": "2026-03-28",
       "source": "github"
@@ -2612,10 +2612,24 @@
       "owner": "tbxark",
       "repo": "mcp-proxy",
       "install_command": "",
-      "stars": 688,
+      "stars": 690,
       "language": "Go",
       "last_updated": "2026-02-19",
       "source": "github"
+    },
+    {
+      "id": "mnemox-ai/idea-reality-mcp",
+      "name": "mnemox-ai/idea-reality-mcp",
+      "description": "",
+      "category": "Other",
+      "github_url": "https://github.com/mnemox-ai/idea-reality-mcp",
+      "owner": "mnemox-ai",
+      "repo": "idea-reality-mcp",
+      "install_command": "",
+      "stars": 683,
+      "language": "Python",
+      "last_updated": "2026-04-14",
+      "source": "awesome"
     },
     {
       "id": "getsentry/sentry-mcp",
@@ -2628,7 +2642,7 @@
       "install_command": "",
       "stars": 682,
       "language": "TypeScript",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-10",
       "source": "awesome"
     },
     {
@@ -2668,24 +2682,24 @@
       "owner": "TensorBlock",
       "repo": "awesome-mcp-servers",
       "install_command": "",
-      "stars": 668,
+      "stars": 669,
       "language": "",
       "last_updated": "2026-05-07",
       "source": "github"
     },
     {
-      "id": "mnemox-ai/idea-reality-mcp",
-      "name": "mnemox-ai/idea-reality-mcp",
-      "description": "",
+      "id": "miscusi-peek/cheatengine-mcp-bridge",
+      "name": "Cheatengine Mcp Bridge",
+      "description": "Connect Cursor, Copilot & Claude AI directly to Cheat Engine via MCP. Automate reverse engineering, pointer scanning, and memory analysis using natural language.",
       "category": "Other",
-      "github_url": "https://github.com/mnemox-ai/idea-reality-mcp",
-      "owner": "mnemox-ai",
-      "repo": "idea-reality-mcp",
+      "github_url": "https://github.com/miscusi-peek/cheatengine-mcp-bridge",
+      "owner": "miscusi-peek",
+      "repo": "cheatengine-mcp-bridge",
       "install_command": "",
-      "stars": 662,
-      "language": "Python",
-      "last_updated": "2026-04-14",
-      "source": "awesome"
+      "stars": 664,
+      "language": "Lua",
+      "last_updated": "2026-05-06",
+      "source": "github"
     },
     {
       "id": "Canner/wren-engine",
@@ -2716,20 +2730,6 @@
       "source": "github"
     },
     {
-      "id": "miscusi-peek/cheatengine-mcp-bridge",
-      "name": "Cheatengine Mcp Bridge",
-      "description": "Connect Cursor, Copilot & Claude AI directly to Cheat Engine via MCP. Automate reverse engineering, pointer scanning, and memory analysis using natural language.",
-      "category": "Other",
-      "github_url": "https://github.com/miscusi-peek/cheatengine-mcp-bridge",
-      "owner": "miscusi-peek",
-      "repo": "cheatengine-mcp-bridge",
-      "install_command": "",
-      "stars": 660,
-      "language": "Lua",
-      "last_updated": "2026-05-06",
-      "source": "github"
-    },
-    {
       "id": "elastic/mcp-server-elasticsearch",
       "name": "Mcp Server Elasticsearch",
       "description": "",
@@ -2738,7 +2738,7 @@
       "owner": "elastic",
       "repo": "mcp-server-elasticsearch",
       "install_command": "",
-      "stars": 656,
+      "stars": 657,
       "language": "Rust",
       "last_updated": "2026-05-09",
       "source": "github"
@@ -2752,7 +2752,7 @@
       "owner": "karanb192",
       "repo": "reddit-mcp-buddy",
       "install_command": "",
-      "stars": 644,
+      "stars": 645,
       "language": "TypeScript",
       "last_updated": "2026-03-17",
       "source": "awesome"
@@ -2766,7 +2766,7 @@
       "owner": "mondaycom",
       "repo": "vibe",
       "install_command": "",
-      "stars": 642,
+      "stars": 643,
       "language": "TypeScript",
       "last_updated": "2026-05-06",
       "source": "github"
@@ -2780,7 +2780,7 @@
       "owner": "vibheksoni",
       "repo": "stealth-browser-mcp",
       "install_command": "",
-      "stars": 635,
+      "stars": 636,
       "language": "Python",
       "last_updated": "2026-05-04",
       "source": "github"
@@ -2794,7 +2794,7 @@
       "owner": "ktnyt",
       "repo": "cclsp",
       "install_command": "",
-      "stars": 630,
+      "stars": 631,
       "language": "TypeScript",
       "last_updated": "2026-02-22",
       "source": "github"
@@ -2808,7 +2808,7 @@
       "owner": "magicyuan876",
       "repo": "mineru-tianshu",
       "install_command": "",
-      "stars": 627,
+      "stars": 630,
       "language": "Python",
       "last_updated": "2026-04-13",
       "source": "github"
@@ -2822,7 +2822,7 @@
       "owner": "controlplaneio-fluxcd",
       "repo": "flux-operator",
       "install_command": "",
-      "stars": 620,
+      "stars": 623,
       "language": "Go",
       "last_updated": "2026-05-09",
       "source": "github"
@@ -2852,7 +2852,7 @@
       "install_command": "",
       "stars": 616,
       "language": "PHP",
-      "last_updated": "2026-05-10",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -2864,9 +2864,9 @@
       "owner": "GoogleCloudPlatform",
       "repo": "cloud-run-mcp",
       "install_command": "",
-      "stars": 607,
+      "stars": 606,
       "language": "JavaScript",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -2906,23 +2906,9 @@
       "owner": "symgraph",
       "repo": "GhidrAssistMCP",
       "install_command": "",
-      "stars": 599,
+      "stars": 602,
       "language": "Java",
-      "last_updated": "2026-04-25",
-      "source": "github"
-    },
-    {
-      "id": "ChiR24/Unreal_mcp",
-      "name": "Unreal Mcp",
-      "description": "A comprehensive Model Context Protocol (MCP) server that enables AI assistants to control Unreal Engine through the native C++ Automation Bridge plugin. Built with TypeScript and C++.",
-      "category": "Other",
-      "github_url": "https://github.com/ChiR24/Unreal_mcp",
-      "owner": "ChiR24",
-      "repo": "Unreal_mcp",
-      "install_command": "",
-      "stars": 596,
-      "language": "C++",
-      "last_updated": "2026-05-10",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -2934,9 +2920,23 @@
       "owner": "cohnen",
       "repo": "mcp-google-ads",
       "install_command": "",
-      "stars": 595,
+      "stars": 599,
       "language": "Python",
       "last_updated": "2025-10-16",
+      "source": "github"
+    },
+    {
+      "id": "ChiR24/Unreal_mcp",
+      "name": "Unreal Mcp",
+      "description": "A comprehensive Model Context Protocol (MCP) server that enables AI assistants to control Unreal Engine through the native C++ Automation Bridge plugin. Built with TypeScript and C++.",
+      "category": "Other",
+      "github_url": "https://github.com/ChiR24/Unreal_mcp",
+      "owner": "ChiR24",
+      "repo": "Unreal_mcp",
+      "install_command": "",
+      "stars": 597,
+      "language": "C++",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -2954,6 +2954,20 @@
       "source": "github"
     },
     {
+      "id": "web-agent-master/google-search",
+      "name": "Google Search",
+      "description": "A Playwright-based Node.js tool that bypasses search engine anti-scraping mechanisms to execute Google searches. Local alternative to SERP APIs with MCP server integration.",
+      "category": "Web & Browser",
+      "github_url": "https://github.com/web-agent-master/google-search",
+      "owner": "web-agent-master",
+      "repo": "google-search",
+      "install_command": "",
+      "stars": 593,
+      "language": "TypeScript",
+      "last_updated": "2025-04-06",
+      "source": "github"
+    },
+    {
       "id": "CursorTouch/Android-MCP",
       "name": "Android Mcp",
       "description": "MCP Server for interacting with Android Devices.",
@@ -2968,20 +2982,6 @@
       "source": "github"
     },
     {
-      "id": "web-agent-master/google-search",
-      "name": "Google Search",
-      "description": "A Playwright-based Node.js tool that bypasses search engine anti-scraping mechanisms to execute Google searches. Local alternative to SERP APIs with MCP server integration.",
-      "category": "Web & Browser",
-      "github_url": "https://github.com/web-agent-master/google-search",
-      "owner": "web-agent-master",
-      "repo": "google-search",
-      "install_command": "",
-      "stars": 592,
-      "language": "TypeScript",
-      "last_updated": "2025-04-06",
-      "source": "github"
-    },
-    {
       "id": "arinspunk/claude-talk-to-figma-mcp",
       "name": "Claude Talk To Figma Mcp",
       "description": "A Model Context Protocol (MCP) that allows Claude Desktop and other AI tools (Claude Code, Cursor, Antigravity, etc.) to read, analyze, and modify Figma designs",
@@ -2990,7 +2990,7 @@
       "owner": "arinspunk",
       "repo": "claude-talk-to-figma-mcp",
       "install_command": "",
-      "stars": 588,
+      "stars": 590,
       "language": "TypeScript",
       "last_updated": "2026-04-18",
       "source": "github"
@@ -3004,7 +3004,7 @@
       "owner": "Natfii",
       "repo": "UnrealClaude",
       "install_command": "",
-      "stars": 587,
+      "stars": 590,
       "language": "C++",
       "last_updated": "2026-05-04",
       "source": "github"
@@ -3074,7 +3074,7 @@
       "owner": "yuniko-software",
       "repo": "minecraft-mcp-server",
       "install_command": "",
-      "stars": 570,
+      "stars": 573,
       "language": "TypeScript",
       "last_updated": "2026-04-04",
       "source": "github"
@@ -3088,9 +3088,23 @@
       "owner": "guangxiangdebizi",
       "repo": "FinanceMCP",
       "install_command": "",
-      "stars": 561,
+      "stars": 564,
       "language": "JavaScript",
       "last_updated": "2026-04-21",
+      "source": "github"
+    },
+    {
+      "id": "jordanrendric/claude-video-vision",
+      "name": "Claude Video Vision",
+      "description": "Give Claude the ability to watch and understand videos \u2014 Claude Code plugin with frame extraction and multimodal audio analysis",
+      "category": "Media",
+      "github_url": "https://github.com/jordanrendric/claude-video-vision",
+      "owner": "jordanrendric",
+      "repo": "claude-video-vision",
+      "install_command": "",
+      "stars": 561,
+      "language": "TypeScript",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -3116,10 +3130,38 @@
       "owner": "ferrislucas",
       "repo": "iterm-mcp",
       "install_command": "",
-      "stars": 555,
+      "stars": 557,
       "language": "TypeScript",
       "last_updated": "2025-09-20",
       "source": "awesome"
+    },
+    {
+      "id": "marmotdata/marmot",
+      "name": "Marmot",
+      "description": "The open-source context layer for your AI. Catalog your tables, topics, queues and APIs then expose real metadata to your AI agents.",
+      "category": "Other",
+      "github_url": "https://github.com/marmotdata/marmot",
+      "owner": "marmotdata",
+      "repo": "marmot",
+      "install_command": "",
+      "stars": 556,
+      "language": "Go",
+      "last_updated": "2026-05-10",
+      "source": "github"
+    },
+    {
+      "id": "matlab/matlab-mcp-core-server",
+      "name": "Matlab Mcp Core Server",
+      "description": "Run MATLAB\u00ae using AI applications with the official MATLAB MCP Server from MathWorks\u00ae. This MCP server for MATLAB supports a wide range of coding agents like Claude Code\u00ae and Visual Studio\u00ae Code.",
+      "category": "Developer Tools",
+      "github_url": "https://github.com/matlab/matlab-mcp-core-server",
+      "owner": "matlab",
+      "repo": "matlab-mcp-core-server",
+      "install_command": "",
+      "stars": 555,
+      "language": "Go",
+      "last_updated": "2026-04-30",
+      "source": "github"
     },
     {
       "id": "the-ai-merge/multimodal-agents-course",
@@ -3136,34 +3178,6 @@
       "source": "github"
     },
     {
-      "id": "marmotdata/marmot",
-      "name": "Marmot",
-      "description": "The open-source context layer for your AI. Catalog your tables, topics, queues and APIs then expose real metadata to your AI agents.",
-      "category": "Other",
-      "github_url": "https://github.com/marmotdata/marmot",
-      "owner": "marmotdata",
-      "repo": "marmot",
-      "install_command": "",
-      "stars": 551,
-      "language": "Go",
-      "last_updated": "2026-05-09",
-      "source": "github"
-    },
-    {
-      "id": "jordanrendric/claude-video-vision",
-      "name": "Claude Video Vision",
-      "description": "Give Claude the ability to watch and understand videos \u2014 Claude Code plugin with frame extraction and multimodal audio analysis",
-      "category": "Media",
-      "github_url": "https://github.com/jordanrendric/claude-video-vision",
-      "owner": "jordanrendric",
-      "repo": "claude-video-vision",
-      "install_command": "",
-      "stars": 547,
-      "language": "TypeScript",
-      "last_updated": "2026-05-08",
-      "source": "github"
-    },
-    {
       "id": "SonarSource/sonarqube-mcp-server",
       "name": "Sonarqube Mcp Server",
       "description": "SonarQube MCP Server",
@@ -3172,10 +3186,38 @@
       "owner": "SonarSource",
       "repo": "sonarqube-mcp-server",
       "install_command": "",
-      "stars": 547,
+      "stars": 549,
       "language": "Java",
       "last_updated": "2026-05-08",
       "source": "github"
+    },
+    {
+      "id": "Coolver/home-assistant-vibecode-agent",
+      "name": "Home Assistant Vibecode Agent",
+      "description": "Home Assistant MCP server agent. Enable Claude Code, Cursor, VS Code or any MCP-enabled IDE to help you vibe-code and manage Home Assistant: create and debug automations, design dashboards, tweak themes, modify configs, and deploy changes using natural language",
+      "category": "Developer Tools",
+      "github_url": "https://github.com/Coolver/home-assistant-vibecode-agent",
+      "owner": "Coolver",
+      "repo": "home-assistant-vibecode-agent",
+      "install_command": "",
+      "stars": 547,
+      "language": "Python",
+      "last_updated": "2026-05-02",
+      "source": "github"
+    },
+    {
+      "id": "hustcc/mcp-mermaid",
+      "name": "hustcc/mcp-mermaid",
+      "description": "",
+      "category": "Other",
+      "github_url": "https://github.com/hustcc/mcp-mermaid",
+      "owner": "hustcc",
+      "repo": "mcp-mermaid",
+      "install_command": "",
+      "stars": 546,
+      "language": "TypeScript",
+      "last_updated": "2026-04-25",
+      "source": "awesome"
     },
     {
       "id": "marcoaapfortes/Mantic.sh",
@@ -3192,34 +3234,6 @@
       "source": "github"
     },
     {
-      "id": "hustcc/mcp-mermaid",
-      "name": "hustcc/mcp-mermaid",
-      "description": "",
-      "category": "Other",
-      "github_url": "https://github.com/hustcc/mcp-mermaid",
-      "owner": "hustcc",
-      "repo": "mcp-mermaid",
-      "install_command": "",
-      "stars": 545,
-      "language": "TypeScript",
-      "last_updated": "2026-04-25",
-      "source": "awesome"
-    },
-    {
-      "id": "Coolver/home-assistant-vibecode-agent",
-      "name": "Home Assistant Vibecode Agent",
-      "description": "Home Assistant MCP server agent. Enable Claude Code, Cursor, VS Code or any MCP-enabled IDE to help you vibe-code and manage Home Assistant: create and debug automations, design dashboards, tweak themes, modify configs, and deploy changes using natural language",
-      "category": "Developer Tools",
-      "github_url": "https://github.com/Coolver/home-assistant-vibecode-agent",
-      "owner": "Coolver",
-      "repo": "home-assistant-vibecode-agent",
-      "install_command": "",
-      "stars": 544,
-      "language": "Python",
-      "last_updated": "2026-05-02",
-      "source": "github"
-    },
-    {
       "id": "FuzzingLabs/mcp-security-hub",
       "name": "Mcp Security Hub",
       "description": "A growing collection of MCP servers bringing offensive security tools to AI assistants. Nmap, Ghidra, Nuclei, SQLMap, Hashcat and more.",
@@ -3228,7 +3242,7 @@
       "owner": "FuzzingLabs",
       "repo": "mcp-security-hub",
       "install_command": "",
-      "stars": 542,
+      "stars": 543,
       "language": "Python",
       "last_updated": "2026-04-08",
       "source": "github"
@@ -3244,21 +3258,7 @@
       "install_command": "",
       "stars": 542,
       "language": "Java",
-      "last_updated": "2026-05-07",
-      "source": "github"
-    },
-    {
-      "id": "matlab/matlab-mcp-core-server",
-      "name": "Matlab Mcp Core Server",
-      "description": "Run MATLAB\u00ae using AI applications with the official MATLAB MCP Server from MathWorks\u00ae. This MCP server for MATLAB supports a wide range of coding agents like Claude Code\u00ae and Visual Studio\u00ae Code.",
-      "category": "Developer Tools",
-      "github_url": "https://github.com/matlab/matlab-mcp-core-server",
-      "owner": "matlab",
-      "repo": "matlab-mcp-core-server",
-      "install_command": "",
-      "stars": 540,
-      "language": "Go",
-      "last_updated": "2026-04-30",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -3304,6 +3304,20 @@
       "source": "github"
     },
     {
+      "id": "wshobson/maverick-mcp",
+      "name": "Maverick Mcp",
+      "description": "MaverickMCP - Personal Stock Analysis MCP Server",
+      "category": "Other",
+      "github_url": "https://github.com/wshobson/maverick-mcp",
+      "owner": "wshobson",
+      "repo": "maverick-mcp",
+      "install_command": "",
+      "stars": 524,
+      "language": "Python",
+      "last_updated": "2026-05-09",
+      "source": "github"
+    },
+    {
       "id": "ggozad/haiku.rag",
       "name": "Haiku.Rag",
       "description": "Opinionated agentic RAG powered by LanceDB, Pydantic AI, and Docling",
@@ -3312,7 +3326,7 @@
       "owner": "ggozad",
       "repo": "haiku.rag",
       "install_command": "",
-      "stars": 522,
+      "stars": 523,
       "language": "Python",
       "last_updated": "2026-05-08",
       "source": "github"
@@ -3326,23 +3340,9 @@
       "owner": "24kchengYe",
       "repo": "human-skill-tree",
       "install_command": "",
-      "stars": 521,
+      "stars": 523,
       "language": "TypeScript",
       "last_updated": "2026-03-25",
-      "source": "github"
-    },
-    {
-      "id": "wshobson/maverick-mcp",
-      "name": "Maverick Mcp",
-      "description": "MaverickMCP - Personal Stock Analysis MCP Server",
-      "category": "Other",
-      "github_url": "https://github.com/wshobson/maverick-mcp",
-      "owner": "wshobson",
-      "repo": "maverick-mcp",
-      "install_command": "",
-      "stars": 521,
-      "language": "Python",
-      "last_updated": "2026-05-09",
       "source": "github"
     },
     {
@@ -3354,7 +3354,7 @@
       "owner": "makafeli",
       "repo": "n8n-workflow-builder",
       "install_command": "",
-      "stars": 517,
+      "stars": 518,
       "language": "JavaScript",
       "last_updated": "2026-03-19",
       "source": "github"
@@ -3368,7 +3368,7 @@
       "owner": "oxbshw",
       "repo": "LLM-Agents-Ecosystem-Handbook",
       "install_command": "",
-      "stars": 516,
+      "stars": 517,
       "language": "Python",
       "last_updated": "2026-05-09",
       "source": "github"
@@ -3396,7 +3396,7 @@
       "owner": "genomoncology",
       "repo": "biomcp",
       "install_command": "",
-      "stars": 504,
+      "stars": 505,
       "language": "Rust",
       "last_updated": "2026-05-01",
       "source": "awesome"
@@ -3424,7 +3424,7 @@
       "owner": "VikashLoomba",
       "repo": "copilot-mcp",
       "install_command": "",
-      "stars": 489,
+      "stars": 490,
       "language": "TypeScript",
       "last_updated": "2026-03-12",
       "source": "github"
@@ -3446,16 +3446,30 @@
     {
       "id": "jjang-ai/vmlx",
       "name": "Vmlx",
-      "description": "vMLX - Home of JANG_Q - Cont Batch, Prefix, Paged, KV Cache Quant, VL - Powers MLX Studio. Image gen/edit, OpenAI/Anth",
-      "category": "AI & ML",
+      "description": "vMLX - JANGTQ Uber Compressed MLX Models - L2 Disk Cache (survives restart) + L1 Paged (super fast ttft) + Hybrid SSM Scheduler  + Cont Batching + etc!",
+      "category": "Other",
       "github_url": "https://github.com/jjang-ai/vmlx",
       "owner": "jjang-ai",
       "repo": "vmlx",
       "install_command": "",
-      "stars": 480,
+      "stars": 485,
       "language": "Python",
-      "last_updated": "2026-05-10",
+      "last_updated": "2026-05-11",
       "source": "github"
+    },
+    {
+      "id": "opentabs-dev/opentabs",
+      "name": "opentabs-dev/opentabs",
+      "description": "",
+      "category": "Other",
+      "github_url": "https://github.com/opentabs-dev/opentabs",
+      "owner": "opentabs-dev",
+      "repo": "opentabs",
+      "install_command": "",
+      "stars": 482,
+      "language": "TypeScript",
+      "last_updated": "2026-05-11",
+      "source": "awesome"
     },
     {
       "id": "SPThole/CoexistAI",
@@ -3470,20 +3484,6 @@
       "language": "Jupyter Notebook",
       "last_updated": "2026-03-10",
       "source": "github"
-    },
-    {
-      "id": "opentabs-dev/opentabs",
-      "name": "opentabs-dev/opentabs",
-      "description": "",
-      "category": "Other",
-      "github_url": "https://github.com/opentabs-dev/opentabs",
-      "owner": "opentabs-dev",
-      "repo": "opentabs",
-      "install_command": "",
-      "stars": 479,
-      "language": "TypeScript",
-      "last_updated": "2026-05-09",
-      "source": "awesome"
     },
     {
       "id": "fdmtl/director",
@@ -3522,7 +3522,7 @@
       "owner": "swarmclawai",
       "repo": "swarmclaw",
       "install_command": "",
-      "stars": 473,
+      "stars": 475,
       "language": "TypeScript",
       "last_updated": "2026-05-08",
       "source": "github"
@@ -3550,7 +3550,7 @@
       "owner": "levnikolaevich",
       "repo": "claude-code-skills",
       "install_command": "",
-      "stars": 460,
+      "stars": 464,
       "language": "JavaScript",
       "last_updated": "2026-05-09",
       "source": "github"
@@ -3564,9 +3564,9 @@
       "owner": "Cranot",
       "repo": "roam-code",
       "install_command": "",
-      "stars": 459,
+      "stars": 460,
       "language": "Python",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -3620,7 +3620,7 @@
       "owner": "domdomegg",
       "repo": "airtable-mcp-server",
       "install_command": "",
-      "stars": 443,
+      "stars": 444,
       "language": "TypeScript",
       "last_updated": "2026-05-09",
       "source": "awesome"
@@ -3634,7 +3634,7 @@
       "owner": "cloudflare",
       "repo": "mcp",
       "install_command": "",
-      "stars": 440,
+      "stars": 442,
       "language": "TypeScript",
       "last_updated": "2026-05-09",
       "source": "github"
@@ -3648,9 +3648,9 @@
       "owner": "TheLunarCompany",
       "repo": "lunar",
       "install_command": "",
-      "stars": 437,
+      "stars": 441,
       "language": "TypeScript",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -3662,7 +3662,7 @@
       "owner": "swarmclawai",
       "repo": "swarmvault",
       "install_command": "",
-      "stars": 435,
+      "stars": 441,
       "language": "TypeScript",
       "last_updated": "2026-05-08",
       "source": "github"
@@ -3676,7 +3676,7 @@
       "owner": "AVIDS2",
       "repo": "memorix",
       "install_command": "",
-      "stars": 434,
+      "stars": 436,
       "language": "TypeScript",
       "last_updated": "2026-04-23",
       "source": "github"
@@ -3718,7 +3718,7 @@
       "owner": "baidu-maps",
       "repo": "mcp",
       "install_command": "",
-      "stars": 425,
+      "stars": 426,
       "language": "Python",
       "last_updated": "2025-08-22",
       "source": "github"
@@ -3732,23 +3732,9 @@
       "owner": "boshyxd",
       "repo": "robloxstudio-mcp",
       "install_command": "",
-      "stars": 423,
+      "stars": 426,
       "language": "TypeScript",
       "last_updated": "2026-04-29",
-      "source": "github"
-    },
-    {
-      "id": "anyproto/anytype-mcp",
-      "name": "Anytype Mcp",
-      "description": "An MCP server enabling AI assistants to interact with Anytype - your encrypted, local and collaborative wiki - to organize objects, lists, and more through natural language.",
-      "category": "Other",
-      "github_url": "https://github.com/anyproto/anytype-mcp",
-      "owner": "anyproto",
-      "repo": "anytype-mcp",
-      "install_command": "",
-      "stars": 414,
-      "language": "TypeScript",
-      "last_updated": "2026-05-08",
       "source": "github"
     },
     {
@@ -3760,9 +3746,23 @@
       "owner": "zinja-coder",
       "repo": "jadx-mcp-server",
       "install_command": "",
-      "stars": 414,
+      "stars": 416,
       "language": "Python",
       "last_updated": "2026-04-20",
+      "source": "github"
+    },
+    {
+      "id": "anyproto/anytype-mcp",
+      "name": "Anytype Mcp",
+      "description": "An MCP server enabling AI assistants to interact with Anytype - your encrypted, local and collaborative wiki - to organize objects, lists, and more through natural language.",
+      "category": "Other",
+      "github_url": "https://github.com/anyproto/anytype-mcp",
+      "owner": "anyproto",
+      "repo": "anytype-mcp",
+      "install_command": "",
+      "stars": 415,
+      "language": "TypeScript",
+      "last_updated": "2026-05-08",
       "source": "github"
     },
     {
@@ -3794,6 +3794,20 @@
       "source": "awesome"
     },
     {
+      "id": "blacktop/ida-mcp-rs",
+      "name": "Ida Mcp Rs",
+      "description": "Headless IDA Pro MCP Server",
+      "category": "Other",
+      "github_url": "https://github.com/blacktop/ida-mcp-rs",
+      "owner": "blacktop",
+      "repo": "ida-mcp-rs",
+      "install_command": "",
+      "stars": 402,
+      "language": "Rust",
+      "last_updated": "2026-05-09",
+      "source": "github"
+    },
+    {
       "id": "mondaycom/mcp",
       "name": "Mcp",
       "description": "Enable AI agents to work reliably - giving them secure access to structured data, tools to take action, and the context needed to make smart decisions.",
@@ -3802,9 +3816,9 @@
       "owner": "mondaycom",
       "repo": "mcp",
       "install_command": "",
-      "stars": 401,
+      "stars": 402,
       "language": "TypeScript",
-      "last_updated": "2026-05-10",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -3816,23 +3830,9 @@
       "owner": "agentic-box",
       "repo": "memora",
       "install_command": "",
-      "stars": 400,
+      "stars": 401,
       "language": "Python",
       "last_updated": "2026-05-10",
-      "source": "github"
-    },
-    {
-      "id": "blacktop/ida-mcp-rs",
-      "name": "Ida Mcp Rs",
-      "description": "Headless IDA Pro MCP Server",
-      "category": "Other",
-      "github_url": "https://github.com/blacktop/ida-mcp-rs",
-      "owner": "blacktop",
-      "repo": "ida-mcp-rs",
-      "install_command": "",
-      "stars": 396,
-      "language": "Rust",
-      "last_updated": "2026-05-09",
       "source": "github"
     },
     {
@@ -3906,6 +3906,20 @@
       "source": "github"
     },
     {
+      "id": "garylab/MakeMoneyWithAI",
+      "name": "Makemoneywithai",
+      "description": "A list of open-source AI projects you can use to generate income easily.",
+      "category": "Other",
+      "github_url": "https://github.com/garylab/MakeMoneyWithAI",
+      "owner": "garylab",
+      "repo": "MakeMoneyWithAI",
+      "install_command": "",
+      "stars": 387,
+      "language": "Python",
+      "last_updated": "2026-05-10",
+      "source": "github"
+    },
+    {
       "id": "jkawamoto/mcp-youtube-transcript",
       "name": "Mcp Youtube Transcript",
       "description": "MCP server retrieving transcripts of YouTube videos",
@@ -3920,17 +3934,17 @@
       "source": "github"
     },
     {
-      "id": "garylab/MakeMoneyWithAI",
-      "name": "Makemoneywithai",
-      "description": "A list of open-source AI projects you can use to generate income easily.",
+      "id": "clduab11/gemini-flow",
+      "name": "Gemini Flow",
+      "description": "rUv's Claude-Flow, translated to the new Gemini CLI; transforming it into an autonomous AI development team.",
       "category": "Other",
-      "github_url": "https://github.com/garylab/MakeMoneyWithAI",
-      "owner": "garylab",
-      "repo": "MakeMoneyWithAI",
+      "github_url": "https://github.com/clduab11/gemini-flow",
+      "owner": "clduab11",
+      "repo": "gemini-flow",
       "install_command": "",
       "stars": 384,
-      "language": "Python",
-      "last_updated": "2026-05-10",
+      "language": "TypeScript",
+      "last_updated": "2026-01-29",
       "source": "github"
     },
     {
@@ -3946,20 +3960,6 @@
       "language": "TypeScript",
       "last_updated": "2025-09-08",
       "source": "awesome"
-    },
-    {
-      "id": "clduab11/gemini-flow",
-      "name": "Gemini Flow",
-      "description": "rUv's Claude-Flow, translated to the new Gemini CLI; transforming it into an autonomous AI development team.",
-      "category": "Other",
-      "github_url": "https://github.com/clduab11/gemini-flow",
-      "owner": "clduab11",
-      "repo": "gemini-flow",
-      "install_command": "",
-      "stars": 383,
-      "language": "TypeScript",
-      "last_updated": "2026-01-29",
-      "source": "github"
     },
     {
       "id": "ahmedeltaher/azan-mcp",
@@ -3986,7 +3986,7 @@
       "install_command": "",
       "stars": 379,
       "language": "Java",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -4046,20 +4046,6 @@
       "source": "awesome"
     },
     {
-      "id": "InditexTech/mcp-teams-server",
-      "name": "InditexTech/mcp-teams-server",
-      "description": "",
-      "category": "Communication",
-      "github_url": "https://github.com/InditexTech/mcp-teams-server",
-      "owner": "InditexTech",
-      "repo": "mcp-teams-server",
-      "install_command": "",
-      "stars": 373,
-      "language": "Python",
-      "last_updated": "2026-04-13",
-      "source": "awesome"
-    },
-    {
       "id": "daymonio/daymon",
       "name": "Daymon",
       "description": "Daymon puts your favorite AI to work 24/7. It schedules, remembers, and orchestrates your own virtual team. Free.",
@@ -4074,6 +4060,34 @@
       "source": "github"
     },
     {
+      "id": "InditexTech/mcp-teams-server",
+      "name": "InditexTech/mcp-teams-server",
+      "description": "",
+      "category": "Communication",
+      "github_url": "https://github.com/InditexTech/mcp-teams-server",
+      "owner": "InditexTech",
+      "repo": "mcp-teams-server",
+      "install_command": "",
+      "stars": 372,
+      "language": "Python",
+      "last_updated": "2026-04-13",
+      "source": "awesome"
+    },
+    {
+      "id": "Muvon/octocode",
+      "name": "muvon/octocode",
+      "description": "",
+      "category": "Developer Tools",
+      "github_url": "https://github.com/Muvon/octocode",
+      "owner": "Muvon",
+      "repo": "octocode",
+      "install_command": "",
+      "stars": 371,
+      "language": "Rust",
+      "last_updated": "2026-05-10",
+      "source": "awesome"
+    },
+    {
       "id": "erikdarlingdata/PerformanceMonitor",
       "name": "Performancemonitor",
       "description": "Free, open-source SQL Server performance monitoring \u2014 32 collectors, real-time alerts, graphical plan viewer, MCP server for AI analysis. Supports SQL 2016-2025, Azure SQL, AWS RDS.",
@@ -4082,9 +4096,23 @@
       "owner": "erikdarlingdata",
       "repo": "PerformanceMonitor",
       "install_command": "",
-      "stars": 372,
+      "stars": 371,
       "language": "C#",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-10",
+      "source": "github"
+    },
+    {
+      "id": "decocms/studio",
+      "name": "Studio",
+      "description": "Open-source control plane for your AI agents. Connect tools, hire agents, track every token and dollar",
+      "category": "Other",
+      "github_url": "https://github.com/decocms/studio",
+      "owner": "decocms",
+      "repo": "studio",
+      "install_command": "",
+      "stars": 370,
+      "language": "TypeScript",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -4102,20 +4130,6 @@
       "source": "github"
     },
     {
-      "id": "decocms/studio",
-      "name": "Studio",
-      "description": "Open-source control plane for your AI agents. Connect tools, hire agents, track every token and dollar",
-      "category": "Other",
-      "github_url": "https://github.com/decocms/studio",
-      "owner": "decocms",
-      "repo": "studio",
-      "install_command": "",
-      "stars": 368,
-      "language": "TypeScript",
-      "last_updated": "2026-05-10",
-      "source": "github"
-    },
-    {
       "id": "afrise/MCPSharp",
       "name": "Mcpsharp",
       "description": "MCPSharp is a .NET library that helps you build Model Context Protocol (MCP) servers and clients - the standardized API protocol used by AI assistants and models.",
@@ -4128,20 +4142,6 @@
       "language": "C#",
       "last_updated": "2025-10-20",
       "source": "github"
-    },
-    {
-      "id": "Muvon/octocode",
-      "name": "muvon/octocode",
-      "description": "",
-      "category": "Developer Tools",
-      "github_url": "https://github.com/Muvon/octocode",
-      "owner": "Muvon",
-      "repo": "octocode",
-      "install_command": "",
-      "stars": 367,
-      "language": "Rust",
-      "last_updated": "2026-05-09",
-      "source": "awesome"
     },
     {
       "id": "cloudwego/abcoder",
@@ -4210,7 +4210,7 @@
       "install_command": "",
       "stars": 364,
       "language": "C++",
-      "last_updated": "2026-05-07",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -4250,7 +4250,7 @@
       "owner": "minthcm",
       "repo": "minthcm",
       "install_command": "",
-      "stars": 359,
+      "stars": 360,
       "language": "PHP",
       "last_updated": "2026-04-09",
       "source": "github"
@@ -4280,6 +4280,20 @@
       "install_command": "",
       "stars": 354,
       "language": "Python",
+      "last_updated": "2026-05-11",
+      "source": "github"
+    },
+    {
+      "id": "awslabs/iam-policy-autopilot",
+      "name": "Iam Policy Autopilot",
+      "description": "IAM Policy Autopilot is an open source static code analysis tool that helps you quickly create baseline AWS IAM policies that you can refine as your application evolves. This tool is available as a command-line utility and MCP server for use within AI coding assistants for quickly building IAM policies.",
+      "category": "Cloud & Infra",
+      "github_url": "https://github.com/awslabs/iam-policy-autopilot",
+      "owner": "awslabs",
+      "repo": "iam-policy-autopilot",
+      "install_command": "",
+      "stars": 354,
+      "language": "Rust",
       "last_updated": "2026-05-10",
       "source": "github"
     },
@@ -4298,20 +4312,6 @@
       "source": "github"
     },
     {
-      "id": "awslabs/iam-policy-autopilot",
-      "name": "Iam Policy Autopilot",
-      "description": "IAM Policy Autopilot is an open source static code analysis tool that helps you quickly create baseline AWS IAM policies that you can refine as your application evolves. This tool is available as a command-line utility and MCP server for use within AI coding assistants for quickly building IAM policies.",
-      "category": "Cloud & Infra",
-      "github_url": "https://github.com/awslabs/iam-policy-autopilot",
-      "owner": "awslabs",
-      "repo": "iam-policy-autopilot",
-      "install_command": "",
-      "stars": 352,
-      "language": "Rust",
-      "last_updated": "2026-05-10",
-      "source": "github"
-    },
-    {
       "id": "peterfei/ai-agent-team",
       "name": "Ai Agent Team",
       "description": "AI Agent Team-\u62e5\u670924/7\u4e13\u4e1aAI\u5f00\u53d1\u56e2\u961f\uff1a\u4ea7\u54c1\u7ecf\u7406\u3001\u524d\u7aef\u5f00\u53d1\u3001\u540e\u7aef\u5f00\u53d1\u3001\u6d4b\u8bd5\u5de5\u7a0b\u5e08\u3001DevOps\u5de5\u7a0b\u5e08\u3001\u6280\u672f\u8d1f\u8d23\u4eba\u3002\u4e00\u952e\u5b89\u88c5\uff0c\u652f\u6301\u4e2d\u82f1\u6587\u547d\u4ee4\uff0c\u5927\u5e45\u63d0\u5347\u5f00\u53d1\u6548\u7387\uff01",
@@ -4320,7 +4320,7 @@
       "owner": "peterfei",
       "repo": "ai-agent-team",
       "install_command": "",
-      "stars": 350,
+      "stars": 351,
       "language": "JavaScript",
       "last_updated": "2025-12-12",
       "source": "github"
@@ -4334,7 +4334,7 @@
       "owner": "boltmcp",
       "repo": "boltmcp",
       "install_command": "",
-      "stars": 349,
+      "stars": 350,
       "language": "Shell",
       "last_updated": "2026-05-07",
       "source": "github"
@@ -4404,9 +4404,9 @@
       "owner": "labsai",
       "repo": "EDDI",
       "install_command": "",
-      "stars": 338,
+      "stars": 341,
       "language": "Java",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -4418,9 +4418,9 @@
       "owner": "tinystruct",
       "repo": "tinystruct",
       "install_command": "",
-      "stars": 332,
+      "stars": 333,
       "language": "Java",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -4446,7 +4446,7 @@
       "owner": "Gennadiyev",
       "repo": "STS2MCP",
       "install_command": "",
-      "stars": 330,
+      "stars": 331,
       "language": "C#",
       "last_updated": "2026-05-08",
       "source": "github"
@@ -4460,9 +4460,23 @@
       "owner": "massive-com",
       "repo": "mcp_massive",
       "install_command": "",
-      "stars": 329,
+      "stars": 330,
       "language": "Python",
       "last_updated": "2026-05-05",
+      "source": "github"
+    },
+    {
+      "id": "sirkirby/unifi-mcp",
+      "name": "Unifi Mcp",
+      "description": "MCP servers for the UniFi suite of applications, Network, Protect, Access, and Drive",
+      "category": "File System",
+      "github_url": "https://github.com/sirkirby/unifi-mcp",
+      "owner": "sirkirby",
+      "repo": "unifi-mcp",
+      "install_command": "",
+      "stars": 328,
+      "language": "Python",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -4478,20 +4492,6 @@
       "language": "Go",
       "last_updated": "2026-02-27",
       "source": "awesome"
-    },
-    {
-      "id": "sirkirby/unifi-mcp",
-      "name": "Unifi Mcp",
-      "description": "MCP servers for the UniFi suite of applications, Network, Protect, Access, and Drive",
-      "category": "File System",
-      "github_url": "https://github.com/sirkirby/unifi-mcp",
-      "owner": "sirkirby",
-      "repo": "unifi-mcp",
-      "install_command": "",
-      "stars": 326,
-      "language": "Python",
-      "last_updated": "2026-05-10",
-      "source": "github"
     },
     {
       "id": "drfccv/mcp-server-12306",
@@ -4536,20 +4536,6 @@
       "source": "github"
     },
     {
-      "id": "Shelpuk-AI-Technology-Consulting/kindly-web-search-mcp-server",
-      "name": "Kindly Web Search Mcp Server",
-      "description": "Kindly Web Search MCP Server: Web search + robust content retrieval for AI coding tools (Claude Code, Codex, Cursor, GitHub Copilot, Gemini, etc.) and AI agents (Claude Desktop, OpenClaw, etc.). Supports Serper, Tavily, and SearXNG.",
-      "category": "Web & Browser",
-      "github_url": "https://github.com/Shelpuk-AI-Technology-Consulting/kindly-web-search-mcp-server",
-      "owner": "Shelpuk-AI-Technology-Consulting",
-      "repo": "kindly-web-search-mcp-server",
-      "install_command": "",
-      "stars": 313,
-      "language": "Python",
-      "last_updated": "2026-04-30",
-      "source": "github"
-    },
-    {
       "id": "8beeeaaat/touchdesigner-mcp",
       "name": "Touchdesigner Mcp",
       "description": "MCP server for TouchDesigner",
@@ -4558,9 +4544,23 @@
       "owner": "8beeeaaat",
       "repo": "touchdesigner-mcp",
       "install_command": "",
-      "stars": 313,
+      "stars": 316,
       "language": "TypeScript",
       "last_updated": "2026-04-12",
+      "source": "github"
+    },
+    {
+      "id": "Shelpuk-AI-Technology-Consulting/kindly-web-search-mcp-server",
+      "name": "Kindly Web Search Mcp Server",
+      "description": "Kindly Web Search MCP Server: Web search + robust content retrieval for AI coding tools (Claude Code, Codex, Cursor, GitHub Copilot, Gemini, etc.) and AI agents (Claude Desktop, OpenClaw, etc.). Supports Serper, Tavily, and SearXNG.",
+      "category": "Web & Browser",
+      "github_url": "https://github.com/Shelpuk-AI-Technology-Consulting/kindly-web-search-mcp-server",
+      "owner": "Shelpuk-AI-Technology-Consulting",
+      "repo": "kindly-web-search-mcp-server",
+      "install_command": "",
+      "stars": 315,
+      "language": "Python",
+      "last_updated": "2026-04-30",
       "source": "github"
     },
     {
@@ -4572,7 +4572,7 @@
       "owner": "mcpware",
       "repo": "cross-code-organizer",
       "install_command": "",
-      "stars": 310,
+      "stars": 312,
       "language": "JavaScript",
       "last_updated": "2026-05-03",
       "source": "github"
@@ -4592,6 +4592,20 @@
       "source": "github"
     },
     {
+      "id": "Omar-V2/mcp-ical",
+      "name": "Mcp Ical",
+      "description": "A Model Context Protocol Server that allows you to interact with your MacOS Calendar through natural language.",
+      "category": "Productivity",
+      "github_url": "https://github.com/Omar-V2/mcp-ical",
+      "owner": "Omar-V2",
+      "repo": "mcp-ical",
+      "install_command": "",
+      "stars": 310,
+      "language": "Python",
+      "last_updated": "2025-04-21",
+      "source": "github"
+    },
+    {
       "id": "tuanle96/mcp-odoo",
       "name": "Mcp Odoo",
       "description": "MCP Server for Odoo",
@@ -4606,18 +4620,18 @@
       "source": "github"
     },
     {
-      "id": "Omar-V2/mcp-ical",
-      "name": "Mcp Ical",
-      "description": "A Model Context Protocol Server that allows you to interact with your MacOS Calendar through natural language.",
-      "category": "Productivity",
-      "github_url": "https://github.com/Omar-V2/mcp-ical",
-      "owner": "Omar-V2",
-      "repo": "mcp-ical",
+      "id": "sipyourdrink-ltd/bernstein",
+      "name": "sipyourdrink-ltd/bernstein",
+      "description": "",
+      "category": "Other",
+      "github_url": "https://github.com/sipyourdrink-ltd/bernstein",
+      "owner": "sipyourdrink-ltd",
+      "repo": "bernstein",
       "install_command": "",
       "stars": 309,
       "language": "Python",
-      "last_updated": "2025-04-21",
-      "source": "github"
+      "last_updated": "2026-05-11",
+      "source": "awesome"
     },
     {
       "id": "sunriseapps/imagesorcery-mcp",
@@ -4628,10 +4642,24 @@
       "owner": "sunriseapps",
       "repo": "imagesorcery-mcp",
       "install_command": "",
-      "stars": 308,
+      "stars": 309,
       "language": "Python",
       "last_updated": "2025-09-23",
       "source": "awesome"
+    },
+    {
+      "id": "joenorton/comfyui-mcp-server",
+      "name": "Comfyui Mcp Server",
+      "description": "lightweight Python-based MCP (Model Context Protocol) server for local ComfyUI",
+      "category": "Other",
+      "github_url": "https://github.com/joenorton/comfyui-mcp-server",
+      "owner": "joenorton",
+      "repo": "comfyui-mcp-server",
+      "install_command": "",
+      "stars": 308,
+      "language": "Python",
+      "last_updated": "2026-02-17",
+      "source": "github"
     },
     {
       "id": "AmrDab/clawdcursor",
@@ -4644,21 +4672,7 @@
       "install_command": "",
       "stars": 307,
       "language": "TypeScript",
-      "last_updated": "2026-05-10",
-      "source": "github"
-    },
-    {
-      "id": "joenorton/comfyui-mcp-server",
-      "name": "Comfyui Mcp Server",
-      "description": "lightweight Python-based MCP (Model Context Protocol) server for local ComfyUI",
-      "category": "Other",
-      "github_url": "https://github.com/joenorton/comfyui-mcp-server",
-      "owner": "joenorton",
-      "repo": "comfyui-mcp-server",
-      "install_command": "",
-      "stars": 307,
-      "language": "Python",
-      "last_updated": "2026-02-17",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -4690,20 +4704,6 @@
       "source": "github"
     },
     {
-      "id": "sipyourdrink-ltd/bernstein",
-      "name": "sipyourdrink-ltd/bernstein",
-      "description": "",
-      "category": "Other",
-      "github_url": "https://github.com/sipyourdrink-ltd/bernstein",
-      "owner": "sipyourdrink-ltd",
-      "repo": "bernstein",
-      "install_command": "",
-      "stars": 306,
-      "language": "Python",
-      "last_updated": "2026-05-10",
-      "source": "awesome"
-    },
-    {
       "id": "SaseQ/discord-mcp",
       "name": "saseq/discord-mcp",
       "description": "",
@@ -4712,7 +4712,7 @@
       "owner": "SaseQ",
       "repo": "discord-mcp",
       "install_command": "",
-      "stars": 304,
+      "stars": 305,
       "language": "Java",
       "last_updated": "2026-04-25",
       "source": "awesome"
@@ -4810,24 +4810,10 @@
       "owner": "cablate",
       "repo": "mcp-google-map",
       "install_command": "",
-      "stars": 295,
+      "stars": 296,
       "language": "TypeScript",
       "last_updated": "2026-04-21",
       "source": "awesome"
-    },
-    {
-      "id": "voska/hass-mcp",
-      "name": "Hass Mcp",
-      "description": "Home Assistant MCP Server",
-      "category": "Other",
-      "github_url": "https://github.com/voska/hass-mcp",
-      "owner": "voska",
-      "repo": "hass-mcp",
-      "install_command": "",
-      "stars": 294,
-      "language": "Python",
-      "last_updated": "2025-08-05",
-      "source": "github"
     },
     {
       "id": "msrbuilds/elementor-mcp",
@@ -4838,9 +4824,23 @@
       "owner": "msrbuilds",
       "repo": "elementor-mcp",
       "install_command": "",
-      "stars": 293,
+      "stars": 296,
       "language": "PHP",
-      "last_updated": "2026-04-25",
+      "last_updated": "2026-05-10",
+      "source": "github"
+    },
+    {
+      "id": "voska/hass-mcp",
+      "name": "Hass Mcp",
+      "description": "Home Assistant MCP Server",
+      "category": "Other",
+      "github_url": "https://github.com/voska/hass-mcp",
+      "owner": "voska",
+      "repo": "hass-mcp",
+      "install_command": "",
+      "stars": 295,
+      "language": "Python",
+      "last_updated": "2025-08-05",
       "source": "github"
     },
     {
@@ -4852,7 +4852,7 @@
       "owner": "PatrikFehrenbach",
       "repo": "h1-brain",
       "install_command": "",
-      "stars": 292,
+      "stars": 293,
       "language": "Python",
       "last_updated": "2026-04-07",
       "source": "github"
@@ -4866,9 +4866,37 @@
       "owner": "Arenukvern",
       "repo": "mcp_flutter",
       "install_command": "",
-      "stars": 291,
+      "stars": 292,
       "language": "Dart",
       "last_updated": "2026-05-07",
+      "source": "github"
+    },
+    {
+      "id": "Beever-AI/beever-atlas",
+      "name": "Beever Atlas",
+      "description": "Your First LLM-Wiki Conversation Knowledge Base",
+      "category": "AI & ML",
+      "github_url": "https://github.com/Beever-AI/beever-atlas",
+      "owner": "Beever-AI",
+      "repo": "beever-atlas",
+      "install_command": "",
+      "stars": 286,
+      "language": "Python",
+      "last_updated": "2026-05-09",
+      "source": "github"
+    },
+    {
+      "id": "Alex2Yang97/yahoo-finance-mcp",
+      "name": "Yahoo Finance Mcp",
+      "description": "This is a Model Context Protocol (MCP) server that provides comprehensive financial data from Yahoo Finance. It allows you to retrieve detailed information about stocks, including historical prices, company information, financial statements, options data, and market news.",
+      "category": "Developer Tools",
+      "github_url": "https://github.com/Alex2Yang97/yahoo-finance-mcp",
+      "owner": "Alex2Yang97",
+      "repo": "yahoo-finance-mcp",
+      "install_command": "",
+      "stars": 285,
+      "language": "Python",
+      "last_updated": "2026-03-23",
       "source": "github"
     },
     {
@@ -4886,20 +4914,6 @@
       "source": "github"
     },
     {
-      "id": "Alex2Yang97/yahoo-finance-mcp",
-      "name": "Yahoo Finance Mcp",
-      "description": "This is a Model Context Protocol (MCP) server that provides comprehensive financial data from Yahoo Finance. It allows you to retrieve detailed information about stocks, including historical prices, company information, financial statements, options data, and market news.",
-      "category": "Developer Tools",
-      "github_url": "https://github.com/Alex2Yang97/yahoo-finance-mcp",
-      "owner": "Alex2Yang97",
-      "repo": "yahoo-finance-mcp",
-      "install_command": "",
-      "stars": 284,
-      "language": "Python",
-      "last_updated": "2026-03-23",
-      "source": "github"
-    },
-    {
       "id": "Arindam200/reddit-mcp",
       "name": "Reddit Mcp",
       "description": "Model Context Protocol server implementation for Reddit",
@@ -4908,7 +4922,7 @@
       "owner": "Arindam200",
       "repo": "reddit-mcp",
       "install_command": "",
-      "stars": 283,
+      "stars": 284,
       "language": "Python",
       "last_updated": "2025-12-21",
       "source": "github"
@@ -4922,9 +4936,9 @@
       "owner": "carterlasalle",
       "repo": "mac_messages_mcp",
       "install_command": "",
-      "stars": 278,
+      "stars": 279,
       "language": "Python",
-      "last_updated": "2026-05-06",
+      "last_updated": "2026-05-10",
       "source": "awesome"
     },
     {
@@ -4936,7 +4950,7 @@
       "owner": "ivnvxd",
       "repo": "mcp-server-odoo",
       "install_command": "",
-      "stars": 277,
+      "stars": 279,
       "language": "Python",
       "last_updated": "2026-05-02",
       "source": "awesome"
@@ -4978,7 +4992,7 @@
       "owner": "nickgnd",
       "repo": "tmux-mcp",
       "install_command": "",
-      "stars": 275,
+      "stars": 276,
       "language": "JavaScript",
       "last_updated": "2026-02-14",
       "source": "github"
@@ -4996,20 +5010,6 @@
       "language": "Rust",
       "last_updated": "2025-11-24",
       "source": "awesome"
-    },
-    {
-      "id": "Beever-AI/beever-atlas",
-      "name": "Beever Atlas",
-      "description": "Your First LLM-Wiki Conversation Knowledge Base",
-      "category": "AI & ML",
-      "github_url": "https://github.com/Beever-AI/beever-atlas",
-      "owner": "Beever-AI",
-      "repo": "beever-atlas",
-      "install_command": "",
-      "stars": 273,
-      "language": "Python",
-      "last_updated": "2026-05-09",
-      "source": "github"
     },
     {
       "id": "flytohub/flyto-core",
@@ -5152,6 +5152,20 @@
       "source": "github"
     },
     {
+      "id": "shinpr/mcp-local-rag",
+      "name": "shinpr/mcp-local-rag",
+      "description": "",
+      "category": "AI & ML",
+      "github_url": "https://github.com/shinpr/mcp-local-rag",
+      "owner": "shinpr",
+      "repo": "mcp-local-rag",
+      "install_command": "",
+      "stars": 254,
+      "language": "TypeScript",
+      "last_updated": "2026-05-09",
+      "source": "awesome"
+    },
+    {
       "id": "MCP-Defender/MCP-Defender",
       "name": "Mcp Defender",
       "description": "Desktop app that automatically scans and blocks malicious MCP traffic in AI apps like Cursor, Claude, VS Code and Windsurf.",
@@ -5166,6 +5180,20 @@
       "source": "github"
     },
     {
+      "id": "nirholas/XActions",
+      "name": "Xactions",
+      "description": "\u26a1 The Complete X/Twitter Automation Toolkit \u2014 Scrapers, MCP server for AI agents (Claude/GPT), CLI, browser scripts. No API fees. Open source. Unfollow people who don't follow back. Monitor real-time analytics. Auto follow, like, comment, scrape, without API.",
+      "category": "Web & Browser",
+      "github_url": "https://github.com/nirholas/XActions",
+      "owner": "nirholas",
+      "repo": "XActions",
+      "install_command": "",
+      "stars": 253,
+      "language": "HTML",
+      "last_updated": "2026-05-07",
+      "source": "github"
+    },
+    {
       "id": "Goldentrii/AgentRecall-MCP",
       "name": "Agentrecall Mcp",
       "description": "AI Session Memory with Think-Execute-Reflect Quality Loops \u2014 give your agent a brain that survives every session. Built on the Intelligent Distance principle.",
@@ -5176,22 +5204,8 @@
       "install_command": "",
       "stars": 252,
       "language": "TypeScript",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-10",
       "source": "github"
-    },
-    {
-      "id": "shinpr/mcp-local-rag",
-      "name": "shinpr/mcp-local-rag",
-      "description": "",
-      "category": "AI & ML",
-      "github_url": "https://github.com/shinpr/mcp-local-rag",
-      "owner": "shinpr",
-      "repo": "mcp-local-rag",
-      "install_command": "",
-      "stars": 252,
-      "language": "TypeScript",
-      "last_updated": "2026-05-09",
-      "source": "awesome"
     },
     {
       "id": "portofcontext/pctx",
@@ -5216,23 +5230,9 @@
       "owner": "vinkius-labs",
       "repo": "vurb.ts",
       "install_command": "",
-      "stars": 250,
+      "stars": 251,
       "language": "TypeScript",
-      "last_updated": "2026-05-07",
-      "source": "github"
-    },
-    {
-      "id": "nirholas/XActions",
-      "name": "Xactions",
-      "description": "\u26a1 The Complete X/Twitter Automation Toolkit \u2014 Scrapers, MCP server for AI agents (Claude/GPT), CLI, browser scripts. No API fees. Open source. Unfollow people who don't follow back. Monitor real-time analytics. Auto follow, like, comment, scrape, without API.",
-      "category": "Web & Browser",
-      "github_url": "https://github.com/nirholas/XActions",
-      "owner": "nirholas",
-      "repo": "XActions",
-      "install_command": "",
-      "stars": 249,
-      "language": "HTML",
-      "last_updated": "2026-05-07",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -5244,7 +5244,7 @@
       "owner": "domdomegg",
       "repo": "computer-use-mcp",
       "install_command": "",
-      "stars": 248,
+      "stars": 249,
       "language": "TypeScript",
       "last_updated": "2026-05-09",
       "source": "github"
@@ -5300,7 +5300,7 @@
       "owner": "keli-wen",
       "repo": "mcp_chatbot",
       "install_command": "",
-      "stars": 244,
+      "stars": 245,
       "language": "Python",
       "last_updated": "2025-07-30",
       "source": "github"
@@ -5334,6 +5334,20 @@
       "source": "awesome"
     },
     {
+      "id": "gagarinyury/claude-config-editor",
+      "name": "Claude Config Editor",
+      "description": "Claude Config Editor is a lightweight web tool that helps you clean and optimize your Claude Code/Desktop config files (.claude.json). Analyze project sizes, bulk delete chat histories, export data for backup, manage servers visually, and speed up Claude\u2014all locally, with auto-backup, no dependencies, and cross-platform support.",
+      "category": "File System",
+      "github_url": "https://github.com/gagarinyury/claude-config-editor",
+      "owner": "gagarinyury",
+      "repo": "claude-config-editor",
+      "install_command": "",
+      "stars": 243,
+      "language": "HTML",
+      "last_updated": "2025-10-29",
+      "source": "github"
+    },
+    {
       "id": "RaiAnsar/claude_code-gemini-mcp",
       "name": "Claude Code Gemini Mcp",
       "description": "Simplified Gemini for Claude Code. ",
@@ -5348,20 +5362,6 @@
       "source": "github"
     },
     {
-      "id": "gagarinyury/claude-config-editor",
-      "name": "Claude Config Editor",
-      "description": "Claude Config Editor is a lightweight web tool that helps you clean and optimize your Claude Code/Desktop config files (.claude.json). Analyze project sizes, bulk delete chat histories, export data for backup, manage servers visually, and speed up Claude\u2014all locally, with auto-backup, no dependencies, and cross-platform support.",
-      "category": "File System",
-      "github_url": "https://github.com/gagarinyury/claude-config-editor",
-      "owner": "gagarinyury",
-      "repo": "claude-config-editor",
-      "install_command": "",
-      "stars": 242,
-      "language": "HTML",
-      "last_updated": "2025-10-29",
-      "source": "github"
-    },
-    {
       "id": "ai-dashboad/flutter-skill",
       "name": "Flutter Skill",
       "description": "AI-powered E2E testing for 10 platforms. 253 MCP tools. Zero config. Works with Claude, Cursor, Windsurf, Copilot. Test Flutter, React Native, iOS, Android, Web, Electron, Tauri, KMP, .NET MAUI \u2014 all from natural language.",
@@ -5370,7 +5370,7 @@
       "owner": "ai-dashboad",
       "repo": "flutter-skill",
       "install_command": "",
-      "stars": 239,
+      "stars": 241,
       "language": "Dart",
       "last_updated": "2026-04-15",
       "source": "github"
@@ -5426,7 +5426,7 @@
       "owner": "postmanlabs",
       "repo": "postman-mcp-server",
       "install_command": "",
-      "stars": 235,
+      "stars": 236,
       "language": "TypeScript",
       "last_updated": "2026-04-30",
       "source": "github"
@@ -5456,7 +5456,7 @@
       "install_command": "",
       "stars": 233,
       "language": "TypeScript",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -5498,7 +5498,7 @@
       "install_command": "",
       "stars": 233,
       "language": "Python",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -5516,6 +5516,20 @@
       "source": "github"
     },
     {
+      "id": "hao-cyber/phone-mcp",
+      "name": "Phone Mcp",
+      "description": "A phone control plugin for MCP that allows you to control your Android phone through ADB commands to connect any human",
+      "category": "Databases",
+      "github_url": "https://github.com/hao-cyber/phone-mcp",
+      "owner": "hao-cyber",
+      "repo": "phone-mcp",
+      "install_command": "",
+      "stars": 230,
+      "language": "Python",
+      "last_updated": "2025-05-08",
+      "source": "github"
+    },
+    {
       "id": "montevive/penpot-mcp",
       "name": "Penpot Mcp",
       "description": "Penpot MCP server",
@@ -5530,17 +5544,17 @@
       "source": "github"
     },
     {
-      "id": "hao-cyber/phone-mcp",
-      "name": "Phone Mcp",
-      "description": "A phone control plugin for MCP that allows you to control your Android phone through ADB commands to connect any human",
-      "category": "Databases",
-      "github_url": "https://github.com/hao-cyber/phone-mcp",
-      "owner": "hao-cyber",
-      "repo": "phone-mcp",
+      "id": "savantskie/persistent-ai-memory",
+      "name": "Persistent Ai Memory",
+      "description": "A persistent local memory for AI, LLMs, or Copilot in VS Code.",
+      "category": "AI & ML",
+      "github_url": "https://github.com/savantskie/persistent-ai-memory",
+      "owner": "savantskie",
+      "repo": "persistent-ai-memory",
       "install_command": "",
       "stars": 229,
       "language": "Python",
-      "last_updated": "2025-05-08",
+      "last_updated": "2026-04-23",
       "source": "github"
     },
     {
@@ -5556,6 +5570,20 @@
       "language": "Python",
       "last_updated": "2025-05-20",
       "source": "awesome"
+    },
+    {
+      "id": "soxoj/awesome-osint-mcp-servers",
+      "name": "Awesome Osint Mcp Servers",
+      "description": "A curated list of OSINT MCP servers. Pull requests are welcomed!",
+      "category": "Other",
+      "github_url": "https://github.com/soxoj/awesome-osint-mcp-servers",
+      "owner": "soxoj",
+      "repo": "awesome-osint-mcp-servers",
+      "install_command": "",
+      "stars": 228,
+      "language": "",
+      "last_updated": "2026-05-08",
+      "source": "github"
     },
     {
       "id": "hustcc/mcp-echarts",
@@ -5586,31 +5614,31 @@
       "source": "github"
     },
     {
-      "id": "savantskie/persistent-ai-memory",
-      "name": "Persistent Ai Memory",
-      "description": "A persistent local memory for AI, LLMs, or Copilot in VS Code.",
-      "category": "AI & ML",
-      "github_url": "https://github.com/savantskie/persistent-ai-memory",
-      "owner": "savantskie",
-      "repo": "persistent-ai-memory",
+      "id": "Storybloq/storybloq",
+      "name": "Storybloq",
+      "description": "Cross-session context for Claude Code. CLI + MCP server + /story skill that tracks tickets, issues, handovers, and roadmap in a .story/ directory.",
+      "category": "File System",
+      "github_url": "https://github.com/Storybloq/storybloq",
+      "owner": "Storybloq",
+      "repo": "storybloq",
       "install_command": "",
-      "stars": 228,
-      "language": "Python",
-      "last_updated": "2026-04-23",
+      "stars": 226,
+      "language": "TypeScript",
+      "last_updated": "2026-05-09",
       "source": "github"
     },
     {
-      "id": "soxoj/awesome-osint-mcp-servers",
-      "name": "Awesome Osint Mcp Servers",
-      "description": "A curated list of OSINT MCP servers. Pull requests are welcomed!",
-      "category": "Other",
-      "github_url": "https://github.com/soxoj/awesome-osint-mcp-servers",
-      "owner": "soxoj",
-      "repo": "awesome-osint-mcp-servers",
+      "id": "chrisdoc/hevy-mcp",
+      "name": "Hevy Mcp",
+      "description": "Manage your Hevy workouts, routines, folders, and exercise templates. Create and update sessions faster, organize plans, and search exercises to build workouts quickly. Stay synced with changes so your training log is always up to date.",
+      "category": "File System",
+      "github_url": "https://github.com/chrisdoc/hevy-mcp",
+      "owner": "chrisdoc",
+      "repo": "hevy-mcp",
       "install_command": "",
-      "stars": 226,
-      "language": "",
-      "last_updated": "2026-05-08",
+      "stars": 225,
+      "language": "TypeScript",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -5628,20 +5656,6 @@
       "source": "github"
     },
     {
-      "id": "chrisdoc/hevy-mcp",
-      "name": "Hevy Mcp",
-      "description": "Manage your Hevy workouts, routines, folders, and exercise templates. Create and update sessions faster, organize plans, and search exercises to build workouts quickly. Stay synced with changes so your training log is always up to date.",
-      "category": "File System",
-      "github_url": "https://github.com/chrisdoc/hevy-mcp",
-      "owner": "chrisdoc",
-      "repo": "hevy-mcp",
-      "install_command": "",
-      "stars": 222,
-      "language": "TypeScript",
-      "last_updated": "2026-05-09",
-      "source": "github"
-    },
-    {
       "id": "buildswithpaul/Frappe_Assistant_Core",
       "name": "Frappe Assistant Core",
       "description": "Infrastructure that connects LLMs to ERPNext. Frappe Assistant Core works with the Model Context Protocol (MCP) to expose ERPNext functionality to any compatible Language Model",
@@ -5656,20 +5670,6 @@
       "source": "github"
     },
     {
-      "id": "razorpay/razorpay-mcp-server",
-      "name": "Razorpay Mcp Server",
-      "description": "Razorpay's Official MCP Server",
-      "category": "Other",
-      "github_url": "https://github.com/razorpay/razorpay-mcp-server",
-      "owner": "razorpay",
-      "repo": "razorpay-mcp-server",
-      "install_command": "",
-      "stars": 219,
-      "language": "Go",
-      "last_updated": "2026-05-09",
-      "source": "github"
-    },
-    {
       "id": "tninja/ai-code-interface.el",
       "name": "Ai Code Interface.El",
       "description": "Unified Emacs interface supporting OpenAI Codex, GitHub Copilot CLI, Claude Code, Gemini CLI, Opencode, and more",
@@ -5678,9 +5678,9 @@
       "owner": "tninja",
       "repo": "ai-code-interface.el",
       "install_command": "",
-      "stars": 218,
+      "stars": 220,
       "language": "Emacs Lisp",
-      "last_updated": "2026-05-10",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -5692,9 +5692,23 @@
       "owner": "proxy-intell",
       "repo": "facebook-ads-library-mcp",
       "install_command": "",
-      "stars": 218,
+      "stars": 219,
       "language": "Python",
       "last_updated": "2026-03-17",
+      "source": "github"
+    },
+    {
+      "id": "razorpay/razorpay-mcp-server",
+      "name": "Razorpay Mcp Server",
+      "description": "Razorpay's Official MCP Server",
+      "category": "Other",
+      "github_url": "https://github.com/razorpay/razorpay-mcp-server",
+      "owner": "razorpay",
+      "repo": "razorpay-mcp-server",
+      "install_command": "",
+      "stars": 219,
+      "language": "Go",
+      "last_updated": "2026-05-09",
       "source": "github"
     },
     {
@@ -5720,9 +5734,23 @@
       "owner": "makeplane",
       "repo": "plane-mcp-server",
       "install_command": "",
-      "stars": 216,
+      "stars": 218,
       "language": "Python",
       "last_updated": "2026-05-07",
+      "source": "github"
+    },
+    {
+      "id": "cbcoutinho/nextcloud-mcp-server",
+      "name": "Nextcloud Mcp Server",
+      "description": "Nextcloud MCP Server",
+      "category": "Cloud & Infra",
+      "github_url": "https://github.com/cbcoutinho/nextcloud-mcp-server",
+      "owner": "cbcoutinho",
+      "repo": "nextcloud-mcp-server",
+      "install_command": "",
+      "stars": 216,
+      "language": "Python",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -5740,17 +5768,17 @@
       "source": "github"
     },
     {
-      "id": "cbcoutinho/nextcloud-mcp-server",
-      "name": "Nextcloud Mcp Server",
-      "description": "Nextcloud MCP Server",
-      "category": "Cloud & Infra",
-      "github_url": "https://github.com/cbcoutinho/nextcloud-mcp-server",
-      "owner": "cbcoutinho",
-      "repo": "nextcloud-mcp-server",
+      "id": "drhelius/Geargrafx",
+      "name": "Geargrafx",
+      "description": "PC Engine / TurboGrafx-16 / SuperGrafx / PCE CD-ROM\u00b2 emulator, debugger, and embedded MCP server for macOS, Windows, Linux, BSD and RetroArch.",
+      "category": "Developer Tools",
+      "github_url": "https://github.com/drhelius/Geargrafx",
+      "owner": "drhelius",
+      "repo": "Geargrafx",
       "install_command": "",
-      "stars": 214,
-      "language": "Python",
-      "last_updated": "2026-05-09",
+      "stars": 213,
+      "language": "C++",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -5779,20 +5807,6 @@
       "stars": 212,
       "language": "Python",
       "last_updated": "2026-02-12",
-      "source": "github"
-    },
-    {
-      "id": "drhelius/Geargrafx",
-      "name": "Geargrafx",
-      "description": "PC Engine / TurboGrafx-16 / SuperGrafx / PCE CD-ROM\u00b2 emulator, debugger, and embedded MCP server for macOS, Windows, Linux, BSD and RetroArch.",
-      "category": "Developer Tools",
-      "github_url": "https://github.com/drhelius/Geargrafx",
-      "owner": "drhelius",
-      "repo": "Geargrafx",
-      "install_command": "",
-      "stars": 212,
-      "language": "C++",
-      "last_updated": "2026-05-09",
       "source": "github"
     },
     {
@@ -5862,21 +5876,7 @@
       "install_command": "",
       "stars": 207,
       "language": "TypeScript",
-      "last_updated": "2026-05-09",
-      "source": "github"
-    },
-    {
-      "id": "Corbell-AI/Corbell",
-      "name": "Corbell",
-      "description": "AI-powered spec generation and review using multi-repo code graph intelligence for backend teams that ship to production.",
-      "category": "Version Control",
-      "github_url": "https://github.com/Corbell-AI/Corbell",
-      "owner": "Corbell-AI",
-      "repo": "Corbell",
-      "install_command": "",
-      "stars": 206,
-      "language": "Python",
-      "last_updated": "2026-05-02",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -5894,6 +5894,20 @@
       "source": "github"
     },
     {
+      "id": "Corbell-AI/Corbell",
+      "name": "Corbell",
+      "description": "AI-powered spec generation and review using multi-repo code graph intelligence for backend teams that ship to production.",
+      "category": "Version Control",
+      "github_url": "https://github.com/Corbell-AI/Corbell",
+      "owner": "Corbell-AI",
+      "repo": "Corbell",
+      "install_command": "",
+      "stars": 205,
+      "language": "Python",
+      "last_updated": "2026-05-02",
+      "source": "github"
+    },
+    {
       "id": "funwarioisii/mcp-rb",
       "name": "Mcp Rb",
       "description": "A lightweight Ruby framework for building MCP servers with a Sinatra-like DSL",
@@ -5908,17 +5922,17 @@
       "source": "github"
     },
     {
-      "id": "Storybloq/storybloq",
-      "name": "Storybloq",
-      "description": "Cross-session context for Claude Code. CLI + MCP server + /story skill that tracks tickets, issues, handovers, and roadmap in a .story/ directory.",
-      "category": "File System",
-      "github_url": "https://github.com/Storybloq/storybloq",
-      "owner": "Storybloq",
-      "repo": "storybloq",
+      "id": "GeLi2001/shopify-mcp",
+      "name": "Shopify Mcp",
+      "description": "MCP server for Shopify api, usable on mcp hosts such as Claude and Cursor",
+      "category": "Other",
+      "github_url": "https://github.com/GeLi2001/shopify-mcp",
+      "owner": "GeLi2001",
+      "repo": "shopify-mcp",
       "install_command": "",
       "stars": 205,
       "language": "TypeScript",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-04-05",
       "source": "github"
     },
     {
@@ -5936,17 +5950,17 @@
       "source": "awesome"
     },
     {
-      "id": "GeLi2001/shopify-mcp",
-      "name": "Shopify Mcp",
-      "description": "MCP server for Shopify api, usable on mcp hosts such as Claude and Cursor",
+      "id": "robcerda/monarch-mcp-server",
+      "name": "Monarch Mcp Server",
+      "description": "MCP Server for use with Monarch Money",
       "category": "Other",
-      "github_url": "https://github.com/GeLi2001/shopify-mcp",
-      "owner": "GeLi2001",
-      "repo": "shopify-mcp",
+      "github_url": "https://github.com/robcerda/monarch-mcp-server",
+      "owner": "robcerda",
+      "repo": "monarch-mcp-server",
       "install_command": "",
       "stars": 203,
-      "language": "TypeScript",
-      "last_updated": "2026-04-05",
+      "language": "Python",
+      "last_updated": "2026-05-06",
       "source": "github"
     },
     {
@@ -5978,17 +5992,17 @@
       "source": "github"
     },
     {
-      "id": "robcerda/monarch-mcp-server",
-      "name": "Monarch Mcp Server",
-      "description": "MCP Server for use with Monarch Money",
-      "category": "Other",
-      "github_url": "https://github.com/robcerda/monarch-mcp-server",
-      "owner": "robcerda",
-      "repo": "monarch-mcp-server",
+      "id": "google-marketing-solutions/google_ads_mcp",
+      "name": "Google Ads Mcp",
+      "description": "The Google Ads MCP Server is an implementation of the Model Context Protocol (MCP) that enables Large Language Models (LLMs), such as Gemini, to interact directly with the Google Ads API.",
+      "category": "AI & ML",
+      "github_url": "https://github.com/google-marketing-solutions/google_ads_mcp",
+      "owner": "google-marketing-solutions",
+      "repo": "google_ads_mcp",
       "install_command": "",
-      "stars": 200,
+      "stars": 199,
       "language": "Python",
-      "last_updated": "2026-05-06",
+      "last_updated": "2026-05-08",
       "source": "github"
     },
     {
@@ -6020,17 +6034,17 @@
       "source": "github"
     },
     {
-      "id": "google-marketing-solutions/google_ads_mcp",
-      "name": "Google Ads Mcp",
-      "description": "The Google Ads MCP Server is an implementation of the Model Context Protocol (MCP) that enables Large Language Models (LLMs), such as Gemini, to interact directly with the Google Ads API.",
-      "category": "AI & ML",
-      "github_url": "https://github.com/google-marketing-solutions/google_ads_mcp",
-      "owner": "google-marketing-solutions",
-      "repo": "google_ads_mcp",
+      "id": "claude-world/notebooklm-skill",
+      "name": "Notebooklm Skill",
+      "description": "NotebookLM does the research, Claude writes the content. Research \u2192 Synthesis \u2192 Content Creation \u2192 Publishing. Claude Code Skill + MCP Server.",
+      "category": "Search",
+      "github_url": "https://github.com/claude-world/notebooklm-skill",
+      "owner": "claude-world",
+      "repo": "notebooklm-skill",
       "install_command": "",
       "stars": 198,
       "language": "Python",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-04-14",
       "source": "github"
     },
     {
@@ -6045,20 +6059,6 @@
       "stars": 196,
       "language": "TypeScript",
       "last_updated": "2026-05-09",
-      "source": "github"
-    },
-    {
-      "id": "claude-world/notebooklm-skill",
-      "name": "Notebooklm Skill",
-      "description": "NotebookLM does the research, Claude writes the content. Research \u2192 Synthesis \u2192 Content Creation \u2192 Publishing. Claude Code Skill + MCP Server.",
-      "category": "Search",
-      "github_url": "https://github.com/claude-world/notebooklm-skill",
-      "owner": "claude-world",
-      "repo": "notebooklm-skill",
-      "install_command": "",
-      "stars": 196,
-      "language": "Python",
-      "last_updated": "2026-04-14",
       "source": "github"
     },
     {
@@ -6104,6 +6104,20 @@
       "source": "github"
     },
     {
+      "id": "bvisible/mcp-ssh-manager",
+      "name": "Mcp Ssh Manager",
+      "description": "MCP SSH Server: 37 tools for remote SSH management | Claude Code & OpenAI Codex | DevOps automation, backups, database operations, health monitoring",
+      "category": "Databases",
+      "github_url": "https://github.com/bvisible/mcp-ssh-manager",
+      "owner": "bvisible",
+      "repo": "mcp-ssh-manager",
+      "install_command": "",
+      "stars": 195,
+      "language": "JavaScript",
+      "last_updated": "2026-05-07",
+      "source": "github"
+    },
+    {
       "id": "zcaceres/easy-mcp",
       "name": "Easy Mcp",
       "description": "Absurdly easy Model Context Protocol Servers in Typescript",
@@ -6118,17 +6132,17 @@
       "source": "github"
     },
     {
-      "id": "bvisible/mcp-ssh-manager",
-      "name": "Mcp Ssh Manager",
-      "description": "MCP SSH Server: 37 tools for remote SSH management | Claude Code & OpenAI Codex | DevOps automation, backups, database operations, health monitoring",
-      "category": "Databases",
-      "github_url": "https://github.com/bvisible/mcp-ssh-manager",
-      "owner": "bvisible",
-      "repo": "mcp-ssh-manager",
+      "id": "ptbsare/mcp-proxy-server",
+      "name": "Mcp Proxy Server",
+      "description": "This server acts as a central hub for Model Context Protocol (MCP) resource servers.",
+      "category": "Other",
+      "github_url": "https://github.com/ptbsare/mcp-proxy-server",
+      "owner": "ptbsare",
+      "repo": "mcp-proxy-server",
       "install_command": "",
-      "stars": 194,
-      "language": "JavaScript",
-      "last_updated": "2026-05-07",
+      "stars": 193,
+      "language": "TypeScript",
+      "last_updated": "2025-07-27",
       "source": "github"
     },
     {
@@ -6146,17 +6160,17 @@
       "source": "github"
     },
     {
-      "id": "ptbsare/mcp-proxy-server",
-      "name": "Mcp Proxy Server",
-      "description": "This server acts as a central hub for Model Context Protocol (MCP) resource servers.",
-      "category": "Other",
-      "github_url": "https://github.com/ptbsare/mcp-proxy-server",
-      "owner": "ptbsare",
-      "repo": "mcp-proxy-server",
+      "id": "heymrun/heym",
+      "name": "Heym",
+      "description": "Self-hosted AI workflow automation platform with visual canvas, agents, RAG, HITL, MCP, and observability in one runtime.",
+      "category": "AI & ML",
+      "github_url": "https://github.com/heymrun/heym",
+      "owner": "heymrun",
+      "repo": "heym",
       "install_command": "",
       "stars": 192,
-      "language": "TypeScript",
-      "last_updated": "2025-07-27",
+      "language": "Python",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -6210,7 +6224,7 @@
       "owner": "vasylenko",
       "repo": "bear-notes-mcp",
       "install_command": "",
-      "stars": 188,
+      "stars": 189,
       "language": "TypeScript",
       "last_updated": "2026-05-09",
       "source": "github"
@@ -6240,7 +6254,21 @@
       "install_command": "",
       "stars": 185,
       "language": "Go",
-      "last_updated": "2026-05-05",
+      "last_updated": "2026-05-10",
+      "source": "github"
+    },
+    {
+      "id": "staskh/trading_skills",
+      "name": "Trading Skills",
+      "description": "Claude powered advisor system for option traders",
+      "category": "Other",
+      "github_url": "https://github.com/staskh/trading_skills",
+      "owner": "staskh",
+      "repo": "trading_skills",
+      "install_command": "",
+      "stars": 185,
+      "language": "Python",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -6268,21 +6296,7 @@
       "install_command": "",
       "stars": 184,
       "language": "C#",
-      "last_updated": "2026-05-09",
-      "source": "github"
-    },
-    {
-      "id": "staskh/trading_skills",
-      "name": "Trading Skills",
-      "description": "Claude powered advisor system for option traders",
-      "category": "Other",
-      "github_url": "https://github.com/staskh/trading_skills",
-      "owner": "staskh",
-      "repo": "trading_skills",
-      "install_command": "",
-      "stars": 184,
-      "language": "Python",
-      "last_updated": "2026-05-06",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -6296,7 +6310,21 @@
       "install_command": "",
       "stars": 183,
       "language": "C#",
-      "last_updated": "2026-05-07",
+      "last_updated": "2026-05-11",
+      "source": "github"
+    },
+    {
+      "id": "structurizr/structurizr",
+      "name": "Structurizr",
+      "description": "Structurizr is a \"models as code\" tool designed for the C4 model.",
+      "category": "Developer Tools",
+      "github_url": "https://github.com/structurizr/structurizr",
+      "owner": "structurizr",
+      "repo": "structurizr",
+      "install_command": "",
+      "stars": 183,
+      "language": "Java",
+      "last_updated": "2026-05-10",
       "source": "github"
     },
     {
@@ -6312,6 +6340,20 @@
       "language": "Kotlin",
       "last_updated": "2026-05-07",
       "source": "github"
+    },
+    {
+      "id": "the-momentum/apple-health-mcp-server",
+      "name": "the-momentum/apple-health-mcp-server",
+      "description": "",
+      "category": "Other",
+      "github_url": "https://github.com/the-momentum/apple-health-mcp-server",
+      "owner": "the-momentum",
+      "repo": "apple-health-mcp-server",
+      "install_command": "",
+      "stars": 183,
+      "language": "Python",
+      "last_updated": "2026-02-10",
+      "source": "awesome"
     },
     {
       "id": "alexei-led/aws-mcp-server",
@@ -6336,7 +6378,7 @@
       "owner": "MFYDev",
       "repo": "ghost-mcp",
       "install_command": "",
-      "stars": 181,
+      "stars": 182,
       "language": "TypeScript",
       "last_updated": "2026-04-27",
       "source": "github"
@@ -6350,7 +6392,7 @@
       "owner": "BiboyQG",
       "repo": "WeChat-MCP",
       "install_command": "",
-      "stars": 181,
+      "stars": 182,
       "language": "Python",
       "last_updated": "2026-03-09",
       "source": "github"
@@ -6380,35 +6422,7 @@
       "install_command": "",
       "stars": 180,
       "language": "Python",
-      "last_updated": "2026-05-10",
-      "source": "github"
-    },
-    {
-      "id": "the-momentum/apple-health-mcp-server",
-      "name": "the-momentum/apple-health-mcp-server",
-      "description": "",
-      "category": "Other",
-      "github_url": "https://github.com/the-momentum/apple-health-mcp-server",
-      "owner": "the-momentum",
-      "repo": "apple-health-mcp-server",
-      "install_command": "",
-      "stars": 180,
-      "language": "Python",
-      "last_updated": "2026-02-10",
-      "source": "awesome"
-    },
-    {
-      "id": "structurizr/structurizr",
-      "name": "Structurizr",
-      "description": "Structurizr is a \"models as code\" tool designed for the C4 model.",
-      "category": "Developer Tools",
-      "github_url": "https://github.com/structurizr/structurizr",
-      "owner": "structurizr",
-      "repo": "structurizr",
-      "install_command": "",
-      "stars": 179,
-      "language": "Java",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -6420,7 +6434,7 @@
       "owner": "CelestoAI",
       "repo": "agentor",
       "install_command": "",
-      "stars": 178,
+      "stars": 179,
       "language": "Python",
       "last_updated": "2026-03-30",
       "source": "github"
@@ -6448,7 +6462,7 @@
       "owner": "guangxiangdebizi",
       "repo": "QMT-MCP",
       "install_command": "",
-      "stars": 175,
+      "stars": 176,
       "language": "Python",
       "last_updated": "2025-07-17",
       "source": "github"
@@ -6510,6 +6524,20 @@
       "source": "github"
     },
     {
+      "id": "mcp-use/mcp-use-ts",
+      "name": "Mcp Use Ts",
+      "description": "mcp-use is the framework for MCP with the best DX - Build AI agents, create MCP   servers with UI widgets, and debug with built-in inspector. Includes client SDK, server SDK, React hooks, and powerful dev tools.",
+      "category": "Developer Tools",
+      "github_url": "https://github.com/mcp-use/mcp-use-ts",
+      "owner": "mcp-use",
+      "repo": "mcp-use-ts",
+      "install_command": "",
+      "stars": 173,
+      "language": "TypeScript",
+      "last_updated": "2025-12-08",
+      "source": "github"
+    },
+    {
       "id": "posit-dev/mcptools",
       "name": "Mcptools",
       "description": "Model Context Protocol For R",
@@ -6521,6 +6549,20 @@
       "stars": 173,
       "language": "R",
       "last_updated": "2026-03-17",
+      "source": "github"
+    },
+    {
+      "id": "kevinpbuckley/VibeUE",
+      "name": "Vibeue",
+      "description": "Unreal Engine Vibe Coding tool",
+      "category": "Other",
+      "github_url": "https://github.com/kevinpbuckley/VibeUE",
+      "owner": "kevinpbuckley",
+      "repo": "VibeUE",
+      "install_command": "",
+      "stars": 173,
+      "language": "C++",
+      "last_updated": "2026-05-04",
       "source": "github"
     },
     {
@@ -6538,20 +6580,6 @@
       "source": "github"
     },
     {
-      "id": "mcp-use/mcp-use-ts",
-      "name": "Mcp Use Ts",
-      "description": "mcp-use is the framework for MCP with the best DX - Build AI agents, create MCP   servers with UI widgets, and debug with built-in inspector. Includes client SDK, server SDK, React hooks, and powerful dev tools.",
-      "category": "Developer Tools",
-      "github_url": "https://github.com/mcp-use/mcp-use-ts",
-      "owner": "mcp-use",
-      "repo": "mcp-use-ts",
-      "install_command": "",
-      "stars": 172,
-      "language": "TypeScript",
-      "last_updated": "2025-12-08",
-      "source": "github"
-    },
-    {
       "id": "milisp/awesome-claude-dxt",
       "name": "Awesome Claude Dxt",
       "description": "Awesome Claude Desktop Extensions (dxt) (not only Claude) mcpb",
@@ -6563,6 +6591,20 @@
       "stars": 171,
       "language": "JavaScript",
       "last_updated": "2026-05-01",
+      "source": "github"
+    },
+    {
+      "id": "HaD0Yun/Gopeak-godot-mcp",
+      "name": "Gopeak Godot Mcp",
+      "description": "GoPeak \u2014 The most comprehensive MCP server for Godot Engine. 95+ tools: scene management, GDScript LSP, DAP debugger, screenshot capture, input injection, ClassDB introspection, CC0 asset library. npx gopeak",
+      "category": "Databases",
+      "github_url": "https://github.com/HaD0Yun/Gopeak-godot-mcp",
+      "owner": "HaD0Yun",
+      "repo": "Gopeak-godot-mcp",
+      "install_command": "",
+      "stars": 171,
+      "language": "JavaScript",
+      "last_updated": "2026-04-30",
       "source": "github"
     },
     {
@@ -6588,23 +6630,9 @@
       "owner": "CronusL-1141",
       "repo": "AI-company",
       "install_command": "",
-      "stars": 169,
+      "stars": 170,
       "language": "Python",
       "last_updated": "2026-05-08",
-      "source": "github"
-    },
-    {
-      "id": "HaD0Yun/Gopeak-godot-mcp",
-      "name": "Gopeak Godot Mcp",
-      "description": "GoPeak \u2014 The most comprehensive MCP server for Godot Engine. 95+ tools: scene management, GDScript LSP, DAP debugger, screenshot capture, input injection, ClassDB introspection, CC0 asset library. npx gopeak",
-      "category": "Databases",
-      "github_url": "https://github.com/HaD0Yun/Gopeak-godot-mcp",
-      "owner": "HaD0Yun",
-      "repo": "Gopeak-godot-mcp",
-      "install_command": "",
-      "stars": 169,
-      "language": "JavaScript",
-      "last_updated": "2026-04-30",
       "source": "github"
     },
     {
@@ -6616,23 +6644,9 @@
       "owner": "jeff-nasseri",
       "repo": "mikrotik-mcp",
       "install_command": "",
-      "stars": 168,
+      "stars": 169,
       "language": "Python",
       "last_updated": "2026-04-26",
-      "source": "github"
-    },
-    {
-      "id": "kevinpbuckley/VibeUE",
-      "name": "Vibeue",
-      "description": "Unreal Engine Vibe Coding tool",
-      "category": "Other",
-      "github_url": "https://github.com/kevinpbuckley/VibeUE",
-      "owner": "kevinpbuckley",
-      "repo": "VibeUE",
-      "install_command": "",
-      "stars": 168,
-      "language": "C++",
-      "last_updated": "2026-05-04",
       "source": "github"
     },
     {
@@ -6644,9 +6658,23 @@
       "owner": "patchorbit",
       "repo": "domscribe",
       "install_command": "",
-      "stars": 167,
+      "stars": 168,
       "language": "TypeScript",
       "last_updated": "2026-04-15",
+      "source": "github"
+    },
+    {
+      "id": "netboxlabs/netbox-mcp-server",
+      "name": "Netbox Mcp Server",
+      "description": "Model Context Protocol (MCP) server for read-only interaction with NetBox data in LLMs",
+      "category": "AI & ML",
+      "github_url": "https://github.com/netboxlabs/netbox-mcp-server",
+      "owner": "netboxlabs",
+      "repo": "netbox-mcp-server",
+      "install_command": "",
+      "stars": 168,
+      "language": "Python",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -6664,20 +6692,6 @@
       "source": "github"
     },
     {
-      "id": "netboxlabs/netbox-mcp-server",
-      "name": "Netbox Mcp Server",
-      "description": "Model Context Protocol (MCP) server for read-only interaction with NetBox data in LLMs",
-      "category": "AI & ML",
-      "github_url": "https://github.com/netboxlabs/netbox-mcp-server",
-      "owner": "netboxlabs",
-      "repo": "netbox-mcp-server",
-      "install_command": "",
-      "stars": 167,
-      "language": "Python",
-      "last_updated": "2026-05-08",
-      "source": "github"
-    },
-    {
       "id": "pi22by7/In-Memoria",
       "name": "pi22by7/In-Memoria",
       "description": "",
@@ -6690,6 +6704,48 @@
       "language": "Rust",
       "last_updated": "2025-12-23",
       "source": "awesome"
+    },
+    {
+      "id": "AnkleBreaker-Studio/unity-mcp-server",
+      "name": "Unity Mcp Server",
+      "description": "Unity MCP Server \u2014 268 tools for AI-assisted game development. Connect Claude, Cursor, or any MCP client to Unity Editor & Unity Hub. Scene management, GameObjects, components, builds, profiling, Shader Graph, Amplify, terrain, physics, NavMesh, animation, MPPM multiplayer & more. Free & open source by AnkleBreaker Studio.",
+      "category": "Other",
+      "github_url": "https://github.com/AnkleBreaker-Studio/unity-mcp-server",
+      "owner": "AnkleBreaker-Studio",
+      "repo": "unity-mcp-server",
+      "install_command": "",
+      "stars": 167,
+      "language": "JavaScript",
+      "last_updated": "2026-04-30",
+      "source": "github"
+    },
+    {
+      "id": "zwldarren/akshare-one-mcp",
+      "name": "Akshare One Mcp",
+      "description": "MCP server that provides access to Chinese stock market data using akshare-one",
+      "category": "Other",
+      "github_url": "https://github.com/zwldarren/akshare-one-mcp",
+      "owner": "zwldarren",
+      "repo": "akshare-one-mcp",
+      "install_command": "",
+      "stars": 166,
+      "language": "Python",
+      "last_updated": "2026-03-14",
+      "source": "github"
+    },
+    {
+      "id": "trypeggy/instagram_dm_mcp",
+      "name": "Instagram Dm Mcp",
+      "description": "Instagram Direct messages MCP",
+      "category": "Other",
+      "github_url": "https://github.com/trypeggy/instagram_dm_mcp",
+      "owner": "trypeggy",
+      "repo": "instagram_dm_mcp",
+      "install_command": "",
+      "stars": 166,
+      "language": "Python",
+      "last_updated": "2025-08-13",
+      "source": "github"
     },
     {
       "id": "tercumantanumut/selene",
@@ -6706,20 +6762,6 @@
       "source": "github"
     },
     {
-      "id": "zwldarren/akshare-one-mcp",
-      "name": "Akshare One Mcp",
-      "description": "MCP server that provides access to Chinese stock market data using akshare-one",
-      "category": "Other",
-      "github_url": "https://github.com/zwldarren/akshare-one-mcp",
-      "owner": "zwldarren",
-      "repo": "akshare-one-mcp",
-      "install_command": "",
-      "stars": 165,
-      "language": "Python",
-      "last_updated": "2026-03-14",
-      "source": "github"
-    },
-    {
       "id": "alibaizhanov/mengram",
       "name": "alibaizhanov/mengram",
       "description": "",
@@ -6732,34 +6774,6 @@
       "language": "Python",
       "last_updated": "2026-05-06",
       "source": "awesome"
-    },
-    {
-      "id": "heymrun/heym",
-      "name": "Heym",
-      "description": "Self-hosted AI workflow automation platform with visual canvas, agents, RAG, HITL, MCP, and observability in one runtime.",
-      "category": "AI & ML",
-      "github_url": "https://github.com/heymrun/heym",
-      "owner": "heymrun",
-      "repo": "heym",
-      "install_command": "",
-      "stars": 165,
-      "language": "Python",
-      "last_updated": "2026-05-10",
-      "source": "github"
-    },
-    {
-      "id": "trypeggy/instagram_dm_mcp",
-      "name": "Instagram Dm Mcp",
-      "description": "Instagram Direct messages MCP",
-      "category": "Other",
-      "github_url": "https://github.com/trypeggy/instagram_dm_mcp",
-      "owner": "trypeggy",
-      "repo": "instagram_dm_mcp",
-      "install_command": "",
-      "stars": 165,
-      "language": "Python",
-      "last_updated": "2025-08-13",
-      "source": "github"
     },
     {
       "id": "jgravelle/jdocmunch-mcp",
@@ -6842,7 +6856,7 @@
       "install_command": "",
       "stars": 164,
       "language": "Go",
-      "last_updated": "2026-05-03",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -6870,7 +6884,7 @@
       "install_command": "",
       "stars": 163,
       "language": "TypeScript",
-      "last_updated": "2026-05-08",
+      "last_updated": "2026-05-11",
       "source": "github"
     },
     {
@@ -6884,7 +6898,7 @@
       "install_command": "",
       "stars": 163,
       "language": "Rust",
-      "last_updated": "2026-05-07",
+      "last_updated": "2026-05-11",
       "source": "awesome"
     },
     {
@@ -6916,6 +6930,34 @@
       "source": "github"
     },
     {
+      "id": "brijr/meta-mcp",
+      "name": "Meta Mcp",
+      "description": "MCP Server for connecting to the Meta Marketing API",
+      "category": "Other",
+      "github_url": "https://github.com/brijr/meta-mcp",
+      "owner": "brijr",
+      "repo": "meta-mcp",
+      "install_command": "",
+      "stars": 162,
+      "language": "TypeScript",
+      "last_updated": "2026-03-24",
+      "source": "github"
+    },
+    {
+      "id": "adeze/raindrop-mcp",
+      "name": "Raindrop Mcp",
+      "description": "Raindrop MCP Server",
+      "category": "Other",
+      "github_url": "https://github.com/adeze/raindrop-mcp",
+      "owner": "adeze",
+      "repo": "raindrop-mcp",
+      "install_command": "",
+      "stars": 162,
+      "language": "TypeScript",
+      "last_updated": "2026-03-11",
+      "source": "github"
+    },
+    {
       "id": "marcuspat/turbo-flow",
       "name": "Turbo Flow",
       "description": "Advanced Agentic Development Environment Supporting Devpods, Rackspace Spot Instances, Github Codespaces, Google Cloud Shell, and more!  Features 600+ AI subagents, Claude Flow, SPARC methodology, and automatic context loading! Deploy intelligent multi-agent swarms, coordinate autonomous workflows.",
@@ -6930,59 +6972,17 @@
       "source": "github"
     },
     {
-      "id": "AnkleBreaker-Studio/unity-mcp-server",
-      "name": "Unity Mcp Server",
-      "description": "Unity MCP Server \u2014 268 tools for AI-assisted game development. Connect Claude, Cursor, or any MCP client to Unity Editor & Unity Hub. Scene management, GameObjects, components, builds, profiling, Shader Graph, Amplify, terrain, physics, NavMesh, animation, MPPM multiplayer & more. Free & open source by AnkleBreaker Studio.",
+      "id": "nostrband/ServiceGraph",
+      "name": "Servicegraph",
+      "description": "AI Agent skills for a structured catalog of 100k+ US professional-services firms",
       "category": "Other",
-      "github_url": "https://github.com/AnkleBreaker-Studio/unity-mcp-server",
-      "owner": "AnkleBreaker-Studio",
-      "repo": "unity-mcp-server",
-      "install_command": "",
-      "stars": 162,
-      "language": "JavaScript",
-      "last_updated": "2026-04-30",
-      "source": "github"
-    },
-    {
-      "id": "cafeTechne/antigravity-link-extension",
-      "name": "Antigravity Link Extension",
-      "description": "Mobile companion for Google's Antigravity IDE. Mirror AI sessions on your phone, send messages, stop generation, automate via 9 MCP tools or OpenAPI.",
-      "category": "Search",
-      "github_url": "https://github.com/cafeTechne/antigravity-link-extension",
-      "owner": "cafeTechne",
-      "repo": "antigravity-link-extension",
+      "github_url": "https://github.com/nostrband/ServiceGraph",
+      "owner": "nostrband",
+      "repo": "ServiceGraph",
       "install_command": "",
       "stars": 161,
-      "language": "HTML",
-      "last_updated": "2026-05-04",
-      "source": "github"
-    },
-    {
-      "id": "brijr/meta-mcp",
-      "name": "Meta Mcp",
-      "description": "MCP Server for connecting to the Meta Marketing API",
-      "category": "Other",
-      "github_url": "https://github.com/brijr/meta-mcp",
-      "owner": "brijr",
-      "repo": "meta-mcp",
-      "install_command": "",
-      "stars": 161,
-      "language": "TypeScript",
-      "last_updated": "2026-03-24",
-      "source": "github"
-    },
-    {
-      "id": "adeze/raindrop-mcp",
-      "name": "Raindrop Mcp",
-      "description": "Raindrop MCP Server",
-      "category": "Other",
-      "github_url": "https://github.com/adeze/raindrop-mcp",
-      "owner": "adeze",
-      "repo": "raindrop-mcp",
-      "install_command": "",
-      "stars": 161,
-      "language": "TypeScript",
-      "last_updated": "2026-03-11",
+      "language": "Shell",
+      "last_updated": "2026-05-07",
       "source": "github"
     },
     {
@@ -7000,6 +7000,20 @@
       "source": "github"
     },
     {
+      "id": "Silung/scholar-search-mcp",
+      "name": "Scholar Search Mcp",
+      "description": "An MCP server for academic paper search that integrates with AI assistants (e.g., Claude Code, Cursor), enabling them to search and retrieve academic paper metadata.",
+      "category": "Search",
+      "github_url": "https://github.com/Silung/scholar-search-mcp",
+      "owner": "Silung",
+      "repo": "scholar-search-mcp",
+      "install_command": "",
+      "stars": 160,
+      "language": "Python",
+      "last_updated": "2026-05-08",
+      "source": "github"
+    },
+    {
       "id": "fiddlecube/compliant-llm",
       "name": "Compliant Llm",
       "description": "Build Secure and Compliant AI agents and MCP Servers. YC W23",
@@ -7008,23 +7022,9 @@
       "owner": "fiddlecube",
       "repo": "compliant-llm",
       "install_command": "",
-      "stars": 160,
+      "stars": 159,
       "language": "Python",
       "last_updated": "2025-06-06",
-      "source": "github"
-    },
-    {
-      "id": "gleanwork/remote-mcp-server",
-      "name": "Remote Mcp Server",
-      "description": "Remote MCP Server that securely connects Enterprise context with your LLM, IDE, or agent platform of choice.",
-      "category": "AI & ML",
-      "github_url": "https://github.com/gleanwork/remote-mcp-server",
-      "owner": "gleanwork",
-      "repo": "remote-mcp-server",
-      "install_command": "",
-      "stars": 160,
-      "language": "",
-      "last_updated": "2026-04-17",
       "source": "github"
     },
     {
@@ -8977,6 +8977,20 @@
       "id": "ai.autoblocks/ctxl-mcp",
       "name": "ai.autoblocks/ctxl-mcp",
       "description": "Personal context management for AI assistants",
+      "category": "Other",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
+      "id": "ai.auxen/auxen",
+      "name": "ai.auxen/auxen",
+      "description": "Provision private AI model endpoints on dedicated GPUs (Llama, Qwen, Mistral). Pay per minute.",
       "category": "Other",
       "github_url": "",
       "owner": "",
@@ -14532,20 +14546,6 @@
       "source": "official"
     },
     {
-      "id": "app.evlek/mcp-server",
-      "name": "app.evlek/mcp-server",
-      "description": "Live Northern Cyprus property data for AI agents \u2014 listings, price index, market overview.",
-      "category": "Other",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
       "id": "app.getdialer/dialer",
       "name": "app.getdialer/dialer",
       "description": "An MCP server that provides lets you make outbound phone calls using your own phone number",
@@ -15460,6 +15460,20 @@
       "name": "AudioAlpha",
       "description": "Financial podcast intelligence platform \u2014 sentiment, narrative, and asset signals from 100+ podcasts",
       "category": "Media",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
+      "id": "cz.audioknihy/catalog",
+      "name": "audioknihy.cz Catalog",
+      "description": "Czech audiobook catalog MCP server. Search 12 000+ titles + compare prices across 5 partners.",
+      "category": "Search",
       "github_url": "",
       "owner": "",
       "repo": "",
@@ -19082,6 +19096,20 @@
       "source": "official"
     },
     {
+      "id": "cloud.nordicdata/nordic-data",
+      "name": "cloud.nordicdata/nordic-data",
+      "description": "Nordic business data API: 1.4M Norwegian companies, sanctions, procurement, contacts. 28 tools.",
+      "category": "Cloud & Infra",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
       "id": "cloudbet/sports-mcp-server",
       "name": "cloudbet/sports-mcp-server",
       "description": "",
@@ -19842,6 +19870,20 @@
       "name": "com.arcself/arc-security",
       "description": "Scan AI agent skills for 25 attack classes + runtime monitoring. 1,316+ findings.",
       "category": "Security",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
+      "id": "com.asksakina/islamic-knowledge",
+      "name": "com.asksakina/islamic-knowledge",
+      "description": "Verified Quran verses, duas, 99 Names of Allah, and prophets. Multi-madhab reviewed.",
+      "category": "Other",
       "github_url": "",
       "owner": "",
       "repo": "",
@@ -26252,7 +26294,7 @@
     {
       "id": "app.dealermax/public-search",
       "name": "DealerMax",
-      "description": "Italian cross-dealer search: used cars, long-term rentals, dealer directory, knowledge.",
+      "description": "Italian cross-dealer MCP: cars, NLT rentals with quotations, dealer directory, automotive KB.",
       "category": "File System",
       "github_url": "",
       "owner": "",
@@ -26740,10 +26782,52 @@
       "source": "official"
     },
     {
+      "id": "dev.cz-agents/ddplus",
+      "name": "dev.cz-agents/ddplus",
+      "description": "Czech KYC due-diligence \u2014 paid tier extension (nominee, phoenix, risk timeline, watchlist).",
+      "category": "Other",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
       "id": "dev.cz-agents/isir",
       "name": "dev.cz-agents/isir",
       "description": "Czech insolvency register (ISIR) \u2014 active proceeding checks by I\u010cO. Alpha.",
       "category": "Other",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
+      "id": "dev.cz-agents/realestate",
+      "name": "dev.cz-agents/realestate",
+      "description": "Czech distress real-estate \u2014 anonymized district aggregates (k\u22655). Free tier only.",
+      "category": "Other",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
+      "id": "dev.cz-agents/realestate-pro",
+      "name": "dev.cz-agents/realestate-pro",
+      "description": "Czech distress real estate \u2014 paid tier (full search, owner data, RUIAN).",
+      "category": "Search",
       "github_url": "",
       "owner": "",
       "repo": "",
@@ -30394,6 +30478,20 @@
       "source": "official"
     },
     {
+      "id": "app.evlek/mcp-server",
+      "name": "Evlek \u2014 Northern Cyprus Property MCP Server",
+      "description": "Live Northern Cyprus property data: listings, prices, yield, legal, neighborhoods (9 tools).",
+      "category": "Other",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
       "id": "io.github.BV-Venky/excalidraw-architect-mcp",
       "name": "Excalidraw Architect",
       "description": "Generate beautiful Excalidraw architecture diagrams with auto-layout and component styling",
@@ -31055,6 +31153,20 @@
       "id": "com.figma.mcp/mcp",
       "name": "Figma MCP Server",
       "description": "The Figma MCP server brings Figma design context directly into your AI workflow.",
+      "category": "Other",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
+      "id": "com.filingfirehose/firehose",
+      "name": "FilingFirehose",
+      "description": "SEC EDGAR filings parsed: 8-K body-text classification, 13D activist tagging, S-3 ATM detection.",
       "category": "Other",
       "github_url": "",
       "owner": "",
@@ -33474,6 +33586,20 @@
       "source": "awesome"
     },
     {
+      "id": "com.halalterminal/mcp",
+      "name": "Halal Terminal",
+      "description": "Shariah-compliant stock and ETF screening across AAOIFI, DJIM, FTSE, MSCI and S&P methodologies.",
+      "category": "Developer Tools",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
       "id": "hamflx/imagen3-mcp",
       "name": "hamflx/imagen3-mcp",
       "description": "",
@@ -33850,6 +33976,20 @@
       "language": "",
       "last_updated": "",
       "source": "awesome"
+    },
+    {
+      "id": "co.heista/api",
+      "name": "Heista",
+      "description": "Decode video ads, load brand intelligence, generate ad scripts.",
+      "category": "Media",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
     },
     {
       "id": "ai.helixar/mcp",
@@ -36148,6 +36288,20 @@
       "source": "official"
     },
     {
+      "id": "io.github.AbYousef739/signalpipe",
+      "name": "io.github.AbYousef739/signalpipe",
+      "description": "Agentic Reddit/HN buying-signal detection for Claude Code, Cursor, and Windsurf via MCP.",
+      "category": "Version Control",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
       "id": "io.github.AceDataCloud/mcp-flux-pro",
       "name": "io.github.AceDataCloud/mcp-flux-pro",
       "description": "MCP server for Flux AI image generation",
@@ -36446,6 +36600,34 @@
       "name": "io.github.Advertflair/threadmap-mcp",
       "description": "Conversation drift visualization for Claude. Color-coded inflection points and one-click forking.",
       "category": "Version Control",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
+      "id": "io.github.Advocate-Cloud-Solutions/clio-mcp",
+      "name": "io.github.Advocate-Cloud-Solutions/clio-mcp",
+      "description": "MCP server for Clio Manage + Clio Grow - by Advocate Cloud Solutions.",
+      "category": "Version Control",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
+      "id": "io.github.Advocate-Cloud-Solutions/filevine-mcp",
+      "name": "io.github.Advocate-Cloud-Solutions/filevine-mcp",
+      "description": "MCP server for Filevine matter management - by Advocate Cloud Solutions.",
+      "category": "File System",
       "github_url": "",
       "owner": "",
       "repo": "",
@@ -36824,6 +37006,20 @@
       "name": "io.github.Algiras/debugium",
       "description": "AI-driven live debugger with MCP bridge for Python, JS, TS, Rust, Java, C/C++",
       "category": "File System",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
+      "id": "io.github.Ali1041/leadloadz",
+      "name": "io.github.Ali1041/leadloadz",
+      "description": "B2B lead search and email verification MCP server",
+      "category": "Version Control",
       "github_url": "",
       "owner": "",
       "repo": "",
@@ -39175,258 +39371,6 @@
       "id": "io.github.CSOAI-ORG/gardening-ai-mcp",
       "name": "io.github.CSOAI-ORG/gardening-ai-mcp",
       "description": "gardening-ai-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/gdpr-compliance-ai-mcp",
-      "name": "io.github.CSOAI-ORG/gdpr-compliance-ai-mcp",
-      "description": "gdpr-compliance-ai-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/geolocation-ai-mcp",
-      "name": "io.github.CSOAI-ORG/geolocation-ai-mcp",
-      "description": "geolocation-ai-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/git-helper-ai-mcp",
-      "name": "io.github.CSOAI-ORG/git-helper-ai-mcp",
-      "description": "git-helper-ai-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/gods-eye-geospatial-mcp",
-      "name": "io.github.CSOAI-ORG/gods-eye-geospatial-mcp",
-      "description": "gods-eye-geospatial-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/grammar-fix-ai-mcp",
-      "name": "io.github.CSOAI-ORG/grammar-fix-ai-mcp",
-      "description": "grammar-fix-ai-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/habit-tracker-ai-mcp",
-      "name": "io.github.CSOAI-ORG/habit-tracker-ai-mcp",
-      "description": "habit-tracker-ai-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/hash-utils-ai-mcp",
-      "name": "io.github.CSOAI-ORG/hash-utils-ai-mcp",
-      "description": "hash-utils-ai-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/health-check-ai-mcp",
-      "name": "io.github.CSOAI-ORG/health-check-ai-mcp",
-      "description": "health-check-ai-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/healthcare-ai-governance-mcp",
-      "name": "io.github.CSOAI-ORG/healthcare-ai-governance-mcp",
-      "description": "healthcare-ai-governance-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/healthcare-fhir-mcp",
-      "name": "io.github.CSOAI-ORG/healthcare-fhir-mcp",
-      "description": "healthcare-fhir-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/hipaa-compliance-mcp",
-      "name": "io.github.CSOAI-ORG/hipaa-compliance-mcp",
-      "description": "hipaa-compliance-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/hr-management-ai-mcp",
-      "name": "io.github.CSOAI-ORG/hr-management-ai-mcp",
-      "description": "hr-management-ai-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/html-parser-ai-mcp",
-      "name": "io.github.CSOAI-ORG/html-parser-ai-mcp",
-      "description": "html-parser-ai-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/hydration-reminder-ai-mcp",
-      "name": "io.github.CSOAI-ORG/hydration-reminder-ai-mcp",
-      "description": "hydration-reminder-ai-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/icon-generator-ai-mcp",
-      "name": "io.github.CSOAI-ORG/icon-generator-ai-mcp",
-      "description": "icon-generator-ai-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/image-metadata-ai-mcp",
-      "name": "io.github.CSOAI-ORG/image-metadata-ai-mcp",
-      "description": "image-metadata-ai-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/insurance-verification-mcp",
-      "name": "io.github.CSOAI-ORG/insurance-verification-mcp",
-      "description": "insurance-verification-mcp MCP server by MEOK AI Labs",
-      "category": "Version Control",
-      "github_url": "",
-      "owner": "",
-      "repo": "",
-      "install_command": "",
-      "language": "",
-      "last_updated": "",
-      "stars": 0,
-      "source": "official"
-    },
-    {
-      "id": "io.github.CSOAI-ORG/inventory-management-ai-mcp",
-      "name": "io.github.CSOAI-ORG/inventory-management-ai-mcp",
-      "description": "inventory-management-ai-mcp MCP server by MEOK AI Labs",
       "category": "Version Control",
       "github_url": "",
       "owner": "",
@@ -44450,6 +44394,20 @@
       "source": "awesome"
     },
     {
+      "id": "com.luneresearch/lune",
+      "name": "Lune Research",
+      "description": "Search peer-reviewed papers and research methodology guidance from your AI agent.",
+      "category": "Search",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
+    },
+    {
       "id": "LvcidPsyche/auto-browser",
       "name": "LvcidPsyche/auto-browser",
       "description": "",
@@ -48942,6 +48900,20 @@
       "language": "",
       "last_updated": "",
       "source": "awesome"
+    },
+    {
+      "id": "com.queryomega/omega",
+      "name": "OmegaAI",
+      "description": "Query, browse, and automate OmegaAI workspaces from any MCP client. Streamable HTTP with OAuth 2.0.",
+      "category": "Web & Browser",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
     },
     {
       "id": "0xzcov/omni-fun-mcp-server",
@@ -54910,8 +54882,8 @@
     {
       "id": "com.shipstatic/mcp",
       "name": "ShipStatic",
-      "description": "Deploy static sites instantly from AI agents \u2014 no account required",
-      "category": "Other",
+      "description": "Deploy websites from AI agents. Free at mcp.shipstatic.com. Install for the full toolset.",
+      "category": "Web & Browser",
       "github_url": "",
       "owner": "",
       "repo": "",
@@ -56618,8 +56590,8 @@
     {
       "id": "com.stratalize/governance",
       "name": "Stratalize AI Governance Intelligence",
-      "description": "FS AI RMF, SR 11-7, EU AI Act, UK FCA compliance. Examination-ready. Ed25519-attested.",
-      "category": "Developer Tools",
+      "description": "14 governance tools: EU AI Act, FCA PS7/24, NIST AI RMF, OCC, state AI laws. Ed25519.",
+      "category": "Cloud & Infra",
       "github_url": "",
       "owner": "",
       "repo": "",
@@ -56632,7 +56604,7 @@
     {
       "id": "com.stratalize/crypto",
       "name": "Stratalize Crypto and DeFi Intelligence",
-      "description": "8 crypto tools \u2014 gas, chain TVL, DeFi yields, DAO treasury, RWA, options IV. Ed25519-signed.",
+      "description": "9 crypto and DeFi benchmarks: gas, TVL, DeFi/stablecoin yields, options IV, correlations. Ed25519.",
       "category": "Other",
       "github_url": "",
       "owner": "",
@@ -56646,7 +56618,7 @@
     {
       "id": "com.stratalize/finance",
       "name": "Stratalize Finance Intelligence",
-      "description": "35 finance benchmarks \u2014 WACC, credit spreads, yield curve, FX, M&A multiples. Ed25519-signed.",
+      "description": "36 financial benchmarks: yield curve, FX, WACC, M&A, PE returns, bank/insurance, AML. Ed25519.",
       "category": "Other",
       "github_url": "",
       "owner": "",
@@ -56660,7 +56632,7 @@
     {
       "id": "com.stratalize/healthcare",
       "name": "Stratalize Healthcare Intelligence",
-      "description": "21 healthcare benchmarks \u2014 CMS, travel nursing, pharmacy, billing risk. Ed25519-signed. Free.",
+      "description": "20 healthcare benchmarks: CMS benchmarks, nurse rates, pharmacy, billing risk, payer intel. Ed25519.",
       "category": "Finance",
       "github_url": "",
       "owner": "",
@@ -56674,7 +56646,7 @@
     {
       "id": "com.stratalize/intelligence",
       "name": "Stratalize Intelligence",
-      "description": "154 governed tools: healthcare, finance, real estate, C-suite. Ed25519-signed. 85 free.",
+      "description": "39 intelligence tools: vendor benchmarks, H1B wages, contracts, patents, public finance. Ed25519.",
       "category": "Other",
       "github_url": "",
       "owner": "",
@@ -56688,7 +56660,7 @@
     {
       "id": "com.stratalize/realestate",
       "name": "Stratalize Real Estate Intelligence",
-      "description": "14 CRE benchmarks \u2014 cap rates, NCREIF, CRE debt, REIT, construction costs. Ed25519-signed.",
+      "description": "19 real estate benchmarks: cap rates, NCREIF, REIT, construction, mortgages, climate risk. Ed25519.",
       "category": "Other",
       "github_url": "",
       "owner": "",
@@ -62396,6 +62368,20 @@
       "language": "",
       "last_updated": "",
       "source": "awesome"
+    },
+    {
+      "id": "com.naxytra/xytara-mcp-executor",
+      "name": "xytara MCP Executor",
+      "description": "Public MCP server for deterministic summarization and DNS zone lookup.",
+      "category": "Other",
+      "github_url": "",
+      "owner": "",
+      "repo": "",
+      "install_command": "",
+      "language": "",
+      "last_updated": "",
+      "stars": 0,
+      "source": "official"
     },
     {
       "id": "xzq-xu/jvm-mcp-server",
