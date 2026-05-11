@@ -10,15 +10,16 @@
   <meta name="keywords" content="how to investigate 429 errors, API 429 troubleshooting, rate limit investigation, ClickHouse support queries" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://altorlab.com/blog/investigate-429-errors.html" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="How to Investigate 429 Errors in Your API" />
-  <meta property="og:description" content="A technical playbook for support teams handling customer-reported 429 spikes." />
-  <meta property="og:url" content="https://altorlab.com/blog/investigate-429-errors.html" />
-  <meta property="og:image" content="https://altorlab.com/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="How to Investigate 429 Errors in Your API" />
-  <meta name="twitter:description" content="From logs to billing checks: practical diagnosis of 429 incidents." />
-  <meta name="twitter:image" content="https://altorlab.com/og-image.png" />
+  <meta property="og:title" content="How to Investigate 429 Errors in Your API | Altor Blog">
+  <meta property="og:description" content="Step-by-step guide for investigating 429 API errors with ClickHouse queries, rate-limit checks, billing validation, and deploy correlation.">
+  <meta property="og:image" content="https://altorlab.com/og-altor.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Altor">
+  <meta property="og:url" content="https://altorlab.com/blog/investigate-429-errors.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Investigate 429 Errors in Your API | Altor Blog">
+  <meta name="twitter:description" content="Step-by-step guide for investigating 429 API errors with ClickHouse queries, rate-limit checks, billing validation, and deploy correlation.">
+  <meta name="twitter:image" content="https://altorlab.com/og-altor.png">
   <link rel="stylesheet" href="/blog/styles.css" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Investigate 429 Errors in Your API","description":"Step-by-step investigation workflow for API 429 errors.","author":{"@type":"Organization","name":"Altor"},"publisher":{"@type":"Organization","name":"Altor","logo":{"@type":"ImageObject","url":"https://altorlab.com/og-image.png"}},"datePublished":"2026-03-23","dateModified":"2026-03-23","mainEntityOfPage":"https://altorlab.com/blog/investigate-429-errors.html","keywords":["how to investigate 429 errors","API 429","rate limit troubleshooting"]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do 429 errors always mean customers exceeded their plan limits?","acceptedAnswer":{"@type":"Answer","text":"No. 429s can come from customer-side traffic bursts, internal policy misconfiguration, global protection rules, or regressions in rate-limit logic."}},{"@type":"Question","name":"What should be checked first in a 429 investigation?","acceptedAnswer":{"@type":"Answer","text":"Start by quantifying where and when 429s increased, then determine whether the pattern is tenant-specific or system-wide."}},{"@type":"Question","name":"Why check billing during a 429 incident?","acceptedAnswer":{"@type":"Answer","text":"Plan transitions, quota mis-sync, or entitlement errors can trigger legitimate but unexpected throttling behavior for a customer."}},{"@type":"Question","name":"Can 429 diagnosis be automated?","acceptedAnswer":{"@type":"Answer","text":"Yes. Repeatable checks across logs, bug trackers, billing, and deploy history can be automated and summarized for support review."}}]}</script>

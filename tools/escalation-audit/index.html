@@ -12,17 +12,17 @@
   <title>Support Escalation Audit — Free B2B Support Investigation Score | Altor</title>
   <meta name="description" content="10-question audit to score your support team's investigation maturity. Find out how much engineering time you're losing to avoidable escalations. Free, no signup.">
   <link rel="canonical" href="https://altorlab.com/tools/escalation-audit/">
-  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Support Escalation Audit — Free B2B Support Investigation Score | Altor">
+  <meta property="og:description" content="10-question audit to score your support team&#x27;s investigation maturity. Find out how much engineering time you&#x27;re losing to avoidable escalations. Free, no…">
+  <meta property="og:image" content="https://altorlab.com/og-altor.png">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://altorlab.com/tools/escalation-audit/">
-  <meta property="og:title" content="Support Escalation Audit — Free Investigation Maturity Score">
-  <meta property="og:description" content="10-question audit to score your support team's investigation maturity. See where escalation time is being lost.">
-  <meta property="og:image" content="https://altorlab.com/og-image.png">
   <meta property="og:site_name" content="Altor">
+  <meta property="og:url" content="https://altorlab.com/tools/escalation-audit/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Support Escalation Audit — Free Investigation Maturity Score">
-  <meta name="twitter:description" content="Score your support team's investigation maturity in 2 minutes. Free, no signup.">
-  <meta name="twitter:image" content="https://altorlab.com/og-image.png">
+  <meta name="twitter:title" content="Support Escalation Audit — Free B2B Support Investigation…">
+  <meta name="twitter:description" content="10-question audit to score your support team&#x27;s investigation maturity. Find out how much engineering time you&#x27;re losing to avoidable escalations. Free, no…">
+  <meta name="twitter:image" content="https://altorlab.com/og-altor.png">
+  <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#04110f">
   <script defer data-domain="altorlab.com" src="https://plausible.io/js/script.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Support Escalation Audit","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"10-question audit to score your B2B support team's investigation maturity and find where escalation time is being lost.","url":"https://altorlab.com/tools/escalation-audit/","publisher":{"@type":"Organization","name":"Altor","url":"https://altorlab.com"}}</script>
@@ -106,8 +106,8 @@
       </div>
       <div id="question-area"></div>
       <div class="btn-row">
-        <button class="btn-ghost" id="btn-back" onclick="prev()" style="display:none">← Back</button>
-        <button class="btn-primary" id="btn-next" onclick="next()">Next →</button>
+        <button type="button" class="btn-ghost" id="btn-back" onclick="prev()" style="display:none">← Back</button>
+        <button type="button" class="btn-primary" id="btn-next" onclick="next()">Next →</button>
       </div>
     </div>
 
@@ -258,7 +258,9 @@
 
     function select(i) {
       answers[current] = i;
-      document.querySelectorAll('.opt').forEach((el, idx) => el.classList.toggle('selected', idx === i));
+      document.querySelectorAll('.opt').forEach((el, idx) => {
+        el.classList.toggle('selected', idx === i);
+      });
     }
 
     function next() {
