@@ -84,7 +84,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <h3>The Investigation Agent Architecture</h3>
 
-<p>Altor AI runs what it calls "investigation agents"—small, purpose-built automations that each know how to answer one type of question. One agent knows how to look up user account details. Another checks recent API error rates for a specific endpoint. Another searches internal runbooks for similar past incidents.</p>
+<p>Altor AI runs what it calls "investigation agents" - small, purpose-built automations that each know how to answer one type of question. One agent knows how to look up user account details. Another checks recent API error rates for a specific endpoint. Another searches internal runbooks for similar past incidents.</p>
 
 <p>When a ticket arrives, a coordinator model determines which agents might be relevant, runs them in parallel, and synthesizes results. You can add custom agents with a Python SDK. Most customers build 5-10 agents specific to their product architecture within the first month.</p>
 
@@ -94,7 +94,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p>Altor AI doesn't auto-respond to customers. It doesn't classify sentiment. It doesn't try to predict churn risk or upsell opportunities. The product has an aggressively narrow scope: gather technical context so support engineers waste less time on forensics.</p>
 
-<p>That focus means it works <em>alongside</em> your existing helpdesk, not as a replacement. Tickets still live in Zendesk or Intercom. Altor just enriches them before anyone reads them. This makes adoption easier—no workflow migration, no customer-facing changes, no retraining agents on a new interface.</p>
+<p>That focus means it works <em>alongside</em> your existing helpdesk, not as a replacement. Tickets still live in Zendesk or Intercom. Altor just enriches them before anyone reads them. This makes adoption easier - no workflow migration, no customer-facing changes, no retraining agents on a new interface.</p>
 
 <h2>Who Should Actually Use This</h2>
 
@@ -106,7 +106,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <h2>The Actual Technical Challenge</h2>
 
-<p>Building this is harder than it looks. The core problem isn't LLM prompt engineering—it's maintaining reliable, low-latency integrations across wildly different API designs and authentication schemes. Your observability tool might use OAuth2. Your internal admin API might use mTLS. Your legacy monolith might still use basic auth over VPN.</p>
+<p>Building this is harder than it looks. The core problem isn't LLM prompt engineering - it's maintaining reliable, low-latency integrations across wildly different API designs and authentication schemes. Your observability tool might use OAuth2. Your internal admin API might use mTLS. Your legacy monolith might still use basic auth over VPN.</p>
 
 <p>Altor handles this with a self-hosted connector runtime that runs in your VPC. Credentials never leave your infrastructure. The cloud service coordinates which agents to run, but actual data queries happen behind your firewall. This matters for security compliance and makes integration with internal-only systems possible.</p>
 
@@ -131,7 +131,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 <p>No. All data processing happens either in your infrastructure or in Altor's SOC 2 compliant environment. LLM calls use anonymized, stripped context when necessary for coordination logic.</p>
 </section>
 
-<p>See how Altor AI handles your specific support workflow. <a href="https://altorlab.com">Book a Demo (US Hours)</a> and bring a few real tickets—we'll show you what the investigation output looks like for your actual product architecture.</p>
+<p>See how Altor AI handles your specific support workflow. <a href="https://altorlab.com">Book a Demo (US Hours)</a> and bring a few real tickets - we'll show you what the investigation output looks like for your actual product architecture.</p>
 </article>
 ```
 </article>

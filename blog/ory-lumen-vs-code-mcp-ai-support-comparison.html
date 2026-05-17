@@ -48,11 +48,11 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 <article>
 <h1>Ory/Lumen vs Code MCP: Which Stack Prevents More Auth Tickets?</h1>
 
-<p>Support teams at B2B SaaS companies answered 1.4 million authentication-related tickets in 2024, according to data from Zendesk's State of Service report. A disproportionate number trace back to session handling bugs, OAuth flow breaks, and permission boundary errors—issues that live at the intersection of your identity layer and your application server.</p>
+<p>Support teams at B2B SaaS companies answered 1.4 million authentication-related tickets in 2024, according to data from Zendesk's State of Service report. A disproportionate number trace back to session handling bugs, OAuth flow breaks, and permission boundary errors - issues that live at the intersection of your identity layer and your application server.</p>
 
 <p>If you're evaluating <strong>Ory (specifically Ory Kratos or Ory Hydra) with Laravel Lumen</strong> versus <strong>a custom auth implementation on top of VS Code's Model Context Protocol</strong>, you're probably not just comparing frameworks. You're trying to predict which architecture will generate fewer escalations, faster resolution times, and less engineering drag on your support org.</p>
 
-<p>Here's the part most comparison posts skip: the ticket prevention and investigation angle. Because the "best" stack isn't the one with the slickest docs—it's the one that fails cleanly, logs intelligibly, and doesn't turn every "I can't log in" ticket into a three-day spelunking mission.</p>
+<p>Here's the part most comparison posts skip: the ticket prevention and investigation angle. Because the "best" stack isn't the one with the slickest docs - it's the one that fails cleanly, logs intelligibly, and doesn't turn every "I can't log in" ticket into a three-day spelunking mission.</p>
 
 <h2>What Ory/Lumen Actually Means in Production Support</h2>
 
@@ -72,7 +72,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <h2>What Code MCP Brings (and Doesn't)</h2>
 
-<p>VS Code's Model Context Protocol is not an auth framework. It's a standardized way for AI models to interact with development tools—think of it as a communication layer that lets an LLM read your codebase, run terminal commands, or query APIs.</p>
+<p>VS Code's Model Context Protocol is not an auth framework. It's a standardized way for AI models to interact with development tools - think of it as a communication layer that lets an LLM read your codebase, run terminal commands, or query APIs.</p>
 
 <p>If you're building auth "with Code MCP," what you probably mean is: using MCP-connected tooling to auto-generate auth flows, scaffold permission logic, or integrate identity providers via AI-assisted code generation.</p>
 
@@ -124,7 +124,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <h2>When MCP Actually Makes Sense</h2>
 
-<p>If you're building a highly custom auth experience—say, multi-tenant row-level security with dynamic permission inheritance—Ory's out-of-the-box flows may feel restrictive. In those cases, MCP-assisted code generation can accelerate the build.</p>
+<p>If you're building a highly custom auth experience - say, multi-tenant row-level security with dynamic permission inheritance - Ory's out-of-the-box flows may feel restrictive. In those cases, MCP-assisted code generation can accelerate the build.</p>
 
 <p>But: you need engineers who can audit generated code and you need logging instrumented from day one. If your support team relies on third-party tools for session replay and error tracking, make sure those integrations are explicit in your AI prompts.</p>
 
@@ -136,7 +136,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 <ul>
 <li>You want predictable failure modes and standard debugging workflows</li>
 <li>Your team values mature tooling with community support over cutting-edge flexibility</li>
-<li>You need to onboard support engineers who aren't deeply technical—Ory's admin UI and structured logs help</li>
+<li>You need to onboard support engineers who aren't deeply technical - Ory's admin UI and structured logs help</li>
 </ul>
 
 <p>Choose <strong>MCP-assisted custom auth</strong> if:</p>
@@ -164,7 +164,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 <p>Look at session duration, token expiry settings, and error message clarity. Shorter sessions mean more "logged out unexpectedly" tickets. Vague error messages (like generic <code>403</code> responses) mean longer investigation times. Ory's default error responses are more detailed than most custom implementations, which directly reduces ticket resolution time.</p>
 </section>
 
-<p><strong>If you're tired of auth tickets eating 20% of your support capacity</strong>, we should talk. Altorlab helps B2B support teams auto-investigate API errors, session failures, and integration breaks—across any auth stack. <a href="https://altorlab.com">Book a demo</a> and see how we cut ticket resolution time in half.</p>
+<p><strong>If you're tired of auth tickets eating 20% of your support capacity</strong>, we should talk. Altorlab helps B2B support teams auto-investigate API errors, session failures, and integration breaks - across any auth stack. <a href="https://altorlab.com">Book a demo</a> and see how we cut ticket resolution time in half.</p>
 </article>
 <footer style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #333; color: #888; font-size: 0.85rem;">
 Published April 29, 2026 · Auto-generated from search data

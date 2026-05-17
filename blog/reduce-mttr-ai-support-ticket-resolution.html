@@ -54,7 +54,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <h2>The Investigation Tax Nobody Tracks</h2>
 
-<p>Mean time to resolution is the wrong metric to optimize directly. It's an outcome, not a lever. The actual lever is mean time to diagnosis—how long it takes to understand what broke.</p>
+<p>Mean time to resolution is the wrong metric to optimize directly. It's an outcome, not a lever. The actual lever is mean time to diagnosis - how long it takes to understand what broke.</p>
 
 <p>In most B2B SaaS companies, diagnosis consumes 60-70% of total resolution time. An engineer opens a ticket that says "Customer can't authenticate via SAML." The actual work breakdown looks like this:</p>
 
@@ -86,7 +86,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p>Check system state at failure time. Was there a deploy 10 minutes before the issue? Did error rates spike globally or just for this customer? Is their API key about to expire?</p>
 
-<p>Surface similar past incidents. Not keyword search—actual pattern matching. If three other customers hit "Redis connection timeout" during database failover last month, that context should appear instantly.</p>
+<p>Surface similar past incidents. Not keyword search - actual pattern matching. If three other customers hit "Redis connection timeout" during database failover last month, that context should appear instantly.</p>
 
 <p>Suggest diagnostic next steps. Based on error type and system state, what should the engineer check first? This isn't a static flowchart. It's conditional logic that adapts to what's already been ruled out.</p>
 
@@ -116,7 +116,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <h2>Measure Time to First Meaningful Action</h2>
 
-<p>Stop celebrating first response time. It's a vanity metric. An engineer saying "looking into this" 3 minutes after ticket creation is theater. What matters is time to first meaningful action—the moment the engineer takes a step that moves toward resolution.</p>
+<p>Stop celebrating first response time. It's a vanity metric. An engineer saying "looking into this" 3 minutes after ticket creation is theater. What matters is time to first meaningful action - the moment the engineer takes a step that moves toward resolution.</p>
 
 <p>That might be rolling back a deploy, adjusting a rate limit, or pushing a config change. If automated investigation hands them the probable cause in the first 60 seconds, first meaningful action happens in minute 2. If they spend 40 minutes in log archaeology, it happens in minute 41.</p>
 
@@ -134,7 +134,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 <p>No, it lets them focus on actual engineering instead of log spelunking. Junior engineers can handle more tickets independently because the diagnosis is handed to them. Senior engineers spend more time on complex problems and less time recreating system state from scattered logs.</p>
 
 <h3>How do you avoid automation that gives false leads and wastes more time?</h3>
-<p>Start narrow. Automate investigation for your top 5 most common ticket types first. Build confidence before expanding. Good automated investigation should surface evidence, not conclusions. Show the engineer the relevant logs and state—let them decide what it means.</p>
+<p>Start narrow. Automate investigation for your top 5 most common ticket types first. Build confidence before expanding. Good automated investigation should surface evidence, not conclusions. Show the engineer the relevant logs and state - let them decide what it means.</p>
 
 <h3>What systems do you need integrated to make this work?</h3>
 <p>At minimum: your ticketing system, log aggregation (CloudWatch, Datadog, Splunk), APM or distributed tracing, and your deployment pipeline. Bonus: your API gateway, job queue monitoring, and database query logs. The more connected, the faster diagnosis becomes.</p>

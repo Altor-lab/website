@@ -56,7 +56,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p>Ory positions itself as a complete identity infrastructure. Kratos handles authentication, Hydra manages OAuth2 and OIDC flows, Keto enforces permissions. It's modular, containerized, and designed to replace Auth0 or Okta with something you control. Support teams see Ory tickets when developers self-host without tuning session cookie paths, when webhook retry logic fails silently, or when a customer's reverse proxy strips headers Kratos expects.</p>
 
-<p>Code MCP—specifically implementations that pair Laravel Lumen with the Model-Context-Protocol pattern—takes a different tack. Lumen strips Laravel down to a stateless API framework. Developers layer in JWT middleware, often via tymon/jwt-auth, and build context-driven authorization that inspects request metadata to decide access. It's leaner, fits microservice architectures, and appeals to teams that want authentication logic embedded in application code rather than offloaded to a separate service.</p>
+<p>Code MCP - specifically implementations that pair Laravel Lumen with the Model-Context-Protocol pattern - takes a different tack. Lumen strips Laravel down to a stateless API framework. Developers layer in JWT middleware, often via tymon/jwt-auth, and build context-driven authorization that inspects request metadata to decide access. It's leaner, fits microservice architectures, and appeals to teams that want authentication logic embedded in application code rather than offloaded to a separate service.</p>
 
 <p>The support burden diverges sharply. Ory incidents cluster around infrastructure and integration: misconfigured ingress, database connection pools exhausted during login spikes, webhook failures that orphan user states. Lumen/MCP issues show up as application-level bugs: expired tokens not refreshed properly, middleware precedence conflicts, or context variables that don't serialize correctly across service boundaries.</p>
 
@@ -76,7 +76,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p>Session persistence in Ory means running Postgres or CockroachDB for Kratos, configuring backup retention, and monitoring connection counts. Support teams field tickets when database failovers drop active sessions or when backup restores include stale session data. The system is resilient if configured correctly, but "correctly" is a moving target across Kubernetes clusters, cloud providers, and database versions.</p>
 
-<p>Lumen typically stores JWT state client-side, so persistence problems manifest as token expiry or refresh failures. Support sees tickets when refresh tokens expire before access tokens (a config mistake), or when a user switches devices and expects session continuity that stateless JWTs can't provide without server-side tracking—which reintroduces the complexity Lumen was supposed to avoid.</p>
+<p>Lumen typically stores JWT state client-side, so persistence problems manifest as token expiry or refresh failures. Support sees tickets when refresh tokens expire before access tokens (a config mistake), or when a user switches devices and expects session continuity that stateless JWTs can't provide without server-side tracking - which reintroduces the complexity Lumen was supposed to avoid.</p>
 
 <p>Multi-tenancy isolation is architectural. Ory handles it with identity pools or Keto namespace policies. Lumen/MCP usually relies on application logic: middleware that inspects a <code>tenant_id</code> claim and scopes database queries. Ory's approach makes tenant bleed a configuration error; Lumen makes it a code bug. From a support perspective, config errors are easier to audit and fix. Code bugs require deployment cycles.</p>
 
@@ -96,7 +96,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p>Choosing Lumen/MCP means accepting application complexity. You write and maintain authentication logic, session handling, and permission checks. Support teams need code literacy and access to application repositories. When something breaks, it's often in custom middleware or business logic that tightly couples authentication to domain models.</p>
 
-<p>Neither is easier. They redistribute the burden. If your support team is strong on infrastructure—comfortable with Helm charts, debugging network policies, tuning database queries—Ory's operational model fits. If your team is developer-heavy and already owns application code, Lumen's approach keeps authentication in the same mental model as the rest of your system.</p>
+<p>Neither is easier. They redistribute the burden. If your support team is strong on infrastructure - comfortable with Helm charts, debugging network policies, tuning database queries - Ory's operational model fits. If your team is developer-heavy and already owns application code, Lumen's approach keeps authentication in the same mental model as the rest of your system.</p>
 
 <h2>What GSC Data Tells Us About Search Intent</h2>
 

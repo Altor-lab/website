@@ -74,7 +74,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p><strong>Deep system integration, not just ticketing integration.</strong> The platform must connect directly to your logs, metrics, APM tools, deployment systems, and internal APIs. Zendesk integration alone won't cut it. If the tool can't query Datadog, parse Kubernetes logs, or hit your internal admin API to check account configuration, it's just shuffling tickets with extra steps. Altorlab, for example, connects to observability stacks and can execute read-only queries against production databases when troubleshooting data-related issues. That's the baseline.</p>
 
-<p><strong>Pattern recognition across ticket populations.</strong> Proactive means spotting the third occurrence of a new issue type before the tenth customer reports it. The platform should cluster similar tickets semantically, not just by keyword matching. When five customers report different symptoms—"slow dashboard," "timeout on load," "charts not rendering"—that all trace to the same database query regression, the system should recognize that pattern and flag it as an emerging incident, not five unrelated tickets.</p>
+<p><strong>Pattern recognition across ticket populations.</strong> Proactive means spotting the third occurrence of a new issue type before the tenth customer reports it. The platform should cluster similar tickets semantically, not just by keyword matching. When five customers report different symptoms - "slow dashboard," "timeout on load," "charts not rendering" - that all trace to the same database query regression, the system should recognize that pattern and flag it as an emerging incident, not five unrelated tickets.</p>
 
 <p><strong>Autonomous investigative workflows.</strong> This is what separates reactive routing from proactive resolution. The platform needs to follow decision trees: if error code X, check service Y logs for Z pattern, then query metric A, then if threshold B exceeded, check deployment history for timeframe C. These workflows should be customizable to your stack and evolve as the system learns which investigation paths resolve issues fastest.</p>
 
@@ -88,7 +88,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <h2>What Proactive Resolution Doesn't Mean</h2>
 
-<p>It doesn't mean zero escalations. Complex bugs, novel edge cases, and architectural decisions will always need senior engineers. The goal is eliminating preventable escalations—the configuration issues, known bugs, documentation gaps, and environmental problems that don't require engineering judgment, just investigative legwork.</p>
+<p>It doesn't mean zero escalations. Complex bugs, novel edge cases, and architectural decisions will always need senior engineers. The goal is eliminating preventable escalations - the configuration issues, known bugs, documentation gaps, and environmental problems that don't require engineering judgment, just investigative legwork.</p>
 
 <p>It also doesn't mean removing human support agents. The best workflows augment agents by doing the forensic work instantly, letting them focus on communication, empathy, and judgment calls the AI can't make. When an agent receives a ticket that's already been investigated, they can respond in minutes instead of hours, and they can speak with authority because they're working from data, not guesses.</p>
 
@@ -113,7 +113,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 <p>Yes, most platforms integrate with Zendesk, Intercom, Jira Service Management, and Salesforce Service Cloud via API. The platform monitors incoming tickets, runs investigations, and writes findings back into the ticket thread. Your agents continue working in their existing interface.</p>
 
 <h3>How long does it take to see escalation reduction after deployment?</h3>
-<p>Initial impact appears within two to three weeks as the platform learns common issue patterns and builds investigation workflows. Full escalation reduction—typically 50-70%—takes six to eight weeks as the system refines its understanding of your infrastructure and edge cases.</p>
+<p>Initial impact appears within two to three weeks as the platform learns common issue patterns and builds investigation workflows. Full escalation reduction - typically 50-70% - takes six to eight weeks as the system refines its understanding of your infrastructure and edge cases.</p>
 
 <h3>What happens when the platform encounters an issue it can't investigate autonomously?</h3>
 <p>It escalates with a detailed summary of what it did check, what ruled-out causes are unlikely, and why human judgment is needed. This still saves time compared to starting from zero. The platform also learns from these cases to expand its investigative capabilities over time.</p>

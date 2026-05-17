@@ -48,7 +48,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 <article>
 <h1>How to Reduce Mean Time to Resolution in Support Without Hiring Faster Engineers</h1>
 
-<p>The average support ticket at a B2B SaaS company takes 18.7 hours to resolve. For technical issues—API failures, integration errors, database timeouts—that number doubles. Your engineers aren't slow. They're spending 73% of their time on investigation, not fixes.</p>
+<p>The average support ticket at a B2B SaaS company takes 18.7 hours to resolve. For technical issues - API failures, integration errors, database timeouts - that number doubles. Your engineers aren't slow. They're spending 73% of their time on investigation, not fixes.</p>
 
 <p>Mean time to resolution (MTTR) measures the clock from "ticket opened" to "issue closed." In support engineering, it's the metric that determines whether customers renew or churn. A 500 error that takes four days to diagnose costs you the account. One that's resolved in 90 minutes earns you a case study quote.</p>
 
@@ -78,7 +78,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p>The most expensive phrase in B2B support: "Let me escalate this to engineering." MTTR immediately jumps by 12-24 hours. The ticket moves from a support queue to a Slack thread to a Jira backlog. The engineer who picks it up has no customer context. They ask the same questions the support agent already asked. The customer gets frustrated. The agent feels powerless.</p>
 
-<p>Asana reduced their median MTTR by 40% by giving support engineers direct access to production diagnostic tools. Not write access—read access. Support can query logs, check background job status, view API rate limit usage, and inspect recent deploys. Most tickets don't need a code change. They need a diagnosis. When support can investigate like engineering, the handoff disappears.</p>
+<p>Asana reduced their median MTTR by 40% by giving support engineers direct access to production diagnostic tools. Not write access - read access. Support can query logs, check background job status, view API rate limit usage, and inspect recent deploys. Most tickets don't need a code change. They need a diagnosis. When support can investigate like engineering, the handoff disappears.</p>
 
 <p>GitHub does this with auto-remediation scripts. If the ticket is "repo clone timing out," support doesn't escalate. They run a diagnostic that checks the repo size, the user's network region, recent CDN issues, and server load. Eighty percent of the time, the script surfaces the answer. The remaining 20% gets escalated with full diagnostic output already attached. Either way, MTTR drops.</p>
 
@@ -88,11 +88,11 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p>Notion maintains a living library of "instant resolutions" linked to error patterns. When a ticket arrives with a 401 Unauthorized error and the request headers show a missing Bearer prefix, the system auto-suggests the exact fix with a code snippet. The engineer reviews it, confirms it matches, and closes the ticket in under five minutes. For novel issues, they write a new instant resolution. The system learns. MTTR on repeat issues approaches zero.</p>
 
-<p>This isn't a basic knowledge base. It's pattern-matched automation that reads the ticket content, scans logs, identifies the error signature, and surfaces the proven solution. You're not eliminating human judgment—you're eliminating human archaeology.</p>
+<p>This isn't a basic knowledge base. It's pattern-matched automation that reads the ticket content, scans logs, identifies the error signature, and surfaces the proven solution. You're not eliminating human judgment - you're eliminating human archaeology.</p>
 
 <h2>Measure Resolution Time by Issue Type, Not by Average</h2>
 
-<p>A company-wide MTTR of 18 hours is useless. It hides the fact that password resets resolve in 12 minutes and database migration bugs take four days. Optimizing "average MTTR" pushes teams to game the metric by closing easy tickets faster. The complex issues—the ones that actually matter—stay slow.</p>
+<p>A company-wide MTTR of 18 hours is useless. It hides the fact that password resets resolve in 12 minutes and database migration bugs take four days. Optimizing "average MTTR" pushes teams to game the metric by closing easy tickets faster. The complex issues - the ones that actually matter - stay slow.</p>
 
 <p>Segment MTTR by issue category. Track API errors separately from billing questions separately from integration bugs. Atlassian does this with severity-weighted MTTR. A P0 outage and a P3 feature question don't get averaged together. They track P0 resolution separately, set a 90-minute SLA, and route those tickets to senior engineers with override priority. MTTR on critical issues dropped 58% because they stopped diluting the metric with low-stakes tickets.</p>
 

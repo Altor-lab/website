@@ -48,7 +48,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 <article>
 <h1>How to Reduce Mean Time to Resolution in Support Without Adding Headcount</h1>
 
-<p>A fintech platform we studied last quarter was averaging 18.4 hours to resolve payment integration errors. Their support team knew exactly what was wrong—most tickets were variations of the same OAuth misconfiguration or webhook timeout—but engineers still spent 45 minutes per ticket reproducing environments, checking logs across three systems, and writing the same explanations in slightly different words.</p>
+<p>A fintech platform we studied last quarter was averaging 18.4 hours to resolve payment integration errors. Their support team knew exactly what was wrong - most tickets were variations of the same OAuth misconfiguration or webhook timeout - but engineers still spent 45 minutes per ticket reproducing environments, checking logs across three systems, and writing the same explanations in slightly different words.</p>
 
 <p>They cut mean time to resolution to 4.2 hours in six weeks. Not by hiring faster engineers or building better documentation. They automated the investigative grunt work that was eating 70% of resolution time.</p>
 
@@ -76,11 +76,11 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p>Linear's support engineering team built this for their GraphQL API errors. Before automation, engineers spent 15-20 minutes per ticket navigating Datadog, correlating timestamps, and filtering noise. Now the investigation bot appends a contextualized log snippet to every API error ticket within 30 seconds. Their MTTR for API issues dropped from 8.3 hours to 2.1 hours.</p>
 
-<p><strong>Lever two: Configuration snapshot capture.</strong> Most B2B technical issues trace back to customer configuration—webhook URLs pointing to localhost, API keys from the wrong environment, rate limits set too aggressively. Your automation should snapshot the customer's current settings the moment they report an issue.</p>
+<p><strong>Lever two: Configuration snapshot capture.</strong> Most B2B technical issues trace back to customer configuration - webhook URLs pointing to localhost, API keys from the wrong environment, rate limits set too aggressively. Your automation should snapshot the customer's current settings the moment they report an issue.</p>
 
 <p>Stripe's support system does this elegantly. When a customer reports a webhook problem, the ticket automatically includes their current webhook endpoint, signing secret status, event subscriptions, and recent delivery attempts. The engineer sees "Endpoint returning 404 since 2:17 PM, previously 200 OK" instead of starting a diagnostic conversation that takes 90 minutes.</p>
 
-<p><strong>Lever three: Similar ticket pattern matching.</strong> If 60% of your authentication errors stem from the same root cause—say, customers forgetting to enable refresh tokens—your system should flag this similarity before your engineer re-investigates from scratch.</p>
+<p><strong>Lever three: Similar ticket pattern matching.</strong> If 60% of your authentication errors stem from the same root cause - say, customers forgetting to enable refresh tokens - your system should flag this similarity before your engineer re-investigates from scratch.</p>
 
 <p>PagerDuty built a pattern recognition layer that matches incoming tickets against their resolution database. When a new ticket shares >75% similarity with a previously solved issue, it surfaces the solution path immediately. They measured a 38% reduction in MTTR for recurring issue categories.</p>
 
@@ -132,13 +132,13 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 <p>Most B2B support teams see 30-45% reduction in MTTR within 8-12 weeks for their automated ticket categories. Teams with highly repetitive technical issues (API errors, integration problems, authentication failures) often hit 50-60% reduction. The improvement depends on how much of your current MTTR is investigation versus actual problem-solving.</p>
 
 <h3>Does automated investigation work for non-technical support tickets?</h3>
-<p>It works best for technical issues where relevant data exists in logs, configurations, or system state. For vague product questions or feature requests, the ROI is lower. Focus automation on tickets that require looking up factual information across multiple systems—API errors, billing discrepancies, integration health, account configuration issues.</p>
+<p>It works best for technical issues where relevant data exists in logs, configurations, or system state. For vague product questions or feature requests, the ROI is lower. Focus automation on tickets that require looking up factual information across multiple systems - API errors, billing discrepancies, integration health, account configuration issues.</p>
 
 <h3>How do you prevent investigation automation from surfacing too much irrelevant data?</h3>
 <p>Start narrow and expand based on engineer feedback. For each ticket category, identify the 3-5 pieces of information that engineers manually look up in 80%+ of cases. Automate only those. If engineers start ignoring the automated summaries, you're pulling too much. Good automation should save time, not create more reading.</p>
 
 <h3>What's the difference between investigation automation and a knowledge base?</h3>
-<p>A knowledge base is static documentation. Investigation automation actively pulls current state from your systems—live logs, real-time configuration, actual API responses—specific to the customer's account and the moment they reported the issue. It's the difference between "here's how OAuth works in general" and "this customer's refresh token expired 6 hours ago and they haven't regenerated it."</p>
+<p>A knowledge base is static documentation. Investigation automation actively pulls current state from your systems - live logs, real-time configuration, actual API responses - specific to the customer's account and the moment they reported the issue. It's the difference between "here's how OAuth works in general" and "this customer's refresh token expired 6 hours ago and they haven't regenerated it."</p>
 </section>
 
 <p><strong>Book a demo at <a href="https://altorlab.com">altorlab.com</a></strong> to see how automated ticket investigation cuts MTTR without replacing your engineers.</p>

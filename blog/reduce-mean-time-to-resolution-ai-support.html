@@ -48,7 +48,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 <article>
 <div style="background:#0f2420;border:1px solid rgba(170,233,216,.18);border-radius:12px;padding:1rem 1.2rem;margin-bottom:1.4rem;">
   <strong style="font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:#c5ece2;">Quick answer</strong>
-  <p style="margin:.4rem 0 0;color:#d4e9e4;">To reduce MTTR: automate context collection before a human reads the ticket. 67% of resolution time is investigation, not fixing. Teams that collect logs, billing data, and deploy history automatically when a ticket opens see 30-60% MTTR reduction within 90 days — without changing their ticketing system.</p>
+  <p style="margin:.4rem 0 0;color:#d4e9e4;">To reduce MTTR: automate context collection before a human reads the ticket. 67% of resolution time is investigation, not fixing. Teams that collect logs, billing data, and deploy history automatically when a ticket opens see 30-60% MTTR reduction within 90 days  -  without changing their ticketing system.</p>
 </div>
 <h1>How to Reduce Mean Time to Resolution in Support: Why Faster Triage Matters More Than Faster Fixes</h1>
 
@@ -56,7 +56,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p>This explains why MTTR initiatives focused on "faster handoffs" or "better collaboration tools" routinely fail. The bottleneck isn't coordination. It's investigative overhead.</p>
 
-<p>Reducing mean time to resolution in support requires making the diagnosis phase shorter, not making engineers type faster. The teams with the lowest MTTR—sub-2-hour medians for P1 incidents—share a counterintuitive trait: they invest heavily in automating context gathering before a human ever reads the ticket.</p>
+<p>Reducing mean time to resolution in support requires making the diagnosis phase shorter, not making engineers type faster. The teams with the lowest MTTR - sub-2-hour medians for P1 incidents - share a counterintuitive trait: they invest heavily in automating context gathering before a human ever reads the ticket.</p>
 
 <h2>The Investigation Tax: Where MTTR Hours Actually Go</h2>
 
@@ -83,7 +83,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p>This isn't hypothetical. Netlify reduced MTTR for deployment failures by 58% after implementing automated log correlation that attached build logs, environment diffs, and recent config changes to every escalated ticket. Their engineers went from spending the first hour hunting context to reading a pre-built investigation summary.</p>
 
-<p>The same principle applies to authentication failures, data sync issues, performance degradations—any category where the answer exists in logs, configs, or system state. The question is whether a human has to manually assemble that picture or receives it automatically.</p>
+<p>The same principle applies to authentication failures, data sync issues, performance degradations - any category where the answer exists in logs, configs, or system state. The question is whether a human has to manually assemble that picture or receives it automatically.</p>
 
 <h2>Why Generic Ticket Enrichment Misses the Point</h2>
 
@@ -101,7 +101,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p>True. But query construction takes time, and most support engineers don't have the same command-line fluency as backend developers. A senior engineer can write a jq filter to extract failed webhook deliveries in 30 seconds. A support engineer with product knowledge but less terminal experience takes 15 minutes, or asks someone else.</p>
 
-<p>Stripe solved this by building internal tooling that lets support agents click "Show recent API errors for this account" and receive a formatted table—no CLI required. Their public case study on support tooling notes this reduced average investigation time for payment failures from 45 minutes to under 10.</p>
+<p>Stripe solved this by building internal tooling that lets support agents click "Show recent API errors for this account" and receive a formatted table - no CLI required. Their public case study on support tooling notes this reduced average investigation time for payment failures from 45 minutes to under 10.</p>
 
 <p>The pattern: make investigative queries one-click instead of ten-command.</p>
 
@@ -115,7 +115,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p><strong>Repeat investigation rate:</strong> Percentage of tickets where the same diagnostic steps were performed in a previous ticket for the same issue type. If engineers are manually checking the same five things every time a "sync failed" ticket arrives, that's automation opportunity.</p>
 
-<p>PagerDuty's support engineering team tracks "manual log pulls per incident" as a leading indicator. When that metric started climbing in Q2 2023, they knew their automated context pipelines had gaps—even though overall MTTR hadn't changed yet.</p>
+<p>PagerDuty's support engineering team tracks "manual log pulls per incident" as a leading indicator. When that metric started climbing in Q2 2023, they knew their automated context pipelines had gaps - even though overall MTTR hadn't changed yet.</p>
 
 <h2>Building Investigation Automation Without a Platform Rewrite</h2>
 
@@ -136,16 +136,16 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 <p>Teams that automate context gathering for their top 3-5 ticket categories typically see 30-40% MTTR reduction within 90 days for those specific categories. Overall MTTR drops 15-25% as those categories represent a disproportionate share of engineering time. Expecting 50%+ drops across all ticket types in the first quarter is unrealistic unless current processes are exceptionally manual.</p>
 
 <h3>Does faster MTTR reduce support quality or cause engineers to skip steps?</h3>
-<p>No, when the reduction comes from automated context collection rather than process shortcuts. Engineers still verify fixes and communicate with customers—they simply spend less time hunting logs. Quality metrics (resolution accuracy, reopened ticket rate) typically improve slightly because engineers have more complete information upfront and fewer context-switching errors.</p>
+<p>No, when the reduction comes from automated context collection rather than process shortcuts. Engineers still verify fixes and communicate with customers - they simply spend less time hunting logs. Quality metrics (resolution accuracy, reopened ticket rate) typically improve slightly because engineers have more complete information upfront and fewer context-switching errors.</p>
 
 <h3>Should support teams build investigation automation in-house or buy tools?</h3>
 <p>Depends on ticket volume and engineering capacity. Teams handling 500+ technical escalations monthly usually get ROI from purpose-built tooling. Smaller teams benefit from scripting common lookups and integrating with existing observability tools like Datadog or Sentry. The key is specificity: generic AI summarization tools won't compress investigation time the way targeted data retrieval does.</p>
 
 <h3>How do you prevent automated context from overwhelming engineers with irrelevant data?</h3>
-<p>Design retrieval to be problem-specific, not exhaustive. For an authentication error, pull auth logs and config—not every log line from the past week. Use progressive disclosure: show a summary with expansion options for deeper details. Netlify's approach shows the last deployment log by default, with a "Show previous 5 deployments" option. Most tickets need only the default view.</p>
+<p>Design retrieval to be problem-specific, not exhaustive. For an authentication error, pull auth logs and config - not every log line from the past week. Use progressive disclosure: show a summary with expansion options for deeper details. Netlify's approach shows the last deployment log by default, with a "Show previous 5 deployments" option. Most tickets need only the default view.</p>
 </section>
 
-<p>Reducing mean time to resolution starts with admitting where the hours actually go—and in technical support, they vanish into log diving, config checking, and piecing together timelines. Automate the investigation legwork, and resolution speed follows. <a href="https://altorlab.com">Book a demo</a> to see how AI-powered ticket investigation cuts diagnostic time for common integration and API issues.</p>
+<p>Reducing mean time to resolution starts with admitting where the hours actually go - and in technical support, they vanish into log diving, config checking, and piecing together timelines. Automate the investigation legwork, and resolution speed follows. <a href="https://altorlab.com">Book a demo</a> to see how AI-powered ticket investigation cuts diagnostic time for common integration and API issues.</p>
 </article>
 <footer style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #333; color: #888; font-size: 0.85rem;">
 Published March 31, 2026 · Auto-generated from search data

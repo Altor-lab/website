@@ -68,7 +68,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p><strong>Ticket text:</strong> "Getting intermittent 429 rate limit errors on /api/v2/metrics even though we're only sending 8k datapoints per minute. Our plan supports 50k/min. Started around 4am UTC. Using the Python SDK version 3.2.1."</p>
 
-<p>This ticket includes five technical signals that should bypass L1 entirely: a specific API endpoint, a rate limit discrepancy, a timeline suggesting a backend change, SDK version information, and quantified usage numbers. An L1 agent with a decision tree will ask the customer to verify their API key, check if they're hitting the right region, and confirm their plan limits — questions the customer already answered. Wasted time: 45 minutes minimum.</p>
+<p>This ticket includes five technical signals that should bypass L1 entirely: a specific API endpoint, a rate limit discrepancy, a timeline suggesting a backend change, SDK version information, and quantified usage numbers. An L1 agent with a decision tree will ask the customer to verify their API key, check if they're hitting the right region, and confirm their plan limits  -  questions the customer already answered. Wasted time: 45 minutes minimum.</p>
 
 <p>Route it to L2 immediately, and the ticket gets assigned to someone who can pull backend logs, compare the customer's actual request rate against their plan ceiling, spot that a recent deployment changed how SDK batching is counted, and either fix the metering bug or update the customer within 20 minutes.</p>
 
@@ -108,7 +108,7 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 
 <p>The goal isn't to eliminate L1. It's to make L1 genuinely useful for the issues they're equipped to handle and invisible for everything else. That requires both process changes and tooling.</p>
 
-<p>On the process side: codify tier-skipping rules as defaults, not exceptions. Make escalation metrics neutral — don't penalize L1 agents for escalating quickly when warranted. Measure tier effectiveness by resolution time and customer satisfaction, not deflection rate.</p>
+<p>On the process side: codify tier-skipping rules as defaults, not exceptions. Make escalation metrics neutral  -  don't penalize L1 agents for escalating quickly when warranted. Measure tier effectiveness by resolution time and customer satisfaction, not deflection rate.</p>
 
 <p>On the tooling side: invest in automated ticket investigation that extracts technical signal before a human ever sees it. If a ticket mentions an API endpoint, pull the last 50 requests from that customer to that endpoint. If it mentions an error code, surface every other ticket with that code in the last 30 days. Give L1 agents the context that lets them solve L1 problems instantly and escalate everything else without guessing.</p>
 
@@ -118,10 +118,10 @@ code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
 <h2>Frequently Asked Questions</h2>
 
 <h3>Can you run effective support without a tiered model?</h3>
-<p>Yes, if you're small enough. Teams under 5-6 support people often operate as a flat pod where everyone handles everything. That breaks down around 10-15 people when you need specialization. At scale, some form of tiering becomes necessary — the question is whether it's rigid or intelligent.</p>
+<p>Yes, if you're small enough. Teams under 5-6 support people often operate as a flat pod where everyone handles everything. That breaks down around 10-15 people when you need specialization. At scale, some form of tiering becomes necessary  -  the question is whether it's rigid or intelligent.</p>
 
 <h3>How do you prevent L2/L3 from getting overwhelmed if you route more tickets directly to them?</h3>
-<p>The math works because intelligent routing reduces total handle time dramatically. A ticket that would take L1 two days and L2 thirty minutes gets resolved in thirty minutes. You're not adding load to L2 — you're removing the L1 delay and duplicated effort. Volume to L2 increases, but total engineering hours decrease.</p>
+<p>The math works because intelligent routing reduces total handle time dramatically. A ticket that would take L1 two days and L2 thirty minutes gets resolved in thirty minutes. You're not adding load to L2  -  you're removing the L1 delay and duplicated effort. Volume to L2 increases, but total engineering hours decrease.</p>
 
 <h3>What's the right ratio of L1 to L2 to L3 headcount?</h3>
 <p>There's no universal ratio. It depends on product complexity, customer technical sophistication, and how much you've invested in self-service. Developer tools companies often run 1:1:1 or even inverted pyramids with more L2/L3 than L1. Consumer SaaS might run 10:3:1. The ratio is an output of your routing strategy, not an input.</p>
