@@ -187,8 +187,8 @@ export default function AIStackTracker() {
   return (
     <>
       <PageHead
-        title="AI Stack Tracker: See Which Tools 1,000+ B2B SaaS Companies Actually Use | Altor"
-        description="Which AI tools does Rippling use? Intercom? Scale AI? Search any B2B company and see their full stack — model APIs, orchestration, infra. Detected from job postings and public signals. Updated daily."
+        title="AI Stack Tracker — Search Any B2B Company's AI Tools (1,000+ Companies)"
+        description="What AI tools does Rippling use? Intercom? Stripe? Search any B2B company and see their real stack: model APIs, orchestration layers, infra, and internal tools. Detected from job postings and public signals. Free. Updated daily."
         slug="/ai-stack"
         datePublished="2026-04-16"
         dateModified={data?.meta?.generated_at?.slice(0, 10) ?? '2026-04-16'}
