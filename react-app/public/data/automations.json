@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-05-19T08:34:11.315451+00:00",
+    "generated_at": "2026-05-20T08:32:26.705111+00:00",
     "total_pages": 86,
     "workflows": 20,
     "tools": 8
@@ -3205,28 +3205,7 @@
         "pricing_model": "Free self-hosted. Cloud from $20/month.",
         "docs_url": "https://docs.n8n.io"
       },
-      "n8n_templates": [
-        {
-          "id": 10045,
-          "title": "AI Candidate Screening Pipeline: LinkedIn to Telegram with Gemini & Apify",
-          "url": "https://n8n.io/workflows/10045"
-        },
-        {
-          "id": 9435,
-          "title": "Resume Screening & Candidate Routing with OpenAI, Jotform, and Google Sheets",
-          "url": "https://n8n.io/workflows/9435"
-        },
-        {
-          "id": 10722,
-          "title": "Automate Resume Screening & Candidate Routing with Gemini AI and Google Sheets",
-          "url": "https://n8n.io/workflows/10722"
-        },
-        {
-          "id": 4481,
-          "title": "AI-Powered Candidate Screening and Evaluation Workflow using OpenAI and Airtable",
-          "url": "https://n8n.io/workflows/4481"
-        }
-      ],
+      "n8n_templates": [],
       "related_workflows": [
         "customer-support",
         "lead-qualification",
