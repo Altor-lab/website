@@ -199,17 +199,35 @@ export default function MCPServers() {
   useEffect(() => { setPage(1) }, [search, activeCategory, sort])
 
   const meta = data?.meta
+  const totalServersLabel = meta ? `${meta.total_servers.toLocaleString()}+` : '4,000+'
+  const itemListSchema = useMemo(() => {
+    if (!data?.servers?.length || !meta) return null
+    return {
+      '@type': 'ItemList',
+      name: 'MCP Server Directory',
+      description: `${meta.total_servers.toLocaleString()}+ MCP servers indexed from the official registry and GitHub`,
+      numberOfItems: meta.total_servers,
+      itemListElement: data.servers.slice(0, 10).map((server, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: server.name,
+        url: `https://altorlab.com/mcp-servers/${server.owner && server.repo ? `${server.owner}/${server.repo}` : server.id}`,
+        description: server.description || server.summary || '',
+      })),
+    }
+  }, [data, meta])
 
   return (
     <>
       <PageHead
-        title={`MCP Servers List — ${meta ? meta.total_servers.toLocaleString() + '+' : '4,000+'} Servers, Searchable by Category | Altor`}
-        description={`The most complete MCP servers list — ${meta ? meta.total_servers.toLocaleString() + '+' : '4,000+'} servers indexed daily from the official registry, GitHub, and community sources. Filter by category, search by name. Free.`}
+        title={`MCP Server Directory — ${totalServersLabel} Servers | Browse by Category, Language & Use Case`}
+        description="Every MCP server indexed: browse by category, language, and integration. Updated daily from the official registry and GitHub. Used by AI engineers building with Claude, Cursor, and Windsurf."
         slug="/mcp-servers"
         datePublished="2026-04-16"
         dateModified={meta?.generated_at?.slice(0, 10) ?? '2026-04-16'}
         schemaType="WebPage"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'MCP Server Directory', url: null }]}
+        itemListSchema={itemListSchema}
         extraSchema={meta ? {
           '@type': 'Dataset',
           '@id': 'https://altorlab.com/mcp-servers#dataset',

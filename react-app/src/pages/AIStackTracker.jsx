@@ -184,16 +184,34 @@ export default function AIStackTracker() {
     }
   }, [data])
 
+  const itemListSchema = useMemo(() => {
+    if (!companies.length) return null
+    return {
+      '@type': 'ItemList',
+      name: 'B2B AI Stack Database',
+      description: 'Real AI stack adoption data for 500+ B2B companies',
+      numberOfItems: companies.length,
+      itemListElement: companies.slice(0, 10).map((company, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: company.name,
+        url: `https://altorlab.com/ai-stack/${company.domain.replace(/\./g, '-')}`,
+        description: company.description || company.summary || '',
+      })),
+    }
+  }, [companies])
+
   return (
     <>
       <PageHead
-        title="AI Stack Tracker — Search Any B2B Company's Real AI Stack"
-        description="What AI tools does Rippling use? Intercom? Stripe? Search any B2B company and see their real stack: model APIs, orchestration layers, infra, and internal tools. Detected from job postings and public signals. Free. Updated daily."
+        title="B2B AI Stack Database — See Which Companies Use Codeium, Convex, ElevenLabs"
+        description="Search which B2B companies use specific AI tools. Adoption data for Codeium, Convex, ElevenLabs, Abnormal Security, and 500+ tools — sourced from job postings and public signals. Free."
         slug="/ai-stack"
         datePublished="2026-04-16"
         dateModified={data?.meta?.generated_at?.slice(0, 10) ?? '2026-04-16'}
         schemaType="WebPage"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'AI Stack Tracker', url: null }]}
+        itemListSchema={itemListSchema}
         extraSchema={data ? {
           '@type': 'Dataset',
           '@id': 'https://altorlab.com/ai-stack#dataset',

@@ -11,6 +11,7 @@ const PageHead = ({
   breadcrumbs,
   schemaType = 'Article',
   extraSchema,
+  itemListSchema,
 }) => {
   useEffect(() => {
     document.title = title
@@ -104,6 +105,10 @@ const PageHead = ({
       graph.push(...extras)
     }
 
+    if (itemListSchema) {
+      graph.push(itemListSchema)
+    }
+
     const jsonLd = {
       '@context': 'https://schema.org',
       '@graph': graph.length === 1 ? graph : graph,
@@ -122,7 +127,7 @@ const PageHead = ({
       const el = document.getElementById('page-jsonld')
       if (el) el.remove()
     }
-  }, [title, description, slug, datePublished, dateModified, breadcrumbs, schemaType, extraSchema])
+  }, [title, description, slug, datePublished, dateModified, breadcrumbs, schemaType, extraSchema, itemListSchema])
 
   return null
 }
