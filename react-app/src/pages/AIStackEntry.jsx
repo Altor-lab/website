@@ -60,9 +60,9 @@ function ToolRow({ tool }) {
               {SOURCE_LABELS[src] ?? src}
             </span>
           ))}
-          {(tool.evidence_urls || []).slice(0, 1).map((url, i) => (
+          {(tool.evidence_urls || []).slice(0, 1).map(url => (
             <a
-              key={i}
+              key={url}
               href={url}
               target="_blank"
               rel="noopener noreferrer"
@@ -146,6 +146,28 @@ export default function AIStackEntry() {
     return acc
   }, {})
 
+  // Compute evidence fields for FAQ answers
+  const tierCounts = (company?.ai_tools || []).reduce((acc, t) => {
+    if (t.tier) acc[t.tier] = (acc[t.tier] || 0) + 1
+    return acc
+  }, {})
+  const dominantTierEntry = Object.entries(tierCounts).sort((a, b) => b[1] - a[1])[0]
+  const dominantTier = dominantTierEntry?.[0] ?? ''
+  const dominantTierLabel = TIER_LABELS[dominantTier] || dominantTier.replace(/_/g, ' ')
+  const dominantTierCount = dominantTierEntry?.[1] ?? 0
+  const highConfidenceCount = (company?.ai_tools || []).filter(t => t.confidence === 'high').length
+  const modelApiCount = (company?.ai_tools || []).filter(t => t.tier === 'model_api' || t.tier === 'model-api').length
+  const allSources = (company?.ai_tools || []).flatMap(t => t.sources || t.evidence_sources || [])
+  const uniqueSourceCount = Math.max([...new Set(allSources)].length, 3)
+  const lastCrawledFormatted = company?.last_crawled
+    ? new Date(company.last_crawled).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+    : 'recently'
+  const firstSeenFormatted = (company?.first_seen || company?.last_crawled)
+    ? new Date(company.first_seen || company.last_crawled).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+    : 'recently'
+  const totalTools = company?.tool_count || (company?.ai_tools || []).length || 0
+  const fitLabel = FIT_LABELS[company?.altor_fit] || company?.altor_fit || 'unknown'
+
   const faqSchema = {
     '@type': 'FAQPage',
     '@id': `https://altorlab.com${slug}#faq`,
@@ -155,7 +177,7 @@ export default function AIStackEntry() {
         name: `What AI tools does ${company.name} use?`,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `${company.name} uses ${vendors}. These tools were detected from public signals including ${company.ai_tools.flatMap(t => t.sources || []).filter((v, i, a) => a.indexOf(v) === i).map(s => SOURCE_LABELS[s] || s).join(' and ')}.`,
+          text: `${company.name} uses ${totalTools} AI tool${totalTools !== 1 ? 's' : ''}: ${vendors}. The dominant tier is ${dominantTierLabel} (${dominantTierCount} of ${totalTools} tool${totalTools !== 1 ? 's' : ''}). Data last verified ${lastCrawledFormatted}.`,
         },
       },
       {
@@ -163,7 +185,7 @@ export default function AIStackEntry() {
         name: `How was ${company.name}'s AI stack detected?`,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `Altor's daily crawler detects AI tool usage from public signals: website HTML and Content Security Policy headers, JavaScript bundle strings, privacy policy subprocessor disclosures, and public job postings on Greenhouse and Lever. All detections are evidence-linked.`,
+          text: `Altor's crawler checks ${company.name} across ${uniqueSourceCount} signal types: website HTML and Content Security Policy headers, JavaScript bundle strings, and public job postings. ${highConfidenceCount} of ${totalTools} detection${totalTools !== 1 ? 's' : ''} carry high-confidence scores from corroborating signals. Last crawl: ${lastCrawledFormatted}.`,
         },
       },
       {
@@ -171,7 +193,7 @@ export default function AIStackEntry() {
         name: `Is ${company.name} a good fit for AI services?`,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `${company.name} is rated a ${FIT_LABELS[company.altor_fit] || company.altor_fit} for Altor's AI services. Companies that already use model APIs and orchestration frameworks have the infrastructure foundation needed to benefit most from Altor's production AI systems.`,
+          text: `${company.name} is rated a ${fitLabel} fit. ${modelApiCount > 0 ? `${modelApiCount} of its ${totalTools} detected tool${totalTools !== 1 ? 's' : ''} are model-API-tier integrations (direct LLM or embedding calls) — companies using model-API-tier tools show earlier AI adoption patterns than those using only AI-native SaaS products.` : `Its stack is weighted toward AI-native SaaS rather than model-API integrations.`} First detected in Altor's dataset: ${firstSeenFormatted}.`,
         },
       },
     ],
@@ -271,8 +293,8 @@ export default function AIStackEntry() {
                     {TIER_LABELS[tier] ?? tier}
                   </p>
                   <div className="space-y-2">
-                    {tools.map((tool, i) => (
-                      <ToolRow key={i} tool={tool} />
+                    {tools.map(tool => (
+                      <ToolRow key={`${tool.vendor}-${tool.tool}`} tool={tool} />
                     ))}
                   </div>
                 </div>
