@@ -204,8 +204,8 @@ export default function AIStackTracker() {
   return (
     <>
       <PageHead
-        title="B2B AI Stack Database — See Which Companies Use Codeium, Convex, ElevenLabs"
-        description="Search which B2B companies use specific AI tools. Adoption data for Codeium, Convex, ElevenLabs, Abnormal Security, and 500+ tools — sourced from job postings and public signals. Free."
+        title="AI Stack Intelligence — Which AI Tools Are 500+ B2B Companies Running in Production"
+        description="Daily-updated database of AI tools deployed at 500+ B2B SaaS and developer tool companies. See model APIs, orchestration layers, vector infra, and internal tooling — with confidence scores and evidence. Free."
         slug="/ai-stack"
         datePublished="2026-04-16"
         dateModified={data?.meta?.generated_at?.slice(0, 10) ?? '2026-04-16'}
