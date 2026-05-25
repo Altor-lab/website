@@ -1,0 +1,3429 @@
+<!DOCTYPE html><html lang="en-US"><head>
+  <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="geo.region" content="US">
+  <meta name="geo.placename" content="United States">
+
+  <!-- Font preloads -->
+  <link rel="preload" href="https://cdn.fontshare.com/wf/AKDKUQ3OWZPFQKXQRHAHXGRWHYCM/FQLH7IVHXTIHQD3JC5ABLLCMKABVDXCV/SPHBNXN7HTNHVK6VCKZF7GQ6GQLCCBMP.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="https://cdn.fontshare.com/wf/AKDKUQ3OWZPFQKXQRHAHXGRWHYCM/4BMQSQPYMXUHEVZRPEXGPWTQKXFN6AGD/LLHNCVZXW5CNZWUXDNFQVGCM2U4QW5C3.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+
+  <!-- PWA / Touch -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Primary Meta Tags -->
+  <title>Support Operations Glossary | Altor</title>
+  <meta name="title" content="Support Operations Glossary | Altor">
+  <meta name="description" content="Definitions for B2B support operations metrics, workflows, and investigation terms used by technical support teams.">
+  <meta name="keywords" content="AI services company, enterprise AI systems, production AI deployment, AI workflow automation, forward deployment AI, B2B AI services">
+  <meta name="author" content="Altor">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://altorlab.com/glossary">
+  <meta property="og:title" content="Support Operations Glossary | Altor">
+  <meta property="og:description" content="Definitions for B2B support operations metrics, workflows, and investigation terms used by technical support teams.">
+  <meta property="og:image" content="https://altorlab.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Altor — AI Services Company">
+  <meta property="og:site_name" content="Altor">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://altorlab.com/">
+  <meta name="twitter:title" content="Support Operations Glossary | Altor">
+  <meta name="twitter:description" content="Definitions for B2B support operations metrics, workflows, and investigation terms used by technical support teams.">
+  <meta name="twitter:image" content="https://altorlab.com/og-image.png">
+  <meta name="twitter:image:alt" content="Altor — AI Services Company">
+
+  <!-- Additional SEO -->
+  <link rel="canonical" href="https://altorlab.com/glossary">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="theme-color" content="#f6f1eb">
+
+  <!-- Search engine verification -->
+  <meta name="google-site-verification" content="sbIlPR3T4ByBpSwLWtKfdWEtHBMnbzzQgUvPIIIN7AQ">
+  <meta name="msvalidate.01" content="4D9D624E57D9B0F20ED25305B5DA1644">
+
+  <!-- Plausible Analytics — privacy-friendly, no cookies, ~1KB -->
+  <script defer="" data-domain="altorlab.com" src="https://plausible.io/js/script.js"></script>
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Altor",
+    "url": "https://altorlab.com",
+    "description": "Altor is an AI services company. We build and deploy production AI systems that rearchitect high-cost manual workflows for US enterprises.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": { "@type": "EntryPoint", "urlTemplate": "https://altorlab.com/?q={search_term_string}" },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Altor",
+    "url": "https://altorlab.com",
+    "logo": "https://altorlab.com/favicon.svg",
+    "description": "Altor is an AI services company. We build and deploy production AI systems that rearchitect high-cost manual workflows for US enterprises — live in 3 weeks, not months.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "anshul@altorlab.com",
+      "contactType": "sales"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/ansh27/"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an AI services company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An AI services company builds, deploys, and operates production AI systems for businesses. Unlike AI consultants (who produce strategy documents) or AI implementors (who hand off at launch), an AI services company stays accountable for the system working and improving over time. Altor builds AI systems that connect to your production tools and automate specific workflows — live in 3 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost to build an AI agent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Custom AI agent development costs $10K–$75K for a single-workflow production deployment, plus $1K–$5K/month for ongoing maintenance. A simple agent connecting to 1-2 systems costs $10K–$25K. A complex agent connecting to 5-6 production systems costs $40K–$75K. Most deployments go live within 3 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there software that can reduce support escalations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Software that automatically investigates support tickets by querying production systems (logs, bug trackers, billing, recent deploys) gives frontline agents the context they need to resolve tickets without escalating. At Portkey, this approach reduced investigation time from 45 minutes to 2 minutes and eliminated the information gap that causes most escalations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does AI deployment take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A focused single-workflow AI deployment typically takes 2-4 weeks from kickoff to first live investigation. Week 1: stack audit and integration planning. Week 2: read-only connections live, first investigations on real data. Weeks 3-4: playbooks tuned, team trained, system handed over."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is production AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Production AI is an AI system that operates continuously in a live business environment, handling real data and real users — held to the same reliability standards as any other production software. This is different from pilot AI (which runs in controlled environments) or demo AI (which shows capability without handling real workflows). 67% of enterprise AI projects fail to reach production."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: ProfessionalService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Altor",
+    "url": "https://altorlab.com",
+    "description": "AI services company building and deploying production AI systems for US enterprises. Forward-deployed engagements. Live in 3 weeks.",
+    "areaServed": { "@type": "Country", "name": "United States" },
+    "priceRange": "$$$$",
+    "serviceType": ["AI System Design", "AI System Deployment", "Enterprise AI Services", "Production AI Engineering"]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is Altor different from a docs chatbot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Docs chatbots answer 'how does this work?' from your knowledge base. Altor answers 'why is this broken for this customer right now?' by querying their actual API logs, checking your bug tracker, and verifying their billing status — across 6+ systems in under 2 minutes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Altor different from our support platform?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pylon, Plain, Zendesk — they route and manage tickets. Altor investigates them. We plug into your existing support tool as the investigation layer. You keep your workflows, we add the diagnosis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will Altor take actions without asking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not by default. Altor starts as a read-only investigator — it surfaces a diagnosis for your team to review. You control which action types graduate to auto-approval. Destructive actions are never automated."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if our stack isn't listed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If an API exists for your system, we can integrate it. The architecture composes tools — it doesn't hardcode connectors. We've yet to encounter a B2B stack we can't connect to."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does Altor pricing look like?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usage-based — you pay per investigation, not per seat. Pricing is quoted in USD ($) with no minimum commitment. We'll scope pricing during the demo based on your ticket volume and systems."
+        }
+      }
+    ]
+  }
+  </script>
+<style type="text/css" data-vite-dev-id="/Users/anshul/work/altorlab-com/react-app/src/index.css">@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://cdn.fontshare.com/wf/AKDKUQ3OWZPFQKXQRHAHXGRWHYCM/FQLH7IVHXTIHQD3JC5ABLLCMKABVDXCV/SPHBNXN7HTNHVK6VCKZF7GQ6GQLCCBMP.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://cdn.fontshare.com/wf/AKDKUQ3OWZPFQKXQRHAHXGRWHYCM/4BMQSQPYMXUHEVZRPEXGPWTQKXFN6AGD/LLHNCVZXW5CNZWUXDNFQVGCM2U4QW5C3.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+
+*, ::before, ::after{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+/*
+! tailwindcss v3.4.18 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: Geist, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: JetBrains Mono, SF Mono, Consolas, monospace; /* 1 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+html { scroll-behavior: smooth; }
+
+body{
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 241 235 / var(--tw-bg-opacity, 1));
+  font-family: Geist, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
+  --tw-text-opacity: 1;
+  color: rgb(26 26 26 / var(--tw-text-opacity, 1));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::-moz-selection { background: rgba(26,107,90,0.14); color: #1a1a1a; }
+
+::selection { background: rgba(26,107,90,0.14); color: #1a1a1a; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+.pointer-events-none{
+  pointer-events: none;
+}
+
+.visible{
+  visibility: visible;
+}
+
+.invisible{
+  visibility: hidden;
+}
+
+.collapse{
+  visibility: collapse;
+}
+
+.static{
+  position: static;
+}
+
+.fixed{
+  position: fixed;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.sticky{
+  position: sticky;
+}
+
+.inset-0{
+  inset: 0px;
+}
+
+.inset-x-0{
+  left: 0px;
+  right: 0px;
+}
+
+.top-0{
+  top: 0px;
+}
+
+.top-10{
+  top: 2.5rem;
+}
+
+.top-24{
+  top: 6rem;
+}
+
+.isolate{
+  isolation: isolate;
+}
+
+.z-10{
+  z-index: 10;
+}
+
+.z-40{
+  z-index: 40;
+}
+
+.z-50{
+  z-index: 50;
+}
+
+.-mx-4{
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.mx-2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-6{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.-mr-2{
+  margin-right: -0.5rem;
+}
+
+.mb-0\.5{
+  margin-bottom: 0.125rem;
+}
+
+.mb-1{
+  margin-bottom: 0.25rem;
+}
+
+.mb-1\.5{
+  margin-bottom: 0.375rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
+.mb-12{
+  margin-bottom: 3rem;
+}
+
+.mb-14{
+  margin-bottom: 3.5rem;
+}
+
+.mb-16{
+  margin-bottom: 4rem;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
+.mb-2\.5{
+  margin-bottom: 0.625rem;
+}
+
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
+.mb-7{
+  margin-bottom: 1.75rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
+}
+
+.ml-1{
+  margin-left: 0.25rem;
+}
+
+.ml-2{
+  margin-left: 0.5rem;
+}
+
+.ml-auto{
+  margin-left: auto;
+}
+
+.mt-0\.5{
+  margin-top: 0.125rem;
+}
+
+.mt-1{
+  margin-top: 0.25rem;
+}
+
+.mt-1\.5{
+  margin-top: 0.375rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.mt-12{
+  margin-top: 3rem;
+}
+
+.mt-16{
+  margin-top: 4rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.mt-3{
+  margin-top: 0.75rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mt-5{
+  margin-top: 1.25rem;
+}
+
+.mt-6{
+  margin-top: 1.5rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
+}
+
+.mt-\[1px\]{
+  margin-top: 1px;
+}
+
+.mt-\[2px\]{
+  margin-top: 2px;
+}
+
+.mt-auto{
+  margin-top: auto;
+}
+
+.line-clamp-1{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.block{
+  display: block;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.inline{
+  display: inline;
+}
+
+.flex{
+  display: flex;
+}
+
+.inline-flex{
+  display: inline-flex;
+}
+
+.table{
+  display: table;
+}
+
+.grid{
+  display: grid;
+}
+
+.hidden{
+  display: none;
+}
+
+.h-1\.5{
+  height: 0.375rem;
+}
+
+.h-10{
+  height: 2.5rem;
+}
+
+.h-14{
+  height: 3.5rem;
+}
+
+.h-16{
+  height: 4rem;
+}
+
+.h-2{
+  height: 0.5rem;
+}
+
+.h-3{
+  height: 0.75rem;
+}
+
+.h-4{
+  height: 1rem;
+}
+
+.h-5{
+  height: 1.25rem;
+}
+
+.h-6{
+  height: 1.5rem;
+}
+
+.h-7{
+  height: 1.75rem;
+}
+
+.h-8{
+  height: 2rem;
+}
+
+.h-fit{
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.h-px{
+  height: 1px;
+}
+
+.min-h-10{
+  min-height: 2.5rem;
+}
+
+.min-h-\[44px\]{
+  min-height: 44px;
+}
+
+.min-h-\[48px\]{
+  min-height: 48px;
+}
+
+.min-h-screen{
+  min-height: 100vh;
+}
+
+.w-1\.5{
+  width: 0.375rem;
+}
+
+.w-1\/2{
+  width: 50%;
+}
+
+.w-1\/3{
+  width: 33.333333%;
+}
+
+.w-1\/4{
+  width: 25%;
+}
+
+.w-16{
+  width: 4rem;
+}
+
+.w-2{
+  width: 0.5rem;
+}
+
+.w-2\/3{
+  width: 66.666667%;
+}
+
+.w-20{
+  width: 5rem;
+}
+
+.w-3\/4{
+  width: 75%;
+}
+
+.w-4\/5{
+  width: 80%;
+}
+
+.w-5\/6{
+  width: 83.333333%;
+}
+
+.w-6{
+  width: 1.5rem;
+}
+
+.w-7{
+  width: 1.75rem;
+}
+
+.w-\[160px\]{
+  width: 160px;
+}
+
+.w-\[18px\]{
+  width: 18px;
+}
+
+.w-full{
+  width: 100%;
+}
+
+.w-px{
+  width: 1px;
+}
+
+.min-w-0{
+  min-width: 0px;
+}
+
+.min-w-\[100px\]{
+  min-width: 100px;
+}
+
+.min-w-\[44px\]{
+  min-width: 44px;
+}
+
+.max-w-2xl{
+  max-width: 42rem;
+}
+
+.max-w-3xl{
+  max-width: 48rem;
+}
+
+.max-w-4xl{
+  max-width: 56rem;
+}
+
+.max-w-5xl{
+  max-width: 64rem;
+}
+
+.max-w-6xl{
+  max-width: 72rem;
+}
+
+.max-w-\[1080px\]{
+  max-width: 1080px;
+}
+
+.max-w-\[1120px\]{
+  max-width: 1120px;
+}
+
+.max-w-\[160px\]{
+  max-width: 160px;
+}
+
+.max-w-\[16ch\]{
+  max-width: 16ch;
+}
+
+.max-w-\[180px\]{
+  max-width: 180px;
+}
+
+.max-w-\[18ch\]{
+  max-width: 18ch;
+}
+
+.max-w-\[200px\]{
+  max-width: 200px;
+}
+
+.max-w-\[20ch\]{
+  max-width: 20ch;
+}
+
+.max-w-\[24ch\]{
+  max-width: 24ch;
+}
+
+.max-w-\[28ch\]{
+  max-width: 28ch;
+}
+
+.max-w-\[38rem\]{
+  max-width: 38rem;
+}
+
+.max-w-\[44ch\]{
+  max-width: 44ch;
+}
+
+.max-w-\[480px\]{
+  max-width: 480px;
+}
+
+.max-w-\[48ch\]{
+  max-width: 48ch;
+}
+
+.max-w-\[50ch\]{
+  max-width: 50ch;
+}
+
+.max-w-\[520px\]{
+  max-width: 520px;
+}
+
+.max-w-\[52ch\]{
+  max-width: 52ch;
+}
+
+.max-w-\[56ch\]{
+  max-width: 56ch;
+}
+
+.max-w-\[580px\]{
+  max-width: 580px;
+}
+
+.max-w-\[60ch\]{
+  max-width: 60ch;
+}
+
+.max-w-\[640px\]{
+  max-width: 640px;
+}
+
+.max-w-\[64ch\]{
+  max-width: 64ch;
+}
+
+.max-w-\[680px\]{
+  max-width: 680px;
+}
+
+.max-w-\[700px\]{
+  max-width: 700px;
+}
+
+.max-w-\[720px\]{
+  max-width: 720px;
+}
+
+.max-w-\[760px\]{
+  max-width: 760px;
+}
+
+.max-w-\[820px\]{
+  max-width: 820px;
+}
+
+.max-w-\[960px\]{
+  max-width: 960px;
+}
+
+.max-w-md{
+  max-width: 28rem;
+}
+
+.flex-1{
+  flex: 1 1 0%;
+}
+
+.flex-shrink-0{
+  flex-shrink: 0;
+}
+
+.shrink{
+  flex-shrink: 1;
+}
+
+.shrink-0{
+  flex-shrink: 0;
+}
+
+.flex-grow{
+  flex-grow: 1;
+}
+
+.grow{
+  flex-grow: 1;
+}
+
+.border-collapse{
+  border-collapse: collapse;
+}
+
+.origin-center{
+  transform-origin: center;
+}
+
+.rotate-45{
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes pulse{
+
+  50%{
+    opacity: .5;
+  }
+}
+
+.animate-pulse{
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.list-inside{
+  list-style-position: inside;
+}
+
+.list-outside{
+  list-style-position: outside;
+}
+
+.list-decimal{
+  list-style-type: decimal;
+}
+
+.list-none{
+  list-style-type: none;
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.items-start{
+  align-items: flex-start;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.items-baseline{
+  align-items: baseline;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.gap-0{
+  gap: 0px;
+}
+
+.gap-0\.5{
+  gap: 0.125rem;
+}
+
+.gap-1{
+  gap: 0.25rem;
+}
+
+.gap-1\.5{
+  gap: 0.375rem;
+}
+
+.gap-10{
+  gap: 2.5rem;
+}
+
+.gap-14{
+  gap: 3.5rem;
+}
+
+.gap-2{
+  gap: 0.5rem;
+}
+
+.gap-2\.5{
+  gap: 0.625rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
+}
+
+.gap-3\.5{
+  gap: 0.875rem;
+}
+
+.gap-4{
+  gap: 1rem;
+}
+
+.gap-5{
+  gap: 1.25rem;
+}
+
+.gap-6{
+  gap: 1.5rem;
+}
+
+.gap-7{
+  gap: 1.75rem;
+}
+
+.gap-8{
+  gap: 2rem;
+}
+
+.gap-\[5px\]{
+  gap: 5px;
+}
+
+.gap-px{
+  gap: 1px;
+}
+
+.gap-x-6{
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
+.gap-y-2{
+  row-gap: 0.5rem;
+}
+
+.space-y-0 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0px * var(--tw-space-y-reverse));
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));
+}
+
+.space-y-10 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.625rem * var(--tw-space-y-reverse));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.divide-y > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+}
+
+.divide-edge > :not([hidden]) ~ :not([hidden]){
+  border-color: rgba(0,0,0,0.10);
+}
+
+.self-end{
+  align-self: flex-end;
+}
+
+.self-center{
+  align-self: center;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.overflow-x-auto{
+  overflow-x: auto;
+}
+
+.truncate{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.whitespace-nowrap{
+  white-space: nowrap;
+}
+
+.whitespace-pre-wrap{
+  white-space: pre-wrap;
+}
+
+.text-balance{
+  text-wrap: balance;
+}
+
+.text-pretty{
+  text-wrap: pretty;
+}
+
+.break-all{
+  word-break: break-all;
+}
+
+.rounded{
+  border-radius: 0.25rem;
+}
+
+.rounded-2xl{
+  border-radius: 1rem;
+}
+
+.rounded-full{
+  border-radius: 9999px;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
+.rounded-xl{
+  border-radius: 0.75rem;
+}
+
+.border{
+  border-width: 1px;
+}
+
+.border-y{
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.border-b{
+  border-bottom-width: 1px;
+}
+
+.border-l-2{
+  border-left-width: 2px;
+}
+
+.border-t{
+  border-top-width: 1px;
+}
+
+.border-t-2{
+  border-top-width: 2px;
+}
+
+.border-dashed{
+  border-style: dashed;
+}
+
+.border-\[rgba\(255\2c 255\2c 255\2c 0\.06\)\]{
+  border-color: rgba(255,255,255,0.06);
+}
+
+.border-accent\/15{
+  border-color: rgb(26 107 90 / 0.15);
+}
+
+.border-accent\/20{
+  border-color: rgb(26 107 90 / 0.2);
+}
+
+.border-accent\/25{
+  border-color: rgb(26 107 90 / 0.25);
+}
+
+.border-accent\/30{
+  border-color: rgb(26 107 90 / 0.3);
+}
+
+.border-amber-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(253 230 138 / var(--tw-border-opacity, 1));
+}
+
+.border-blue-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(191 219 254 / var(--tw-border-opacity, 1));
+}
+
+.border-edge{
+  border-color: rgba(0,0,0,0.10);
+}
+
+.border-edge-subtle{
+  border-color: rgba(0,0,0,0.06);
+}
+
+.border-emerald-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(167 243 208 / var(--tw-border-opacity, 1));
+}
+
+.border-fuchsia-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(245 208 254 / var(--tw-border-opacity, 1));
+}
+
+.border-green-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(187 247 208 / var(--tw-border-opacity, 1));
+}
+
+.border-indigo-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(199 210 254 / var(--tw-border-opacity, 1));
+}
+
+.border-lime-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(217 249 157 / var(--tw-border-opacity, 1));
+}
+
+.border-orange-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(254 215 170 / var(--tw-border-opacity, 1));
+}
+
+.border-pink-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(251 207 232 / var(--tw-border-opacity, 1));
+}
+
+.border-red-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(254 202 202 / var(--tw-border-opacity, 1));
+}
+
+.border-sky-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(186 230 253 / var(--tw-border-opacity, 1));
+}
+
+.border-teal-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(153 246 228 / var(--tw-border-opacity, 1));
+}
+
+.border-violet-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(221 214 254 / var(--tw-border-opacity, 1));
+}
+
+.border-zinc-100{
+  --tw-border-opacity: 1;
+  border-color: rgb(244 244 245 / var(--tw-border-opacity, 1));
+}
+
+.border-zinc-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(228 228 231 / var(--tw-border-opacity, 1));
+}
+
+.bg-accent{
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 107 90 / var(--tw-bg-opacity, 1));
+}
+
+.bg-accent\/60{
+  background-color: rgb(26 107 90 / 0.6);
+}
+
+.bg-accent\/\[0\.02\]{
+  background-color: rgb(26 107 90 / 0.02);
+}
+
+.bg-accent\/\[0\.03\]{
+  background-color: rgb(26 107 90 / 0.03);
+}
+
+.bg-accent\/\[0\.06\]{
+  background-color: rgb(26 107 90 / 0.06);
+}
+
+.bg-accent\/\[0\.08\]{
+  background-color: rgb(26 107 90 / 0.08);
+}
+
+.bg-amber-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 243 199 / var(--tw-bg-opacity, 1));
+}
+
+.bg-amber-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 191 36 / var(--tw-bg-opacity, 1));
+}
+
+.bg-amber-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 251 235 / var(--tw-bg-opacity, 1));
+}
+
+.bg-blue-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 246 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-current{
+  background-color: currentColor;
+}
+
+.bg-edge{
+  background-color: rgba(0,0,0,0.10);
+}
+
+.bg-emerald-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 253 245 / var(--tw-bg-opacity, 1));
+}
+
+.bg-emerald-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1));
+}
+
+.bg-fg{
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 26 26 / var(--tw-bg-opacity, 1));
+}
+
+.bg-fuchsia-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 244 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-green-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 253 244 / var(--tw-bg-opacity, 1));
+}
+
+.bg-indigo-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 242 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-lime-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 254 231 / var(--tw-bg-opacity, 1));
+}
+
+.bg-orange-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 247 237 / var(--tw-bg-opacity, 1));
+}
+
+.bg-pink-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 242 248 / var(--tw-bg-opacity, 1));
+}
+
+.bg-red-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 242 242 / var(--tw-bg-opacity, 1));
+}
+
+.bg-sky-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 249 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-surface-0{
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 241 235 / var(--tw-bg-opacity, 1));
+}
+
+.bg-surface-0\/80{
+  background-color: rgb(246 241 235 / 0.8);
+}
+
+.bg-surface-0\/95{
+  background-color: rgb(246 241 235 / 0.95);
+}
+
+.bg-surface-1{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-surface-1\/50{
+  background-color: rgb(255 255 255 / 0.5);
+}
+
+.bg-surface-1\/95{
+  background-color: rgb(255 255 255 / 0.95);
+}
+
+.bg-teal-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 253 250 / var(--tw-bg-opacity, 1));
+}
+
+.bg-violet-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 243 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-zinc-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1));
+}
+
+.bg-zinc-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gradient-to-b{
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-br{
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.from-accent\/\[0\.03\]{
+  --tw-gradient-from: rgb(26 107 90 / 0.03) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(26 107 90 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-accent\/\[0\.04\]{
+  --tw-gradient-from: rgb(26 107 90 / 0.04) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(26 107 90 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-transparent{
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
+}
+
+.p-3\.5{
+  padding: 0.875rem;
+}
+
+.p-4{
+  padding: 1rem;
+}
+
+.p-5{
+  padding: 1.25rem;
+}
+
+.p-6{
+  padding: 1.5rem;
+}
+
+.p-7{
+  padding: 1.75rem;
+}
+
+.p-8{
+  padding: 2rem;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-1\.5{
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-2\.5{
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-0\.5{
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-1\.5{
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-12{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.py-14{
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.py-16{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-2\.5{
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-24{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-3\.5{
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pb-1{
+  padding-bottom: 0.25rem;
+}
+
+.pb-12{
+  padding-bottom: 3rem;
+}
+
+.pb-16{
+  padding-bottom: 4rem;
+}
+
+.pb-20{
+  padding-bottom: 5rem;
+}
+
+.pb-24{
+  padding-bottom: 6rem;
+}
+
+.pb-4{
+  padding-bottom: 1rem;
+}
+
+.pb-5{
+  padding-bottom: 1.25rem;
+}
+
+.pl-1{
+  padding-left: 0.25rem;
+}
+
+.pl-3{
+  padding-left: 0.75rem;
+}
+
+.pl-5{
+  padding-left: 1.25rem;
+}
+
+.pl-6{
+  padding-left: 1.5rem;
+}
+
+.pl-\[0\.1rem\]{
+  padding-left: 0.1rem;
+}
+
+.pr-6{
+  padding-right: 1.5rem;
+}
+
+.pt-0\.5{
+  padding-top: 0.125rem;
+}
+
+.pt-1{
+  padding-top: 0.25rem;
+}
+
+.pt-28{
+  padding-top: 7rem;
+}
+
+.pt-3{
+  padding-top: 0.75rem;
+}
+
+.pt-32{
+  padding-top: 8rem;
+}
+
+.pt-4{
+  padding-top: 1rem;
+}
+
+.pt-6{
+  padding-top: 1.5rem;
+}
+
+.pt-8{
+  padding-top: 2rem;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.font-display{
+  font-family: Satoshi, system-ui, sans-serif;
+}
+
+.font-mono{
+  font-family: JetBrains Mono, SF Mono, Consolas, monospace;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-\[0\.6875rem\]{
+  font-size: 0.6875rem;
+}
+
+.text-\[0\.75rem\]{
+  font-size: 0.75rem;
+}
+
+.text-\[0\.7rem\]{
+  font-size: 0.7rem;
+}
+
+.text-\[0\.8125rem\]{
+  font-size: 0.8125rem;
+}
+
+.text-\[0\.875rem\]{
+  font-size: 0.875rem;
+}
+
+.text-\[0\.8rem\]{
+  font-size: 0.8rem;
+}
+
+.text-\[0\.9375rem\]{
+  font-size: 0.9375rem;
+}
+
+.text-\[1\.0625rem\]{
+  font-size: 1.0625rem;
+}
+
+.text-\[1\.125rem\]{
+  font-size: 1.125rem;
+}
+
+.text-\[1\.25rem\]{
+  font-size: 1.25rem;
+}
+
+.text-\[1\.375rem\]{
+  font-size: 1.375rem;
+}
+
+.text-\[1\.5rem\]{
+  font-size: 1.5rem;
+}
+
+.text-\[1\.75rem\]{
+  font-size: 1.75rem;
+}
+
+.text-\[1rem\]{
+  font-size: 1rem;
+}
+
+.text-\[2rem\]{
+  font-size: 2rem;
+}
+
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-black{
+  font-weight: 900;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
+.font-light{
+  font-weight: 300;
+}
+
+.font-medium{
+  font-weight: 500;
+}
+
+.font-semibold{
+  font-weight: 600;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.capitalize{
+  text-transform: capitalize;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.not-italic{
+  font-style: normal;
+}
+
+.tabular-nums{
+  --tw-numeric-spacing: tabular-nums;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
+}
+
+.leading-\[1\.04\]{
+  line-height: 1.04;
+}
+
+.leading-\[1\.06\]{
+  line-height: 1.06;
+}
+
+.leading-\[1\.08\]{
+  line-height: 1.08;
+}
+
+.leading-\[1\.15\]{
+  line-height: 1.15;
+}
+
+.leading-\[1\.1\]{
+  line-height: 1.1;
+}
+
+.leading-\[1\.2\]{
+  line-height: 1.2;
+}
+
+.leading-\[1\.3\]{
+  line-height: 1.3;
+}
+
+.leading-\[1\.4\]{
+  line-height: 1.4;
+}
+
+.leading-\[1\.5\]{
+  line-height: 1.5;
+}
+
+.leading-\[1\.65\]{
+  line-height: 1.65;
+}
+
+.leading-\[1\.6\]{
+  line-height: 1.6;
+}
+
+.leading-\[1\.75\]{
+  line-height: 1.75;
+}
+
+.leading-\[1\.7\]{
+  line-height: 1.7;
+}
+
+.leading-none{
+  line-height: 1;
+}
+
+.leading-relaxed{
+  line-height: 1.625;
+}
+
+.leading-snug{
+  line-height: 1.375;
+}
+
+.tracking-\[-0\.01em\]{
+  letter-spacing: -0.01em;
+}
+
+.tracking-\[-0\.025em\]{
+  letter-spacing: -0.025em;
+}
+
+.tracking-\[-0\.02em\]{
+  letter-spacing: -0.02em;
+}
+
+.tracking-\[-0\.03em\]{
+  letter-spacing: -0.03em;
+}
+
+.tracking-\[-0\.04em\]{
+  letter-spacing: -0.04em;
+}
+
+.tracking-\[0\.04em\]{
+  letter-spacing: 0.04em;
+}
+
+.tracking-\[0\.05em\]{
+  letter-spacing: 0.05em;
+}
+
+.tracking-\[0\.06em\]{
+  letter-spacing: 0.06em;
+}
+
+.tracking-\[0\.12em\]{
+  letter-spacing: 0.12em;
+}
+
+.tracking-\[0\.1em\]{
+  letter-spacing: 0.1em;
+}
+
+.tracking-tight{
+  letter-spacing: -0.025em;
+}
+
+.text-\[\#34d399\]{
+  --tw-text-opacity: 1;
+  color: rgb(52 211 153 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#5cb8a5\]{
+  --tw-text-opacity: 1;
+  color: rgb(92 184 165 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#6b6c82\]{
+  --tw-text-opacity: 1;
+  color: rgb(107 108 130 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#9a9bb0\]{
+  --tw-text-opacity: 1;
+  color: rgb(154 155 176 / var(--tw-text-opacity, 1));
+}
+
+.text-accent{
+  --tw-text-opacity: 1;
+  color: rgb(26 107 90 / var(--tw-text-opacity, 1));
+}
+
+.text-amber-400{
+  --tw-text-opacity: 1;
+  color: rgb(251 191 36 / var(--tw-text-opacity, 1));
+}
+
+.text-amber-600{
+  --tw-text-opacity: 1;
+  color: rgb(217 119 6 / var(--tw-text-opacity, 1));
+}
+
+.text-amber-700{
+  --tw-text-opacity: 1;
+  color: rgb(180 83 9 / var(--tw-text-opacity, 1));
+}
+
+.text-amber-800{
+  --tw-text-opacity: 1;
+  color: rgb(146 64 14 / var(--tw-text-opacity, 1));
+}
+
+.text-blue-700{
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity, 1));
+}
+
+.text-blue-800{
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity, 1));
+}
+
+.text-emerald-400{
+  --tw-text-opacity: 1;
+  color: rgb(52 211 153 / var(--tw-text-opacity, 1));
+}
+
+.text-emerald-600{
+  --tw-text-opacity: 1;
+  color: rgb(5 150 105 / var(--tw-text-opacity, 1));
+}
+
+.text-emerald-700{
+  --tw-text-opacity: 1;
+  color: rgb(4 120 87 / var(--tw-text-opacity, 1));
+}
+
+.text-emerald-800{
+  --tw-text-opacity: 1;
+  color: rgb(6 95 70 / var(--tw-text-opacity, 1));
+}
+
+.text-fg{
+  --tw-text-opacity: 1;
+  color: rgb(26 26 26 / var(--tw-text-opacity, 1));
+}
+
+.text-fg-faint{
+  --tw-text-opacity: 1;
+  color: rgb(188 188 188 / var(--tw-text-opacity, 1));
+}
+
+.text-fg-muted{
+  --tw-text-opacity: 1;
+  color: rgb(154 154 154 / var(--tw-text-opacity, 1));
+}
+
+.text-fg-secondary{
+  --tw-text-opacity: 1;
+  color: rgb(107 107 107 / var(--tw-text-opacity, 1));
+}
+
+.text-fuchsia-800{
+  --tw-text-opacity: 1;
+  color: rgb(134 25 143 / var(--tw-text-opacity, 1));
+}
+
+.text-green-800{
+  --tw-text-opacity: 1;
+  color: rgb(22 101 52 / var(--tw-text-opacity, 1));
+}
+
+.text-indigo-800{
+  --tw-text-opacity: 1;
+  color: rgb(55 48 163 / var(--tw-text-opacity, 1));
+}
+
+.text-lime-800{
+  --tw-text-opacity: 1;
+  color: rgb(63 98 18 / var(--tw-text-opacity, 1));
+}
+
+.text-orange-800{
+  --tw-text-opacity: 1;
+  color: rgb(154 52 18 / var(--tw-text-opacity, 1));
+}
+
+.text-pink-800{
+  --tw-text-opacity: 1;
+  color: rgb(157 23 77 / var(--tw-text-opacity, 1));
+}
+
+.text-red-400{
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity, 1));
+}
+
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
+
+.text-red-700{
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity, 1));
+}
+
+.text-red-800{
+  --tw-text-opacity: 1;
+  color: rgb(153 27 27 / var(--tw-text-opacity, 1));
+}
+
+.text-sky-800{
+  --tw-text-opacity: 1;
+  color: rgb(7 89 133 / var(--tw-text-opacity, 1));
+}
+
+.text-surface-0{
+  --tw-text-opacity: 1;
+  color: rgb(246 241 235 / var(--tw-text-opacity, 1));
+}
+
+.text-teal-800{
+  --tw-text-opacity: 1;
+  color: rgb(17 94 89 / var(--tw-text-opacity, 1));
+}
+
+.text-violet-800{
+  --tw-text-opacity: 1;
+  color: rgb(91 33 182 / var(--tw-text-opacity, 1));
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-zinc-400{
+  --tw-text-opacity: 1;
+  color: rgb(161 161 170 / var(--tw-text-opacity, 1));
+}
+
+.text-zinc-500{
+  --tw-text-opacity: 1;
+  color: rgb(113 113 122 / var(--tw-text-opacity, 1));
+}
+
+.text-zinc-600{
+  --tw-text-opacity: 1;
+  color: rgb(82 82 91 / var(--tw-text-opacity, 1));
+}
+
+.text-zinc-700{
+  --tw-text-opacity: 1;
+  color: rgb(63 63 70 / var(--tw-text-opacity, 1));
+}
+
+.underline{
+  text-decoration-line: underline;
+}
+
+.line-through{
+  text-decoration-line: line-through;
+}
+
+.placeholder-fg-muted::-moz-placeholder{
+  --tw-placeholder-opacity: 1;
+  color: rgb(154 154 154 / var(--tw-placeholder-opacity, 1));
+}
+
+.placeholder-fg-muted::placeholder{
+  --tw-placeholder-opacity: 1;
+  color: rgb(154 154 154 / var(--tw-placeholder-opacity, 1));
+}
+
+.opacity-50{
+  opacity: 0.5;
+}
+
+.opacity-70{
+  opacity: 0.7;
+}
+
+.shadow-\[0_1px_3px_rgba\(0\2c 0\2c 0\2c 0\.12\)\]{
+  --tw-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  --tw-shadow-colored: 0 1px 3px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-blur-2xl{
+  --tw-backdrop-blur: blur(40px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.backdrop-blur-xl{
+  --tw-backdrop-blur: blur(24px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-colors{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-opacity{
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-transform{
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-150{
+  transition-duration: 150ms;
+}
+
+.duration-200{
+  transition-duration: 200ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
+}
+
+.ease-out{
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* ── link underline ────────────────────────────────────────────── */
+
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+}
+
+.link-underline:hover { background-size: 100% 1px; }
+
+/* ── terminal block (stays dark - contrast island on cream) ──── */
+
+.terminal {
+  background: #111118;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+
+.terminal-body {
+  padding: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8125rem;
+  line-height: 1.8;
+  color: #9a9bb0;
+  overflow-x: auto;
+  word-break: break-word;
+}
+
+.terminal-body .t-green { color: #34d399; }
+
+.terminal-body .t-dim { color: #4a4b60; }
+
+.terminal-body .t-white { color: #e8e9ed; }
+
+.terminal-body .t-yellow { color: #fbbf24; }
+
+.terminal-body .t-teal { color: #5cb8a5; }
+
+/* ── card (white on cream) ────────────────────────────────────── */
+
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(0,0,0,0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* ── card accent ───────────────────────────────────────────────── */
+
+.card-accent {
+  background: #ffffff;
+  border: 1px solid rgba(26,107,90,0.22);
+  border-radius: 12px;
+  box-shadow: 0 0 24px rgba(26,107,90,0.05);
+}
+
+/* ── hero glow (subtle blue behind dark terminal on cream) ───── */
+
+.hero-glow {
+  position: absolute;
+  inset: -40% -20%;
+  background: radial-gradient(ellipse at center, rgba(26,107,90,0.06) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── terminal row ─────────────────────────────────────────────── */
+
+.terminal-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+/* ── terminal responsive ─────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .terminal-body {
+    font-size: 0.6875rem;
+    padding: 14px;
+    line-height: 1.7;
+  }
+  .terminal-bar {
+    padding: 10px 14px;
+  }
+}
+
+/* ── hide scrollbar utility ─────────────────────────────────── */
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ── terminal cursor ─────────────────────────────────────────── */
+
+.terminal-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background: #34d399;
+  animation: cursor-blink 1s step-end infinite;
+  margin-left: 4px;
+  vertical-align: middle;
+  opacity: 0.8;
+}
+
+@keyframes cursor-blink {
+  50% { opacity: 0; }
+}
+
+.placeholder\:text-fg-faint::-moz-placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(188 188 188 / var(--tw-text-opacity, 1));
+}
+
+.placeholder\:text-fg-faint::placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(188 188 188 / var(--tw-text-opacity, 1));
+}
+
+.first\:mt-0:first-child{
+  margin-top: 0px;
+}
+
+.first\:border-t:first-child{
+  border-top-width: 1px;
+}
+
+.first\:pl-0:first-child{
+  padding-left: 0px;
+}
+
+.first\:font-medium:first-child{
+  font-weight: 500;
+}
+
+.first\:text-fg:first-child{
+  --tw-text-opacity: 1;
+  color: rgb(26 26 26 / var(--tw-text-opacity, 1));
+}
+
+.last\:border-0:last-child{
+  border-width: 0px;
+}
+
+.hover\:-translate-y-px:hover{
+  --tw-translate-y: -1px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:border-accent\/30:hover{
+  border-color: rgb(26 107 90 / 0.3);
+}
+
+.hover\:border-accent\/40:hover{
+  border-color: rgb(26 107 90 / 0.4);
+}
+
+.hover\:border-edge-hover:hover{
+  border-color: rgba(0,0,0,0.18);
+}
+
+.hover\:bg-fg\/85:hover{
+  background-color: rgb(26 26 26 / 0.85);
+}
+
+.hover\:bg-surface-1:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-surface-2:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 233 227 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:text-accent:hover{
+  --tw-text-opacity: 1;
+  color: rgb(26 107 90 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-accent\/80:hover{
+  color: rgb(26 107 90 / 0.8);
+}
+
+.hover\:text-fg:hover{
+  --tw-text-opacity: 1;
+  color: rgb(26 26 26 / var(--tw-text-opacity, 1));
+}
+
+.hover\:opacity-75:hover{
+  opacity: 0.75;
+}
+
+.hover\:opacity-80:hover{
+  opacity: 0.8;
+}
+
+.hover\:opacity-90:hover{
+  opacity: 0.9;
+}
+
+.focus\:border-accent\/40:focus{
+  border-color: rgb(26 107 90 / 0.4);
+}
+
+.focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:ring-2:focus{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-accent\/30:focus{
+  --tw-ring-color: rgb(26 107 90 / 0.3);
+}
+
+.focus-visible\:outline-none:focus-visible{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus-visible\:ring-2:focus-visible{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus-visible\:ring-accent\/40:focus-visible{
+  --tw-ring-color: rgb(26 107 90 / 0.4);
+}
+
+.focus-visible\:ring-offset-2:focus-visible{
+  --tw-ring-offset-width: 2px;
+}
+
+.focus-visible\:ring-offset-surface-0:focus-visible{
+  --tw-ring-offset-color: #f6f1eb;
+}
+
+.active\:translate-y-0:active{
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.active\:bg-fg\/80:active{
+  background-color: rgb(26 26 26 / 0.8);
+}
+
+.disabled\:opacity-40:disabled{
+  opacity: 0.4;
+}
+
+.disabled\:opacity-60:disabled{
+  opacity: 0.6;
+}
+
+.disabled\:hover\:translate-y-0:hover:disabled{
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group[open] .group-open\:rotate-45{
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:-translate-y-px{
+  --tw-translate-y: -1px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:translate-x-0\.5{
+  --tw-translate-x: 0.125rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:scale-110{
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:text-accent{
+  --tw-text-opacity: 1;
+  color: rgb(26 107 90 / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 640px){
+
+  .sm\:ml-8{
+    margin-left: 2rem;
+  }
+
+  .sm\:flex{
+    display: flex;
+  }
+
+  .sm\:inline-flex{
+    display: inline-flex;
+  }
+
+  .sm\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .sm\:flex-row{
+    flex-direction: row;
+  }
+
+  .sm\:items-start{
+    align-items: flex-start;
+  }
+
+  .sm\:items-center{
+    align-items: center;
+  }
+
+  .sm\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .sm\:justify-between{
+    justify-content: space-between;
+  }
+
+  .sm\:gap-0{
+    gap: 0px;
+  }
+
+  .sm\:gap-12{
+    gap: 3rem;
+  }
+
+  .sm\:p-10{
+    padding: 2.5rem;
+  }
+
+  .sm\:p-12{
+    padding: 3rem;
+  }
+
+  .sm\:p-7{
+    padding: 1.75rem;
+  }
+
+  .sm\:p-8{
+    padding: 2rem;
+  }
+
+  .sm\:px-6{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .sm\:py-5{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .sm\:pr-8{
+    padding-right: 2rem;
+  }
+
+  .sm\:pt-1{
+    padding-top: 0.25rem;
+  }
+
+  .sm\:text-left{
+    text-align: left;
+  }
+
+  .sm\:text-right{
+    text-align: right;
+  }
+
+  .sm\:text-\[0\.8125rem\]{
+    font-size: 0.8125rem;
+  }
+
+  .sm\:text-\[0\.9375rem\]{
+    font-size: 0.9375rem;
+  }
+
+  .sm\:text-\[1\.0625rem\]{
+    font-size: 1.0625rem;
+  }
+
+  .sm\:text-\[1\.125rem\]{
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 768px){
+
+  .md\:flex{
+    display: flex;
+  }
+
+  .md\:hidden{
+    display: none;
+  }
+
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-\[1fr_1fr\]{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .md\:flex-row{
+    flex-direction: row;
+  }
+
+  .md\:justify-between{
+    justify-content: space-between;
+  }
+
+  .md\:gap-0{
+    gap: 0px;
+  }
+
+  .md\:gap-6{
+    gap: 1.5rem;
+  }
+
+  .md\:gap-8{
+    gap: 2rem;
+  }
+
+  .md\:divide-x > :not([hidden]) ~ :not([hidden]){
+    --tw-divide-x-reverse: 0;
+    border-right-width: calc(1px * var(--tw-divide-x-reverse));
+    border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+  }
+
+  .md\:divide-edge > :not([hidden]) ~ :not([hidden]){
+    border-color: rgba(0,0,0,0.10);
+  }
+
+  .md\:p-16{
+    padding: 4rem;
+  }
+
+  .md\:p-6{
+    padding: 1.5rem;
+  }
+
+  .md\:p-8{
+    padding: 2rem;
+  }
+
+  .md\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .md\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .md\:py-24{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .md\:py-28{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .md\:py-32{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .md\:py-36{
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+
+  .md\:py-8{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .md\:pb-16{
+    padding-bottom: 4rem;
+  }
+
+  .md\:pb-24{
+    padding-bottom: 6rem;
+  }
+
+  .md\:pb-28{
+    padding-bottom: 7rem;
+  }
+
+  .md\:pb-32{
+    padding-bottom: 8rem;
+  }
+
+  .md\:pt-32{
+    padding-top: 8rem;
+  }
+
+  .md\:pt-36{
+    padding-top: 9rem;
+  }
+
+  .md\:pt-44{
+    padding-top: 11rem;
+  }
+
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-\[1\.125rem\]{
+    font-size: 1.125rem;
+  }
+
+  .md\:text-\[1\.3125rem\]{
+    font-size: 1.3125rem;
+  }
+
+  .md\:text-\[1\.5rem\]{
+    font-size: 1.5rem;
+  }
+
+  .md\:text-\[1\.75rem\]{
+    font-size: 1.75rem;
+  }
+
+  .md\:text-\[2\.5rem\]{
+    font-size: 2.5rem;
+  }
+
+  .md\:text-\[2\.75rem\]{
+    font-size: 2.75rem;
+  }
+
+  .md\:text-\[2rem\]{
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px){
+
+  .lg\:min-w-\[180px\]{
+    min-width: 180px;
+  }
+
+  .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-\[1fr_1fr\]{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lg\:flex-row{
+    flex-direction: row;
+  }
+
+  .lg\:flex-col{
+    flex-direction: column;
+  }
+
+  .lg\:items-start{
+    align-items: flex-start;
+  }
+
+  .lg\:items-end{
+    align-items: flex-end;
+  }
+
+  .lg\:justify-between{
+    justify-content: space-between;
+  }
+
+  .lg\:gap-16{
+    gap: 4rem;
+  }
+
+  .lg\:gap-20{
+    gap: 5rem;
+  }
+
+  .lg\:gap-24{
+    gap: 6rem;
+  }
+
+  .lg\:gap-5{
+    gap: 1.25rem;
+  }
+
+  .lg\:text-right{
+    text-align: right;
+  }
+}
+</style><script type="application/ld+json" id="page-jsonld">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://altorlab.com/glossary#article","headline":"Support Operations Glossary | Altor","description":"Definitions for B2B support operations metrics, workflows, and investigation terms used by technical support teams.","url":"https://altorlab.com/glossary","datePublished":"2026-04-14","dateModified":"2026-04-14","author":{"@type":"Organization","name":"Altor","url":"https://altorlab.com"},"publisher":{"@type":"Organization","name":"Altor","url":"https://altorlab.com","logo":{"@type":"ImageObject","url":"https://altorlab.com/favicon.svg"}},"speakable":{"@type":"SpeakableSpecification","cssSelector":[".blog-opening","h2",".callout-text"]}}]}</script><script type="application/ld+json" id="glossary-index-jsonld">{"@context":"https://schema.org","@type":"DefinedTermSet","name":"Support Operations Glossary","description":"Definitions for B2B support operations metrics, workflows, and investigation terms.","url":"https://altorlab.com/glossary","hasDefinedTerm":[{"@type":"DefinedTerm","name":"After-Call Work (ACW)","description":"After-call work is all work performed after a ticket interaction ends but before the agent is fully available for the next ticket, including documentation, system updates, follow-up scheduling, and knowledge base contributions. It is broader than simple wrap-up because it can include multi-step internal tasks.","url":"https://altorlab.com/glossary/after-call-work"},{"@type":"DefinedTerm","name":"Agent Occupancy Rate","description":"Agent occupancy rate is the percentage of an agent's paid working time spent actively handling tickets, including investigation, communication, and documentation, rather than idle time, training, or administrative work. It measures how full the agent workload is during scheduled time.","url":"https://altorlab.com/glossary/occupancy-rate"},{"@type":"DefinedTerm","name":"Agent Shrinkage","description":"Agent shrinkage is the percentage of scheduled agent time unavailable for ticket handling because of breaks, training, meetings, administrative work, absenteeism, or system downtime. It measures the gap between scheduled capacity and effective capacity.","url":"https://altorlab.com/glossary/shrinkage"},{"@type":"DefinedTerm","name":"Agent Utilization Rate","description":"Agent utilization rate measures how much of an agent’s working time is spent on active support work versus idle time, meetings, or admin tasks. In technical support, utilization becomes dangerous when agents are busy but still blocked by manual investigation steps they cannot complete quickly.","url":"https://altorlab.com/glossary/agent-utilization-rate"},{"@type":"DefinedTerm","name":"AI Agent","description":"An AI agent is software that can interpret a goal, choose actions, call tools, observe results, and continue until it reaches a stopping condition. Unlike a plain chat interface that only returns text, an agent can read tickets, query APIs, inspect logs, open bug reports, and draft replies based on live system evidence. In production settings, the important question is not whether it sounds intelligent, but whether it can operate reliably against real permissions, failure states, and workflow rules.","url":"https://altorlab.com/glossary/ai-agent"},{"@type":"DefinedTerm","name":"AI Support Agent","description":"An AI support agent is software that handles support interactions autonomously, from reading tickets to investigating issues to drafting responses. Unlike chatbots, AI support agents connect to production systems.","url":"https://altorlab.com/glossary/ai-support-agent"},{"@type":"DefinedTerm","name":"API Error Investigation","description":"API error investigation is the process of diagnosing why an API request failed for a specific customer, integration, or time window. It typically involves checking request logs, authentication state, rate-limit headers, recent deploys, schema changes, upstream dependency health, and account configuration. In B2B systems, this work is rarely solved from the ticket text alone because the same HTTP status code can come from very different causes depending on customer setup and service state at the moment of failure.","url":"https://altorlab.com/glossary/api-error-investigation"},{"@type":"DefinedTerm","name":"API Rate Limiting","description":"API rate limiting is the practice of restricting how many requests a client can send to an API within a defined window, such as per second, minute, or day. Platforms use rate limits to protect shared infrastructure, prevent abuse, and keep latency predictable under load. Limits may be enforced with token buckets, leaky buckets, or fixed windows, and are often scoped by API key, workspace, IP address, or endpoint class depending on how the service is designed.","url":"https://altorlab.com/glossary/api-rate-limiting"},{"@type":"DefinedTerm","name":"Average Handle Time (AHT)","description":"Average Handle Time is the average total time an agent spends on a ticket, including investigation, response drafting, customer communication, and post-ticket documentation. It shows how much labor is required to move one ticket through the full support workflow.","url":"https://altorlab.com/glossary/average-handle-time"},{"@type":"DefinedTerm","name":"Average Speed of Answer (ASA)","description":"Average Speed of Answer is the average time between a ticket being submitted and an agent providing the first substantive response, not an automated acknowledgment. It measures how quickly a human meaningfully engages with new demand.","url":"https://altorlab.com/glossary/speed-of-answer"},{"@type":"DefinedTerm","name":"ClickHouse","description":"ClickHouse is a column-oriented analytical database built for very fast aggregation and scan-heavy queries on large event datasets. It is commonly used for API logs, product analytics, observability events, and customer activity history because it can process billions of rows with low latency when queries are written well. In support operations, ClickHouse is valuable because agents and automation can search recent request failures, workspace activity, and account-level patterns without pulling data into a separate warehouse first.","url":"https://altorlab.com/glossary/clickhouse"},{"@type":"DefinedTerm","name":"Contact Volume","description":"Contact volume is the total number of support interactions received across all channels, including email, chat, phone, and in-app messaging, within a measurement period. It is the input signal for every staffing and queue-management decision.","url":"https://altorlab.com/glossary/contact-volume"},{"@type":"DefinedTerm","name":"Customer Effort Score (CES)","description":"Customer Effort Score measures how easy it was for a customer to get their problem solved. In support, CES improves when the customer does not need to repeat context, chase updates, or wait through multiple internal handoffs.","url":"https://altorlab.com/glossary/customer-effort-score"},{"@type":"DefinedTerm","name":"Customer Escalation Path","description":"Customer escalation path is the documented sequence of people, teams, and channels used when a support issue exceeds normal handling scope or urgency. It defines who gets involved at each stage, what evidence must accompany the handoff, and how the customer is kept informed during the transition. A strong escalation path reduces confusion during outages, protects executive relationships, and prevents support teams from improvising under pressure when a large account or revenue-critical workflow is affected.","url":"https://altorlab.com/glossary/customer-escalation-path"},{"@type":"DefinedTerm","name":"Customer Satisfaction Score (CSAT)","description":"CSAT measures customer satisfaction with a specific support interaction, typically on a 1-5 scale collected via post-resolution survey.","url":"https://altorlab.com/glossary/customer-satisfaction-score"},{"@type":"DefinedTerm","name":"Deflection Effectiveness","description":"Deflection effectiveness is a quality-adjusted measure of ticket deflection that accounts for whether deflected tickets were genuinely resolved or merely abandoned by frustrated customers. It distinguishes successful self-service from failed self-service.","url":"https://altorlab.com/glossary/deflection-effectiveness"},{"@type":"DefinedTerm","name":"Escalation Matrix","description":"An escalation matrix is a predefined routing table that specifies who receives escalated tickets based on ticket type, severity, customer tier, and time-in-queue thresholds. It turns escalation from judgment-based behavior into a documented operating rule.","url":"https://altorlab.com/glossary/escalation-matrix"},{"@type":"DefinedTerm","name":"Escalation Path","description":"An escalation path defines who should handle a support issue when the frontline team cannot resolve it, and in what order the handoff should happen. In B2B technical support, a clear escalation path prevents tickets from bouncing randomly between support, product, and engineering.","url":"https://altorlab.com/glossary/escalation-path"},{"@type":"DefinedTerm","name":"First Call Resolution (FCR)","description":"First Call Resolution measures the percentage of support tickets resolved in the first interaction, without escalation, callback, or follow-up contact required from the customer. In B2B support, it is a direct test of whether the first responder had enough information and authority to actually solve the problem.","url":"https://altorlab.com/glossary/first-call-resolution"},{"@type":"DefinedTerm","name":"First Contact Resolution (FCR)","description":"First Contact Resolution measures the percentage of tickets solved in the first meaningful reply without follow-up handoffs or repeated back-and-forth. In B2B support, true FCR usually depends on whether the first response includes diagnostic evidence, not just empathy and next steps.","url":"https://altorlab.com/glossary/first-contact-resolution"},{"@type":"DefinedTerm","name":"First Response Time (FRT)","description":"First Response Time measures how long a customer waits between submitting a support ticket and receiving their first human response. It is the most visible support metric from the customer's perspective.","url":"https://altorlab.com/glossary/first-response-time"},{"@type":"DefinedTerm","name":"Forward Deployment","description":"Forward deployment is a go-to-market and engineering model where technical team members work directly with customers during implementation, onboarding, and issue resolution. Instead of throwing requirements over a wall to product teams, forward-deployed engineers configure integrations, debug live workflows, and feed product insights back into the roadmap. The model is common in enterprise software where each customer environment is different and time-to-value depends on hands-on technical problem solving during the first weeks of adoption.","url":"https://altorlab.com/glossary/forward-deployment"},{"@type":"DefinedTerm","name":"Handle Time","description":"Handle time is the total elapsed time from when an agent opens a ticket to when they close it, including all active work, hold periods, and transfers. It represents the end-to-end ticket lifecycle from the agent's perspective rather than just the average across many tickets.","url":"https://altorlab.com/glossary/handle-time"},{"@type":"DefinedTerm","name":"Hold Time","description":"Hold time is the total time a customer waits for a response after submitting a ticket across all wait periods in the lifecycle, including initial response, investigation holds, and between-reply gaps. It is the customer-experienced latency inside an otherwise “active” ticket.","url":"https://altorlab.com/glossary/hold-time"},{"@type":"DefinedTerm","name":"Incident Management","description":"Incident management is the process of detecting, responding to, and resolving service disruptions. In B2B SaaS, incidents often surface first through customer support tickets before monitoring alerts.","url":"https://altorlab.com/glossary/incident-management"},{"@type":"DefinedTerm","name":"Issue Taxonomy","description":"Issue taxonomy is a hierarchical classification system for support issues that organizes tickets into standardized categories, sub-categories, and root-cause types. It provides a stable framework for analysis, routing, and trend detection across the support org.","url":"https://altorlab.com/glossary/issue-taxonomy"},{"@type":"DefinedTerm","name":"Knowledge Base Deflection","description":"Knowledge base deflection measures how often documentation helps a customer solve an issue without creating a support ticket. It is most valuable for onboarding questions, setup steps, and common workflow answers.","url":"https://altorlab.com/glossary/knowledge-base-deflection"},{"@type":"DefinedTerm","name":"LangChain","description":"LangChain is a software framework for building LLM applications that combine prompts, memory, tool use, retrieval, and workflow control in code. Developers use it to define chains and agents that move between model calls and external systems such as vector stores, SQL databases, ticketing tools, and web APIs. In support automation, it is commonly used to structure retrieval, tool calling, and response generation so the application can work with live customer and operational data rather than static prompt text alone.","url":"https://altorlab.com/glossary/langchain"},{"@type":"DefinedTerm","name":"Mean Time to Acknowledge (MTTA)","description":"Mean Time to Acknowledge measures the average elapsed time between when an issue is created and when a responsible human or system explicitly recognizes ownership. In support and incident operations, acknowledgment is different from full diagnosis or first resolution update. It tells you whether the team saw the problem and started handling it. MTTA is especially important for high-priority tickets because customers interpret silence as inaction even when the team is already investigating behind the scenes.","url":"https://altorlab.com/glossary/mean-time-to-acknowledge"},{"@type":"DefinedTerm","name":"Mean Time to Resolution (MTTR)","description":"Mean Time to Resolution measures the average time from when a support ticket is created to when it is fully resolved. For B2B technical support, MTTR is the primary metric that drives customer satisfaction and retention.","url":"https://altorlab.com/glossary/mean-time-to-resolution"},{"@type":"DefinedTerm","name":"Model Context Protocol (MCP)","description":"Model Context Protocol is an open protocol for exposing tools, prompts, and structured resources to LLM-based applications in a standardized way. Instead of wiring each model integration separately, MCP servers present capabilities such as database access, ticket search, or file retrieval through a common interface. That makes it easier to give an AI system controlled access to external context while preserving permission boundaries, typed inputs, and predictable transport behavior across different clients and models.","url":"https://altorlab.com/glossary/model-context-protocol"},{"@type":"DefinedTerm","name":"n8n Workflow Automation","description":"n8n workflow automation is the use of n8n to orchestrate API calls, condition branches, database queries, and message handoffs across multiple systems without writing every step as custom backend code. Teams use it to connect help desks, CRMs, billing platforms, internal tools, and LLM services into event-driven workflows. It is especially useful for support operations because a ticket can trigger enrichment, severity checks, bug search, stakeholder alerts, and response drafting inside one graph-based execution path.","url":"https://altorlab.com/glossary/n8n-workflow-automation"},{"@type":"DefinedTerm","name":"Net Promoter Score (NPS)","description":"NPS measures customer loyalty by asking how likely they are to recommend your product (0-10 scale). Promoters (9-10) minus Detractors (0-6) equals your NPS.","url":"https://altorlab.com/glossary/net-promoter-score"},{"@type":"DefinedTerm","name":"Proactive Support","description":"Proactive support means identifying and addressing customer-impacting issues before the customer opens a ticket. In B2B SaaS, that can include noticing error spikes, failed webhooks, billing anomalies, or rollout regressions before they turn into escalations.","url":"https://altorlab.com/glossary/proactive-support"},{"@type":"DefinedTerm","name":"Production AI","description":"Production AI refers to machine-learning or LLM-powered systems that run inside live business workflows with real users, real data, and operational consequences. A production AI system must handle permission boundaries, latency budgets, failure recovery, monitoring, and change management, not just answer a benchmark prompt correctly. In support operations, that means the AI needs to read tickets, query systems safely, return evidence-backed outputs, and fail in predictable ways when a dependency is unavailable or data is incomplete.","url":"https://altorlab.com/glossary/production-ai"},{"@type":"DefinedTerm","name":"Queue Depth","description":"Queue depth is the number of tickets currently open and awaiting agent handling, measured at a point in time or as an average over a period. It is a leading indicator of whether the team is about to miss service targets.","url":"https://altorlab.com/glossary/queue-depth"},{"@type":"DefinedTerm","name":"Resolution Rate","description":"Resolution rate is the percentage of tickets fully resolved within a given period, typically measured as daily or weekly throughput relative to incoming ticket volume. It shows whether the team is keeping up with demand or silently accumulating backlog.","url":"https://altorlab.com/glossary/resolution-rate"},{"@type":"DefinedTerm","name":"Root Cause Analysis (RCA)","description":"Root cause analysis in support context is the process of identifying the underlying technical reason for a customer-reported issue, rather than just addressing the symptom.","url":"https://altorlab.com/glossary/root-cause-analysis"},{"@type":"DefinedTerm","name":"Schedule Adherence","description":"Schedule adherence measures the percentage of scheduled working time during which support agents are actually available and handling tickets, compared with their published work schedule. It captures the gap between staffing plans and real queue coverage.","url":"https://altorlab.com/glossary/schedule-adherence"},{"@type":"DefinedTerm","name":"Self-Service Rate","description":"Self-service rate is the percentage of customer issues resolved through self-service channels such as documentation, knowledge bases, FAQs, or chatbots without human agent involvement. It measures how often customers can solve the issue on their own.","url":"https://altorlab.com/glossary/self-service-rate"},{"@type":"DefinedTerm","name":"Service Level","description":"Service level is the percentage of tickets answered within a target time threshold, typically expressed as “X% of tickets answered within Y minutes.” Unlike an SLA, service level is usually an internal operational target rather than a contractual promise.","url":"https://altorlab.com/glossary/service-level"},{"@type":"DefinedTerm","name":"Service Level Agreement (SLA)","description":"A Service Level Agreement (SLA) is a contractual commitment between a vendor and customer that defines the maximum acceptable response and resolution times for support tickets by priority level. SLA breaches — where actual resolution time exceeds the committed window — trigger financial penalties including service credits, pro-rated refunds, or contract termination clauses. For B2B SaaS companies, SLA compliance is a direct revenue protection mechanism.","url":"https://altorlab.com/glossary/sla-service-level-agreement"},{"@type":"DefinedTerm","name":"SLA Compliance Rate","description":"SLA compliance rate is the percentage of tickets resolved within the response and resolution commitments promised in customer contracts. It is one of the clearest support metrics tied directly to retained revenue in enterprise B2B accounts.","url":"https://altorlab.com/glossary/sla-compliance-rate"},{"@type":"DefinedTerm","name":"Support Automation","description":"Support automation uses software to handle parts of the support workflow without human intervention. This ranges from chatbots answering FAQs to AI systems investigating technical issues by querying production databases.","url":"https://altorlab.com/glossary/support-automation"},{"@type":"DefinedTerm","name":"Support Automation ROI","description":"Support automation ROI is the economic return generated when automation reduces ticket handling cost, increases agent throughput, lowers escalations, or protects revenue through faster issue resolution. It should be measured against all-in costs including software, implementation time, maintenance effort, and failure risk. In technical B2B environments, the largest ROI usually comes from removing investigation labor and engineering interrupts rather than from shaving a few seconds off routing or canned replies.","url":"https://altorlab.com/glossary/support-automation-roi"},{"@type":"DefinedTerm","name":"Support Capacity Planning","description":"Support capacity planning is the process of forecasting ticket volume, allocating agent headcount, and scheduling shifts to maintain SLA targets across expected demand patterns. It converts ticket demand into staffing and queue coverage decisions.","url":"https://altorlab.com/glossary/support-capacity-planning"},{"@type":"DefinedTerm","name":"Support Cost Per Ticket","description":"Support cost per ticket measures the fully loaded cost of resolving one support issue, including agent time, engineering escalations, tooling, and overhead. In B2B support, this metric jumps quickly when every technical ticket needs manual log analysis or product-engineering involvement.","url":"https://altorlab.com/glossary/support-cost-per-ticket"},{"@type":"DefinedTerm","name":"Support Deflection","description":"Support deflection is the broader practice of reducing agent-handled ticket volume through self-serve content, in-product guidance, automation, or workflow design. It covers knowledge-base deflection, chatbot routing, and other mechanisms that prevent low-value tickets from reaching humans.","url":"https://altorlab.com/glossary/support-deflection"},{"@type":"DefinedTerm","name":"Support Escalation Rate","description":"Support escalation rate is the percentage of tickets that get escalated from frontline support to engineering, senior agents, or management. High escalation rates indicate that L1 agents lack the tools or data to resolve technical issues.","url":"https://altorlab.com/glossary/support-escalation-rate"},{"@type":"DefinedTerm","name":"Support Quality Score","description":"Support quality score is an internal measure of how accurate, complete, and policy-compliant support responses are. For technical teams, quality means the answer was not only polite, but actually correct and backed by evidence from the customer’s systems.","url":"https://altorlab.com/glossary/support-quality-score"},{"@type":"DefinedTerm","name":"Support Tier Definition","description":"Support tier definition is the written specification of each support tier's scope, response obligations, access permissions, and escalation criteria. It is the operating rulebook that makes a tiered support model work consistently.","url":"https://altorlab.com/glossary/support-tier-definition"},{"@type":"DefinedTerm","name":"Ticket Abandonment Rate","description":"Ticket abandonment rate is the percentage of customers who submit a ticket or start a support interaction but withdraw it without resolution, either by closing the chat, deleting the ticket, or stopping responses. It measures unresolved demand that disappears from normal closure metrics.","url":"https://altorlab.com/glossary/abandonment-rate"},{"@type":"DefinedTerm","name":"Ticket Aging","description":"Ticket aging measures the time elapsed since a ticket was created without full resolution. B2B teams usually track aging in hours for P1 and P2 tickets and in days for lower-priority queues.","url":"https://altorlab.com/glossary/ticket-aging"},{"@type":"DefinedTerm","name":"Ticket Backlog","description":"Ticket backlog is the number of unresolved tickets waiting in the queue beyond the team’s normal operating window. In B2B support, backlog is especially dangerous when high-value customers with technical incidents are sitting behind slower investigative work.","url":"https://altorlab.com/glossary/ticket-backlog"},{"@type":"DefinedTerm","name":"Ticket Deflection Rate","description":"Ticket deflection rate measures the percentage of support requests that never become agent-handled tickets because customers solved the issue through self-serve help, product cues, or automation. For B2B teams, deflection is healthy only when it removes low-value questions without hiding unresolved technical incidents.","url":"https://altorlab.com/glossary/ticket-deflection-rate"},{"@type":"DefinedTerm","name":"Ticket Deflection vs. Investigation","description":"Ticket deflection vs. investigation describes the operating choice between keeping a customer out of the support queue and helping a support team diagnose the issue after the ticket exists. Deflection works best for repeated questions with stable answers, such as setup steps or pricing rules. Investigation matters when the issue depends on live account state, recent deploys, API logs, or billing events. Confusing the two leads teams to build chatbot loops for problems that actually require system evidence and technical diagnosis.","url":"https://altorlab.com/glossary/ticket-deflection-vs-investigation"},{"@type":"DefinedTerm","name":"Ticket Investigation","description":"Ticket investigation is the process of diagnosing the root cause of a customer-reported issue by querying multiple internal systems - application logs, databases, billing platforms, bug trackers, and monitoring tools.","url":"https://altorlab.com/glossary/ticket-investigation"},{"@type":"DefinedTerm","name":"Ticket Reopen Rate","description":"Ticket reopen rate is the percentage of resolved tickets that are reopened by the customer within a defined window, usually 7 or 30 days, because the issue was not fully resolved. It measures how often a “closed” ticket was only temporarily quiet.","url":"https://altorlab.com/glossary/reopen-rate"},{"@type":"DefinedTerm","name":"Ticket Tagging","description":"Ticket tagging is the practice of applying structured labels to tickets so they can be categorized by topic, product area, root cause, and resolution type. Consistent tagging is what turns ticket history into usable operational data.","url":"https://altorlab.com/glossary/ticket-tagging"},{"@type":"DefinedTerm","name":"Ticket Triage","description":"Ticket triage is the front-end decision process that classifies a support request by severity, product area, customer impact, and routing destination. It answers questions such as whether the issue is an outage, a known bug, a billing state problem, or a misuse case. Good triage happens before deep diagnosis and creates clean queues, correct SLA priorities, and the right first owner. Bad triage sends urgent technical issues into slow queues or hands simple requests to expensive specialists.","url":"https://altorlab.com/glossary/ticket-triage"},{"@type":"DefinedTerm","name":"Tiered Support Model (L1/L2/L3)","description":"A tiered support model organizes support teams into levels: L1 (frontline agents handling initial contact), L2 (senior agents with deeper technical knowledge), and L3 (engineering teams handling the most complex issues). Each tier has defined scope and escalation paths to the tier above.","url":"https://altorlab.com/glossary/tiered-support-model"},{"@type":"DefinedTerm","name":"Time to First Response","description":"Time to First Response measures how long it takes a customer to receive the first human reply after opening a ticket. It is closely related to first response time, but teams often use this wording in dashboards, customer reports, and executive reviews.","url":"https://altorlab.com/glossary/time-to-first-response"},{"@type":"DefinedTerm","name":"Transfer Rate","description":"Transfer rate is the percentage of tickets transferred from the initial handling agent to another agent, team, or escalation tier before resolution. It measures how often work changes hands before the customer gets an answer.","url":"https://altorlab.com/glossary/transfer-rate"},{"@type":"DefinedTerm","name":"Webhook","description":"A webhook is an HTTP callback triggered automatically when a system event occurs, such as a failed payment, closed ticket, or completed deployment. Instead of polling an API on a schedule, the receiving service gets a real-time POST request containing event metadata and identifiers. In support and operations systems, webhooks are used to trigger downstream actions like creating Linear issues, enriching Zendesk tickets, or starting investigation workflows the moment a customer-facing event happens.","url":"https://altorlab.com/glossary/webhook"},{"@type":"DefinedTerm","name":"Wrap-Up Time (After-Call Work)","description":"Wrap-up time is the time an agent spends completing documentation, CRM updates, and internal notes after a ticket is resolved and before beginning the next ticket. It is the immediate post-resolution portion of support work.","url":"https://altorlab.com/glossary/wrap-up-time"}]}</script></head>
+
+<body>
+  <div id="root"><div class="min-h-screen flex flex-col bg-surface-0"><div class="fixed inset-x-0 top-0 z-50 border-b border-edge-subtle bg-surface-1/95 backdrop-blur-xl"><div class="max-w-[1120px] mx-auto px-4 sm:px-6 min-h-10 py-2 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left"><p class="text-[0.75rem] sm:text-[0.8125rem] text-fg-secondary">Taking on 2–3 new engagements in 2026 — EST &amp; PST hours</p><a href="mailto:anshul@altorlab.com?subject=New%20Engagement%20%E2%80%94%20Altor%20AI%20Services" class="inline-flex items-center gap-1 text-[0.75rem] sm:text-[0.8125rem] font-medium text-accent hover:text-accent/80 transition-colors"><span>Start a Conversation</span><span aria-hidden="true">→</span></a></div></div><header class="fixed inset-x-0 top-10 z-50 transition-all duration-300 "><nav class="max-w-[1120px] mx-auto px-6 h-14 flex items-center justify-between"><a class="font-display font-bold text-fg tracking-[-0.02em] text-[1.0625rem]" href="/">Altor</a><div class="hidden md:flex items-center gap-7"><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/work/support-investigation">Our Work</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/mcp-servers">Resources</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/pricing">Pricing</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/team">Team</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/blog">Blog</a></div><div class="flex items-center gap-4"><a href="https://calendly.com/founders-altorlab/30min" class="items-center justify-center transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-0 bg-fg text-white hover:bg-fg/85 hover:-translate-y-px active:translate-y-0 active:bg-fg/80 font-semibold rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.12)] px-4 py-1.5 text-[0.8125rem] hidden sm:inline-flex" target="_blank" rel="noopener noreferrer">Work With Us</a><button type="button" class="md:hidden flex flex-col items-center justify-center gap-[5px] min-w-[44px] min-h-[44px] -mr-2" aria-label="Toggle menu"><span class="block w-[18px] h-px bg-fg origin-center" style="transform: none;"></span><span class="block w-[18px] h-px bg-fg" style="opacity: 1;"></span><span class="block w-[18px] h-px bg-fg origin-center" style="transform: none;"></span></button></div></nav></header><main class="flex-grow" style="opacity: 1;"><section class="max-w-5xl mx-auto px-4 py-12"><nav class="text-sm text-fg-muted mb-8"><a class="hover:text-fg-default" href="/">Home</a><span class="mx-2">&gt;</span><span class="text-fg-default">Glossary</span></nav><header class="mb-10 max-w-3xl"><p class="text-sm uppercase tracking-[0.12em] text-accent-default mb-3">Support operations glossary</p><h1 class="text-3xl md:text-5xl font-bold text-fg-default tracking-[-0.03em] mb-4">Support Operations Glossary</h1><p class="text-lg text-fg-muted leading-relaxed">Definitions for the metrics, workflows, and investigation concepts B2B support teams use to measure speed, quality, escalation load, and technical diagnosis.</p></header><div class="grid gap-4 md:grid-cols-2"><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/after-call-work">After-Call Work (ACW)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">After-call work is all work performed after a ticket interaction ends but before the agent is fully available for the next ticket, including documentation, system updates, follow-up scheduling, and knowledge base contributions. It is broader than simple wrap-up because it can include multi-step internal tasks.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/after-call-work">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/occupancy-rate">Agent Occupancy Rate</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Agent occupancy rate is the percentage of an agent's paid working time spent actively handling tickets, including investigation, communication, and documentation, rather than idle time, training, or administrative work. It measures how full the agent workload is during scheduled time.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/occupancy-rate">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/shrinkage">Agent Shrinkage</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Agent shrinkage is the percentage of scheduled agent time unavailable for ticket handling because of breaks, training, meetings, administrative work, absenteeism, or system downtime. It measures the gap between scheduled capacity and effective capacity.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/shrinkage">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/agent-utilization-rate">Agent Utilization Rate</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Agent utilization rate measures how much of an agent’s working time is spent on active support work versus idle time, meetings, or admin tasks. In technical support, utilization becomes dangerous when agents are busy but still blocked by manual investigation steps they cannot complete quickly.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/agent-utilization-rate">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/ai-agent">AI Agent</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">An AI agent is software that can interpret a goal, choose actions, call tools, observe results, and continue until it reaches a stopping condition. Unlike a plain chat interface that only returns text, an agent can read tickets, query APIs, inspect logs, open bug reports, and draft replies based on live system evidence. In production settings, the important question is not whether it sounds intelligent, but whether it can operate reliably against real permissions, failure states, and workflow rules.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/ai-agent">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/ai-support-agent">AI Support Agent</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">An AI support agent is software that handles support interactions autonomously, from reading tickets to investigating issues to drafting responses. Unlike chatbots, AI support agents connect to production systems.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/ai-support-agent">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/api-error-investigation">API Error Investigation</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">API error investigation is the process of diagnosing why an API request failed for a specific customer, integration, or time window. It typically involves checking request logs, authentication state, rate-limit headers, recent deploys, schema changes, upstream dependency health, and account configuration. In B2B systems, this work is rarely solved from the ticket text alone because the same HTTP status code can come from very different causes depending on customer setup and service state at the moment of failure.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/api-error-investigation">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/api-rate-limiting">API Rate Limiting</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">API rate limiting is the practice of restricting how many requests a client can send to an API within a defined window, such as per second, minute, or day. Platforms use rate limits to protect shared infrastructure, prevent abuse, and keep latency predictable under load. Limits may be enforced with token buckets, leaky buckets, or fixed windows, and are often scoped by API key, workspace, IP address, or endpoint class depending on how the service is designed.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/api-rate-limiting">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/average-handle-time">Average Handle Time (AHT)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Average Handle Time is the average total time an agent spends on a ticket, including investigation, response drafting, customer communication, and post-ticket documentation. It shows how much labor is required to move one ticket through the full support workflow.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/average-handle-time">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/speed-of-answer">Average Speed of Answer (ASA)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Average Speed of Answer is the average time between a ticket being submitted and an agent providing the first substantive response, not an automated acknowledgment. It measures how quickly a human meaningfully engages with new demand.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/speed-of-answer">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/clickhouse">ClickHouse</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">ClickHouse is a column-oriented analytical database built for very fast aggregation and scan-heavy queries on large event datasets. It is commonly used for API logs, product analytics, observability events, and customer activity history because it can process billions of rows with low latency when queries are written well. In support operations, ClickHouse is valuable because agents and automation can search recent request failures, workspace activity, and account-level patterns without pulling data into a separate warehouse first.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/clickhouse">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/contact-volume">Contact Volume</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Contact volume is the total number of support interactions received across all channels, including email, chat, phone, and in-app messaging, within a measurement period. It is the input signal for every staffing and queue-management decision.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/contact-volume">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/customer-effort-score">Customer Effort Score (CES)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Customer Effort Score measures how easy it was for a customer to get their problem solved. In support, CES improves when the customer does not need to repeat context, chase updates, or wait through multiple internal handoffs.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/customer-effort-score">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/customer-escalation-path">Customer Escalation Path</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Customer escalation path is the documented sequence of people, teams, and channels used when a support issue exceeds normal handling scope or urgency. It defines who gets involved at each stage, what evidence must accompany the handoff, and how the customer is kept informed during the transition. A strong escalation path reduces confusion during outages, protects executive relationships, and prevents support teams from improvising under pressure when a large account or revenue-critical workflow is affected.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/customer-escalation-path">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/customer-satisfaction-score">Customer Satisfaction Score (CSAT)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">CSAT measures customer satisfaction with a specific support interaction, typically on a 1-5 scale collected via post-resolution survey.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/customer-satisfaction-score">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/deflection-effectiveness">Deflection Effectiveness</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Deflection effectiveness is a quality-adjusted measure of ticket deflection that accounts for whether deflected tickets were genuinely resolved or merely abandoned by frustrated customers. It distinguishes successful self-service from failed self-service.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/deflection-effectiveness">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/escalation-matrix">Escalation Matrix</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">An escalation matrix is a predefined routing table that specifies who receives escalated tickets based on ticket type, severity, customer tier, and time-in-queue thresholds. It turns escalation from judgment-based behavior into a documented operating rule.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/escalation-matrix">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/escalation-path">Escalation Path</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">An escalation path defines who should handle a support issue when the frontline team cannot resolve it, and in what order the handoff should happen. In B2B technical support, a clear escalation path prevents tickets from bouncing randomly between support, product, and engineering.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/escalation-path">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/first-call-resolution">First Call Resolution (FCR)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">First Call Resolution measures the percentage of support tickets resolved in the first interaction, without escalation, callback, or follow-up contact required from the customer. In B2B support, it is a direct test of whether the first responder had enough information and authority to actually solve the problem.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/first-call-resolution">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/first-contact-resolution">First Contact Resolution (FCR)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">First Contact Resolution measures the percentage of tickets solved in the first meaningful reply without follow-up handoffs or repeated back-and-forth. In B2B support, true FCR usually depends on whether the first response includes diagnostic evidence, not just empathy and next steps.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/first-contact-resolution">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/first-response-time">First Response Time (FRT)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">First Response Time measures how long a customer waits between submitting a support ticket and receiving their first human response. It is the most visible support metric from the customer's perspective.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/first-response-time">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/forward-deployment">Forward Deployment</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Forward deployment is a go-to-market and engineering model where technical team members work directly with customers during implementation, onboarding, and issue resolution. Instead of throwing requirements over a wall to product teams, forward-deployed engineers configure integrations, debug live workflows, and feed product insights back into the roadmap. The model is common in enterprise software where each customer environment is different and time-to-value depends on hands-on technical problem solving during the first weeks of adoption.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/forward-deployment">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/handle-time">Handle Time</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Handle time is the total elapsed time from when an agent opens a ticket to when they close it, including all active work, hold periods, and transfers. It represents the end-to-end ticket lifecycle from the agent's perspective rather than just the average across many tickets.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/handle-time">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/hold-time">Hold Time</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Hold time is the total time a customer waits for a response after submitting a ticket across all wait periods in the lifecycle, including initial response, investigation holds, and between-reply gaps. It is the customer-experienced latency inside an otherwise “active” ticket.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/hold-time">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/incident-management">Incident Management</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Incident management is the process of detecting, responding to, and resolving service disruptions. In B2B SaaS, incidents often surface first through customer support tickets before monitoring alerts.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/incident-management">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/issue-taxonomy">Issue Taxonomy</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Issue taxonomy is a hierarchical classification system for support issues that organizes tickets into standardized categories, sub-categories, and root-cause types. It provides a stable framework for analysis, routing, and trend detection across the support org.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/issue-taxonomy">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/knowledge-base-deflection">Knowledge Base Deflection</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Knowledge base deflection measures how often documentation helps a customer solve an issue without creating a support ticket. It is most valuable for onboarding questions, setup steps, and common workflow answers.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/knowledge-base-deflection">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/langchain">LangChain</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">LangChain is a software framework for building LLM applications that combine prompts, memory, tool use, retrieval, and workflow control in code. Developers use it to define chains and agents that move between model calls and external systems such as vector stores, SQL databases, ticketing tools, and web APIs. In support automation, it is commonly used to structure retrieval, tool calling, and response generation so the application can work with live customer and operational data rather than static prompt text alone.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/langchain">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/mean-time-to-acknowledge">Mean Time to Acknowledge (MTTA)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Mean Time to Acknowledge measures the average elapsed time between when an issue is created and when a responsible human or system explicitly recognizes ownership. In support and incident operations, acknowledgment is different from full diagnosis or first resolution update. It tells you whether the team saw the problem and started handling it. MTTA is especially important for high-priority tickets because customers interpret silence as inaction even when the team is already investigating behind the scenes.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/mean-time-to-acknowledge">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/mean-time-to-resolution">Mean Time to Resolution (MTTR)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Mean Time to Resolution measures the average time from when a support ticket is created to when it is fully resolved. For B2B technical support, MTTR is the primary metric that drives customer satisfaction and retention.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/mean-time-to-resolution">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/model-context-protocol">Model Context Protocol (MCP)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Model Context Protocol is an open protocol for exposing tools, prompts, and structured resources to LLM-based applications in a standardized way. Instead of wiring each model integration separately, MCP servers present capabilities such as database access, ticket search, or file retrieval through a common interface. That makes it easier to give an AI system controlled access to external context while preserving permission boundaries, typed inputs, and predictable transport behavior across different clients and models.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/model-context-protocol">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/n8n-workflow-automation">n8n Workflow Automation</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">n8n workflow automation is the use of n8n to orchestrate API calls, condition branches, database queries, and message handoffs across multiple systems without writing every step as custom backend code. Teams use it to connect help desks, CRMs, billing platforms, internal tools, and LLM services into event-driven workflows. It is especially useful for support operations because a ticket can trigger enrichment, severity checks, bug search, stakeholder alerts, and response drafting inside one graph-based execution path.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/n8n-workflow-automation">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/net-promoter-score">Net Promoter Score (NPS)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">NPS measures customer loyalty by asking how likely they are to recommend your product (0-10 scale). Promoters (9-10) minus Detractors (0-6) equals your NPS.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/net-promoter-score">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/proactive-support">Proactive Support</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Proactive support means identifying and addressing customer-impacting issues before the customer opens a ticket. In B2B SaaS, that can include noticing error spikes, failed webhooks, billing anomalies, or rollout regressions before they turn into escalations.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/proactive-support">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/production-ai">Production AI</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Production AI refers to machine-learning or LLM-powered systems that run inside live business workflows with real users, real data, and operational consequences. A production AI system must handle permission boundaries, latency budgets, failure recovery, monitoring, and change management, not just answer a benchmark prompt correctly. In support operations, that means the AI needs to read tickets, query systems safely, return evidence-backed outputs, and fail in predictable ways when a dependency is unavailable or data is incomplete.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/production-ai">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/queue-depth">Queue Depth</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Queue depth is the number of tickets currently open and awaiting agent handling, measured at a point in time or as an average over a period. It is a leading indicator of whether the team is about to miss service targets.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/queue-depth">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/resolution-rate">Resolution Rate</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Resolution rate is the percentage of tickets fully resolved within a given period, typically measured as daily or weekly throughput relative to incoming ticket volume. It shows whether the team is keeping up with demand or silently accumulating backlog.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/resolution-rate">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/root-cause-analysis">Root Cause Analysis (RCA)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Root cause analysis in support context is the process of identifying the underlying technical reason for a customer-reported issue, rather than just addressing the symptom.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/root-cause-analysis">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/schedule-adherence">Schedule Adherence</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Schedule adherence measures the percentage of scheduled working time during which support agents are actually available and handling tickets, compared with their published work schedule. It captures the gap between staffing plans and real queue coverage.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/schedule-adherence">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/self-service-rate">Self-Service Rate</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Self-service rate is the percentage of customer issues resolved through self-service channels such as documentation, knowledge bases, FAQs, or chatbots without human agent involvement. It measures how often customers can solve the issue on their own.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/self-service-rate">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/service-level">Service Level</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Service level is the percentage of tickets answered within a target time threshold, typically expressed as “X% of tickets answered within Y minutes.” Unlike an SLA, service level is usually an internal operational target rather than a contractual promise.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/service-level">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/sla-service-level-agreement">Service Level Agreement (SLA)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">A Service Level Agreement (SLA) is a contractual commitment between a vendor and customer that defines the maximum acceptable response and resolution times for support tickets by priority level. SLA breaches — where actual resolution time exceeds the committed window — trigger financial penalties including service credits, pro-rated refunds, or contract termination clauses. For B2B SaaS companies, SLA compliance is a direct revenue protection mechanism.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/sla-service-level-agreement">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/sla-compliance-rate">SLA Compliance Rate</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">SLA compliance rate is the percentage of tickets resolved within the response and resolution commitments promised in customer contracts. It is one of the clearest support metrics tied directly to retained revenue in enterprise B2B accounts.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/sla-compliance-rate">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/support-automation">Support Automation</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Support automation uses software to handle parts of the support workflow without human intervention. This ranges from chatbots answering FAQs to AI systems investigating technical issues by querying production databases.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/support-automation">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/support-automation-roi">Support Automation ROI</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Support automation ROI is the economic return generated when automation reduces ticket handling cost, increases agent throughput, lowers escalations, or protects revenue through faster issue resolution. It should be measured against all-in costs including software, implementation time, maintenance effort, and failure risk. In technical B2B environments, the largest ROI usually comes from removing investigation labor and engineering interrupts rather than from shaving a few seconds off routing or canned replies.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/support-automation-roi">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/support-capacity-planning">Support Capacity Planning</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Support capacity planning is the process of forecasting ticket volume, allocating agent headcount, and scheduling shifts to maintain SLA targets across expected demand patterns. It converts ticket demand into staffing and queue coverage decisions.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/support-capacity-planning">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/support-cost-per-ticket">Support Cost Per Ticket</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Support cost per ticket measures the fully loaded cost of resolving one support issue, including agent time, engineering escalations, tooling, and overhead. In B2B support, this metric jumps quickly when every technical ticket needs manual log analysis or product-engineering involvement.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/support-cost-per-ticket">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/support-deflection">Support Deflection</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Support deflection is the broader practice of reducing agent-handled ticket volume through self-serve content, in-product guidance, automation, or workflow design. It covers knowledge-base deflection, chatbot routing, and other mechanisms that prevent low-value tickets from reaching humans.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/support-deflection">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/support-escalation-rate">Support Escalation Rate</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Support escalation rate is the percentage of tickets that get escalated from frontline support to engineering, senior agents, or management. High escalation rates indicate that L1 agents lack the tools or data to resolve technical issues.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/support-escalation-rate">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/support-quality-score">Support Quality Score</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Support quality score is an internal measure of how accurate, complete, and policy-compliant support responses are. For technical teams, quality means the answer was not only polite, but actually correct and backed by evidence from the customer’s systems.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/support-quality-score">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/support-tier-definition">Support Tier Definition</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Support tier definition is the written specification of each support tier's scope, response obligations, access permissions, and escalation criteria. It is the operating rulebook that makes a tiered support model work consistently.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/support-tier-definition">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/abandonment-rate">Ticket Abandonment Rate</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Ticket abandonment rate is the percentage of customers who submit a ticket or start a support interaction but withdraw it without resolution, either by closing the chat, deleting the ticket, or stopping responses. It measures unresolved demand that disappears from normal closure metrics.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/abandonment-rate">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/ticket-aging">Ticket Aging</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Ticket aging measures the time elapsed since a ticket was created without full resolution. B2B teams usually track aging in hours for P1 and P2 tickets and in days for lower-priority queues.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/ticket-aging">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/ticket-backlog">Ticket Backlog</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Ticket backlog is the number of unresolved tickets waiting in the queue beyond the team’s normal operating window. In B2B support, backlog is especially dangerous when high-value customers with technical incidents are sitting behind slower investigative work.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/ticket-backlog">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/ticket-deflection-rate">Ticket Deflection Rate</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Ticket deflection rate measures the percentage of support requests that never become agent-handled tickets because customers solved the issue through self-serve help, product cues, or automation. For B2B teams, deflection is healthy only when it removes low-value questions without hiding unresolved technical incidents.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/ticket-deflection-rate">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/ticket-deflection-vs-investigation">Ticket Deflection vs. Investigation</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Ticket deflection vs. investigation describes the operating choice between keeping a customer out of the support queue and helping a support team diagnose the issue after the ticket exists. Deflection works best for repeated questions with stable answers, such as setup steps or pricing rules. Investigation matters when the issue depends on live account state, recent deploys, API logs, or billing events. Confusing the two leads teams to build chatbot loops for problems that actually require system evidence and technical diagnosis.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/ticket-deflection-vs-investigation">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/ticket-investigation">Ticket Investigation</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Ticket investigation is the process of diagnosing the root cause of a customer-reported issue by querying multiple internal systems - application logs, databases, billing platforms, bug trackers, and monitoring tools.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/ticket-investigation">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/reopen-rate">Ticket Reopen Rate</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Ticket reopen rate is the percentage of resolved tickets that are reopened by the customer within a defined window, usually 7 or 30 days, because the issue was not fully resolved. It measures how often a “closed” ticket was only temporarily quiet.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/reopen-rate">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/ticket-tagging">Ticket Tagging</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Ticket tagging is the practice of applying structured labels to tickets so they can be categorized by topic, product area, root cause, and resolution type. Consistent tagging is what turns ticket history into usable operational data.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/ticket-tagging">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/ticket-triage">Ticket Triage</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Ticket triage is the front-end decision process that classifies a support request by severity, product area, customer impact, and routing destination. It answers questions such as whether the issue is an outage, a known bug, a billing state problem, or a misuse case. Good triage happens before deep diagnosis and creates clean queues, correct SLA priorities, and the right first owner. Bad triage sends urgent technical issues into slow queues or hands simple requests to expensive specialists.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/ticket-triage">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/tiered-support-model">Tiered Support Model (L1/L2/L3)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">A tiered support model organizes support teams into levels: L1 (frontline agents handling initial contact), L2 (senior agents with deeper technical knowledge), and L3 (engineering teams handling the most complex issues). Each tier has defined scope and escalation paths to the tier above.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/tiered-support-model">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/time-to-first-response">Time to First Response</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Time to First Response measures how long it takes a customer to receive the first human reply after opening a ticket. It is closely related to first response time, but teams often use this wording in dashboards, customer reports, and executive reviews.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/time-to-first-response">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/transfer-rate">Transfer Rate</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Transfer rate is the percentage of tickets transferred from the initial handling agent to another agent, team, or escalation tier before resolution. It measures how often work changes hands before the customer gets an answer.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/transfer-rate">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/webhook">Webhook</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">A webhook is an HTTP callback triggered automatically when a system event occurs, such as a failed payment, closed ticket, or completed deployment. Instead of polling an API on a schedule, the receiving service gets a real-time POST request containing event metadata and identifiers. In support and operations systems, webhooks are used to trigger downstream actions like creating Linear issues, enriching Zendesk tickets, or starting investigation workflows the moment a customer-facing event happens.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/webhook">Read definition →</a></article><article class="rounded-xl border border-border-default p-5 hover:border-accent-muted transition-colors"><h2 class="text-xl font-semibold text-fg-default mb-2"><a class="hover:text-accent-default transition-colors" href="/glossary/wrap-up-time">Wrap-Up Time (After-Call Work)</a></h2><p class="text-sm text-fg-muted leading-relaxed mb-4">Wrap-up time is the time an agent spends completing documentation, CRM updates, and internal notes after a ticket is resolved and before beginning the next ticket. It is the immediate post-resolution portion of support work.</p><a class="text-sm text-accent-default hover:opacity-80 transition-opacity" href="/glossary/wrap-up-time">Read definition →</a></article></div></section></main><footer class="border-t border-edge-subtle"><div class="max-w-[1120px] mx-auto px-6 py-12"><div class="flex flex-col md:flex-row justify-between gap-10"><div><a class="font-display font-bold text-fg tracking-[-0.02em] text-[1.0625rem]" href="/">Altor</a><p class="text-fg-muted text-[0.8125rem] mt-2 max-w-[28ch] leading-relaxed">AI services company. We build and deploy production AI systems that rearchitect high-cost manual workflows.</p><p class="text-fg-faint text-[0.75rem] mt-3 leading-relaxed">Taking on 2–3 new engagements in 2026.</p><p class="text-fg-faint text-[0.75rem] mt-2 leading-relaxed">EST &amp; PST hours · US-based</p><p class="text-fg-faint text-[0.75rem] mt-2 leading-relaxed">Email <a href="mailto:anshul@altorlab.com" class="text-fg-secondary hover:text-fg transition-colors">anshul@altorlab.com</a></p></div><div class="grid grid-cols-2 sm:flex gap-10 sm:gap-12"><div><h4 class="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Product</h4><div class="flex flex-col gap-2.5"><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/about">About</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/#how-we-work">How we work</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/#who-we-work-with">Who we work with</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/blog">Blog</a></div></div><div><h4 class="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Work</h4><div class="flex flex-col gap-2.5"><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/work/support-investigation">Support Investigation</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/customers/portkey">Portkey case study</a></div></div><div><h4 class="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Compare</h4><div class="flex flex-col gap-2.5"><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/compare/altor-vs-doc-chatbots">vs. doc chatbots</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/compare/altor-vs-support-platform-ai">vs. platform AI</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/compare/altor-vs-copilot-for-support">vs. AI copilots</a></div></div><div><h4 class="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Resources</h4><div class="flex flex-col gap-2.5"><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/use-case/api-error-investigation">API error investigation</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/for/ai-infrastructure-companies">For AI infrastructure</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/for/clickhouse-teams">For ClickHouse teams</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/glossary">Glossary</a></div></div><div><h4 class="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Free Tools</h4><div class="flex flex-col gap-2.5"><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/ai-stack">AI Stack Tracker</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/mcp-servers">MCP Server Directory</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/automate">Automation Guides</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/mcp-inspector">MCP Inspector</a></div></div><div><h4 class="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">From the team</h4><div class="flex flex-col gap-2.5"><a href="https://altorlab.xyz/geo-insights/" target="_blank" rel="noopener noreferrer" class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">AI search visibility data</a><a href="https://altorlab.xyz/guides/what-is-geo-optimization/" target="_blank" rel="noopener noreferrer" class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">What is GEO optimization?</a><a href="https://altorlab.xyz/guides/how-to-optimize-for-chatgpt/" target="_blank" rel="noopener noreferrer" class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">Optimizing for ChatGPT</a><a href="https://altorlab.xyz" target="_blank" rel="noopener noreferrer" class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">AltorLab Marketing →</a></div></div><div><h4 class="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Connect</h4><div class="flex flex-col gap-2.5"><a href="mailto:anshul@altorlab.com" class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">Email</a><a href="https://www.linkedin.com/in/ansh27/" target="_blank" rel="noopener noreferrer" class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">LinkedIn</a><a href="https://calendly.com/founders-altorlab/30min" target="_blank" rel="noopener noreferrer" class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200">Book a Demo (US Hours)</a></div></div><div><h4 class="text-fg-muted font-mono text-[0.6875rem] tracking-[0.05em] uppercase mb-4">Trust</h4><div class="flex flex-col gap-2.5"><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/security">Security &amp; Compliance</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/team">Our Team</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/pricing">Pricing</a><a class="text-[0.8125rem] text-fg-secondary hover:text-fg transition-colors duration-200" href="/faq">FAQ</a></div></div></div></div><div class="mt-12 pt-6 border-t border-edge-subtle flex flex-col sm:flex-row justify-between items-center gap-3"><span class="text-[0.75rem] text-fg-faint">© 2026 AltorLab Inc. United States</span><span class="text-[0.75rem] text-fg-faint">Serving US B2B engineering and support teams · EST &amp; PST hours</span></div></div></footer></div></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+
+
+</body></html>
