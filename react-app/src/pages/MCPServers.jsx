@@ -220,11 +220,11 @@ export default function MCPServers() {
   return (
     <>
       <PageHead
-        title={`MCP Server Directory — ${totalServersLabel} Servers | Browse by Category, Language & Use Case`}
-        description="Every MCP server indexed: browse by category, language, and integration. Updated daily from the official registry and GitHub. Used by AI engineers building with Claude, Cursor, and Windsurf."
+        title={`${totalServersLabel} MCP Servers — Find the Right Model Context Protocol Server for Any Task`}
+        description="Search 4,500+ MCP servers for databases, APIs, dev tools, AI/ML, and more. Each entry includes install command, GitHub stars, and category. Updated daily from the official MCP registry."
         slug="/mcp-servers"
         datePublished="2026-04-16"
-        dateModified={meta?.generated_at?.slice(0, 10) ?? '2026-04-16'}
+        dateModified={meta?.generated_at?.slice(0, 10) ?? '2026-05-25'}
         schemaType="WebPage"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'MCP Server Directory', url: null }]}
         itemListSchema={itemListSchema}
