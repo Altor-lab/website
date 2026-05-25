@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Which AI Tools Are 268 B2B Companies Running in Production? 2026 Data | Altor</title>
+<meta name="description" content="Tracker data from 268 B2B companies shows which AI tools reach production: LangChain leads orchestration, OpenAI and Anthropic tie on APIs.">
+<link rel="canonical" href="https://altorlab.com/blog/ai-stack-intelligence-2026">
+<meta property="og:title" content="Which AI Tools Are 268 B2B Companies Running in Production? 2026 Data">
+<meta property="og:description" content="Tracker data from 268 B2B companies shows which AI tools reach production: LangChain leads orchestration, OpenAI and Anthropic tie on APIs.">
+<meta property="og:image" content="https://altorlab.com/og-image.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Altor">
+<meta property="og:url" content="https://altorlab.com/blog/ai-stack-intelligence-2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Which AI Tools Are 268 B2B Companies Running in Production? 2026 Data">
+<meta name="twitter:description" content="Tracker data from 268 B2B companies shows which AI tools reach production: LangChain leads orchestration, OpenAI and Anthropic tie on APIs.">
+<meta name="twitter:image" content="https://altorlab.com/og-image.png">
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"Article","headline":"Which AI Tools Are 268 B2B Companies Running in Production? 2026 Data","author":{"@type":"Organization","name":"Altor","url":"https://altorlab.com"},"publisher":{"@type":"Organization","name":"Altor","url":"https://altorlab.com","logo":{"@type":"ImageObject","url":"https://altorlab.com/favicon.svg"}},"datePublished":"2026-05-24","dateModified":"2026-05-24","mainEntityOfPage":{"@type":"WebPage","@id":"https://altorlab.com/blog/ai-stack-intelligence-2026"},"url":"https://altorlab.com/blog/ai-stack-intelligence-2026","articleSection":"AI Stack Intelligence" }
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What AI tools do SaaS companies use?","acceptedAnswer":{"@type":"Answer","text":"In Altor's 2026 tracker of 268 B2B companies, the most common public production signals were LangChain for orchestration, Algolia and Intercom for customer-facing app layers, and OpenAI plus Anthropic for model APIs. The pattern is practical: search, support, and orchestration tools show up more often than custom model infrastructure."}},{"@type":"Question","name":"What is an AI stack?","acceptedAnswer":{"@type":"Answer","text":"An AI stack is the set of tools a company uses to ship AI in production. In this dataset it breaks into four tiers: model API, orchestration, app layer, and internal tool. Model APIs provide the models, orchestration coordinates calls and context, app-layer tools expose AI to users, and internal tools support teams building or operating the system."}},{"@type":"Question","name":"How do you detect what AI tools a company uses?","acceptedAnswer":{"@type":"Answer","text":"We detect company AI stacks from public signals: job postings that mention specific frameworks, vendor customer pages, engineering posts, product documentation, changelogs, and visible scripts or front-end assets. We only count a tool when the signal suggests actual use, not general interest."}},{"@type":"Question","name":"Which orchestration framework is most popular?","acceptedAnswer":{"@type":"Answer","text":"In this 2026 dataset, LangChain is the most frequently detected orchestration framework with 18 company detections. That makes it the single largest named tool in the tracker and the clearest orchestration default among public B2B production signals."}},{"@type":"Question","name":"What does strong Altor fit mean?","acceptedAnswer":{"@type":"Answer","text":"Strong Altor fit means a company shows public signs of multi-system production AI where investigation work matters: several connected systems, customer-facing AI, and workflows such as support diagnosis, API debugging, or escalation triage. In this tracker, only 24 of 268 companies fall into strong or good fit, which is about 9 percent."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Altor","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://altorlab.com/blog/"},{"@type":"ListItem","position":3,"name":"AI Stack Intelligence 2026","item":"https://altorlab.com/blog/ai-stack-intelligence-2026"}]}
+</script>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
+h1 { font-size: 2rem; line-height: 1.3; color: #f5f5f5; margin-bottom: 0.5rem; }
+h2 { font-size: 1.45rem; color: #f5f5f5; margin-top: 2.5rem; }
+h3 { font-size: 1.15rem; color: #d4a574; margin-top: 1.5rem; }
+a { color: #d4a574; }
+p { margin: 1rem 0; }
+.answer-capsule { background: #111; border-left: 4px solid #d4a574; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+.answer-capsule .label { font-size: 0.7rem; font-weight: 700; color: #d4a574; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+.stat-block { background: #111; border: 1px solid #222; border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0; }
+.stat-block .label { font-size: 0.7rem; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+.stat-block ul { margin: 0; padding-left: 1.2rem; }
+.stat-block li { margin-bottom: 6px; font-size: 0.95rem; color: #d1d5db; }
+blockquote { border-left: 4px solid #d4a574; padding-left: 1.2rem; margin: 1.5rem 0; color: #9ca3af; font-style: italic; }
+blockquote footer { font-style: normal; font-size: 0.85rem; color: #6b7280; margin-top: 6px; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+th { background: #111; color: #f5f5f5; padding: 10px 12px; text-align: left; font-weight: 600; border-bottom: 2px solid #222; }
+td { padding: 9px 12px; border-bottom: 1px solid #1a1a1a; color: #d1d5db; vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+nav { margin-bottom: 2rem; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<nav><a href="/">← Home</a> · <a href="/blog/">Blog</a></nav>
+<article>
+<h1>Which AI Tools Are 268 B2B Companies Running in Production? 2026 Data</h1>
+<p style="color:#6b7280;font-size:0.9rem;margin-top:0.25rem;">May 24, 2026 · Altor · 9 min read</p>
+<div class="answer-capsule">
+<div class="label">Direct Answer</div>
+<p style="margin:0;">If you ask what AI tools do B2B companies use in production, the answer is narrower than the market noise suggests. In Altor's 2026 tracker of 268 B2B companies, LangChain is the largest named orchestration tool at 18 detections. OpenAI and Anthropic are tied at 5 each in the model API tier, which suggests most teams are keeping model choice flexible. In the app layer, Algolia at 11 and Intercom at 9 lead because most shipped AI is still search and support work. Only 24 companies, about 9%, show the multi-system production pattern that makes them strong or good Altor fit.</p>
+</div>
+<p>The public AI market sounds crowded because every vendor claims a platform. The production footprint looks smaller when you count actual company stacks. In this dataset, 268 B2B companies were tracked and only 85 tool detections met the bar for inclusion. That gap matters. Many companies talk about AI. Fewer expose evidence of a company AI stack that reaches customers, agents, or internal teams in daily operations.</p>
+<div class="stat-block">
+<div class="label">Tracker Snapshot</div>
+<ul>
+<li><strong>268 companies</strong> tracked across public B2B signals. <cite style="color:#6b7280;">(Altor AI Stack Tracker, 2026)</cite></li>
+<li><strong>85 total tool detections</strong> met the threshold for public production evidence. <cite style="color:#6b7280;">(Altor AI Stack Tracker, 2026)</cite></li>
+<li><strong>LangChain: 18 companies</strong>, the largest single named tool in the dataset. <cite style="color:#6b7280;">(Altor AI Stack Tracker, 2026)</cite></li>
+<li><strong>Algolia: 11</strong> and <strong>Intercom: 9</strong> lead the app layer. <cite style="color:#6b7280;">(Altor AI Stack Tracker, 2026)</cite></li>
+<li><strong>24 of 268 companies</strong> show strong or good Altor fit. <cite style="color:#6b7280;">(Altor AI Stack Tracker, 2026)</cite></li>
+</ul>
+</div>
+<h2>What counts as a company AI stack</h2>
+<p>For this analysis, a company AI stack is not "they use ChatGPT internally." It is the visible set of tools that help ship AI into product, support, search, or internal workflows. We grouped every detection into four tiers because companies rarely buy one thing called an AI stack. They assemble layers.</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Tier</th>
+<th scope="col">What it means</th>
+<th scope="col">Detections</th>
+<th scope="col">What it usually says about maturity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model API</td>
+<td>The model provider: OpenAI, Anthropic, Google AI, AWS-hosted models.</td>
+<td>26</td>
+<td>Shows a team is calling models, but not yet whether it built durable workflows around them.</td>
+</tr>
+<tr>
+<td>Orchestration</td>
+<td>The layer coordinating prompts, tools, retrieval, state, and routing.</td>
+<td>27</td>
+<td>Usually signals active engineering work beyond one-off API calls.</td>
+</tr>
+<tr>
+<td>App layer</td>
+<td>Customer-facing AI in search, support, or assistant surfaces.</td>
+<td>25</td>
+<td>Indicates AI has reached end users or support teams.</td>
+</tr>
+<tr>
+<td>Internal tool</td>
+<td>Ops or developer tools used to support AI build and runtime.</td>
+<td>7</td>
+<td>Shows supporting systems, but not always shipped AI value by itself.</td>
+</tr>
+</tbody>
+</table>
+<p>The tier mix tells you something useful. The counts are close for orchestration, model APIs, and app layer. That means the average detected company is not spending all its time on models. It is trying to connect models to product surfaces and workflow logic.</p>
+<h2>LangChain is the default orchestration layer</h2>
+<p>LangChain appears at 18 companies, which makes it both the top orchestration framework and the largest single tool across the full tracker. That does not mean LangChain is the best fit for every team. It means it is the most visible default when companies need to wire together prompts, tool calls, and context fast enough to ship.</p>
+<p>That lead also says something about how B2B teams are building. Most teams are not training custom models. They are composing APIs, retrieval, and workflow steps. Orchestration matters because production AI fails when the system around the model is weak: missing retries, weak tool selection, bad context windows, or poor traceability.</p>
+<blockquote>
+"The first sign that a company is past the AI-curious stage is not model choice. It is whether they built workflow control around the model. Orchestration is where production intent starts to show up."
+<footer>— Altor AI Stack Tracker notes, May 2026</footer>
+</blockquote>
+<p>If you are mapping competitors, LangChain detections are a useful signal because they usually imply hands-on implementation work. A press release about AI says nothing. A job post asking for LangChain, tracing, or agent workflow experience usually means the company is trying to make AI behave inside a repeatable system.</p>
+<h2>Model APIs are fragmented on purpose</h2>
+<p>The model API tier is the clearest sign that most companies want options. OpenAI and Anthropic are tied at 5 detections each. Google AI shows up 8 times, AWS 5, and other providers fill out the rest. No single provider dominates the same way LangChain does in orchestration.</p>
+<p>That pattern points to model-agnostic behavior. B2B teams do not want their product logic locked to one vendor if latency, price, or quality changes next quarter. They can switch APIs more easily than they can rewrite orchestration or retrain support teams. The model is the replaceable layer. The workflow is the sticky layer.</p>
+<p>This is one reason company AI stack analysis matters for Altor. A company using one model API for copy generation is different from a company routing live support or diagnosis work across several systems. The first is AI-curious. The second is building production dependence.</p>
+<h2>Most shipped AI is still search and support work</h2>
+<p>In the app layer, Algolia shows up 11 times and Intercom 9 times. That is not an accident. The most common production AI surface in B2B is still a search box, help assistant, or support workflow. It is easier to ship measurable value there because the problem is narrow, the input volume is high, and the ROI is easy to see.</p>
+<p>Search and support-facing AI also create public signals faster than internal copilots. Customer pages mention new help features. Job posts ask for retrieval tuning. Vendors publish customer logos. By contrast, internal AI work can stay invisible for months.</p>
+<p>What does this mean in practice? If a company's visible AI stack is centered on Algolia, Intercom, and one model API, it probably has customer-facing AI but not deep investigation logic. If you also see orchestration tools, data systems, or support tooling around it, the stack starts to look more operational.</p>
+<h2>Why only 9% show strong or good Altor fit</h2>
+<p>The strongest line in the dataset is not the top tool. It is the fit breakdown. Only 11 companies scored strong fit and 13 scored good fit. That is 24 out of 268, or about 9%. The other 244 companies fall into moderate or low fit.</p>
+<p>That is expected. Altor fits companies with multi-system production AI where live investigation matters. You need enough product and ops complexity for diagnosis to be expensive: support tickets that touch usage data, incidents, billing state, code history, or customer-specific config. Most B2B companies are not there yet in public signals.</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Fit level</th>
+<th scope="col">Company count</th>
+<th scope="col">What it usually means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strong</td>
+<td>11</td>
+<td>Clear signs of multi-system production AI with investigation-heavy workflows.</td>
+</tr>
+<tr>
+<td>Good</td>
+<td>13</td>
+<td>Production AI exists and likely touches support, search, or diagnosis paths.</td>
+</tr>
+<tr>
+<td>Moderate</td>
+<td>32</td>
+<td>Meaningful AI motion, but not enough evidence of investigation depth yet.</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>212</td>
+<td>Light AI signals, vendor experimentation, or weak evidence of shipped systems.</td>
+</tr>
+</tbody>
+</table>
+<p>For Altor, this is useful because it narrows the market to companies where production AI already creates operational pain. Those companies do not need another writing assistant. They need investigation systems that can query live data across multiple tools. See <a href="/work/support-investigation">how support investigation works in production</a>, the <a href="/ai-stack">AI stack tracker</a>, and our page for <a href="/for/ai-infrastructure-companies">AI infrastructure companies</a>.</p>
+<h2>How we detect what AI tools a company uses</h2>
+<p>We only count public signals that suggest use, not interest. The methodology pulls from job postings, vendor customer pages, changelogs, engineering posts, visible scripts, product docs, and launch notes. A hiring page that says "experience with LangChain preferred" counts more than a blog post that says "we are excited about AI." A vendor page listing a customer can count if the use case matches the company's public product surface.</p>
+<p>This approach misses private tooling and internal prototypes. That is fine. The point is not perfect coverage of hidden work. The point is a comparable production-signal dataset. Public evidence is often enough to separate companies shipping AI now from companies still assembling slides.</p>
+<h2>What this says about AI-native vs AI-curious companies</h2>
+<p>AI-native companies show stacked signals across tiers. They have a model API, an orchestration layer, and an app-layer surface tied to a repeatable workflow. AI-curious companies usually show one of those layers in isolation. They may mention OpenAI in a job post or add one assistant to the help center, but there is little evidence of cross-system execution.</p>
+<p>That distinction matters for buyers, partners, and competitors. A company with one public AI feature may still be far from durable production use. A company with orchestration, customer-facing AI, and signals from support or search is more likely to invest through failures and keep shipping. That is the set to watch.</p>
+<section aria-label="FAQ">
+<h2>Frequently Asked Questions</h2>
+<h3>What AI tools do SaaS companies use?</h3>
+<p>In Altor's 2026 tracker of 268 B2B companies, the most common public production signals were LangChain for orchestration, Algolia and Intercom for customer-facing app layers, and OpenAI plus Anthropic for model APIs. The pattern is practical: search, support, and orchestration tools show up more often than custom model infrastructure.</p>
+<h3>What is an AI stack?</h3>
+<p>An AI stack is the set of tools a company uses to ship AI in production. In this dataset it breaks into four tiers: model API, orchestration, app layer, and internal tool. Model APIs provide the models, orchestration coordinates calls and context, app-layer tools expose AI to users, and internal tools support teams building or operating the system.</p>
+<h3>How do you detect what AI tools a company uses?</h3>
+<p>We detect company AI stacks from public signals: job postings that mention specific frameworks, vendor customer pages, engineering posts, product documentation, changelogs, and visible scripts or front-end assets. We only count a tool when the signal suggests actual use, not general interest.</p>
+<h3>Which orchestration framework is most popular?</h3>
+<p>In this 2026 dataset, LangChain is the most frequently detected orchestration framework with 18 company detections. That makes it the single largest named tool in the tracker and the clearest orchestration default among public B2B production signals.</p>
+<h3>What does strong Altor fit mean?</h3>
+<p>Strong Altor fit means a company shows public signs of multi-system production AI where investigation work matters: several connected systems, customer-facing AI, and workflows such as support diagnosis, API debugging, or escalation triage. In this tracker, only 24 of 268 companies fall into strong or good fit, which is about 9 percent.</p>
+</section>
+<p>If you want to know whether your company AI stack points to a production investigation problem, <a href="https://calendly.com/founders-altorlab/30min">book a 30-minute scoping call</a>. We'll map the systems, the workflow tier, and whether the stack is ready for live investigation automation.</p>
+<section style="margin-top:2rem;padding:1.2rem;border:1px solid #222;border-radius:8px;background:#111;">
+  <h3 style="margin:0 0 .75rem;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:#6b7280;">Related</h3>
+  <ul style="margin:0;padding-left:1.2rem;display:grid;gap:.4rem;font-size:.9rem;color:#d1d5db;">
+    <li><a href="/ai-stack" style="color:#d4a574;">Track company AI stacks by tool and fit</a></li>
+    <li><a href="/for/ai-infrastructure-companies" style="color:#d4a574;">Why AI infrastructure companies are an early fit for Altor</a></li>
+    <li><a href="/work/support-investigation" style="color:#d4a574;">See the Portkey support investigation deployment</a></li>
+    <li><a href="/blog/why-enterprise-ai-fails-in-production" style="color:#d4a574;">Why most AI pilots still fail before production</a></li>
+  </ul>
+</section>
+</article>
+</body>
+</html>
