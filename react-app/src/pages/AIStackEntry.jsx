@@ -350,22 +350,30 @@ export default function AIStackEntry() {
 
         <div className="rounded-xl border border-border-default bg-surface-1 p-6 md:p-8">
           <p className="text-sm uppercase tracking-[0.12em] text-accent-default mb-3">
-            For Altor
+            From tools to production systems
           </p>
           <h2 className="text-xl font-bold text-fg-default mb-3 tracking-tight">
-            {company.name} is already using AI. We help teams like this ship it to production.
+            {company.name} has AI tools. The question is what they do in production.
           </h2>
           <p className="text-sm text-fg-muted leading-relaxed mb-5">
-            Companies already running {vendors.split(', ')[0]} have the infrastructure foundation.
-            Altor identifies the highest-cost manual workflow, builds the AI system, and deploys it
-            in 3 weeks — not demo.
+            At Portkey (an AI gateway company using {vendors.split(', ')[0]} and similar tools), support investigations
+            took 45 minutes per ticket. After deploying a production AI investigation system: 2 minutes.
+            200+ tickets. 14 days from kickoff to live.
           </p>
-          <a
-            href={`mailto:anshul@altorlab.com?subject=${encodeURIComponent(`AI Services — ${company.name} context`)}&body=${encodeURIComponent(`Hi,\n\nI noticed you track ${company.name}'s AI stack. We're interested in discussing how Altor could help us ship production AI systems.\n\nWorkflow:\nSystems involved:\nTimeline:`)}`}
-            className="text-sm font-medium text-accent-default hover:opacity-80 transition-opacity"
-          >
-            Email us about your workflow →
-          </a>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="/work/support-investigation"
+              className="text-sm font-medium text-accent-default hover:opacity-80 transition-opacity"
+            >
+              Read the Portkey case study →
+            </a>
+            <a
+              href="/blog/ai-agent-cost-b2b-support-automation"
+              className="text-sm font-medium text-fg-muted hover:text-fg-default transition-colors"
+            >
+              What does this cost? →
+            </a>
+          </div>
         </div>
 
         <p className="mt-8 text-xs text-fg-muted max-w-2xl leading-relaxed">

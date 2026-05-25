@@ -352,19 +352,26 @@ export default function MCPServers() {
             </p>
 
             {activeCategory === 'All' && !search && page === 1 && (
-              <div className="mb-8 rounded-xl border border-accent-muted/40 bg-accent-muted/5 p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div>
-                  <p className="text-sm font-semibold text-fg-default">Deploying MCP in production?</p>
-                  <p className="text-xs text-fg-muted mt-0.5">Altor connects MCP servers to ClickHouse, Linear, Stripe, and GitHub — live in 3 weeks. Fixed price.</p>
+              <div className="mb-8 rounded-xl border border-accent-muted/40 bg-accent-muted/5 p-5">
+                <p className="text-sm font-semibold text-fg-default">Browsing MCP servers is step one. Deploying them in production is another.</p>
+                <p className="text-xs text-fg-muted mt-1 leading-relaxed max-w-xl">
+                  At Portkey, we connected 6 production systems via MCP and deployed an AI investigation engine in 14 days.
+                  Result: support ticket investigation dropped from 45 minutes to 2 minutes — 200+ tickets in production.
+                </p>
+                <div className="flex flex-wrap gap-4 mt-3">
+                  <a
+                    href="/work/support-investigation"
+                    className="text-xs font-medium text-accent-default hover:opacity-80 transition-opacity"
+                  >
+                    Read the case study →
+                  </a>
+                  <a
+                    href="/blog/deploy-ai-investigation-engine"
+                    className="text-xs font-medium text-fg-muted hover:text-fg-default transition-colors"
+                  >
+                    How we deployed it in 3 weeks →
+                  </a>
                 </div>
-                <a
-                  href="https://calendly.com/founders-altorlab/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 px-4 py-2 rounded-lg bg-accent-default text-white text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
-                >
-                  Book a call →
-                </a>
               </div>
             )}
 
@@ -401,20 +408,29 @@ export default function MCPServers() {
             )}
 
             <div className="mt-16 rounded-xl border border-border-default bg-surface-1 p-6 md:p-8 max-w-2xl">
-              <p className="text-sm uppercase tracking-[0.12em] text-accent-default mb-3">Ship MCP in production</p>
+              <p className="text-sm uppercase tracking-[0.12em] text-accent-default mb-3">What production looks like</p>
               <h2 className="text-xl font-bold text-fg-default mb-3 tracking-tight">
-                Get your MCP server wired into production in 3 weeks.
+                Portkey's support team went from 45 min to 2 min per ticket.
               </h2>
               <p className="text-sm text-fg-muted leading-relaxed mb-5">
-                Altor integrates MCP servers with your live data systems — ClickHouse, Linear, Stripe, GitHub — writes the glue code, handles auth, and deploys. Fixed-scope engagement, fixed price.
+                We connected 6 production systems via MCP, built investigation playbooks that refine against real data,
+                and deployed in 14 days. 200+ tickets diagnosed. The system gets smarter with every ticket it investigates.
               </p>
-              <a
-                href="https://calendly.com/founders-altorlab/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-accent-default hover:opacity-80 transition-opacity"
-              >
-                Book a 30-min scoping call →
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="/work/support-investigation"
+                  className="text-sm font-medium text-accent-default hover:opacity-80 transition-opacity"
+                >
+                  Full case study →
+                </a>
+                <a
+                  href="/blog/mcp-servers-to-production-ai-systems"
+                  className="text-sm font-medium text-fg-muted hover:text-fg-default transition-colors"
+                >
+                  MCP → production: what changes →
+                </a>
+              </div>
+            </div>
               </a>
             </div>
 

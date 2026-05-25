@@ -308,24 +308,30 @@ export default function AIStackTracker() {
 
             <div className="mt-16 rounded-xl border border-border-default bg-surface-1 p-6 md:p-8 max-w-2xl">
               <p className="text-sm uppercase tracking-[0.12em] text-accent-default mb-3">
-                For Altor
+                From tools to production
               </p>
               <h2 className="text-xl font-bold text-fg-default mb-3 tracking-tight">
-                Companies already using AI are your best customers.
+                These companies have AI tools. Most don't have AI systems.
               </h2>
               <p className="text-sm text-fg-muted leading-relaxed mb-5">
-                Every company on this list has shipped AI — which means they have the infrastructure,
-                the data, and the workflows that Altor connects to. They're not asking "should we use AI?"
-                They're asking "how do we make it work in production?"
+                Having LangChain or OpenAI in your stack is step one. Making AI investigate real production issues
+                — querying ClickHouse, Linear, Stripe, and GitHub simultaneously — is something else entirely.
+                At Portkey, we deployed a production investigation engine in 14 days. Investigation time: 45 minutes → 2 minutes.
               </p>
-              <a
-                href="https://calendly.com/founders-altorlab/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-accent-default hover:opacity-80 transition-opacity"
-              >
-                Talk to Altor about production AI systems →
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="/work/support-investigation"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-accent-default hover:opacity-80 transition-opacity"
+                >
+                  See the Portkey case study →
+                </a>
+                <a
+                  href="/blog/ai-agent-cost-b2b-support-automation"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-fg-muted hover:text-fg-default transition-colors"
+                >
+                  What does this cost? →
+                </a>
+              </div>
             </div>
 
             <p className="mt-8 text-xs text-fg-muted max-w-2xl leading-relaxed">
