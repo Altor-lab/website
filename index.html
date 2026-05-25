@@ -82,22 +82,68 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "ProfessionalService",
     "name": "Altor",
+    "alternateName": "AltorLab",
     "url": "https://altorlab.com",
-    "logo": "https://altorlab.com/favicon.svg",
-    "description": "Altor is an AI services company. We build and deploy production AI systems that rearchitect high-cost manual workflows for US enterprises — live in 3 weeks, not months.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://altorlab.com/favicon.svg"
+    },
+    "image": "https://altorlab.com/og-image.png",
+    "description": "Altor is a US AI services company. We build and deploy production AI systems that automate high-cost manual workflows for B2B engineering teams — live in 3 weeks. Founded by ex-Microsoft AI Research and IIT Delhi engineers.",
+    "foundingDate": "2024",
     "areaServed": {
       "@type": "Country",
       "name": "United States"
     },
+    "serviceType": [
+      "Production AI Systems",
+      "AI Workflow Automation",
+      "Forward Deployment AI",
+      "AI Investigation Engines",
+      "MCP Server Development"
+    ],
+    "knowsAbout": [
+      "Production AI deployment",
+      "AI workflow automation",
+      "Support ticket investigation automation",
+      "Large language model integration",
+      "Model Context Protocol",
+      "B2B SaaS AI systems",
+      "AI infrastructure for developer tools"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Production AI Investigation System",
+            "description": "AI system that connects read-only to your existing infrastructure (ClickHouse, Linear, Stripe, GitHub) and reduces support investigation from 45 minutes to under 2 minutes per ticket."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Forward Deployment Engagement",
+            "description": "We embed alongside your engineering team — stack audit Week 1, integrations live Week 2, tuned production system Week 3-4. Typical time to first live AI system: 14 days."
+          }
+        }
+      ]
+    },
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "anshul@altorlab.com",
-      "contactType": "sales"
+      "contactType": "sales",
+      "availableLanguage": "English"
     },
     "sameAs": [
-      "https://www.linkedin.com/in/ansh27/"
+      "https://www.linkedin.com/in/ansh27/",
+      "https://www.crunchbase.com/organization/altorlab"
     ]
   }
   </script>
