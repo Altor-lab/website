@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How We Deployed a Production AI Investigation Engine in 3 Weeks | Altor</title>
+<meta name="description" content="A week-by-week walkthrough of Portkey's AI investigation engine: six systems, read-only integrations, 14 days to live, 45 minutes to 2 minutes.">
+<link rel="canonical" href="https://altorlab.com/blog/deploy-ai-investigation-engine">
+<meta property="og:title" content="How We Deployed a Production AI Investigation Engine in 3 Weeks">
+<meta property="og:description" content="A week-by-week walkthrough of Portkey's AI investigation engine: six systems, read-only integrations, 14 days to live, 45 minutes to 2 minutes.">
+<meta property="og:image" content="https://altorlab.com/og-image.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Altor">
+<meta property="og:url" content="https://altorlab.com/blog/deploy-ai-investigation-engine">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How We Deployed a Production AI Investigation Engine in 3 Weeks">
+<meta name="twitter:description" content="A week-by-week walkthrough of Portkey's AI investigation engine: six systems, read-only integrations, 14 days to live, 45 minutes to 2 minutes.">
+<meta name="twitter:image" content="https://altorlab.com/og-image.png">
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"Article","headline":"How We Deployed a Production AI Investigation Engine in 3 Weeks","author":{"@type":"Organization","name":"Altor","url":"https://altorlab.com"},"publisher":{"@type":"Organization","name":"Altor","url":"https://altorlab.com","logo":{"@type":"ImageObject","url":"https://altorlab.com/favicon.svg"}},"datePublished":"2026-05-24","dateModified":"2026-05-24","mainEntityOfPage":{"@type":"WebPage","@id":"https://altorlab.com/blog/deploy-ai-investigation-engine"},"url":"https://altorlab.com/blog/deploy-ai-investigation-engine","articleSection":"Production AI" }
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you build an AI investigation engine?","acceptedAnswer":{"@type":"Answer","text":"You start by mapping the live systems humans already check during an investigation, then connect those systems with read-only access, define canonical paths, and tune the playbooks against real tickets. The key difference from a chatbot is that the engine queries production data on each case instead of answering from static documents."}},{"@type":"Question","name":"What systems does Altor connect to?","acceptedAnswer":{"@type":"Answer","text":"In the Portkey deployment, Altor connected ClickHouse for usage and error data, Linear for bugs and priorities, Stripe for billing state, GitHub for deployments, Pylon for ticket context, and Statuspage for incident state. The stack can expand as long as the source has an API or query layer."}},{"@type":"Question","name":"How long does it take to deploy?","acceptedAnswer":{"@type":"Answer","text":"Portkey reached first live production investigations in 14 days, with the first three weeks covering audit, integration, and workflow tuning. That is fast because the work starts from an existing ticket workflow and live systems, not from a blank platform build."}},{"@type":"Question","name":"What is read-only by default?","acceptedAnswer":{"@type":"Answer","text":"Read-only means the system can query logs, bug trackers, billing state, deployment history, and ticket data without changing records or taking actions in those systems. The first phase is diagnosis only. Human operators stay in control of escalations and customer responses."}},{"@type":"Question","name":"How do AI investigation playbooks work?","acceptedAnswer":{"@type":"Answer","text":"A playbook is a repeatable investigation path for a ticket type. For example, an API error playbook checks request traces, recent deployments, known bugs, and account state in a set order. Each resolved ticket sharpens that path so future investigations get faster and more precise."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Altor","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://altorlab.com/blog/"},{"@type":"ListItem","position":3,"name":"Deploy AI Investigation Engine","item":"https://altorlab.com/blog/deploy-ai-investigation-engine"}]}
+</script>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
+h1 { font-size: 2rem; line-height: 1.3; color: #f5f5f5; margin-bottom: 0.5rem; }
+h2 { font-size: 1.45rem; color: #f5f5f5; margin-top: 2.5rem; }
+h3 { font-size: 1.15rem; color: #d4a574; margin-top: 1.5rem; }
+a { color: #d4a574; }
+p { margin: 1rem 0; }
+.answer-capsule { background: #111; border-left: 4px solid #d4a574; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+.answer-capsule .label { font-size: 0.7rem; font-weight: 700; color: #d4a574; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+.stat-block { background: #111; border: 1px solid #222; border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0; }
+.stat-block .label { font-size: 0.7rem; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+.stat-block ul { margin: 0; padding-left: 1.2rem; }
+.stat-block li { margin-bottom: 6px; font-size: 0.95rem; color: #d1d5db; }
+blockquote { border-left: 4px solid #d4a574; padding-left: 1.2rem; margin: 1.5rem 0; color: #9ca3af; font-style: italic; }
+blockquote footer { font-style: normal; font-size: 0.85rem; color: #6b7280; margin-top: 6px; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+th { background: #111; color: #f5f5f5; padding: 10px 12px; text-align: left; font-weight: 600; border-bottom: 2px solid #222; }
+td { padding: 9px 12px; border-bottom: 1px solid #1a1a1a; color: #d1d5db; vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+nav { margin-bottom: 2rem; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<nav><a href="/">← Home</a> · <a href="/blog/">Blog</a></nav>
+<article>
+<h1>How We Deployed a Production AI Investigation Engine in 3 Weeks</h1>
+<p style="color:#6b7280;font-size:0.9rem;margin-top:0.25rem;">May 24, 2026 · Altor · 9 min read</p>
+<div class="answer-capsule">
+<div class="label">Direct Answer</div>
+<p style="margin:0;">We deployed Portkey's production AI investigation engine by starting with the exact systems support engineers already used, not a separate AI sandbox. Week 1 mapped six systems and three investigation paths. Week 2 put read-only integrations live and ran the first real tickets. Week 3 pushed playbook tuning, confidence scoring, and path-specific refinements using live outcomes. Portkey reached first production investigations in 14 days, cut median investigation time from 45 minutes to 2 minutes, and reused about 80% of the logic after 200 tickets because the engine learned from repeat patterns instead of answering from static docs.</p>
+</div>
+<p>Most AI support projects start from documents. This one started from work. Portkey's support engineers were already doing investigations across ClickHouse, Linear, Stripe, GitHub, Pylon, and Statuspage. The problem was not lack of knowledge. The problem was time. Every serious ticket required a human to open six tabs, build a timeline, check account state, compare incidents, and decide whether the failure came from billing, deploys, or customer usage.</p>
+<p>That is why the system was built as an investigation engine, not a chatbot. A chatbot answers from text it already has. An investigation engine queries live systems, joins evidence, and produces a diagnosis for one specific ticket right now.</p>
+<div class="stat-block">
+<div class="label">Portkey Deployment Facts</div>
+<ul>
+<li><strong>6 systems</strong> connected in the first audit: ClickHouse, Linear, Stripe, GitHub, Pylon, and Statuspage. <cite style="color:#6b7280;">(Portkey deployment scope, Altor 2026)</cite></li>
+<li><strong>14 days</strong> to first live production investigations. <cite style="color:#6b7280;">(Portkey case study, Altor 2026)</cite></li>
+<li><strong>45 minutes to 2 minutes</strong> median investigation time. <cite style="color:#6b7280;">(Portkey case study, Altor 2026)</cite></li>
+<li><strong>200+ tickets</strong> used to refine playbooks after launch. <cite style="color:#6b7280;">(Portkey case study, Altor 2026)</cite></li>
+<li><strong>80% reusable logic</strong> after 200 tickets. <cite style="color:#6b7280;">(Portkey case study, Altor 2026)</cite></li>
+</ul>
+</div>
+<h2>Week 1: stack audit and path design</h2>
+<p>The first week was not prompt writing. It was workflow mapping. We sat with the support and engineering teams and traced what happened from the moment a ticket entered Pylon to the moment a human sent the final answer. Every step that took human time became a candidate system query or rule.</p>
+<p>The six-system map looked like this. ClickHouse held request volume, latency, and error events. Linear held bug tickets and priority state. Stripe told us whether the account was blocked by billing state or plan changes. GitHub showed deployment timing and rollback history. Pylon held the customer ticket narrative. Statuspage showed whether the reported issue matched a live incident window.</p>
+<p>From that map we defined three canonical investigation paths because those paths covered the largest share of repeated work.</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Path</th>
+<th scope="col">Primary systems</th>
+<th scope="col">Key question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API errors</td>
+<td>ClickHouse, GitHub, Linear</td>
+<td>Did a deploy, known bug, or request pattern create the error burst?</td>
+</tr>
+<tr>
+<td>Billing escalations</td>
+<td>Stripe, Pylon, ClickHouse</td>
+<td>Is access or quota behavior explained by account state, usage, or plan limits?</td>
+</tr>
+<tr>
+<td>Webhook failures</td>
+<td>ClickHouse, GitHub, Statuspage, Linear</td>
+<td>Is the failure tied to latency, retries, deploy regressions, or an incident window?</td>
+</tr>
+</tbody>
+</table>
+<p>The audit also set the access model. Every integration was read-only. The engine could query data, correlate evidence, and return a diagnosis, but it could not modify tickets, billing state, code, or incident records. That is important in week one because it removes the approval bottleneck. Humans stay in control while the system proves accuracy on live work.</p>
+<blockquote>
+"The reason this moved fast is that we did not ask the team to change its workflow. We copied the workflow, instrumented it, and let the system run the read path first."
+<footer>— Altor deployment note from the Portkey engagement, 2026</footer>
+</blockquote>
+<h2>Week 2: read-only integrations live</h2>
+<p>By the second week, the integrations were querying live systems and the engine was running on actual support tickets. That matters more than any offline benchmark. The goal was not to achieve a perfect demo score. The goal was to see what broke on real tickets and where the playbooks needed structure.</p>
+<p>The first investigations showed three things immediately. First, many tickets were under-specified in natural language but over-specified in telemetry. A short customer note like "getting 429s" became actionable once the engine pulled the account, request burst, deploy window, and known regressions. Second, false positives were concentrated in cases where two paths looked similar at the start, especially rate limits versus general latency. Third, the ticket system alone did not contain enough truth to produce a diagnosis with confidence.</p>
+<p>Initial false positives came from one common pattern: the model would over-index on the most recent incident note or the most recent deployment even when billing or account limits were the better explanation. The fix was not a better paragraph. The fix was path-specific ordering. Billing checks had to happen before some classes of deployment reasoning. Known bug links had to be validated against the account's actual feature flags.</p>
+<p>That is the difference between an AI investigation engine and a help assistant. The engine gets better when the query order gets better. It improves through evidence selection and path constraints, not through sounding more polished.</p>
+<h2>Week 3 and week 4: playbook refinement on live tickets</h2>
+<p>Production was live by day 14, but the third week and early fourth week were where the playbooks became durable. We split the noisy cases into distinct branches instead of one generic failure path. Three branches mattered most.</p>
+<h3>Rate limit regression path</h3>
+<p>This path checked request bursts, account plan state, token patterns, and any recent policy changes. It needed to separate customer misuse from platform regressions. The engine learned to compare the ticket window against historical request shape and recent quota changes before raising a deploy suspicion.</p>
+<h3>Latency spike path</h3>
+<p>Latency spikes looked similar to rate limit events at first because both surfaced as failed requests. The refined path prioritized percentile latency, service-level incident markers, and deploy timing before it considered quota or account state. That reduced path confusion and improved diagnosis quality on broad service degradation events.</p>
+<h3>Webhook failure path</h3>
+<p>Webhook failures needed a different sequence. Delivery attempts, endpoint behavior, retries, and recent release changes all mattered. The playbook queried event-level traces first, then cross-checked deploy history and active incident windows, then searched Linear for matching regressions. This path ended up with the clearest evidence chains because it tied one failed event to one specific source record.</p>
+<p>Confidence scoring came from evidence depth, not model tone. A diagnosis scored higher when the engine had matching signals across several systems: for example, a GitHub deploy inside the same window as a ClickHouse error burst and a linked Linear bug. A soft diagnosis scored lower when only one signal existed or when several paths remained plausible. This let support teams know when to trust the draft and when to escalate fast.</p>
+<h2>What changed after 200 tickets</h2>
+<p>After roughly 200 investigations, about 80% of the logic was reusable. That does not mean every future ticket looked the same. It means most of the expensive work was now encoded: which systems to query, in what order, what evidence patterns mattered, and what uncertainty looked like. The remaining 20% was where product changes, new edge cases, and new support motions introduced fresh branches.</p>
+<p>This is why the system keeps improving after deployment. Each real ticket either confirms an existing playbook or forces a new branch. The result is a tighter investigation graph over time. Human engineers no longer spend their time rebuilding the same diagnosis from scratch. They review structured findings and handle the uncommon cases.</p>
+<h2>Why this is different from a chatbot</h2>
+<p>A chatbot answers from documents and prior text. That is useful for help-center questions. It is weak for support diagnosis because the answer often lives in systems, not documents. To explain one failed request, you need current usage data, the exact account state, the deployment window, the bug tracker, and the incident timeline. That data changes hourly.</p>
+<p>An AI investigation engine is built for those live joins. It queries systems, forms a hypothesis, tests it against more evidence, and returns a structured result. The structure matters: root cause, supporting evidence, confidence, next action, and missing context if the ticket still needs a human.</p>
+<p>See the full <a href="/work/support-investigation">support investigation case study</a>, how the system fits into the <a href="/platform">Altor platform</a>, and why the workflow is common among <a href="/for/api-first-developer-tools">API-first developer tools companies</a>.</p>
+<section aria-label="FAQ">
+<h2>Frequently Asked Questions</h2>
+<h3>How do you build an AI investigation engine?</h3>
+<p>You start by mapping the live systems humans already check during an investigation, then connect those systems with read-only access, define canonical paths, and tune the playbooks against real tickets. The key difference from a chatbot is that the engine queries production data on each case instead of answering from static documents.</p>
+<h3>What systems does Altor connect to?</h3>
+<p>In the Portkey deployment, Altor connected ClickHouse for usage and error data, Linear for bugs and priorities, Stripe for billing state, GitHub for deployments, Pylon for ticket context, and Statuspage for incident state. The stack can expand as long as the source has an API or query layer.</p>
+<h3>How long does it take to deploy?</h3>
+<p>Portkey reached first live production investigations in 14 days, with the first three weeks covering audit, integration, and workflow tuning. That is fast because the work starts from an existing ticket workflow and live systems, not from a blank platform build.</p>
+<h3>What is read-only by default?</h3>
+<p>Read-only means the system can query logs, bug trackers, billing state, deployment history, and ticket data without changing records or taking actions in those systems. The first phase is diagnosis only. Human operators stay in control of escalations and customer responses.</p>
+<h3>How do AI investigation playbooks work?</h3>
+<p>A playbook is a repeatable investigation path for a ticket type. For example, an API error playbook checks request traces, recent deployments, known bugs, and account state in a set order. Each resolved ticket sharpens that path so future investigations get faster and more precise.</p>
+</section>
+<p>If your support team already checks several systems per ticket, <a href="https://calendly.com/founders-altorlab/30min">book a 30-minute scoping call</a>. We'll map the investigation paths and tell you whether a read-only deployment can reach production in weeks, not quarters.</p>
+<section style="margin-top:2rem;padding:1.2rem;border:1px solid #222;border-radius:8px;background:#111;">
+  <h3 style="margin:0 0 .75rem;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:#6b7280;">Related</h3>
+  <ul style="margin:0;padding-left:1.2rem;display:grid;gap:.4rem;font-size:.9rem;color:#d1d5db;">
+    <li><a href="/work/support-investigation" style="color:#d4a574;">Portkey: the full support investigation case study</a></li>
+    <li><a href="/platform" style="color:#d4a574;">How the Altor platform runs read-only investigations</a></li>
+    <li><a href="/for/api-first-developer-tools" style="color:#d4a574;">Why API-first developer tools teams fit this workflow</a></li>
+    <li><a href="/blog/why-enterprise-ai-fails-in-production" style="color:#d4a574;">Why most AI pilots break before production</a></li>
+  </ul>
+</section>
+</article>
+</body>
+</html>
