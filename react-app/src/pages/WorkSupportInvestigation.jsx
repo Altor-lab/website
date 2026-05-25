@@ -163,11 +163,11 @@ export default function WorkSupportInvestigation() {
   return (
     <>
       <PageHead
-        title="Support Investigation — Portkey Case Study | Altor"
-        description="Portkey's support team spent 45 minutes per ticket manually investigating across ClickHouse, Linear, Stripe, and GitHub. After deploying Altor: 2 minutes. 200+ tickets. Zero workflow changes."
+        title="AI Support Investigation: 45 Min → 2 Min per Ticket — Portkey Case Study | Altor"
+        description="Portkey engineers spent 45 minutes per support ticket manually querying ClickHouse, Linear, Stripe, and GitHub. Altor deployed a production AI investigation system in 14 days. Result: 2 minutes. 200+ tickets diagnosed."
         slug="/work/support-investigation"
         datePublished="2026-04-14"
-        dateModified="2026-04-14"
+        dateModified="2026-05-24"
       />
 
       <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden">
