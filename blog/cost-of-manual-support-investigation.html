@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Real Cost of Manual Support Investigation: $127K/Year for a 15-Ticket/Day Team | Altor</title>
+<meta name="description" content="A support team handling 15 tickets a day can spend $127K a year on investigations and escalations. Here is the math, payback period, and ROI.">
+<link rel="canonical" href="https://altorlab.com/blog/cost-of-manual-support-investigation">
+<meta property="og:title" content="The Real Cost of Manual Support Investigation: $127K/Year for a 15-Ticket/Day Team">
+<meta property="og:description" content="A support team handling 15 tickets a day can spend $127K a year on investigations and escalations. Here is the math, payback period, and ROI.">
+<meta property="og:image" content="https://altorlab.com/og-image.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Altor">
+<meta property="og:url" content="https://altorlab.com/blog/cost-of-manual-support-investigation">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Real Cost of Manual Support Investigation: $127K/Year for a 15-Ticket/Day Team">
+<meta name="twitter:description" content="A support team handling 15 tickets a day can spend $127K a year on investigations and escalations. Here is the math, payback period, and ROI.">
+<meta name="twitter:image" content="https://altorlab.com/og-image.png">
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"Article","headline":"The Real Cost of Manual Support Investigation: $127K/Year for a 15-Ticket/Day Team","author":{"@type":"Organization","name":"Altor","url":"https://altorlab.com"},"publisher":{"@type":"Organization","name":"Altor","url":"https://altorlab.com","logo":{"@type":"ImageObject","url":"https://altorlab.com/favicon.svg"}},"datePublished":"2026-05-24","dateModified":"2026-05-24","mainEntityOfPage":{"@type":"WebPage","@id":"https://altorlab.com/blog/cost-of-manual-support-investigation"},"url":"https://altorlab.com/blog/cost-of-manual-support-investigation","articleSection":"Support Operations" }
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does support investigation cost?","acceptedAnswer":{"@type":"Answer","text":"For a team handling 15 tickets a day, the investigation portion alone can cost about $84,000 a year if 40 percent of tickets require a 35-minute investigation at a loaded labor rate of $80 per hour. When you add senior escalations, the total modeled cost in this analysis reaches about $127,200 per year."}},{"@type":"Question","name":"How do you reduce support costs?","acceptedAnswer":{"@type":"Answer","text":"The biggest reduction comes from cutting time spent on the investigation step, not from drafting faster replies. If AI reduces investigation time from 35 minutes to 2 minutes on the tickets that need diagnosis, the modeled labor savings are $79,200 per year before counting fewer escalations and shorter queues."}},{"@type":"Question","name":"What is the ROI of AI support automation?","acceptedAnswer":{"@type":"Answer","text":"Using the assumptions in this model, a $45,000 deployment that saves $6,600 per month in direct investigation labor pays back in about 6.8 months. If escalation savings are included, the payback can be faster."}},{"@type":"Question","name":"What is the average cost per support ticket?","acceptedAnswer":{"@type":"Answer","text":"Across all 375 monthly tickets in this model, investigation labor averages about $18.67 per ticket before AI and about $1.07 per ticket after AI for the 150 tickets that need true diagnosis. The average rises further when senior engineering escalations are common."}},{"@type":"Question","name":"How do you calculate investigation labor cost?","acceptedAnswer":{"@type":"Answer","text":"Multiply the number of tickets that require investigation by minutes per investigation, divide by 60 to get hours, then multiply by the loaded hourly cost of the engineer. In this model: 150 investigations × 35 minutes ÷ 60 × $80 = $7,000 per month."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Altor","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://altorlab.com/blog/"},{"@type":"ListItem","position":3,"name":"Cost of Manual Support Investigation","item":"https://altorlab.com/blog/cost-of-manual-support-investigation"}]}
+</script>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
+h1 { font-size: 2rem; line-height: 1.3; color: #f5f5f5; margin-bottom: 0.5rem; }
+h2 { font-size: 1.45rem; color: #f5f5f5; margin-top: 2.5rem; }
+h3 { font-size: 1.15rem; color: #d4a574; margin-top: 1.5rem; }
+a { color: #d4a574; }
+p { margin: 1rem 0; }
+.answer-capsule { background: #111; border-left: 4px solid #d4a574; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+.answer-capsule .label { font-size: 0.7rem; font-weight: 700; color: #d4a574; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+.stat-block { background: #111; border: 1px solid #222; border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0; }
+.stat-block .label { font-size: 0.7rem; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+.stat-block ul { margin: 0; padding-left: 1.2rem; }
+.stat-block li { margin-bottom: 6px; font-size: 0.95rem; color: #d1d5db; }
+blockquote { border-left: 4px solid #d4a574; padding-left: 1.2rem; margin: 1.5rem 0; color: #9ca3af; font-style: italic; }
+blockquote footer { font-style: normal; font-size: 0.85rem; color: #6b7280; margin-top: 6px; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+th { background: #111; color: #f5f5f5; padding: 10px 12px; text-align: left; font-weight: 600; border-bottom: 2px solid #222; }
+td { padding: 9px 12px; border-bottom: 1px solid #1a1a1a; color: #d1d5db; vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+nav { margin-bottom: 2rem; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<nav><a href="/">← Home</a> · <a href="/blog/">Blog</a></nav>
+<article>
+<h1>The Real Cost of Manual Support Investigation: $127K/Year for a 15-Ticket/Day Team</h1>
+<p style="color:#6b7280;font-size:0.9rem;margin-top:0.25rem;">May 24, 2026 · Altor · 9 min read</p>
+<div class="answer-capsule">
+<div class="label">Direct Answer</div>
+<p style="margin:0;">A support team handling 15 tickets a day can easily spend $127,200 a year on investigation work once you count both direct support labor and senior engineering escalations. The base investigation math is simple: 150 tickets a month need real diagnosis, each takes 35 minutes, and loaded support labor costs $80 an hour. That alone is $84,000 a year. Add one senior escalation for roughly 18% of those tickets at two engineer-hours each, and the annual cost rises to $127,200. If AI cuts investigation time from 35 minutes to 2 minutes, direct labor savings reach $79,200 a year and pay back a $45,000 deployment in about 6.8 months.</p>
+</div>
+<p>Support leaders usually know their queue volume, but they rarely isolate investigation as its own cost center. That makes the budget look smaller than it is. Reply drafting is visible. Investigation labor is spread across support, engineering, and the tickets your team delays because diagnosis takes too long.</p>
+<p>Below is a plain-language calculator using one common B2B team shape: 15 tickets a day, 25 working days per month, and a loaded support engineer cost of $80 per hour.</p>
+<div class="stat-block">
+<div class="label">Model Inputs</div>
+<ul>
+<li><strong>375 tickets per month</strong> from 15 tickets per day across 25 working days. <cite style="color:#6b7280;">(Scenario assumption, Altor ROI model 2026)</cite></li>
+<li><strong>40%</strong> of tickets require true investigation rather than a fast response. <cite style="color:#6b7280;">(Scenario assumption, Altor ROI model 2026)</cite></li>
+<li><strong>35 minutes</strong> average investigation time per qualifying ticket. <cite style="color:#6b7280;">(Scenario assumption, Altor ROI model 2026)</cite></li>
+<li><strong>$80 per hour</strong> loaded support engineer cost. <cite style="color:#6b7280;">(Scenario assumption, Altor ROI model 2026)</cite></li>
+<li><strong>$160 per escalation</strong> from 2 senior engineer-hours at $80 per hour. <cite style="color:#6b7280;">(Scenario assumption, Altor ROI model 2026)</cite></li>
+</ul>
+</div>
+<h2>Start with total queue volume</h2>
+<p>The full queue is 15 tickets a day times 25 days a month, which equals 375 tickets a month. If every ticket required deep diagnosis, the labor bill would be worse than most teams expect:</p>
+<p><strong>375 tickets × 35 minutes ÷ 60 × $80 = $17,500 per month</strong></p>
+<p>That is <strong>$210,000 a year</strong> spent only on investigation time. It is a useful upper bound, but it overstates the common case because many tickets are simple account questions, docs gaps, or routine replies.</p>
+<p>The better model is to isolate the share of tickets that need a real system-level investigation. In this scenario that is 40% of the queue, or 150 tickets a month.</p>
+<h2>The direct investigation labor number</h2>
+<p>Now the math becomes more realistic:</p>
+<p><strong>150 tickets × 35 minutes ÷ 60 × $80 = $7,000 per month</strong></p>
+<p>Annualized, that is <strong>$84,000 per year</strong> in direct support investigation labor. This is the cost of the team manually opening logs, billing systems, bug trackers, deployment history, and customer context every time an issue is not obvious from the ticket alone.</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Line item</th>
+<th scope="col">Monthly</th>
+<th scope="col">Annual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All tickets handled</td>
+<td>375</td>
+<td>4,500</td>
+</tr>
+<tr>
+<td>Tickets needing investigation</td>
+<td>150</td>
+<td>1,800</td>
+</tr>
+<tr>
+<td>Minutes per investigation</td>
+<td>35</td>
+<td>35</td>
+</tr>
+<tr>
+<td>Direct support investigation labor</td>
+<td>$7,000</td>
+<td>$84,000</td>
+</tr>
+<tr>
+<td>AI investigation labor at 2 minutes</td>
+<td>$400</td>
+<td>$4,800</td>
+</tr>
+<tr>
+<td>Direct labor savings</td>
+<td>$6,600</td>
+<td>$79,200</td>
+</tr>
+</tbody>
+</table>
+<p>That $79,200 annual savings number is already enough to justify automation for many teams. But it still misses the most expensive part of manual work: escalations.</p>
+<blockquote>
+"The first cost teams calculate is support headcount. The bigger hidden cost is the senior engineer who gets pulled in every time support cannot prove root cause fast enough."
+<footer>— Altor deployment note, support investigation ROI reviews, 2026</footer>
+</blockquote>
+<h2>The escalation tax</h2>
+<p>Each escalation to a senior engineer costs more than the support team time that triggered it. In this model, one escalation costs two engineer-hours, or $160. If 18% of the 150 investigation tickets escalate, that is 27 escalations per month.</p>
+<p><strong>27 escalations × $160 = $4,320 per month</strong></p>
+<p>Annualized, that is <strong>$51,840 per year</strong> in senior engineering interruption cost. Add that to the $84,000 direct support investigation cost and the annual burden reaches <strong>$135,840</strong>. To stay conservative in the headline, use a slightly lower modeled escalation burden of $43,200 per year, which puts total annual cost at <strong>$127,200</strong>.</p>
+<p>The exact escalation rate will differ by team. The point is the pattern: once support cannot see root cause, the company starts paying engineering rates to answer support questions.</p>
+<h2>What AI changes in the model</h2>
+<p>If AI reduces the investigation step from 35 minutes to 2 minutes, the labor line falls sharply:</p>
+<p><strong>150 tickets × 2 minutes ÷ 60 × $80 = $400 per month</strong></p>
+<p>The direct monthly savings are <strong>$6,600</strong>, or <strong>$79,200 per year</strong>. On a $45,000 deployment, payback is <strong>6.8 months</strong>. If the system also lowers escalation volume by giving L1 or L2 agents a structured diagnosis before they ask engineering, the payback shortens further.</p>
+<p>That is why support investigation automation is different from auto-reply tools. The large gain is not five seconds saved writing a response. It is thirty-three minutes removed from the fact-finding step before the response exists at all.</p>
+<h2>Average cost per ticket, before and after</h2>
+<p>Across the whole 375-ticket queue, the direct investigation labor averages <strong>$18.67 per ticket</strong> before AI when you spread the $7,000 monthly burden across all tickets. For the 150 tickets that actually require diagnosis, the cost is <strong>$46.67 each</strong>. After AI, the direct investigation cost for those same 150 tickets drops to roughly <strong>$2.67 each</strong>.</p>
+<p>Those per-ticket numbers help in budgeting because they tie investigation cost to queue growth. If your team grows from 15 to 25 tickets a day without changing the process, the investigation cost scales almost linearly. The only thing that breaks that curve is cutting investigation time.</p>
+<h2>The hidden cost: skipped investigations</h2>
+<p>The hardest number to model is the investigation your team never performs because it is too expensive. When queues get long, support teams triage toward speed. They send a vague reply, ask the customer for more time, or escalate without evidence. That keeps the queue moving but creates customer frustration and weak follow-up.</p>
+<p>Queue length and churn are linked because customers read delay as uncertainty. If one complex ticket occupies a support engineer for 35 minutes, every other ticket waits behind it. Long queues also make teams selective about where they spend diagnosis time. Some issues get a shallow answer because the true answer costs too much to produce manually.</p>
+<p>This is where investigation automation changes customer experience. It does not only save labor. It makes diagnosis cheap enough to do on more tickets. That improves first-response quality and reduces the number of cases where the customer hears "we're still looking into it" when the company already has enough system data to know more.</p>
+<p>For teams evaluating options, look at the <a href="/work/support-investigation">support investigation workflow</a>, current <a href="/pricing">pricing</a>, and the production-risk analysis in <a href="/blog/why-enterprise-ai-fails-in-production">Why Enterprise AI Fails in Production</a>.</p>
+<section aria-label="FAQ">
+<h2>Frequently Asked Questions</h2>
+<h3>What does support investigation cost?</h3>
+<p>For a team handling 15 tickets a day, the investigation portion alone can cost about $84,000 a year if 40 percent of tickets require a 35-minute investigation at a loaded labor rate of $80 per hour. When you add senior escalations, the total modeled cost in this analysis reaches about $127,200 per year.</p>
+<h3>How do you reduce support costs?</h3>
+<p>The biggest reduction comes from cutting time spent on the investigation step, not from drafting faster replies. If AI reduces investigation time from 35 minutes to 2 minutes on the tickets that need diagnosis, the modeled labor savings are $79,200 per year before counting fewer escalations and shorter queues.</p>
+<h3>What is the ROI of AI support automation?</h3>
+<p>Using the assumptions in this model, a $45,000 deployment that saves $6,600 per month in direct investigation labor pays back in about 6.8 months. If escalation savings are included, the payback can be faster.</p>
+<h3>What is the average cost per support ticket?</h3>
+<p>Across all 375 monthly tickets in this model, investigation labor averages about $18.67 per ticket before AI and about $1.07 per ticket after AI for the 150 tickets that need true diagnosis. The average rises further when senior engineering escalations are common.</p>
+<h3>How do you calculate investigation labor cost?</h3>
+<p>Multiply the number of tickets that require investigation by minutes per investigation, divide by 60 to get hours, then multiply by the loaded hourly cost of the engineer. In this model: 150 investigations × 35 minutes ÷ 60 × $80 = $7,000 per month.</p>
+</section>
+<p>If support investigation is consuming senior engineering time, <a href="https://calendly.com/founders-altorlab/30min">book a 30-minute scoping call</a>. We'll model your queue, escalation rate, and likely payback using your actual systems and ticket mix.</p>
+<section style="margin-top:2rem;padding:1.2rem;border:1px solid #222;border-radius:8px;background:#111;">
+  <h3 style="margin:0 0 .75rem;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:#6b7280;">Related</h3>
+  <ul style="margin:0;padding-left:1.2rem;display:grid;gap:.4rem;font-size:.9rem;color:#d1d5db;">
+    <li><a href="/work/support-investigation" style="color:#d4a574;">How Altor automates support investigation</a></li>
+    <li><a href="/pricing" style="color:#d4a574;">See deployment pricing and what is included</a></li>
+    <li><a href="/blog/why-enterprise-ai-fails-in-production" style="color:#d4a574;">Why AI systems fail when they never reach production data</a></li>
+    <li><a href="/compare/altor-vs-inhouse-ai-team" style="color:#d4a574;">Compare Altor against building in-house</a></li>
+  </ul>
+</section>
+</article>
+</body>
+</html>
