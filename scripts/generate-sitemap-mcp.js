@@ -10,8 +10,12 @@ const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 const servers = data.servers || [];
 const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
 
-// Generate XML entries
-const urlEntries = servers.map(server => {
+const validServers = servers.filter(server => {
+  const id = String(server.id || '');
+  return id && !id.includes('#') && !id.includes('?');
+});
+
+const urlEntries = validServers.map(server => {
   const lastmod = server.last_updated || today;
   return `  <url>
     <loc>https://altorlab.com/mcp-servers/${server.id}</loc>
