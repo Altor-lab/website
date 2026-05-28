@@ -1113,9 +1113,9 @@ export const blogPosts = {
   aiAgentCostGuide: {
     slug: '/blog/ai-agent-cost-pricing-guide',
     title: 'How Much Does It Cost to Build an AI Agent? (2026 Pricing Guide)',
-    description: 'Custom AI agent development costs $10K-$75K for a production deployment. Here is the complete pricing breakdown by scope, timeline, and ongoing costs - with real examples.',
+    description: 'AI agent development costs $10K–$75K for production. Real pricing tiers, ROI calculator, build-vs-buy breakdown, and the Portkey case study: 45 min → 2 min per ticket.',
     datePublished: '2026-04-15',
-    dateModified: '2026-04-15',
+    dateModified: '2026-05-25',
     readTime: '6 min read',
 
     headline: 'How much does it cost to build an AI agent in 2026?',

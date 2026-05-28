@@ -92,8 +92,8 @@ export default function AutomationPage() {
     <>
       {page && (
         <PageHead
-          title={`${page.title} | Altor`}
-          description={page.description}
+          title={`How to Automate ${wf?.label} with ${toolData?.label}: Step-by-Step Guide (2026) | Altor`}
+          description={`${wf?.description} Automate ${wf?.label?.toLowerCase()} in production with ${toolData?.label}. ${wf?.outcome || ''}`}
           slug={page.slug}
           datePublished="2026-04-16"
           dateModified={todayStr}

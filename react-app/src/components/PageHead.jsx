@@ -26,7 +26,8 @@ const PageHead = ({
       el.setAttribute('content', content)
     }
 
-    const url = `${BASE_URL}${slug}`
+    const normalizedSlug = (slug || '').replace(/\/$/, '')
+    const url = `${BASE_URL}${normalizedSlug}`
 
     setMeta('name', 'description', description)
     setMeta('name', 'title', title)
