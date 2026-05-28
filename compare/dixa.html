@@ -37,7 +37,7 @@ ul { padding-left: 1.2rem; }
 .card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 16px 18px; margin-top: 1rem; }
 .cta { display: inline-block; margin-top: 1.5rem; font-weight: 600; }
 section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and Dixa?","acceptedAnswer":{"@type":"Answer","text":"Dixa manages customer conversations across channels. Altor investigates the technical systems behind the issue."}},{"@type":"Question","name":"Is Altor better than Dixa for B2B support?","acceptedAnswer":{"@type":"Answer","text":"For technical diagnosis, yes. For omnichannel service operations, Dixa is stronger."}},{"@type":"Question","name":"How much does Dixa cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"Dixa is generally seat-based or enterprise-priced. Altor is usage-based by investigation."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Dixa do better than Altor?","acceptedAnswer":{"@type":"Answer","text":"Dixa is stronger when the main job is omnichannel customer service platform and agent routing. Altor is not trying to replace that category; it is focused on technical ticket diagnosis."}},{"@type":"Question","name":"Can Dixa investigate tickets by reading ClickHouse, Stripe, or GitHub?","acceptedAnswer":{"@type":"Answer","text":"No — strong CX integrations, not direct investigation across engineering and billing tools"}},{"@type":"Question","name":"When is Altor a better fit than Dixa?","acceptedAnswer":{"@type":"Answer","text":"Altor is a better fit when support teams need live evidence from product, billing, and engineering systems before they can answer a ticket accurately."}},{"@type":"Question","name":"Can Altor and Dixa be used together?","acceptedAnswer":{"@type":"Answer","text":"Often yes. Dixa can stay in place for its core workflow, while Altor handles the investigation step for technical cases that need live production evidence."}},{"@type":"Question","name":"How is pricing different between Altor and Dixa?","acceptedAnswer":{"@type":"Answer","text":"Altor is priced by investigation usage, while Dixa is typically sold as seat-based or enterprise quote pricing. The difference matters if only a slice of your queue needs deep diagnosis."}}]}</script>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Altor","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Compare","item":"https://altorlab.com/compare/"},{"@type":"ListItem","position":3,"name":"Altor vs Dixa \u2014 AI Support Investigation Compared for US B2B","item":"https://altorlab.com/compare/dixa.html"}]}</script>
 </head>
@@ -50,31 +50,48 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 <p><strong>TL;DR:</strong> Dixa is good at routing and managing conversations across channels. Altor is better for technical B2B tickets where the answer requires investigation across internal systems.</p>
 
 <h2>Feature Comparison</h2>
-<table>
-<tr><th>Feature</th><th>Altor</th><th>Dixa</th></tr>
-<tr><td>Approach</td><td>Investigation-first (pulls live data)</td><td>Conversation-centric customer service platform</td></tr>
-<tr><td>Data Sources</td><td>ClickHouse, Linear, Stripe, GitHub</td><td>Voice, chat, messaging, CRM and service integrations</td></tr>
-<tr><td>Resolution Method</td><td>Automated root-cause diagnosis</td><td>Routing, agent workspace, service workflow orchestration</td></tr>
-<tr><td>Best For</td><td>B2B SaaS with technical tickets</td><td>Teams improving customer conversations across channels</td></tr>
-<tr><td>Pricing</td><td>Usage-based in USD ($). Popular with US support teams</td><td>Seat-based and enterprise plans (USD pricing for US teams varies by contract)</td></tr>
+<table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;">
+  <thead><tr>
+    <th scope="col" style="background:#111;color:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;border-bottom:2px solid #222;">Feature</th>
+    <th scope="col" style="background:#111;color:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;border-bottom:2px solid #222;">Altor</th>
+    <th scope="col" style="background:#111;color:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;border-bottom:2px solid #222;">Dixa</th>
+  </tr></thead>
+  <tbody>
+    <tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Primary function</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Production AI investigation engine</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Omnichannel customer service platform and agent routing</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">How it handles ticket investigation</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Queries 6 systems simultaneously — finds root cause in under 2 min</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Unifies conversations and routing, but technical diagnosis still happens outside Dixa</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Queries live production data (ClickHouse, Stripe, GitHub)?</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Yes — live read-only access to production databases and APIs</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">No — strong CX integrations, not direct investigation across engineering and billing tools</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Time to value</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">14 days to production (Portkey case study)</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Usually weeks for omnichannel rollout, routing, and workflow setup</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Pricing model</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Usage-based per investigation</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Seat-based or enterprise quote pricing</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Best for</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">B2B engineering teams with 200+ technical tickets/month</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Service teams improving customer conversations across voice, chat, and messaging</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Self-improving?</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Yes — playbooks refine against real data patterns</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Limited — AI can assist routing and agent tasks, but not live investigation playbooks</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Integration depth</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Deep read-only connectors to existing infrastructure</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Good CX integrations with limited infrastructure connectivity</td></tr>
+  </tbody>
 </table>
+<div style="background:#111;border:1px solid #222;border-radius:8px;padding:16px 20px;margin:1.5rem 0;">
+  <p style="font-size:.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Results</p>
+  <ul style="margin:0;padding-left:1.2rem;">
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>45 min → 2 min</strong> per investigation at Portkey <cite style="color:#6b7280;">(Altor, 2026)</cite></li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>200+</strong> tickets diagnosed in production</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>14 days</strong> from kickoff to live system</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>6</strong> production systems connected simultaneously</li>
+  </ul>
+</div>
 
 <h2>Where Altor Wins</h2>
-<p>Dixa improves how support teams handle customer conversations, especially when coordination and channel coverage matter. That helps service throughput. But technically complex tickets usually fail later in the workflow, when the agent needs to confirm what happened in the product, billing stack, or engineering backlog.</p>
-<p>Altor compresses that investigation step. It is useful when conversation management is already good enough, but resolution speed is held back by manual debugging and evidence gathering.</p>
+<p>Dixa improves how support teams handle customer conversations, especially when coordination and channel coverage matter. That helps service throughput. But technically complex tickets usually slow down later, when the agent needs proof from the product, billing stack, or bug tracker.</p>
+<p>Altor compresses that investigation step. It is useful when conversation management is already good enough, but resolution speed is still held back by manual debugging and evidence gathering.</p>
 
 <h2>Where Dixa Wins</h2>
-<p>Dixa wins if your organization wants a modern, conversation-first service platform. It offers more complete customer service workflow and channel support than Altor.</p>
-<p>It is also the safer choice for teams with broad contact-center requirements rather than specialized technical support needs.</p>
+<p>Dixa wins if your organization wants a modern omnichannel service platform. It brings more value when the job is routing, agent workspace design, and handling customer conversations across channels.</p>
+<p>It is also the safer choice for teams with broad contact-center needs rather than a dense queue of technical product issues.</p>
 
-<h2>Who Should Choose What</h2>
-<p><strong>Choose Altor if:</strong> your support issues hinge on debugging product and account behavior across connected systems.</p>
-<p><strong>Choose Dixa if:</strong> you want better routing, omnichannel service, and conversation management for support agents.</p>
+<h2>Buying lens for US B2B teams</h2>
+<p>For US B2B teams, Dixa is the better buy when customer service design is the main project. Altor is the better buy when you already have cases coming in and the issue is that technical answers take too long to produce.</p>
+<p>That means the decision depends on where delay happens today: in routing and handoff, or in backend investigation after the handoff is done. <a href="/work/support-investigation">See what the investigation side looks like in practice</a>.</p>
+
+<h2>When Dixa is the right choice</h2>
+<p>Dixa is the right choice when the customer service experience itself needs work. It gives teams a stronger omnichannel setup without changing the deeper technical support model.</p>
+<ul><li><strong>You need better routing across channels.</strong> Dixa is built for voice, chat, messaging, and agent workflows that improve service coverage.</li><li><strong>Most tickets are service interactions, not technical incidents.</strong> When the queue is broad and conversation-heavy, omnichannel tooling carries more weight than backend diagnosis.</li><li><strong>You want one customer service platform.</strong> Dixa makes more sense when the buyer wants to standardize agent experience and customer handling across teams.</li></ul>
+
+<h2>When Altor is the right choice</h2>
+<p>Altor is the right choice when the customer journey is not the blocker. It earns its place when agents need product, billing, and engineering evidence before they can answer with confidence. <a href="/work/support-investigation">See how Altor handles support investigation</a>.</p>
+<ul><li><strong>A large share of tickets require investigation.</strong> If tickets often turn into debugging work, a service platform alone will not remove the delay.</li><li><strong>Your team needs live read-only access to systems.</strong> Altor is designed to query production data safely instead of depending on manual screenshots and escalations.</li><li><strong>You want faster time to diagnosis.</strong> If the goal is moving from a long manual check to a likely root cause in minutes, Altor is the closer match.</li></ul>
 
 <h2>FAQ</h2>
-<section class="faq-item"><h3>What's the difference between Altor and Dixa?</h3><p>Dixa manages customer conversations across channels. Altor investigates the technical systems behind the issue.</p></section>
-<section class="faq-item"><h3>Is Altor better than Dixa for B2B support?</h3><p>For technical diagnosis, yes. For omnichannel service operations, Dixa is stronger.</p></section>
-<section class="faq-item"><h3>How much does Dixa cost vs Altor?</h3><p>Dixa is generally seat-based or enterprise-priced. Altor is usage-based by investigation.</p></section>
+<section class="faq-item"><h3>What does Dixa do better than Altor?</h3><p>Dixa is stronger when the main job is omnichannel customer service platform and agent routing. Altor is not trying to replace that category; it is focused on technical ticket diagnosis.</p></section><section class="faq-item"><h3>Can Dixa investigate tickets by reading ClickHouse, Stripe, or GitHub?</h3><p>No — strong CX integrations, not direct investigation across engineering and billing tools</p></section><section class="faq-item"><h3>When is Altor a better fit than Dixa?</h3><p>Altor is a better fit when support teams need live evidence from product, billing, and engineering systems before they can answer a ticket accurately.</p></section><section class="faq-item"><h3>Can Altor and Dixa be used together?</h3><p>Often yes. Dixa can stay in place for its core workflow, while Altor handles the investigation step for technical cases that need live production evidence.</p></section><section class="faq-item"><h3>How is pricing different between Altor and Dixa?</h3><p>Altor is priced by investigation usage, while Dixa is typically sold as seat-based or enterprise quote pricing. The difference matters if only a slice of your queue needs deep diagnosis.</p></section>
 
 <p><a class="cta" href="https://altorlab.com">Book a Demo (US Hours) →</a></p>
 </article>

@@ -37,7 +37,7 @@ ul { padding-left: 1.2rem; }
 .card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 16px 18px; margin-top: 1rem; }
 .cta { display: inline-block; margin-top: 1.5rem; font-weight: 600; }
 section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and Gladly?","acceptedAnswer":{"@type":"Answer","text":"Gladly focuses on omnichannel customer service. Altor focuses on investigating technical root cause for B2B support cases."}},{"@type":"Question","name":"Is Altor better than Gladly for B2B support?","acceptedAnswer":{"@type":"Answer","text":"For technical SaaS support, often yes. For customer-centric omnichannel service, Gladly is stronger."}},{"@type":"Question","name":"How much does Gladly cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"Gladly is usually enterprise-priced; Altor is usage-based by investigation volume."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Gladly do better than Altor?","acceptedAnswer":{"@type":"Answer","text":"Gladly is stronger when the main job is customer-service platform centered on people rather than tickets. Altor is not trying to replace that category; it is focused on technical ticket diagnosis."}},{"@type":"Question","name":"Can Gladly investigate tickets by reading ClickHouse, Stripe, or GitHub?","acceptedAnswer":{"@type":"Answer","text":"No — works from customer and channel systems rather than engineering databases and APIs"}},{"@type":"Question","name":"When is Altor a better fit than Gladly?","acceptedAnswer":{"@type":"Answer","text":"Altor is a better fit when support teams need live evidence from product, billing, and engineering systems before they can answer a ticket accurately."}},{"@type":"Question","name":"Can Altor and Gladly be used together?","acceptedAnswer":{"@type":"Answer","text":"Often yes. Gladly can stay in place for its core workflow, while Altor handles the investigation step for technical cases that need live production evidence."}},{"@type":"Question","name":"How is pricing different between Altor and Gladly?","acceptedAnswer":{"@type":"Answer","text":"Altor is priced by investigation usage, while Gladly is typically sold as enterprise quote, often seat-based. The difference matters if only a slice of your queue needs deep diagnosis."}}]}</script>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Altor","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Compare","item":"https://altorlab.com/compare/"},{"@type":"ListItem","position":3,"name":"Altor vs Gladly \u2014 AI Support Investigation Compared for US B","item":"https://altorlab.com/compare/gladly.html"}]}</script>
 </head>
@@ -50,14 +50,25 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 <p><strong>TL;DR:</strong> Gladly is stronger for premium omnichannel customer service. Altor is stronger for B2B technical support teams that need investigation across internal systems before they can respond.</p>
 
 <h2>Feature Comparison</h2>
-<table>
-<tr><th>Feature</th><th>Altor</th><th>Gladly</th></tr>
-<tr><td>Approach</td><td>Investigation-first (pulls live data)</td><td>Customer-service platform organized around people, not tickets</td></tr>
-<tr><td>Data Sources</td><td>ClickHouse, Linear, Stripe, GitHub</td><td>Omnichannel conversations, customer history, service workflows</td></tr>
-<tr><td>Resolution Method</td><td>Automated root-cause diagnosis</td><td>Unified conversation timeline and agent workspace</td></tr>
-<tr><td>Best For</td><td>B2B SaaS with technical tickets</td><td>Consumer and retail brands focused on personalized service</td></tr>
-<tr><td>Pricing</td><td>Usage-based in USD ($). Popular with US support teams</td><td>Enterprise quote and seat-based deployment (USD pricing for US teams varies by contract)</td></tr>
+<table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;">
+  <thead><tr>
+    <th scope="col" style="background:#111;color:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;border-bottom:2px solid #222;">Feature</th>
+    <th scope="col" style="background:#111;color:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;border-bottom:2px solid #222;">Altor</th>
+    <th scope="col" style="background:#111;color:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;border-bottom:2px solid #222;">Gladly</th>
+  </tr></thead>
+  <tbody>
+    <tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Primary function</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Production AI investigation engine</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Customer-service platform centered on people rather than tickets</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">How it handles ticket investigation</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Queries 6 systems simultaneously — finds root cause in under 2 min</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Keeps one customer timeline and routing context; deep diagnosis still happens outside the platform</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Queries live production data (ClickHouse, Stripe, GitHub)?</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Yes — live read-only access to production databases and APIs</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">No — works from customer and channel systems rather than engineering databases and APIs</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Time to value</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">14 days to production (Portkey case study)</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Usually weeks to months for enterprise rollout</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Pricing model</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Usage-based per investigation</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Enterprise quote, often seat-based</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Best for</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">B2B engineering teams with 200+ technical tickets/month</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">High-touch consumer brands and omnichannel service teams</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Self-improving?</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Yes — playbooks refine against real data patterns</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Limited — AI can assist service flows, but not root-cause playbooks trained on live system evidence</td></tr><tr><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Integration depth</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Deep read-only connectors to existing infrastructure</td><td style="padding:9px 12px;border-bottom:1px solid #1a1a1a;color:#d1d5db;">Strong CX integrations with limited technical system access</td></tr>
+  </tbody>
 </table>
+<div style="background:#111;border:1px solid #222;border-radius:8px;padding:16px 20px;margin:1.5rem 0;">
+  <p style="font-size:.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Results</p>
+  <ul style="margin:0;padding-left:1.2rem;">
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>45 min → 2 min</strong> per investigation at Portkey <cite style="color:#6b7280;">(Altor, 2026)</cite></li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>200+</strong> tickets diagnosed in production</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>14 days</strong> from kickoff to live system</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>6</strong> production systems connected simultaneously</li>
+  </ul>
+</div>
 
 <h2>Where Altor Wins</h2>
 <p>Gladly rethinks service around the customer record rather than the ticket queue. That can create a better experience for high-touch support teams. But personalized conversation history still does not explain why a webhook stopped firing for one enterprise tenant after a permissions change.</p>
@@ -65,16 +76,22 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 
 <h2>Where Gladly Wins</h2>
 <p>Gladly wins on omnichannel service design and customer experience. If your brand differentiates on service quality across voice, chat, and messaging, it is a much more complete platform than Altor.</p>
-<p>It also better fits teams with high volumes of people-centric service interactions rather than deeply technical product issues.</p>
+<p>It also fits better when the queue is people-centric service work rather than deeply technical product issues.</p>
 
-<h2>Who Should Choose What</h2>
-<p><strong>Choose Altor if:</strong> support tickets are technical investigations that require backend context and engineering evidence.</p>
-<p><strong>Choose Gladly if:</strong> you want a premium omnichannel customer service platform centered on customer history and agent experience.</p>
+<h2>Buying lens for US B2B teams</h2>
+<p>For US B2B SaaS teams, Gladly and Altor sit on opposite sides of support. Gladly is about the service interaction. Altor is about what the product and data systems reveal once the interaction reaches a technical case.</p>
+<p>If customer experience design is the project, Gladly makes sense. If the hard part is proving what happened in production, Altor is the closer fit. <a href="/work/support-investigation">See the investigation model Altor uses</a>.</p>
+
+<h2>When Gladly is the right choice</h2>
+<p>Gladly is the right choice when the company wins on service quality and wants a better omnichannel experience built around the customer record.</p>
+<ul><li><strong>You run a high-touch service team.</strong> Gladly is a better match when support quality depends on conversation continuity across channels.</li><li><strong>Most issues are service interactions, not product debugging.</strong> Teams handling orders, returns, service requests, or brand experience work will get more from Gladly.</li><li><strong>You want one premium agent workspace.</strong> Gladly makes sense when the investment is about service design and agent experience at scale.</li></ul>
+
+<h2>When Altor is the right choice</h2>
+<p>Altor is the right choice when the customer conversation is not the hard part. It is built for technical B2B support, where the answer must be backed by system evidence before the team can respond with confidence. <a href="/work/support-investigation">See how Altor handles support investigation</a>.</p>
+<ul><li><strong>Cases depend on tenant and product state.</strong> If the queue includes account-specific bugs, config issues, or billing anomalies, investigation depth matters more than channel polish.</li><li><strong>Support works close to engineering.</strong> Altor helps when support agents need faster access to the same proof engineering would otherwise gather.</li><li><strong>You want a focused rollout into existing tools.</strong> A read-only investigation layer can go live faster than a full customer-service platform change when diagnosis is the bottleneck.</li></ul>
 
 <h2>FAQ</h2>
-<section class="faq-item"><h3>What's the difference between Altor and Gladly?</h3><p>Gladly focuses on omnichannel customer service. Altor focuses on investigating technical root cause for B2B support cases.</p></section>
-<section class="faq-item"><h3>Is Altor better than Gladly for B2B support?</h3><p>For technical SaaS support, often yes. For customer-centric omnichannel service, Gladly is stronger.</p></section>
-<section class="faq-item"><h3>How much does Gladly cost vs Altor?</h3><p>Gladly is usually enterprise-priced; Altor is usage-based by investigation volume.</p></section>
+<section class="faq-item"><h3>What does Gladly do better than Altor?</h3><p>Gladly is stronger when the main job is customer-service platform centered on people rather than tickets. Altor is not trying to replace that category; it is focused on technical ticket diagnosis.</p></section><section class="faq-item"><h3>Can Gladly investigate tickets by reading ClickHouse, Stripe, or GitHub?</h3><p>No — works from customer and channel systems rather than engineering databases and APIs</p></section><section class="faq-item"><h3>When is Altor a better fit than Gladly?</h3><p>Altor is a better fit when support teams need live evidence from product, billing, and engineering systems before they can answer a ticket accurately.</p></section><section class="faq-item"><h3>Can Altor and Gladly be used together?</h3><p>Often yes. Gladly can stay in place for its core workflow, while Altor handles the investigation step for technical cases that need live production evidence.</p></section><section class="faq-item"><h3>How is pricing different between Altor and Gladly?</h3><p>Altor is priced by investigation usage, while Gladly is typically sold as enterprise quote, often seat-based. The difference matters if only a slice of your queue needs deep diagnosis.</p></section>
 
 <p><a class="cta" href="https://altorlab.com">Book a Demo (US Hours) →</a></p>
 </article>
