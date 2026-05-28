@@ -37,7 +37,7 @@ ul { padding-left: 1.2rem; }
 .card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 16px 18px; margin-top: 1rem; }
 .cta { display: inline-block; margin-top: 1.5rem; font-weight: 600; }
 section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and Salesforce Service Cloud?","acceptedAnswer":{"@type":"Answer","text":"Service Cloud manages service operations at enterprise scale. Altor specializes in automated root-cause investigation for technical B2B cases."}},{"@type":"Question","name":"Is Altor better than Salesforce Service Cloud for B2B support?","acceptedAnswer":{"@type":"Answer","text":"For case management and enterprise workflow, no. For accelerating technical diagnosis inside those workflows, often yes."}},{"@type":"Question","name":"How much does Salesforce Service Cloud cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"Service Cloud is usually sold via enterprise seat licenses and platform add-ons. Altor is priced on investigation usage."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and Salesforce Service Cloud?","acceptedAnswer":{"@type":"Answer","text":"Service Cloud manages service operations at enterprise scale. Altor specializes in automated root-cause investigation for technical B2B cases."}},{"@type":"Question","name":"Is Altor better than Salesforce Service Cloud for B2B support?","acceptedAnswer":{"@type":"Answer","text":"For case management and enterprise workflow, no. For accelerating technical diagnosis inside those workflows, often yes."}},{"@type":"Question","name":"How much does Salesforce Service Cloud cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"Service Cloud is usually sold via enterprise seat licenses and platform add-ons. Altor is priced on investigation usage."}},{"@type":"Question","name":"Can Altor work with Salesforce Service Cloud?","acceptedAnswer":{"@type":"Answer","text":"Yes. Many teams would keep Service Cloud for case management and add Altor for technical root-cause investigation across production systems."}},{"@type":"Question","name":"Which platform is better for enterprise support teams?","acceptedAnswer":{"@type":"Answer","text":"Service Cloud is better for broad enterprise service operations. Altor is better for the investigation layer inside enterprise teams handling complex technical tickets."}}]}</script>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Altor","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Compare","item":"https://altorlab.com/compare/"},{"@type":"ListItem","position":3,"name":"Altor vs Salesforce Service Cloud \u2014 AI Support Investigation","item":"https://altorlab.com/compare/salesforce-service-cloud.html"}]}</script>
 </head>
@@ -51,13 +51,26 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 
 <h2>Feature Comparison</h2>
 <table>
-<tr><th>Feature</th><th>Altor</th><th>Salesforce Service Cloud</th></tr>
-<tr><td>Approach</td><td>Investigation-first (pulls live data)</td><td>Enterprise service management and CRM workflows</td></tr>
-<tr><td>Data Sources</td><td>ClickHouse, Linear, Stripe, GitHub</td><td>Salesforce platform, AppExchange, omnichannel service stack</td></tr>
-<tr><td>Resolution Method</td><td>Automated root-cause diagnosis</td><td>Case management, automation, agent console, Einstein AI</td></tr>
-<tr><td>Best For</td><td>B2B SaaS with technical tickets</td><td>Large enterprises with complex service operations</td></tr>
-<tr><td>Pricing</td><td>Usage-based in USD ($). Popular with US support teams</td><td>Enterprise quote and seat-based licensing (USD pricing for US teams varies by contract)</td></tr>
+<tr><th scope="col">Category</th><th scope="col">Altor</th><th scope="col">Salesforce Service Cloud</th></tr>
+<tr><th scope="row">Primary function</th><td>Production AI investigation engine</td><td>Enterprise case management platform for large-scale service operations</td></tr>
+<tr><th scope="row">How it handles ticket investigation</th><td>Queries 6 systems simultaneously — finds root cause in under 2 min</td><td>Routes cases through workflows, agent consoles, knowledge, and escalations, with investigation often pushed into custom tools or human handoffs</td></tr>
+<tr><th scope="row">Queries live production data?</th><td>Yes — live read-only access to production databases and APIs</td><td>No — not by default; teams usually need custom integrations or separate internal tools for production evidence</td></tr>
+<tr><th scope="row">Time to value</th><td>14 days to production (Portkey case study)</td><td>Longer, especially in enterprise environments with admin setup, custom objects, process design, and change management</td></tr>
+<tr><th scope="row">Pricing model</th><td>Usage-based per investigation</td><td>Seat licenses plus add-ons, implementation work, and enterprise platform costs</td></tr>
+<tr><th scope="row">Best for</th><td>B2B engineering teams with 200+ technical tickets/month</td><td>Large enterprises that need one governed service platform across teams and channels</td></tr>
+<tr><th scope="row">Self-improving?</th><td>Yes — playbooks refine against real data patterns</td><td>No — case workflows and AI assists improve through configuration, not through repeat live-system investigation loops</td></tr>
+<tr><th scope="row">Integration depth</th><td>Deep read-only connectors to existing infrastructure</td><td>Broad platform integrations and custom app options, but direct product and infrastructure depth usually depends on custom build work</td></tr>
 </table>
+
+<div style="background:#111;border:1px solid #222;border-radius:8px;padding:16px 20px;margin:1.5rem 0;">
+  <p style="font-size:.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Results</p>
+  <ul style="margin:0;padding-left:1.2rem;">
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>45 min → 2 min</strong> per investigation at Portkey <cite style="color:#6b7280;">(Altor, 2026)</cite></li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>200+</strong> tickets diagnosed in production</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>14 days</strong> from kickoff to live system</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>6</strong> production systems connected simultaneously</li>
+  </ul>
+</div>
 
 <h2>Where Altor Wins</h2>
 <p>Salesforce Service Cloud can run a global support operation, with case workflows, permissions, reporting, and broad platform extensibility. But scale and configurability do not automatically solve investigation speed. Many enterprise teams still have agents copying account IDs into internal tools, asking engineering for log checks, and waiting hours for answers.</p>
@@ -75,6 +88,25 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 <section class="faq-item"><h3>What's the difference between Altor and Salesforce Service Cloud?</h3><p>Service Cloud manages service operations at enterprise scale. Altor specializes in automated root-cause investigation for technical B2B cases.</p></section>
 <section class="faq-item"><h3>Is Altor better than Salesforce Service Cloud for B2B support?</h3><p>For case management and enterprise workflow, no. For accelerating technical diagnosis inside those workflows, often yes.</p></section>
 <section class="faq-item"><h3>How much does Salesforce Service Cloud cost vs Altor?</h3><p>Service Cloud is usually sold via enterprise seat licenses and platform add-ons. Altor is priced on investigation usage.</p></section>
+<section class="faq-item"><h3>Can Altor work with Salesforce Service Cloud?</h3><p>Yes. Service Cloud can remain the case system of record while Altor supplies the technical investigation layer behind complex product issues.</p></section>
+<section class="faq-item"><h3>Which platform is better for enterprise support teams?</h3><p>Service Cloud is better for broad enterprise service operations. Altor is better for the investigation layer inside enterprise teams that handle difficult technical cases.</p></section>
+
+<h2>When Salesforce Service Cloud is the right choice</h2>
+<p>Salesforce Service Cloud is the right choice when the organization needs a large-scale service operating system. It is meant for companies that care about governance, workflow control, permission structure, and alignment with the rest of the Salesforce stack across sales, success, and service.</p>
+<ul>
+  <li><strong>You need enterprise case management first.</strong> If the core need is routing work across many teams, regions, queues, and service processes, Service Cloud offers far more administrative structure than a focused investigation product.</li>
+  <li><strong>Your company already runs on Salesforce.</strong> Standardizing support inside the same platform can reduce internal friction, reporting gaps, and change-management overhead, especially for large organizations.</li>
+  <li><strong>You expect heavy customization and governance.</strong> Service Cloud is better when you need custom objects, approval paths, strict permissions, and deep workflow design for service operations at scale.</li>
+</ul>
+
+<h2>When Altor is the right choice</h2>
+<p>Altor is the better choice when enterprise teams already have a case system but still lose time on technical diagnosis. Many large support orgs are not blocked on intake or routing. They are blocked on finding the root cause fast enough to respond without pulling in engineering for every hard ticket.</p>
+<ul>
+  <li><strong>Your difficult cases depend on product and infrastructure evidence.</strong> When the answer lives in logs, issue trackers, billing state, or account configuration, Service Cloud alone does not close the gap.</li>
+  <li><strong>You want to cut resolution time without rebuilding service operations.</strong> Altor can sit next to the existing case workflow and improve the investigation step instead of replacing the broader platform.</li>
+  <li><strong>You need a repeatable support-engineering motion.</strong> As similar incidents show up again, playbooks refine against real evidence patterns rather than forcing agents to start from scratch each time.</li>
+</ul>
+<p>If your team already has enterprise case management and wants to speed up root-cause work, review <a href="/work/support-investigation">support investigation</a> to see how Altor fits into that flow.</p>
 
 <p><a class="cta" href="https://altorlab.com">Book a Demo (US Hours) →</a></p>
 </article>

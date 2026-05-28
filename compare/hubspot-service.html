@@ -37,7 +37,7 @@ ul { padding-left: 1.2rem; }
 .card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 16px 18px; margin-top: 1rem; }
 .cta { display: inline-block; margin-top: 1.5rem; font-weight: 600; }
 section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and HubSpot Service Hub?","acceptedAnswer":{"@type":"Answer","text":"HubSpot Service Hub keeps support inside the CRM. Altor automates investigation across technical systems that sit outside the CRM."}},{"@type":"Question","name":"Is Altor better than HubSpot Service Hub for B2B support?","acceptedAnswer":{"@type":"Answer","text":"Altor is better for technical investigation. HubSpot is better for CRM-centered service operations."}},{"@type":"Question","name":"How much does HubSpot Service Hub cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"HubSpot generally bundles pricing by hub tier and seats. Altor uses investigation-based pricing."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and HubSpot Service Hub?","acceptedAnswer":{"@type":"Answer","text":"HubSpot Service Hub keeps support inside the CRM. Altor automates investigation across technical systems that sit outside the CRM."}},{"@type":"Question","name":"Is Altor better than HubSpot Service Hub for B2B support?","acceptedAnswer":{"@type":"Answer","text":"Altor is better for technical investigation. HubSpot is better for CRM-centered service operations."}},{"@type":"Question","name":"How much does HubSpot Service Hub cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"HubSpot generally bundles pricing by hub tier and seats. Altor uses investigation-based pricing."}},{"@type":"Question","name":"Can Altor work alongside HubSpot Service Hub?","acceptedAnswer":{"@type":"Answer","text":"Yes. Teams can keep HubSpot for CRM-driven support while using Altor to investigate technical tickets across product, billing, and engineering systems."}},{"@type":"Question","name":"Which tool gets value faster for technical support teams?","acceptedAnswer":{"@type":"Answer","text":"For technical investigation, Altor is faster because it is set up around live system access and investigation workflows. HubSpot is faster when the main goal is CRM-centered service operations."}}]}</script>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Altor","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Compare","item":"https://altorlab.com/compare/"},{"@type":"ListItem","position":3,"name":"Altor vs HubSpot Service Hub \u2014 AI Support Investigation Comp","item":"https://altorlab.com/compare/hubspot-service.html"}]}</script>
 </head>
@@ -51,13 +51,26 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 
 <h2>Feature Comparison</h2>
 <table>
-<tr><th>Feature</th><th>Altor</th><th>HubSpot Service Hub</th></tr>
-<tr><td>Approach</td><td>Investigation-first (pulls live data)</td><td>CRM-connected support for go-to-market teams</td></tr>
-<tr><td>Data Sources</td><td>ClickHouse, Linear, Stripe, GitHub</td><td>HubSpot CRM, email, chat, knowledge base, automation workflows</td></tr>
-<tr><td>Resolution Method</td><td>Automated root-cause diagnosis</td><td>Ticketing, customer context, automation, agent assist</td></tr>
-<tr><td>Best For</td><td>B2B SaaS with technical tickets</td><td>Companies aligning sales, success, and support in HubSpot</td></tr>
-<tr><td>Pricing</td><td>Usage-based in USD ($). Popular with US support teams</td><td>HubSpot hub tiers plus seats and enterprise upgrades (USD pricing for US teams varies by contract)</td></tr>
+<tr><th scope="col">Category</th><th scope="col">Altor</th><th scope="col">HubSpot Service Hub</th></tr>
+<tr><th scope="row">Primary function</th><td>Production AI investigation engine</td><td>CRM-connected service platform for ticketing, inboxes, automation, and customer history</td></tr>
+<tr><th scope="row">How it handles ticket investigation</th><td>Queries 6 systems simultaneously — finds root cause in under 2 min</td><td>Uses ticket history, contact records, workflows, knowledge base content, and agent handoffs to move the case forward</td></tr>
+<tr><th scope="row">Queries live production data?</th><td>Yes — live read-only access to production databases and APIs</td><td>No — it usually works from CRM records, conversation history, and configured app data rather than direct production evidence</td></tr>
+<tr><th scope="row">Time to value</th><td>14 days to production (Portkey case study)</td><td>Fast if the team already runs on HubSpot, but deeper service setup often still takes weeks of workflow and admin work</td></tr>
+<tr><th scope="row">Pricing model</th><td>Usage-based per investigation</td><td>Hub tiers plus seat-based pricing with higher plans for more automation and governance</td></tr>
+<tr><th scope="row">Best for</th><td>B2B engineering teams with 200+ technical tickets/month</td><td>Revenue and support teams that want service operations to stay inside HubSpot</td></tr>
+<tr><th scope="row">Self-improving?</th><td>Yes — playbooks refine against real data patterns</td><td>No — teams improve results by editing workflows and knowledge content, not by running repeat investigations against live systems</td></tr>
+<tr><th scope="row">Integration depth</th><td>Deep read-only connectors to existing infrastructure</td><td>Broad CRM and app integrations, but not deep read-only connectors into production systems by default</td></tr>
 </table>
+
+<div style="background:#111;border:1px solid #222;border-radius:8px;padding:16px 20px;margin:1.5rem 0;">
+  <p style="font-size:.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Results</p>
+  <ul style="margin:0;padding-left:1.2rem;">
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>45 min → 2 min</strong> per investigation at Portkey <cite style="color:#6b7280;">(Altor, 2026)</cite></li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>200+</strong> tickets diagnosed in production</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>14 days</strong> from kickoff to live system</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>6</strong> production systems connected simultaneously</li>
+  </ul>
+</div>
 
 <h2>Where Altor Wins</h2>
 <p>HubSpot Service Hub shines when a business wants one customer system for marketing, sales, success, and support. It gives teams account context, workflow automation, and reporting without stitching together many tools. The limitation is that CRM context is not the same thing as technical evidence.</p>
@@ -75,6 +88,25 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 <section class="faq-item"><h3>What's the difference between Altor and HubSpot Service Hub?</h3><p>HubSpot Service Hub keeps support inside the CRM. Altor automates investigation across technical systems that sit outside the CRM.</p></section>
 <section class="faq-item"><h3>Is Altor better than HubSpot Service Hub for B2B support?</h3><p>Altor is better for technical investigation. HubSpot is better for CRM-centered service operations.</p></section>
 <section class="faq-item"><h3>How much does HubSpot Service Hub cost vs Altor?</h3><p>HubSpot generally bundles pricing by hub tier and seats. Altor uses investigation-based pricing.</p></section>
+<section class="faq-item"><h3>Can Altor work alongside HubSpot Service Hub?</h3><p>Yes. Teams can keep HubSpot for inboxes, customer records, and service workflows while using Altor to investigate technically complex tickets across internal systems.</p></section>
+<section class="faq-item"><h3>Which tool gets value faster for technical support teams?</h3><p>Altor gets value faster when the blocker is slow technical diagnosis. HubSpot gets value faster when the goal is to put support inside the CRM and coordinate it with sales and success.</p></section>
+
+<h2>When HubSpot Service Hub is the right choice</h2>
+<p>HubSpot Service Hub is the right call when support needs to stay close to sales, success, and marketing data. If the team already lives in HubSpot, adding another workflow around tickets can create more friction than value, especially when most cases are process-heavy rather than technically deep.</p>
+<ul>
+  <li><strong>You want service inside the same CRM your revenue team uses.</strong> That matters when account ownership, renewal context, lifecycle stages, and support history all need to sit in one system that managers already trust.</li>
+  <li><strong>Your investigations are mostly people and process work.</strong> If agents mainly need customer timeline context, macros, SLAs, routing, and handoffs, HubSpot covers that better than a specialized investigation layer.</li>
+  <li><strong>You need broad service tooling more than deep product diagnosis.</strong> Help center content, basic automation, conversation channels, and reporting are the core job here, and HubSpot is designed around that job.</li>
+</ul>
+
+<h2>When Altor is the right choice</h2>
+<p>Altor is the better fit when the hardest tickets are blocked on evidence that does not live in the CRM. For technical B2B teams, the slow part is usually not replying to the customer. It is checking logs, bugs, billing state, account entitlements, and recent changes before anyone can say what happened.</p>
+<ul>
+  <li><strong>Your team handles a steady stream of technical tickets.</strong> Once support crosses roughly 200 technical tickets a month, manual digging across engineering tools becomes a real cost in queue time and escalation load.</li>
+  <li><strong>You need answers from live systems, not summaries from prior conversations.</strong> Altor is built to inspect production evidence directly, which is often the only way to explain account-specific failures with confidence.</li>
+  <li><strong>You want a support process that gets sharper as real cases come through.</strong> Because playbooks refine against repeat data patterns, the investigation path improves from solved tickets instead of relying only on new workflow rules.</li>
+</ul>
+<p>For teams comparing both, the cleanest split is often HubSpot for service operations and Altor for technical diagnosis. You can see what that investigation workflow looks like in <a href="/work/support-investigation">support investigation</a>.</p>
 
 <p><a class="cta" href="https://altorlab.com">Book a Demo (US Hours) →</a></p>
 </article>

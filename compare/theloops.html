@@ -37,7 +37,7 @@ ul { padding-left: 1.2rem; }
 .card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 16px 18px; margin-top: 1rem; }
 .cta { display: inline-block; margin-top: 1.5rem; font-weight: 600; }
 section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and TheLoops?","acceptedAnswer":{"@type":"Answer","text":"TheLoops focuses on support intelligence and triage. Altor focuses on automated technical investigation across live systems."}},{"@type":"Question","name":"Is Altor better than TheLoops for B2B support?","acceptedAnswer":{"@type":"Answer","text":"Altor is better for root-cause diagnosis. TheLoops may be better for queue intelligence and triage optimization."}},{"@type":"Question","name":"How much does TheLoops cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"TheLoops is typically quote-based, while Altor uses usage-based investigation pricing."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and TheLoops?","acceptedAnswer":{"@type":"Answer","text":"TheLoops focuses on support intelligence and triage. Altor focuses on automated technical investigation across live systems."}},{"@type":"Question","name":"Is Altor better than TheLoops for B2B support?","acceptedAnswer":{"@type":"Answer","text":"Altor is better for root-cause diagnosis. TheLoops may be better for queue intelligence and triage optimization."}},{"@type":"Question","name":"How much does TheLoops cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"TheLoops is typically quote-based, while Altor uses usage-based investigation pricing."}},{"@type":"Question","name":"Can Altor and TheLoops be used together?","acceptedAnswer":{"@type":"Answer","text":"Yes. TheLoops can help with triage and queue intelligence while Altor handles the technical investigation behind harder cases."}},{"@type":"Question","name":"Which product is better for queue-level efficiency?","acceptedAnswer":{"@type":"Answer","text":"TheLoops is better for queue-level efficiency, classification, and agent guidance. Altor is better for the technical diagnosis work after a ticket is classified."}}]}</script>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Altor","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Compare","item":"https://altorlab.com/compare/"},{"@type":"ListItem","position":3,"name":"Altor vs TheLoops \u2014 AI Support Investigation Compared for US","item":"https://altorlab.com/compare/theloops.html"}]}</script>
 </head>
@@ -51,13 +51,26 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 
 <h2>Feature Comparison</h2>
 <table>
-<tr><th>Feature</th><th>Altor</th><th>TheLoops</th></tr>
-<tr><td>Approach</td><td>Investigation-first (pulls live data)</td><td>Support intelligence, triage, and knowledge workflow automation</td></tr>
-<tr><td>Data Sources</td><td>ClickHouse, Linear, Stripe, GitHub</td><td>Support tools, CRM, knowledge and case data</td></tr>
-<tr><td>Resolution Method</td><td>Automated root-cause diagnosis</td><td>AI triage, agent guidance, support analytics</td></tr>
-<tr><td>Best For</td><td>B2B SaaS with technical tickets</td><td>Support teams improving triage quality and agent efficiency</td></tr>
-<tr><td>Pricing</td><td>Usage-based in USD ($). Popular with US support teams</td><td>Custom quote based on support volume and scope (USD pricing for US teams varies by contract)</td></tr>
+<tr><th scope="col">Category</th><th scope="col">Altor</th><th scope="col">TheLoops</th></tr>
+<tr><th scope="row">Primary function</th><td>Production AI investigation engine</td><td>Support intelligence layer for AI triage, agent guidance, and queue optimization</td></tr>
+<tr><th scope="row">How it handles ticket investigation</th><td>Queries 6 systems simultaneously — finds root cause in under 2 min</td><td>Improves classification, summaries, and agent guidance so the right ticket reaches the right person faster</td></tr>
+<tr><th scope="row">Queries live production data?</th><td>Yes — live read-only access to production databases and APIs</td><td>No — it works from support and service data, not direct reads from production systems</td></tr>
+<tr><th scope="row">Time to value</th><td>14 days to production (Portkey case study)</td><td>Often weeks, depending on support data setup, workflows, and agent adoption</td></tr>
+<tr><th scope="row">Pricing model</th><td>Usage-based per investigation</td><td>Custom quote based on support volume, feature scope, and deployment needs</td></tr>
+<tr><th scope="row">Best for</th><td>B2B engineering teams with 200+ technical tickets/month</td><td>Support teams improving triage quality, queue efficiency, and agent consistency</td></tr>
+<tr><th scope="row">Self-improving?</th><td>Yes — playbooks refine against real data patterns</td><td>Limited — models learn from support workflow patterns, not from repeat production root-cause work</td></tr>
+<tr><th scope="row">Integration depth</th><td>Deep read-only connectors to existing infrastructure</td><td>Moderate support-stack integrations, with less depth into product and infrastructure systems</td></tr>
 </table>
+
+<div style="background:#111;border:1px solid #222;border-radius:8px;padding:16px 20px;margin:1.5rem 0;">
+  <p style="font-size:.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Results</p>
+  <ul style="margin:0;padding-left:1.2rem;">
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>45 min → 2 min</strong> per investigation at Portkey <cite style="color:#6b7280;">(Altor, 2026)</cite></li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>200+</strong> tickets diagnosed in production</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>14 days</strong> from kickoff to live system</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>6</strong> production systems connected simultaneously</li>
+  </ul>
+</div>
 
 <h2>Where Altor Wins</h2>
 <p>TheLoops helps teams sort and understand support work faster, which can improve operations meaningfully. But triage quality and technical diagnosis are different jobs. A ticket can be classified perfectly and still require a human to open five tools to determine what actually broke.</p>
@@ -75,6 +88,25 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 <section class="faq-item"><h3>What's the difference between Altor and TheLoops?</h3><p>TheLoops focuses on support intelligence and triage. Altor focuses on automated technical investigation across live systems.</p></section>
 <section class="faq-item"><h3>Is Altor better than TheLoops for B2B support?</h3><p>Altor is better for root-cause diagnosis. TheLoops may be better for queue intelligence and triage optimization.</p></section>
 <section class="faq-item"><h3>How much does TheLoops cost vs Altor?</h3><p>TheLoops is typically quote-based, while Altor uses usage-based investigation pricing.</p></section>
+<section class="faq-item"><h3>Can Altor and TheLoops be used together?</h3><p>Yes. TheLoops can improve triage quality and summaries while Altor handles the product and infrastructure investigation behind harder technical cases.</p></section>
+<section class="faq-item"><h3>Which product is better for queue-level efficiency?</h3><p>TheLoops is better for queue-level efficiency and agent guidance. Altor is better for the actual root-cause work once a case has been identified as technical.</p></section>
+
+<h2>When TheLoops is the right choice</h2>
+<p>TheLoops is the better choice when the support organization wants to improve queue performance before it changes the deeper investigation workflow. Its value is strongest when teams need better classification, summaries, routing, and agent guidance so frontline work becomes more consistent and easier to manage.</p>
+<ul>
+  <li><strong>You need smarter triage across a large queue.</strong> If the biggest issue is that tickets are poorly labeled, routed late, or inconsistent in quality, TheLoops is closer to the root problem.</li>
+  <li><strong>Your tickets are varied, but not always deeply technical.</strong> Many teams benefit from better AI guidance and queue understanding even when only a smaller share of cases require real engineering-style diagnosis.</li>
+  <li><strong>You want agent efficiency gains without reworking your service stack.</strong> TheLoops fits teams looking to improve how support operates at the queue level first.</li>
+</ul>
+
+<h2>When Altor is the right choice</h2>
+<p>Altor is the better choice when triage is not the main bottleneck. In many B2B products, the team already knows which tickets are serious. What takes time is proving what happened in production and writing an answer that is grounded in logs, state changes, bug history, and account-specific facts.</p>
+<ul>
+  <li><strong>Your slowest tickets are slow because of investigation, not classification.</strong> If the same technically hard issues keep forcing agents into manual digging, the queue does not need better labeling as much as it needs faster diagnosis.</li>
+  <li><strong>You need direct access to the systems where the issue happened.</strong> Altor is built for live production reads across multiple sources, which is a different depth from queue intelligence.</li>
+  <li><strong>You want the investigation path to improve from repeated cases.</strong> Over time, playbooks can narrow in on likely root causes faster because they are grounded in what the data showed on prior tickets.</li>
+</ul>
+<p>If the question is less about queue hygiene and more about finding cause quickly, review <a href="/work/support-investigation">support investigation</a> for a closer look at the workflow Altor supports.</p>
 
 <p><a class="cta" href="https://altorlab.com">Book a Demo (US Hours) →</a></p>
 </article>

@@ -37,7 +37,7 @@ ul { padding-left: 1.2rem; }
 .card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 16px 18px; margin-top: 1rem; }
 .cta { display: inline-block; margin-top: 1.5rem; font-weight: 600; }
 section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and Kustomer?","acceptedAnswer":{"@type":"Answer","text":"Kustomer centralizes customer context for service teams. Altor centralizes technical evidence for support investigations."}},{"@type":"Question","name":"Is Altor better than Kustomer for B2B support?","acceptedAnswer":{"@type":"Answer","text":"Altor is better for technical diagnosis. Kustomer is better for unified service operations."}},{"@type":"Question","name":"How much does Kustomer cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"Kustomer is commonly enterprise or seat-based; Altor uses usage-based investigation pricing."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and Kustomer?","acceptedAnswer":{"@type":"Answer","text":"Kustomer centralizes customer context for service teams. Altor centralizes technical evidence for support investigations."}},{"@type":"Question","name":"Is Altor better than Kustomer for B2B support?","acceptedAnswer":{"@type":"Answer","text":"Altor is better for technical diagnosis. Kustomer is better for unified service operations."}},{"@type":"Question","name":"How much does Kustomer cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"Kustomer is commonly enterprise or seat-based; Altor uses usage-based investigation pricing."}},{"@type":"Question","name":"Can Altor work alongside Kustomer?","acceptedAnswer":{"@type":"Answer","text":"Yes. Kustomer can remain the service workspace while Altor handles technical investigation across billing, product, and engineering systems."}},{"@type":"Question","name":"Which platform fits high-volume technical support better?","acceptedAnswer":{"@type":"Answer","text":"Kustomer fits high-volume omnichannel service operations. Altor fits high-volume technical investigations where agents need live system evidence to resolve cases."}}]}</script>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Altor","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Compare","item":"https://altorlab.com/compare/"},{"@type":"ListItem","position":3,"name":"Altor vs Kustomer \u2014 AI Support Investigation Compared for US","item":"https://altorlab.com/compare/kustomer.html"}]}</script>
 </head>
@@ -51,13 +51,26 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 
 <h2>Feature Comparison</h2>
 <table>
-<tr><th>Feature</th><th>Altor</th><th>Kustomer</th></tr>
-<tr><td>Approach</td><td>Investigation-first (pulls live data)</td><td>CRM-first customer service platform</td></tr>
-<tr><td>Data Sources</td><td>ClickHouse, Linear, Stripe, GitHub</td><td>Customer timeline, omnichannel channels, CRM and workflow integrations</td></tr>
-<tr><td>Resolution Method</td><td>Automated root-cause diagnosis</td><td>Conversation management, automation, unified customer record</td></tr>
-<tr><td>Best For</td><td>B2B SaaS with technical tickets</td><td>High-volume support teams needing CRM-like service context</td></tr>
-<tr><td>Pricing</td><td>Usage-based in USD ($). Popular with US support teams</td><td>Enterprise seat-based or custom pricing (USD pricing for US teams varies by contract)</td></tr>
+<tr><th scope="col">Category</th><th scope="col">Altor</th><th scope="col">Kustomer</th></tr>
+<tr><th scope="row">Primary function</th><td>Production AI investigation engine</td><td>CRM-style customer service platform built around a unified customer record</td></tr>
+<tr><th scope="row">How it handles ticket investigation</th><td>Queries 6 systems simultaneously — finds root cause in under 2 min</td><td>Uses customer timelines, case history, workflows, and agent collaboration to move the case through service operations</td></tr>
+<tr><th scope="row">Queries live production data?</th><td>Yes — live read-only access to production databases and APIs</td><td>No — it focuses on service data and connected records rather than direct production-system reads</td></tr>
+<tr><th scope="row">Time to value</th><td>14 days to production (Portkey case study)</td><td>Moderate, with faster value for teams modernizing omnichannel support and slower value for larger enterprise rollouts</td></tr>
+<tr><th scope="row">Pricing model</th><td>Usage-based per investigation</td><td>Enterprise seat-based or custom pricing tied to platform scope and agent count</td></tr>
+<tr><th scope="row">Best for</th><td>B2B engineering teams with 200+ technical tickets/month</td><td>High-volume service teams that want one customer record across channels</td></tr>
+<tr><th scope="row">Self-improving?</th><td>Yes — playbooks refine against real data patterns</td><td>No — automation improves through workflow tuning and platform setup, not by learning from live production investigations</td></tr>
+<tr><th scope="row">Integration depth</th><td>Deep read-only connectors to existing infrastructure</td><td>Broad service and CRM integrations, but shallow for direct product and infrastructure evidence</td></tr>
 </table>
+
+<div style="background:#111;border:1px solid #222;border-radius:8px;padding:16px 20px;margin:1.5rem 0;">
+  <p style="font-size:.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Results</p>
+  <ul style="margin:0;padding-left:1.2rem;">
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>45 min → 2 min</strong> per investigation at Portkey <cite style="color:#6b7280;">(Altor, 2026)</cite></li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>200+</strong> tickets diagnosed in production</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>14 days</strong> from kickoff to live system</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>6</strong> production systems connected simultaneously</li>
+  </ul>
+</div>
 
 <h2>Where Altor Wins</h2>
 <p>Kustomer does a strong job unifying conversations and customer data so agents can operate from one timeline. That is valuable for service teams managing complexity across channels. Technical B2B support, however, often needs a second layer of context: request failures, system events, bugs, deployments, and entitlement data.</p>
@@ -75,6 +88,25 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 <section class="faq-item"><h3>What's the difference between Altor and Kustomer?</h3><p>Kustomer centralizes customer context for service teams. Altor centralizes technical evidence for support investigations.</p></section>
 <section class="faq-item"><h3>Is Altor better than Kustomer for B2B support?</h3><p>Altor is better for technical diagnosis. Kustomer is better for unified service operations.</p></section>
 <section class="faq-item"><h3>How much does Kustomer cost vs Altor?</h3><p>Kustomer is commonly enterprise or seat-based; Altor uses usage-based investigation pricing.</p></section>
+<section class="faq-item"><h3>Can Altor work alongside Kustomer?</h3><p>Yes. Kustomer can stay in front for omnichannel support while Altor handles the deeper technical diagnosis behind the ticket.</p></section>
+<section class="faq-item"><h3>Which platform fits high-volume technical support better?</h3><p>Kustomer fits high-volume service queues. Altor fits high-volume technical investigations where agents need proof from live systems before answering.</p></section>
+
+<h2>When Kustomer is the right choice</h2>
+<p>Kustomer is the stronger choice when the company needs a modern service platform first. Its strength is giving agents one place to work across channels with a cleaner customer record, more automation, and a service environment that feels closer to a CRM than a basic help desk.</p>
+<ul>
+  <li><strong>You are upgrading omnichannel service operations.</strong> If the business needs better queue control, agent workflows, and a single customer timeline across email, chat, and other channels, Kustomer is built for that job.</li>
+  <li><strong>Your biggest pain is fragmented customer context.</strong> When agents spend more time piecing together who the customer is than debugging technical failures, Kustomer will likely pay off before a specialist investigation tool does.</li>
+  <li><strong>You need enterprise service structure.</strong> Kustomer makes more sense for teams that care about routing, agent experience, and service consistency across a large front-line operation.</li>
+</ul>
+
+<h2>When Altor is the right choice</h2>
+<p>Altor becomes the better option when the queue is not just large, but technically demanding. In that environment, a unified customer record still leaves the hard part unsolved: finding the evidence behind a broken workflow, failed sync, missing entitlement, or product bug without waiting on engineering.</p>
+<ul>
+  <li><strong>Your hardest cases depend on production facts.</strong> If the answer only appears after checking logs, database state, issue trackers, and billing records, Altor is closer to the real work support is doing.</li>
+  <li><strong>You want to cut escalation load, not just organize it.</strong> Better service operations help, but faster investigation is what actually removes many avoidable engineering handoffs.</li>
+  <li><strong>You need a repeatable diagnosis motion.</strong> Altor helps turn ad hoc ticket debugging into a system that improves as similar problems appear again.</li>
+</ul>
+<p>If you want to see that support-engineering motion more clearly, this <a href="/work/support-investigation">support investigation</a> page shows what the workflow looks like when evidence gathering is built into the response path.</p>
 
 <p><a class="cta" href="https://altorlab.com">Book a Demo (US Hours) →</a></p>
 </article>

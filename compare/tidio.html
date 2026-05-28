@@ -37,7 +37,7 @@ ul { padding-left: 1.2rem; }
 .card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 16px 18px; margin-top: 1rem; }
 .cta { display: inline-block; margin-top: 1.5rem; font-weight: 600; }
 section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and Tidio?","acceptedAnswer":{"@type":"Answer","text":"Tidio automates customer chat. Altor automates technical investigation across internal systems."}},{"@type":"Question","name":"Is Altor better than Tidio for B2B support?","acceptedAnswer":{"@type":"Answer","text":"Altor is better for complex technical support. Tidio is better for SMB chat automation."}},{"@type":"Question","name":"How much does Tidio cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"Tidio generally uses subscription tiers with usage limits; Altor is priced by investigation volume."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and Tidio?","acceptedAnswer":{"@type":"Answer","text":"Tidio automates customer chat. Altor automates technical investigation across internal systems."}},{"@type":"Question","name":"Is Altor better than Tidio for B2B support?","acceptedAnswer":{"@type":"Answer","text":"Altor is better for complex technical support. Tidio is better for SMB chat automation."}},{"@type":"Question","name":"How much does Tidio cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"Tidio generally uses subscription tiers with usage limits; Altor is priced by investigation volume."}},{"@type":"Question","name":"Can Altor work alongside Tidio?","acceptedAnswer":{"@type":"Answer","text":"Yes. Tidio can stay in place for chat and quick customer replies while Altor investigates technically difficult cases behind the scenes."}},{"@type":"Question","name":"Which tool gets value faster for SMB support?","acceptedAnswer":{"@type":"Answer","text":"Tidio gets value faster for SMB support because it is centered on chat, automation, and quick setup. Altor gets value faster when the real cost comes from slow technical diagnosis."}}]}</script>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Altor","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Compare","item":"https://altorlab.com/compare/"},{"@type":"ListItem","position":3,"name":"Altor vs Tidio \u2014 AI Support Investigation Compared for US B2","item":"https://altorlab.com/compare/tidio.html"}]}</script>
 </head>
@@ -51,13 +51,26 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 
 <h2>Feature Comparison</h2>
 <table>
-<tr><th>Feature</th><th>Altor</th><th>Tidio</th></tr>
-<tr><td>Approach</td><td>Investigation-first (pulls live data)</td><td>SMB live chat and chatbot automation</td></tr>
-<tr><td>Data Sources</td><td>ClickHouse, Linear, Stripe, GitHub</td><td>Website chat, ecommerce apps, inbox, email and chatbot flows</td></tr>
-<tr><td>Resolution Method</td><td>Automated root-cause diagnosis</td><td>FAQ automation, lead capture, simple support bots</td></tr>
-<tr><td>Best For</td><td>B2B SaaS with technical tickets</td><td>Small businesses and online support teams</td></tr>
-<tr><td>Pricing</td><td>Usage-based in USD ($). Popular with US support teams</td><td>Subscription tiers with conversation and automation limits (USD pricing for US teams varies by contract)</td></tr>
+<tr><th scope="col">Category</th><th scope="col">Altor</th><th scope="col">Tidio</th></tr>
+<tr><th scope="row">Primary function</th><td>Production AI investigation engine</td><td>Live chat and chatbot platform for fast customer replies and basic automation</td></tr>
+<tr><th scope="row">How it handles ticket investigation</th><td>Queries 6 systems simultaneously — finds root cause in under 2 min</td><td>Uses bot flows, canned answers, and inbox routing to answer or deflect common questions before human review</td></tr>
+<tr><th scope="row">Queries live production data?</th><td>Yes — live read-only access to production databases and APIs</td><td>No — it focuses on conversations and ecommerce-style integrations, not direct production-system evidence</td></tr>
+<tr><th scope="row">Time to value</th><td>14 days to production (Portkey case study)</td><td>Very fast for chat and bot setup, often in hours or days for smaller teams</td></tr>
+<tr><th scope="row">Pricing model</th><td>Usage-based per investigation</td><td>Subscription tiers with automation, conversation, and seat limits</td></tr>
+<tr><th scope="row">Best for</th><td>B2B engineering teams with 200+ technical tickets/month</td><td>Small businesses and ecommerce-style support teams that want quick chat automation</td></tr>
+<tr><th scope="row">Self-improving?</th><td>Yes — playbooks refine against real data patterns</td><td>Limited — bots can be tuned over time, but not by learning from live production investigation loops</td></tr>
+<tr><th scope="row">Integration depth</th><td>Deep read-only connectors to existing infrastructure</td><td>Light to moderate, strongest for website chat, inboxes, and ecommerce apps</td></tr>
 </table>
+
+<div style="background:#111;border:1px solid #222;border-radius:8px;padding:16px 20px;margin:1.5rem 0;">
+  <p style="font-size:.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Results</p>
+  <ul style="margin:0;padding-left:1.2rem;">
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>45 min → 2 min</strong> per investigation at Portkey <cite style="color:#6b7280;">(Altor, 2026)</cite></li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>200+</strong> tickets diagnosed in production</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>14 days</strong> from kickoff to live system</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>6</strong> production systems connected simultaneously</li>
+  </ul>
+</div>
 
 <h2>Where Altor Wins</h2>
 <p>Tidio is useful when support is still mostly about answering common questions quickly, capturing leads, and keeping response times acceptable without adding headcount. That is a valid problem, but it is different from debugging broken enterprise workflows.</p>
@@ -75,6 +88,25 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 <section class="faq-item"><h3>What's the difference between Altor and Tidio?</h3><p>Tidio automates customer chat. Altor automates technical investigation across internal systems.</p></section>
 <section class="faq-item"><h3>Is Altor better than Tidio for B2B support?</h3><p>Altor is better for complex technical support. Tidio is better for SMB chat automation.</p></section>
 <section class="faq-item"><h3>How much does Tidio cost vs Altor?</h3><p>Tidio generally uses subscription tiers with usage limits; Altor is priced by investigation volume.</p></section>
+<section class="faq-item"><h3>Can Altor work alongside Tidio?</h3><p>Yes. Tidio can handle quick customer conversations while Altor investigates the harder technical cases that chatbots cannot explain on their own.</p></section>
+<section class="faq-item"><h3>Which tool gets value faster for SMB support?</h3><p>Tidio gets value faster for SMB support because it is centered on chat and bot setup. Altor gets value faster when technical diagnosis time is the main source of delay.</p></section>
+
+<h2>When Tidio is the right choice</h2>
+<p>Tidio is the right choice when the team needs to answer routine questions quickly and keep customer conversations moving without a lot of setup. Its value is clear for smaller teams where speed, cost, and simple chat automation matter more than deep technical troubleshooting.</p>
+<ul>
+  <li><strong>You want live chat and bots for common questions.</strong> If most support work is answering repeat questions, routing messages, and reducing first-response time, Tidio is much closer to the daily need.</li>
+  <li><strong>Your support motion looks more like ecommerce than support engineering.</strong> Teams handling shipping questions, order updates, simple account issues, or general product questions do not need production investigation for every case.</li>
+  <li><strong>You need fast setup with low overhead.</strong> Tidio is a practical fit when the goal is to add chat automation quickly without redesigning how support works behind the scenes.</li>
+</ul>
+
+<h2>When Altor is the right choice</h2>
+<p>Altor is the better choice when the support team is dealing with a technical B2B product and the hard tickets look more like debugging than customer chat. In that environment, fast responses help, but they are not enough if nobody can determine the likely cause of the issue quickly.</p>
+<ul>
+  <li><strong>Your tickets involve account-specific product failures.</strong> API errors, broken syncs, entitlement issues, and tenant-specific regressions usually require evidence from systems that a chat tool never touches.</li>
+  <li><strong>You need answers from live production data.</strong> Altor is built to inspect the systems where the failure happened instead of relying on conversational context alone.</li>
+  <li><strong>You want to reduce engineer interruptions.</strong> Faster support investigation means fewer tickets have to wait for someone outside support to gather the first layer of evidence.</li>
+</ul>
+<p>For teams deciding between chat automation and technical diagnosis, this <a href="/work/support-investigation">support investigation</a> page shows the kind of work Altor is built to speed up.</p>
 
 <p><a class="cta" href="https://altorlab.com">Book a Demo (US Hours) →</a></p>
 </article>

@@ -37,7 +37,7 @@ ul { padding-left: 1.2rem; }
 .card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 16px 18px; margin-top: 1rem; }
 .cta { display: inline-block; margin-top: 1.5rem; font-weight: 600; }
 section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and Kayako?","acceptedAnswer":{"@type":"Answer","text":"Kayako emphasizes customer history and support workflow. Altor emphasizes automated investigation across live technical systems."}},{"@type":"Question","name":"Is Altor better than Kayako for B2B support?","acceptedAnswer":{"@type":"Answer","text":"Altor is better for technical diagnosis; Kayako is better for general support workflow and customer history."}},{"@type":"Question","name":"How much does Kayako cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"Kayako is typically seat-based or quote-based. Altor is usage-based by investigation."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and Kayako?","acceptedAnswer":{"@type":"Answer","text":"Kayako emphasizes customer history and support workflow. Altor emphasizes automated investigation across live technical systems."}},{"@type":"Question","name":"Is Altor better than Kayako for B2B support?","acceptedAnswer":{"@type":"Answer","text":"Altor is better for technical diagnosis; Kayako is better for general support workflow and customer history."}},{"@type":"Question","name":"How much does Kayako cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"Kayako is typically seat-based or quote-based. Altor is usage-based by investigation."}},{"@type":"Question","name":"Can Altor work alongside Kayako?","acceptedAnswer":{"@type":"Answer","text":"Yes. Kayako can stay in place for ticketing and customer conversation history while Altor handles technical investigation across production systems."}},{"@type":"Question","name":"Which tool is faster to roll out?","acceptedAnswer":{"@type":"Answer","text":"Kayako is usually faster for a standard help desk rollout. Altor is faster when the target outcome is cutting technical investigation time rather than replacing the service desk."}}]}</script>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Altor","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Compare","item":"https://altorlab.com/compare/"},{"@type":"ListItem","position":3,"name":"Altor vs Kayako \u2014 AI Support Investigation Compared for US B","item":"https://altorlab.com/compare/kayako.html"}]}</script>
 </head>
@@ -51,13 +51,26 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 
 <h2>Feature Comparison</h2>
 <table>
-<tr><th>Feature</th><th>Altor</th><th>Kayako</th></tr>
-<tr><td>Approach</td><td>Investigation-first (pulls live data)</td><td>Customer service platform with journey context</td></tr>
-<tr><td>Data Sources</td><td>ClickHouse, Linear, Stripe, GitHub</td><td>Multichannel inbox, help center, customer timeline integrations</td></tr>
-<tr><td>Resolution Method</td><td>Automated root-cause diagnosis</td><td>Conversation history, collaboration, self-service</td></tr>
-<tr><td>Best For</td><td>B2B SaaS with technical tickets</td><td>Teams wanting customer context across support interactions</td></tr>
-<tr><td>Pricing</td><td>Usage-based in USD ($). Popular with US support teams</td><td>Seat-based plans or custom quotes (USD pricing for US teams varies by contract)</td></tr>
+<tr><th scope="col">Category</th><th scope="col">Altor</th><th scope="col">Kayako</th></tr>
+<tr><th scope="row">Primary function</th><td>Production AI investigation engine</td><td>Customer service platform focused on shared inboxes, journey history, and support workflow</td></tr>
+<tr><th scope="row">How it handles ticket investigation</th><td>Queries 6 systems simultaneously — finds root cause in under 2 min</td><td>Leans on conversation history, customer timeline data, internal notes, and team collaboration to work the case manually</td></tr>
+<tr><th scope="row">Queries live production data?</th><td>Yes — live read-only access to production databases and APIs</td><td>No — it centers on support interactions and app integrations rather than direct production-system queries</td></tr>
+<tr><th scope="row">Time to value</th><td>14 days to production (Portkey case study)</td><td>Usually quick for a standard help desk rollout, especially for teams replacing email-driven support</td></tr>
+<tr><th scope="row">Pricing model</th><td>Usage-based per investigation</td><td>Seat-based plans or quote-based pricing tied to support seats and package level</td></tr>
+<tr><th scope="row">Best for</th><td>B2B engineering teams with 200+ technical tickets/month</td><td>Teams that want multichannel support and a clear customer journey view</td></tr>
+<tr><th scope="row">Self-improving?</th><td>Yes — playbooks refine against real data patterns</td><td>No — teams get better results by tuning process, macros, and knowledge content rather than learning from production evidence</td></tr>
+<tr><th scope="row">Integration depth</th><td>Deep read-only connectors to existing infrastructure</td><td>Moderate service integrations focused on channels and customer history, not deep production connectors</td></tr>
 </table>
+
+<div style="background:#111;border:1px solid #222;border-radius:8px;padding:16px 20px;margin:1.5rem 0;">
+  <p style="font-size:.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Results</p>
+  <ul style="margin:0;padding-left:1.2rem;">
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>45 min → 2 min</strong> per investigation at Portkey <cite style="color:#6b7280;">(Altor, 2026)</cite></li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>200+</strong> tickets diagnosed in production</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>14 days</strong> from kickoff to live system</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>6</strong> production systems connected simultaneously</li>
+  </ul>
+</div>
 
 <h2>Where Altor Wins</h2>
 <p>Kayako is useful when teams need a unified view of a customer journey across channels. That helps agents understand what the customer has already tried and where prior conversations stalled. It does less for tickets where the real answer lives in observability data or internal systems.</p>
@@ -75,6 +88,25 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 <section class="faq-item"><h3>What's the difference between Altor and Kayako?</h3><p>Kayako emphasizes customer history and support workflow. Altor emphasizes automated investigation across live technical systems.</p></section>
 <section class="faq-item"><h3>Is Altor better than Kayako for B2B support?</h3><p>Altor is better for technical diagnosis; Kayako is better for general support workflow and customer history.</p></section>
 <section class="faq-item"><h3>How much does Kayako cost vs Altor?</h3><p>Kayako is typically seat-based or quote-based. Altor is usage-based by investigation.</p></section>
+<section class="faq-item"><h3>Can Altor work alongside Kayako?</h3><p>Yes. Kayako can continue handling ticket intake, replies, and timeline context while Altor investigates the technical cause behind harder cases.</p></section>
+<section class="faq-item"><h3>Which tool is faster to roll out?</h3><p>Kayako is faster for standard help desk needs. Altor is faster for teams whose main pain is technical investigation time rather than inbox management.</p></section>
+
+<h2>When Kayako is the right choice</h2>
+<p>Kayako is a sensible choice when the team needs a classic support desk with better customer history and cleaner coordination across channels. If most of your work is keeping context straight between email threads, chat, and knowledge articles, Kayako addresses that directly without asking the team to change how it runs support.</p>
+<ul>
+  <li><strong>You need a better customer timeline, not a production investigation engine.</strong> Kayako helps agents see what the customer has already said, tried, and experienced across past interactions so conversations move forward with less repetition.</li>
+  <li><strong>Your queue is operationally messy but not deeply technical.</strong> When the main issues are ownership, follow-up, routing, and visibility into conversation history, Kayako is closer to the real problem than a specialized diagnosis product.</li>
+  <li><strong>You want a familiar support rollout.</strong> For teams moving off a shared inbox or aging help desk, Kayako can start paying off sooner because the work is mostly service setup and agent adoption.</li>
+</ul>
+
+<h2>When Altor is the right choice</h2>
+<p>Altor makes more sense once support work repeatedly spills into engineering tools. In B2B SaaS, many tickets cannot be solved by reading customer history alone. The answer often depends on whether a job failed, a permission changed, a bill lapsed, or a bug already exists in the backlog.</p>
+<ul>
+  <li><strong>Your agents lose time jumping between internal systems.</strong> If every hard case means checking logs, billing state, issue trackers, and account records by hand, Altor removes a large block of that manual work.</li>
+  <li><strong>You need evidence from live systems.</strong> Customer journey context helps with communication, but it does not explain what broke in production for one tenant at one moment in time.</li>
+  <li><strong>You want investigation quality to improve from real solved tickets.</strong> Altor refines the path against repeat data patterns, which matters when similar failures show up across accounts and releases.</li>
+</ul>
+<p>If your team is comparing service workflow against technical diagnosis, look at <a href="/work/support-investigation">support investigation</a> to see where Altor fits inside a real support process.</p>
 
 <p><a class="cta" href="https://altorlab.com">Book a Demo (US Hours) →</a></p>
 </article>

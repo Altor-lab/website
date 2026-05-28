@@ -37,7 +37,7 @@ ul { padding-left: 1.2rem; }
 .card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 16px 18px; margin-top: 1rem; }
 .cta { display: inline-block; margin-top: 1.5rem; font-weight: 600; }
 section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and SupportLogic?","acceptedAnswer":{"@type":"Answer","text":"SupportLogic predicts risk and escalation. Altor investigates technical root cause so cases get resolved faster."}},{"@type":"Question","name":"Is Altor better than SupportLogic for B2B support?","acceptedAnswer":{"@type":"Answer","text":"They are better at different things. Altor is better for diagnosis; SupportLogic is better for support intelligence and risk analytics."}},{"@type":"Question","name":"How much does SupportLogic cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"SupportLogic is generally enterprise quote-based. Altor uses usage-based pricing tied to investigations."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Altor and SupportLogic?","acceptedAnswer":{"@type":"Answer","text":"SupportLogic predicts risk and escalation. Altor investigates technical root cause so cases get resolved faster."}},{"@type":"Question","name":"Is Altor better than SupportLogic for B2B support?","acceptedAnswer":{"@type":"Answer","text":"They are better at different things. Altor is better for diagnosis; SupportLogic is better for support intelligence and risk analytics."}},{"@type":"Question","name":"How much does SupportLogic cost vs Altor?","acceptedAnswer":{"@type":"Answer","text":"SupportLogic is generally enterprise quote-based. Altor uses usage-based pricing tied to investigations."}},{"@type":"Question","name":"Can Altor and SupportLogic be used together?","acceptedAnswer":{"@type":"Answer","text":"Yes. SupportLogic can surface risk and escalation patterns while Altor handles the technical investigation behind difficult tickets."}},{"@type":"Question","name":"Which product helps more with churn-risk management?","acceptedAnswer":{"@type":"Answer","text":"SupportLogic helps more with churn-risk management and support leadership analytics. Altor helps more with the root-cause work that shortens technical resolution time."}}]}</script>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Altor","item":"https://altorlab.com/"},{"@type":"ListItem","position":2,"name":"Compare","item":"https://altorlab.com/compare/"},{"@type":"ListItem","position":3,"name":"Altor vs SupportLogic \u2014 AI Support Investigation Compared fo","item":"https://altorlab.com/compare/supportlogic.html"}]}</script>
 </head>
@@ -51,13 +51,26 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 
 <h2>Feature Comparison</h2>
 <table>
-<tr><th>Feature</th><th>Altor</th><th>SupportLogic</th></tr>
-<tr><td>Approach</td><td>Investigation-first (pulls live data)</td><td>Support intelligence and escalation-risk analytics</td></tr>
-<tr><td>Data Sources</td><td>ClickHouse, Linear, Stripe, GitHub</td><td>CRM, support platforms, case data, customer health systems</td></tr>
-<tr><td>Resolution Method</td><td>Automated root-cause diagnosis</td><td>Sentiment analysis, risk scoring, escalation prediction</td></tr>
-<tr><td>Best For</td><td>B2B SaaS with technical tickets</td><td>Support leaders reducing churn and escalations</td></tr>
-<tr><td>Pricing</td><td>Usage-based in USD ($). Popular with US support teams</td><td>Enterprise quote-based pricing (USD pricing for US teams varies by contract)</td></tr>
+<tr><th scope="col">Category</th><th scope="col">Altor</th><th scope="col">SupportLogic</th></tr>
+<tr><th scope="row">Primary function</th><td>Production AI investigation engine</td><td>Support intelligence layer for risk scoring, sentiment, and escalation prediction</td></tr>
+<tr><th scope="row">How it handles ticket investigation</th><td>Queries 6 systems simultaneously — finds root cause in under 2 min</td><td>Flags risk signals and account sentiment so teams can prioritize or intervene, but root-cause work still happens elsewhere</td></tr>
+<tr><th scope="row">Queries live production data?</th><td>Yes — live read-only access to production databases and APIs</td><td>No — it works from support and customer signals rather than direct production-system reads</td></tr>
+<tr><th scope="row">Time to value</th><td>14 days to production (Portkey case study)</td><td>Often measured in weeks after support data, risk models, and leadership workflows are set up</td></tr>
+<tr><th scope="row">Pricing model</th><td>Usage-based per investigation</td><td>Enterprise quote-based pricing tied to support volume and platform scope</td></tr>
+<tr><th scope="row">Best for</th><td>B2B engineering teams with 200+ technical tickets/month</td><td>Support leaders trying to reduce churn risk, escalations, and poor customer sentiment</td></tr>
+<tr><th scope="row">Self-improving?</th><td>Yes — playbooks refine against real data patterns</td><td>Limited — it learns from case and sentiment patterns, not from repeat production investigations</td></tr>
+<tr><th scope="row">Integration depth</th><td>Deep read-only connectors to existing infrastructure</td><td>Strong service-data integrations, but little direct depth into product and infrastructure evidence</td></tr>
 </table>
+
+<div style="background:#111;border:1px solid #222;border-radius:8px;padding:16px 20px;margin:1.5rem 0;">
+  <p style="font-size:.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Results</p>
+  <ul style="margin:0;padding-left:1.2rem;">
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>45 min → 2 min</strong> per investigation at Portkey <cite style="color:#6b7280;">(Altor, 2026)</cite></li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>200+</strong> tickets diagnosed in production</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>14 days</strong> from kickoff to live system</li>
+    <li style="margin-bottom:6px;font-size:.95rem;color:#d1d5db;"><strong>6</strong> production systems connected simultaneously</li>
+  </ul>
+</div>
 
 <h2>Where Altor Wins</h2>
 <p>SupportLogic is about detecting risk in the support relationship: sentiment, escalation probability, and case health. That helps leadership intervene earlier. But a case can still escalate because no one diagnosed the product issue quickly enough.</p>
@@ -75,6 +88,25 @@ section.faq-item { padding: 14px 0; border-bottom: 1px solid #1f2937; }</style>
 <section class="faq-item"><h3>What's the difference between Altor and SupportLogic?</h3><p>SupportLogic predicts risk and escalation. Altor investigates technical root cause so cases get resolved faster.</p></section>
 <section class="faq-item"><h3>Is Altor better than SupportLogic for B2B support?</h3><p>They are better at different things. Altor is better for diagnosis; SupportLogic is better for support intelligence and risk analytics.</p></section>
 <section class="faq-item"><h3>How much does SupportLogic cost vs Altor?</h3><p>SupportLogic is generally enterprise quote-based. Altor uses usage-based pricing tied to investigations.</p></section>
+<section class="faq-item"><h3>Can Altor and SupportLogic be used together?</h3><p>Yes. SupportLogic can highlight high-risk cases while Altor handles the root-cause investigation work behind the most complex technical tickets.</p></section>
+<section class="faq-item"><h3>Which product helps more with churn-risk management?</h3><p>SupportLogic helps more with churn-risk management and support leadership analytics. Altor helps more with the investigation step that leads to a technically correct answer.</p></section>
+
+<h2>When SupportLogic is the right choice</h2>
+<p>SupportLogic is the right choice when the company wants better visibility into support health at the account and leadership level. It is aimed less at frontline investigation and more at giving managers earlier warnings about risk, escalation, and customer sentiment across the support operation.</p>
+<ul>
+  <li><strong>You care most about escalations, churn signals, and VOC insight.</strong> If the business wants to know which accounts are getting frustrated and which cases are headed toward executive attention, SupportLogic is built for that layer.</li>
+  <li><strong>Your frontline process is working, but leadership lacks signal.</strong> Some teams already manage tickets well enough day to day and need help seeing where support experience is harming renewals or expansion.</li>
+  <li><strong>You want a support-ops and leadership tool more than an engineering-adjacent tool.</strong> SupportLogic speaks more directly to managers, directors, and customer-facing leaders than to support engineers digging through technical evidence.</li>
+</ul>
+
+<h2>When Altor is the right choice</h2>
+<p>Altor is the better choice when the problem is not seeing risk soon enough, but diagnosing the issue fast enough. A ticket can carry obvious frustration and still remain unresolved because no one has gathered the product, billing, and infrastructure facts needed to explain what went wrong.</p>
+<ul>
+  <li><strong>Your queue includes hard technical incidents.</strong> If cases stall because agents need engineering help to confirm likely cause, the missing layer is investigation, not sentiment analysis.</li>
+  <li><strong>You need live production evidence to answer accurately.</strong> Altor reaches into the systems where the problem actually happened instead of inferring trouble from language and case patterns alone.</li>
+  <li><strong>You want to reduce escalations by removing the cause of delay.</strong> Faster root-cause work often lowers escalation pressure before leadership ever needs to step in.</li>
+</ul>
+<p>For teams that already understand the risk side and now want to improve the resolution side, <a href="/work/support-investigation">support investigation</a> shows how Altor fits into the daily support workflow.</p>
 
 <p><a class="cta" href="https://altorlab.com">Book a Demo (US Hours) →</a></p>
 </article>
