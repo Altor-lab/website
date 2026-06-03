@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-02T09:15:38.959782+00:00",
+    "generated_at": "2026-06-03T10:00:23.906630+00:00",
     "total_pages": 86,
     "workflows": 20,
     "tools": 8
@@ -2986,6 +2986,11 @@
       },
       "n8n_templates": [
         {
+          "id": 15985,
+          "title": "Convert handwritten meeting notes to Google Docs with Gmail and easybits",
+          "url": "https://n8n.io/workflows/15985"
+        },
+        {
           "id": 8116,
           "title": "Automate Meeting Notes Summaries with Gemini AI & Slack Notifications",
           "url": "https://n8n.io/workflows/8116"
@@ -2999,11 +3004,6 @@
           "id": 14895,
           "title": "Structure AI meeting notes with GPT-4o-mini and save to Google Drive",
           "url": "https://n8n.io/workflows/14895"
-        },
-        {
-          "id": 12664,
-          "title": "Distribute summarized meeting notes with Microsoft Teams and ClickUp",
-          "url": "https://n8n.io/workflows/12664"
         }
       ],
       "related_workflows": [
