@@ -556,10 +556,6 @@
   </footer>
 
   <script>
-    const RESEND_KEY = 're_gkqwnNU9_Yc4zn9JZy46WcsUxz6kTpVgC';
-    const AUDIENCE_ID = 'fdbb6e41-6ee9-420d-b154-64826b528d30';
-    const INTERNAL_EMAIL = 'anshul@altorlab.com';
-
     document.getElementById('dataset-form').addEventListener('submit', async function(e) {
       e.preventDefault();
 
@@ -567,7 +563,7 @@
       const errEl = document.getElementById('form-error');
       errEl.style.display = 'none';
       btn.disabled = true;
-      btn.textContent = 'Sending…';
+      btn.textContent = 'Sending\u2026';
 
       const name     = document.getElementById('name').value.trim();
       const email    = document.getElementById('email').value.trim();
@@ -584,59 +580,19 @@
       }
 
       try {
-        // 1. Add contact to Resend audience
-        await fetch('https://api.resend.com/audiences/' + AUDIENCE_ID + '/contacts', {
+        const res = await fetch('https://voice.altorlab.com/api/dataset-inquiry', {
           method: 'POST',
-          headers: {
-            'Authorization': 'Bearer ' + RESEND_KEY,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            email: email,
-            first_name: name.split(' ')[0] || name,
-            last_name: name.split(' ').slice(1).join(' ') || '',
-            unsubscribed: false,
-            data: { company: company, use_case: use_case }
-          })
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, company, use_case, message })
         });
 
-        // 2. Send confirmation email to lead
-        await fetch('https://api.resend.com/emails', {
-          method: 'POST',
-          headers: {
-            'Authorization': 'Bearer ' + RESEND_KEY,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            from: 'Anshul at Altor <anshul@altorlab.com>',
-            to: [email],
-            subject: 'Re: Dataset inquiry',
-            text: 'Hi ' + (name || 'there') + ',\n\nThanks for your interest in the dataset. We\'ll follow up within 48 hours with more detail.\n\nIn the meantime, if you have specific questions about format, schema, or licensing, feel free to reply directly.\n\n— Anshul'
-          })
-        });
+        if (!res.ok) throw new Error('Request failed');
 
-        // 3. Send internal notification
-        await fetch('https://api.resend.com/emails', {
-          method: 'POST',
-          headers: {
-            'Authorization': 'Bearer ' + RESEND_KEY,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            from: 'Dataset Form <anshul@altorlab.com>',
-            to: [INTERNAL_EMAIL],
-            subject: 'New dataset inquiry — ' + (company || email),
-            text: 'New lead:\n\nName: ' + name + '\nEmail: ' + email + '\nCompany: ' + company + '\nUse case: ' + use_case + '\nMessage: ' + (message || '(none)')
-          })
-        });
-
-        // Show success
         document.getElementById('form-fields').style.display = 'none';
         document.getElementById('form-success').style.display = 'block';
 
       } catch (err) {
-        console.error(err);
-        errEl.textContent = 'Something went wrong — please try again or email anshul@altorlab.com';
+        errEl.textContent = 'Something went wrong \u2014 please try again or email anshul@altorlab.com';
         errEl.style.display = 'block';
         btn.disabled = false;
         btn.textContent = 'Request Data Card';
