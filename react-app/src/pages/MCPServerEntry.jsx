@@ -157,10 +157,14 @@ export default function MCPServerEntry() {
   return (
     <>
       <PageHead
-        title={`${server.name} MCP Server — Install & Use with Claude | Altor`}
+        title={
+          server.description
+            ? `${server.name}: ${server.description.slice(0, 55).replace(/\.$/, '')} — MCP Server | Altor`
+            : `${server.name} MCP Server — Install & Use with Claude | Altor`
+        }
         description={
           server.description
-            ? `${server.description.slice(0, 120)}. ${server.stars > 0 ? '★ ' + server.stars.toLocaleString() + ' stars.' : ''} Install ${server.name} as an MCP server for Claude, Cursor, or any MCP client.`
+            ? `${server.description.slice(0, 145)}${server.stars > 0 ? ' ★ ' + server.stars.toLocaleString() + ' GitHub stars.' : ''} Works with Claude, Cursor, and any MCP client.`
             : `${server.name} is an open-source MCP server${server.language ? ' built in ' + server.language : ''} in the ${server.category} category. Works with Claude and any Model Context Protocol client.`
         }
         slug={slug}

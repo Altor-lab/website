@@ -4,8 +4,8 @@ import PageHead from '../components/PageHead'
 const techArticleSchema = {
   '@type': 'TechArticle',
   '@id': 'https://altorlab.com/mcp-inspector#article',
-  headline: 'What is MCP Inspector? The Complete Guide to Debugging MCP Servers',
-  description: 'MCP Inspector is the official debugging and testing tool for Model Context Protocol servers. Learn how to install it, use the UI and CLI modes, debug common errors, and integrate it into your development workflow.',
+  headline: 'MCP Inspector: Debug MCP Servers with Stdio, SSE & Streamable HTTP',
+  description: 'MCP Inspector is the official debugging tool for Model Context Protocol servers. Supports stdio, SSE, and Streamable HTTP transports. Run npx @modelcontextprotocol/inspector to start.',
   url: 'https://altorlab.com/mcp-inspector',
   datePublished: '2026-04-21',
   dateModified: '2026-04-21',
@@ -93,8 +93,8 @@ export default function MCPInspector() {
   return (
     <>
       <PageHead
-        title="What is MCP Inspector? Complete Guide to Debugging MCP Servers | Altor"
-        description="MCP Inspector is the official tool for testing and debugging Model Context Protocol servers. Learn to install it, use UI and CLI modes, debug common errors, and integrate into your dev workflow."
+        title="MCP Inspector — Debug MCP Servers (Stdio, SSE, Streamable HTTP) | Altor"
+        description="Free MCP server debugger. Run npx @modelcontextprotocol/inspector to test tools, inspect resources, and verify JSON-RPC responses. Supports stdio, SSE, and Streamable HTTP transports."
         slug="/mcp-inspector"
         datePublished="2026-04-21"
         dateModified="2026-04-21"
@@ -119,7 +119,7 @@ export default function MCPInspector() {
         <header className="mb-10">
           <p className="text-sm uppercase tracking-[0.12em] text-accent-default mb-3">Developer tools</p>
           <h1 className="text-3xl md:text-4xl font-bold text-fg-default tracking-[-0.03em] mb-5 text-balance">
-            What is MCP Inspector?
+            MCP Inspector: Debug MCP Servers Before They Hit Claude Desktop
           </h1>
           <p className="text-lg text-fg-muted leading-relaxed">
             MCP Inspector is the <strong className="text-fg-default">official debugging and testing tool</strong> for

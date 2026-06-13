@@ -220,8 +220,8 @@ export default function MCPServers() {
   return (
     <>
       <PageHead
-        title={`${totalServersLabel} MCP Servers — Find the Right Model Context Protocol Server for Any Task`}
-        description="Search 4,500+ MCP servers for databases, APIs, dev tools, AI/ML, and more. Each entry includes install command, GitHub stars, and category. Updated daily from the official MCP registry."
+        title={`MCP Server Directory — ${totalServersLabel} MCP Servers List (Updated Daily)`}
+        description={`Browse ${totalServersLabel} MCP servers for Claude, Cursor, and any MCP client. Databases, APIs, dev tools, AI/ML, browser automation, and more. Install commands, GitHub stars, and categories — updated daily.`}
         slug="/mcp-servers"
         datePublished="2026-04-16"
         dateModified={meta?.generated_at?.slice(0, 10) ?? '2026-05-25'}
@@ -430,8 +430,6 @@ export default function MCPServers() {
                   MCP → production: what changes →
                 </a>
               </div>
-            </div>
-              </a>
             </div>
 
             <p className="mt-8 text-xs text-fg-muted max-w-2xl leading-relaxed">
