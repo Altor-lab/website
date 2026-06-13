@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="geo.region" content="US" />
+  <meta name="geo.placename" content="United States" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <title>B2B Call Audio Dataset — 50,000+ Hours, Dual-Channel, Outcome-Labeled | Altor</title>
+  <meta name="description" content="50,000+ hours of labeled dual-channel B2B call audio for AI training data licensing. Collections, insurance, higher ed, auto lending. Millisecond speaker separation, 112K human annotations, 95K outcome-labeled objection pairs. Request a data card.">
+  <link rel="canonical" href="https://altorlab.com/dataset/">
+  <meta property="og:title" content="B2B Call Audio Dataset — 50,000+ Hours, Dual-Channel, Outcome-Labeled">
+  <meta property="og:description" content="50,000+ hours of labeled dual-channel B2B call audio for AI training. Collections, insurance, auto lending. Request a data card.">
+  <meta property="og:image" content="https://altorlab.com/og-altor.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Altor">
+  <meta property="og:url" content="https://altorlab.com/dataset/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="B2B Call Audio Dataset — 50,000+ Hours, Dual-Channel, Outcome-Labeled">
+  <meta name="twitter:description" content="50,000+ hours of labeled dual-channel B2B call audio for AI training. Collections, insurance, auto lending.">
+  <meta name="twitter:image" content="https://altorlab.com/og-altor.png">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#04110f">
+  <script defer data-domain="altorlab.com" src="https://plausible.io/js/script.js"></script>
+
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "@id": "https://altorlab.com/dataset/#dataset",
+    "name": "B2B Call Audio Dataset — Dual-Channel, Outcome-Labeled",
+    "description": "50,000+ hours of real dual-channel B2B phone call audio across collections, insurance, higher education, auto lending, and energy verticals. Includes 112,000 human coaching annotations at the utterance level, 95,000 outcome-labeled objection-recovery pairs, and millisecond-accurate speaker separation. US locale throughout.",
+    "url": "https://altorlab.com/dataset/",
+    "creator": { "@type": "Organization", "name": "Altor", "url": "https://altorlab.com" },
+    "publisher": { "@type": "Organization", "name": "Altor", "url": "https://altorlab.com" },
+    "datePublished": "2026-06-09",
+    "dateModified": "2026-06-09",
+    "inLanguage": ["en-US", "es"],
+    "license": "https://altorlab.com/dataset/#license",
+    "isAccessibleForFree": false,
+    "keywords": ["b2b call audio", "conversational AI training data", "dual channel audio dataset", "speech AI training data", "collections audio", "objection detection", "call center audio machine learning", "ASR training data", "TTS training data"],
+    "variableMeasured": [
+      { "@type": "PropertyValue", "name": "Total hours", "value": "50,000+" },
+      { "@type": "PropertyValue", "name": "Monthly call volume", "value": "700,000+" },
+      { "@type": "PropertyValue", "name": "Human annotations", "value": "112,000" },
+      { "@type": "PropertyValue", "name": "Objection-recovery pairs", "value": "95,000" },
+      { "@type": "PropertyValue", "name": "Unique speakers", "value": "9,500+" },
+      { "@type": "PropertyValue", "name": "Bilingual coverage", "value": "25% Spanish/English" }
+    ],
+    "spatialCoverage": "United States",
+    "temporalCoverage": "2+ years"
+  }</script>
+
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What verticals does the B2B call audio dataset cover?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The dataset covers collections, auto lending, insurance, higher education, and energy. All calls are real enterprise B2B conversations — reps negotiating with customers on live calls, not scripted scenarios." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the audio dual-channel or mixed?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Dual-channel throughout. The rep and customer are recorded on completely separate audio tracks with millisecond-accurate speaker separation. This makes the dataset suitable for ASR fine-tuning, diarization training, and turn-level annotation tasks that single-channel audio cannot support." }
+      },
+      {
+        "@type": "Question",
+        "name": "What annotation format is used?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Annotations are at the utterance level, produced by domain experts. Labels include coaching markers, objection type, recovery strategy, and verified outcome per call (payment committed, closed, refused, escalated). Full transcripts and outcome labels are available per call." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is PII redacted from the dataset?",
+        "acceptedAnswer": { "@type": "Answer", "text": "PII handling, consent framework, and redaction specifics are covered in the data card provided to qualified buyers after an initial inquiry. Request a data card to review the full compliance documentation." }
+      },
+      {
+        "@type": "Question",
+        "name": "What license terms apply?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Licensing is negotiated per engagement based on use case, scope, and exclusivity requirements. Common structures include research licenses, fine-tuning licenses, and commercial deployment licenses. Request a data card to begin the licensing conversation." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is bilingual Spanish-English audio included?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. 25% of the dataset is bilingual Spanish/English with naturalistic code-switching — speakers moving between languages mid-conversation as happens in real US market calls. This is rare in existing conversational audio datasets." }
+      }
+    ]
+  }</script>
+
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://altorlab.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Dataset", "item": "https://altorlab.com/dataset/" }
+    ]
+  }</script>
+
+  <style>
+    :root {
+      --bg: #04110f;
+      --panel: #0f2420;
+      --panel-2: #13302a;
+      --text: #e6f5f1;
+      --muted: #9fb8b2;
+      --accent: #29d3aa;
+      --accent-soft: rgba(41,211,170,.14);
+      --border: rgba(170,233,216,.18);
+      --shadow: 0 18px 60px rgba(0,0,0,.18);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at 20% 0%, #0f2f28 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Layout ─────────────────────────────────── */
+    .wrap { width: min(800px, calc(100% - 2.5rem)); margin: 0 auto; }
+
+    /* ── Header (minimal, no nav links) ──────────── */
+    .site-header {
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .site-logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: .02em;
+      color: var(--text);
+    }
+
+    /* ── Hero ────────────────────────────────────── */
+    .hero {
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .eyebrow {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .75rem;
+    }
+    h1 {
+      font-size: clamp(1.9rem, 5vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-wrap: balance;
+    }
+    .subhead {
+      font-size: 1.08rem;
+      color: #c5ddd8;
+      max-width: 60ch;
+      margin-bottom: 2rem;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: var(--accent);
+      color: #052019;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: .85rem 1.6rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 24px rgba(41,211,170,.3);
+      transition: opacity .15s;
+    }
+    .hero-cta:hover { opacity: .88; text-decoration: none; }
+
+    /* ── Stat bar ────────────────────────────────── */
+    .stat-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 2.5rem 0;
+    }
+    .stat-cell {
+      background: var(--panel);
+      padding: 1.1rem 1rem;
+    }
+    .stat-num {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -.03em;
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: .78rem;
+      color: var(--muted);
+      margin-top: .25rem;
+    }
+
+    /* ── Content sections ────────────────────────── */
+    .section { padding: 2.8rem 0; border-bottom: 1px solid var(--border); }
+    .section:last-of-type { border-bottom: none; }
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      margin-bottom: 1rem;
+    }
+    p { color: #d4e9e4; margin-bottom: .85rem; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 1.2rem; }
+    li { color: #d4e9e4; margin-bottom: .4rem; }
+    strong { color: var(--text); }
+
+    /* ── Panel ───────────────────────────────────── */
+    .panel {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem 1.3rem;
+      margin: 1.2rem 0;
+    }
+    .panel-label {
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--muted);
+      margin-bottom: .6rem;
+    }
+
+    /* ── Buyer grid ──────────────────────────────── */
+    .buyer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: .85rem;
+      margin-top: 1.2rem;
+    }
+    .buyer-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+    .buyer-title {
+      font-weight: 700;
+      font-size: .9rem;
+      color: var(--text);
+      margin-bottom: .3rem;
+    }
+    .buyer-desc { font-size: .88rem; color: var(--muted); }
+
+    /* ── Form ────────────────────────────────────── */
+    #request {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem;
+      margin: 2.5rem 0;
+    }
+    .form-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: .4rem;
+    }
+    .form-sub {
+      font-size: .92rem;
+      color: var(--muted);
+      margin-bottom: 1.6rem;
+    }
+    .field { margin-bottom: 1rem; }
+    label {
+      display: block;
+      font-size: .8rem;
+      font-weight: 600;
+      color: #c5ddd8;
+      margin-bottom: .35rem;
+      letter-spacing: .03em;
+    }
+    input, select, textarea {
+      width: 100%;
+      background: rgba(4,17,15,.7);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .65rem .85rem;
+      color: var(--text);
+      font-family: inherit;
+      font-size: .95rem;
+      outline: none;
+      transition: border-color .15s;
+      appearance: none;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent);
+    }
+    select option { background: #0a1a17; }
+    textarea { resize: vertical; min-height: 90px; }
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .submit-btn {
+      width: 100%;
+      margin-top: .5rem;
+      background: var(--accent);
+      color: #052019;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: .85rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: opacity .15s;
+    }
+    .submit-btn:hover { opacity: .88; }
+    .submit-btn:disabled { opacity: .5; cursor: not-allowed; }
+    .social-proof {
+      font-size: .82rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 1rem;
+    }
+    #form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    #form-success h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: .5rem;
+    }
+    #form-success p { color: var(--muted); font-size: .95rem; }
+    #form-error {
+      display: none;
+      color: #f87171;
+      font-size: .85rem;
+      margin-top: .5rem;
+    }
+
+    /* ── FAQ ─────────────────────────────────────── */
+    .faq-item { border-bottom: 1px solid var(--border); padding: 1rem 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 700; font-size: .98rem; margin-bottom: .35rem; }
+    .faq-a { font-size: .93rem; color: #c5ddd8; }
+
+    /* ── Footer (minimal) ────────────────────────── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+    .site-footer a { color: var(--muted); }
+    .site-footer a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      .field-row { grid-template-columns: 1fr; }
+      .hero { padding: 2.5rem 0 2rem; }
+      #request { padding: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <span class="site-logo">Altor</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">AI Training Data</div>
+      <h1>50,000+ Hours of Real B2B Call Audio — Dual-Channel, Outcome-Linked</h1>
+      <p class="subhead">Naturalistic enterprise conversations across collections, insurance, higher ed, and auto lending. Available for AI training data licensing.</p>
+      <a class="hero-cta" href="#request">Request a Data Card →</a>
+
+      <div class="stat-bar">
+        <div class="stat-cell">
+          <div class="stat-num">50K+</div>
+          <div class="stat-label">hours of audio</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">700K+</div>
+          <div class="stat-label">calls per month</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">112K</div>
+          <div class="stat-label">human annotations</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">95K</div>
+          <div class="stat-label">outcome-labeled pairs</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">9,500+</div>
+          <div class="stat-label">unique speakers</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">25%</div>
+          <div class="stat-label">bilingual ES/EN</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>The Dataset</h2>
+      <ul>
+        <li><strong>Dual-channel audio throughout</strong> — rep and customer on completely separate tracks with millisecond-accurate speaker separation</li>
+        <li><strong>50,000+ hours</strong> of real, unscripted B2B phone calls — live enterprise conversations, not acted scenarios</li>
+        <li><strong>700,000+ calls per month</strong> across collections, auto lending, higher education, insurance, and energy</li>
+        <li><strong>112,000 human coaching annotations</strong> at the utterance level, produced by domain experts</li>
+        <li><strong>95,000 objection→recovery pairs</strong> with verified outcome labels (payment committed, closed, refused, escalated)</li>
+        <li><strong>9,500+ unique speakers</strong> tracked longitudinally over 2+ years</li>
+        <li><strong>25% bilingual Spanish/English</strong> with naturalistic code-switching as it occurs in real US market calls</li>
+        <li>Full transcripts, outcome labels, and call metadata per call. US locale throughout.</li>
+      </ul>
+
+      <div class="panel">
+        <div class="panel-label">Why this data is different</div>
+        <p>Most conversational audio datasets are scripted, acted, or scraped from podcasts. This is live, unscripted, high-stakes enterprise B2B — people negotiating debt payments, insurance claims, and enrollment decisions in real time. The emotional range, adversarial dynamics, and verified outcome labels are impossible to replicate synthetically. The longitudinal speaker tracking (9,500+ speakers over 2+ years) is rare in any commercial audio dataset.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Who This Is For</h2>
+      <div class="buyer-grid">
+        <div class="buyer-card">
+          <div class="buyer-title">AI / ML Labs</div>
+          <div class="buyer-desc">Fine-tuning speech, audio LLMs, or conversational models that need real adversarial dialogue at scale.</div>
+        </div>
+        <div class="buyer-card">
+          <div class="buyer-title">Voice AI Companies</div>
+          <div class="buyer-desc">Building enterprise voice agents that need grounding in real objection-handling, interruption, and turn-taking patterns.</div>
+        </div>
+        <div class="buyer-card">
+          <div class="buyer-title">ASR / TTS Companies</div>
+          <div class="buyer-desc">Improving model accuracy on real-world conversational audio — noisy, overlapping, bilingual, and domain-specific.</div>
+        </div>
+        <div class="buyer-card">
+          <div class="buyer-title">Alt Data Buyers</div>
+          <div class="buyer-desc">Hedge funds and quant teams extracting consumer stress, payment behavior, and financial sentiment signals from live call data.</div>
+        </div>
+        <div class="buyer-card">
+          <div class="buyer-title">Sales AI Platforms</div>
+          <div class="buyer-desc">Ground-truth objection detection and recovery data for training coaching, scoring, and prediction models.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="request-section">
+    <div class="wrap">
+      <div id="request">
+        <div id="form-fields">
+          <div class="form-title">Request a Data Card</div>
+          <p class="form-sub">We'll follow up within 48 hours with format specs, schema documentation, and licensing terms.</p>
+
+          <form id="dataset-form" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="field">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Your company">
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">Work Email <span style="color:#f87171">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="field">
+              <label for="use_case">Use Case</label>
+              <select id="use_case" name="use_case">
+                <option value="">Select your use case…</option>
+                <option value="AI/ML Training">AI / ML Training</option>
+                <option value="Voice AI">Voice AI</option>
+                <option value="ASR/TTS">ASR / TTS</option>
+                <option value="Alt Data / Hedge Fund">Alt Data / Hedge Fund</option>
+                <option value="Sales AI">Sales AI</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Notes (optional)</label>
+              <textarea id="message" name="message" placeholder="Specific questions about format, schema, volume, or licensing…"></textarea>
+            </div>
+            <div id="form-error">Something went wrong — please try again or email anshul@altorlab.com</div>
+            <button type="submit" class="submit-btn" id="submit-btn">Request Data Card</button>
+          </form>
+          <p class="social-proof">Currently in conversations with AI labs, voice AI companies, and alternative data funds.</p>
+        </div>
+
+        <div id="form-success">
+          <h3>Thanks — we'll be in touch within 48 hours.</h3>
+          <p>Check your inbox for a confirmation. In the meantime, feel free to reply with any specific questions about format, schema, or licensing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q">What verticals does the dataset cover?</div>
+        <div class="faq-a">Collections, auto lending, insurance, higher education, and energy. All calls are real enterprise B2B conversations — reps negotiating with customers on live calls, not scripted scenarios.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is the audio dual-channel or mixed?</div>
+        <div class="faq-a">Dual-channel throughout. The rep and customer are on completely separate audio tracks with millisecond-accurate speaker separation — suitable for ASR fine-tuning, diarization training, and turn-level annotation tasks that single-channel audio cannot support.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What annotation format is used?</div>
+        <div class="faq-a">Annotations are at the utterance level, produced by domain experts. Labels include coaching markers, objection type, recovery strategy, and verified outcome per call (payment committed, closed, refused, escalated). Full transcripts and outcome labels are included per call.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is PII redacted?</div>
+        <div class="faq-a">PII handling, consent framework, and redaction specifics are covered in the data card provided to qualified buyers after an initial inquiry.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What license terms apply?</div>
+        <div class="faq-a">Licensing is negotiated per engagement based on use case, scope, and exclusivity requirements. Common structures include research licenses, fine-tuning licenses, and commercial deployment licenses.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is bilingual Spanish-English audio included?</div>
+        <div class="faq-a">Yes — 25% of the dataset is bilingual Spanish/English with naturalistic code-switching, as occurs in real US market calls. This is rare in existing commercial conversational audio datasets.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Altor · <a href="mailto:anshul@altorlab.com">anshul@altorlab.com</a> · <a href="/">altorlab.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const RESEND_KEY = 're_gkqwnNU9_Yc4zn9JZy46WcsUxz6kTpVgC';
+    const AUDIENCE_ID = 'fdbb6e41-6ee9-420d-b154-64826b528d30';
+    const INTERNAL_EMAIL = 'anshul@altorlab.com';
+
+    document.getElementById('dataset-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const btn = document.getElementById('submit-btn');
+      const errEl = document.getElementById('form-error');
+      errEl.style.display = 'none';
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      const name     = document.getElementById('name').value.trim();
+      const email    = document.getElementById('email').value.trim();
+      const company  = document.getElementById('company').value.trim();
+      const use_case = document.getElementById('use_case').value;
+      const message  = document.getElementById('message').value.trim();
+
+      if (!email) {
+        errEl.textContent = 'Work email is required.';
+        errEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Request Data Card';
+        return;
+      }
+
+      try {
+        // 1. Add contact to Resend audience
+        await fetch('https://api.resend.com/audiences/' + AUDIENCE_ID + '/contacts', {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer ' + RESEND_KEY,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email: email,
+            first_name: name.split(' ')[0] || name,
+            last_name: name.split(' ').slice(1).join(' ') || '',
+            unsubscribed: false,
+            data: { company: company, use_case: use_case }
+          })
+        });
+
+        // 2. Send confirmation email to lead
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer ' + RESEND_KEY,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: 'Anshul at Altor <anshul@altorlab.com>',
+            to: [email],
+            subject: 'Re: Dataset inquiry',
+            text: 'Hi ' + (name || 'there') + ',\n\nThanks for your interest in the dataset. We\'ll follow up within 48 hours with more detail.\n\nIn the meantime, if you have specific questions about format, schema, or licensing, feel free to reply directly.\n\n— Anshul'
+          })
+        });
+
+        // 3. Send internal notification
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer ' + RESEND_KEY,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: 'Dataset Form <anshul@altorlab.com>',
+            to: [INTERNAL_EMAIL],
+            subject: 'New dataset inquiry — ' + (company || email),
+            text: 'New lead:\n\nName: ' + name + '\nEmail: ' + email + '\nCompany: ' + company + '\nUse case: ' + use_case + '\nMessage: ' + (message || '(none)')
+          })
+        });
+
+        // Show success
+        document.getElementById('form-fields').style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+
+      } catch (err) {
+        console.error(err);
+        errEl.textContent = 'Something went wrong — please try again or email anshul@altorlab.com';
+        errEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Request Data Card';
+      }
+    });
+  </script>
+
+</body>
+</html>
