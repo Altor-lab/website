@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-12T09:05:44.719256+00:00",
+    "generated_at": "2026-06-13T08:27:40.371531+00:00",
     "total_pages": 86,
     "workflows": 20,
     "tools": 8
@@ -4091,6 +4091,11 @@
       },
       "n8n_templates": [
         {
+          "id": 16243,
+          "title": "Score sales outreach opportunities from RSS feeds with Claude and Gmail",
+          "url": "https://n8n.io/workflows/16243"
+        },
+        {
           "id": 9813,
           "title": "Generate Personalized Sales Outreach with GPT across LinkedIn, Email & WhatsApp",
           "url": "https://n8n.io/workflows/9813"
@@ -4104,11 +4109,6 @@
           "id": 8523,
           "title": "Personalized Sales Outreach with Apollo, GPT, and Gmail Automation",
           "url": "https://n8n.io/workflows/8523"
-        },
-        {
-          "id": 8014,
-          "title": "Automate Sales Outreach with OpenAI, Tavily & Google Sheets for Prospect Research",
-          "url": "https://n8n.io/workflows/8014"
         }
       ],
       "related_workflows": [
