@@ -334,6 +334,23 @@ export default function AIStackTracker() {
               </div>
             </div>
 
+            <div className="mt-6 rounded-xl border border-accent-muted/40 bg-accent-muted/5 p-5">
+              <p className="text-sm font-semibold text-fg-default">Getting your AI stack found in search?</p>
+              <p className="text-xs text-fg-muted mt-1 leading-relaxed max-w-xl">
+                GEO optimization ensures your tools appear in AI-generated answers across ChatGPT, Perplexity, and more.
+              </p>
+              <div className="flex flex-wrap gap-4 mt-3">
+                <a
+                  href="https://altorlab.xyz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-medium text-accent-default hover:opacity-80 transition-opacity"
+                >
+                  altorlab.xyz →
+                </a>
+              </div>
+            </div>
+
             <p className="mt-8 text-xs text-fg-muted max-w-2xl leading-relaxed">
               Data sourced from public signals only: company web surfaces, public ATS job postings
               (Greenhouse, Lever), and vendor customer pages. Updated daily via automated crawler.

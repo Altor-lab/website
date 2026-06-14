@@ -352,27 +352,46 @@ export default function MCPServers() {
             </p>
 
             {activeCategory === 'All' && !search && page === 1 && (
-              <div className="mb-8 rounded-xl border border-accent-muted/40 bg-accent-muted/5 p-5">
-                <p className="text-sm font-semibold text-fg-default">Browsing MCP servers is step one. Deploying them in production is another.</p>
-                <p className="text-xs text-fg-muted mt-1 leading-relaxed max-w-xl">
-                  At Portkey, we connected 6 production systems via MCP and deployed an AI investigation engine in 14 days.
-                  Result: support ticket investigation dropped from 45 minutes to 2 minutes — 200+ tickets in production.
-                </p>
-                <div className="flex flex-wrap gap-4 mt-3">
-                  <a
-                    href="/work/support-investigation"
-                    className="text-xs font-medium text-accent-default hover:opacity-80 transition-opacity"
-                  >
-                    Read the case study →
-                  </a>
-                  <a
-                    href="/blog/deploy-ai-investigation-engine"
-                    className="text-xs font-medium text-fg-muted hover:text-fg-default transition-colors"
-                  >
-                    How we deployed it in 3 weeks →
-                  </a>
+              <>
+                <div className="mb-8 rounded-xl border border-accent-muted/40 bg-accent-muted/5 p-5">
+                  <p className="text-sm font-semibold text-fg-default">Browsing MCP servers is step one. Deploying them in production is another.</p>
+                  <p className="text-xs text-fg-muted mt-1 leading-relaxed max-w-xl">
+                    At Portkey, we connected 6 production systems via MCP and deployed an AI investigation engine in 14 days.
+                    Result: support ticket investigation dropped from 45 minutes to 2 minutes — 200+ tickets in production.
+                  </p>
+                  <div className="flex flex-wrap gap-4 mt-3">
+                    <a
+                      href="/work/support-investigation"
+                      className="text-xs font-medium text-accent-default hover:opacity-80 transition-opacity"
+                    >
+                      Read the case study →
+                    </a>
+                    <a
+                      href="/blog/deploy-ai-investigation-engine"
+                      className="text-xs font-medium text-fg-muted hover:text-fg-default transition-colors"
+                    >
+                      How we deployed it in 3 weeks →
+                    </a>
+                  </div>
                 </div>
-              </div>
+
+                <div className="mb-8 rounded-xl border border-accent-muted/40 bg-accent-muted/5 p-5">
+                  <p className="text-sm font-semibold text-fg-default">Need help getting your AI tools found in search?</p>
+                  <p className="text-xs text-fg-muted mt-1 leading-relaxed max-w-xl">
+                    GEO (Generative Engine Optimization) helps AI tools get cited in ChatGPT, Perplexity, and Google AI Overviews.
+                  </p>
+                  <div className="flex flex-wrap gap-4 mt-3">
+                    <a
+                      href="https://altorlab.xyz/services/geo-optimization/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-medium text-accent-default hover:opacity-80 transition-opacity"
+                    >
+                      altorlab.xyz/services/geo-optimization/ →
+                    </a>
+                  </div>
+                </div>
+              </>
             )}
 
             {servers.length === 0 ? (
